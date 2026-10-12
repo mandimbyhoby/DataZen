@@ -3084,6 +3084,81 @@ class ContextTranslationTests(TestCase):
             self.assertNotIn('msgid_plural "ou"', source)
 
 
+class KeyNameTranslationTests(TestCase):
+    """Les noms de touches des raccourcis suivent la langue de l'interface.
+
+    Les balises <kbd> de shortcuts.html et de la palette Ctrl+K affichaient
+    "Entrée" et "Échap" en clair : invisibles pour l'extracteur, elles
+    restaient en français quelle que soit la langue. Elles passent désormais
+    par {% translate %} et tools/translations/key_names.py.
+    """
+
+    TEMPLATES = ("core/shortcuts.html", "core/base.html")
+
+    TRANSLATIONS = {
+        "en": ("Enter", "Esc"),
+        "de": ("Eingabe", "Esc"),
+        "ar": ("إدخال", "إلغاء"),
+        "ru": ("Ввод", "Выход"),
+    }
+
+    def setUp(self):
+        self.user = User.objects.create_user(username="keynames")
+        self.client.force_login(self.user)
+
+    def render(self, view_name, language):
+        session = self.client.session
+        session["django_language"] = language
+        session.save()
+        return self.client.get(reverse(view_name)).content.decode("utf-8")
+
+    def test_every_template_wraps_the_key_names(self):
+        root = Path(__file__).resolve().parent.parent / "templates"
+
+        for name in self.TEMPLATES:
+            source = (root / name).read_text(encoding="utf-8")
+            for literal in ('<kbd class="dz-kbd">Entrée</kbd>',):
+                self.assertNotIn(
+                    literal,
+                    source,
+                    f"{literal} reste code en dur dans {name}",
+                )
+
+    def test_shortcuts_page_is_translated(self):
+        for code, (enter, escape) in self.TRANSLATIONS.items():
+            html = self.render("core:shortcuts", code)
+            self.assertIn(f'<kbd class="dz-kbd">{enter}</kbd>', html)
+            self.assertIn(f'<kbd class="dz-kbd">{escape}</kbd>', html)
+            self.assertNotIn('<kbd class="dz-kbd">Entrée</kbd>', html)
+            self.assertNotIn('<kbd class="dz-kbd">Échap</kbd>', html)
+
+    def test_french_keeps_the_source_strings(self):
+        html = self.render("core:shortcuts", "fr")
+
+        self.assertIn('<kbd class="dz-kbd">Entrée</kbd>', html)
+        self.assertIn('<kbd class="dz-kbd">Échap</kbd>', html)
+
+    def test_catalog_covers_every_language(self):
+        from django.utils.translation import gettext as _
+
+        from tools.translations import CATALOGS
+        from tools.translations.key_names import KEYS_A, KEY_NAME_TRANSLATIONS
+
+        self.assertEqual(KEYS_A, ("Entrée", "Échap"))
+
+        for code, catalog in CATALOGS.items():
+            if code == "fr":
+                continue
+            self.assertIn(code, KEY_NAME_TRANSLATIONS, f"{code} sans noms de touches")
+            for key in KEYS_A:
+                self.assertIn(key, catalog, f"{key} absent du catalogue {code}")
+
+        for code, (enter, escape) in self.TRANSLATIONS.items():
+            with translation.override(code):
+                self.assertEqual(_("Entrée"), enter)
+                self.assertEqual(_("Échap"), escape)
+
+
 class NavbarDesignTests(TestCase):
     """La barre de navigation adopte un verre teinté « premium ».
 

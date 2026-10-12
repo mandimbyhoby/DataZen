@@ -498,11 +498,12 @@ par un mot-clé anglais, d'une activité par son message, d'un jeton et d'un
 webhook par leur nom ou leur URL, plafonnement par famille et au global, tri par
 score décroissant, contrat de la palette et absence de fuite entre comptes.
 
-Deux classes verrouillent l'internationalisation : `JsUiStringsTests` vérifie que
-les libellés générés par JavaScript sont exposés sur `<body>` et traduits dans
-les 23 langues, et `ContextTranslationTests` vérifie que les chaînes
+Trois classes verrouillent l'internationalisation : `JsUiStringsTests` vérifie
+que les libellés générés par JavaScript sont exposés sur `<body>` et traduits
+dans les 23 langues, `ContextTranslationTests` vérifie que les chaînes
 contextuelles (séparateur « ou » des pages d'authentification) sont bien
-résolues par `pgettext`, dans les catalogues `.po` comme dans les `.mo`.
+résolues par `pgettext`, dans les catalogues `.po` comme dans les `.mo`, et
+`KeyNameTranslationTests` couvre les noms de touches des raccourcis.
 
 Deux classes verrouillent les vidéos de fond décoratives : `HeroVideoTests`
 (page d'accueil) et `LoginVideoTests` (page de connexion) vérifient que la vidéo
@@ -543,7 +544,15 @@ vitrine utilise `.dz-section` / `.dz-section-head` / `.dz-panel-xl`, que les
 pages internes troquent `container py-4` contre `.dz-page` avec `.dz-page-head`
 et `.dz-block`, et que le cache-buster de `style.css` a bien été incrémenté.
 
-La suite compte 264 tests ; l'exécution complète dure environ 15 minutes.
+`KeyNameTranslationTests` couvre les noms de touches affichés dans les balises
+`<kbd>` : « Entrée » et « Échap » apparaissaient en clair dans `shortcuts.html`
+et dans l'aide de la palette Ctrl+K, invisibles pour l'extracteur et donc figés
+en français. Ils passent par `{% translate %}` et par le catalogue
+`tools/translations/key_names.py`, qui fournit le libellé de chaque touche dans
+les 22 langues cibles ; le test balaie plusieurs langues sur la page des
+raccourcis et vérifie que le catalogue reste complet.
+
+La suite compte 268 tests ; l'exécution complète dure environ 11 minutes.
 
 ## 🎨 Charte graphique
 
