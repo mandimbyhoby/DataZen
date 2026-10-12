@@ -1,0 +1,3178 @@
+/* ==========================================================================
+   DataZen — Feuille de style principale
+   --------------------------------------------------------------------------
+   Organisation :
+     1. Jetons de design (couleurs, ombres, rayons, transitions)
+     2. Base & typographie
+     3. Navigation
+     4. Pied de page
+     5. Cartes & surfaces
+     6. Boutons
+     7. Formulaires
+     8. Tableaux
+     9. Badges, progression, alertes
+    10. Héros & sections marketing
+    11. Pages d'authentification
+    12. Contenu du rapport (Markdown)
+    13. Affichage / masquage des mots de passe
+    14. Mode sombre
+    15. Animations & accessibilité
+    17. Adaptabilité (responsive)
+   ========================================================================== */
+
+/* --- 1. Jetons de design -------------------------------------------------- */
+:root {
+    /* Marque : indigo → violet, avec un accent cyan. */
+    --dz-brand-500: #4f46e5;
+    --dz-brand-600: #4338ca;
+    --dz-brand-700: #3730a3;
+    --dz-violet: #7c3aed;
+    --dz-accent: #06b6d4;
+    --dz-accent-soft: #22d3ee;
+
+    --dz-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 55%, #06b6d4 100%);
+    --dz-gradient-soft: linear-gradient(135deg, rgba(79, 70, 229, 0.12), rgba(6, 182, 212, 0.12));
+
+    /* Surfaces */
+    --dz-surface: #ffffff;
+    --dz-surface-2: #f7f8fc;
+    --dz-border: rgba(15, 23, 42, 0.08);
+    --dz-border-strong: rgba(15, 23, 42, 0.14);
+
+    /* Texte */
+    --dz-text: #0f172a;
+    --dz-text-muted: #64748b;
+
+    /* Rayons : généreux, à la manière des grandes surfaces du modèle. */
+    --dz-radius-sm: 0.625rem;
+    --dz-radius: 1rem;
+    --dz-radius-lg: 1.5rem;
+    --dz-radius-xl: 2rem;
+    --dz-radius-2xl: 2.5rem;
+
+    /* Ombres : deux couches (contact net + halo large) plutôt qu'une seule
+       ombre grise, pour un relief doux et moderne. */
+    --dz-shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
+    --dz-shadow-sm:
+        0 2px 4px rgba(15, 23, 42, 0.04),
+        0 8px 20px -8px rgba(15, 23, 42, 0.08);
+    --dz-shadow:
+        0 4px 8px rgba(15, 23, 42, 0.04),
+        0 18px 40px -14px rgba(15, 23, 42, 0.16);
+    --dz-shadow-lg:
+        0 8px 16px rgba(15, 23, 42, 0.05),
+        0 36px 72px -24px rgba(15, 23, 42, 0.24);
+    --dz-shadow-brand: 0 16px 40px -12px rgba(79, 70, 229, 0.42);
+
+    /* Liseré interne : donne aux cartes claires une arête nette sans bord dur. */
+    --dz-ring: 0 0 0 1px rgba(15, 23, 42, 0.05);
+
+    /* Rythme vertical : les sections respirent largement. */
+    --dz-section-gap: clamp(3.5rem, 2.5rem + 4vw, 6rem);
+    --dz-section-gap-sm: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+
+    --dz-transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Vidéo décorative du héros (page d'accueil). */
+    --dz-hero-video-opacity: 0.92;
+    --dz-hero-video-blur: 0px;
+    --dz-hero-video-overlay: linear-gradient(
+        180deg,
+        rgba(247, 248, 252, 0.30) 0%,
+        rgba(247, 248, 252, 0.62) 52%,
+        rgba(247, 248, 252, 1) 100%
+    );
+
+    /* Vidéo décorative des pages d'authentification. */
+    --dz-auth-video-opacity: 0.72;
+    --dz-auth-video-blur: 0px;
+    --dz-auth-video-overlay: radial-gradient(
+        118% 108% at 50% 50%,
+        rgba(247, 248, 252, 0.08) 0%,
+        rgba(247, 248, 252, 0.42) 58%,
+        rgba(247, 248, 252, 0.96) 100%
+    );
+
+    /* Carte de connexion en verre dépoli posée sur la vidéo. */
+    --dz-auth-card-bg: rgba(255, 255, 255, 0.62);
+    --dz-auth-card-border: rgba(255, 255, 255, 0.75);
+    --dz-auth-card-blur: 22px;
+    --dz-auth-card-shadow:
+        0 24px 60px -18px rgba(15, 23, 42, 0.35),
+        0 2px 8px -2px rgba(15, 23, 42, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+    /* Barre de navigation : verre teinté, reflet de marque et liseré dégradé. */
+    --dz-navbar-bg: rgba(255, 255, 255, 0.90);
+    --dz-navbar-bg-scrolled: rgba(255, 255, 255, 0.97);
+    --dz-navbar-sheen:
+        radial-gradient(120% 200% at 10% -80%, rgba(79, 70, 229, 0.16), transparent 62%),
+        radial-gradient(90% 200% at 92% -90%, rgba(6, 182, 212, 0.14), transparent 60%),
+        linear-gradient(100deg, rgba(79, 70, 229, 0.07) 0%, rgba(124, 58, 237, 0.04) 45%, rgba(6, 182, 212, 0.07) 100%);
+    --dz-navbar-hairline: linear-gradient(
+        90deg,
+        rgba(79, 70, 229, 0) 0%,
+        rgba(79, 70, 229, 0.45) 22%,
+        rgba(124, 58, 237, 0.40) 52%,
+        rgba(6, 182, 212, 0.45) 78%,
+        rgba(6, 182, 212, 0) 100%
+    );
+    --dz-navbar-shadow:
+        0 12px 32px -16px rgba(79, 70, 229, 0.45),
+        0 2px 10px -6px rgba(15, 23, 42, 0.18);
+    --dz-navbar-link-hover-bg: rgba(79, 70, 229, 0.08);
+    --dz-navbar-link-active-bg: linear-gradient(135deg, rgba(79, 70, 229, 0.16), rgba(6, 182, 212, 0.13));
+
+    /* Surcharge des variables Bootstrap pour rester cohérent partout. */
+    --bs-primary: #4f46e5;
+    --bs-primary-rgb: 79, 70, 229;
+    --bs-link-color: #4f46e5;
+    --bs-link-color-rgb: 79, 70, 229;
+    --bs-link-hover-color: #3730a3;
+    --bs-border-radius: 1rem;
+    --bs-border-radius-sm: 0.625rem;
+    --bs-border-radius-lg: 1.5rem;
+    --bs-body-font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* --- 2. Base & typographie ------------------------------------------------ */
+body {
+    font-family: var(--bs-body-font-family);
+    color: var(--dz-text);
+    background-color: var(--dz-surface-2);
+    /* Halos colorés très diffus : donnent de la profondeur sans distraire. */
+    background-image:
+        radial-gradient(60rem 40rem at 12% -10%, rgba(79, 70, 229, 0.10), transparent 60%),
+        radial-gradient(50rem 35rem at 95% 0%, rgba(6, 182, 212, 0.10), transparent 55%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--dz-text);
+}
+
+.display-4, .display-5 {
+    letter-spacing: -0.035em;
+}
+
+a {
+    text-decoration: none;
+    transition: color var(--dz-transition);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+code {
+    color: var(--dz-brand-600);
+    background: rgba(79, 70, 229, 0.08);
+    padding: 0.1rem 0.35rem;
+    border-radius: 0.35rem;
+    font-size: 0.875em;
+}
+
+/* Titre de section : petit trait dégradé au-dessus du texte. */
+.dz-eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dz-brand-600);
+    margin-bottom: 0.75rem;
+}
+
+.dz-section-title {
+    font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.75rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+}
+
+.dz-section-subtitle {
+    color: var(--dz-text-muted);
+    font-size: clamp(0.98rem, 0.95rem + 0.2vw, 1.1rem);
+    line-height: 1.65;
+    max-width: 46rem;
+}
+
+/* Bloc de section : porte le rythme vertical généreux du modèle. */
+.dz-section {
+    margin-bottom: var(--dz-section-gap);
+}
+
+.dz-section:last-child {
+    margin-bottom: 0;
+}
+
+/* En-tête de section centré, avec sa respiration propre. */
+.dz-section-head {
+    text-align: center;
+    margin-bottom: var(--dz-section-gap-sm);
+}
+
+.dz-section-head .dz-section-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Pages internes : même rythme vertical que la vitrine ---------------- */
+/* Les gabarits applicatifs gardent leurs classes Bootstrap ; ces règles leur
+   donnent la respiration du modèle sans réécrire chaque page. */
+.dz-page {
+    padding-top: clamp(1.75rem, 1.25rem + 1.6vw, 2.75rem);
+    padding-bottom: clamp(2.5rem, 1.75rem + 2.5vw, 4rem);
+}
+
+.dz-page-top {
+    margin-top: clamp(1.25rem, 1rem + 1vw, 2rem);
+}
+
+/* En-tête de page : titre + actions, séparés du contenu par un vrai blanc. */
+.dz-page-head {
+    margin-bottom: var(--dz-section-gap-sm);
+}
+
+.dz-page-head h1,
+.dz-page-head .h1,
+.dz-page-head .h2,
+.dz-page-head .h3 {
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+}
+
+/* Bloc de contenu d'une page interne. */
+.dz-block {
+    margin-bottom: var(--dz-section-gap-sm);
+}
+
+.dz-block:last-child {
+    margin-bottom: 0;
+}
+
+/* Grille de cartes : les gouttières suivent le rythme des sections. */
+.dz-grid {
+    --bs-gutter-x: clamp(1.25rem, 1rem + 1vw, 2rem);
+    --bs-gutter-y: clamp(1.25rem, 1rem + 1vw, 2rem);
+}
+
+/* Texte en dégradé de marque. */
+.dz-gradient-text {
+    background: var(--dz-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* --- 3. Navigation -------------------------------------------------------- */
+/* Pas de `position` ici : `.sticky-top` de Bootstrap doit rester actif, et
+   `sticky` suffit déjà à ancrer le liseré `::after`. */
+.dz-navbar {
+    background-color: var(--dz-navbar-bg);
+    background-image: var(--dz-navbar-sheen);
+    backdrop-filter: saturate(180%) blur(16px);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    border-bottom: 1px solid var(--dz-border);
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+    transition: box-shadow var(--dz-transition), background-color var(--dz-transition);
+}
+
+/* Liseré dégradé indigo → violet → cyan, fondu aux extrémités. */
+.dz-navbar::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 -1px 0;
+    height: 1px;
+    background: var(--dz-navbar-hairline);
+    pointer-events: none;
+}
+
+/* Ombre ajoutée par le JavaScript dès que la page défile. */
+.dz-navbar.is-scrolled {
+    box-shadow: var(--dz-navbar-shadow);
+    background-color: var(--dz-navbar-bg-scrolled);
+}
+
+.dz-navbar .navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+    color: var(--dz-text);
+}
+
+.dz-navbar .navbar-brand:hover {
+    color: var(--dz-brand-600);
+}
+
+/* Logo image (mark + wordmark) — see tools/make_logo_asset.py.
+   Deux variantes sont rendues : le wordmark bleu nuit devient illisible sur
+   fond sombre, on bascule donc sur la version éclaircie via le thème. */
+.dz-logo-img {
+    display: block;
+    height: 2.1rem;
+    width: auto;
+    transition: transform var(--dz-transition), filter var(--dz-transition);
+}
+
+.dz-logo-img--dark {
+    display: none;
+}
+
+[data-bs-theme="dark"] .dz-logo-img--light {
+    display: none;
+}
+
+[data-bs-theme="dark"] .dz-logo-img--dark {
+    display: block;
+}
+
+.dz-navbar .navbar-brand:hover .dz-logo-img {
+    transform: translateY(-1px) scale(1.03);
+    filter: drop-shadow(0 10px 22px rgba(79, 70, 229, 0.45));
+}
+
+.dz-navbar .nav-link {
+    position: relative;
+    color: var(--dz-text-muted);
+    font-weight: 500;
+    padding: 0.45rem 0.85rem;
+    border-radius: var(--dz-radius-sm);
+    transition: color var(--dz-transition), background var(--dz-transition),
+                box-shadow var(--dz-transition);
+}
+
+/* Soulignement dégradé qui se déploie au survol (hors menus déroulants,
+   dont le ::after porte le chevron Bootstrap). */
+.dz-navbar .nav-link:not(.dropdown-toggle)::after {
+    content: "";
+    position: absolute;
+    left: 0.85rem;
+    right: 0.85rem;
+    bottom: 0.22rem;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--dz-gradient);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform var(--dz-transition);
+}
+
+.dz-navbar .nav-link:hover,
+.dz-navbar .nav-link:focus-visible {
+    color: var(--dz-brand-600);
+    background: var(--dz-navbar-link-hover-bg);
+}
+
+.dz-navbar .nav-link:not(.dropdown-toggle):hover::after,
+.dz-navbar .nav-link:not(.dropdown-toggle):focus-visible::after {
+    transform: scaleX(1);
+}
+
+.dz-navbar .nav-link.active {
+    color: var(--dz-brand-600);
+    background: var(--dz-navbar-link-active-bg);
+    box-shadow: inset 0 0 0 1px rgba(79, 70, 229, 0.16);
+}
+
+.dz-navbar .nav-link.active:not(.dropdown-toggle)::after {
+    transform: scaleX(1);
+}
+
+.dz-navbar .navbar-toggler {
+    border-color: var(--dz-border-strong);
+    padding: 0.35rem 0.5rem;
+}
+
+.dz-navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.25);
+}
+
+/* Bouton de bascule du thème. */
+#theme-toggle {
+    cursor: pointer;
+    width: 2.4rem;
+    height: 2.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid var(--dz-border-strong);
+    background: var(--dz-surface);
+    color: var(--dz-text);
+    font-size: 1rem;
+    line-height: 1;
+    transition: transform var(--dz-transition), box-shadow var(--dz-transition),
+                border-color var(--dz-transition);
+}
+
+#theme-toggle:hover {
+    transform: rotate(-15deg) scale(1.06);
+    border-color: var(--dz-brand-500);
+    box-shadow: var(--dz-shadow-sm);
+}
+
+/* --- 4. Pied de page ------------------------------------------------------ */
+.dz-footer {
+    background: var(--dz-surface);
+    border-top: 1px solid var(--dz-border);
+    padding: 3.5rem 0 2.25rem;
+    margin-top: var(--dz-section-gap);
+}
+
+.dz-footer .dz-footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    color: var(--dz-text);
+}
+
+.dz-footer .dz-footer-links a {
+    color: var(--dz-text-muted);
+    font-size: 0.9rem;
+}
+
+.dz-footer .dz-footer-links a:hover {
+    color: var(--dz-brand-600);
+}
+
+.dz-footer .dz-footer-note {
+    color: var(--dz-text-muted);
+    font-size: 0.85rem;
+}
+
+/* --- 5. Cartes & surfaces ------------------------------------------------- */
+.card {
+    border: 1px solid var(--dz-border);
+    border-radius: var(--dz-radius-lg);
+    background: var(--dz-surface);
+    box-shadow: var(--dz-shadow-sm);
+    transition: transform var(--dz-transition), box-shadow var(--dz-transition),
+                border-color var(--dz-transition);
+}
+
+.card h5,
+.card .card-title {
+    font-weight: 700;
+    letter-spacing: -0.015em;
+}
+
+.card-body {
+    padding: 1.75rem;
+}
+
+/* Carte qui se soulève au survol : réservée aux cartes cliquables ou
+   purement décoratives, pour ne pas animer les gros panneaux de travail. */
+.dz-card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--dz-shadow-lg);
+    border-color: rgba(79, 70, 229, 0.28);
+}
+
+/* Carte mise en avant : liseré dégradé en haut. */
+.dz-card-accent {
+    position: relative;
+    overflow: hidden;
+}
+
+.dz-card-accent::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 5px;
+    background: var(--dz-gradient);
+}
+
+/* Panneau de travail : surface neutre, sans effet de survol. */
+.dz-panel {
+    background: var(--dz-surface);
+    border: 1px solid var(--dz-border);
+    border-radius: var(--dz-radius-lg);
+    box-shadow: var(--dz-shadow-sm);
+}
+
+/* Panneau large : la grande surface arrondie du modèle, posée sur la page. */
+.dz-panel-xl {
+    border-radius: var(--dz-radius-xl);
+    box-shadow: var(--dz-shadow);
+}
+
+/* --- 6. Boutons ----------------------------------------------------------- */
+.btn {
+    font-weight: 600;
+    border-radius: var(--dz-radius-sm);
+    padding: 0.55rem 1.1rem;
+    transition: transform var(--dz-transition), box-shadow var(--dz-transition),
+                background var(--dz-transition), border-color var(--dz-transition),
+                color var(--dz-transition);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn-primary {
+    background: var(--dz-gradient);
+    border: none;
+    color: #fff;
+    box-shadow: var(--dz-shadow-brand);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: var(--dz-gradient);
+    filter: brightness(1.08);
+    color: #fff;
+    box-shadow: 0 16px 36px -10px rgba(79, 70, 229, 0.55);
+}
+
+.btn-primary:disabled,
+.btn-primary.disabled {
+    background: var(--dz-gradient);
+    opacity: 0.55;
+    box-shadow: none;
+}
+
+.btn-outline-primary {
+    color: var(--dz-brand-600);
+    border-color: rgba(79, 70, 229, 0.4);
+}
+
+.btn-outline-primary:hover {
+    background: var(--dz-brand-500);
+    border-color: var(--dz-brand-500);
+    color: #fff;
+    box-shadow: var(--dz-shadow-brand);
+}
+
+.btn-outline-secondary {
+    color: var(--dz-text-muted);
+    border-color: var(--dz-border-strong);
+}
+
+.btn-outline-secondary:hover {
+    background: var(--dz-text-muted);
+    border-color: var(--dz-text-muted);
+    color: #fff;
+}
+
+.btn-light {
+    background: var(--dz-surface);
+    border: 1px solid var(--dz-border-strong);
+    color: var(--dz-text);
+}
+
+.btn-light:hover {
+    background: var(--dz-surface-2);
+    border-color: var(--dz-brand-500);
+    color: var(--dz-brand-600);
+}
+
+.btn-lg {
+    padding: 0.8rem 1.6rem;
+    font-size: 1.02rem;
+    border-radius: var(--dz-radius);
+}
+
+.btn-sm {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+}
+
+/* --- 7. Formulaires ------------------------------------------------------- */
+.form-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--dz-text);
+    margin-bottom: 0.35rem;
+}
+
+.form-control,
+.form-select {
+    border-radius: var(--dz-radius-sm);
+    border: 1px solid var(--dz-border-strong);
+    padding: 0.6rem 0.85rem;
+    background: var(--dz-surface);
+    color: var(--dz-text);
+    transition: border-color var(--dz-transition), box-shadow var(--dz-transition);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--dz-brand-500);
+    box-shadow: 0 0 0 0.22rem rgba(79, 70, 229, 0.16);
+    background: var(--dz-surface);
+    color: var(--dz-text);
+}
+
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+.form-check-input:checked {
+    background-color: var(--dz-brand-500);
+    border-color: var(--dz-brand-500);
+}
+
+.form-check-input:focus {
+    border-color: var(--dz-brand-500);
+    box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.18);
+}
+
+.form-text {
+    color: var(--dz-text-muted);
+}
+
+/* Zone de dépôt de fichier : grande cible visuelle et accueillante. */
+.dz-dropzone {
+    border: 2px dashed rgba(79, 70, 229, 0.35);
+    border-radius: var(--dz-radius-lg);
+    background: var(--dz-gradient-soft);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    transition: border-color var(--dz-transition), background var(--dz-transition),
+                transform var(--dz-transition);
+}
+
+.dz-dropzone:hover,
+.dz-dropzone.is-dragover {
+    border-color: var(--dz-brand-500);
+    background: rgba(79, 70, 229, 0.10);
+    transform: translateY(-2px);
+}
+
+.dz-dropzone .dz-dropzone-icon {
+    font-size: 2.75rem;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+}
+
+.dz-file-picker {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: left;
+}
+
+.dz-file-button {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+
+.dz-file-picker input[type="file"] {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dz-file-picker input[type="file"]:focus-visible {
+    outline: 3px solid rgba(79, 70, 229, 0.35);
+    outline-offset: 2px;
+}
+
+.dz-file-name {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    color: var(--dz-text-muted, #64748b);
+}
+
+
+/* --- 8. Tableaux ---------------------------------------------------------- */
+.table {
+    --bs-table-bg: transparent;
+    margin-bottom: 0;
+}
+
+/* Cellules aérées et centrées : le padding confortable évite que le contenu
+   ne colle aux lignes de séparation. */
+.table td,
+.table th {
+    padding: 0.75rem 0.85rem;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--dz-border);
+}
+
+.table thead th {
+    white-space: nowrap;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--dz-text-muted);
+    background: var(--dz-surface-2);
+    border-bottom: 1px solid var(--dz-border-strong);
+}
+
+.table tbody tr {
+    transition: background var(--dz-transition);
+}
+
+.table-hover tbody tr:hover {
+    background: rgba(79, 70, 229, 0.05);
+}
+
+.table-responsive {
+    border-radius: var(--dz-radius);
+}
+
+/* --- 9. Badges, progression, alertes -------------------------------------- */
+.badge {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 0.4em 0.7em;
+    border-radius: 999px;
+}
+
+.badge.bg-success { background: linear-gradient(135deg, #10b981, #059669) !important; }
+.badge.bg-danger  { background: linear-gradient(135deg, #f87171, #dc2626) !important; }
+.badge.bg-info    { background: linear-gradient(135deg, #22d3ee, #0891b2) !important; }
+.badge.bg-warning { background: linear-gradient(135deg, #fbbf24, #d97706) !important; color: #422006; }
+.badge.bg-secondary { background: linear-gradient(135deg, #94a3b8, #64748b) !important; }
+
+.progress {
+    background: rgba(15, 23, 42, 0.08);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: var(--dz-gradient);
+}
+
+.alert {
+    border: 1px solid var(--dz-border);
+    border-radius: var(--dz-radius);
+    box-shadow: var(--dz-shadow-xs);
+    border-left-width: 4px;
+}
+
+.alert-info    { border-left-color: var(--dz-accent); }
+.alert-success { border-left-color: #10b981; }
+.alert-danger  { border-left-color: #ef4444; }
+.alert-warning { border-left-color: #f59e0b; }
+
+/* --- 10. Héros & sections marketing --------------------------------------- */
+.dz-hero {
+    position: relative;
+    padding: clamp(4rem, 2.5rem + 7vw, 7.5rem) 0 clamp(3.5rem, 2.5rem + 5vw, 6rem);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Halo lumineux derrière le titre. */
+.dz-hero::before {
+    content: "";
+    position: absolute;
+    top: -16rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(80rem, 140vw);
+    height: 40rem;
+    background: radial-gradient(closest-side, rgba(79, 70, 229, 0.20), transparent 72%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.dz-hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Vidéo de fond décorative : reste derrière le contenu, jamais cliquable. */
+.dz-hero-video {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.dz-hero-video__media {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: var(--dz-hero-video-opacity);
+    filter: blur(var(--dz-hero-video-blur));
+    transform: scale(1.02);
+}
+
+/* Dégradé qui fond la vidéo dans la couleur de page, pour la lisibilité. */
+.dz-hero-video__overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--dz-hero-video-overlay);
+}
+
+/* Respect de « réduire les animations » : on garde l'affiche, on coupe la vidéo. */
+@media (prefers-reduced-motion: reduce) {
+    .dz-hero-video__media {
+        display: none;
+    }
+
+    .dz-hero-video {
+        background: url("../img/hero-poster.jpg") center / cover no-repeat;
+    }
+}
+
+.dz-hero h1 {
+    font-size: clamp(2.4rem, 1.4rem + 4.2vw, 4.25rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    margin-bottom: 1.25rem;
+}
+
+.dz-hero .dz-hero-lead {
+    font-size: clamp(1.05rem, 0.98rem + 0.5vw, 1.3rem);
+    line-height: 1.65;
+    color: var(--dz-text-muted);
+    max-width: 46rem;
+    margin: 0 auto 2.25rem;
+}
+
+/* Petite pastille d'annonce au-dessus du titre. */
+.dz-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    background: var(--dz-surface);
+    border: 1px solid var(--dz-border-strong);
+    box-shadow: var(--dz-shadow-xs);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--dz-text-muted);
+    margin-bottom: 1.75rem;
+}
+
+.dz-pill .dz-pill-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+/* Bandeau de statistiques. */
+.dz-stat {
+    position: relative;
+    height: 100%;
+    padding: 1.75rem 1.25rem;
+    border-radius: var(--dz-radius-lg);
+    background: var(--dz-surface);
+    border: 1px solid var(--dz-border);
+    box-shadow: var(--dz-shadow-sm);
+    text-align: center;
+    overflow: hidden;
+    transition: transform var(--dz-transition), box-shadow var(--dz-transition);
+}
+
+.dz-stat:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--dz-shadow);
+}
+
+.dz-stat .dz-stat-value {
+    font-size: clamp(1.9rem, 1.4rem + 1.4vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.dz-stat .dz-stat-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--dz-text-muted);
+    margin-top: 0.5rem;
+}
+
+.dz-stat .dz-stat-icon {
+    font-size: 1.25rem;
+    opacity: 0.85;
+    margin-bottom: 0.5rem;
+}
+
+/* Cartes de fonctionnalités. */
+.dz-feature {
+    height: 100%;
+    padding: 2.25rem 1.75rem;
+    border-radius: var(--dz-radius-lg);
+    background: var(--dz-surface);
+    border: 1px solid var(--dz-border);
+    box-shadow: var(--dz-shadow-sm);
+    transition: transform var(--dz-transition), box-shadow var(--dz-transition),
+                border-color var(--dz-transition);
+}
+
+.dz-feature:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--dz-shadow-lg);
+    border-color: rgba(79, 70, 229, 0.28);
+}
+
+.dz-feature .dz-feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: var(--dz-radius);
+    background: var(--dz-gradient-soft);
+    border: 1px solid rgba(79, 70, 229, 0.16);
+    font-size: 1.65rem;
+    line-height: 1;
+    margin-bottom: 1.25rem;
+}
+
+.dz-feature h5 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    margin-bottom: 0.65rem;
+}
+
+.dz-feature p {
+    color: var(--dz-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 0;
+}
+
+/* --- 11. Pages d'authentification ----------------------------------------- */
+/* Enveloppe plein cadre : porte la vidéo de fond et centre la carte. */
+.dz-auth-shell {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 12rem);
+    /* `dvh` suit la barre d'URL mobile qui se rétracte ; `vh` reste le repli. */
+    min-height: calc(100dvh - 12rem);
+}
+
+.dz-auth {
+    position: relative;
+    z-index: 1;
+    min-height: calc(100vh - 12rem);
+    /* `dvh` suit la barre d'URL mobile qui se rétracte ; `vh` reste le repli. */
+    min-height: calc(100dvh - 12rem);
+    display: flex;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+/* Vidéo de fond décorative : reste derrière la carte, jamais cliquable. */
+.dz-auth-video {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.dz-auth-video__media {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: var(--dz-auth-video-opacity);
+    filter: blur(var(--dz-auth-video-blur));
+    transform: scale(1.02);
+}
+
+/* Dégradé qui fond la vidéo dans la couleur de page, pour la lisibilité. */
+.dz-auth-video__overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--dz-auth-video-overlay);
+}
+
+/* Respect de « réduire les animations » : on garde l'affiche, on coupe la vidéo. */
+@media (prefers-reduced-motion: reduce) {
+    .dz-auth-video__media {
+        display: none;
+    }
+
+    .dz-auth-video {
+        background: url("../img/login-poster.jpg") center / cover no-repeat;
+    }
+}
+
+.dz-auth-card {
+    border-radius: var(--dz-radius-xl);
+    border: 1px solid var(--dz-border);
+    background: var(--dz-surface);
+    box-shadow: var(--dz-shadow-lg);
+    overflow: hidden;
+}
+
+/* Carte en verre dépoli : uniquement là où une vidéo passe derrière. */
+.dz-auth-shell .dz-auth-card {
+    position: relative;
+    background: var(--dz-auth-card-bg);
+    border-color: var(--dz-auth-card-border);
+    box-shadow: var(--dz-auth-card-shadow);
+    -webkit-backdrop-filter: blur(var(--dz-auth-card-blur)) saturate(150%);
+    backdrop-filter: blur(var(--dz-auth-card-blur)) saturate(150%);
+}
+
+/* Sans `backdrop-filter`, le verre serait illisible : on opaque la carte. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .dz-auth-shell .dz-auth-card {
+        background: var(--dz-surface);
+    }
+}
+
+/* Liseré lumineux sur l'arête haute : donne du relief au verre. */
+.dz-auth-shell .dz-auth-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.55),
+        transparent
+    );
+    pointer-events: none;
+}
+
+.dz-auth-card .dz-auth-header {
+    padding: 2.5rem 2.25rem 0;
+    text-align: center;
+}
+
+.dz-auth-card .dz-auth-body {
+    padding: 1.75rem 2.25rem 2.5rem;
+}
+
+.dz-auth-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: var(--dz-radius);
+    background: var(--dz-gradient);
+    box-shadow: var(--dz-shadow-brand);
+    font-size: 1.7rem;
+    line-height: 1;
+    margin-bottom: 1.15rem;
+}
+
+.dz-auth-card h1 {
+    font-size: clamp(1.6rem, 1.4rem + 0.6vw, 1.9rem);
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.dz-auth-card .dz-auth-subtitle {
+    color: var(--dz-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.dz-auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--dz-text-muted);
+    font-size: 0.8rem;
+    margin: 1.25rem 0;
+}
+
+.dz-auth-divider::before,
+.dz-auth-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--dz-border-strong);
+}
+
+/* --- 12. Contenu du rapport (Markdown converti) --------------------------- */
+.report-content h1,
+.report-content h2,
+.report-content h3 {
+    color: var(--dz-brand-600);
+    margin-top: 1.25rem;
+}
+
+.report-content table {
+    width: 100%;
+}
+
+.report-content code {
+    background: rgba(79, 70, 229, 0.1);
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.25rem;
+}
+
+/* --- 13. Affichage / masquage des mots de passe --------------------------- */
+.password-toggle-wrapper {
+    width: 100%;
+}
+
+/* Réserve la place du bouton pour que le texte saisi ne passe pas dessous. */
+.password-toggle-input {
+    padding-right: 2.75rem;
+}
+
+.password-toggle-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--dz-text-muted);
+    cursor: pointer;
+    border-top-right-radius: var(--dz-radius-sm);
+    border-bottom-right-radius: var(--dz-radius-sm);
+    transition: color var(--dz-transition), background var(--dz-transition);
+}
+
+.password-toggle-btn:hover {
+    color: var(--dz-brand-600);
+    background: rgba(79, 70, 229, 0.07);
+}
+
+.password-toggle-btn:focus-visible {
+    outline: 2px solid var(--dz-brand-500);
+    outline-offset: -2px;
+}
+
+/* Empêche les boutons du navigateur (Edge/IE) de se superposer. */
+.password-toggle-input::-ms-reveal,
+.password-toggle-input::-ms-clear {
+    display: none;
+}
+
+/* --- 14. Mode sombre ------------------------------------------------------ */
+[data-bs-theme="dark"] {
+    --dz-surface: #16181f;
+    --dz-surface-2: #0d0f14;
+    --dz-border: rgba(255, 255, 255, 0.09);
+    --dz-border-strong: rgba(255, 255, 255, 0.16);
+    --dz-text: #e8eaf0;
+    --dz-text-muted: #9aa4b8;
+
+    --dz-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --dz-shadow-sm:
+        0 2px 4px rgba(0, 0, 0, 0.35),
+        0 10px 24px -10px rgba(0, 0, 0, 0.55);
+    --dz-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.35),
+        0 22px 48px -16px rgba(0, 0, 0, 0.7);
+    --dz-shadow-lg:
+        0 8px 16px rgba(0, 0, 0, 0.4),
+        0 40px 80px -28px rgba(0, 0, 0, 0.85);
+    --dz-shadow-brand: 0 16px 40px -12px rgba(79, 70, 229, 0.6);
+
+    --dz-ring: 0 0 0 1px rgba(255, 255, 255, 0.06);
+
+    --dz-gradient-soft: linear-gradient(135deg, rgba(79, 70, 229, 0.22), rgba(6, 182, 212, 0.18));
+
+    --dz-hero-video-opacity: 0.8;
+    --dz-hero-video-overlay: linear-gradient(
+        180deg,
+        rgba(13, 15, 20, 0.28) 0%,
+        rgba(13, 15, 20, 0.60) 52%,
+        rgba(13, 15, 20, 1) 100%
+    );
+
+    --dz-auth-video-opacity: 0.62;
+    --dz-auth-video-overlay: radial-gradient(
+        118% 108% at 50% 50%,
+        rgba(13, 15, 20, 0.10) 0%,
+        rgba(13, 15, 20, 0.52) 58%,
+        rgba(13, 15, 20, 0.97) 100%
+    );
+
+    --dz-auth-card-bg: rgba(22, 24, 31, 0.58);
+    --dz-auth-card-border: rgba(255, 255, 255, 0.14);
+    --dz-auth-card-blur: 24px;
+    --dz-auth-card-shadow:
+        0 28px 64px -20px rgba(0, 0, 0, 0.8),
+        0 2px 10px -2px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+    --dz-navbar-bg: rgba(13, 15, 20, 0.90);
+    --dz-navbar-bg-scrolled: rgba(13, 15, 20, 0.97);
+    --dz-navbar-sheen:
+        radial-gradient(120% 200% at 10% -80%, rgba(99, 102, 241, 0.30), transparent 62%),
+        radial-gradient(90% 200% at 92% -90%, rgba(34, 211, 238, 0.22), transparent 60%),
+        linear-gradient(100deg, rgba(99, 102, 241, 0.12) 0%, rgba(124, 58, 237, 0.08) 45%, rgba(34, 211, 238, 0.12) 100%);
+    --dz-navbar-hairline: linear-gradient(
+        90deg,
+        rgba(99, 102, 241, 0) 0%,
+        rgba(99, 102, 241, 0.55) 22%,
+        rgba(124, 58, 237, 0.50) 52%,
+        rgba(34, 211, 238, 0.55) 78%,
+        rgba(34, 211, 238, 0) 100%
+    );
+    --dz-navbar-shadow:
+        0 14px 36px -16px rgba(0, 0, 0, 0.75),
+        0 0 0 1px rgba(99, 102, 241, 0.10);
+    --dz-navbar-link-hover-bg: rgba(129, 140, 248, 0.14);
+    --dz-navbar-link-active-bg: linear-gradient(135deg, rgba(99, 102, 241, 0.28), rgba(34, 211, 238, 0.20));
+
+    --bs-body-color: #e8eaf0;
+    --bs-body-bg: #0d0f14;
+    --bs-secondary-color: #9aa4b8;
+}
+
+[data-bs-theme="dark"] body {
+    background-color: var(--dz-surface-2);
+    background-image:
+        radial-gradient(60rem 40rem at 12% -10%, rgba(79, 70, 229, 0.22), transparent 60%),
+        radial-gradient(50rem 35rem at 95% 0%, rgba(6, 182, 212, 0.16), transparent 55%);
+}
+
+/* La barre de navigation tire ses couleurs des variables du thème. */
+[data-bs-theme="dark"] .dz-navbar .navbar-brand {
+    color: var(--dz-text);
+}
+
+/* Sur fond sombre, l'indigo 600 manque de contraste : on éclaircit. */
+[data-bs-theme="dark"] .dz-navbar .nav-link:hover,
+[data-bs-theme="dark"] .dz-navbar .nav-link:focus-visible,
+[data-bs-theme="dark"] .dz-navbar .nav-link.active {
+    color: #a5b4fc;
+}
+
+[data-bs-theme="dark"] .dz-navbar .nav-link.active {
+    box-shadow: inset 0 0 0 1px rgba(129, 140, 248, 0.28);
+}
+
+[data-bs-theme="dark"] .dz-navbar .navbar-toggler-icon {
+    filter: invert(1) grayscale(1) brightness(1.8);
+}
+
+[data-bs-theme="dark"] .card,
+[data-bs-theme="dark"] .dz-panel,
+[data-bs-theme="dark"] .dz-stat,
+[data-bs-theme="dark"] .dz-feature,
+[data-bs-theme="dark"] .dz-auth-card,
+[data-bs-theme="dark"] .dz-footer {
+    background-color: var(--dz-surface);
+    color: var(--dz-text);
+}
+
+/* Le verre dépoli doit gagner sur la couleur de surface opaque ci-dessus. */
+[data-bs-theme="dark"] .dz-auth-shell .dz-auth-card {
+    background-color: var(--dz-auth-card-bg);
+}
+
+[data-bs-theme="dark"] .bg-light {
+    background-color: var(--dz-surface) !important;
+}
+
+[data-bs-theme="dark"] .table-light {
+    --bs-table-bg: #1c1f27;
+    --bs-table-color: var(--dz-text);
+}
+
+[data-bs-theme="dark"] .table thead th {
+    background: #1c1f27;
+    color: var(--dz-text-muted);
+}
+
+[data-bs-theme="dark"] .table-hover tbody tr:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+[data-bs-theme="dark"] .text-muted {
+    color: var(--dz-text-muted) !important;
+}
+
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select {
+    background-color: #1c1f27;
+    border-color: var(--dz-border-strong);
+    color: var(--dz-text);
+}
+
+[data-bs-theme="dark"] .form-control:focus,
+[data-bs-theme="dark"] .form-select:focus {
+    background-color: #1c1f27;
+    color: var(--dz-text);
+}
+
+[data-bs-theme="dark"] .form-control::placeholder {
+    color: #6b7688;
+}
+
+[data-bs-theme="dark"] .btn-light {
+    background: #1c1f27;
+    border-color: var(--dz-border-strong);
+    color: var(--dz-text);
+}
+
+[data-bs-theme="dark"] .btn-light:hover {
+    background: #232733;
+    color: #fff;
+}
+
+[data-bs-theme="dark"] .btn-outline-secondary {
+    color: var(--dz-text-muted);
+    border-color: var(--dz-border-strong);
+}
+
+[data-bs-theme="dark"] .btn-outline-secondary:hover {
+    background: var(--dz-text-muted);
+    color: #0d0f14;
+}
+
+[data-bs-theme="dark"] .alert {
+    background-color: #1c1f27;
+    border-color: var(--dz-border);
+    color: var(--dz-text);
+}
+
+[data-bs-theme="dark"] .progress {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-bs-theme="dark"] code {
+    color: var(--dz-accent-soft);
+    background: rgba(6, 182, 212, 0.14);
+}
+
+[data-bs-theme="dark"] .dropdown-menu {
+    background-color: #1c1f27;
+    border-color: var(--dz-border);
+}
+
+[data-bs-theme="dark"] .dz-dropzone {
+    background: rgba(79, 70, 229, 0.14);
+    border-color: rgba(129, 140, 248, 0.4);
+}
+
+/* --- 15. Animations & accessibilité --------------------------------------- */
+@keyframes dz-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Les éléments marqués `data-dz-reveal` apparaissent en cascade. */
+[data-dz-reveal] {
+    animation: dz-fade-up 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+[data-dz-reveal][data-dz-delay="1"] { animation-delay: 80ms; }
+[data-dz-reveal][data-dz-delay="2"] { animation-delay: 160ms; }
+[data-dz-reveal][data-dz-delay="3"] { animation-delay: 240ms; }
+[data-dz-reveal][data-dz-delay="4"] { animation-delay: 320ms; }
+
+/* Respect du réglage système « réduire les animations ». */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-delay: 0ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        transition-delay: 0ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Anneau de focus homogène et visible au clavier. */
+:focus-visible {
+    outline: 2px solid var(--dz-brand-500);
+    outline-offset: 2px;
+}
+
+/* Lien d'évitement pour la navigation au clavier. */
+.dz-skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 1080;
+    padding: 0.6rem 1rem;
+    background: var(--dz-brand-600);
+    color: #fff;
+    border-radius: 0 0 var(--dz-radius-sm) 0;
+    font-weight: 600;
+}
+
+.dz-skip-link:focus {
+    left: 0;
+    color: #fff;
+}
+
+/* --- Utilitaires ---------------------------------------------------------- */
+.table-search {
+    max-width: 260px;
+}
+
+/* Hauteurs de barres de progression : remplace les styles en ligne pour
+   qu'elles restent adaptables. */
+.dz-progress-lg  { height: 22px; }
+.dz-progress-thin { height: 4px; }
+.dz-progress-xs  { height: 6px; }
+.dz-progress-xxs { height: 5px; }
+
+/* Bloc de texte préformaté qui se replie au lieu de déborder. */
+.dz-pre-wrap {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* Barre de filtres de la liste des fichiers. */
+.dz-filter-form {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+}
+
+.dz-filter-search {
+    min-width: 220px;
+    flex: 1 1 220px;
+}
+
+.dz-filter-select {
+    min-width: 170px;
+    flex: 0 1 170px;
+}
+
+@media (max-width: 767.98px) {
+    .dz-filter-form {
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .dz-filter-search,
+    .dz-filter-select {
+        min-width: 0;
+        flex: 1 1 100%;
+        width: 100%;
+    }
+}
+
+.dz-divider {
+    height: 1px;
+    background: var(--dz-border);
+    border: 0;
+    margin: 2.5rem 0;
+    opacity: 1;
+}
+
+/* Barre de défilement discrète et assortie. */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(100, 116, 139, 0.45) transparent;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: rgba(100, 116, 139, 0.45);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 116, 139, 0.7);
+    background-clip: content-box;
+}
+
+/* ==========================================================================
+   16. Profil utilisateur & avatars
+   ========================================================================== */
+
+/* --- 16.1 Avatars -------------------------------------------------------- */
+
+.dz-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    background: var(--dz-gradient);
+    color: #fff;
+    font-weight: 700;
+    line-height: 1;
+    user-select: none;
+}
+
+.dz-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.dz-avatar-initials {
+    font-size: 0.95em;
+    letter-spacing: 0.02em;
+}
+
+.dz-avatar-sm {
+    width: 28px;
+    height: 28px;
+    font-size: 0.7rem;
+}
+
+.dz-avatar-lg {
+    width: 96px;
+    height: 96px;
+    font-size: 2rem;
+}
+
+/* Grand aperçu de la page de profil. */
+.dz-avatar-preview {
+    width: 104px;
+    height: 104px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+    background: var(--dz-gradient);
+    color: #fff;
+    font-size: 2.15rem;
+    font-weight: 700;
+    line-height: 1;
+    box-shadow: var(--dz-shadow);
+    border: 3px solid var(--dz-surface);
+}
+
+.dz-avatar-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- 16.1b Sélecteur d'avatar (style Facebook) --------------------------- */
+
+.dz-avatar-picker {
+    position: relative;
+    width: 104px;
+    height: 104px;
+}
+
+/* L'avatar lui-même est un bouton : tout clic ouvre le sélecteur de fichier. */
+button.dz-avatar-preview {
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+    transition: transform var(--dz-transition), box-shadow var(--dz-transition);
+}
+
+button.dz-avatar-preview:hover,
+button.dz-avatar-preview:focus-visible {
+    transform: scale(1.03);
+    box-shadow: var(--dz-shadow-lg);
+    outline: none;
+}
+
+button.dz-avatar-preview:focus-visible {
+    box-shadow: var(--dz-shadow-lg), 0 0 0 3px rgba(79, 70, 229, 0.45);
+}
+
+/* Voile au survol pour signaler que l'avatar est cliquable. */
+button.dz-avatar-preview::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: rgba(15, 23, 42, 0.45);
+    opacity: 0;
+    transition: opacity var(--dz-transition);
+    pointer-events: none;
+}
+
+button.dz-avatar-preview:hover::after,
+button.dz-avatar-preview:focus-visible::after {
+    opacity: 1;
+}
+
+/* Illustration par défaut, affichée tant qu'aucune photo n'est définie. */
+.dz-avatar-default {
+    object-fit: cover;
+}
+
+/* Bouton appareil photo dans le coin inférieur droit de l'avatar. */
+.dz-avatar-camera {
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+    z-index: 2;
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 50%;
+    border: 3px solid var(--dz-surface);
+    background: var(--dz-gradient);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: var(--dz-shadow-sm);
+    transition: transform var(--dz-transition), box-shadow var(--dz-transition);
+}
+
+.dz-avatar-camera:hover,
+.dz-avatar-camera:focus-visible {
+    transform: scale(1.08);
+    box-shadow: var(--dz-shadow-brand);
+    outline: none;
+}
+
+.dz-avatar-camera:focus-visible {
+    box-shadow: var(--dz-shadow-brand), 0 0 0 3px rgba(79, 70, 229, 0.45);
+}
+
+/* Barre de confirmation affichée après le choix d'une nouvelle photo. */
+.dz-avatar-actions {
+    margin-bottom: 0.5rem;
+}
+
+/* Le champ fichier est masqué via .visually-hidden (Bootstrap) : il reste dans
+   le DOM pour la soumission du formulaire et le JS, mais la photo se choisit en
+   cliquant sur l'avatar ou sur l'icône appareil photo. */
+.dz-avatar-file {
+    margin: 0;
+}
+
+/* Scène de la webcam dans la fenêtre modale. */
+.dz-camera-stage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: var(--dz-radius);
+    background: #0f172a;
+}
+
+.dz-camera-stage video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scaleX(-1);
+}
+
+/* Carte d'identité du profil : compacte pour limiter la hauteur de la zone photo. */
+.dz-profile-card .card-body {
+    padding: 1.25rem 1.25rem 1.1rem;
+}
+
+.dz-profile-meta dt,
+.dz-profile-meta dd {
+    margin-bottom: 0.15rem;
+}
+
+/* --- 16.2 Lien utilisateur de la barre de navigation --------------------- */
+
+.dz-nav-user {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dz-nav-username {
+    max-width: 12rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* --- 16.3 Statistiques du profil ----------------------------------------- */
+
+/* Bandeau compact intégré à la carte d'identité, sous la photo de profil. */
+.dz-profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.dz-profile-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    padding: 0.6rem 0.35rem;
+    border-radius: var(--dz-radius-sm);
+    background: var(--dz-surface-2);
+    border: 1px solid var(--dz-border);
+}
+
+.dz-profile-stat-value {
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.dz-profile-stat-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--dz-text-muted);
+    text-align: center;
+}
+
+/* Séparateur resserré, utilisé à l'intérieur des cartes. */
+.dz-divider-tight {
+    margin: 1.25rem 0 0;
+}
+
+/* --- 16.4 Formulaire de profil ------------------------------------------- */
+
+/* Champ fichier : le libellé natif est remplacé par un style homogène. */
+input[type="file"].form-control {
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+}
+
+input[type="file"].form-control::file-selector-button {
+    margin-right: 0.75rem;
+    padding: 0.35rem 0.85rem;
+    border: 0;
+    border-radius: var(--dz-radius-sm);
+    background: var(--dz-brand-600);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+input[type="file"].form-control::file-selector-button:hover {
+    background: var(--dz-brand-700);
+}
+
+/* --- 16.5 Complétion, activité et zone de danger ------------------------- */
+
+/* Barre de complétion du profil. */
+.dz-completion-bar {
+    height: 0.5rem;
+    border-radius: 999px;
+    background: var(--dz-surface-2);
+}
+
+.dz-completion-bar .progress-bar {
+    background: var(--dz-gradient);
+    border-radius: 999px;
+}
+
+/* Titre de section à l'intérieur d'un formulaire ou d'une carte. */
+.dz-form-section {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--dz-text-muted);
+    margin-bottom: 0.75rem;
+}
+
+/* Liste d'activité (fichiers et règles récents). */
+.dz-activity {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dz-activity-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.55rem 0.75rem;
+    border-radius: var(--dz-radius-sm);
+    background: var(--dz-surface-2);
+    border: 1px solid var(--dz-border);
+}
+
+.dz-activity-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    min-width: 0;
+}
+
+.dz-activity-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    color: var(--dz-text-muted);
+    white-space: nowrap;
+}
+
+/* Zone de danger : bordure rouge discrète, jamais agressive. */
+.dz-danger-zone {
+    border-color: rgba(220, 38, 38, 0.35);
+}
+
+.dz-danger-zone .card-title {
+    color: #b91c1c;
+}
+
+/* --- 16.6 Mode sombre ---------------------------------------------------- */
+[data-bs-theme="dark"] .dz-avatar-preview {
+    border-color: var(--dz-surface);
+    box-shadow: var(--dz-shadow);
+}
+
+[data-bs-theme="dark"] .dz-avatar-camera {
+    border-color: var(--dz-surface);
+}
+
+[data-bs-theme="dark"] .dz-camera-stage {
+    background: #05070d;
+}
+
+[data-bs-theme="dark"] .dz-profile-stat {
+    background: var(--dz-surface-2);
+    border-color: var(--dz-border);
+}
+
+[data-bs-theme="dark"] .dz-activity-item {
+    background: var(--dz-surface-2);
+    border-color: var(--dz-border);
+}
+
+[data-bs-theme="dark"] .dz-danger-zone {
+    border-color: rgba(248, 113, 113, 0.4);
+}
+
+[data-bs-theme="dark"] .dz-danger-zone .card-title {
+    color: #fca5a5;
+}
+
+[data-bs-theme="dark"] input[type="file"].form-control::file-selector-button {
+    background: var(--dz-accent);
+    color: #0b1120;
+}
+
+[data-bs-theme="dark"] input[type="file"].form-control::file-selector-button:hover {
+    background: var(--dz-accent-soft);
+}
+
+/* --- 16.6 Dashboard KPI ------------------------------------------------- */
+
+.dz-kpi-dashboard {
+    padding: 1.25rem;
+    border: 1px solid var(--dz-border);
+    border-radius: var(--dz-radius);
+    background:
+        radial-gradient(circle at 100% 0, rgba(79, 70, 229, 0.08), transparent 34%),
+        var(--dz-surface);
+}
+
+.dz-kpi-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.dz-kpi-heading h2 {
+    color: var(--dz-text);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+.dz-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+    gap: 0.85rem;
+}
+
+.dz-kpi-card {
+    --dz-kpi-accent: #64748b;
+    position: relative;
+    min-width: 0;
+    padding: 1rem 1.05rem;
+    overflow: hidden;
+    border: 1px solid var(--dz-border);
+    border-inline-start: 3px solid var(--dz-kpi-accent);
+    border-radius: var(--dz-radius-sm);
+    background: var(--dz-surface);
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.045);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.dz-kpi-card:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--dz-kpi-accent) 34%, var(--dz-border));
+    box-shadow: 0 12px 24px -14px color-mix(in srgb, var(--dz-kpi-accent) 55%, transparent);
+}
+
+.dz-kpi-card--primary { --dz-kpi-accent: #4f46e5; }
+.dz-kpi-card--success { --dz-kpi-accent: #10b981; }
+.dz-kpi-card--warning { --dz-kpi-accent: #f59e0b; }
+.dz-kpi-card--danger { --dz-kpi-accent: #ef4444; }
+.dz-kpi-card--secondary { --dz-kpi-accent: #64748b; }
+
+.dz-kpi-card__top {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    min-height: 1.75rem;
+    color: var(--dz-text-muted);
+}
+
+.dz-kpi-card__icon {
+    display: inline-grid;
+    flex: 0 0 1.75rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    place-items: center;
+    border-radius: 0.55rem;
+    background: color-mix(in srgb, var(--dz-kpi-accent) 12%, transparent);
+    color: var(--dz-kpi-accent);
+    font-size: 0.9rem;
+}
+
+.dz-kpi-card__label {
+    overflow: hidden;
+    font-size: 0.76rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-overflow: ellipsis;
+}
+
+.dz-kpi-card__value {
+    margin-top: 0.85rem;
+    color: var(--dz-text);
+    font-size: clamp(1.55rem, 2.8vw, 2rem);
+    font-variant-numeric: tabular-nums;
+    font-weight: 750;
+    letter-spacing: -0.045em;
+    line-height: 1;
+}
+
+.dz-kpi-card__unit {
+    margin-inline-start: 0.25rem;
+    color: var(--dz-text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+[data-bs-theme="dark"] .dz-kpi-card {
+    background: color-mix(in srgb, var(--dz-surface) 90%, #0b1120);
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.14);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dz-kpi-card {
+        transition: none;
+    }
+
+    .dz-kpi-card:hover {
+        transform: none;
+    }
+}
+
+/* --- 16.7 Graphiques statistiques (matplotlib / seaborn) ----------------- */
+
+/* Cadre d'un graphique : fond neutre, l'image PNG est transparente et
+   s'adapte donc aux deux thèmes. */
+.dz-chart-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    border: 1px solid var(--dz-border);
+    border-radius: var(--dz-radius);
+    background: var(--dz-surface-2);
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.dz-chart-card:hover .dz-chart-frame {
+    border-color: var(--dz-accent);
+    box-shadow: 0 10px 30px -12px rgba(79, 70, 229, 0.35);
+}
+
+.dz-chart-img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--dz-radius-sm);
+}
+
+.dz-chart-card .card-title {
+    color: var(--dz-text);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.dz-chart-card .card-text {
+    color: var(--dz-text-muted);
+    font-size: 0.875rem;
+}
+
+[data-bs-theme="dark"] .dz-chart-frame {
+    background: #0b1120;
+    border-color: var(--dz-border);
+}
+
+[data-bs-theme="dark"] .dz-chart-card:hover .dz-chart-frame {
+    box-shadow: 0 10px 30px -12px rgba(6, 182, 212, 0.35);
+}
+
+/* --- 16.7.1 Graphiques interactifs (React + Chart.js) -------------------- */
+
+/* Le canvas remplace le PNG dès qu'il est prêt : le repli reste dans le DOM
+   pour les navigateurs sans JavaScript et en cas d'échec réseau. */
+.dz-charts-root {
+    width: 100%;
+}
+
+.dz-chart-live .dz-chart-img {
+    display: none;
+}
+
+.dz-chart-live {
+    padding: 0.5rem 0.75rem 0.75rem;
+}
+
+.dz-chart-canvas {
+    position: relative;
+    width: 100%;
+}
+
+.dz-chart-canvas--gauge {
+    max-width: 340px;
+    margin: 0 auto;
+    aspect-ratio: 1 / 1;
+}
+
+/* Grille de petits multiples (histogrammes, valeurs fréquentes). */
+.dz-chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.dz-chart-panel {
+    margin: 0;
+    padding: 0.5rem 0.25rem 0;
+    animation: dz-fade-up 520ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+/* Cascade des petits multiples : l'œil suit la grille de haut en bas. */
+.dz-chart-panel:nth-child(2) { animation-delay: 90ms; }
+.dz-chart-panel:nth-child(3) { animation-delay: 180ms; }
+.dz-chart-panel:nth-child(4) { animation-delay: 270ms; }
+.dz-chart-panel:nth-child(5) { animation-delay: 360ms; }
+.dz-chart-panel:nth-child(n + 6) { animation-delay: 450ms; }
+
+.dz-chart-panel__title {
+    margin-bottom: 0.35rem;
+    color: var(--dz-text);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Matrice de corrélation : grille HTML, nette à toute résolution. */
+.dz-heatmap-scroll {
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+}
+
+.dz-heatmap {
+    border-collapse: separate;
+    border-spacing: 2px;
+    font-size: 0.75rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.dz-heatmap th {
+    color: var(--dz-text-muted);
+    font-weight: 600;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.dz-heatmap thead th span {
+    display: inline-block;
+    max-width: 6.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dz-heatmap tbody th {
+    max-width: 9rem;
+    padding-right: 0.5rem;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dz-heatmap td {
+    min-width: 3.25rem;
+    padding: 0.4rem 0.35rem;
+    border-radius: var(--dz-radius-sm);
+    text-align: center;
+    font-weight: 600;
+    transition: transform 0.15s ease;
+}
+
+.dz-heatmap td:hover {
+    transform: scale(1.08);
+}
+
+/* Apparition en cascade des cellules (le délai vient de la ligne/colonne). */
+@keyframes dz-heatmap-in {
+    from {
+        opacity: 0;
+    }
+}
+
+@keyframes dz-heatmap-breathe {
+    0%,
+    100% {
+        box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+    50% {
+        box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.55);
+    }
+}
+
+.dz-heatmap td {
+    /* `backwards` (et non `both`) : la transformation du survol reste active
+       une fois l'apparition terminée. */
+    animation: dz-heatmap-in 460ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    animation-delay: var(--dz-cell-delay, 0ms);
+}
+
+/* Les corrélations marquées respirent lentement pour attirer l'œil. */
+.dz-heatmap td.dz-heatmap__strong {
+    animation:
+        dz-heatmap-in 460ms cubic-bezier(0.22, 1, 0.36, 1) backwards,
+        dz-heatmap-breathe 3.6s ease-in-out infinite;
+    animation-delay: var(--dz-cell-delay, 0ms), var(--dz-cell-breathe, 0ms);
+}
+
+/* --- 16.8 Sélecteur de langue -------------------------------------------- */
+
+.dz-lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border: 0;
+    background: transparent;
+    white-space: nowrap;
+}
+
+/* Flèche du menu : on garde celle de Bootstrap, alignée sur le texte. */
+.dz-lang-toggle::after {
+    vertical-align: 0.15em;
+}
+
+.dz-lang-flag {
+    font-size: 1.15rem;
+    line-height: 1;
+}
+
+.dz-lang-code {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--dz-text-muted);
+}
+
+/* La liste compte 23 entrées : on la rend défilable pour qu'elle tienne
+   toujours dans la fenêtre, quelle que soit la hauteur d'écran. */
+.dz-lang-menu {
+    max-height: min(70vh, 30rem);
+    overflow-y: auto;
+    min-width: 16rem;
+    padding-bottom: 0.25rem;
+}
+
+.dz-lang-menu .dropdown-header {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    color: var(--dz-text-muted);
+    white-space: normal;
+}
+
+/* Chaque langue est un formulaire POST : le bouton occupe toute la ligne. */
+.dz-lang-form {
+    margin: 0;
+}
+
+.dz-lang-item {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    text-align: start;
+}
+
+.dz-lang-item .dz-lang-name {
+    font-weight: 500;
+}
+
+/* Nom anglais en second plan : aide à retrouver sa langue dans un
+   alphabet qu'on ne lit pas (arabe, thaï, hindi…). */
+.dz-lang-item .dz-lang-english {
+    margin-inline-start: auto;
+    font-size: 0.72rem;
+    color: var(--dz-text-muted);
+    white-space: nowrap;
+}
+
+.dz-lang-item .dz-lang-check {
+    flex: 0 0 auto;
+    font-weight: 700;
+    color: var(--dz-brand-500);
+}
+
+.dz-lang-item.active,
+.dz-lang-item.active .dz-lang-english {
+    color: var(--dz-brand-600);
+}
+
+/* ==========================================================================
+   17. Adaptabilité (responsive)
+   --------------------------------------------------------------------------
+   Approche « mobile d'abord » : les règles de base ci-dessus visent les
+   grands écrans, et cette section corrige les points de rupture en
+   descendant. Points de rupture utilisés :
+     · 1199 px — grands portables / tablettes paysage
+     ·  991 px — tablettes (la barre de navigation se replie ici)
+     ·  767 px — téléphones en paysage / petites tablettes
+     ·  575 px — téléphones portrait
+     ·  399 px — très petits écrans
+   ========================================================================== */
+
+/* --- 17.1 Garde-fous généraux -------------------------------------------- */
+
+/* Aucun élément ne doit pouvoir provoquer un défilement horizontal.
+   `overflow-x: hidden` crée un conteneur de défilement qui casse le
+   `position: sticky` de la barre de navigation ; `clip` coupe sans ce
+   défaut, d'où la surcharge progressive ci-dessous. */
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@supports (overflow-x: clip) {
+    html,
+    body {
+        overflow-x: clip;
+    }
+}
+
+/* Les médias et les blocs de code ne débordent jamais de leur conteneur. */
+img,
+svg,
+video,
+canvas,
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+pre {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Les mots très longs (noms de fichiers, URL, e-mails) se coupent au lieu
+   d'élargir la page. */
+.dz-break,
+.table td,
+.table th,
+.card-title,
+.breadcrumb-item,
+.dz-footer-note {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* Cibles tactiles confortables sur les appareils sans survol. */
+@media (hover: none) {
+    .btn,
+    .nav-link,
+    .password-toggle-btn,
+    #theme-toggle {
+        min-height: 44px;
+    }
+
+    .btn-sm {
+        min-height: 38px;
+    }
+
+    /* Les effets de survol n'ont pas de sens au toucher : on les neutralise
+       pour éviter les états « collés » après un appui. */
+    .dz-card-hover:hover,
+    .dz-feature:hover,
+    .dz-stat:hover,
+    .dz-dropzone:hover {
+        transform: none;
+    }
+}
+
+/* --- 17.2 Barre de navigation -------------------------------------------- */
+
+@media (max-width: 991.98px) {
+    .dz-navbar {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    /* Le menu déroulant devient un panneau plein largeur, détaché du fond. */
+    .dz-navbar .navbar-collapse {
+        margin-top: 0.75rem;
+        padding: 0.75rem;
+        border: 1px solid var(--dz-border);
+        border-radius: var(--dz-radius);
+        background-color: var(--dz-navbar-bg-scrolled);
+        background-image: var(--dz-navbar-sheen);
+        box-shadow: var(--dz-shadow);
+        max-height: calc(100dvh - 6rem);
+        overflow-y: auto;
+    }
+
+    .dz-navbar .navbar-nav {
+        align-items: stretch !important;
+        gap: 0.15rem !important;
+    }
+
+    .dz-navbar .nav-link {
+        padding: 0.7rem 0.85rem;
+        border-radius: var(--dz-radius-sm);
+    }
+
+    /* Dans le panneau empilé, la pastille suffit : pas de soulignement. */
+    .dz-navbar .nav-link::after {
+        display: none;
+    }
+
+    /* Le bouton « Créer un compte » occupe toute la largeur du panneau. */
+    .dz-navbar .navbar-nav .btn {
+        width: 100%;
+        margin-top: 0.35rem;
+    }
+
+    .dz-navbar .dropdown-menu {
+        border: 0;
+        box-shadow: none;
+        background: transparent;
+        padding-left: 0.5rem;
+    }
+
+    /* Le bouton de thème reste aligné à gauche, pas étiré. */
+    .dz-navbar #theme-toggle {
+        width: 2.6rem;
+        height: 2.6rem;
+        margin-top: 0.35rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .dz-navbar .navbar-brand {
+        font-size: 1.05rem;
+    }
+
+    .dz-logo-img {
+        height: 1.75rem;
+    }
+}
+
+/* --- 17.3 Héros & sections marketing ------------------------------------- */
+
+@media (max-width: 767.98px) {
+    .dz-hero {
+        padding-top: 2.75rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .dz-hero::before {
+        top: -9rem;
+        height: 24rem;
+    }
+
+    .dz-hero h1 {
+        font-size: clamp(1.9rem, 1.2rem + 5.5vw, 2.6rem);
+    }
+
+    .dz-hero .dz-hero-lead {
+        font-size: 1rem;
+        margin-bottom: 1.6rem;
+    }
+
+    /* Les boutons d'appel à l'action s'empilent et occupent la largeur. */
+    .dz-hero .btn-lg {
+        width: 100%;
+    }
+
+    .dz-pill {
+        font-size: 0.78rem;
+        padding: 0.4rem 0.85rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .dz-section-title {
+        font-size: clamp(1.5rem, 1.1rem + 3vw, 2rem);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .dz-stat {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .dz-stat .dz-stat-value {
+        font-size: 1.65rem;
+    }
+
+    .dz-stat .dz-stat-label {
+        font-size: 0.66rem;
+        letter-spacing: 0.03em;
+    }
+
+    .dz-stat .dz-stat-icon {
+        font-size: 1.05rem;
+    }
+
+    .dz-feature {
+        padding: 1.6rem 1.25rem;
+    }
+
+    .dz-feature .dz-feature-icon {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.35rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* --- 17.4 Cartes, panneaux & espacements --------------------------------- */
+
+@media (max-width: 767.98px) {
+    .card-body {
+        padding: 1.15rem;
+    }
+
+    /* Les paddings utilitaires de Bootstrap sont trop généreux sur mobile. */
+    .card-body.p-4,
+    .card-body.p-md-5 {
+        padding: 1.15rem !important;
+    }
+
+    .dz-divider {
+        margin: 1.75rem 0;
+    }
+
+    .dz-footer {
+        padding: 2.5rem 0 1.75rem;
+        margin-top: var(--dz-section-gap-sm);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .card-body {
+        padding: 1rem;
+    }
+
+    .card-body.p-4,
+    .card-body.p-md-5 {
+        padding: 1rem !important;
+    }
+
+    .dz-footer .dz-footer-links {
+        font-size: 0.9rem;
+    }
+}
+
+/* --- 17.5 Formulaires ---------------------------------------------------- */
+
+@media (max-width: 767.98px) {
+    /* Les champs doivent faire au moins 16 px de haut en police pour empêcher
+       le zoom automatique de Safari sur iPhone. */
+    .form-control,
+    .form-select,
+    .form-control-sm,
+    .form-select-sm {
+        font-size: 16px;
+    }
+
+    .form-label {
+        font-size: 0.88rem;
+    }
+
+    .dz-dropzone {
+        padding: 1.75rem 1rem;
+    }
+
+    .dz-dropzone .dz-dropzone-icon {
+        font-size: 2.1rem;
+    }
+
+    /* Le sélecteur de fichier natif est large : on le contraint. */
+    .dz-dropzone input[type="file"] {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    /* Les boutons pleine largeur sont plus faciles à viser au pouce. */
+    .dz-auth-body .btn-lg,
+    .dz-dropzone + .btn,
+    form > .btn.w-100 {
+        width: 100%;
+    }
+}
+
+/* --- 17.6 Tableaux ------------------------------------------------------- */
+
+@media (max-width: 991.98px) {
+    /* Le défilement horizontal est déjà géré par `.table-responsive` ; on
+       ajoute un indice visuel et on évite que le tableau se comprime. */
+    .table-responsive {
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+
+    .table-responsive > .table {
+        min-width: 34rem;
+    }
+
+    /* Les tableaux de prévisualisation de données peuvent rester compacts. */
+    .table-responsive > .table.table-sm {
+        min-width: 26rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .table td,
+    .table th {
+        padding: 0.55rem 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .table thead th {
+        font-size: 0.7rem;
+        letter-spacing: 0.04em;
+    }
+
+    /* Les colonnes d'actions restent sur une seule ligne. */
+    .table td.text-end,
+    .table th.text-end {
+        white-space: nowrap;
+    }
+
+    .table-search {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* --- 17.7 Pages d'authentification --------------------------------------- */
+
+@media (max-width: 767.98px) {
+    .dz-auth-shell {
+        min-height: auto;
+        align-items: flex-start;
+    }
+
+    .dz-auth {
+        min-height: auto;
+        padding: 1.75rem 0 2.5rem;
+        align-items: flex-start;
+    }
+
+    .dz-auth-card {
+        border-radius: var(--dz-radius-lg);
+    }
+
+    .dz-auth-card .dz-auth-header {
+        padding: 1.5rem 1.25rem 0;
+    }
+
+    .dz-auth-card .dz-auth-body {
+        padding: 1.25rem 1.25rem 1.5rem;
+    }
+
+    .dz-auth-icon {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.35rem;
+    }
+
+    .dz-auth-card h1 {
+        font-size: 1.3rem;
+    }
+}
+
+/* --- 17.8 Contenu du rapport --------------------------------------------- */
+
+@media (max-width: 767.98px) {
+    .report-content {
+        font-size: 0.92rem;
+    }
+
+    .report-content h1 {
+        font-size: 1.35rem;
+    }
+
+    .report-content h2 {
+        font-size: 1.15rem;
+    }
+
+    .report-content h3 {
+        font-size: 1rem;
+    }
+
+    /* Les tableaux Markdown du rapport défilent au lieu de casser la page. */
+    .report-content table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* --- 17.9 Fil d'Ariane & en-têtes de page -------------------------------- */
+
+@media (max-width: 767.98px) {
+    .breadcrumb {
+        font-size: 0.82rem;
+        flex-wrap: wrap;
+    }
+
+    /* Les barres d'actions passent en colonne et les boutons s'étirent. */
+    .d-flex.flex-wrap.gap-2 > .btn,
+    .d-flex.flex-wrap.gap-2 > .btn-group {
+        flex: 1 1 auto;
+    }
+
+    .btn-group {
+        width: 100%;
+    }
+
+    .btn-group > .btn {
+        flex: 1 1 auto;
+    }
+}
+
+@media (max-width: 575.98px) {
+    /* Les groupes de boutons d'action s'empilent verticalement. */
+    .d-flex.flex-wrap.gap-2 > .btn,
+    .d-flex.flex-wrap.gap-2 > .btn-group {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn-group > .btn,
+    .btn-group > .dropdown-toggle-split {
+        width: 100%;
+        border-radius: var(--dz-radius-sm) !important;
+    }
+
+    .btn-group > .btn + .btn {
+        margin-top: 0.35rem;
+    }
+}
+
+/* --- 17.10 Très petits écrans -------------------------------------------- */
+
+@media (max-width: 399.98px) {
+    .container {
+        padding-left: 0.85rem;
+        padding-right: 0.85rem;
+    }
+
+    .dz-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .dz-stat .dz-stat-value {
+        font-size: 1.3rem;
+    }
+
+    .dz-auth-card .dz-auth-header,
+    .dz-auth-card .dz-auth-body {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .dz-avatar-preview {
+        width: 92px;
+        height: 92px;
+        font-size: 1.9rem;
+    }
+
+    .dz-avatar-picker {
+        width: 92px;
+        height: 92px;
+    }
+
+    .dz-avatar-camera {
+        width: 30px;
+        height: 30px;
+    }
+
+    .dz-profile-stat-value {
+        font-size: 1.15rem;
+    }
+
+    .dz-profile-stat-label {
+        font-size: 0.62rem;
+    }
+
+    .dz-nav-username {
+        max-width: 7rem;
+    }
+}
+
+/* --- 17.11 Impression ---------------------------------------------------- */
+
+@media print {
+    .dz-navbar,
+    .dz-footer,
+    .dz-skip-link,
+    .password-toggle-btn,
+    .table-search,
+    .dz-hero-video,
+    .dz-auth-video,
+    .btn {
+        display: none !important;
+    }
+
+    body {
+        background: #fff;
+        background-image: none;
+    }
+
+    .card,
+    .dz-panel {
+        box-shadow: none;
+        border-color: #ccc;
+    }
+}
+
+/* --- 18. Fonctionnalités pro -------------------------------------------- */
+
+/* 18.1 Chronologie du tableau de bord ------------------------------------- */
+.dz-timeline {
+    position: relative;
+    display: grid;
+    gap: 0.5rem;
+    padding: 1rem 0 0;
+}
+
+.dz-timeline__svg {
+    position: absolute;
+    inset: 0 0 1.75rem;
+    width: 100%;
+    height: calc(100% - 1.75rem);
+    overflow: visible;
+}
+
+.dz-timeline__line {
+    stroke: var(--dz-brand-500);
+    stroke-width: 1.6;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+    filter: drop-shadow(0 2px 6px rgba(79, 70, 229, 0.35));
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: dz-timeline-draw 1.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.dz-timeline__dot {
+    fill: var(--dz-violet);
+    stroke: var(--dz-surface);
+    stroke-width: 0.8;
+    vector-effect: non-scaling-stroke;
+    opacity: 0;
+    animation: dz-timeline-pop 0.45s ease-out 0.7s forwards;
+}
+
+.dz-timeline__bars {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-items: end;
+    gap: 0.35rem;
+    height: 6rem;
+}
+
+.dz-timeline__bar {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    border-radius: var(--dz-radius-sm) var(--dz-radius-sm) 0 0;
+    background: var(--dz-gradient-soft);
+}
+
+.dz-timeline__bar > span {
+    display: block;
+    width: 100%;
+    min-height: 3px;
+    border-radius: var(--dz-radius-sm) var(--dz-radius-sm) 0 0;
+    background: var(--dz-gradient);
+    transform-origin: bottom center;
+    animation: dz-timeline-grow 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+.dz-timeline__bar:nth-child(2n) > span { animation-delay: 60ms; }
+.dz-timeline__bar:nth-child(3n) > span { animation-delay: 120ms; }
+.dz-timeline__bar:nth-child(5n) > span { animation-delay: 180ms; }
+
+.dz-timeline__labels {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 0.35rem;
+    font-size: 0.65rem;
+    text-align: center;
+    color: var(--dz-text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes dz-timeline-draw {
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes dz-timeline-pop {
+    from { opacity: 0; transform: translateY(-3px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes dz-timeline-grow {
+    from { transform: scaleY(0); opacity: 0; }
+    to { transform: scaleY(1); opacity: 1; }
+}
+
+/* 18.2 Recherche globale (Ctrl+K) ----------------------------------------- */
+.dz-search-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--dz-border);
+    border-radius: 999px;
+    background: var(--dz-surface);
+    color: var(--dz-text-muted);
+    padding: 0.35rem 0.65rem;
+    transition: border-color var(--dz-transition), color var(--dz-transition), box-shadow var(--dz-transition);
+}
+
+.dz-search-trigger:hover,
+.dz-search-trigger:focus-visible {
+    border-color: var(--dz-brand-500);
+    color: var(--dz-brand-600);
+    box-shadow: var(--dz-shadow-sm);
+}
+
+.dz-search-trigger__label {
+    font-size: 0.875rem;
+}
+
+.dz-kbd {
+    display: inline-block;
+    font-family: var(--bs-body-font-family);
+    font-size: 0.7rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.3rem 0.4rem;
+    color: var(--dz-text-muted);
+    background: var(--dz-surface-2);
+    border: 1px solid var(--dz-border-strong);
+    border-bottom-width: 2px;
+    border-radius: 0.4rem;
+}
+
+.dz-palette[hidden] { display: none; }
+
+.dz-palette {
+    position: fixed;
+    inset: 0;
+    z-index: 1080;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10vh 1rem 2rem;
+}
+
+.dz-palette__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(3px);
+    animation: dz-fade-in 160ms ease-out;
+}
+
+.dz-palette__dialog {
+    position: relative;
+    width: min(44rem, 100%);
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--dz-surface);
+    border: 1px solid var(--dz-border);
+    border-radius: var(--dz-radius-lg);
+    box-shadow: var(--dz-shadow-lg);
+    overflow: hidden;
+    animation: dz-palette-in 200ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.dz-palette__field {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--dz-border);
+}
+
+.dz-palette__field input {
+    flex: 1;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: var(--dz-text);
+    font-size: 1.05rem;
+}
+
+.dz-palette__results {
+    overflow-y: auto;
+    padding: 0.5rem;
+}
+
+.dz-palette__empty {
+    margin: 0;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    color: var(--dz-text-muted);
+    font-size: 0.9rem;
+}
+
+.dz-palette__item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 0;
+    border-radius: var(--dz-radius-sm);
+    background: transparent;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: background var(--dz-transition);
+}
+
+.dz-palette__item:hover,
+.dz-palette__item.is-active {
+    background: var(--dz-gradient-soft);
+}
+
+.dz-palette__item-icon { font-size: 1.1rem; }
+
+.dz-palette__item-body { flex: 1; min-width: 0; }
+
+.dz-palette__item-label {
+    display: block;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Portion du libellé qui correspond à la recherche. */
+.dz-palette__mark {
+    padding: 0 0.15em;
+    border-radius: 0.25rem;
+    background: var(--dz-gradient-soft);
+    color: var(--dz-brand-700);
+    font-weight: 700;
+}
+
+.dz-palette__item-hint {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--dz-text-muted);
+}
+
+.dz-palette__item-type {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--dz-text-muted);
+}
+
+.dz-palette__hint {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.6rem 1rem;
+    border-top: 1px solid var(--dz-border);
+    background: var(--dz-surface-2);
+    font-size: 0.75rem;
+    color: var(--dz-text-muted);
+}
+
+@keyframes dz-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes dz-palette-in {
+    from { opacity: 0; transform: translateY(-12px) scale(0.98); }
+    to { opacity: 1; transform: none; }
+}
+
+/* 18.3 Tuiles de raccourcis ----------------------------------------------- */
+.dz-shortcut-tile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    height: 100%;
+    padding: 1rem;
+    border: 1px solid var(--dz-border);
+    border-radius: var(--dz-radius);
+    background: var(--dz-surface);
+    color: inherit;
+    transition: transform var(--dz-transition), box-shadow var(--dz-transition), border-color var(--dz-transition);
+}
+
+.dz-shortcut-tile:hover {
+    transform: translateY(-3px);
+    border-color: var(--dz-brand-500);
+    box-shadow: var(--dz-shadow);
+}
+
+.dz-shortcut-tile__icon { font-size: 1.5rem; }
+.dz-shortcut-tile__title { font-weight: 700; }
+.dz-shortcut-tile__text { font-size: 0.85rem; color: var(--dz-text-muted); }
+
+/* 18.4 Détails complémentaires des cartes KPI ----------------------------- */
+.dz-kpi-card__hint { color: var(--dz-text-muted); }
+
+/* 18.5 Cartes d'API et de webhooks ---------------------------------------- */
+.dz-code-inline {
+    font-size: 0.8rem;
+    word-break: break-all;
+}
+
+.dz-token-reveal {
+    border: 1px dashed var(--dz-brand-500);
+    border-radius: var(--dz-radius);
+    background: var(--dz-gradient-soft);
+    padding: 1rem;
+}
+
+.dz-token-reveal code {
+    display: block;
+    font-size: 0.95rem;
+    word-break: break-all;
+    margin: 0.5rem 0 0.75rem;
+}
+
+/* 18.6 Mode sombre -------------------------------------------------------- */
+[data-bs-theme="dark"] .dz-search-trigger,
+[data-bs-theme="dark"] .dz-kbd,
+[data-bs-theme="dark"] .dz-shortcut-tile {
+    background: rgba(148, 163, 184, 0.12);
+    border-color: rgba(148, 163, 184, 0.24);
+    color: #e2e8f0;
+}
+
+[data-bs-theme="dark"] .dz-palette__dialog { background: #1e293b; }
+[data-bs-theme="dark"] .dz-palette__hint { background: rgba(148, 163, 184, 0.08); }
+[data-bs-theme="dark"] .dz-palette__mark {
+    background: rgba(129, 140, 248, 0.24);
+    color: #c7d2fe;
+}
+[data-bs-theme="dark"] .dz-timeline__dot { stroke: #1e293b; }
+
+/* 18.7 Mouvement réduit --------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    .dz-timeline__line,
+    .dz-timeline__dot,
+    .dz-timeline__bar > span,
+    .dz-palette__backdrop,
+    .dz-palette__dialog {
+        animation: none !important;
+        opacity: 1;
+        stroke-dashoffset: 0;
+        transform: none;
+    }
+}
+
+/* 18.8 Impression --------------------------------------------------------- */
+@media print {
+    .dz-palette,
+    .dz-search-trigger { display: none !important; }
+}
+
+@media (max-width: 575.98px) {
+    .dz-search-trigger__label { display: none; }
+    .dz-timeline__labels { font-size: 0.55rem; }
+}

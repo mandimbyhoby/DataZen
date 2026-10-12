@@ -1,0 +1,1036 @@
+{% extends "core/base.html" %}
+{% load datazen_extras i18n l10n %}
+
+{% block content %}
+<div class="container dz-page">
+    <nav aria-label="{% translate "Fil d'Ariane" %}">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ data_file.original_name }}</li>
+        </ol>
+    </nav>
+
+    {% if data_file.status == 'processing' %}
+        <div class="card shadow-sm dz-block border-info" id="processing-card"
+             data-status-url="{% url 'core:cleaning_status' data_file.pk %}">
+            <div class="card-body">
+                <h5 class="card-title">{% translate "⏳ Nettoyage en cours…" %}</h5>
+                <p class="text-muted small mb-2">
+                    {% blocktranslate trimmed %}Le traitement s'exécute en arrière-plan. Cette page se met à jour
+                    automatiquement à la fin.{% endblocktranslate %}
+                </p>
+                <div class="progress dz-progress-lg">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated"
+                         id="processing-bar" role="progressbar"
+                         style="width: {{ data_file.progress|unlocalize }}%;"
+                         aria-valuenow="{{ data_file.progress }}" aria-valuemin="0" aria-valuemax="100">
+                        {{ data_file.progress }} %
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% elif data_file.status == 'error' %}
+        <div class="alert alert-danger">
+            <strong>{% translate "Le nettoyage a échoué." %}</strong>
+            {% if data_file.error_message %}
+                <pre class="small mb-0 mt-2 dz-pre-wrap">{{ data_file.error_message }}</pre>
+            {% endif %}
+        </div>
+    {% endif %}
+
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 dz-page-head">
+        <h1 class="h3 mb-0">📄 {{ data_file.original_name }}</h1>
+        <div class="d-flex flex-wrap gap-2">
+            {% if data_file.file %}
+                <a class="btn btn-outline-secondary" href="{% url 'core:download_original' data_file.pk %}">
+                    {% translate "📥 Fichier d'origine" %}
+                </a>
+            {% endif %}
+            {% if data_file.change_log_file %}
+                <a class="btn btn-outline-secondary" href="{% url 'core:download_changelog' data_file.pk %}">
+                    {% translate "🧾 Journal des modifications" %}
+                </a>
+            {% endif %}
+            {% if data_file.report_file %}
+                <a class="btn btn-outline-secondary" href="{% url 'core:view_report' data_file.pk %}">
+                    {% translate "👁️ Consulter le rapport" %}
+                </a>
+                <a class="btn btn-outline-secondary" href="{% url 'core:download_report' data_file.pk %}">
+                    {% translate "📋 Télécharger le rapport" %}
+                </a>
+            {% endif %}
+            {% if data_file.cleaned_file %}
+                <a class="btn btn-outline-primary" href="{% url 'core:dataset_analysis' data_file.pk %}">
+                    {% translate "📈 Analyse exploratoire" %}
+                </a>
+                <a class="btn btn-outline-primary" href="{% url 'core:dataset_comparison' data_file.pk %}">
+                    {% translate "🔍 Avant / après" %}
+                </a>
+                <a class="btn btn-outline-secondary" href="{% url 'core:download_pdf_report' data_file.pk %}">
+                    {% translate "📕 Rapport PDF" %}
+                </a>
+                <div class="btn-group">
+                    <a class="btn btn-success" href="{% url 'core:download_cleaned' data_file.pk %}">
+                        {% translate "⬇️ Télécharger le fichier nettoyé" %}
+                    </a>
+                    <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="visually-hidden">{% translate "Choisir le format" %}</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="{% url 'core:download_cleaned' data_file.pk %}?format=csv">{% translate "CSV (séparateur ;)" %}</a></li>
+                        <li><a class="dropdown-item" href="{% url 'core:download_cleaned' data_file.pk %}?format=xlsx">{% translate "Excel (.xlsx)" %}</a></li>
+                                            <li><a class="dropdown-item" href="{% url 'core:download_json' data_file.pk %}">{% translate "JSON (.json)" %}</a></li>
+                                        </ul>
+                </div>
+            {% endif %}
+            <form method="post" action="{% url 'core:delete_dataset' data_file.pk %}" class="d-inline"
+              data-dz-confirm="{% translate 'Supprimer définitivement ce fichier et toutes ses données ?' %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-outline-danger">{% translate "🗑️ Supprimer" %}</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="card shadow-sm dz-block">
+        <div class="card-body">
+            <div class="d-flex flex-wrap align-items-center gap-3 gap-md-4">
+                <div>
+                    <div class="text-muted small">{% translate "Score qualité avant" %}</div>
+                    <div class="h3 mb-0">{{ quality_before.total }}<span class="text-muted h5">/100</span></div>
+                </div>
+                <div class="text-muted" aria-hidden="true">→</div>
+                <div>
+                    <div class="text-muted small">{% translate "Score qualité après" %}</div>
+                    <div class="h3 mb-0 {% if quality_after %}text-success{% endif %}">
+                        {% if quality_after %}{{ quality_after.total }}<span class="text-muted h5">/100</span>{% else %}—{% endif %}
+                    </div>
+                </div>
+                <div class="ms-md-auto small text-muted">
+                    {% translate "Complétude · Validité · Unicité · Cohérence · Conformité" %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-3 dz-block">
+        <div class="col-6 col-md-3">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <div class="h3 mb-0">{{ stats.rows }}</div>
+                    <div class="text-muted small">{% translate "Lignes" %}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <div class="h3 mb-0">{{ stats.columns }}</div>
+                    <div class="text-muted small">{% translate "Colonnes" %}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <div class="h3 mb-0 text-warning">{{ stats.duplicates }}</div>
+                    <div class="text-muted small">{% translate "Doublons" %}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <div class="h3 mb-0 text-danger">{{ stats.missing }}</div>
+                    <div class="text-muted small">{% translate "Valeurs manquantes" %}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{% translate "🧹 Options de nettoyage" %}</h5>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="form-check mb-2">
+                            {{ form.remove_duplicates }}
+                            <label class="form-check-label" for="{{ form.remove_duplicates.id_for_label }}">
+                                {{ form.remove_duplicates.label }}
+                            </label>
+                            {% if form.remove_duplicates.help_text %}
+                                <div class="form-text small">{{ form.remove_duplicates.help_text }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="ms-4 mb-2">
+                            <label class="form-label small" for="{{ form.dedupe_column.id_for_label }}">
+                                {{ form.dedupe_column.label }}
+                            </label>
+                            {{ form.dedupe_column }}
+                            {% if form.dedupe_column.help_text %}
+                                <div class="form-text small">{{ form.dedupe_column.help_text }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="form-check ms-4 mb-3">
+                            {{ form.dedupe_ignore_case }}
+                            <label class="form-check-label" for="{{ form.dedupe_ignore_case.id_for_label }}">
+                                {{ form.dedupe_ignore_case.label }}
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            {{ form.trim_whitespace }}
+                            <label class="form-check-label" for="{{ form.trim_whitespace.id_for_label }}">
+                                {{ form.trim_whitespace.label }}
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            {{ form.normalize_case }}
+                            <label class="form-check-label" for="{{ form.normalize_case.id_for_label }}">
+                                {{ form.normalize_case.label }}
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            {{ form.normalize_phones }}
+                            <label class="form-check-label" for="{{ form.normalize_phones.id_for_label }}">
+                                {{ form.normalize_phones.label }}
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            {{ form.normalize_dates }}
+                            <label class="form-check-label" for="{{ form.normalize_dates.id_for_label }}">
+                                {{ form.normalize_dates.label }}
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            {{ form.normalize_emails }}
+                            <label class="form-check-label" for="{{ form.normalize_emails.id_for_label }}">
+                                {{ form.normalize_emails.label }}
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            {{ form.normalize_salaries }}
+                            <label class="form-check-label" for="{{ form.normalize_salaries.id_for_label }}">
+                                {{ form.normalize_salaries.label }}
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            {{ form.fill_missing }}
+                            <label class="form-check-label" for="{{ form.fill_missing.id_for_label }}">
+                                {{ form.fill_missing.label }}
+                            </label>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small" for="{{ form.fill_missing_value.id_for_label }}">
+                                {{ form.fill_missing_value.label }}
+                            </label>
+                            {{ form.fill_missing_value }}
+                        </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label small" for="{{ form.regex_rules.id_for_label }}">
+                                                        {{ form.regex_rules.label }}
+                                                    </label>
+                                                    {{ form.regex_rules }}
+                                                    {% if form.regex_rules.help_text %}
+                                                        <div class="form-text small">{{ form.regex_rules.help_text }}</div>
+                                                    {% endif %}
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    {{ form.anonymize }}
+                                                    <label class="form-check-label" for="{{ form.anonymize.id_for_label }}">
+                                                        {{ form.anonymize.label }}
+                                                    </label>
+                                                    {% if form.anonymize.help_text %}
+                                                        <div class="form-text small">{{ form.anonymize.help_text }}</div>
+                                                    {% endif %}
+                                                </div>
+                                                {% if rules %}
+                                                    <hr>
+                                                    <h6 class="text-muted">{% translate "⚙️ Règles personnalisées" %}</h6>
+                                                    {% for rule in rules %}
+                                                        <div class="form-check mb-1">
+                                                            <input class="form-check-input" type="checkbox" name="rules"
+                                                                   value="{{ rule.pk }}" id="rule-{{ rule.pk }}"
+                                                                   {% if not rule.is_active %}disabled{% endif %}>
+                                                            <label class="form-check-label small" for="rule-{{ rule.pk }}">
+                                                                {{ rule.name }}
+                                                                <span class="text-muted">({{ rule.get_operation_display }}{% if rule.column %} · {{ rule.column }}{% endif %})</span>
+                                                                {% if not rule.is_active %}<span class="badge text-bg-secondary">{% translate "Inactive" %}</span>{% endif %}
+                                                            </label>
+                                                        </div>
+                                                    {% endfor %}
+                                                    <a class="small" href="{% url 'core:rules_list' %}">{% translate "Gérer les règles…" %}</a>
+                                                    <hr>
+                                                {% endif %}
+                                                <button type="submit" class="btn btn-primary w-100">{% translate "Nettoyer" %}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <div class="card shadow-sm mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">{% translate "🔍 Problèmes détectés" %}</h5>
+                    <ul class="mb-0 small">
+                        <li>
+                            <strong>{% translate "Doublons exacts :" %}</strong> {{ issues.duplicates }}
+                        </li>
+                        {% if issues.potential_duplicates %}
+                            <li>
+                                <strong>{% translate "Doublons potentiels (⚠️ à vérifier) :" %}</strong>
+                                {{ issues.potential_duplicates|length }}
+                                <ul class="mb-0">
+                                    {% for p in issues.potential_duplicates %}
+                                        <li>
+                                            {% translate "Lignes" %} {% for r in p.rows %}{{ r|add:"1" }}{% if not forloop.last %}, {% endif %}{% endfor %}
+                                            {% if p.similar_columns %}<span class="text-muted">{% blocktranslate trimmed with columns=p.similar_columns|join:", " %}(colonnes : {{ columns }}){% endblocktranslate %}</span>{% endif %}
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        {% else %}
+                            <li>{% blocktranslate trimmed %}<strong>Doublons potentiels :</strong> aucun{% endblocktranslate %}</li>
+                        {% endif %}
+                        {% if issues.fuzzy_duplicates %}
+                            <li>
+                                <strong>{% translate "Doublons par similarité :" %}</strong> {{ issues.fuzzy_duplicates|length }}
+                                <span class="text-muted">{% translate "(score ≥ 0.8)" %}</span>
+                            </li>
+                        {% endif %}
+                        {% if issues.missing %}
+                            <li>
+                                <strong>{% translate "Valeurs manquantes :" %}</strong>
+                                {% for col, info in issues.missing.items %}
+                                    {{ col }} ({{ info.count }}, {{ info.percent }} %){% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                            </li>
+                        {% else %}
+                            <li>{% blocktranslate trimmed %}<strong>Valeurs manquantes :</strong> aucune{% endblocktranslate %}</li>
+                        {% endif %}
+                        {% if issues.unknown %}
+                            <li>
+                                <strong>{% translate "Valeurs « Inconnu » :" %}</strong>
+                                {% for col, count in issues.unknown.items %}
+                                    {{ col }} ({{ count }}){% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                            </li>
+                        {% endif %}
+                        <li>
+                            <strong>{% translate "Emails :" %}</strong>
+                            {% blocktranslate trimmed count counter=issues.emails.valid %}{{ counter }} valide,{% plural %}{{ counter }} valides,{% endblocktranslate %}
+                            {% blocktranslate trimmed count counter=issues.emails.invalid %}{{ counter }} invalide,{% plural %}{{ counter }} invalides,{% endblocktranslate %}
+                            {% blocktranslate trimmed count counter=issues.emails.unknown %}{{ counter }} inconnu{% plural %}{{ counter }} inconnus{% endblocktranslate %}
+                        </li>
+                        {% if issues.emails.issues %}
+                            <li>
+                                <strong>{% translate "Emails invalides :" %}</strong>
+                                <ul class="mb-0">
+                                    {% for e in issues.emails.issues %}
+                                        <li>❌ {{ e.2 }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        {% endif %}
+                        {% if issues.dates %}
+                            {% for col, info in issues.dates.items %}
+                                <li>
+                                    <strong>{% blocktranslate trimmed with column=col %}Formats de dates ({{ column }}) :{% endblocktranslate %}</strong>
+                                    {% for label, count in info.counts.items %}
+                                        {{ label }} × {{ count }}{% if not forloop.last %}, {% endif %}
+                                    {% endfor %}
+                                </li>
+                            {% endfor %}
+                        {% endif %}
+                        {% if issues.phones %}
+                            {% for col, info in issues.phones.items %}
+                                <li>
+                                    <strong>{% blocktranslate trimmed with column=col %}Téléphones non standard ({{ column }}) :{% endblocktranslate %}</strong>
+                                    {{ info.non_standard }} / {{ info.total }}
+                                </li>
+                            {% endfor %}
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{% translate "👀 Aperçu des données brutes (avant nettoyage)" %}</h5>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    {% for col in columns %}
+                                        <th>{{ col }}</th>
+                                    {% endfor %}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for row in preview_rows %}
+                                    <tr>
+                                        {% for cell in row %}
+                                            <td>{% if cell is None %}<span class="text-muted">—</span>{% elif cell|is_unknown %}<span class="text-warning fst-italic">{% translate "Inconnu" %}</span>{% else %}{{ cell }}{% endif %}</td>
+                                        {% endfor %}
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-muted small mb-0">{% translate "Affichage des" %} {{ preview_rows|length }} {% translate "premières lignes." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if cleaned %}
+        <hr class="my-4">
+        <h2 class="h5 mb-3">{% translate "✅ Résultat du nettoyage" %}</h2>
+        <div class="row g-3 dz-block">
+            <div class="col-6 col-md-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <div class="h3 mb-0">{{ cleaned_stats.rows }}</div>
+                        <div class="text-muted small">{% translate "Lignes après nettoyage" %}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <div class="h3 mb-0 text-success">{{ quality_after.total }}<span class="h5 text-muted">/100</span></div>
+                        <div class="text-muted small">{% translate "Score qualité après" %}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <div class="h3 mb-0 text-warning">{{ cleaned_stats.duplicates }}</div>
+                        <div class="text-muted small">{% translate "Doublons exacts" %}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <div class="h3 mb-0 text-danger">{{ cleaned_stats.missing }}</div>
+                        <div class="text-muted small">{% translate "Valeurs manquantes restantes" %}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-3 dz-block">
+            <div class="col-12 col-md-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <div class="h3 mb-0 text-warning">
+                            {{ cleaned_stats.duplicates|add:dashboard.potential_count }}
+                        </div>
+                        <div class="text-muted small">{% translate "Doublons restants (exacts + potentiels)" %}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% if dashboard %}
+            <div class="card shadow-sm dz-block">
+                <div class="card-body">
+                    <h5 class="card-title">{% translate "📊 Dashboard Data Quality" %}</h5>
+
+                    <!-- Score global + indicateurs -->
+                    <div class="row align-items-center dz-block">
+                        <div class="col-md-4 mb-3">
+                            <div class="p-3 rounded bg-light text-center h-100">
+                                <div class="text-muted small">{% translate "🎯 Score qualité" %}</div>
+                                <div class="display-6 fw-bold">{{ dashboard.score }}<span class="h5 text-muted">/100</span></div>
+                                <span class="badge bg-{{ dashboard.category_class }}">{{ dashboard.category_label }}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row g-2">
+                                {% for ind in dashboard.indicators %}
+                                    <div class="col-6 col-md-4">
+                                        <div class="p-2 rounded border text-center">
+                                            <div class="small text-muted">{{ ind.icon }} {{ ind.label }}</div>
+                                            <div class="h5 mb-0">{{ ind.value }}</div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dimensions de qualité -->
+                    <h6 class="text-muted">{% translate "📊 Dimensions de qualité" %}</h6>
+                    <ul class="list-unstyled dz-block">
+                        {% for dim in dashboard.dimensions %}
+                            <li class="mb-2">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <span class="text-capitalize">{{ dim.name }}</span>
+                                    <span class="small text-muted">{{ dim.value }}/100 — {{ dim.weight }} %</span>
+                                </div>
+                                <div class="progress dz-progress-xs">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ dim.value|unlocalize }}%;" aria-valuenow="{{ dim.value|unlocalize }}" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+
+                    <div class="row dz-block">
+                        <!-- Valeurs « Inconnu » -->
+                        <div class="col-md-4">
+                            <h6 class="text-muted">{% translate "⚪ Valeurs « Inconnu » (" %}{{ dashboard.unknown_total }})</h6>
+                            {% for item in dashboard.unknown_by_column %}
+                                <div class="d-flex justify-content-between small">
+                                    <span>{{ item.colonne }}</span><span>{{ item.count }}</span>
+                                </div>
+                                <div class="progress mb-2 dz-progress-xxs">
+                                    <div class="progress-bar bg-secondary" style="width: {{ item.width|unlocalize }}%;"></div>
+                                </div>
+                            {% empty %}
+                                <div class="small text-muted">{% translate "Aucune valeur « Inconnu »." %}</div>
+                            {% endfor %}
+                        </div>
+
+                        <!-- Répartition des problèmes -->
+                        <div class="col-md-4">
+                            <h6 class="text-muted">{% translate "📉 Répartition des problèmes" %}</h6>
+                            {% for p in dashboard.problems %}
+                                <div class="d-flex justify-content-between small">
+                                    <span>{{ p.label }}</span><span>{{ p.value }}</span>
+                                </div>
+                                <div class="progress mb-2 dz-progress-xxs">
+                                    <div class="progress-bar bg-{{ p.class }}" style="width: {{ p.width|unlocalize }}%;"></div>
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                        <!-- Doublons -->
+                        <div class="col-md-4">
+                            <h6 class="text-muted">{% translate "🔍 Doublons" %}</h6>
+                            <div class="small">{% translate "Doublons exacts :" %} <strong>{{ dashboard.exact_duplicates }}</strong></div>
+                            <div class="small mb-2">{% translate "Doublons potentiels :" %} <strong>{{ dashboard.potential_count }}</strong></div>
+                            {% if dashboard.duplicate_groups %}
+                                <div class="table-responsive">
+                                    <table class="table table-sm table-bordered small mb-0">
+                                        <thead class="table-light">
+                                            <tr><th>#</th><th>{% translate "Lignes" %}</th><th>{% translate "Score" %}</th><th>{% translate "Colonnes différentes" %}</th></tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for g in dashboard.duplicate_groups %}
+                                                <tr>
+                                                    <td>{{ g.n }}</td>
+                                                    <td>{{ g.lignes|join:", " }}</td>
+                                                    <td>{{ g.score }}</td>
+                                                    <td>{{ g.colonnes_differentes }}</td>
+                                                </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="small text-muted mt-1">{% translate "⚠️ À vérifier manuellement (jamais supprimés automatiquement)." %}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Qualité par colonne -->
+                    <h6 class="text-muted">{% translate "📋 Qualité des colonnes" %}</h6>
+                    <div class="table-responsive">
+                        <table class="table table-sm table-striped align-middle mb-0" data-searchable>
+                            <thead class="table-light">
+                                <tr><th>{% translate "Colonne" %}</th><th>{% translate "Type" %}</th><th>{% translate "Complétude" %}</th><th>{% translate "Validité" %}</th><th>{% translate "Inconnu" %}</th><th>{% translate "Statut" %}</th></tr>
+                            </thead>
+                            <tbody>
+                                {% for c in dashboard.columns_quality %}
+                                    <tr>
+                                        <td>{{ c.colonne }}</td>
+                                        <td>{{ c.type }}</td>
+                                        <td>{{ c.completude }} %</td>
+                                        <td>{{ c.validite }} %</td>
+                                        <td>{{ c.inconnu }}</td>
+                                        <td>{{ c.statut }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Statistiques descriptives par colonne -->
+                    <h6 class="text-muted mt-4">{% translate "📈 Statistiques descriptives" %}</h6>
+                    <div class="table-responsive">
+                        <table class="table table-sm table-striped align-middle mb-0" data-searchable>
+                            <thead class="table-light">
+                                <tr>
+                                    <th>{% translate "Colonne" %}</th>
+                                    <th>{% translate "Type" %}</th>
+                                    <th>{% translate "Renseignées" %}</th>
+                                    <th>{% translate "Valeurs uniques" %}</th>
+                                    <th>{% translate "Min" %}</th>
+                                    <th>{% translate "Max" %}</th>
+                                    <th>{% translate "Moyenne" %}</th>
+                                    <th>{% translate "Plus fréquent" %}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for s in dashboard.column_stats %}
+                                    <tr>
+                                        <td>{{ s.colonne }}</td>
+                                        <td>{{ s.type }}</td>
+                                        <td>{{ s.renseigne }}</td>
+                                        <td>{{ s.n_unique }}</td>
+                                        <td>{{ s.min }}</td>
+                                        <td>{{ s.max }}</td>
+                                        <td>{{ s.moyenne }}</td>
+                                        <td>{{ s.top }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+
+                                                    <!-- Profilage avancé -->
+                    <h6 class="text-muted mt-4">{% translate "🔬 Profilage avancé" %}</h6>
+                    <div class="table-responsive">
+                        <table class="table table-sm table-striped align-middle mb-0" data-searchable>
+                            <thead class="table-light">
+                                <tr>
+                                    <th>{% translate "Colonne" %}</th>
+                                    <th>{% translate "Type" %}</th>
+                                    <th>{% translate "Complétude" %}</th>
+                                    <th>{% translate "Uniques" %}</th>
+                                    <th>{% translate "Mode" %}</th>
+                                    <th>{% translate "Min" %}</th>
+                                    <th>{% translate "Max" %}</th>
+                                    <th>{% translate "Moyenne" %}</th>
+                                    <th>{% translate "Médiane" %}</th>
+                                    <th>{% translate "Écart-type" %}</th>
+                                    <th>{% translate "Q1" %}</th>
+                                    <th>{% translate "Q3" %}</th>
+                                    <th>{% translate "Outliers" %}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for p in dashboard.profile %}
+                                    <tr>
+                                        <td>{{ p.colonne }}</td>
+                                        <td>{{ p.type }}</td>
+                                        <td>{{ p.completude }} %</td>
+                                        <td>{{ p.n_unique }}</td>
+                                        <td>{{ p.mode }}</td>
+                                        <td>{{ p.min }}</td>
+                                        <td>{{ p.max }}</td>
+                                        <td>{{ p.moyenne }}</td>
+                                        <td>{{ p.mediane }}</td>
+                                        <td>{{ p.ecart_type }}</td>
+                                        <td>{{ p.q1 }}</td>
+                                        <td>{{ p.q3 }}</td>
+                                        <td>{% if p.outliers %}<span class="badge bg-warning text-dark">{{ p.outliers }}</span>{% else %}0{% endif %}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+
+                                                    <!-- Valeurs aberrantes (outliers) -->
+                                                    <h6 class="text-muted mt-4">{% translate "📈 Valeurs aberrantes" %} <span class="small">({{ dashboard.outlier_count }})</span></h6>
+                                                    {% if dashboard.outliers %}
+                                                        <div class="table-responsive">
+                                                            <table class="table table-sm table-striped align-middle mb-0" data-searchable>
+                                                                <thead class="table-light">
+                                                                    <tr>
+                                                                        <th>{% translate "Colonne" %}</th>
+                                                                        <th>{% translate "Ligne" %}</th>
+                                                                        <th>{% translate "Valeur" %}</th>
+                                                                        <th>{% translate "Borne basse" %}</th>
+                                                                        <th>{% translate "Borne haute" %}</th>
+                                                                        <th>{% translate "Méthode" %}</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    {% for o in dashboard.outliers %}
+                                                                        <tr>
+                                                                            <td>{{ o.colonne }}</td>
+                                                                            <td>{{ o.ligne }}</td>
+                                                                            <td class="fw-bold text-warning">{{ o.valeur }}</td>
+                                                                            <td>{{ o.borne_basse }}</td>
+                                                                            <td>{{ o.borne_haute }}</td>
+                                                                            <td>{{ o.methode }}</td>
+                                                                        </tr>
+                                                                    {% endfor %}
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="small text-muted mt-1">{% translate "⚠️ Valeurs signalées uniquement — jamais modifiées automatiquement." %}</div>
+                                                    {% else %}
+                                                        <div class="small text-muted">{% translate "Aucune valeur aberrante détectée sur les colonnes numériques." %}</div>
+                                                    {% endif %}
+
+                                                                                                        <!-- Règles regex personnalisées -->
+                                                                                                        {% if regex_violations %}
+                                                                                                            <h6 class="text-muted mt-4">{% translate "🔍 Règles regex personnalisées" %} <span class="small">{% blocktranslate trimmed count counter=regex_violations|length %}({{ counter }} non-conformité){% plural %}({{ counter }} non-conformités){% endblocktranslate %}</span></h6>
+                                                                                                            <div class="table-responsive">
+                                                                                                                <table class="table table-sm table-striped align-middle mb-0" data-searchable>
+                                                                                                                    <thead class="table-light">
+                                                                                                                        <tr>
+                                                                                                                            <th>{% translate "Colonne" %}</th>
+                                                                                                                            <th>{% translate "Ligne" %}</th>
+                                                                                                                            <th>{% translate "Valeur" %}</th>
+                                                                                                                            <th>{% translate "Motif attendu" %}</th>
+                                                                                                                        </tr>
+                                                                                                                    </thead>
+                                                                                                                    <tbody>
+                                                                                                                        {% for v in regex_violations %}
+                                                                                                                            <tr>
+                                                                                                                                <td>{{ v.colonne }}</td>
+                                                                                                                                <td>{{ v.ligne }}</td>
+                                                                                                                                <td class="fw-bold text-danger">{{ v.valeur }}</td>
+                                                                                                                                <td><code>{{ v.pattern }}</code></td>
+                                                                                                                            </tr>
+                                                                                                                        {% endfor %}
+                                                                                                                    </tbody>
+                                                                                                                </table>
+                                                                                                            </div>
+                                                                                                            <div class="small text-muted mt-1">{% translate "⚠️ Valeurs signalées uniquement — jamais modifiées automatiquement." %}</div>
+                                                                                                        {% endif %}
+                                                                                                    </div>
+                                            </div>
+                                        {% endif %}
+
+                                        {% if quality_after.explanations %}
+            <div class="card shadow-sm dz-block">
+                <div class="card-body">
+                    <h5 class="card-title">{% translate "🔎 Explication du score" %}</h5>
+                    <ul class="mb-0 small">
+                        {% for item in quality_after.explanations %}
+                            <li>
+                                {% if item.type == "warn" %}⚠️{% else %}✅{% endif %}
+                                {{ item.text }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if operations %}
+            <div class="card shadow-sm dz-block">
+                <div class="card-body">
+                    <h5 class="card-title">{% translate "🧹 Opérations de nettoyage" %}</h5>
+                    <ul class="mb-0">
+                        {% for op in operations %}
+                            <li>{{ op }}</li>
+                        {% endfor %}
+                    </ul>
+                    <div class="mt-3">
+                        {% if report %}
+                            <a class="btn btn-sm btn-outline-primary" href="{% url 'core:view_report' data_file.pk %}">
+                                {% translate "👁️ Consulter le rapport" %}
+                            </a>
+                            <a class="btn btn-sm btn-outline-secondary" href="{% url 'core:download_report' data_file.pk %}">
+                                {% translate "📥 Télécharger le rapport complet" %}
+                            </a>
+                        {% endif %}
+                        {% if change_log %}
+                            <a class="btn btn-sm btn-outline-secondary" href="{% url 'core:download_changelog' data_file.pk %}">
+                                {% translate "🧾 Télécharger le journal des modifications" %}
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if review_groups is not None %}
+            <div class="card shadow-sm dz-block">
+                <div class="card-body">
+                    <h5 class="card-title">{% translate "🔍 Revue manuelle des doublons potentiels" %}</h5>
+                    <p class="text-muted small mb-3">
+                        {% blocktranslate trimmed count counter=review_groups|length %}{{ counter }} doublon potentiel détecté. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision.{% plural %}{{ counter }} doublons potentiels détectés. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision.{% endblocktranslate %}
+                    </p>
+
+                    {% if not review_groups %}
+                        <div class="text-success">{% translate "✅ Aucun doublon potentiel à vérifier." %}</div>
+                    {% endif %}
+
+                    {% for g in review_groups %}
+                        <div class="border rounded p-3 mb-3">
+                            <h6 class="mb-2">{% translate "Doublon potentiel" %} #{{ g.n }}</h6>
+                            <div class="small text-muted mb-2">
+                                {% blocktranslate trimmed count counter=g.nb_lignes %}{{ counter }} ligne concernée :{% plural %}{{ counter }} lignes concernées :{% endblocktranslate %} {{ g.lignes|join:", " }}
+                                {% if g.ancien_ids|join:"" %}{% translate "· ancien_id :" %} {{ g.ancien_ids|join:" / " }}{% endif %}
+                            </div>
+
+                            <div class="row small mb-3">
+                                <div class="col-md-4"><strong>{% translate "Score de similarité :" %}</strong> {{ g.score }} %</div>
+                                <div class="col-md-8">
+                                    <strong>{% translate "Champs identiques :" %}</strong> {{ g.n_identical }}
+                                    · <strong>{% translate "Champs différents :" %}</strong> {{ g.n_diff }}
+                                    · <strong>{% translate "Champs inconnus :" %}</strong> {{ g.n_unknown }}
+                                </div>
+                            </div>
+
+                            <div class="small text-muted mb-2">
+                                <strong>{% translate "Colonnes identiques :" %}</strong> {{ g.colonnes_identiques }}<br>
+                                <strong>{% translate "Colonnes différentes :" %}</strong> {{ g.colonnes_differentes }}<br>
+                                <strong>{% translate "Colonnes inconnues :" %}</strong> {{ g.colonnes_inconnues }}
+                            </div>
+
+                            <div class="table-responsive mb-3">
+                                <table class="table table-sm table-bordered align-middle mb-0">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>{% translate "Champ" %}</th>
+                                            {% for line in g.lines %}
+                                                <th>{% translate "Ligne" %} {{ line.ligne }}</th>
+                                            {% endfor %}
+                                            <th>{% translate "Comparaison" %}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for c in g.comparisons %}
+                                            <tr>
+                                                <td class="fw-bold">{{ c.colonne }}</td>
+                                                {% for v in c.valeurs %}
+                                                    <td>{% if v %}{{ v }}{% else %}<span class="text-muted">—</span>{% endif %}</td>
+                                                {% endfor %}
+                                                <td class="{% if c.statut == 'different' %}text-danger{% elif c.statut == 'inconnu' %}text-muted{% else %}text-success{% endif %}">{{ c.libelle }}</td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <form method="post" action="{% url 'core:review_duplicate' data_file.pk %}" onsubmit="return confirm('Confirmer cette décision ?');">
+                                {% csrf_token %}
+                                <input type="hidden" name="ancien_ids" value="{{ g.ancien_ids|join:',' }}">
+                                <div class="row g-2 align-items-center">
+                                    <div class="col-md-7">
+                                        <select name="action" class="form-select form-select-sm">
+                                            <option value="">{% translate "— Choisir une action —" %}</option>
+                                            <option value="keep_a">{% translate "🟢 Conserver la 1re ligne (supprimer les autres)" %}</option>
+                                            <option value="keep_b">{% translate "🔵 Conserver la 2e ligne (supprimer les autres)" %}</option>
+                                            <option value="merge">{% translate "🟣 Fusionner toutes les lignes" %}</option>
+                                            <option value="keep_both">{% translate "⚪ Conserver toutes les lignes" %}</option>
+                                            <option value="ignore">{% translate "⚪ Ignorer (examiné, conserver)" %}</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <button type="submit" class="btn btn-sm btn-primary w-100">{% translate "Confirmer la décision" %}</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
+        {% if validation %}
+            <div class="card shadow-sm dz-block border-warning">
+                <div class="card-body">
+                    <h5 class="card-title">{% translate "✅ Validation après nettoyage" %}</h5>
+                    <ul class="mb-0 small">
+                        <li><strong>{% translate "Doublons exacts restants :" %}</strong> {{ validation.duplicates }}</li>
+                        {% if validation.potential_duplicates %}
+                            <li>
+                                <strong>{% translate "Doublons potentiels restants :" %}</strong>
+                                {{ validation.potential_duplicates|length }}
+                                <span class="text-muted">{% translate "(⚠️ à vérifier manuellement)" %}</span>
+                            </li>
+                        {% else %}
+                            <li>{% blocktranslate trimmed %}<strong>Doublons potentiels restants :</strong> aucun{% endblocktranslate %}</li>
+                        {% endif %}
+                        {% if validation.missing %}
+                            <li>
+                                <strong>{% translate "Valeurs manquantes restantes :" %}</strong>
+                                {% for col, info in validation.missing.items %}
+                                    {{ col }} ({{ info.count }}){% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                            </li>
+                        {% else %}
+                            <li>{% blocktranslate trimmed %}<strong>Valeurs manquantes restantes :</strong> aucune{% endblocktranslate %}</li>
+                        {% endif %}
+                        {% if validation.unknown %}
+                            <li>
+                                <strong>{% translate "Valeurs « Inconnu » :" %}</strong>
+                                {% for col, count in validation.unknown.items %}
+                                    {{ col }} ({{ count }}){% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                            </li>
+                        {% endif %}
+                        <li>
+                            <strong>{% translate "Emails restants :" %}</strong>
+                            {% blocktranslate trimmed count counter=validation.emails.valid %}{{ counter }} valide,{% plural %}{{ counter }} valides,{% endblocktranslate %}
+                            {% blocktranslate trimmed count counter=validation.emails.invalid %}{{ counter }} invalide,{% plural %}{{ counter }} invalides,{% endblocktranslate %}
+                            {% blocktranslate trimmed count counter=validation.emails.unknown %}{{ counter }} inconnu{% plural %}{{ counter }} inconnus{% endblocktranslate %}
+                        </li>
+                        {% if validation.emails.issues %}
+                            <li>
+                                <strong>{% translate "Emails invalides restants :" %}</strong>
+                                <ul class="mb-0">
+                                    {% for e in validation.emails.issues %}
+                                        <li>❌ {{ e.2 }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if charts %}
+            <div class="card shadow-sm dz-block">
+                <div class="card-body">
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                        <h5 class="card-title mb-0">{% translate "📈 Visualisations statistiques" %}</h5>
+                        <a class="btn btn-sm btn-outline-primary" href="{% url 'core:dataset_analysis' data_file.pk %}">
+                            {% translate "Voir l'analyse complète →" %}
+                        </a>
+                    </div>
+                    <p class="text-muted small">
+                        {% translate "Graphiques générés côté serveur avec" %} <strong>{% translate "matplotlib" %}</strong> {% translate "et" %}
+                        <strong>{% translate "seaborn" %}</strong> {% translate "à partir des données nettoyées." %}
+                    </p>
+                    <div class="row g-3">
+                        {% for chart in charts %}
+                            {% if chart.slug == 'score' or chart.slug == 'dimensions' or chart.slug == 'missing' or chart.slug == 'problems' %}
+                                <div class="col-12 col-xl-6">
+                                    <div class="dz-chart-frame"
+                                         data-dz-charts
+                                         data-dz-chart="{{ chart.slug }}"
+                                         data-dz-chart-data-url="{% url 'core:dataset_chart_data' data_file.pk %}?lang={{ active_language.code }}">
+                                        <img src="{% url 'core:dataset_chart' data_file.pk chart.slug %}?lang={{ active_language.code }}"
+                                             alt="{{ chart.title }} — {{ data_file.original_name }}"
+                                             class="dz-chart-img" loading="lazy">
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        {% include "core/validation_issues.html" with verification_items=dashboard.to_verify dashboard=dashboard %}
+
+        {% if consistency %}
+            <div class="card shadow-sm dz-block {% if consistency.ok %}border-success{% else %}border-danger{% endif %}">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        {% if consistency.ok %}✅{% else %}⚠️{% endif %} {% translate "Contrôle de cohérence" %}
+                    </h5>
+                    <p class="small mb-2 {% if consistency.ok %}text-success{% else %}text-danger{% endif %}">
+                        {% if consistency.ok %}
+                            {% translate "Les statistiques affichées correspondent aux données réelles." %}
+                        {% else %}
+                            {% translate "Des incohérences ont été détectées entre les statistiques et les données." %}
+                        {% endif %}
+                    </p>
+                    <ul class="mb-0 small">
+                        {% for check in consistency.checks %}
+                            <li>
+                                {% if check.ok %}✅{% else %}❌{% endif %}
+                                {{ check.label }} — <span class="text-muted">{{ check.detail }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if dashboard.change_log_rows %}
+            <div class="card shadow-sm dz-block">
+                <div class="card-body">
+                    <h5 class="card-title">{% translate "📝 Journal des modifications" %} <span class="text-muted small">{% blocktranslate trimmed count counter=dashboard.change_log_total %}({{ counter }} modification){% plural %}({{ counter }} modifications){% endblocktranslate %}</span></h5>
+                    <div class="table-responsive">
+                        <table class="table table-sm table-striped align-middle mb-0" data-searchable>
+                            <thead class="table-light">
+                                <tr>
+                                    {% for col in dashboard.change_log_columns %}
+                                        <th>{{ col }}</th>
+                                    {% endfor %}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for row in dashboard.change_log_rows %}
+                                    <tr>
+                                        {% for cell in row %}
+                                            <td>{{ cell }}</td>
+                                        {% endfor %}
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">{% translate "Aperçu du fichier nettoyé" %}</h5>
+                <div class="table-responsive">
+                    <table class="table table-striped table-sm align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                {% for col in cleaned_columns %}
+                                    <th>{{ col }}</th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in cleaned_preview_rows %}
+                                <tr>
+                                    {% for cell in row %}
+                                        <td>{% if cell is None %}<span class="text-muted">—</span>{% elif cell|is_unknown %}<span class="text-warning fst-italic">{% translate "Inconnu" %}</span>{% else %}{{ cell }}{% endif %}</td>
+                                    {% endfor %}
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-muted small mb-0">
+                    {% blocktranslate trimmed with shown=cleaned_preview_rows|length total=cleaned_stats.rows %}Affichage de {{ shown }} lignes sur {{ total }}.{% endblocktranslate %}
+                </p>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Polling de progression : tant que le nettoyage est en cours, on interroge
+// l'API de statut et on recharge la page dès que le traitement est terminé.
+(function () {
+    "use strict";
+    const card = document.getElementById("processing-card");
+    if (!card) {
+        return;
+    }
+    const url = card.dataset.statusUrl;
+    const bar = document.getElementById("processing-bar");
+
+    function poll() {
+        fetch(url, { headers: { "X-Requested-With": "XMLHttpRequest" } })
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+                if (data.progress !== undefined && bar) {
+                    bar.style.width = data.progress + "%";
+                    bar.textContent = data.progress + " %";
+                }
+                if (data.status === "cleaned" || data.status === "error") {
+                    window.location.reload();
+                    return;
+                }
+                setTimeout(poll, 1000);
+            })
+            .catch(function () { setTimeout(poll, 2000); });
+    }
+    setTimeout(poll, 800);
+})();
+</script>
+{% endblock %}

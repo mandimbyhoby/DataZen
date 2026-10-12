@@ -1,0 +1,21 @@
+{
+  "name": "datazen-charts",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Graphiques interactifs DataZen (React + Chart.js), compilés vers static/js/charts/.",
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.7",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.3.0",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}

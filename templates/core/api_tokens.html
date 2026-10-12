@@ -1,0 +1,198 @@
+{% extends "core/base.html" %}
+{% load i18n humanize %}
+
+{% block title %}{% translate "API et intégrations — DataZen" %}{% endblock %}
+
+{% block content %}
+<div class="container dz-page">
+    <nav aria-label="{% translate "Fil d'Ariane" %}">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{% translate "API" %}</li>
+        </ol>
+    </nav>
+
+    <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 dz-page-head">
+        <div>
+            <span class="dz-eyebrow">{% translate "Intégration" %}</span>
+            <h1 class="h3 mb-1">{% translate "🔌 API et jetons d'accès" %}</h1>
+            <p class="text-muted mb-0">
+                {% translate "Branchez DataZen à vos outils : Power BI, n8n, scripts Python, tableaux de bord maison." %}
+            </p>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-outline-secondary" href="{% url 'core:webhooks' %}">
+                {% translate "🔔 Webhooks" %}
+            </a>
+            <a class="btn btn-outline-secondary" href="{% url 'core:shortcuts' %}">
+                {% translate "⌨️ Raccourcis" %}
+            </a>
+        </div>
+    </div>
+
+    {% if new_token %}
+        <div class="alert alert-success" role="alert">
+            <h2 class="h6">{% translate "🔑 Votre nouveau jeton" %}</h2>
+            <p class="small mb-2">
+                {% translate "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché." %}
+            </p>
+            <div class="input-group">
+                <input type="text" class="form-control font-monospace" id="dz-new-token"
+                       value="{{ new_token.clear }}" readonly
+                       aria-label="{% translate 'Nouveau jeton d API' %}">
+                <button class="btn btn-outline-secondary" type="button"
+                        data-dz-copy="#dz-new-token">{% translate "Copier" %}</button>
+            </div>
+        </div>
+    {% endif %}
+
+    <section class="dz-kpi-dashboard dz-block" aria-labelledby="dz-api-kpi">
+        <div class="dz-kpi-heading">
+            <div>
+                <h2 class="h5 mb-1" id="dz-api-kpi">{% translate "Utilisation de l'API" %}</h2>
+            </div>
+        </div>
+        <div class="dz-kpi-grid">
+            <article class="dz-kpi-card dz-kpi-card--primary">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">🔑</span>
+                    <span class="dz-kpi-card__label">{% translate "Jetons" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ stats.total }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--success">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">✅</span>
+                    <span class="dz-kpi-card__label">{% translate "Actifs" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ stats.active }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--warning">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">📡</span>
+                    <span class="dz-kpi-card__label">{% translate "Appels" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ stats.calls|intcomma }}</div>
+            </article>
+        </div>
+    </section>
+
+    <div class="row dz-grid">
+        <div class="col-lg-5">
+            <div class="card dz-card-accent dz-block">
+                <div class="card-body">
+                    <h2 class="card-title h5">{% translate "➕ Nouveau jeton" %}</h2>
+                    <form method="post">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <div class="mb-3">
+                                <label class="form-label small" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                                {{ field }}
+                                {% if field.help_text %}
+                                    <div class="form-text small">{{ field.help_text }}</div>
+                                {% endif %}
+                                {% for error in field.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                        <button type="submit" class="btn btn-primary w-100">{% translate "Créer le jeton" %}</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card dz-panel">
+                <div class="card-body">
+                    <h2 class="card-title h6">{% translate "🚀 Premier appel" %}</h2>
+                    <p class="text-muted small">
+                        {% translate "Remplacez le jeton par le vôtre et lancez la commande." %}
+                    </p>
+                    <pre class="dz-pre-wrap small mb-2">{{ sample_curl }}</pre>
+                    <p class="text-muted small mb-0">
+                        {% translate "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/." %}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-7">
+            <div class="card dz-panel">
+                <div class="card-body">
+                    <h2 class="card-title h5">{% translate "🔑 Mes jetons" %}</h2>
+                    {% if tokens %}
+                        <div class="table-responsive">
+                            <table class="table align-middle" data-searchable>
+                                <thead>
+                                    <tr>
+                                        <th>{% translate "Nom" %}</th>
+                                        <th>{% translate "Préfixe" %}</th>
+                                        <th class="text-end">{% translate "Appels" %}</th>
+                                        <th>{% translate "État" %}</th>
+                                        <th>{% translate "Dernier usage" %}</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for token in tokens %}
+                                        <tr>
+                                            <td>
+                                                {{ token.name }}
+                                                {% if user.is_superuser and token.owner != user %}
+                                                    <div class="text-muted small">{{ token.owner.username }}</div>
+                                                {% endif %}
+                                            </td>
+                                            <td class="font-monospace small">dz_{{ token.prefix }}…</td>
+                                            <td class="text-end">{{ token.call_count|intcomma }}</td>
+                                            <td>
+                                                {% if token.is_expired %}
+                                                    <span class="badge text-bg-danger">{% translate "Expiré" %}</span>
+                                                {% elif token.is_active %}
+                                                    <span class="badge text-bg-success">{% translate "Actif" %}</span>
+                                                {% else %}
+                                                    <span class="badge text-bg-secondary">{% translate "Révoqué" %}</span>
+                                                {% endif %}
+                                                {% if token.expires_at %}
+                                                    <div class="text-muted small">
+                                                        → {{ token.expires_at|date:"d/m/Y H:i" }}
+                                                    </div>
+                                                {% endif %}
+                                            </td>
+                                            <td class="text-muted small">
+                                                {% if token.last_used_at %}
+                                                    {{ token.last_used_at|naturaltime }}
+                                                {% else %}
+                                                    — 
+                                                {% endif %}
+                                            </td>
+                                            <td class="text-end">
+                                                {% if token.is_active %}
+                                                    {% translate "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner." as revoke_confirm %}
+                                                    <form method="post" action="{% url 'core:api_token_revoke' token.pk %}"
+                                                          class="d-inline"
+                                                          data-dz-confirm="{{ revoke_confirm }}">
+                                                        {% csrf_token %}
+                                                        <button type="submit" class="btn btn-sm btn-outline-danger">
+                                                            {% translate "Révoquer" %}
+                                                        </button>
+                                                    </form>
+                                                {% endif %}
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class="text-center py-5">
+                            <div class="fs-1 mb-2" aria-hidden="true">🔑</div>
+                            <p class="text-muted mb-0">
+                                {% translate "Aucun jeton pour le moment. Créez-en un pour utiliser l'API." %}
+                            </p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

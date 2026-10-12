@@ -1,0 +1,166 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Raccourcis clavier — DataZen" %}{% endblock %}
+
+{% block content %}
+<div class="container dz-page">
+    <nav aria-label="{% translate "Fil d'Ariane" %}">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{% translate "Raccourcis clavier" %}</li>
+        </ol>
+    </nav>
+
+    <div class="dz-page-head">
+        <span class="dz-eyebrow">{% translate "Productivité" %}</span>
+        <h1 class="h3 mb-1">{% translate "⌨️ Raccourcis clavier" %}</h1>
+        <p class="text-muted mb-0">
+            {% translate "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches." %}
+        </p>
+    </div>
+
+    <section class="dz-kpi-dashboard dz-block" aria-labelledby="dz-shortcuts-kpi">
+        <div class="dz-kpi-heading">
+            <div>
+                <h2 class="h5 mb-1" id="dz-shortcuts-kpi">{% translate "Votre espace de travail" %}</h2>
+                <p class="text-muted small mb-0">
+                    {% translate "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous." %}
+                </p>
+            </div>
+        </div>
+        <div class="dz-kpi-grid">
+            <article class="dz-kpi-card dz-kpi-card--primary">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">📄</span>
+                    <span class="dz-kpi-card__label">{% translate "Fichiers" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ files_count }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--secondary">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">⚙️</span>
+                    <span class="dz-kpi-card__label">{% translate "Règles" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ rules_count }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--success">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">🔌</span>
+                    <span class="dz-kpi-card__label">{% translate "Jetons d'API" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ tokens_count }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--warning">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">🔔</span>
+                    <span class="dz-kpi-card__label">{% translate "Webhooks" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ hooks_count }}</div>
+            </article>
+        </div>
+    </section>
+
+    <div class="row dz-grid">
+        <div class="col-lg-6">
+            <div class="card dz-panel h-100">
+                <div class="card-body">
+                    <h2 class="card-title h5">{% translate "🌍 Navigation" %}</h2>
+                    <table class="table align-middle mb-0">
+                        <caption class="visually-hidden">{% translate "Raccourcis de navigation" %}</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="fw-normal">{% translate "Ouvrir la recherche globale" %}</th>
+                                <td class="text-end"><kbd class="dz-kbd">Ctrl</kbd> <kbd class="dz-kbd">K</kbd></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">{% translate "Se déplacer dans les résultats" %}</th>
+                                <td class="text-end"><kbd class="dz-kbd">↑</kbd> <kbd class="dz-kbd">↓</kbd></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">{% translate "Ouvrir le résultat sélectionné" %}</th>
+                                <td class="text-end"><kbd class="dz-kbd">{% translate "Entrée" %}</kbd></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">{% translate "Fermer la fenêtre active" %}</th>
+                                <td class="text-end"><kbd class="dz-kbd">{% translate "Échap" %}</kbd></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">{% translate "Aller au contenu principal" %}</th>
+                                <td class="text-end"><kbd class="dz-kbd">Tab</kbd></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card dz-panel h-100">
+                <div class="card-body">
+                    <h2 class="card-title h5">{% translate "🧹 Nettoyage" %}</h2>
+                    <table class="table align-middle mb-0">
+                        <caption class="visually-hidden">{% translate "Raccourcis de nettoyage" %}</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="fw-normal">{% translate "Sélectionner un fichier" %}</th>
+                                <td class="text-end"><kbd class="dz-kbd">{% translate "Entrée" %}</kbd></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">{% translate "Continuer / valider une étape" %}</th>
+                                <td class="text-end"><kbd class="dz-kbd">Ctrl</kbd> <kbd class="dz-kbd">{% translate "Entrée" %}</kbd></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">{% translate "Filtrer un tableau" %}</th>
+                                <td class="text-end"><kbd class="dz-kbd">Ctrl</kbd> <kbd class="dz-kbd">F</kbd></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">{% translate "Basculer le thème clair / sombre" %}</th>
+                                <td class="text-end"><kbd class="dz-kbd">Ctrl</kbd> <kbd class="dz-kbd">J</kbd></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="card dz-card-accent">
+                <div class="card-body">
+                    <h2 class="card-title h5">{% translate "🚀 Nouveautés de l'espace pro" %}</h2>
+                    <div class="row g-3">
+                        <div class="col-md-6 col-xl-3">
+                            <a class="dz-shortcut-tile" href="{% url 'core:dashboard' %}">
+                                <span class="dz-shortcut-tile__icon" aria-hidden="true">📊</span>
+                                <span class="dz-shortcut-tile__title">{% translate "Tableau de bord" %}</span>
+                                <span class="dz-shortcut-tile__text">{% translate "Tous vos indicateurs de qualité réunis." %}</span>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <a class="dz-shortcut-tile" href="{% url 'core:activity' %}">
+                                <span class="dz-shortcut-tile__icon" aria-hidden="true">🕓</span>
+                                <span class="dz-shortcut-tile__title">{% translate "Journal d'activité" %}</span>
+                                <span class="dz-shortcut-tile__text">{% translate "L'historique horodaté de chaque opération." %}</span>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <a class="dz-shortcut-tile" href="{% url 'core:api_tokens' %}">
+                                <span class="dz-shortcut-tile__icon" aria-hidden="true">🔌</span>
+                                <span class="dz-shortcut-tile__title">{% translate "API REST" %}</span>
+                                <span class="dz-shortcut-tile__text">{% translate "Branchez DataZen sur vos outils existants." %}</span>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <a class="dz-shortcut-tile" href="{% url 'core:retention' %}">
+                                <span class="dz-shortcut-tile__icon" aria-hidden="true">🗄️</span>
+                                <span class="dz-shortcut-tile__title">{% translate "Rétention" %}</span>
+                                <span class="dz-shortcut-tile__text">{% translate "Maîtrisez la durée de vie de vos données." %}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

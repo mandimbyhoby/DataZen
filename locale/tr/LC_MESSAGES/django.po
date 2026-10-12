@@ -1,0 +1,2832 @@
+# Catalogue de traduction DataZen.
+# Généré par tools/i18n_build.py — ne pas éditer à la main.
+msgid ""
+msgstr ""
+"Project-Id-Version: DataZen 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "%(actual)s correction(s) in the log vs %(reported)s reported"
+msgstr "%(actual)s düzeltme günlükte, bildirilen %(reported)s"
+
+msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
+msgstr "E-posta sütunlarında %(actual)s bilinmeyen değer, bildirilen %(reported)s"
+
+msgid "%(count)s colonnes"
+msgstr "%(count)s sütun"
+
+msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
+msgstr "%(count)s olası yinelenen kayıt incelenmeyi bekliyor."
+
+msgid "%(count)s entrée(s) d'activité supprimée(s)."
+msgstr "%(count)s etkinlik kaydı silindi."
+
+msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
+msgstr "%(count)s hata otomatik olarak düzeltilemedi."
+
+msgid "%(count)s exact duplicate(s) remaining"
+msgstr "%(count)s tam yinelenen kayıt kaldı"
+
+msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
+msgstr "%(count)s tutarsız değer kaldı (ne geçerli ne bilinmeyen)"
+
+msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
+msgstr "%(count)s geçersiz e-posta var (boş olmayan ve bilinmeyen olmayan)"
+
+msgid "%(count)s invalid value(s) among filled data"
+msgstr "Doldurulmuş veriler arasında %(count)s geçersiz değer"
+
+msgid "%(count)s lignes"
+msgstr "%(count)s satır"
+
+msgid "%(count)s missing value(s)"
+msgstr "%(count)s eksik değer"
+
+msgid "%(count)s non-standard value(s)"
+msgstr "%(count)s standart dışı değer"
+
+msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
+msgstr "%(count)s olası yinelenen kayıt manuel inceleme gerektiriyor (azaltılmış ceza)"
+
+msgid "%(count)s unknown value(s) (data unavailable)"
+msgstr "%(count)s bilinmeyen değer (veri yok)"
+
+msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
+msgstr "Sayısal sütunlarda %(count)s aykırı değer tespit edildi."
+
+msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
+msgstr "%(count)s değer şu anda « Bilinmiyor »."
+
+msgid "%(counter)s doublon potentiel détecté. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgid_plural "%(counter)s doublons potentiels détectés. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgstr[0] "%(counter)s olası yinelenen kayıt algılandı. Bu satırlar <strong>asla</strong> otomatik silinmez; kararınız gerekir."
+msgstr[1] "%(counter)s olası yinelenen kayıt algılandı. Bu satırlar <strong>asla</strong> otomatik silinmez; kararınız gerekir."
+
+msgid "%(counter)s fichier affiché"
+msgid_plural "%(counter)s fichiers affichés"
+msgstr[0] "%(counter)s dosya gösteriliyor"
+
+msgid "%(counter)s inconnu"
+msgid_plural "%(counter)s inconnus"
+msgstr[0] "%(counter)s bilinmiyor"
+
+msgid "%(counter)s invalide,"
+msgid_plural "%(counter)s invalides,"
+msgstr[0] "%(counter)s geçersiz,"
+
+msgid "%(counter)s ligne concernée :"
+msgid_plural "%(counter)s lignes concernées :"
+msgstr[0] "%(counter)s ilgili satır:"
+
+msgid "%(counter)s valide,"
+msgid_plural "%(counter)s valides,"
+msgstr[0] "%(counter)s geçerli,"
+
+msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
+msgstr "%(purged)s dosya silindi, %(archived)s dosya arşivlendi."
+
+msgid "%(score)s / 100  (%(weight)s %(percent)s)"
+msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
+msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s, beklenen %(expected)s"
+
+msgid "%(value)s %(percent)s"
+msgstr "%(value)s %(percent)s"
+
+msgid "(%(counter)s modification)"
+msgid_plural "(%(counter)s modifications)"
+msgstr[0] "(%(counter)s değişiklik)"
+
+msgid "(%(counter)s non-conformité)"
+msgid_plural "(%(counter)s non-conformités)"
+msgstr[0] "(%(counter)s uygunsuzluk)"
+
+msgid "(colonnes : %(columns)s)"
+msgstr "(sütunlar: %(columns)s)"
+
+msgid "(score ≥ 0.8)"
+msgstr "(puan ≥ 0,8)"
+
+msgid "(⚠️ à vérifier manuellement)"
+msgstr "(⚠️ manuel olarak kontrol edilmeli)"
+
+msgid ", Vous recevez ce message parce qu'une réinitialisation de mot de passe a été demandée pour votre compte DataZen. Cliquez sur le lien ci-dessous pour choisir un nouveau mot de passe :"
+msgstr ", DataZen hesabınız için parola sıfırlama talep edildiği için bu mesajı alıyorsunuz. Yeni bir parola seçmek için aşağıdaki bağlantıya tıklayın:"
+
+msgid "<a href=\"#televerser\">Téléversez votre premier fichier</a> pour commencer."
+msgstr "<a href=\"#televerser\">İlk dosyanızı yükleyin</a> ve başlayın."
+
+msgid "<strong>Doublons potentiels :</strong> aucun"
+msgstr "<strong>Olası yinelenenler:</strong> yok"
+
+msgid "<strong>Doublons potentiels restants :</strong> aucun"
+msgstr "<strong>Kalan olası yinelenenler:</strong> yok"
+
+msgid "<strong>Valeurs manquantes :</strong> aucune"
+msgstr "<strong>Eksik değerler:</strong> yok"
+
+msgid "<strong>Valeurs manquantes restantes :</strong> aucune"
+msgstr "<strong>Kalan eksik değerler:</strong> yok"
+
+msgid "AAAA-MM-JJ"
+msgstr "AAAA-MM-JJ"
+
+msgid "API"
+msgstr "API"
+
+msgid "API & webhooks"
+msgstr "API ve webhook'lar"
+
+msgid "API REST"
+msgstr "REST API"
+
+msgid "API et intégrations"
+msgstr "API ve entegrasyonlar"
+
+msgid "API et intégrations — DataZen"
+msgstr "API ve entegrasyonlar — DataZen"
+
+msgid "Abonnements"
+msgstr "Abonelikler"
+
+msgid "Accueil"
+msgstr "Ana sayfa"
+
+msgid "Actif"
+msgstr "Etkin"
+
+msgid "Actifs"
+msgstr "Etkin olanlar"
+
+msgid "Action"
+msgstr "İşlem"
+
+msgid "Action invalide."
+msgstr "Geçersiz işlem."
+
+msgid "Actions"
+msgstr "İşlemler"
+
+msgid "Active"
+msgstr "Etkin"
+
+msgid "Activer"
+msgstr "Etkinleştir"
+
+msgid "Activer le thème clair"
+msgstr "Açık temayı etkinleştir"
+
+msgid "Activer le thème sombre"
+msgstr "Koyu temayı etkinleştir"
+
+msgid "Activité"
+msgstr "Etkinlik"
+
+msgid "Activités"
+msgstr "Etkinlikler"
+
+msgid "Activée"
+msgstr "Etkinleştirildi"
+
+msgid "Administrateur"
+msgstr "Yönetici"
+
+msgid "Administration"
+msgstr "Yönetim"
+
+msgid "Adresse email"
+msgstr "E-posta adresi"
+
+msgid "Affichage de %(shown)s lignes sur %(total)s."
+msgstr "%(total)s satırdan %(shown)s tanesi gösteriliyor."
+
+msgid "Affichage des"
+msgstr "Gösterilen:"
+
+msgid "Afficher"
+msgstr "Göster"
+
+msgid "Afficher le mot de passe"
+msgstr "Parolayı göster"
+
+msgid "Afficher les détails des anomalies"
+msgstr "Anormallik ayrıntılarını göster"
+
+msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
+msgstr "X-DataZen-Signature başlığına eklendi (HMAC-SHA256)."
+
+msgid "All filled values are valid"
+msgstr "Doldurulan tüm değerler geçerli"
+
+msgid "Aller au contenu principal"
+msgstr "Ana içeriğe git"
+
+msgid "Analyse exploratoire"
+msgstr "Keşifsel analiz"
+
+msgid "Analyse exploratoire — %(name)s"
+msgstr "Keşifsel analiz — %(name)s"
+
+msgid "Analyser et nettoyer"
+msgstr "Analiz et ve temizle"
+
+msgid "Analyste de données"
+msgstr "Veri analisti"
+
+msgid "Ancienne valeur"
+msgstr "Eski değer"
+
+msgid "Annuler"
+msgstr "İptal"
+
+msgid "Anomalies restantes (à traiter manuellement)"
+msgstr "Kalan anormallikler (manuel olarak ele alınacak)"
+
+msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
+msgstr "Hassas verileri anonimleştirme (%(count)s değer takma adla değiştirildi)"
+
+msgid "Anonymiser les données sensibles"
+msgstr "Hassas verileri anonimleştir"
+
+msgid "Anonymiser les données sensibles (noms, emails, téléphones)"
+msgstr "Hassas verileri anonimleştir (adlar, e-postalar, telefonlar)"
+
+msgid "Antananarivo, Madagascar"
+msgstr "Antananarivo, Madagascar"
+
+msgid "Aperçu du fichier nettoyé"
+msgstr "Temizlenmiş dosya önizlemesi"
+
+msgid "Appel API"
+msgstr "API çağrısı"
+
+msgid "Appel API : %(path)s"
+msgstr "API çağrısı: %(path)s"
+
+msgid "Appels"
+msgstr "Çağrılar"
+
+msgid "Application"
+msgstr "Uygulama"
+
+msgid "Après"
+msgstr "Sonra"
+
+msgid "Archivage"
+msgstr "Arşivleme"
+
+msgid "Archivage de « %(name)s »"
+msgstr "« %(name)s » arşivleniyor"
+
+msgid "Archiver"
+msgstr "Arşivle"
+
+msgid "Archives"
+msgstr "Arşivler"
+
+msgid "Archivés"
+msgstr "Arşivlendi"
+
+msgid "Aucun fichier d'origine n'est disponible."
+msgstr "Kullanılabilir kaynak dosya yok."
+
+msgid "Aucun fichier expiré à purger."
+msgstr "Temizlenecek süresi geçmiş dosya yok."
+
+msgid "Aucun fichier expiré. Votre espace de travail est à jour."
+msgstr "Süresi geçmiş dosya yok. Çalışma alanın güncel."
+
+msgid "Aucun fichier ne correspond à votre recherche."
+msgstr "Aramanızla eşleşen dosya yok."
+
+msgid "Aucun fichier nettoyé n'est disponible."
+msgstr "Kullanılabilir temizlenmiş dosya yok."
+
+msgid "Aucun fichier nettoyé pour le moment."
+msgstr "Henüz temizlenmiş dosya yok."
+
+msgid "Aucun fichier pour le moment."
+msgstr "Henüz dosya yok."
+
+msgid "Aucun fichier sélectionné"
+msgstr "Dosya seçilmedi"
+
+msgid "Aucun fichier téléversé pour le moment."
+msgstr "Henüz yüklenmiş dosya yok."
+
+msgid "Aucun graphique n'est disponible pour ce jeu de données : il ne contient pas assez de valeurs numériques ou catégorielles exploitables."
+msgstr "Bu veri kümesi için grafik yok: yeterli sayıda kullanılabilir sayısal veya kategorik değer içermiyor."
+
+msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
+msgstr "Henüz jeton yok. API'yi kullanmak için bir tane oluştur."
+
+msgid "Aucun journal des modifications n'est disponible."
+msgstr "Kullanılabilir değişiklik günlüğü yok."
+
+msgid "Aucun problème détecté"
+msgstr "Sorun algılanmadı"
+
+msgid "Aucun rapport de nettoyage n'est disponible."
+msgstr "Kullanılabilir temizleme raporu yok."
+
+msgid "Aucun résultat pour cette recherche."
+msgstr "Bu arama için sonuç yok."
+
+msgid "Aucun webhook configuré. Ajoutez une URL pour être notifié automatiquement."
+msgstr "Yapılandırılmış webhook yok. Otomatik bildirim almak için bir URL ekle."
+
+msgid "Aucune activité enregistrée pour le moment."
+msgstr "Henüz kayıtlı etkinlik yok."
+
+msgid "Aucune activité enregistrée."
+msgstr "Kayıtlı etkinlik yok."
+
+msgid "Aucune anomalie restante."
+msgstr "Kalan anormallik yok."
+
+msgid "Aucune anomalie."
+msgstr "Anormallik yok."
+
+msgid "Aucune colonne"
+msgstr "Sütun yok"
+
+msgid "Aucune correction"
+msgstr "Düzeltme yok"
+
+msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
+msgstr "Özgün dosya ile temizlenmiş dosya arasında kayda değer fark yok: verilerin zaten temizdi."
+
+msgid "Aucune dimension mesurée pour le moment."
+msgstr "Henüz ölçülen boyut yok."
+
+msgid "Aucune donnée"
+msgstr "Veri yok"
+
+msgid "Aucune donnée nettoyée disponible."
+msgstr "Kullanılabilir temizlenmiş veri yok."
+
+msgid "Aucune modification enregistrée."
+msgstr "Kaydedilmiş değişiklik yok."
+
+msgid "Aucune règle personnalisée."
+msgstr "Özel kural yok."
+
+msgid "Aucune règle pour le moment. Créez-en une pour la réutiliser sur tous vos fichiers."
+msgstr "Henüz kural yok. Tüm dosyalarınızda yeniden kullanmak için bir tane oluşturun."
+
+msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
+msgstr "Sayısal sütunlarda aykırı değer tespit edilmedi."
+
+msgid "Aucune valeur « Inconnu »."
+msgstr "« Bilinmiyor » değeri yok."
+
+msgid "Audit des emails"
+msgstr "E-posta denetimi"
+
+msgid "Automatisation"
+msgstr "Otomasyon"
+
+msgid "Autoriser les autres utilisateurs à consulter votre profil."
+msgstr "Diğer kullanıcıların profilinizi görüntülemesine izin verin."
+
+msgid "Avant"
+msgstr "Önce"
+
+msgid "Avertissement"
+msgstr "Uyarı"
+
+msgid "Basculer la navigation"
+msgstr "Gezinmeyi değiştir"
+
+msgid "Basculer le thème"
+msgstr "Temayı değiştir"
+
+msgid "Basculer le thème clair / sombre"
+msgstr "Açık / koyu temayı değiştir"
+
+msgid "Bienvenue %(username)s !"
+msgstr "Hoş geldiniz %(username)s!"
+
+msgid "Bon retour parmi nous"
+msgstr "Tekrar hoş geldiniz"
+
+msgid "Bonjour"
+msgstr "Merhaba"
+
+msgid "Borne basse"
+msgstr "Alt sınır"
+
+msgid "Borne haute"
+msgstr "Üst sınır"
+
+msgid "Boîtes à moustaches"
+msgstr "Kutu grafikleri"
+
+msgid "Boîtes à moustaches des colonnes numériques"
+msgstr "Sayısal sütunların kutu grafikleri"
+
+msgid "Branchez DataZen sur vos outils existants."
+msgstr "DataZen'i mevcut araçlarına bağla."
+
+msgid "Branchez DataZen à vos outils : Power BI, n8n, scripts Python, tableaux de bord maison."
+msgstr "DataZen'i araçlarına bağla: Power BI, n8n, Python betikleri, kendi panoların."
+
+msgid "CSV (séparateur ;)"
+msgstr "CSV (ayırıcı ;)"
+
+msgid "Cadrez votre visage puis cliquez sur « Capturer »."
+msgstr "Yüzünüzü çerçeveye alın ve « Yakala » düğmesine tıklayın."
+
+msgid "Calculée sur %(count)s fichier(s) nettoyé(s)."
+msgstr "%(count)s temizlenmiş dosya üzerinden hesaplandı."
+
+msgid "Canonicalisation du marqueur « Inconnu » (%(count)s corrigé(s))"
+msgstr "‘Bilinmiyor’ işaretini standartlaştırma (%(count)s düzeltildi)"
+
+msgid "Capturer"
+msgstr "Yakala"
+
+msgid "Ce graphique n'est pas disponible pour ce jeu de données."
+msgstr "Bu grafik bu veri kümesi için kullanılamaz."
+
+msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
+msgstr "Bu sıfırlama bağlantısı zaten kullanılmış veya süresi dolmuş."
+
+msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
+msgstr "Bu bağlantı yalnızca bir kez geçerlidir. Bu talebi siz yapmadıysanız bu mesajı yok sayın: parolanız değişmez. — DataZen"
+
+msgid "Ce profil n'est pas public."
+msgstr "Bu profil herkese açık değil."
+
+msgid "Ce que le nettoyage a réellement changé dans votre fichier."
+msgstr "Temizliğin dosyanda gerçekte neyi değiştirdiği."
+
+msgid "Cellules manquantes"
+msgstr "Eksik hücreler"
+
+msgid "Ces %(count)s fichier(s) dépassent la durée de conservation de %(days)s jours. Ils ne sont pas supprimés automatiquement tant que la purge automatique reste désactivée."
+msgstr "Bu %(count)s dosya %(days)s günlük saklama süresini aşıyor. Otomatik temizlik kapalı kaldığı sürece otomatik silinmez."
+
+msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
+msgstr "Bu sayaçlar genel aramayı ve aşağıdaki kısayolları besler."
+
+msgid "Champ"
+msgstr "Alan"
+
+msgid "Champs différents :"
+msgstr "Farklı alanlar:"
+
+msgid "Champs identiques :"
+msgstr "Aynı alanlar:"
+
+msgid "Champs inconnus :"
+msgstr "Bilinmeyen alanlar:"
+
+msgid "Changer de langue"
+msgstr "Dili değiştir"
+
+msgid "Changer ma photo de profil"
+msgstr "Profil fotoğrafımı değiştir"
+
+msgid "Changer mon mot de passe"
+msgstr "Parolamı değiştir"
+
+msgid "Changer mon mot de passe — DataZen"
+msgstr "Parolamı değiştir — DataZen"
+
+msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
+msgstr "Verilerinizi <code>.csv</code>, <code>.xlsx</code> veya <code>.xls</code> biçiminde yükleyin; ayırıcı fark etmez."
+
+msgid "Choisir la langue du site"
+msgstr "Site dilini seç"
+
+msgid "Choisir le format"
+msgstr "Biçimi seç"
+
+msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
+msgstr "Bir CSV veya Excel dosyası seçin (.csv, .xlsx, .xls)."
+
+msgid "Choisissez un fichier à analyser"
+msgstr "Analiz edilecek bir dosya seçin"
+
+msgid "Choisissez un mot de passe long et unique. Vous resterez connecté après la modification."
+msgstr "Uzun ve benzersiz bir parola seçin. Değişiklikten sonra oturumunuz açık kalır."
+
+msgid "Choisissez un mot de passe solide : au moins 8 caractères, ni trop courant, ni entièrement numérique."
+msgstr "Güçlü bir parola seçin: en az 8 karakter, çok yaygın olmayan ve tamamen sayısal olmayan."
+
+msgid "Choisissez une colonne unique (ex. email) pour fusionner les variantes d'un même enregistrement (Alice / alice). Laissez vide pour ne supprimer que les lignes 100 % identiques."
+msgstr "Aynı kaydın farklı biçimlerini (Alice / alice) birleştirmek için benzersiz bir sütun (ör. e-posta) seçin. Yalnızca tamamen aynı satırları silmek için boş bırakın."
+
+msgid "Clair"
+msgstr "Açık"
+
+msgid "Cliquer pour choisir une photo sur mon appareil"
+msgstr "Cihazımdan fotoğraf seçmek için tıklayın"
+
+msgid "Cliquer pour trier"
+msgstr "Sıralamak için tıklayın"
+
+msgid "Cliquez sur l'avatar ci-dessus pour choisir une image, ou sur l'icône appareil photo pour en prendre une instantanément. JPEG, PNG, WebP ou GIF — 5 Mo maximum."
+msgstr "Görsel seçmek için yukarıdaki avatara veya anında çekim için kamera simgesine tıklayın. JPEG, PNG, WebP veya GIF — en fazla 5 MB."
+
+msgid "Clé de signature"
+msgstr "İmza anahtarı"
+
+msgid "Clé de signature HMAC (facultative)"
+msgstr "HMAC imza anahtarı (isteğe bağlı)"
+
+msgid "Code de langue (fr, en, es…). Vide = langue de l'application."
+msgstr "Dil kodu (fr, en, es…). Boş = uygulama dili."
+
+msgid "Coefficient de Pearson"
+msgstr "Pearson katsayısı"
+
+msgid "Colonne"
+msgstr "Sütun"
+
+msgid "Colonne ciblée"
+msgstr "Hedef sütun"
+
+msgid "Colonne clé pour la déduplication"
+msgstr "Tekilleştirme anahtar sütunu"
+
+msgid "Colonnes"
+msgstr "Sütunlar"
+
+msgid "Colonnes améliorées"
+msgstr "İyileştirilen sütunlar"
+
+msgid "Colonnes analysées"
+msgstr "Analiz edilen sütunlar"
+
+msgid "Colonnes différentes"
+msgstr "Farklı sütunlar"
+
+msgid "Colonnes différentes :"
+msgstr "Farklı sütunlar:"
+
+msgid "Colonnes identiques :"
+msgstr "Aynı sütunlar:"
+
+msgid "Colonnes inconnues :"
+msgstr "Bilinmeyen sütunlar:"
+
+msgid "Colonnes stables"
+msgstr "Kararlı sütunlar"
+
+msgid "Colonnes à vérifier"
+msgstr "Kontrol edilecek sütunlar"
+
+msgid "Combien de fichiers se trouvent dans chaque tranche de score."
+msgstr "Her puan aralığında kaç dosya olduğu."
+
+msgid "Comparaison"
+msgstr "Karşılaştırma"
+
+msgid "Comparaison avant / après — %(name)s"
+msgstr "Temizlik öncesi / sonrası karşılaştırma — %(name)s"
+
+msgid "Complétion du profil"
+msgstr "Profil tamamlama"
+
+msgid "Complétude"
+msgstr "Bütünlük"
+
+msgid "Complétude par colonne"
+msgstr "Sütun bazında bütünlük"
+
+msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
+msgstr "Bütünlük · Geçerlilik · Benzersizlik · Tutarlılık · Uygunluk"
+
+msgid "Composantes du score (après nettoyage)"
+msgstr "Puan bileşenleri (temizleme sonrası)"
+
+msgid "Compte"
+msgstr "Hesap"
+
+msgid "Compte actif"
+msgstr "Hesap etkin"
+
+msgid "Condensé"
+msgstr "Özet"
+
+msgid "Confiance"
+msgstr "Güven"
+
+msgid "Confirmer la décision"
+msgstr "Kararı onayla"
+
+msgid "Connectez-vous pour retrouver vos fichiers."
+msgstr "Dosyalarınıza erişmek için oturum açın."
+
+msgid "Connexion"
+msgstr "Giriş"
+
+msgid "Connexion — DataZen"
+msgstr "Giriş — DataZen"
+
+msgid "Consultation des graphiques"
+msgstr "Grafikleri görüntüle"
+
+msgid "Consultation du rapport"
+msgstr "Raporu görüntüle"
+
+msgid "Continuer / valider une étape"
+msgstr "Devam et / bir adımı onayla"
+
+msgid "Contribution des cinq dimensions pondérées du score."
+msgstr "Puanın ağırlıklı beş boyutunun katkısı."
+
+msgid "Contrôle de cohérence"
+msgstr "Tutarlılık kontrolü"
+
+msgid "Conversion des compteurs en entiers (%(count)s converti(s))"
+msgstr "Sayaçları tam sayıya dönüştürme (%(count)s dönüştürüldü)"
+
+msgid "Conversion des montants (%(count)s converti(s))"
+msgstr "Tutarları dönüştürme (%(count)s dönüştürüldü)"
+
+msgid "Convertir les montants"
+msgstr "Tutarları dönüştür"
+
+msgid "Convertir les montants en valeurs numériques"
+msgstr "Tutarları sayısal değerlere dönüştür"
+
+msgid "Copier"
+msgstr "Kopyala"
+
+msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
+msgstr "Şimdi kopyala: güvenliğin için bir daha gösterilmeyecek."
+
+msgid "Corrections"
+msgstr "Düzeltmeler"
+
+msgid "Corrections appliquées"
+msgstr "Uygulanan düzeltmeler"
+
+msgid "Corrélations de Pearson entre les colonnes numériques."
+msgstr "Sayısal sütunlar arasındaki Pearson korelasyonları."
+
+msgid "Création de jeton"
+msgstr "Jeton oluşturma"
+
+msgid "Création de la règle « %(name)s »"
+msgstr "« %(name)s » kuralının oluşturulması"
+
+msgid "Création de règle"
+msgstr "Kural oluşturma"
+
+msgid "Création du jeton « %(name)s »"
+msgstr "« %(name)s » jetonunun oluşturulması"
+
+msgid "Créer la règle"
+msgstr "Kuralı oluştur"
+
+msgid "Créer le jeton"
+msgstr "Jetonu oluştur"
+
+msgid "Créer le webhook"
+msgstr "Webhook oluştur"
+
+msgid "Créer un compte"
+msgstr "Hesap oluştur"
+
+msgid "Créer une règle"
+msgstr "Kural oluştur"
+
+msgid "Créez une règle une fois, réutilisez-la sur tous vos fichiers."
+msgstr "Bir kuralı bir kez oluşturun, tüm dosyalarınızda yeniden kullanın."
+
+msgid "Créez votre compte"
+msgstr "Hesabınızı oluşturun"
+
+msgid "Data is consistent: each value is valid or unknown"
+msgstr "Veriler tutarlı: her değer geçerli veya bilinmiyor"
+
+msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
+msgstr "DataZen — Veri temizleme uygulaması (DataClean Pro) · ©"
+
+msgid "DataZen — Nettoyage de données"
+msgstr "DataZen — Veri temizleme"
+
+msgid "Date"
+msgstr "Tarih"
+
+msgid "Date d'expiration"
+msgstr "Bitiş tarihi"
+
+msgid "Date invalide"
+msgstr "Geçersiz tarih"
+
+msgid "De l'import brut au rapport de qualité, DataZen couvre toute la chaîne."
+msgstr "Ham içe aktarmadan kalite raporuna kadar DataZen tüm süreci kapsar."
+
+msgid "Demander un nouveau lien"
+msgstr "Yeni bağlantı isteyin"
+
+msgid "Dernier appel"
+msgstr "Son çağrı"
+
+msgid "Dernier code HTTP"
+msgstr "Son HTTP kodu"
+
+msgid "Dernier déclenchement"
+msgstr "Son tetikleme"
+
+msgid "Dernier usage"
+msgstr "Son kullanım"
+
+msgid "Derniers fichiers"
+msgstr "Son dosyalar"
+
+msgid "Dernière connexion"
+msgstr "Son giriş"
+
+msgid "Dernière utilisation"
+msgstr "Son kullanım"
+
+msgid "Dernières règles"
+msgstr "Son kurallar"
+
+msgid "Des incohérences ont été détectées entre les statistiques et les données."
+msgstr "İstatistikler ile veriler arasında tutarsızlıklar tespit edildi."
+
+msgid "Dimension"
+msgstr "Boyut"
+
+msgid "Dimensions de qualité"
+msgstr "Kalite boyutları"
+
+msgid "Dispersion et valeurs extrêmes des colonnes numériques."
+msgstr "Sayısal sütunların dağılımı ve uç değerleri."
+
+msgid "Distributions des colonnes numériques"
+msgstr "Sayısal sütunların dağılımları"
+
+msgid "Distributions numériques"
+msgstr "Sayısal dağılımlar"
+
+msgid "Django · Pandas · Bootstrap"
+msgstr "Django · Pandas · Bootstrap"
+
+msgid "Doublon par similarité"
+msgstr "Benzerliğe göre yinelenen"
+
+msgid "Doublon potentiel"
+msgstr "Olası yinelenen"
+
+msgid "Doublons"
+msgstr "Yinelenenler"
+
+msgid "Doublons exacts"
+msgstr "Tam yinelenenler"
+
+msgid "Doublons exacts :"
+msgstr "Tam yinelenenler:"
+
+msgid "Doublons exacts restants :"
+msgstr "Kalan tam yinelenenler:"
+
+msgid "Doublons par similarité :"
+msgstr "Benzerliğe göre yinelenenler:"
+
+msgid "Doublons potentiels"
+msgstr "Olası yinelenenler"
+
+msgid "Doublons potentiels (⚠️ à vérifier) :"
+msgstr "Olası yinelenenler (⚠️ kontrol edilmeli):"
+
+msgid "Doublons potentiels :"
+msgstr "Olası yinelenenler:"
+
+msgid "Doublons potentiels restants :"
+msgstr "Kalan olası yinelenenler:"
+
+msgid "Doublons restants (exacts + potentiels)"
+msgstr "Kalan yinelenenler (tam + olası)"
+
+msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
+msgstr "Yinelenenler, gereksiz boşluklar, hatalı e-postalar, tutarsız tarihler… DataZen sorunları tespit eder ve her şeyi saniyeler içinde otomatik olarak düzeltir."
+
+msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
+msgstr "Yinelenenler, eksik değerler, boşluklar, büyük/küçük harf, e-postalar, telefonlar, tarihler ve maaşlar normalleştirildi."
+
+msgid "Durée de conservation"
+msgstr "Saklama süresi"
+
+msgid "Durée de conservation (jours)"
+msgstr "Saklama süresi (gün)"
+
+msgid "Décision appliquée avec succès."
+msgstr "Karar başarıyla uygulandı."
+
+msgid "Déjà un compte ?"
+msgstr "Zaten hesabınız var mı?"
+
+msgid "Désactiver"
+msgstr "Devre dışı bırak"
+
+msgid "Désactivée"
+msgstr "Devre dışı"
+
+msgid "Détail"
+msgstr "Ayrıntı"
+
+msgid "Détail par colonne"
+msgstr "Sütun bazında ayrıntı"
+
+msgid "Détail par semaine"
+msgstr "Hafta bazında ayrıntı"
+
+msgid "Détails techniques"
+msgstr "Teknik ayrıntılar"
+
+msgid "E-mail envoyé — DataZen"
+msgstr "E-posta gönderildi — DataZen"
+
+msgid "Effacer"
+msgstr "Temizle"
+
+msgid "Effectif"
+msgstr "Sayı"
+
+msgid "Email invalide"
+msgstr "Geçersiz e-posta"
+
+msgid "Email nettoyé"
+msgstr "Temizlenmiş e-posta"
+
+msgid "Email original"
+msgstr "Orijinal e-posta"
+
+msgid "Emails :"
+msgstr "E-postalar:"
+
+msgid "Emails corrected (change log vs counter)"
+msgstr "Düzeltilen e-postalar (değişiklik günlüğü ile sayaç karşılaştırması)"
+
+msgid "Emails invalides :"
+msgstr "Geçersiz e-postalar:"
+
+msgid "Emails invalides restants :"
+msgstr "Kalan geçersiz e-postalar:"
+
+msgid "Emails restants :"
+msgstr "Kalan e-postalar:"
+
+msgid "Emails: valid + invalid + unknown = total"
+msgstr "E-postalar: geçerli + geçersiz + bilinmeyen = toplam"
+
+msgid "En attente"
+msgstr "Beklemede"
+
+msgid "En cours de traitement"
+msgstr "İşleniyor"
+
+msgid "En erreur"
+msgstr "Hatalı"
+
+msgid "En échec"
+msgstr "Başarısız"
+
+msgid "Enregistrer"
+msgstr "Kaydet"
+
+msgid "Enregistrer le nouveau mot de passe"
+msgstr "Yeni parolayı kaydet"
+
+msgid "Enregistrer les modifications"
+msgstr "Değişiklikleri kaydet"
+
+msgid "Entrée"
+msgstr "Enter"
+
+msgid "Entrées"
+msgstr "Kayıtlar"
+
+msgid "Envoyer le lien de réinitialisation"
+msgstr "Sıfırlama bağlantısını gönder"
+
+msgid "Erreur"
+msgstr "Hata"
+
+msgid "Erreur de nettoyage"
+msgstr "Temizlik hatası"
+
+msgid "Erreurs de format"
+msgstr "Biçim hataları"
+
+msgid "Erreurs restantes"
+msgstr "Kalan hatalar"
+
+msgid "Excel (.xlsx)"
+msgstr "Excel (.xlsx)"
+
+msgid "Expiration"
+msgstr "Bitiş"
+
+msgid "Expiré"
+msgstr "Süresi geçmiş"
+
+msgid "Explication du score"
+msgstr "Puan açıklaması"
+
+msgid "Export & traçabilité"
+msgstr "Dışa aktarma ve izlenebilirlik"
+
+msgid "Fermer"
+msgstr "Kapat"
+
+msgid "Fermer la fenêtre active"
+msgstr "Etkin pencereyi kapat"
+
+msgid "Fichier"
+msgstr "Dosya"
+
+msgid "Fichier de données"
+msgstr "Veri dosyası"
+
+msgid "Fichier nettoyé"
+msgstr "Temizlenmiş dosya"
+
+msgid "Fichier supprimé"
+msgstr "Dosya silindi"
+
+msgid "Fichier téléversé"
+msgstr "Dosya yüklendi"
+
+msgid "Fichier téléversé avec succès."
+msgstr "Dosya başarıyla yüklendi."
+
+msgid "Fichier « %(name)s » archivé."
+msgstr "« %(name)s » dosyası arşivlendi."
+
+msgid "Fichier « %(name)s » restauré."
+msgstr "« %(name)s » dosyası geri yüklendi."
+
+msgid "Fichier « %(name)s » supprimé."
+msgstr "‘%(name)s’ dosyası silindi."
+
+msgid "Fichiers"
+msgstr "Dosyalar"
+
+msgid "Fichiers archivés"
+msgstr "Arşivlenmiş dosyalar"
+
+msgid "Fichiers au total"
+msgstr "Toplam dosya"
+
+msgid "Fichiers de données"
+msgstr "Veri dosyaları"
+
+msgid "Fichiers expirés"
+msgstr "Süresi geçmiş dosyalar"
+
+msgid "Fichiers nettoyés avant le %(cutoff)s considérés comme expirés."
+msgstr "%(cutoff)s tarihinden önce temizlenen dosyalar süresi geçmiş sayılır."
+
+msgid "Fichiers nettoyés plus anciens que cette durée (0 = conservation illimitée)."
+msgstr "Bu süreden eski temizlenmiş dosyalar (0 = sınırsız saklama)."
+
+msgid "Fichiers récents"
+msgstr "Son dosyalar"
+
+msgid "Fil d'Ariane"
+msgstr "Gezinti yolu"
+
+msgid "Filtrer"
+msgstr "Filtrele"
+
+msgid "Filtrer les lignes du tableau"
+msgstr "Tablo satırlarını filtrele"
+
+msgid "Filtrer par action"
+msgstr "Eyleme göre filtrele"
+
+msgid "Filtrer par statut"
+msgstr "Duruma göre filtrele"
+
+msgid "Filtrer un tableau"
+msgstr "Tabloyu filtrele"
+
+msgid "Fonction"
+msgstr "İşlev"
+
+msgid "Format de date"
+msgstr "Tarih biçimi"
+
+msgid "Format de la charge utile"
+msgstr "Veri yükü biçimi"
+
+msgid "Formats acceptés : <code>.csv</code>, <code>.xlsx</code>, <code>.xls</code> — jusqu'à 20 Mo."
+msgstr "Kabul edilen biçimler: <code>.csv</code>, <code>.xlsx</code>, <code>.xls</code> — en fazla 20 MB."
+
+msgid "Formats de dates (%(column)s) :"
+msgstr "Tarih biçimleri (%(column)s):"
+
+msgid "Formats standardized (phones, dates)"
+msgstr "Standartlaştırılan biçimler (telefonlar, tarihler)"
+
+msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
+msgstr "Zaman kazan: DataZen'de önemli olan her şey bir tuş kombinasyonunda."
+
+msgid "Graphiques"
+msgstr "Grafikler"
+
+msgid "Graphiques générés avec matplotlib et seaborn à partir des données nettoyées."
+msgstr "Temizlenmiş verilerden matplotlib ve seaborn ile oluşturulan grafikler."
+
+msgid "Graphiques générés côté serveur avec"
+msgstr "Sunucu tarafında oluşturulan grafikler:"
+
+msgid "Graphiques statistiques générés avec <strong>matplotlib</strong> et <strong>seaborn</strong> à partir des données nettoyées."
+msgstr "Temizlenmiş verilerden <strong>matplotlib</strong> ve <strong>seaborn</strong> ile oluşturulan istatistiksel grafikler."
+
+msgid "Gratuit, immédiat, et vos fichiers restent privés."
+msgstr "Ücretsiz, anında ve dosyalarınız gizli kalır."
+
+msgid "Gérer les règles…"
+msgstr "Kuralları yönet…"
+
+msgid "Histogrammes des colonnes numériques détectées."
+msgstr "Tespit edilen sayısal sütunların histogramları."
+
+msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
+msgstr "Eylemlerinin zaman damgalı geçmişi: yüklemeler, temizlikler, dışa aktarımlar, API."
+
+msgid "Identité"
+msgstr "Kimlik"
+
+msgid "Ignorer la casse (Alice = alice)"
+msgstr "Büyük/küçük harf farkını yok say (Alice = alice)"
+
+msgid "Import CSV & Excel"
+msgstr "CSV ve Excel içe aktarma"
+
+msgid "Impossible d'appliquer la décision : %(error)s"
+msgstr "Karar uygulanamadı: %(error)s"
+
+msgid "Impossible de convertir le fichier : %(error)s"
+msgstr "Dosya dönüştürülemedi: %(error)s"
+
+msgid "Impossible de générer le PDF : %(error)s"
+msgstr "PDF oluşturulamadı: %(error)s"
+
+msgid "Impossible de lire ce fichier : %(error)s"
+msgstr "Bu dosya okunamadı: %(error)s"
+
+msgid "Impossible de lire le fichier : %(error)s"
+msgstr "Dosya okunamadı: %(error)s"
+
+msgid "Impossible de lire le rapport : %(error)s"
+msgstr "Rapor okunamadı: %(error)s"
+
+msgid "Inactif"
+msgstr "Etkin değil"
+
+msgid "Inactive"
+msgstr "Etkin değil"
+
+msgid "Inconnu"
+msgstr "Bilinmiyor"
+
+msgid "Indicateur"
+msgstr "Gösterge"
+
+msgid "Indicateurs comparés"
+msgstr "Karşılaştırılan göstergeler"
+
+msgid "Indiquez votre adresse e-mail : nous vous enverrons un lien pour choisir un nouveau mot de passe."
+msgstr "E-posta adresinizi girin: yeni bir parola seçmeniz için size bir bağlantı göndereceğiz."
+
+msgid "Information"
+msgstr "Bilgi"
+
+msgid "Informations professionnelles"
+msgstr "Mesleki bilgiler"
+
+msgid "Inscription — DataZen"
+msgstr "Kayıt — DataZen"
+
+msgid "Intégration"
+msgstr "Entegrasyon"
+
+msgid "Invalid emails are not counted as unknown or missing"
+msgstr "Geçersiz e-postalar bilinmeyen veya eksik olarak sayılmaz"
+
+msgid "JJ/MM/AAAA"
+msgstr "JJ/MM/AAAA"
+
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+msgid "Jamais appelé"
+msgstr "Hiç çağrılmadı"
+
+msgid "Jauge du score de qualité global (sur 100)."
+msgstr "Genel kalite puanı göstergesi (100 üzerinden)."
+
+msgid "Jeton"
+msgstr "Jeton"
+
+msgid "Jeton créé. Copiez-le maintenant : il ne sera plus affiché."
+msgstr "Jeton oluşturuldu. Şimdi kopyala: bir daha gösterilmeyecek."
+
+msgid "Jeton d'API"
+msgstr "API jetonu"
+
+msgid "Jeton « %(name)s » révoqué."
+msgstr "« %(name)s » jetonu iptal edildi."
+
+msgid "Jetons"
+msgstr "Jetonlar"
+
+msgid "Jetons d'API"
+msgstr "API jetonları"
+
+msgid "Journal d'activité"
+msgstr "Etkinlik kaydı"
+
+msgid "Journal d'activité — DataZen"
+msgstr "Etkinlik kaydı — DataZen"
+
+msgid "Journal des modifications"
+msgstr "Değişiklik günlüğü"
+
+msgid "Journal des modifications (extrait)"
+msgstr "Değişiklik günlüğü (özet)"
+
+msgid "L'historique horodaté de chaque opération."
+msgstr "Her işlemin zaman damgalı geçmişi."
+
+msgid "La comparaison n'est pas disponible : lancez d'abord un nettoyage sur ce fichier."
+msgstr "Karşılaştırma kullanılamıyor: önce bu dosyada bir temizlik çalıştır."
+
+msgid "La confirmation ne correspond pas à votre nom d'utilisateur : suppression annulée."
+msgstr "Onay, kullanıcı adınızla eşleşmiyor: silme işlemi iptal edildi."
+
+msgid "La suppression du compte efface définitivement vos fichiers, vos règles et votre profil. Cette action est irréversible."
+msgstr "Hesabı silmek dosyalarınızı, kurallarınızı ve profilinizi kalıcı olarak siler. Bu işlem geri alınamaz."
+
+msgid "Laisser vide pour appliquer à toutes les colonnes."
+msgstr "Tüm sütunlara uygulamak için boş bırakın."
+
+msgid "Laissez vide pour un jeton sans expiration."
+msgstr "Jetonun süresi olmaması için boş bırak."
+
+msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
+msgstr "Keşifsel analize erişmek için önce bir temizleme başlatın."
+
+msgid "Lancez d'abord un nettoyage pour générer un rapport PDF."
+msgstr "PDF raporu oluşturmak için önce bir temizlik çalıştır."
+
+msgid "Langue de l'interface"
+msgstr "Arayüz dili"
+
+msgid "Le compte « %(username)s » a été supprimé."
+msgstr "« %(username)s » hesabı silindi."
+
+msgid "Le fichier ne doit pas dépasser 20 Mo."
+msgstr "Dosya 20 MB'ı aşmamalıdır."
+
+msgid "Le journal conserve également %(days)s jours d'historique."
+msgstr "Kayıt ayrıca %(days)s günlük geçmişi saklar."
+
+msgid "Le nettoyage a échoué."
+msgstr "Temizleme başarısız oldu."
+
+msgid "Le nom d'hôte du webhook est introuvable."
+msgstr "Webhook ana makine adı bulunamadı."
+
+msgid "Le nom d'hôte du webhook pointe vers une adresse interne."
+msgstr "Webhook ana makine adı bir iç adrese işaret ediyor."
+
+msgid "Le nom d'hôte est absent de l'URL."
+msgstr "URL'de ana makine adı yok."
+
+msgid "Le port est invalide."
+msgstr "Bağlantı noktası geçersiz."
+
+msgid "Le thème « Système » suit les réglages de votre appareil."
+msgstr "« Sistem » teması cihazınızın ayarlarını izler."
+
+msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
+msgstr "İşlem arka planda çalışır. Bu sayfa sonunda otomatik olarak güncellenir."
+
+msgid "Les adresses internes sont refusées."
+msgstr "İç adresler reddedilir."
+
+msgid "Les adresses locales sont refusées."
+msgstr "Yerel adresler reddedilir."
+
+msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
+msgstr "Yinelenenler işaretlenir ancak otomatik olarak silinmez. Silmek için bu kutuyu işaretleyin."
+
+msgid "Les fichiers archivés restent accessibles et téléchargeables."
+msgstr "Arşivlenen dosyalar erişilebilir ve indirilebilir kalır."
+
+msgid "Les fichiers expirés seront supprimés automatiquement à votre prochaine visite."
+msgstr "Süresi geçmiş dosyalar bir sonraki ziyaretinde otomatik silinir."
+
+msgid "Les fichiers nettoyés sont archivés après 30 jours."
+msgstr "Temizlenmiş dosyalar 30 gün sonra arşivlenir."
+
+msgid "Les fichiers nettoyés sont archivés puis purgés après cette durée (0 = conservation illimitée)."
+msgstr "Temizlenmiş dosyalar arşivlenir ve bu süreden sonra silinir (0 = sınırsız saklama)."
+
+msgid "Les identifiants intégrés à l'URL sont refusés."
+msgstr "URL'ye gömülü kimlik bilgileri reddedilir."
+
+msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
+msgstr "Kullanılabilir yollar: /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
+
+msgid "Les statistiques affichées correspondent aux données réelles."
+msgstr "Gösterilen istatistikler gerçek verilerle eşleşiyor."
+
+msgid "Lien invalide"
+msgstr "Geçersiz bağlantı"
+
+msgid "Ligne"
+msgstr "Satır"
+
+msgid "Lignes"
+msgstr "Satırlar"
+
+msgid "Lignes après nettoyage"
+msgstr "Temizleme sonrası satırlar"
+
+msgid "Lignes du journal des modifications"
+msgstr "Değişiklik kaydı satırları"
+
+msgid "Lignes traitées"
+msgstr "İşlenen satırlar"
+
+msgid "Localisation"
+msgstr "Konum"
+
+msgid "MM/JJ/AAAA"
+msgstr "MM/JJ/AAAA"
+
+msgid "Masquer"
+msgstr "Gizle"
+
+msgid "Masquer le mot de passe"
+msgstr "Parolayı gizle"
+
+msgid "Matrice de corrélation"
+msgstr "Korelasyon matrisi"
+
+msgid "Matrice de corrélation (Pearson)"
+msgstr "Korelasyon matrisi (Pearson)"
+
+msgid "Max"
+msgstr "Maks"
+
+msgid "Maîtrisez la durée de vie de vos données."
+msgstr "Verilerinin yaşam döngüsünü yönet."
+
+msgid "Membre depuis"
+msgstr "Üyelik tarihi"
+
+msgid "Mes règles"
+msgstr "Kurallarım"
+
+msgid "Mes règles de nettoyage"
+msgstr "Temizleme kurallarım"
+
+msgid "Mesuré avant et après le nettoyage."
+msgstr "Temizlikten önce ve sonra ölçülür."
+
+msgid "Mettre à jour le mot de passe"
+msgstr "Parolayı güncelle"
+
+msgid "Min"
+msgstr "Min"
+
+msgid "Missing values by column"
+msgstr "Sütuna göre eksik değerler"
+
+msgid "Mode"
+msgstr "Mod"
+
+msgid "Modifier mes informations"
+msgstr "Bilgilerimi düzenle"
+
+msgid "Modifiez votre mot de passe régulièrement et exportez vos données quand vous le souhaitez."
+msgstr "Parolanızı düzenli olarak değiştirin ve verilerinizi istediğiniz zaman dışa aktarın."
+
+msgid "Mon profil"
+msgstr "Profilim"
+
+msgid "Mon profil — DataZen"
+msgstr "Profilim — DataZen"
+
+msgid "Mot de passe"
+msgstr "Parola"
+
+msgid "Mot de passe modifié"
+msgstr "Parola değiştirildi"
+
+msgid "Mot de passe modifié — DataZen"
+msgstr "Parola değiştirildi — DataZen"
+
+msgid "Mot de passe oublié ?"
+msgstr "Parolanızı mı unuttunuz?"
+
+msgid "Mot de passe oublié — DataZen"
+msgstr "Parola unutuldu — DataZen"
+
+msgid "Motif"
+msgstr "Desen"
+
+msgid "Motif attendu"
+msgstr "Beklenen desen"
+
+msgid "Moyenne"
+msgstr "Ortalama"
+
+msgid "Médiane"
+msgstr "Medyan"
+
+msgid "Méthode"
+msgstr "Yöntem"
+
+msgid "Nettoyage"
+msgstr "Temizlik"
+
+msgid "Nettoyage du fichier « %(name)s »"
+msgstr "« %(name)s » dosyasının temizliği"
+
+msgid "Nettoyage intelligent"
+msgstr "Akıllı temizleme"
+
+msgid "Nettoyage intelligent · CSV & Excel"
+msgstr "Akıllı temizleme · CSV ve Excel"
+
+msgid "Nettoyage lancé en arrière-plan. La page se met à jour automatiquement."
+msgstr "Temizleme arka planda başlatıldı. Sayfa otomatik olarak güncellenir."
+
+msgid "Nettoyage lancé sur « %(name)s »"
+msgstr "« %(name)s » için temizlik başlatıldı"
+
+msgid "Nettoyage terminé"
+msgstr "Temizlik tamamlandı"
+
+msgid "Nettoyage terminé : « %(name)s »"
+msgstr "Temizlik tamamlandı: « %(name)s »"
+
+msgid "Nettoyer"
+msgstr "Temizle"
+
+msgid "Nettoyer un fichier"
+msgstr "Dosya temizle"
+
+msgid "Nettoyez, normalisez et fiabilisez vos fichiers CSV et Excel en quelques clics — sans écrire une ligne de code."
+msgstr "CSV ve Excel dosyalarınızı birkaç tıklamayla temizleyin, normalleştirin ve güvenilir hale getirin — tek satır kod yazmadan."
+
+msgid "Nettoyé"
+msgstr "Temizlendi"
+
+msgid "Nettoyé le"
+msgstr "Temizlenme tarihi"
+
+msgid "Nettoyés"
+msgstr "Temizlenenler"
+
+msgid "Niveau"
+msgstr "Düzey"
+
+msgid "No exact duplicates"
+msgstr "Tam yinelenen yok"
+
+msgid "No missing or unknown values"
+msgstr "Eksik veya bilinmeyen değer yok"
+
+msgid "No potential duplicates"
+msgstr "Olası yinelenen yok"
+
+msgid "Nom"
+msgstr "Ad"
+
+msgid "Nom d'utilisateur"
+msgstr "Kullanıcı adı"
+
+msgid "Nom de la règle"
+msgstr "Kural adı"
+
+msgid "Nom de votre entreprise ou équipe"
+msgstr "Şirketinizin veya ekibinizin adı"
+
+msgid "Nom du jeton"
+msgstr "Jeton adı"
+
+msgid "Nombre d'appels"
+msgstr "Çağrı sayısı"
+
+msgid "Nombre d'occurrences"
+msgstr "Oluşum sayısı"
+
+msgid "Nombre de nettoyages et score moyen par semaine."
+msgstr "Haftalık temizlik sayısı ve ortalama puan."
+
+msgid "Nombre de valeurs aberrantes"
+msgstr "Aykırı değer sayısı"
+
+msgid "Nombre de valeurs aberrantes (méthode IQR) par colonne."
+msgstr "Sütun başına aykırı değer sayısı (IQR yöntemi)."
+
+msgid "Normalisation de la casse (noms, libellés, villes)"
+msgstr "Büyük/küçük harfleri standartlaştırma (adlar, etiketler, şehirler)"
+
+msgid "Normalisation des catégories (%(count)s corrigée(s))"
+msgstr "Kategorileri standartlaştırma (%(count)s düzeltildi)"
+
+msgid "Normalisation des choix oui/non (%(count)s corrigé(s))"
+msgstr "Evet/hayır seçeneklerini standartlaştırma (%(count)s düzeltildi)"
+
+msgid "Normalisation des codes/références (%(count)s corrigé(s))"
+msgstr "Kod/referansları standartlaştırma (%(count)s düzeltildi)"
+
+msgid "Normalisation des dates (%(count)s corrigée(s))"
+msgstr "Tarihleri standartlaştırma (%(count)s düzeltildi)"
+
+msgid "Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "Telefonları standartlaştırma (%(count)s düzeltildi)"
+
+msgid "Normaliser la casse"
+msgstr "Büyük/küçük harfi normalleştir"
+
+msgid "Normaliser la casse (emails en minuscules, noms en Capitales)"
+msgstr "Büyük/küçük harfleri standartlaştır (e-postalar küçük, adlar büyük harfle başlar)"
+
+msgid "Normaliser les dates"
+msgstr "Tarihleri normalleştir"
+
+msgid "Normaliser les dates (AAAA-MM-JJ)"
+msgstr "Tarihleri standartlaştır (YYYY-AA-GG)"
+
+msgid "Normaliser les emails"
+msgstr "E-postaları normalleştir"
+
+msgid "Normaliser les téléphones"
+msgstr "Telefonları normalleştir"
+
+msgid "Normaliser les téléphones (06XXXXXXXX)"
+msgstr "Telefon numaralarını standartlaştır (06XXXXXXXX)"
+
+msgid "Notifications par email"
+msgstr "E-posta bildirimleri"
+
+msgid "Nouveau jeton d API"
+msgstr "Yeni API jetonu"
+
+msgid "Nouveau mot de passe"
+msgstr "Yeni parola"
+
+msgid "Nouveau mot de passe — DataZen"
+msgstr "Yeni parola — DataZen"
+
+msgid "Nouvelle photo prête"
+msgstr "Yeni fotoğraf hazır"
+
+msgid "Nouvelle valeur"
+msgstr "Yeni değer"
+
+msgid "Opération"
+msgstr "İşlem"
+
+msgid "Opérations de nettoyage"
+msgstr "Temizlik işlemleri"
+
+msgid "Organisation"
+msgstr "Kuruluş"
+
+msgid "Outils"
+msgstr "Araçlar"
+
+msgid "Outliers"
+msgstr "Aykırı değerler"
+
+msgid "Ouvrir"
+msgstr "Aç"
+
+msgid "Ouvrir la recherche globale"
+msgstr "Genel aramayı aç"
+
+msgid "Ouvrir le résultat sélectionné"
+msgstr "Seçili sonucu aç"
+
+msgid "Page"
+msgstr "Sayfa"
+
+msgid "Parcourir…"
+msgstr "Gözat…"
+
+msgid "Pas encore de compte ?"
+msgstr "Henüz hesabınız yok mu?"
+
+msgid "Pensez à regarder dans vos courriers indésirables. Le lien reste valable quelques heures."
+msgstr "Gereksiz e-posta klasörünüzü kontrol etmeyi unutmayın. Bağlantı birkaç saat geçerlidir."
+
+msgid "Personnalisez votre identité, votre photo et vos préférences."
+msgstr "Kimliğinizi, fotoğrafınızı ve tercihlerinizi kişiselleştirin."
+
+msgid "Photo de profil"
+msgstr "Profil fotoğrafı"
+
+msgid "Pilotage"
+msgstr "Pilotaj"
+
+msgid "Plus fréquent"
+msgstr "En sık"
+
+msgid "Poids"
+msgstr "Ağırlık"
+
+msgid "Politique en vigueur"
+msgstr "Yürürlükteki politika"
+
+msgid "Pondération"
+msgstr "Ağırlık"
+
+msgid "Premier quartile"
+msgstr "Birinci çeyrek"
+
+msgid "Prendre une photo avec la caméra"
+msgstr "Kamerayla fotoğraf çek"
+
+msgid "Problème"
+msgstr "Sorun"
+
+msgid "Problèmes après"
+msgstr "Sonraki sorunlar"
+
+msgid "Problèmes avant"
+msgstr "Önceki sorunlar"
+
+msgid "Problèmes détectés"
+msgstr "Tespit edilen sorunlar"
+
+msgid "Problèmes restants"
+msgstr "Kalan sorunlar"
+
+msgid "Productivité"
+msgstr "Verimlilik"
+
+msgid "Profil"
+msgstr "Profil"
+
+msgid "Profil de %(name)s — DataZen"
+msgstr "%(name)s profili — DataZen"
+
+msgid "Profil de %(username)s"
+msgstr "%(username)s profili"
+
+msgid "Profil public"
+msgstr "Herkese açık profil"
+
+msgid "Profil visible publiquement"
+msgstr "Herkese açık görünen profil"
+
+msgid "Profils"
+msgstr "Profiller"
+
+msgid "Progression"
+msgstr "İlerleme"
+
+msgid "Propriétaire"
+msgstr "Sahip"
+
+msgid "Préfixe"
+msgstr "Önek"
+
+msgid "Préférences"
+msgstr "Tercihler"
+
+msgid "Prénom"
+msgstr "Ad"
+
+msgid "Présentation"
+msgstr "Tanıtım"
+
+msgid "Purge automatique"
+msgstr "Otomatik temizlik"
+
+msgid "Purge automatique de %(count)s fichier(s) expiré(s)"
+msgstr "%(count)s süresi geçmiş dosyayı otomatik temizle"
+
+msgid "Purge de %(count)s fichier(s) expiré(s)"
+msgstr "%(count)s süresi geçmiş dosyayı temizle"
+
+msgid "Purger automatiquement"
+msgstr "Otomatik temizle"
+
+msgid "Purger automatiquement les fichiers expirés"
+msgstr "Süresi geçmiş dosyaları otomatik temizle"
+
+msgid "Purger le journal"
+msgstr "Kaydı boşalt"
+
+msgid "Purger les anciennes entrées du journal ?"
+msgstr "Eski kayıt girdileri boşaltılsın mı?"
+
+msgid "Q1"
+msgstr "Q1"
+
+msgid "Q3"
+msgstr "Q3"
+
+msgid "Qualité moyenne"
+msgstr "Ortalama kalite"
+
+msgid "Qualité par colonne"
+msgstr "Sütun bazında kalite"
+
+msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
+msgstr "Kendiniz, ekibiniz ve veri kümeleriniz hakkında birkaç kelime…"
+
+msgid "Raccourcis clavier"
+msgstr "Klavye kısayolları"
+
+msgid "Raccourcis clavier — DataZen"
+msgstr "Klavye kısayolları — DataZen"
+
+msgid "Raccourcis de navigation"
+msgstr "Gezinme kısayolları"
+
+msgid "Raccourcis de nettoyage"
+msgstr "Temizlik kısayolları"
+
+msgid "Raison"
+msgstr "Neden"
+
+msgid "Rapport"
+msgstr "Rapor"
+
+msgid "Rapport PDF de « %(name)s »"
+msgstr "« %(name)s » PDF raporu"
+
+msgid "Rapport de nettoyage"
+msgstr "Temizleme raporu"
+
+msgid "Rapport de qualité des données"
+msgstr "Veri kalitesi raporu"
+
+msgid "Rapport généré automatiquement par DataZen. Les scores sont calculés selon cinq dimensions pondérées : complétude, validité, unicité, cohérence et conformité."
+msgstr "DataZen tarafından otomatik oluşturulan rapor. Puanlar beş ağırlıklı boyuta göre hesaplanır: bütünlük, geçerlilik, benzersizlik, tutarlılık ve uygunluk."
+
+msgid "Rapport — %(name)s"
+msgstr "Rapor — %(name)s"
+
+msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
+msgstr "Bir temizlik bittiğinde, başarısız olduğunda veya bir dosya yüklendiğinde HTTP bildirimi al."
+
+msgid "Recevoir les notifications par email"
+msgstr "E-posta bildirimlerini al"
+
+msgid "Recevoir un message lorsqu'un nettoyage se termine."
+msgstr "Bir temizleme tamamlandığında mesaj alın."
+
+msgid "Recherche en cours…"
+msgstr "Aranıyor…"
+
+msgid "Recherche globale"
+msgstr "Genel arama"
+
+msgid "Recherche momentanément indisponible."
+msgstr "Arama geçici olarak kullanılamıyor."
+
+msgid "Rechercher"
+msgstr "Ara"
+
+msgid "Rechercher (Ctrl+K)"
+msgstr "Ara (Ctrl+K)"
+
+msgid "Rechercher un fichier"
+msgstr "Dosya ara"
+
+msgid "Rechercher un fichier ou une règle (Ctrl+K)"
+msgstr "Dosya veya kural ara (Ctrl+K)"
+
+msgid "Rechercher un fichier, une règle, une page…"
+msgstr "Dosya, kural, sayfa ara…"
+
+msgid "Rechercher un fichier…"
+msgstr "Dosya ara…"
+
+msgid "Recommandation"
+msgstr "Öneri"
+
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
+msgstr "Adları, e-postaları ve telefonları belirleyici takma adlarla değiştirir (aynı değer → aynı takma ad). Satırlar arasındaki ilişkiler korunur."
+
+msgid "Remplacer les valeurs manquantes"
+msgstr "Eksik değerleri değiştir"
+
+msgid "Remplacez le jeton par le vôtre et lancez la commande."
+msgstr "Jetonu kendi jetonunla değiştir ve komutu çalıştır."
+
+msgid "Remplir les valeurs manquantes"
+msgstr "Eksik değerleri doldur"
+
+msgid "Remplissage des valeurs manquantes par « %(value)s » (les montants, codes et dates ne reçoivent jamais un texte)"
+msgstr "Eksik değerleri ‘%(value)s’ ile doldurma (tutar, kod ve tarihlere metin atanmaz)"
+
+msgid "Renseignées"
+msgstr "Doldurulmuş"
+
+msgid "Renumérotation des identifiants (ancien id conservé)"
+msgstr "Tanımlayıcıları yeniden numaralandırma (orijinal kimlik korundu)"
+
+msgid "Reported %(reported)s vs recalculated %(actual)s"
+msgstr "Bildirilen %(reported)s, yeniden hesaplanan %(actual)s"
+
+msgid "Restauration"
+msgstr "Geri yükleme"
+
+msgid "Restauration de « %(name)s »"
+msgstr "« %(name)s » geri yükleniyor"
+
+msgid "Restaurer"
+msgstr "Geri yükle"
+
+msgid "Retour à la connexion"
+msgstr "Girişe dön"
+
+msgid "Règle"
+msgstr "Kural"
+
+msgid "Règle de nettoyage"
+msgstr "Temizleme kuralı"
+
+msgid "Règle « %(name)s » %(state)s."
+msgstr "« %(name)s » kuralı %(state)s."
+
+msgid "Règle « %(name)s » créée."
+msgstr "« %(name)s » kuralı oluşturuldu."
+
+msgid "Règle « %(name)s » supprimée."
+msgstr "« %(name)s » kuralı silindi."
+
+msgid "Règles"
+msgstr "Kurallar"
+
+msgid "Règles de nettoyage"
+msgstr "Temizleme kuralları"
+
+msgid "Règles de nettoyage — DataZen"
+msgstr "Temizleme kuralları — DataZen"
+
+msgid "Règles de validation regex personnalisées"
+msgstr "Özel regex doğrulama kuralları"
+
+msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
+msgstr "Temizlenmiş dosyayı, ayrıntılı raporu ve tam değişiklik günlüğünü alın."
+
+msgid "Réinitialiser"
+msgstr "Sıfırla"
+
+msgid "Répartition des problèmes"
+msgstr "Sorun dağılımı"
+
+msgid "Répartition des problèmes restants"
+msgstr "Kalan sorunların dağılımı"
+
+msgid "Résultats"
+msgstr "Sonuçlar"
+
+msgid "Rétention"
+msgstr "Saklama"
+
+msgid "Rétention des données"
+msgstr "Veri saklama"
+
+msgid "Rétention des données — DataZen"
+msgstr "Veri saklama — DataZen"
+
+msgid "Révocation de jeton"
+msgstr "Jetonu iptal et"
+
+msgid "Révocation du jeton « %(name)s »"
+msgstr "« %(name)s » jetonunun iptali"
+
+msgid "Révoquer"
+msgstr "İptal et"
+
+msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
+msgstr "Bu jeton iptal edilsin mi? Onu kullanan entegrasyonlar çalışmayı bırakır."
+
+msgid "Révoqué"
+msgstr "İptal edildi"
+
+msgid "S'inscrire"
+msgstr "Kaydol"
+
+msgid "Saisissez <strong>%(username)s</strong> pour confirmer"
+msgstr "Onaylamak için <strong>%(username)s</strong> yazın"
+
+msgid "Score"
+msgstr "Puan"
+
+msgid "Score après nettoyage"
+msgstr "Temizlik sonrası puan"
+
+msgid "Score avant nettoyage"
+msgstr "Temizlik öncesi puan"
+
+msgid "Score de la dimension"
+msgstr "Boyut puanı"
+
+msgid "Score de qualité"
+msgstr "Kalite puanı"
+
+msgid "Score de similarité :"
+msgstr "Benzerlik puanı:"
+
+msgid "Score global"
+msgstr "Genel puan"
+
+msgid "Score global de qualité"
+msgstr "Genel kalite puanı"
+
+msgid "Score qualité"
+msgstr "Kalite puanı"
+
+msgid "Score qualité après"
+msgstr "Sonrası kalite puanı"
+
+msgid "Score qualité avant"
+msgstr "Öncesi kalite puanı"
+
+msgid "Se connecter"
+msgstr "Giriş yap"
+
+msgid "Se déconnecter"
+msgstr "Çıkış yap"
+
+msgid "Se déplacer dans les résultats"
+msgstr "Sonuçlarda gezin"
+
+msgid "Sert uniquement à la réinitialisation du mot de passe."
+msgstr "Yalnızca parola sıfırlama için kullanılır."
+
+msgid "Seuls les schémas http et https sont autorisés."
+msgstr "Yalnızca http ve https şemalarına izin verilir."
+
+msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
+msgstr "Bu adresle bir hesap varsa, sıfırlama bağlantısını içeren bir e-posta az önce gönderildi."
+
+msgid "Site web"
+msgstr "Web sitesi"
+
+msgid "Sombre"
+msgstr "Koyu"
+
+msgid "Statut"
+msgstr "Durum"
+
+msgid "Succès"
+msgstr "Başarılı"
+
+msgid "Superutilisateur"
+msgstr "Süper kullanıcı"
+
+msgid "Suppression"
+msgstr "Silme"
+
+msgid "Suppression de la règle « %(name)s »"
+msgstr "« %(name)s » kuralının silinmesi"
+
+msgid "Suppression de règle"
+msgstr "Kural silme"
+
+msgid "Suppression de « %(name)s »"
+msgstr "« %(name)s » silinmesi"
+
+msgid "Suppression des doublons exacts (%(count)s supprimé(s))"
+msgstr "Tam eşleşen yinelenenleri silme (%(count)s silindi)"
+
+msgid "Suppression des doublons sur « %(column)s » (%(count)s supprimé(s))"
+msgstr "‘%(column)s’ sütununa göre yinelenenleri silme (%(count)s silindi)"
+
+msgid "Suppression des espaces superflus"
+msgstr "Fazla boşlukları kaldırma"
+
+msgid "Supprimer %(name)s"
+msgstr "%(name)s öğesini sil"
+
+msgid "Supprimer ce webhook ?"
+msgstr "Bu webhook silinsin mi?"
+
+msgid "Supprimer définitivement ce fichier et toutes ses données ?"
+msgstr "Bu dosya ve tüm verileri kalıcı olarak silinsin mi?"
+
+msgid "Supprimer définitivement les fichiers expirés ? Cette action est irréversible."
+msgstr "Süresi geçmiş dosyalar kalıcı olarak silinsin mi? Bu işlem geri alınamaz."
+
+msgid "Supprimer définitivement les fichiers expirés au lieu de les archiver."
+msgstr "Süresi geçmiş dosyaları arşivlemek yerine kalıcı olarak sil."
+
+msgid "Supprimer définitivement « %(name)s » ?"
+msgstr "« %(name)s » kalıcı olarak silinsin mi?"
+
+msgid "Supprimer les doublons"
+msgstr "Yinelenenleri sil"
+
+msgid "Supprimer les doublons (confirmation requise)"
+msgstr "Yinelenenleri sil (onay gerekir)"
+
+msgid "Supprimer les espaces superflus"
+msgstr "Fazla boşlukları kaldır"
+
+msgid "Supprimer mon compte"
+msgstr "Hesabımı sil"
+
+msgid "Synthèse"
+msgstr "Sentez"
+
+msgid "Système"
+msgstr "Sistem"
+
+msgid "Sécurité"
+msgstr "Güvenlik"
+
+msgid "Sélectionner un fichier"
+msgstr "Bir dosya seç"
+
+msgid "Tableau de bord"
+msgstr "Pano"
+
+msgid "Tableau de bord — DataZen"
+msgstr "Pano — DataZen"
+
+msgid "Tapez au moins deux caractères pour lancer la recherche."
+msgstr "Aramayı başlatmak için en az iki karakter yaz."
+
+msgid "Taux de complétude (%)"
+msgstr "Tamlık oranı (%)"
+
+msgid "Taux de remplissage de chaque colonne (les plus incomplètes d'abord)."
+msgstr "Her sütunun doluluk oranı (en eksik olanlar önce)."
+
+msgid "Technologies"
+msgstr "Teknolojiler"
+
+msgid "Tester"
+msgstr "Test et"
+
+msgid "Thème préféré"
+msgstr "Tercih edilen tema"
+
+msgid "Top des catégories"
+msgstr "En iyi kategoriler"
+
+msgid "Total missing values"
+msgstr "Toplam eksik değer"
+
+msgid "Tous vos indicateurs de qualité réunis."
+msgstr "Tüm kalite göstergelerin bir arada."
+
+msgid "Tout est inclus"
+msgstr "Her şey dahil"
+
+msgid "Tout voir"
+msgstr "Tümünü gör"
+
+msgid "Toutes les actions"
+msgstr "Tüm eylemler"
+
+msgid "Traçabilité"
+msgstr "İzlenebilirlik"
+
+msgid "Troisième quartile"
+msgstr "Üçüncü çeyrek"
+
+msgid "Type"
+msgstr "Tür"
+
+msgid "Type de correction"
+msgstr "Düzeltme türü"
+
+msgid "Téléchargement"
+msgstr "İndirme"
+
+msgid "Téléchargement de « %(name)s »"
+msgstr "« %(name)s » indirme"
+
+msgid "Téléphone invalide"
+msgstr "Geçersiz telefon"
+
+msgid "Téléphone non standard"
+msgstr "Standart dışı telefon"
+
+msgid "Téléphones non standard (%(column)s) :"
+msgstr "Standart dışı telefonlar (%(column)s):"
+
+msgid "Téléversement"
+msgstr "Yükleme"
+
+msgid "Téléversement de « %(name)s »"
+msgstr "« %(name)s » yükleme"
+
+msgid "Téléverser un fichier"
+msgstr "Dosya yükle"
+
+msgid "Téléversez votre fichier"
+msgstr "Dosyanızı yükleyin"
+
+msgid "Téléversé"
+msgstr "Yüklendi"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "URL de destination"
+msgstr "Hedef URL"
+
+msgid "URL illisible."
+msgstr "URL okunamıyor."
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page."
+msgstr "Bir yönetici hesabı bu sayfadan silinemez."
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
+msgstr "Bir yönetici hesabı bu sayfadan silinemez. Şunu kullanın:"
+
+msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
+msgstr "Bir kontrol paneli kaliteyi öncesi/sonrası ölçer ve kaybedilen her puanı açıklar."
+
+msgid "Une URL de destination est requise."
+msgstr "Bir hedef URL gerekli."
+
+msgid "Une boîte à outils complète"
+msgstr "Eksiksiz bir araç seti"
+
+msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
+msgstr "Her satıra « sütun:desen » biçiminde bir kural yazın. Örnek: « posta_kodu:^\\d{5}$ ». Desenle eşleşmeyen değerler işaretlenir (değiştirilmez)."
+
+msgid "Uniques"
+msgstr "Benzersiz"
+
+msgid "Unknown"
+msgstr "Bilinmiyor"
+
+msgid "Unknown emails included in the unknown-value statistic"
+msgstr "Bilinmeyen e-postalar bilinmeyen değer istatistiğine dahil edilir"
+
+msgid "Unknown values by column"
+msgstr "Sütuna göre bilinmeyen değerler"
+
+msgid "Utilisateur"
+msgstr "Kullanıcı"
+
+msgid "Utilisation de l'API"
+msgstr "API kullanımı"
+
+msgid "Valeur"
+msgstr "Değer"
+
+msgid "Valeur aberrante"
+msgstr "Aykırı değer"
+
+msgid "Valeur de remplacement"
+msgstr "Değiştirilecek değer"
+
+msgid "Valeur de remplacement (pour le remplissage)."
+msgstr "Yerine koyma değeri (doldurma için)."
+
+msgid "Valeur manquante"
+msgstr "Eksik değer"
+
+msgid "Valeur numérique invalide"
+msgstr "Geçersiz sayısal değer"
+
+msgid "Valeurs aberrantes"
+msgstr "Aykırı değerler"
+
+msgid "Valeurs aberrantes par colonne (méthode IQR)"
+msgstr "Sütun başına aykırı değerler (IQR yöntemi)"
+
+msgid "Valeurs les plus fréquentes"
+msgstr "En sık görülen değerler"
+
+msgid "Valeurs les plus fréquentes des colonnes catégorielles."
+msgstr "Kategorik sütunların en sık görülen değerleri."
+
+msgid "Valeurs manquantes"
+msgstr "Eksik değerler"
+
+msgid "Valeurs manquantes :"
+msgstr "Eksik değerler:"
+
+msgid "Valeurs manquantes restantes"
+msgstr "Kalan eksik değerler"
+
+msgid "Valeurs manquantes restantes :"
+msgstr "Kalan eksik değerler:"
+
+msgid "Valeurs uniques"
+msgstr "Benzersiz değerler"
+
+msgid "Valeurs « Inconnu »"
+msgstr "« Bilinmiyor » değerleri"
+
+msgid "Valeurs « Inconnu » :"
+msgstr "« Bilinmiyor » değerleri:"
+
+msgid "Validation et correction des emails (%(corrected)s corrigé(s), %(invalid)s invalide(s))"
+msgstr "E-postaları doğrulama ve düzeltme (%(corrected)s düzeltildi, %(invalid)s geçersiz)"
+
+msgid "Valider et corriger les emails (erreurs évidentes seulement)"
+msgstr "E-postaları doğrula ve düzelt (yalnızca belirgin hatalar)"
+
+msgid "Validité"
+msgstr "Geçerlilik"
+
+msgid "Visualisations statistiques"
+msgstr "İstatistiksel görselleştirmeler"
+
+msgid "Voir l'analyse complète →"
+msgstr "Tam analizi gör →"
+
+msgid "Volume"
+msgstr "Hacim"
+
+msgid "Volume des anomalies restantes par catégorie."
+msgstr "Kategoriye göre kalan anormallik hacmi."
+
+msgid "Vos données"
+msgstr "Verileriniz"
+
+msgid "Vos données méritent<br> <span class=\"dz-gradient-text\">d'être impeccables.</span>"
+msgstr "Verileriniz<br> <span class=\"dz-gradient-text\">kusursuz olmayı hak ediyor.</span>"
+
+msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
+msgstr "Dosyaların sende kalır. DataZen seçilen saklama süresini aşanları gösterir ve onayın olmadan hiçbir şeyi silmez."
+
+msgid "Votre espace de travail"
+msgstr "Çalışma alanın"
+
+msgid "Votre mot de passe a bien été enregistré. Vous pouvez maintenant vous connecter avec celui-ci."
+msgstr "Parolanız kaydedildi. Artık onunla giriş yapabilirsiniz."
+
+msgid "Votre mot de passe a été modifié. Vos autres sessions restent actives."
+msgstr "Parolanız değiştirildi. Diğer oturumlarınız açık kalır."
+
+msgid "Votre nom d'utilisateur <strong>@%(username)s</strong> ne peut pas être modifié."
+msgstr "Kullanıcı adınız <strong>@%(username)s</strong> değiştirilemez."
+
+msgid "Votre photo de profil a été supprimée."
+msgstr "Profil fotoğrafınız silindi."
+
+msgid "Votre profil a été mis à jour."
+msgstr "Profiliniz güncellendi."
+
+msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
+msgstr "Kontrol sende: senin bir eylemin olmadan hiçbir şey silinmez."
+
+msgid "Vous n'avez pas accès à ce fichier."
+msgstr "Bu dosyaya erişiminiz yok."
+
+msgid "Vous n'avez pas accès à ce jeton."
+msgstr "Bu jeton için erişimin yok."
+
+msgid "Vous n'avez pas accès à ce webhook."
+msgstr "Bu webhook için erişimin yok."
+
+msgid "Vous n'avez pas accès à cette règle."
+msgstr "Bu kurala erişiminiz yok."
+
+msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
+msgstr "Tüm dosyalar dahil veri kalitenin birleşik görünümü."
+
+msgid "Vue d'ensemble"
+msgstr "Genel görünüm"
+
+msgid "Vérifiez votre boîte mail"
+msgstr "E-posta kutunuzu kontrol edin"
+
+msgid "Webhook"
+msgstr "Webhook"
+
+msgid "Webhook « %(name)s » %(state)s."
+msgstr "Webhook « %(name)s » %(state)s."
+
+msgid "Webhook « %(name)s » : test réussi (HTTP %(status)s)."
+msgstr "Webhook « %(name)s »: test başarılı (HTTP %(status)s)."
+
+msgid "Webhook « %(name)s » : test échoué (HTTP %(status)s). Vérifiez l'URL et que le service accepte les appels entrants."
+msgstr "Webhook « %(name)s »: test başarısız (HTTP %(status)s). URL'yi ve hizmetin gelen çağrıları kabul edip etmediğini kontrol et."
+
+msgid "Webhook « %(name)s » créé."
+msgstr "Webhook « %(name)s » oluşturuldu."
+
+msgid "Webhook « %(name)s » supprimé."
+msgstr "Webhook « %(name)s » silindi."
+
+msgid "Webhooks"
+msgstr "Webhook'lar"
+
+msgid "Webhooks — DataZen"
+msgstr "Webhook'lar — DataZen"
+
+msgid "YYYY-MM-DD"
+msgstr "YYYY-MM-DD"
+
+msgid "[Règle] Anonymisation (%(count)s valeur(s))"
+msgstr "[Kural] Anonimleştirme (%(count)s değer)"
+
+msgid "[Règle] Conversion des montants (%(count)s converti(s))"
+msgstr "[Kural] Tutarları dönüştürme (%(count)s dönüştürüldü)"
+
+msgid "[Règle] Normalisation de la casse"
+msgstr "[Kural] Büyük/küçük harfleri standartlaştırma"
+
+msgid "[Règle] Normalisation des dates (%(count)s corrigée(s))"
+msgstr "[Kural] Tarihleri standartlaştırma (%(count)s düzeltildi)"
+
+msgid "[Règle] Normalisation des emails (%(count)s corrigé(s))"
+msgstr "[Kural] E-postaları standartlaştırma (%(count)s düzeltildi)"
+
+msgid "[Règle] Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "[Kural] Telefonları standartlaştırma (%(count)s düzeltildi)"
+
+msgid "[Règle] Remplissage des valeurs manquantes par « %(value)s »"
+msgstr "[Kural] Eksik değerleri ‘%(value)s’ ile doldurma"
+
+msgid "[Règle] Suppression des doublons (%(count)s supprimé(s))"
+msgstr "[Kural] Yinelenenleri silme (%(count)s silindi)"
+
+msgid "[Règle] Suppression des espaces superflus"
+msgstr "[Kural] Fazla boşlukları kaldırma"
+
+msgid "actif"
+msgstr "etkin"
+
+msgid "activé"
+msgstr "etkinleştirildi"
+
+msgid "activée"
+msgstr "etkinleştirildi"
+
+msgid "ajoutée"
+msgstr "eklendi"
+
+msgid "améliorée"
+msgstr "iyileştirildi"
+
+msgid "bonne qualité"
+msgstr "iyi kalite"
+
+msgid "catégorie"
+msgstr "kategori"
+
+msgid "cohérence"
+msgstr "tutarlılık"
+
+msgid "colonne : %(name)s"
+msgstr "sütun: %(name)s"
+
+msgid "complétude"
+msgstr "bütünlük"
+
+msgid "conformité"
+msgstr "uygunluk"
+
+msgid "conservée (non inventée)"
+msgstr "korundu (uydurulmadı)"
+
+msgid "console d'administration"
+msgstr "yönetim konsolu"
+
+msgid "date"
+msgstr "tarih"
+
+msgid "donnée absente"
+msgstr "veri yok"
+
+msgid "désactivé"
+msgstr "devre dışı bırakıldı"
+
+msgid "désactivée"
+msgstr "devre dışı bırakıldı"
+
+msgid "détail"
+msgstr "ayrıntı"
+
+msgid "email"
+msgstr "e-posta"
+
+msgid "et"
+msgstr "ve"
+
+msgid "ex : 0 ou Inconnu"
+msgstr "örn. 0 veya Bilinmiyor"
+
+msgid "ex : Emails en minuscules"
+msgstr "örn.: e-postalar küçük harfle"
+
+msgid "ex : Intégration Power BI"
+msgstr "örn. Power BI entegrasyonu"
+
+msgid "ex : Slack — nettoyages"
+msgstr "örn. Slack — temizlikler"
+
+msgid "ex : email (vide = toutes les colonnes)"
+msgstr "örn.: email (boş = tüm sütunlar)"
+
+msgid "excellente qualité"
+msgstr "mükemmel kalite"
+
+msgid "fermer"
+msgstr "kapat"
+
+msgid "format invalide"
+msgstr "geçersiz biçim"
+
+msgid "format non reconnu"
+msgstr "tanınmayan biçim"
+
+msgid "généré le"
+msgstr "oluşturulma"
+
+msgid "https://exemple.com"
+msgstr "https://exemple.com"
+
+msgid "https://hooks.exemple.com/datazen"
+msgstr "https://hooks.example.com/datazen"
+
+msgid "identifiant"
+msgstr "tanımlayıcı"
+
+msgid "inactive"
+msgstr "etkin değil"
+
+msgid "inchangé"
+msgstr "değişmedi"
+
+msgid "jours"
+msgstr "gün"
+
+msgid "lignes"
+msgstr "satır"
+
+msgid "longueur/format incorrect"
+msgstr "yanlış uzunluk/biçim"
+
+msgid "matplotlib"
+msgstr "matplotlib"
+
+msgid "naviguer"
+msgstr "gezin"
+
+msgid "non évalué"
+msgstr "değerlendirilmedi"
+
+msgid "numérique"
+msgstr "sayısal"
+
+msgid "opération : %(name)s"
+msgstr "işlem: %(name)s"
+
+msgid "ouvrir"
+msgstr "aç"
+
+msgid "points"
+msgstr "puan"
+
+msgid "pour «"
+msgstr "için «"
+
+msgid "premières lignes."
+msgstr "ilk satırlar."
+
+msgid "qualité faible"
+msgstr "düşük kalite"
+
+msgid "qualité moyenne"
+msgstr "orta kalite"
+
+msgid "référence"
+msgstr "referans"
+
+msgid "révoqué"
+msgstr "iptal edildi"
+
+msgid "score"
+msgstr "puan"
+
+msgid "score %(before)s → %(after)s"
+msgstr "puan %(before)s → %(after)s"
+
+msgid "seaborn"
+msgstr "seaborn"
+
+msgid "stable"
+msgstr "kararlı"
+
+msgid "supprimée"
+msgstr "kaldırıldı"
+
+msgid "sur"
+msgstr "üzerinden"
+
+msgid "texte"
+msgstr "metin"
+
+msgid "téléphone"
+msgstr "telefon"
+
+msgid "unicité"
+msgstr "benzersizlik"
+
+msgid "valeur(s) extrême(s)"
+msgstr "uç değer(ler)"
+
+msgid "validité"
+msgstr "geçerlilik"
+
+msgid "· ancien_id :"
+msgstr "· eski_id:"
+
+msgid "· statut filtré"
+msgstr "· filtrelenmiş durum"
+
+msgid "À compléter :"
+msgstr "Tamamlanacak:"
+
+msgid "Écart"
+msgstr "Sapma"
+
+msgid "Écart-type"
+msgstr "Standart sapma"
+
+msgid "Échap"
+msgstr "Esc"
+
+msgid "Échec du nettoyage"
+msgstr "Temizleme başarısız"
+
+msgid "Échec du nettoyage de « %(name)s »"
+msgstr "« %(name)s » temizliği başarısız"
+
+msgid "Étape 1"
+msgstr "1. Adım"
+
+msgid "État"
+msgstr "Durum"
+
+msgid "Évolution hebdomadaire du score de qualité"
+msgstr "Kalite puanının haftalık gelişimi"
+
+msgid "Événement"
+msgstr "Olay"
+
+msgid "Événement déclencheur"
+msgstr "Tetikleyici olay"
+
+msgid "à corriger manuellement"
+msgstr "manuel olarak düzeltilmeli"
+
+msgid "à partir des données nettoyées."
+msgstr "temizlenmiş verilerden."
+
+msgid "à vérifier"
+msgstr "kontrol edilecek"
+
+msgid "à vérifier manuellement"
+msgstr "manuel olarak kontrol edilmeli"
+
+msgid "—"
+msgstr "—"
+
+msgid "— Choisir une action —"
+msgstr "— Bir işlem seçin —"
+
+msgid "— Tous les statuts —"
+msgstr "— Tüm durumlar —"
+
+msgid "— Toutes les colonnes —"
+msgstr "— Tüm sütunlar —"
+
+msgid "← Retour au fichier"
+msgstr "← Dosyaya dön"
+
+msgid "⌨️ Raccourcis"
+msgstr "⌨️ Kısayollar"
+
+msgid "⌨️ Raccourcis clavier"
+msgstr "⌨️ Klavye kısayolları"
+
+msgid "⏳ Fichiers expirés"
+msgstr "⏳ Süresi geçmiş dosyalar"
+
+msgid "⏳ Nettoyage en cours…"
+msgstr "⏳ Temizleme sürüyor…"
+
+msgid "⚙️ Règles de nettoyage personnalisées"
+msgstr "⚙️ Özel temizleme kuralları"
+
+msgid "⚙️ Règles personnalisées"
+msgstr "⚙️ Özel kurallar"
+
+msgid "⚙️ Régler la durée"
+msgstr "⚙️ Süreyi ayarla"
+
+msgid "⚠️ Points nécessitant une vérification humaine"
+msgstr "⚠️ İnsan kontrolü gerektiren noktalar"
+
+msgid "⚠️ Problèmes restants (tous fichiers)"
+msgstr "⚠️ Kalan sorunlar (tüm dosyalar)"
+
+msgid "⚠️ Valeurs signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ Yalnızca işaretlenen değerler — asla otomatik değiştirilmez."
+
+msgid "⚠️ Zone de danger"
+msgstr "⚠️ Tehlikeli bölge"
+
+msgid "⚠️ À vérifier manuellement (jamais supprimés automatiquement)."
+msgstr "⚠️ Manuel olarak kontrol edilmeli (asla otomatik silinmez)."
+
+msgid "⚪ Conserver toutes les lignes"
+msgstr "⚪ Tüm satırları koru"
+
+msgid "⚪ Ignorer (examiné, conserver)"
+msgstr "⚪ Yoksay (incelendi, koru)"
+
+msgid "⚪ Valeurs « Inconnu » ("
+msgstr "⚪ « Bilinmiyor » değerleri ("
+
+msgid "✅ Aucun doublon potentiel à vérifier."
+msgstr "✅ Kontrol edilecek olası yinelenen yok."
+
+msgid "✅ Aucune vérification manuelle nécessaire"
+msgstr "✅ Manuel kontrol gerekmiyor"
+
+msgid "✅ Résultat du nettoyage"
+msgstr "✅ Temizleme sonucu"
+
+msgid "✅ Validation après nettoyage"
+msgstr "✅ Temizleme sonrası doğrulama"
+
+msgid "✅ Votre profil est complet."
+msgstr "✅ Profiliniz tam."
+
+msgid "✏️ Modifier mon profil"
+msgstr "✏️ Profilimi düzenle"
+
+msgid "✓ Copié"
+msgstr "✓ Kopyalandı"
+
+msgid "➕ Nouveau jeton"
+msgstr "➕ Yeni jeton"
+
+msgid "➕ Nouveau webhook"
+msgstr "➕ Yeni webhook"
+
+msgid "➕ Nouvelle règle"
+msgstr "➕ Yeni kural"
+
+msgid "➕ Téléverser un fichier"
+msgstr "➕ Dosya yükle"
+
+msgid "⬇️ Exporter mes données (JSON)"
+msgstr "⬇️ Verilerimi dışa aktar (JSON)"
+
+msgid "⬇️ Télécharger le fichier nettoyé"
+msgstr "⬇️ Temizlenmiş dosyayı indir"
+
+msgid "🌍 Navigation"
+msgstr "🌍 Gezinme"
+
+msgid "🌐 HTML (.html)"
+msgstr "🌐 HTML (.html)"
+
+msgid "🌐 Rapport HTML avec graphiques"
+msgstr "🌐 Grafikli HTML raporu"
+
+msgid "🎯 Répartition par niveau de qualité"
+msgstr "🎯 Kalite düzeyine göre dağılım"
+
+msgid "🎯 Score qualité"
+msgstr "🎯 Kalite puanı"
+
+msgid "🏆 Meilleurs résultats"
+msgstr "🏆 En iyi sonuçlar"
+
+msgid "👀 Aperçu des données brutes (avant nettoyage)"
+msgstr "👀 Ham veri önizlemesi (temizlemeden önce)"
+
+msgid "👁️ Consulter le rapport"
+msgstr "👁️ Raporu görüntüle"
+
+msgid "👤 Mon profil"
+msgstr "👤 Profilim"
+
+msgid "📈 Analyse exploratoire"
+msgstr "📈 Keşifsel analiz"
+
+msgid "📈 Statistiques descriptives"
+msgstr "📈 Tanımlayıcı istatistikler"
+
+msgid "📈 Valeurs aberrantes"
+msgstr "📈 Aykırı değerler"
+
+msgid "📈 Visualisations statistiques"
+msgstr "📈 İstatistiksel görselleştirmeler"
+
+msgid "📈 Évolution du score (12 semaines)"
+msgstr "📈 Puan gelişimi (12 hafta)"
+
+msgid "📉 Fichiers à traiter en priorité"
+msgstr "📉 Öncelikli dosyalar"
+
+msgid "📉 Répartition des problèmes"
+msgstr "📉 Sorun dağılımı"
+
+msgid "📊 Activité récente"
+msgstr "📊 Son etkinlik"
+
+msgid "📊 Dashboard Data Quality"
+msgstr "📊 Veri Kalitesi Panosu"
+
+msgid "📊 Dimensions de qualité"
+msgstr "📊 Kalite boyutları"
+
+msgid "📊 Tableau de bord"
+msgstr "📊 Pano"
+
+msgid "📊 Tableau de bord global"
+msgstr "📊 Genel pano"
+
+msgid "📋 Mes règles ("
+msgstr "📋 Kurallarım ("
+
+msgid "📋 Qualité des colonnes"
+msgstr "📋 Sütun kalitesi"
+
+msgid "📋 Rapport de nettoyage"
+msgstr "📋 Temizleme raporu"
+
+msgid "📋 Télécharger le rapport"
+msgstr "📋 Raporu indir"
+
+msgid "📕 Rapport PDF"
+msgstr "📕 PDF raporu"
+
+msgid "📝 Journal des modifications"
+msgstr "📝 Değişiklik günlüğü"
+
+msgid "📥 Fichier d'origine"
+msgstr "📥 Kaynak dosya"
+
+msgid "📥 Markdown (.md)"
+msgstr "📥 Markdown (.md)"
+
+msgid "📥 Télécharger le rapport complet"
+msgstr "📥 Tam raporu indir"
+
+msgid "📦 Archives"
+msgstr "📦 Arşivler"
+
+msgid "📷 Prendre une photo"
+msgstr "📷 Fotoğraf çek"
+
+msgid "🔌 API et jetons d'accès"
+msgstr "🔌 API ve erişim jetonları"
+
+msgid "🔌 Jetons d'API"
+msgstr "🔌 API jetonları"
+
+msgid "🔍 Avant / après"
+msgstr "🔍 Önce / sonra"
+
+msgid "🔍 Comparaison avant / après"
+msgstr "🔍 Temizlik öncesi / sonrası karşılaştırma"
+
+msgid "🔍 Doublons"
+msgstr "🔍 Yinelenenler"
+
+msgid "🔍 Filtrer"
+msgstr "🔍 Filtrele"
+
+msgid "🔍 Filtrer les lignes…"
+msgstr "🔍 Satırları filtrele…"
+
+msgid "🔍 Problèmes détectés"
+msgstr "🔍 Tespit edilen sorunlar"
+
+msgid "🔍 Revue manuelle des doublons potentiels"
+msgstr "🔍 Olası yinelenenlerin manuel incelemesi"
+
+msgid "🔍 Règles regex personnalisées"
+msgstr "🔍 Özel regex kuralları"
+
+msgid "🔎 Explication du score"
+msgstr "🔎 Puan açıklaması"
+
+msgid "🔑 Mes jetons"
+msgstr "🔑 Jetonlarım"
+
+msgid "🔑 Votre nouveau jeton"
+msgstr "🔑 Yeni jetonun"
+
+msgid "🔒 Changer mon mot de passe"
+msgstr "🔒 Parolamı değiştir"
+
+msgid "🔒 Sécurité et données"
+msgstr "🔒 Güvenlik ve veriler"
+
+msgid "🔔 Mes webhooks"
+msgstr "🔔 Webhook'larım"
+
+msgid "🔔 Webhooks"
+msgstr "🔔 Webhook'lar"
+
+msgid "🔗 Voir mon profil public"
+msgstr "🔗 Herkese açık profilimi gör"
+
+msgid "🔢 Colonnes analysées numériquement"
+msgstr "🔢 Sayısal olarak analiz edilen sütunlar"
+
+msgid "🔬 Profilage avancé"
+msgstr "🔬 Gelişmiş profilleme"
+
+msgid "🔵 Conserver la 2e ligne (supprimer les autres)"
+msgstr "🔵 2. satırı koru (diğerlerini sil)"
+
+msgid "🕒 Dernières actions"
+msgstr "🕒 Son eylemler"
+
+msgid "🕓 Activité"
+msgstr "🕓 Etkinlik"
+
+msgid "🕓 Dernières activités"
+msgstr "🕓 Son etkinlikler"
+
+msgid "🕓 Journal d'activité"
+msgstr "🕓 Etkinlik kaydı"
+
+msgid "🗃️ Fichiers récents"
+msgstr "🗃️ Son dosyalar"
+
+msgid "🗄️ Rétention"
+msgstr "🗄️ Saklama"
+
+msgid "🗄️ Rétention des données"
+msgstr "🗄️ Veri saklama"
+
+msgid "🗑️ Purger maintenant"
+msgstr "🗑️ Şimdi temizle"
+
+msgid "🗑️ Supprimer"
+msgstr "🗑️ Sil"
+
+msgid "🗑️ Supprimer ma photo de profil"
+msgstr "🗑️ Profil fotoğrafımı sil"
+
+msgid "🚀 Nouveautés de l'espace pro"
+msgstr "🚀 Pro alanındaki yenilikler"
+
+msgid "🚀 Premier appel"
+msgstr "🚀 İlk çağrı"
+
+msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
+msgstr "🟢 1. satırı koru (diğerlerini sil)"
+
+msgid "🟣 Fusionner toutes les lignes"
+msgstr "🟣 Tüm satırları birleştir"
+
+msgid "🧭 Dimensions les plus fragiles"
+msgstr "🧭 En kırılgan boyutlar"
+
+msgid "🧹 Journal d'activité"
+msgstr "🧹 Etkinlik kaydı"
+
+msgid "🧹 Nettoyage"
+msgstr "🧹 Temizlik"
+
+msgid "🧹 Options de nettoyage"
+msgstr "🧹 Temizleme seçenekleri"
+
+msgid "🧹 Opérations de nettoyage"
+msgstr "🧹 Temizleme işlemleri"
+
+msgid "🧽 Purger les anciennes entrées"
+msgstr "🧽 Eski girdileri boşalt"
+
+msgid "🧾 Journal des modifications"
+msgstr "🧾 Değişiklik günlüğü"
+
+msgid "🧾 Télécharger le journal des modifications"
+msgstr "🧾 Değişiklik günlüğünü indir"
+
+msgctxt "séparateur"
+msgid "ou"
+msgstr "veya"

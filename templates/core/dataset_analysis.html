@@ -1,0 +1,110 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+
+{% block title %}{% blocktranslate trimmed with name=data_file.original_name %}Analyse exploratoire — {{ name }}{% endblocktranslate %}{% endblock %}
+
+{% block content %}
+<div class="container dz-page">
+    <nav aria-label="{% translate "Fil d'Ariane" %}">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+            <li class="breadcrumb-item">
+                <a href="{% url 'core:dataset_detail' data_file.pk %}">{{ data_file.original_name }}</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">{% translate "Analyse exploratoire" %}</li>
+        </ol>
+    </nav>
+
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 dz-page-head">
+        <div>
+            <h1 class="h3 mb-1">{% translate "📈 Analyse exploratoire" %}</h1>
+            <p class="text-muted small mb-0">
+                {% blocktranslate trimmed %}Graphiques statistiques générés avec <strong>matplotlib</strong> et <strong>seaborn</strong> à partir des données nettoyées.{% endblocktranslate %}
+            </p>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-outline-secondary" href="{% url 'core:dataset_detail' data_file.pk %}">
+                {% translate "← Retour au fichier" %}
+            </a>
+            <a class="btn btn-primary" href="{% url 'core:download_report_html' data_file.pk %}">
+                {% translate "🌐 Rapport HTML avec graphiques" %}
+            </a>
+        </div>
+    </div>
+
+    <section class="dz-kpi-dashboard dz-block" aria-labelledby="dz-kpi-title">
+        <div class="dz-kpi-heading">
+            <div>
+                <h2 class="h5 mb-1" id="dz-kpi-title">{% translate "📊 Dashboard Data Quality" %}</h2>
+            </div>
+            <span class="badge text-bg-{{ dashboard.category_class }}">{{ dashboard.category_label }}</span>
+        </div>
+        <div class="dz-kpi-grid">
+            <article class="dz-kpi-card dz-kpi-card--{{ dashboard.category_class }}">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">🎯</span>
+                    <span class="dz-kpi-card__label">{% translate "Score qualité" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ dashboard.score }}<span class="dz-kpi-card__unit">/100</span></div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--primary">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">▦</span>
+                    <span class="dz-kpi-card__label">{% translate "Colonnes" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ column_count }}</div>
+            </article>
+            {% for ind in dashboard.indicators %}
+                <article class="dz-kpi-card dz-kpi-card--{{ ind.class }}">
+                    <div class="dz-kpi-card__top">
+                        <span class="dz-kpi-card__icon" aria-hidden="true">{{ ind.icon }}</span>
+                        <span class="dz-kpi-card__label">{{ ind.label }}</span>
+                    </div>
+                    <div class="dz-kpi-card__value">{{ ind.value }}</div>
+                </article>
+            {% endfor %}
+        </div>
+    </section>
+
+    {% if charts %}
+        <div class="row dz-grid">
+            {% for chart in charts %}
+                <div class="col-12 {% if chart.slug == 'score' or chart.slug == 'dimensions' or chart.slug == 'missing' or chart.slug == 'problems' or chart.slug == 'outliers' %}col-xl-6{% endif %}">
+                    <div class="card shadow-sm h-100 dz-chart-card">
+                        <div class="card-body">
+                            <h5 class="card-title h6 mb-1">{{ chart.title }}</h5>
+                            <p class="text-muted small mb-3">{{ chart.description }}</p>
+                            <div class="dz-chart-frame"
+                                 data-dz-charts
+                                 data-dz-chart="{{ chart.slug }}"
+                                 data-dz-chart-data-url="{% url 'core:dataset_chart_data' data_file.pk %}?lang={{ active_language.code }}">
+                                <img src="{% url 'core:dataset_chart' data_file.pk chart.slug %}?lang={{ active_language.code }}"
+                                     alt="{{ chart.title }} — {{ data_file.original_name }}"
+                                     class="dz-chart-img" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="alert alert-info">
+            {% blocktranslate trimmed %}Aucun graphique n'est disponible pour ce jeu de données : il ne contient
+            pas assez de valeurs numériques ou catégorielles exploitables.{% endblocktranslate %}
+        </div>
+    {% endif %}
+
+    {% if numeric_columns %}
+        <div class="card shadow-sm mt-4">
+            <div class="card-body">
+                <h5 class="card-title h6 mb-2">{% translate "🔢 Colonnes analysées numériquement" %}</h5>
+                <div class="d-flex flex-wrap gap-2">
+                    {% for col in numeric_columns %}
+                        <span class="badge text-bg-light border">{{ col }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

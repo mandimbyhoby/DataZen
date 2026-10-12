@@ -1,0 +1,2831 @@
+# Catalogue de traduction DataZen.
+# Généré par tools/i18n_build.py — ne pas éditer à la main.
+msgid ""
+msgstr ""
+"Project-Id-Version: DataZen 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: th\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "%(actual)s correction(s) in the log vs %(reported)s reported"
+msgstr "%(actual)s การแก้ไขในบันทึกเทียบกับ %(reported)s ที่รายงาน"
+
+msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
+msgstr "%(actual)s ค่าที่ไม่ทราบในคอลัมน์อีเมลเทียบกับ %(reported)s ที่รายงาน"
+
+msgid "%(count)s colonnes"
+msgstr "%(count)s คอลัมน์"
+
+msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
+msgstr "พบรายการซ้ำที่อาจเป็นไปได้ %(count)s รายการ ต้องตรวจสอบ"
+
+msgid "%(count)s entrée(s) d'activité supprimée(s)."
+msgstr "ลบรายการบันทึกกิจกรรมแล้ว %(count)s รายการ"
+
+msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
+msgstr "%(count)s ข้อผิดพลาดไม่สามารถแก้ไขอัตโนมัติได้"
+
+msgid "%(count)s exact duplicate(s) remaining"
+msgstr "เหลือรายการซ้ำที่เหมือนกันทุกประการ %(count)s รายการ"
+
+msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
+msgstr "เหลือค่าที่ไม่สอดคล้องกัน %(count)s ค่า (ไม่ใช่ทั้งค่าที่ถูกต้องและค่าที่ไม่ทราบ)"
+
+msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
+msgstr "มีอีเมลที่ไม่ถูกต้อง %(count)s รายการ (ไม่ว่างและไม่ใช่ค่าที่ไม่ทราบ)"
+
+msgid "%(count)s invalid value(s) among filled data"
+msgstr "ค่าที่ไม่ถูกต้อง %(count)s ค่าในข้อมูลที่กรอกไว้"
+
+msgid "%(count)s lignes"
+msgstr "%(count)s แถว"
+
+msgid "%(count)s missing value(s)"
+msgstr "ค่าที่ขาดหาย %(count)s ค่า"
+
+msgid "%(count)s non-standard value(s)"
+msgstr "ค่าที่ไม่เป็นมาตรฐาน %(count)s ค่า"
+
+msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
+msgstr "รายการซ้ำที่อาจเป็นไปได้ %(count)s รายการต้องตรวจสอบด้วยตนเอง (ลดค่าปรับ)"
+
+msgid "%(count)s unknown value(s) (data unavailable)"
+msgstr "ค่าที่ไม่ทราบ %(count)s ค่า (ไม่มีข้อมูล)"
+
+msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
+msgstr "ตรวจพบค่าผิดปกติ %(count)s ค่าในคอลัมน์ตัวเลข"
+
+msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
+msgstr "ขณะนี้มี %(count)s ค่าเป็น « ไม่ทราบ »"
+
+msgid "%(counter)s doublon potentiel détecté. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgid_plural "%(counter)s doublons potentiels détectés. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgstr[0] "ตรวจพบรายการที่อาจซ้ำ %(counter)s รายการ แถวเหล่านี้จะ<strong>ไม่ถูกลบโดยอัตโนมัติ</strong> และต้องรอการตัดสินใจจากคุณ"
+
+msgid "%(counter)s fichier affiché"
+msgid_plural "%(counter)s fichiers affichés"
+msgstr[0] "แสดง %(counter)s ไฟล์"
+
+msgid "%(counter)s inconnu"
+msgid_plural "%(counter)s inconnus"
+msgstr[0] "%(counter)s ไม่ทราบ"
+
+msgid "%(counter)s invalide,"
+msgid_plural "%(counter)s invalides,"
+msgstr[0] "%(counter)s ไม่ถูกต้อง,"
+
+msgid "%(counter)s ligne concernée :"
+msgid_plural "%(counter)s lignes concernées :"
+msgstr[0] "บรรทัดที่เกี่ยวข้อง %(counter)s บรรทัด:"
+
+msgid "%(counter)s valide,"
+msgid_plural "%(counter)s valides,"
+msgstr[0] "%(counter)s ถูกต้อง,"
+
+msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
+msgstr "ลบไฟล์แล้ว %(purged)s ไฟล์ และเก็บถาวรแล้ว %(archived)s ไฟล์"
+
+msgid "%(score)s / 100  (%(weight)s %(percent)s)"
+msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
+msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s เทียบกับ %(expected)s ที่คาดไว้"
+
+msgid "%(value)s %(percent)s"
+msgstr "%(value)s %(percent)s"
+
+msgid "(%(counter)s modification)"
+msgid_plural "(%(counter)s modifications)"
+msgstr[0] "(แก้ไข %(counter)s ครั้ง)"
+
+msgid "(%(counter)s non-conformité)"
+msgid_plural "(%(counter)s non-conformités)"
+msgstr[0] "(ไม่เป็นไปตามข้อกำหนด %(counter)s รายการ)"
+
+msgid "(colonnes : %(columns)s)"
+msgstr "(คอลัมน์: %(columns)s)"
+
+msgid "(score ≥ 0.8)"
+msgstr "(คะแนน ≥ 0.8)"
+
+msgid "(⚠️ à vérifier manuellement)"
+msgstr "(⚠️ ต้องตรวจสอบด้วยตนเอง)"
+
+msgid ", Vous recevez ce message parce qu'une réinitialisation de mot de passe a été demandée pour votre compte DataZen. Cliquez sur le lien ci-dessous pour choisir un nouveau mot de passe :"
+msgstr ", คุณได้รับข้อความนี้เนื่องจากมีการขอรีเซ็ตรหัสผ่านสำหรับบัญชี DataZen ของคุณ คลิกลิงก์ด้านล่างเพื่อเลือกรหัสผ่านใหม่:"
+
+msgid "<a href=\"#televerser\">Téléversez votre premier fichier</a> pour commencer."
+msgstr "<a href=\"#televerser\">อัปโหลดไฟล์แรกของคุณ</a> เพื่อเริ่มต้น"
+
+msgid "<strong>Doublons potentiels :</strong> aucun"
+msgstr "<strong>รายการซ้ำที่อาจเป็นไปได้:</strong> ไม่มี"
+
+msgid "<strong>Doublons potentiels restants :</strong> aucun"
+msgstr "<strong>รายการซ้ำที่อาจเป็นไปได้ที่เหลือ:</strong> ไม่มี"
+
+msgid "<strong>Valeurs manquantes :</strong> aucune"
+msgstr "<strong>ค่าที่ขาดหาย:</strong> ไม่มี"
+
+msgid "<strong>Valeurs manquantes restantes :</strong> aucune"
+msgstr "<strong>ค่าที่ขาดหายที่เหลือ:</strong> ไม่มี"
+
+msgid "AAAA-MM-JJ"
+msgstr "AAAA-MM-JJ"
+
+msgid "API"
+msgstr "API"
+
+msgid "API & webhooks"
+msgstr "API และ webhook"
+
+msgid "API REST"
+msgstr "API แบบ REST"
+
+msgid "API et intégrations"
+msgstr "API และการเชื่อมต่อ"
+
+msgid "API et intégrations — DataZen"
+msgstr "API และการเชื่อมต่อ — DataZen"
+
+msgid "Abonnements"
+msgstr "การสมัครใช้งาน"
+
+msgid "Accueil"
+msgstr "หน้าแรก"
+
+msgid "Actif"
+msgstr "ใช้งานอยู่"
+
+msgid "Actifs"
+msgstr "ใช้งานอยู่"
+
+msgid "Action"
+msgstr "การดำเนินการ"
+
+msgid "Action invalide."
+msgstr "การดำเนินการไม่ถูกต้อง"
+
+msgid "Actions"
+msgstr "การดำเนินการ"
+
+msgid "Active"
+msgstr "ใช้งานอยู่"
+
+msgid "Activer"
+msgstr "เปิดใช้งาน"
+
+msgid "Activer le thème clair"
+msgstr "เปิดใช้ธีมสว่าง"
+
+msgid "Activer le thème sombre"
+msgstr "เปิดใช้ธีมมืด"
+
+msgid "Activité"
+msgstr "กิจกรรม"
+
+msgid "Activités"
+msgstr "กิจกรรม"
+
+msgid "Activée"
+msgstr "เปิดใช้งาน"
+
+msgid "Administrateur"
+msgstr "ผู้ดูแลระบบ"
+
+msgid "Administration"
+msgstr "การจัดการระบบ"
+
+msgid "Adresse email"
+msgstr "ที่อยู่อีเมล"
+
+msgid "Affichage de %(shown)s lignes sur %(total)s."
+msgstr "แสดง %(shown)s จาก %(total)s บรรทัด"
+
+msgid "Affichage des"
+msgstr "แสดง"
+
+msgid "Afficher"
+msgstr "แสดง"
+
+msgid "Afficher le mot de passe"
+msgstr "แสดงรหัสผ่าน"
+
+msgid "Afficher les détails des anomalies"
+msgstr "ดูรายละเอียดความผิดปกติ"
+
+msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
+msgstr "เพิ่มในเฮดเดอร์ X-DataZen-Signature (HMAC-SHA256)"
+
+msgid "All filled values are valid"
+msgstr "ค่าที่กรอกทั้งหมดถูกต้อง"
+
+msgid "Aller au contenu principal"
+msgstr "ไปยังเนื้อหาหลัก"
+
+msgid "Analyse exploratoire"
+msgstr "การวิเคราะห์เชิงสำรวจ"
+
+msgid "Analyse exploratoire — %(name)s"
+msgstr "การวิเคราะห์เชิงสำรวจ — %(name)s"
+
+msgid "Analyser et nettoyer"
+msgstr "วิเคราะห์และทำความสะอาด"
+
+msgid "Analyste de données"
+msgstr "นักวิเคราะห์ข้อมูล"
+
+msgid "Ancienne valeur"
+msgstr "ค่าเดิม"
+
+msgid "Annuler"
+msgstr "ยกเลิก"
+
+msgid "Anomalies restantes (à traiter manuellement)"
+msgstr "ความผิดปกติที่เหลือ (ต้องจัดการด้วยตนเอง)"
+
+msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
+msgstr "ทำข้อมูลละเอียดอ่อนให้ไม่ระบุตัวตน (แทนที่ %(count)s ค่าด้วยนามแฝง)"
+
+msgid "Anonymiser les données sensibles"
+msgstr "ทำให้ข้อมูลอ่อนไหวไม่ระบุตัวตน"
+
+msgid "Anonymiser les données sensibles (noms, emails, téléphones)"
+msgstr "ทำข้อมูลละเอียดอ่อนให้ไม่ระบุตัวตน (ชื่อ อีเมล หมายเลขโทรศัพท์)"
+
+msgid "Antananarivo, Madagascar"
+msgstr "Antananarivo, Madagascar"
+
+msgid "Aperçu du fichier nettoyé"
+msgstr "ตัวอย่างไฟล์ที่ทำความสะอาดแล้ว"
+
+msgid "Appel API"
+msgstr "การเรียก API"
+
+msgid "Appel API : %(path)s"
+msgstr "การเรียก API: %(path)s"
+
+msgid "Appels"
+msgstr "การเรียก"
+
+msgid "Application"
+msgstr "แอปพลิเคชัน"
+
+msgid "Après"
+msgstr "หลัง"
+
+msgid "Archivage"
+msgstr "การเก็บถาวร"
+
+msgid "Archivage de « %(name)s »"
+msgstr "การเก็บถาวร « %(name)s »"
+
+msgid "Archiver"
+msgstr "เก็บถาวร"
+
+msgid "Archives"
+msgstr "คลังเก็บถาวร"
+
+msgid "Archivés"
+msgstr "เก็บถาวรแล้ว"
+
+msgid "Aucun fichier d'origine n'est disponible."
+msgstr "ไม่มีไฟล์ต้นฉบับ"
+
+msgid "Aucun fichier expiré à purger."
+msgstr "ไม่มีไฟล์ที่หมดอายุให้ล้าง"
+
+msgid "Aucun fichier expiré. Votre espace de travail est à jour."
+msgstr "ไม่มีไฟล์ที่หมดอายุ พื้นที่ทำงานของคุณเป็นปัจจุบัน"
+
+msgid "Aucun fichier ne correspond à votre recherche."
+msgstr "ไม่มีไฟล์ที่ตรงกับการค้นหาของคุณ"
+
+msgid "Aucun fichier nettoyé n'est disponible."
+msgstr "ไม่มีไฟล์ที่ทำความสะอาดแล้ว"
+
+msgid "Aucun fichier nettoyé pour le moment."
+msgstr "ยังไม่มีไฟล์ที่ล้างแล้ว"
+
+msgid "Aucun fichier pour le moment."
+msgstr "ยังไม่มีไฟล์"
+
+msgid "Aucun fichier sélectionné"
+msgstr "ยังไม่ได้เลือกไฟล์"
+
+msgid "Aucun fichier téléversé pour le moment."
+msgstr "ยังไม่มีไฟล์ที่อัปโหลด"
+
+msgid "Aucun graphique n'est disponible pour ce jeu de données : il ne contient pas assez de valeurs numériques ou catégorielles exploitables."
+msgstr "ไม่มีกราฟสำหรับชุดข้อมูลนี้: มีค่าตัวเลขหรือค่าหมวดหมู่ที่ใช้งานได้ไม่เพียงพอ"
+
+msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
+msgstr "ยังไม่มีโทเคน สร้างสักอันเพื่อใช้ API"
+
+msgid "Aucun journal des modifications n'est disponible."
+msgstr "ไม่มีบันทึกการแก้ไข"
+
+msgid "Aucun problème détecté"
+msgstr "ไม่พบปัญหา"
+
+msgid "Aucun rapport de nettoyage n'est disponible."
+msgstr "ไม่มีรายงานการทำความสะอาด"
+
+msgid "Aucun résultat pour cette recherche."
+msgstr "ไม่พบผลลัพธ์สำหรับการค้นหานี้"
+
+msgid "Aucun webhook configuré. Ajoutez une URL pour être notifié automatiquement."
+msgstr "ยังไม่ได้ตั้งค่า webhook เพิ่ม URL เพื่อรับการแจ้งเตือนอัตโนมัติ"
+
+msgid "Aucune activité enregistrée pour le moment."
+msgstr "ยังไม่มีกิจกรรมที่บันทึกไว้"
+
+msgid "Aucune activité enregistrée."
+msgstr "ไม่มีกิจกรรมที่บันทึกไว้"
+
+msgid "Aucune anomalie restante."
+msgstr "ไม่มีความผิดปกติที่เหลือ"
+
+msgid "Aucune anomalie."
+msgstr "ไม่มีความผิดปกติ"
+
+msgid "Aucune colonne"
+msgstr "ไม่มีคอลัมน์"
+
+msgid "Aucune correction"
+msgstr "ไม่มีการแก้ไข"
+
+msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
+msgstr "ไม่พบความแตกต่างที่มีนัยสำคัญระหว่างไฟล์ต้นฉบับและไฟล์ที่ล้างแล้ว ข้อมูลของคุณสะอาดอยู่แล้ว"
+
+msgid "Aucune dimension mesurée pour le moment."
+msgstr "ยังไม่ได้วัดมิติใด"
+
+msgid "Aucune donnée"
+msgstr "ไม่มีข้อมูล"
+
+msgid "Aucune donnée nettoyée disponible."
+msgstr "ไม่มีข้อมูลที่ทำความสะอาดแล้ว"
+
+msgid "Aucune modification enregistrée."
+msgstr "ไม่มีการบันทึกการแก้ไข"
+
+msgid "Aucune règle personnalisée."
+msgstr "ไม่มีกฎที่กำหนดเอง"
+
+msgid "Aucune règle pour le moment. Créez-en une pour la réutiliser sur tous vos fichiers."
+msgstr "ยังไม่มีกฎ สร้างกฎหนึ่งข้อเพื่อใช้ซ้ำกับทุกไฟล์ของคุณ"
+
+msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
+msgstr "ไม่พบค่าผิดปกติในคอลัมน์ตัวเลข"
+
+msgid "Aucune valeur « Inconnu »."
+msgstr "ไม่มีค่า « ไม่ทราบ »"
+
+msgid "Audit des emails"
+msgstr "การตรวจสอบอีเมล"
+
+msgid "Automatisation"
+msgstr "ระบบอัตโนมัติ"
+
+msgid "Autoriser les autres utilisateurs à consulter votre profil."
+msgstr "อนุญาตให้ผู้ใช้อื่นดูโปรไฟล์ของคุณ"
+
+msgid "Avant"
+msgstr "ก่อน"
+
+msgid "Avertissement"
+msgstr "คำเตือน"
+
+msgid "Basculer la navigation"
+msgstr "สลับการนำทาง"
+
+msgid "Basculer le thème"
+msgstr "สลับธีม"
+
+msgid "Basculer le thème clair / sombre"
+msgstr "สลับธีมสว่าง / มืด"
+
+msgid "Bienvenue %(username)s !"
+msgstr "ยินดีต้อนรับ %(username)s!"
+
+msgid "Bon retour parmi nous"
+msgstr "ยินดีต้อนรับกลับมา"
+
+msgid "Bonjour"
+msgstr "สวัสดี"
+
+msgid "Borne basse"
+msgstr "ขอบเขตล่าง"
+
+msgid "Borne haute"
+msgstr "ขอบเขตบน"
+
+msgid "Boîtes à moustaches"
+msgstr "แผนภาพกล่อง"
+
+msgid "Boîtes à moustaches des colonnes numériques"
+msgstr "แผนภาพกล่องของคอลัมน์ตัวเลข"
+
+msgid "Branchez DataZen sur vos outils existants."
+msgstr "เชื่อมต่อ DataZen กับเครื่องมือที่มีอยู่ของคุณ"
+
+msgid "Branchez DataZen à vos outils : Power BI, n8n, scripts Python, tableaux de bord maison."
+msgstr "เชื่อมต่อ DataZen กับเครื่องมือของคุณ เช่น Power BI, n8n, สคริปต์ Python, แดชบอร์ดที่สร้างเอง"
+
+msgid "CSV (séparateur ;)"
+msgstr "CSV (ตัวคั่น ;)"
+
+msgid "Cadrez votre visage puis cliquez sur « Capturer »."
+msgstr "จัดใบหน้าให้อยู่ในกรอบแล้วคลิก « ถ่ายภาพ »"
+
+msgid "Calculée sur %(count)s fichier(s) nettoyé(s)."
+msgstr "คำนวณจาก %(count)s ไฟล์ที่ล้างแล้ว"
+
+msgid "Canonicalisation du marqueur « Inconnu » (%(count)s corrigé(s))"
+msgstr "ปรับเครื่องหมาย ‘ไม่ทราบ’ ให้เป็นมาตรฐาน (แก้ไข %(count)s รายการ)"
+
+msgid "Capturer"
+msgstr "ถ่ายภาพ"
+
+msgid "Ce graphique n'est pas disponible pour ce jeu de données."
+msgstr "กราฟนี้ไม่พร้อมใช้งานสำหรับชุดข้อมูลนี้"
+
+msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
+msgstr "ลิงก์รีเซ็ตนี้ถูกใช้ไปแล้วหรือหมดอายุแล้ว"
+
+msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
+msgstr "ลิงก์นี้ใช้ได้เพียงครั้งเดียว หากคุณไม่ได้เป็นผู้ขอ เพียงเพิกเฉยต่อข้อความนี้: รหัสผ่านของคุณยังไม่เปลี่ยนแปลง — DataZen"
+
+msgid "Ce profil n'est pas public."
+msgstr "โปรไฟล์นี้ไม่เป็นสาธารณะ"
+
+msgid "Ce que le nettoyage a réellement changé dans votre fichier."
+msgstr "สิ่งที่การล้างข้อมูลเปลี่ยนไปจริง ๆ ในไฟล์ของคุณ"
+
+msgid "Cellules manquantes"
+msgstr "เซลล์ที่ขาดหาย"
+
+msgid "Ces %(count)s fichier(s) dépassent la durée de conservation de %(days)s jours. Ils ne sont pas supprimés automatiquement tant que la purge automatique reste désactivée."
+msgstr "%(count)s ไฟล์นี้เกินระยะเวลาเก็บรักษา %(days)s วัน ไฟล์จะไม่ถูกลบอัตโนมัติตราบใดที่การล้างอัตโนมัติยังปิดอยู่"
+
+msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
+msgstr "ตัวนับเหล่านี้ป้อนข้อมูลให้การค้นหาทั่วไปและทางลัดด้านล่าง"
+
+msgid "Champ"
+msgstr "ฟิลด์"
+
+msgid "Champs différents :"
+msgstr "ฟิลด์ที่แตกต่างกัน:"
+
+msgid "Champs identiques :"
+msgstr "ฟิลด์ที่เหมือนกัน:"
+
+msgid "Champs inconnus :"
+msgstr "ฟิลด์ที่ไม่ทราบ:"
+
+msgid "Changer de langue"
+msgstr "เปลี่ยนภาษา"
+
+msgid "Changer ma photo de profil"
+msgstr "เปลี่ยนรูปโปรไฟล์"
+
+msgid "Changer mon mot de passe"
+msgstr "เปลี่ยนรหัสผ่าน"
+
+msgid "Changer mon mot de passe — DataZen"
+msgstr "เปลี่ยนรหัสผ่าน — DataZen"
+
+msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
+msgstr "โหลดข้อมูลของคุณในรูปแบบ <code>.csv</code>, <code>.xlsx</code> หรือ <code>.xls</code> ไม่ว่าตัวคั่นจะเป็นแบบใด"
+
+msgid "Choisir la langue du site"
+msgstr "เลือกภาษาของเว็บไซต์"
+
+msgid "Choisir le format"
+msgstr "เลือกรูปแบบ"
+
+msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
+msgstr "เลือกไฟล์ CSV หรือ Excel (.csv, .xlsx, .xls)"
+
+msgid "Choisissez un fichier à analyser"
+msgstr "เลือกไฟล์ที่จะวิเคราะห์"
+
+msgid "Choisissez un mot de passe long et unique. Vous resterez connecté après la modification."
+msgstr "เลือกรหัสผ่านที่ยาวและไม่ซ้ำใคร คุณจะยังคงเข้าสู่ระบบอยู่หลังการเปลี่ยนแปลง"
+
+msgid "Choisissez un mot de passe solide : au moins 8 caractères, ni trop courant, ni entièrement numérique."
+msgstr "เลือกรหัสผ่านที่รัดกุม: อย่างน้อย 8 ตัวอักษร ไม่ธรรมดาเกินไป และไม่เป็นตัวเลขทั้งหมด"
+
+msgid "Choisissez une colonne unique (ex. email) pour fusionner les variantes d'un même enregistrement (Alice / alice). Laissez vide pour ne supprimer que les lignes 100 % identiques."
+msgstr "เลือกคอลัมน์ที่ไม่ซ้ำกัน (เช่น อีเมล) เพื่อรวมรูปแบบต่าง ๆ ของระเบียนเดียวกัน (Alice / alice) เว้นว่างไว้เพื่อลบเฉพาะแถวที่เหมือนกันทุกประการ"
+
+msgid "Clair"
+msgstr "สว่าง"
+
+msgid "Cliquer pour choisir une photo sur mon appareil"
+msgstr "คลิกเพื่อเลือกภาพจากอุปกรณ์ของฉัน"
+
+msgid "Cliquer pour trier"
+msgstr "คลิกเพื่อจัดเรียง"
+
+msgid "Cliquez sur l'avatar ci-dessus pour choisir une image, ou sur l'icône appareil photo pour en prendre une instantanément. JPEG, PNG, WebP ou GIF — 5 Mo maximum."
+msgstr "คลิกรูปโปรไฟล์ด้านบนเพื่อเลือกภาพ หรือคลิกไอคอนกล้องเพื่อถ่ายภาพทันที JPEG, PNG, WebP หรือ GIF — สูงสุด 5 MB"
+
+msgid "Clé de signature"
+msgstr "คีย์ลายเซ็น"
+
+msgid "Clé de signature HMAC (facultative)"
+msgstr "คีย์ลายเซ็น HMAC (ไม่บังคับ)"
+
+msgid "Code de langue (fr, en, es…). Vide = langue de l'application."
+msgstr "รหัสภาษา (fr, en, es…) ว่าง = ภาษาของแอปพลิเคชัน"
+
+msgid "Coefficient de Pearson"
+msgstr "ค่าสัมประสิทธิ์เพียร์สัน"
+
+msgid "Colonne"
+msgstr "คอลัมน์"
+
+msgid "Colonne ciblée"
+msgstr "คอลัมน์เป้าหมาย"
+
+msgid "Colonne clé pour la déduplication"
+msgstr "คอลัมน์หลักสำหรับลบข้อมูลซ้ำ"
+
+msgid "Colonnes"
+msgstr "คอลัมน์"
+
+msgid "Colonnes améliorées"
+msgstr "คอลัมน์ที่ดีขึ้น"
+
+msgid "Colonnes analysées"
+msgstr "คอลัมน์ที่วิเคราะห์แล้ว"
+
+msgid "Colonnes différentes"
+msgstr "คอลัมน์ที่แตกต่างกัน"
+
+msgid "Colonnes différentes :"
+msgstr "คอลัมน์ที่แตกต่างกัน:"
+
+msgid "Colonnes identiques :"
+msgstr "คอลัมน์ที่เหมือนกัน:"
+
+msgid "Colonnes inconnues :"
+msgstr "คอลัมน์ที่ไม่ทราบ:"
+
+msgid "Colonnes stables"
+msgstr "คอลัมน์ที่คงที่"
+
+msgid "Colonnes à vérifier"
+msgstr "คอลัมน์ที่ต้องตรวจสอบ"
+
+msgid "Combien de fichiers se trouvent dans chaque tranche de score."
+msgstr "จำนวนไฟล์ในแต่ละช่วงคะแนน"
+
+msgid "Comparaison"
+msgstr "การเปรียบเทียบ"
+
+msgid "Comparaison avant / après — %(name)s"
+msgstr "การเปรียบเทียบก่อน / หลัง — %(name)s"
+
+msgid "Complétion du profil"
+msgstr "การทำให้โปรไฟล์สมบูรณ์"
+
+msgid "Complétude"
+msgstr "ความครบถ้วน"
+
+msgid "Complétude par colonne"
+msgstr "ความครบถ้วนตามคอลัมน์"
+
+msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
+msgstr "ความครบถ้วน · ความถูกต้อง · ความไม่ซ้ำ · ความสอดคล้อง · การปฏิบัติตามข้อกำหนด"
+
+msgid "Composantes du score (après nettoyage)"
+msgstr "องค์ประกอบของคะแนน (หลังการทำความสะอาด)"
+
+msgid "Compte"
+msgstr "บัญชี"
+
+msgid "Compte actif"
+msgstr "บัญชีที่ใช้งานอยู่"
+
+msgid "Condensé"
+msgstr "บทสรุป"
+
+msgid "Confiance"
+msgstr "ความเชื่อมั่น"
+
+msgid "Confirmer la décision"
+msgstr "ยืนยันการตัดสินใจ"
+
+msgid "Connectez-vous pour retrouver vos fichiers."
+msgstr "เข้าสู่ระบบเพื่อเข้าถึงไฟล์ของคุณอีกครั้ง"
+
+msgid "Connexion"
+msgstr "เข้าสู่ระบบ"
+
+msgid "Connexion — DataZen"
+msgstr "เข้าสู่ระบบ — DataZen"
+
+msgid "Consultation des graphiques"
+msgstr "การดูกราฟ"
+
+msgid "Consultation du rapport"
+msgstr "การดูรายงาน"
+
+msgid "Continuer / valider une étape"
+msgstr "ดำเนินการต่อ / ยืนยันขั้นตอน"
+
+msgid "Contribution des cinq dimensions pondérées du score."
+msgstr "การมีส่วนร่วมของห้ามิติถ่วงน้ำหนักของคะแนน"
+
+msgid "Contrôle de cohérence"
+msgstr "การตรวจสอบความสอดคล้อง"
+
+msgid "Conversion des compteurs en entiers (%(count)s converti(s))"
+msgstr "แปลงตัวนับเป็นจำนวนเต็ม (แปลง %(count)s รายการ)"
+
+msgid "Conversion des montants (%(count)s converti(s))"
+msgstr "แปลงจำนวนเงิน (แปลง %(count)s รายการ)"
+
+msgid "Convertir les montants"
+msgstr "แปลงจำนวนเงิน"
+
+msgid "Convertir les montants en valeurs numériques"
+msgstr "แปลงจำนวนเงินเป็นค่าตัวเลข"
+
+msgid "Copier"
+msgstr "คัดลอก"
+
+msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
+msgstr "คัดลอกตอนนี้ เพื่อความปลอดภัยจะไม่แสดงอีก"
+
+msgid "Corrections"
+msgstr "การแก้ไข"
+
+msgid "Corrections appliquées"
+msgstr "การแก้ไขที่ใช้ไป"
+
+msgid "Corrélations de Pearson entre les colonnes numériques."
+msgstr "สหสัมพันธ์แบบ Pearson ระหว่างคอลัมน์ตัวเลข"
+
+msgid "Création de jeton"
+msgstr "การสร้างโทเคน"
+
+msgid "Création de la règle « %(name)s »"
+msgstr "การสร้างกฎ « %(name)s »"
+
+msgid "Création de règle"
+msgstr "การสร้างกฎ"
+
+msgid "Création du jeton « %(name)s »"
+msgstr "การสร้างโทเคน « %(name)s »"
+
+msgid "Créer la règle"
+msgstr "สร้างกฎ"
+
+msgid "Créer le jeton"
+msgstr "สร้างโทเคน"
+
+msgid "Créer le webhook"
+msgstr "สร้าง webhook"
+
+msgid "Créer un compte"
+msgstr "สร้างบัญชี"
+
+msgid "Créer une règle"
+msgstr "สร้างกฎ"
+
+msgid "Créez une règle une fois, réutilisez-la sur tous vos fichiers."
+msgstr "สร้างกฎครั้งเดียว ใช้ซ้ำกับทุกไฟล์ของคุณ"
+
+msgid "Créez votre compte"
+msgstr "สร้างบัญชีของคุณ"
+
+msgid "Data is consistent: each value is valid or unknown"
+msgstr "ข้อมูลสอดคล้องกัน: ทุกค่าเป็นค่าที่ถูกต้องหรือไม่ทราบ"
+
+msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
+msgstr "DataZen — แอปพลิเคชันทำความสะอาดข้อมูล (DataClean Pro) · ©"
+
+msgid "DataZen — Nettoyage de données"
+msgstr "DataZen — การทำความสะอาดข้อมูล"
+
+msgid "Date"
+msgstr "วันที่"
+
+msgid "Date d'expiration"
+msgstr "วันหมดอายุ"
+
+msgid "Date invalide"
+msgstr "วันที่ไม่ถูกต้อง"
+
+msgid "De l'import brut au rapport de qualité, DataZen couvre toute la chaîne."
+msgstr "ตั้งแต่การนำเข้าข้อมูลดิบจนถึงรายงานคุณภาพ DataZen ครอบคลุมทุกขั้นตอน"
+
+msgid "Demander un nouveau lien"
+msgstr "ขอรับลิงก์ใหม่"
+
+msgid "Dernier appel"
+msgstr "การเรียกครั้งล่าสุด"
+
+msgid "Dernier code HTTP"
+msgstr "รหัส HTTP ล่าสุด"
+
+msgid "Dernier déclenchement"
+msgstr "การทริกเกอร์ล่าสุด"
+
+msgid "Dernier usage"
+msgstr "การใช้งานล่าสุด"
+
+msgid "Derniers fichiers"
+msgstr "ไฟล์ล่าสุด"
+
+msgid "Dernière connexion"
+msgstr "เข้าสู่ระบบครั้งล่าสุด"
+
+msgid "Dernière utilisation"
+msgstr "การใช้งานครั้งล่าสุด"
+
+msgid "Dernières règles"
+msgstr "กฎล่าสุด"
+
+msgid "Des incohérences ont été détectées entre les statistiques et les données."
+msgstr "ตรวจพบความไม่สอดคล้องระหว่างสถิติกับข้อมูล"
+
+msgid "Dimension"
+msgstr "มิติ"
+
+msgid "Dimensions de qualité"
+msgstr "มิติของคุณภาพ"
+
+msgid "Dispersion et valeurs extrêmes des colonnes numériques."
+msgstr "การกระจายและค่าสุดขั้วของคอลัมน์ตัวเลข"
+
+msgid "Distributions des colonnes numériques"
+msgstr "การกระจายของคอลัมน์ตัวเลข"
+
+msgid "Distributions numériques"
+msgstr "การแจกแจงตัวเลข"
+
+msgid "Django · Pandas · Bootstrap"
+msgstr "Django · Pandas · Bootstrap"
+
+msgid "Doublon par similarité"
+msgstr "รายการซ้ำจากความคล้ายคลึง"
+
+msgid "Doublon potentiel"
+msgstr "รายการซ้ำที่อาจเป็นไปได้"
+
+msgid "Doublons"
+msgstr "รายการซ้ำ"
+
+msgid "Doublons exacts"
+msgstr "รายการซ้ำที่เหมือนกันทุกประการ"
+
+msgid "Doublons exacts :"
+msgstr "รายการซ้ำที่เหมือนกันทุกประการ:"
+
+msgid "Doublons exacts restants :"
+msgstr "รายการซ้ำที่เหมือนกันทุกประการที่เหลือ:"
+
+msgid "Doublons par similarité :"
+msgstr "รายการซ้ำจากความคล้ายคลึง:"
+
+msgid "Doublons potentiels"
+msgstr "รายการซ้ำที่อาจเป็นไปได้"
+
+msgid "Doublons potentiels (⚠️ à vérifier) :"
+msgstr "รายการซ้ำที่อาจเป็นไปได้ (⚠️ ต้องตรวจสอบ):"
+
+msgid "Doublons potentiels :"
+msgstr "รายการซ้ำที่อาจเป็นไปได้:"
+
+msgid "Doublons potentiels restants :"
+msgstr "รายการซ้ำที่อาจเป็นไปได้ที่เหลือ:"
+
+msgid "Doublons restants (exacts + potentiels)"
+msgstr "รายการซ้ำที่เหลือ (เหมือนกันทุกประการ + ที่อาจเป็นไปได้)"
+
+msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
+msgstr "รายการซ้ำ ช่องว่างเกิน อีเมลรูปแบบผิด วันที่ไม่สอดคล้อง… DataZen ตรวจจับปัญหาและแก้ไขทุกอย่างอัตโนมัติภายในไม่กี่วินาที"
+
+msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
+msgstr "รายการซ้ำ ค่าที่ขาดหาย ช่องว่าง ตัวพิมพ์ อีเมล โทรศัพท์ วันที่ และเงินเดือนถูกทำให้เป็นมาตรฐาน"
+
+msgid "Durée de conservation"
+msgstr "ระยะเวลาเก็บรักษา"
+
+msgid "Durée de conservation (jours)"
+msgstr "ระยะเวลาเก็บรักษา (วัน)"
+
+msgid "Décision appliquée avec succès."
+msgstr "นำการตัดสินใจไปใช้สำเร็จแล้ว"
+
+msgid "Déjà un compte ?"
+msgstr "มีบัญชีอยู่แล้ว?"
+
+msgid "Désactiver"
+msgstr "ปิดใช้งาน"
+
+msgid "Désactivée"
+msgstr "ปิดใช้งาน"
+
+msgid "Détail"
+msgstr "รายละเอียด"
+
+msgid "Détail par colonne"
+msgstr "รายละเอียดตามคอลัมน์"
+
+msgid "Détail par semaine"
+msgstr "รายละเอียดตามสัปดาห์"
+
+msgid "Détails techniques"
+msgstr "รายละเอียดทางเทคนิค"
+
+msgid "E-mail envoyé — DataZen"
+msgstr "ส่งอีเมลแล้ว — DataZen"
+
+msgid "Effacer"
+msgstr "ล้าง"
+
+msgid "Effectif"
+msgstr "จำนวน"
+
+msgid "Email invalide"
+msgstr "อีเมลไม่ถูกต้อง"
+
+msgid "Email nettoyé"
+msgstr "อีเมลที่ทำความสะอาดแล้ว"
+
+msgid "Email original"
+msgstr "อีเมลต้นฉบับ"
+
+msgid "Emails :"
+msgstr "อีเมล:"
+
+msgid "Emails corrected (change log vs counter)"
+msgstr "อีเมลที่แก้ไขแล้ว (บันทึกการแก้ไขเทียบกับตัวนับ)"
+
+msgid "Emails invalides :"
+msgstr "อีเมลที่ไม่ถูกต้อง:"
+
+msgid "Emails invalides restants :"
+msgstr "อีเมลที่ไม่ถูกต้องที่เหลือ:"
+
+msgid "Emails restants :"
+msgstr "อีเมลที่เหลือ:"
+
+msgid "Emails: valid + invalid + unknown = total"
+msgstr "อีเมล: ถูกต้อง + ไม่ถูกต้อง + ไม่ทราบ = ทั้งหมด"
+
+msgid "En attente"
+msgstr "รอดำเนินการ"
+
+msgid "En cours de traitement"
+msgstr "กำลังประมวลผล"
+
+msgid "En erreur"
+msgstr "เกิดข้อผิดพลาด"
+
+msgid "En échec"
+msgstr "ล้มเหลว"
+
+msgid "Enregistrer"
+msgstr "บันทึก"
+
+msgid "Enregistrer le nouveau mot de passe"
+msgstr "บันทึกรหัสผ่านใหม่"
+
+msgid "Enregistrer les modifications"
+msgstr "บันทึกการแก้ไข"
+
+msgid "Entrée"
+msgstr "Enter"
+
+msgid "Entrées"
+msgstr "รายการ"
+
+msgid "Envoyer le lien de réinitialisation"
+msgstr "ส่งลิงก์รีเซ็ต"
+
+msgid "Erreur"
+msgstr "ข้อผิดพลาด"
+
+msgid "Erreur de nettoyage"
+msgstr "ข้อผิดพลาดในการล้างข้อมูล"
+
+msgid "Erreurs de format"
+msgstr "ข้อผิดพลาดรูปแบบ"
+
+msgid "Erreurs restantes"
+msgstr "ข้อผิดพลาดที่เหลือ"
+
+msgid "Excel (.xlsx)"
+msgstr "Excel (.xlsx)"
+
+msgid "Expiration"
+msgstr "การหมดอายุ"
+
+msgid "Expiré"
+msgstr "หมดอายุ"
+
+msgid "Explication du score"
+msgstr "คำอธิบายคะแนน"
+
+msgid "Export & traçabilité"
+msgstr "การส่งออกและร่องรอยตรวจสอบ"
+
+msgid "Fermer"
+msgstr "ปิด"
+
+msgid "Fermer la fenêtre active"
+msgstr "ปิดหน้าต่างที่ใช้งานอยู่"
+
+msgid "Fichier"
+msgstr "ไฟล์"
+
+msgid "Fichier de données"
+msgstr "ไฟล์ข้อมูล"
+
+msgid "Fichier nettoyé"
+msgstr "ไฟล์ที่ทำความสะอาดแล้ว"
+
+msgid "Fichier supprimé"
+msgstr "ไฟล์ถูกลบ"
+
+msgid "Fichier téléversé"
+msgstr "ไฟล์ถูกอัปโหลด"
+
+msgid "Fichier téléversé avec succès."
+msgstr "อัปโหลดไฟล์สำเร็จแล้ว"
+
+msgid "Fichier « %(name)s » archivé."
+msgstr "เก็บถาวรไฟล์ « %(name)s » แล้ว"
+
+msgid "Fichier « %(name)s » restauré."
+msgstr "กู้คืนไฟล์ « %(name)s » แล้ว"
+
+msgid "Fichier « %(name)s » supprimé."
+msgstr "ลบไฟล์ “%(name)s” แล้ว"
+
+msgid "Fichiers"
+msgstr "ไฟล์"
+
+msgid "Fichiers archivés"
+msgstr "ไฟล์ที่เก็บถาวร"
+
+msgid "Fichiers au total"
+msgstr "ไฟล์ทั้งหมด"
+
+msgid "Fichiers de données"
+msgstr "ไฟล์ข้อมูล"
+
+msgid "Fichiers expirés"
+msgstr "ไฟล์ที่หมดอายุ"
+
+msgid "Fichiers nettoyés avant le %(cutoff)s considérés comme expirés."
+msgstr "ไฟล์ที่ล้างก่อน %(cutoff)s ถือว่าหมดอายุ"
+
+msgid "Fichiers nettoyés plus anciens que cette durée (0 = conservation illimitée)."
+msgstr "ไฟล์ที่ล้างนานกว่าระยะเวลานี้ (0 = เก็บรักษาไม่จำกัด)"
+
+msgid "Fichiers récents"
+msgstr "ไฟล์ล่าสุด"
+
+msgid "Fil d'Ariane"
+msgstr "เส้นทางนำทาง"
+
+msgid "Filtrer"
+msgstr "กรอง"
+
+msgid "Filtrer les lignes du tableau"
+msgstr "กรองแถวในตาราง"
+
+msgid "Filtrer par action"
+msgstr "กรองตามการกระทำ"
+
+msgid "Filtrer par statut"
+msgstr "กรองตามสถานะ"
+
+msgid "Filtrer un tableau"
+msgstr "กรองตาราง"
+
+msgid "Fonction"
+msgstr "ฟังก์ชัน"
+
+msgid "Format de date"
+msgstr "รูปแบบวันที่"
+
+msgid "Format de la charge utile"
+msgstr "รูปแบบเพย์โหลด"
+
+msgid "Formats acceptés : <code>.csv</code>, <code>.xlsx</code>, <code>.xls</code> — jusqu'à 20 Mo."
+msgstr "รูปแบบที่รองรับ: <code>.csv</code>, <code>.xlsx</code>, <code>.xls</code> — สูงสุด 20 MB"
+
+msgid "Formats de dates (%(column)s) :"
+msgstr "รูปแบบวันที่ (%(column)s):"
+
+msgid "Formats standardized (phones, dates)"
+msgstr "รูปแบบที่ทำให้เป็นมาตรฐาน (โทรศัพท์, วันที่)"
+
+msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
+msgstr "ประหยัดเวลา ทุกสิ่งสำคัญใน DataZen อยู่ที่การกดปุ่มผสมกัน"
+
+msgid "Graphiques"
+msgstr "กราฟ"
+
+msgid "Graphiques générés avec matplotlib et seaborn à partir des données nettoyées."
+msgstr "แผนภูมิที่สร้างด้วย matplotlib และ seaborn จากข้อมูลที่ทำความสะอาดแล้ว"
+
+msgid "Graphiques générés côté serveur avec"
+msgstr "กราฟที่สร้างฝั่งเซิร์ฟเวอร์ด้วย"
+
+msgid "Graphiques statistiques générés avec <strong>matplotlib</strong> et <strong>seaborn</strong> à partir des données nettoyées."
+msgstr "กราฟสถิติที่สร้างด้วย <strong>matplotlib</strong> และ <strong>seaborn</strong> จากข้อมูลที่ทำความสะอาดแล้ว"
+
+msgid "Gratuit, immédiat, et vos fichiers restent privés."
+msgstr "ฟรี ทันที และไฟล์ของคุณยังคงเป็นส่วนตัว"
+
+msgid "Gérer les règles…"
+msgstr "จัดการกฎ…"
+
+msgid "Histogrammes des colonnes numériques détectées."
+msgstr "ฮิสโตแกรมของคอลัมน์ตัวเลขที่ตรวจพบ"
+
+msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
+msgstr "ประวัติที่มีเวลากำกับของการกระทำของคุณ การอัปโหลด การล้างข้อมูล การส่งออก และ API"
+
+msgid "Identité"
+msgstr "ตัวตน"
+
+msgid "Ignorer la casse (Alice = alice)"
+msgstr "ไม่แยกตัวพิมพ์เล็กและใหญ่ (Alice = alice)"
+
+msgid "Import CSV & Excel"
+msgstr "นำเข้า CSV และ Excel"
+
+msgid "Impossible d'appliquer la décision : %(error)s"
+msgstr "ไม่สามารถนำการตัดสินใจไปใช้: %(error)s"
+
+msgid "Impossible de convertir le fichier : %(error)s"
+msgstr "ไม่สามารถแปลงไฟล์: %(error)s"
+
+msgid "Impossible de générer le PDF : %(error)s"
+msgstr "ไม่สามารถสร้าง PDF ได้: %(error)s"
+
+msgid "Impossible de lire ce fichier : %(error)s"
+msgstr "ไม่สามารถอ่านไฟล์นี้: %(error)s"
+
+msgid "Impossible de lire le fichier : %(error)s"
+msgstr "ไม่สามารถอ่านไฟล์: %(error)s"
+
+msgid "Impossible de lire le rapport : %(error)s"
+msgstr "ไม่สามารถอ่านรายงาน: %(error)s"
+
+msgid "Inactif"
+msgstr "ไม่ได้ใช้งาน"
+
+msgid "Inactive"
+msgstr "ไม่ใช้งาน"
+
+msgid "Inconnu"
+msgstr "ไม่ทราบ"
+
+msgid "Indicateur"
+msgstr "ตัวชี้วัด"
+
+msgid "Indicateurs comparés"
+msgstr "ตัวชี้วัดที่เปรียบเทียบ"
+
+msgid "Indiquez votre adresse e-mail : nous vous enverrons un lien pour choisir un nouveau mot de passe."
+msgstr "กรอกที่อยู่อีเมลของคุณ: เราจะส่งลิงก์ให้คุณเพื่อเลือกรหัสผ่านใหม่"
+
+msgid "Information"
+msgstr "ข้อมูล"
+
+msgid "Informations professionnelles"
+msgstr "ข้อมูลอาชีพ"
+
+msgid "Inscription — DataZen"
+msgstr "ลงทะเบียน — DataZen"
+
+msgid "Intégration"
+msgstr "การเชื่อมต่อ"
+
+msgid "Invalid emails are not counted as unknown or missing"
+msgstr "อีเมลที่ไม่ถูกต้องไม่ถูกนับเป็นค่าที่ไม่ทราบหรือค่าที่ขาดหาย"
+
+msgid "JJ/MM/AAAA"
+msgstr "JJ/MM/AAAA"
+
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+msgid "Jamais appelé"
+msgstr "ยังไม่เคยเรียก"
+
+msgid "Jauge du score de qualité global (sur 100)."
+msgstr "มาตรวัดคะแนนคุณภาพโดยรวม (จาก 100)"
+
+msgid "Jeton"
+msgstr "โทเคน"
+
+msgid "Jeton créé. Copiez-le maintenant : il ne sera plus affiché."
+msgstr "สร้างโทเคนแล้ว คัดลอกตอนนี้ เพราะจะไม่แสดงอีก"
+
+msgid "Jeton d'API"
+msgstr "โทเคน API"
+
+msgid "Jeton « %(name)s » révoqué."
+msgstr "เพิกถอนโทเคน « %(name)s » แล้ว"
+
+msgid "Jetons"
+msgstr "โทเคน"
+
+msgid "Jetons d'API"
+msgstr "โทเคน API"
+
+msgid "Journal d'activité"
+msgstr "บันทึกกิจกรรม"
+
+msgid "Journal d'activité — DataZen"
+msgstr "บันทึกกิจกรรม — DataZen"
+
+msgid "Journal des modifications"
+msgstr "บันทึกการแก้ไข"
+
+msgid "Journal des modifications (extrait)"
+msgstr "บันทึกการแก้ไข (บางส่วน)"
+
+msgid "L'historique horodaté de chaque opération."
+msgstr "ประวัติที่มีเวลากำกับของทุกการดำเนินการ"
+
+msgid "La comparaison n'est pas disponible : lancez d'abord un nettoyage sur ce fichier."
+msgstr "ไม่สามารถเปรียบเทียบได้ เริ่มล้างข้อมูลไฟล์นี้ก่อน"
+
+msgid "La confirmation ne correspond pas à votre nom d'utilisateur : suppression annulée."
+msgstr "การยืนยันไม่ตรงกับชื่อผู้ใช้ของคุณ: ยกเลิกการลบแล้ว"
+
+msgid "La suppression du compte efface définitivement vos fichiers, vos règles et votre profil. Cette action est irréversible."
+msgstr "การลบบัญชีจะลบไฟล์ กฎ และโปรไฟล์ของคุณอย่างถาวร การกระทำนี้ไม่สามารถย้อนกลับได้"
+
+msgid "Laisser vide pour appliquer à toutes les colonnes."
+msgstr "เว้นว่างไว้เพื่อใช้กับทุกคอลัมน์"
+
+msgid "Laissez vide pour un jeton sans expiration."
+msgstr "เว้นว่างไว้หากต้องการโทเคนที่ไม่มีวันหมดอายุ"
+
+msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
+msgstr "เริ่มทำความสะอาดก่อนเพื่อเข้าถึงการวิเคราะห์เชิงสำรวจ"
+
+msgid "Lancez d'abord un nettoyage pour générer un rapport PDF."
+msgstr "เริ่มล้างข้อมูลก่อนเพื่อสร้างรายงาน PDF"
+
+msgid "Langue de l'interface"
+msgstr "ภาษาของอินเทอร์เฟซ"
+
+msgid "Le compte « %(username)s » a été supprimé."
+msgstr "บัญชี « %(username)s » ถูกลบแล้ว"
+
+msgid "Le fichier ne doit pas dépasser 20 Mo."
+msgstr "ไฟล์ต้องมีขนาดไม่เกิน 20 MB"
+
+msgid "Le journal conserve également %(days)s jours d'historique."
+msgstr "บันทึกเก็บประวัติ %(days)s วันเช่นกัน"
+
+msgid "Le nettoyage a échoué."
+msgstr "การทำความสะอาดล้มเหลว"
+
+msgid "Le nom d'hôte du webhook est introuvable."
+msgstr "ไม่พบชื่อโฮสต์ของเว็บฮุก"
+
+msgid "Le nom d'hôte du webhook pointe vers une adresse interne."
+msgstr "ชื่อโฮสต์ของเว็บฮุกชี้ไปที่ที่อยู่ภายใน"
+
+msgid "Le nom d'hôte est absent de l'URL."
+msgstr "ไม่มีชื่อโฮสต์ใน URL"
+
+msgid "Le port est invalide."
+msgstr "พอร์ตไม่ถูกต้อง"
+
+msgid "Le thème « Système » suit les réglages de votre appareil."
+msgstr "ธีม « ระบบ » จะตามการตั้งค่าอุปกรณ์ของคุณ"
+
+msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
+msgstr "การประมวลผลทำงานอยู่เบื้องหลัง หน้านี้จะอัปเดตอัตโนมัติเมื่อเสร็จสิ้น"
+
+msgid "Les adresses internes sont refusées."
+msgstr "ที่อยู่ภายในจะถูกปฏิเสธ"
+
+msgid "Les adresses locales sont refusées."
+msgstr "ที่อยู่ภายในเครื่องจะถูกปฏิเสธ"
+
+msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
+msgstr "ระบบจะแจ้งข้อมูลซ้ำแต่จะไม่ลบโดยอัตโนมัติ เลือกช่องนี้เพื่อลบข้อมูลซ้ำอย่างชัดเจน"
+
+msgid "Les fichiers archivés restent accessibles et téléchargeables."
+msgstr "ไฟล์ที่เก็บถาวรยังคงเข้าถึงและดาวน์โหลดได้"
+
+msgid "Les fichiers expirés seront supprimés automatiquement à votre prochaine visite."
+msgstr "ไฟล์ที่หมดอายุจะถูกลบอัตโนมัติในการเข้าชมครั้งถัดไปของคุณ"
+
+msgid "Les fichiers nettoyés sont archivés après 30 jours."
+msgstr "ไฟล์ที่ทำความสะอาดแล้วจะถูกเก็บถาวรหลังจาก 30 วัน"
+
+msgid "Les fichiers nettoyés sont archivés puis purgés après cette durée (0 = conservation illimitée)."
+msgstr "ไฟล์ที่ล้างแล้วจะถูกเก็บถาวรแล้วลบหลังระยะเวลานี้ (0 = เก็บรักษาไม่จำกัด)"
+
+msgid "Les identifiants intégrés à l'URL sont refusés."
+msgstr "ข้อมูลรับรองที่ฝังใน URL จะถูกปฏิเสธ"
+
+msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
+msgstr "เส้นทางที่ใช้ได้: /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/"
+
+msgid "Les statistiques affichées correspondent aux données réelles."
+msgstr "สถิติที่แสดงตรงกับข้อมูลจริง"
+
+msgid "Lien invalide"
+msgstr "ลิงก์ไม่ถูกต้อง"
+
+msgid "Ligne"
+msgstr "บรรทัด"
+
+msgid "Lignes"
+msgstr "บรรทัด"
+
+msgid "Lignes après nettoyage"
+msgstr "บรรทัดหลังการทำความสะอาด"
+
+msgid "Lignes du journal des modifications"
+msgstr "บรรทัดบันทึกการเปลี่ยนแปลง"
+
+msgid "Lignes traitées"
+msgstr "บรรทัดที่ประมวลผล"
+
+msgid "Localisation"
+msgstr "ตำแหน่ง"
+
+msgid "MM/JJ/AAAA"
+msgstr "MM/JJ/AAAA"
+
+msgid "Masquer"
+msgstr "ซ่อน"
+
+msgid "Masquer le mot de passe"
+msgstr "ซ่อนรหัสผ่าน"
+
+msgid "Matrice de corrélation"
+msgstr "เมทริกซ์สหสัมพันธ์"
+
+msgid "Matrice de corrélation (Pearson)"
+msgstr "เมทริกซ์สหสัมพันธ์ (เพียร์สัน)"
+
+msgid "Max"
+msgstr "สูงสุด"
+
+msgid "Maîtrisez la durée de vie de vos données."
+msgstr "ควบคุมอายุการใช้งานของข้อมูลคุณ"
+
+msgid "Membre depuis"
+msgstr "สมาชิกตั้งแต่"
+
+msgid "Mes règles"
+msgstr "กฎของฉัน"
+
+msgid "Mes règles de nettoyage"
+msgstr "กฎการทำความสะอาดของฉัน"
+
+msgid "Mesuré avant et après le nettoyage."
+msgstr "วัดก่อนและหลังการล้างข้อมูล"
+
+msgid "Mettre à jour le mot de passe"
+msgstr "อัปเดตรหัสผ่าน"
+
+msgid "Min"
+msgstr "ต่ำสุด"
+
+msgid "Missing values by column"
+msgstr "ค่าที่ขาดหายตามคอลัมน์"
+
+msgid "Mode"
+msgstr "ฐานนิยม"
+
+msgid "Modifier mes informations"
+msgstr "แก้ไขข้อมูลของฉัน"
+
+msgid "Modifiez votre mot de passe régulièrement et exportez vos données quand vous le souhaitez."
+msgstr "เปลี่ยนรหัสผ่านเป็นประจำและส่งออกข้อมูลของคุณเมื่อใดก็ได้"
+
+msgid "Mon profil"
+msgstr "โปรไฟล์ของฉัน"
+
+msgid "Mon profil — DataZen"
+msgstr "โปรไฟล์ของฉัน — DataZen"
+
+msgid "Mot de passe"
+msgstr "รหัสผ่าน"
+
+msgid "Mot de passe modifié"
+msgstr "เปลี่ยนรหัสผ่านแล้ว"
+
+msgid "Mot de passe modifié — DataZen"
+msgstr "เปลี่ยนรหัสผ่านแล้ว — DataZen"
+
+msgid "Mot de passe oublié ?"
+msgstr "ลืมรหัสผ่าน?"
+
+msgid "Mot de passe oublié — DataZen"
+msgstr "ลืมรหัสผ่าน — DataZen"
+
+msgid "Motif"
+msgstr "รูปแบบ"
+
+msgid "Motif attendu"
+msgstr "รูปแบบที่คาดไว้"
+
+msgid "Moyenne"
+msgstr "ค่าเฉลี่ย"
+
+msgid "Médiane"
+msgstr "มัธยฐาน"
+
+msgid "Méthode"
+msgstr "วิธีการ"
+
+msgid "Nettoyage"
+msgstr "การล้างข้อมูล"
+
+msgid "Nettoyage du fichier « %(name)s »"
+msgstr "การล้างไฟล์ « %(name)s »"
+
+msgid "Nettoyage intelligent"
+msgstr "การทำความสะอาดอัจฉริยะ"
+
+msgid "Nettoyage intelligent · CSV & Excel"
+msgstr "การทำความสะอาดอัจฉริยะ · CSV และ Excel"
+
+msgid "Nettoyage lancé en arrière-plan. La page se met à jour automatiquement."
+msgstr "เริ่มการทำความสะอาดเบื้องหลังแล้ว หน้าจะอัปเดตอัตโนมัติ"
+
+msgid "Nettoyage lancé sur « %(name)s »"
+msgstr "เริ่มล้างข้อมูล « %(name)s » แล้ว"
+
+msgid "Nettoyage terminé"
+msgstr "ล้างข้อมูลเสร็จสิ้น"
+
+msgid "Nettoyage terminé : « %(name)s »"
+msgstr "ล้างข้อมูลเสร็จสิ้น: « %(name)s »"
+
+msgid "Nettoyer"
+msgstr "ทำความสะอาด"
+
+msgid "Nettoyer un fichier"
+msgstr "ทำความสะอาดไฟล์"
+
+msgid "Nettoyez, normalisez et fiabilisez vos fichiers CSV et Excel en quelques clics — sans écrire une ligne de code."
+msgstr "ทำความสะอาด ทำให้เป็นมาตรฐาน และเพิ่มความน่าเชื่อถือให้ไฟล์ CSV และ Excel ของคุณในไม่กี่คลิก — โดยไม่ต้องเขียนโค้ดแม้แต่บรรทัดเดียว"
+
+msgid "Nettoyé"
+msgstr "ทำความสะอาดแล้ว"
+
+msgid "Nettoyé le"
+msgstr "ล้างเมื่อ"
+
+msgid "Nettoyés"
+msgstr "ทำความสะอาดแล้ว"
+
+msgid "Niveau"
+msgstr "ระดับ"
+
+msgid "No exact duplicates"
+msgstr "ไม่มีรายการซ้ำที่เหมือนกันทุกประการ"
+
+msgid "No missing or unknown values"
+msgstr "ไม่มีค่าที่ขาดหายหรือค่าที่ไม่ทราบ"
+
+msgid "No potential duplicates"
+msgstr "ไม่มีรายการซ้ำที่อาจเป็นไปได้"
+
+msgid "Nom"
+msgstr "ชื่อ"
+
+msgid "Nom d'utilisateur"
+msgstr "ชื่อผู้ใช้"
+
+msgid "Nom de la règle"
+msgstr "ชื่อกฎ"
+
+msgid "Nom de votre entreprise ou équipe"
+msgstr "ชื่อบริษัทหรือทีมของคุณ"
+
+msgid "Nom du jeton"
+msgstr "ชื่อโทเคน"
+
+msgid "Nombre d'appels"
+msgstr "จำนวนการเรียก"
+
+msgid "Nombre d'occurrences"
+msgstr "จำนวนครั้งที่พบ"
+
+msgid "Nombre de nettoyages et score moyen par semaine."
+msgstr "จำนวนการล้างข้อมูลและคะแนนเฉลี่ยต่อสัปดาห์"
+
+msgid "Nombre de valeurs aberrantes"
+msgstr "จำนวนค่าผิดปกติ"
+
+msgid "Nombre de valeurs aberrantes (méthode IQR) par colonne."
+msgstr "จำนวนค่าผิดปกติ (วิธี IQR) ตามคอลัมน์"
+
+msgid "Normalisation de la casse (noms, libellés, villes)"
+msgstr "ปรับรูปแบบตัวพิมพ์ (ชื่อ ป้ายกำกับ เมือง)"
+
+msgid "Normalisation des catégories (%(count)s corrigée(s))"
+msgstr "ปรับหมวดหมู่ให้เป็นมาตรฐาน (แก้ไข %(count)s รายการ)"
+
+msgid "Normalisation des choix oui/non (%(count)s corrigé(s))"
+msgstr "ปรับตัวเลือกใช่/ไม่ใช่ให้เป็นมาตรฐาน (แก้ไข %(count)s รายการ)"
+
+msgid "Normalisation des codes/références (%(count)s corrigé(s))"
+msgstr "ปรับรหัส/ข้อมูลอ้างอิงให้เป็นมาตรฐาน (แก้ไข %(count)s รายการ)"
+
+msgid "Normalisation des dates (%(count)s corrigée(s))"
+msgstr "ปรับวันที่ให้เป็นมาตรฐาน (แก้ไข %(count)s รายการ)"
+
+msgid "Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "ปรับหมายเลขโทรศัพท์ให้เป็นมาตรฐาน (แก้ไข %(count)s รายการ)"
+
+msgid "Normaliser la casse"
+msgstr "ทำให้ตัวพิมพ์เป็นมาตรฐาน"
+
+msgid "Normaliser la casse (emails en minuscules, noms en Capitales)"
+msgstr "ปรับรูปแบบตัวพิมพ์ (อีเมลเป็นตัวพิมพ์เล็ก ชื่อขึ้นต้นด้วยตัวพิมพ์ใหญ่)"
+
+msgid "Normaliser les dates"
+msgstr "ทำให้วันที่เป็นมาตรฐาน"
+
+msgid "Normaliser les dates (AAAA-MM-JJ)"
+msgstr "ปรับรูปแบบวันที่ (YYYY-MM-DD)"
+
+msgid "Normaliser les emails"
+msgstr "ทำให้อีเมลเป็นมาตรฐาน"
+
+msgid "Normaliser les téléphones"
+msgstr "ทำให้โทรศัพท์เป็นมาตรฐาน"
+
+msgid "Normaliser les téléphones (06XXXXXXXX)"
+msgstr "ปรับรูปแบบหมายเลขโทรศัพท์ (06XXXXXXXX)"
+
+msgid "Notifications par email"
+msgstr "การแจ้งเตือนทางอีเมล"
+
+msgid "Nouveau jeton d API"
+msgstr "โทเคน API ใหม่"
+
+msgid "Nouveau mot de passe"
+msgstr "รหัสผ่านใหม่"
+
+msgid "Nouveau mot de passe — DataZen"
+msgstr "รหัสผ่านใหม่ — DataZen"
+
+msgid "Nouvelle photo prête"
+msgstr "รูปใหม่พร้อมแล้ว"
+
+msgid "Nouvelle valeur"
+msgstr "ค่าใหม่"
+
+msgid "Opération"
+msgstr "การดำเนินการ"
+
+msgid "Opérations de nettoyage"
+msgstr "การดำเนินการล้างข้อมูล"
+
+msgid "Organisation"
+msgstr "องค์กร"
+
+msgid "Outils"
+msgstr "เครื่องมือ"
+
+msgid "Outliers"
+msgstr "ค่าผิดปกติ"
+
+msgid "Ouvrir"
+msgstr "เปิด"
+
+msgid "Ouvrir la recherche globale"
+msgstr "เปิดการค้นหาทั่วไป"
+
+msgid "Ouvrir le résultat sélectionné"
+msgstr "เปิดผลลัพธ์ที่เลือก"
+
+msgid "Page"
+msgstr "หน้า"
+
+msgid "Parcourir…"
+msgstr "เรียกดู…"
+
+msgid "Pas encore de compte ?"
+msgstr "ยังไม่มีบัญชี?"
+
+msgid "Pensez à regarder dans vos courriers indésirables. Le lien reste valable quelques heures."
+msgstr "อย่าลืมตรวจสอบในกล่องจดหมายขยะ ลิงก์ยังใช้ได้อีกสองสามชั่วโมง"
+
+msgid "Personnalisez votre identité, votre photo et vos préférences."
+msgstr "ปรับแต่งตัวตน รูปภาพ และการตั้งค่าของคุณ"
+
+msgid "Photo de profil"
+msgstr "รูปโปรไฟล์"
+
+msgid "Pilotage"
+msgstr "การกำกับดูแล"
+
+msgid "Plus fréquent"
+msgstr "พบบ่อยที่สุด"
+
+msgid "Poids"
+msgstr "น้ำหนัก"
+
+msgid "Politique en vigueur"
+msgstr "นโยบายที่บังคับใช้"
+
+msgid "Pondération"
+msgstr "น้ำหนัก"
+
+msgid "Premier quartile"
+msgstr "ควอไทล์ที่หนึ่ง"
+
+msgid "Prendre une photo avec la caméra"
+msgstr "ถ่ายภาพด้วยกล้อง"
+
+msgid "Problème"
+msgstr "ปัญหา"
+
+msgid "Problèmes après"
+msgstr "ปัญหาหลัง"
+
+msgid "Problèmes avant"
+msgstr "ปัญหาก่อน"
+
+msgid "Problèmes détectés"
+msgstr "ปัญหาที่ตรวจพบ"
+
+msgid "Problèmes restants"
+msgstr "ปัญหาที่เหลือ"
+
+msgid "Productivité"
+msgstr "ผลิตภาพ"
+
+msgid "Profil"
+msgstr "โปรไฟล์"
+
+msgid "Profil de %(name)s — DataZen"
+msgstr "โปรไฟล์ของ %(name)s — DataZen"
+
+msgid "Profil de %(username)s"
+msgstr "โปรไฟล์ของ %(username)s"
+
+msgid "Profil public"
+msgstr "โปรไฟล์สาธารณะ"
+
+msgid "Profil visible publiquement"
+msgstr "โปรไฟล์ที่แสดงต่อสาธารณะ"
+
+msgid "Profils"
+msgstr "โปรไฟล์"
+
+msgid "Progression"
+msgstr "ความคืบหน้า"
+
+msgid "Propriétaire"
+msgstr "เจ้าของ"
+
+msgid "Préfixe"
+msgstr "คำนำหน้า"
+
+msgid "Préférences"
+msgstr "การตั้งค่า"
+
+msgid "Prénom"
+msgstr "ชื่อ"
+
+msgid "Présentation"
+msgstr "การแนะนำตัว"
+
+msgid "Purge automatique"
+msgstr "ล้างอัตโนมัติ"
+
+msgid "Purge automatique de %(count)s fichier(s) expiré(s)"
+msgstr "ล้างไฟล์ที่หมดอายุ %(count)s ไฟล์อัตโนมัติ"
+
+msgid "Purge de %(count)s fichier(s) expiré(s)"
+msgstr "ล้างไฟล์ที่หมดอายุ %(count)s ไฟล์"
+
+msgid "Purger automatiquement"
+msgstr "ล้างอัตโนมัติ"
+
+msgid "Purger automatiquement les fichiers expirés"
+msgstr "ล้างไฟล์ที่หมดอายุอัตโนมัติ"
+
+msgid "Purger le journal"
+msgstr "ล้างบันทึก"
+
+msgid "Purger les anciennes entrées du journal ?"
+msgstr "ล้างรายการบันทึกเก่า?"
+
+msgid "Q1"
+msgstr "Q1"
+
+msgid "Q3"
+msgstr "Q3"
+
+msgid "Qualité moyenne"
+msgstr "คุณภาพเฉลี่ย"
+
+msgid "Qualité par colonne"
+msgstr "คุณภาพตามคอลัมน์"
+
+msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
+msgstr "เล่าเล็กน้อยเกี่ยวกับคุณ ทีมของคุณ ชุดข้อมูลของคุณ…"
+
+msgid "Raccourcis clavier"
+msgstr "ทางลัด"
+
+msgid "Raccourcis clavier — DataZen"
+msgstr "ทางลัด — DataZen"
+
+msgid "Raccourcis de navigation"
+msgstr "ทางลัดการนำทาง"
+
+msgid "Raccourcis de nettoyage"
+msgstr "ทางลัดการล้างข้อมูล"
+
+msgid "Raison"
+msgstr "เหตุผล"
+
+msgid "Rapport"
+msgstr "รายงาน"
+
+msgid "Rapport PDF de « %(name)s »"
+msgstr "รายงาน PDF ของ « %(name)s »"
+
+msgid "Rapport de nettoyage"
+msgstr "รายงานการทำความสะอาด"
+
+msgid "Rapport de qualité des données"
+msgstr "รายงานคุณภาพข้อมูล"
+
+msgid "Rapport généré automatiquement par DataZen. Les scores sont calculés selon cinq dimensions pondérées : complétude, validité, unicité, cohérence et conformité."
+msgstr "รายงานที่สร้างอัตโนมัติโดย DataZen คะแนนคำนวณจากห้ามิติที่ถ่วงน้ำหนักแล้ว ความครบถ้วน ความถูกต้อง ความไม่ซ้ำ ความสอดคล้อง และการปฏิบัติตามข้อกำหนด"
+
+msgid "Rapport — %(name)s"
+msgstr "รายงาน — %(name)s"
+
+msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
+msgstr "รับการแจ้งเตือน HTTP ทันทีเมื่อการล้างข้อมูลเสร็จสิ้น ล้มเหลว หรือมีไฟล์ถูกอัปโหลด"
+
+msgid "Recevoir les notifications par email"
+msgstr "รับการแจ้งเตือนทางอีเมล"
+
+msgid "Recevoir un message lorsqu'un nettoyage se termine."
+msgstr "รับข้อความเมื่อการทำความสะอาดเสร็จสิ้น"
+
+msgid "Recherche en cours…"
+msgstr "กำลังค้นหา…"
+
+msgid "Recherche globale"
+msgstr "การค้นหาทั่วไป"
+
+msgid "Recherche momentanément indisponible."
+msgstr "การค้นหาไม่พร้อมใช้งานชั่วคราว"
+
+msgid "Rechercher"
+msgstr "ค้นหา"
+
+msgid "Rechercher (Ctrl+K)"
+msgstr "ค้นหา (Ctrl+K)"
+
+msgid "Rechercher un fichier"
+msgstr "ค้นหาไฟล์"
+
+msgid "Rechercher un fichier ou une règle (Ctrl+K)"
+msgstr "ค้นหาไฟล์หรือกฎ (Ctrl+K)"
+
+msgid "Rechercher un fichier, une règle, une page…"
+msgstr "ค้นหาไฟล์ กฎ หน้า…"
+
+msgid "Rechercher un fichier…"
+msgstr "ค้นหาไฟล์…"
+
+msgid "Recommandation"
+msgstr "คำแนะนำ"
+
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
+msgstr "แทนที่ชื่อ อีเมล และหมายเลขโทรศัพท์ด้วยนามแฝงที่คงที่ (ค่าเดียวกัน → นามแฝงเดียวกัน) โดยรักษาความสัมพันธ์ระหว่างแถวไว้"
+
+msgid "Remplacer les valeurs manquantes"
+msgstr "แทนค่าที่หายไป"
+
+msgid "Remplacez le jeton par le vôtre et lancez la commande."
+msgstr "แทนที่โทเคนด้วยของคุณแล้วรันคำสั่ง"
+
+msgid "Remplir les valeurs manquantes"
+msgstr "เติมค่าที่ขาดหาย"
+
+msgid "Remplissage des valeurs manquantes par « %(value)s » (les montants, codes et dates ne reçoivent jamais un texte)"
+msgstr "เติมค่าที่ขาดหายด้วย ‘%(value)s’ (ไม่เติมข้อความในจำนวนเงิน รหัส หรือวันที่)"
+
+msgid "Renseignées"
+msgstr "กรอกไว้แล้ว"
+
+msgid "Renumérotation des identifiants (ancien id conservé)"
+msgstr "กำหนดหมายเลขรหัสใหม่ (เก็บ ID เดิมไว้)"
+
+msgid "Reported %(reported)s vs recalculated %(actual)s"
+msgstr "รายงาน %(reported)s เทียบกับคำนวณใหม่ %(actual)s"
+
+msgid "Restauration"
+msgstr "การกู้คืน"
+
+msgid "Restauration de « %(name)s »"
+msgstr "การกู้คืน « %(name)s »"
+
+msgid "Restaurer"
+msgstr "กู้คืน"
+
+msgid "Retour à la connexion"
+msgstr "กลับไปหน้าเข้าสู่ระบบ"
+
+msgid "Règle"
+msgstr "กฎ"
+
+msgid "Règle de nettoyage"
+msgstr "กฎการทำความสะอาด"
+
+msgid "Règle « %(name)s » %(state)s."
+msgstr "กฎ « %(name)s » %(state)s"
+
+msgid "Règle « %(name)s » créée."
+msgstr "สร้างกฎ « %(name)s » แล้ว"
+
+msgid "Règle « %(name)s » supprimée."
+msgstr "ลบกฎ « %(name)s » แล้ว"
+
+msgid "Règles"
+msgstr "กฎ"
+
+msgid "Règles de nettoyage"
+msgstr "กฎการทำความสะอาด"
+
+msgid "Règles de nettoyage — DataZen"
+msgstr "กฎการทำความสะอาด — DataZen"
+
+msgid "Règles de validation regex personnalisées"
+msgstr "กฎตรวจสอบ regex ที่กำหนดเอง"
+
+msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
+msgstr "ดาวน์โหลดไฟล์ที่ทำความสะอาดแล้ว รายงานโดยละเอียด และบันทึกการแก้ไขทั้งหมด"
+
+msgid "Réinitialiser"
+msgstr "รีเซ็ต"
+
+msgid "Répartition des problèmes"
+msgstr "การกระจายของปัญหา"
+
+msgid "Répartition des problèmes restants"
+msgstr "การกระจายของปัญหาที่เหลืออยู่"
+
+msgid "Résultats"
+msgstr "ผลลัพธ์"
+
+msgid "Rétention"
+msgstr "การเก็บรักษา"
+
+msgid "Rétention des données"
+msgstr "การเก็บรักษาข้อมูล"
+
+msgid "Rétention des données — DataZen"
+msgstr "การเก็บรักษาข้อมูล — DataZen"
+
+msgid "Révocation de jeton"
+msgstr "การเพิกถอนโทเคน"
+
+msgid "Révocation du jeton « %(name)s »"
+msgstr "การเพิกถอนโทเคน « %(name)s »"
+
+msgid "Révoquer"
+msgstr "เพิกถอน"
+
+msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
+msgstr "เพิกถอนโทเคนนี้? การเชื่อมต่อที่ใช้โทเคนนี้จะหยุดทำงาน"
+
+msgid "Révoqué"
+msgstr "เพิกถอนแล้ว"
+
+msgid "S'inscrire"
+msgstr "ลงทะเบียน"
+
+msgid "Saisissez <strong>%(username)s</strong> pour confirmer"
+msgstr "พิมพ์ <strong>%(username)s</strong> เพื่อยืนยัน"
+
+msgid "Score"
+msgstr "คะแนน"
+
+msgid "Score après nettoyage"
+msgstr "คะแนนหลังการล้างข้อมูล"
+
+msgid "Score avant nettoyage"
+msgstr "คะแนนก่อนการล้างข้อมูล"
+
+msgid "Score de la dimension"
+msgstr "คะแนนของมิติ"
+
+msgid "Score de qualité"
+msgstr "คะแนนคุณภาพ"
+
+msgid "Score de similarité :"
+msgstr "คะแนนความคล้ายคลึง:"
+
+msgid "Score global"
+msgstr "คะแนนโดยรวม"
+
+msgid "Score global de qualité"
+msgstr "คะแนนคุณภาพโดยรวม"
+
+msgid "Score qualité"
+msgstr "คะแนนคุณภาพ"
+
+msgid "Score qualité après"
+msgstr "คะแนนคุณภาพหลัง"
+
+msgid "Score qualité avant"
+msgstr "คะแนนคุณภาพก่อน"
+
+msgid "Se connecter"
+msgstr "เข้าสู่ระบบ"
+
+msgid "Se déconnecter"
+msgstr "ออกจากระบบ"
+
+msgid "Se déplacer dans les résultats"
+msgstr "เลื่อนในผลลัพธ์"
+
+msgid "Sert uniquement à la réinitialisation du mot de passe."
+msgstr "ใช้สำหรับการรีเซ็ตรหัสผ่านเท่านั้น"
+
+msgid "Seuls les schémas http et https sont autorisés."
+msgstr "อนุญาตเฉพาะสคีมา http และ https เท่านั้น"
+
+msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
+msgstr "หากมีบัญชีที่ใช้อีเมลนี้ อีเมลที่มีลิงก์รีเซ็ตเพิ่งถูกส่งไปแล้ว"
+
+msgid "Site web"
+msgstr "เว็บไซต์"
+
+msgid "Sombre"
+msgstr "มืด"
+
+msgid "Statut"
+msgstr "สถานะ"
+
+msgid "Succès"
+msgstr "สำเร็จ"
+
+msgid "Superutilisateur"
+msgstr "ผู้ใช้ระดับสูง"
+
+msgid "Suppression"
+msgstr "การลบ"
+
+msgid "Suppression de la règle « %(name)s »"
+msgstr "การลบกฎ « %(name)s »"
+
+msgid "Suppression de règle"
+msgstr "การลบกฎ"
+
+msgid "Suppression de « %(name)s »"
+msgstr "การลบ « %(name)s »"
+
+msgid "Suppression des doublons exacts (%(count)s supprimé(s))"
+msgstr "ลบข้อมูลที่ซ้ำกันทุกประการ (ลบ %(count)s รายการ)"
+
+msgid "Suppression des doublons sur « %(column)s » (%(count)s supprimé(s))"
+msgstr "ลบข้อมูลซ้ำโดยใช้คอลัมน์ ‘%(column)s’ (ลบ %(count)s รายการ)"
+
+msgid "Suppression des espaces superflus"
+msgstr "ลบช่องว่างส่วนเกิน"
+
+msgid "Supprimer %(name)s"
+msgstr "ลบ %(name)s"
+
+msgid "Supprimer ce webhook ?"
+msgstr "ลบ webhook นี้?"
+
+msgid "Supprimer définitivement ce fichier et toutes ses données ?"
+msgstr "ลบไฟล์นี้และข้อมูลทั้งหมดอย่างถาวรหรือไม่?"
+
+msgid "Supprimer définitivement les fichiers expirés ? Cette action est irréversible."
+msgstr "ลบไฟล์ที่หมดอายุอย่างถาวร? การกระทำนี้ย้อนกลับไม่ได้"
+
+msgid "Supprimer définitivement les fichiers expirés au lieu de les archiver."
+msgstr "ลบไฟล์ที่หมดอายุอย่างถาวรแทนการเก็บถาวร"
+
+msgid "Supprimer définitivement « %(name)s » ?"
+msgstr "ลบ « %(name)s » อย่างถาวรหรือไม่?"
+
+msgid "Supprimer les doublons"
+msgstr "ลบรายการซ้ำ"
+
+msgid "Supprimer les doublons (confirmation requise)"
+msgstr "ลบข้อมูลซ้ำ (ต้องยืนยัน)"
+
+msgid "Supprimer les espaces superflus"
+msgstr "ลบช่องว่างส่วนเกิน"
+
+msgid "Supprimer mon compte"
+msgstr "ลบบัญชีของฉัน"
+
+msgid "Synthèse"
+msgstr "บทสรุป"
+
+msgid "Système"
+msgstr "ระบบ"
+
+msgid "Sécurité"
+msgstr "ความปลอดภัย"
+
+msgid "Sélectionner un fichier"
+msgstr "เลือกไฟล์"
+
+msgid "Tableau de bord"
+msgstr "แดชบอร์ด"
+
+msgid "Tableau de bord — DataZen"
+msgstr "แดชบอร์ด — DataZen"
+
+msgid "Tapez au moins deux caractères pour lancer la recherche."
+msgstr "พิมพ์อย่างน้อยสองตัวอักษรเพื่อเริ่มค้นหา"
+
+msgid "Taux de complétude (%)"
+msgstr "อัตราความครบถ้วน (%)"
+
+msgid "Taux de remplissage de chaque colonne (les plus incomplètes d'abord)."
+msgstr "อัตราการกรอกของแต่ละคอลัมน์ (คอลัมน์ที่ไม่ครบถ้วนที่สุดก่อน)"
+
+msgid "Technologies"
+msgstr "เทคโนโลยี"
+
+msgid "Tester"
+msgstr "ทดสอบ"
+
+msgid "Thème préféré"
+msgstr "ธีมที่ต้องการ"
+
+msgid "Top des catégories"
+msgstr "หมวดหมู่ยอดนิยม"
+
+msgid "Total missing values"
+msgstr "ค่าที่ขาดหายทั้งหมด"
+
+msgid "Tous vos indicateurs de qualité réunis."
+msgstr "ตัวชี้วัดคุณภาพทั้งหมดของคุณรวมไว้ในที่เดียว"
+
+msgid "Tout est inclus"
+msgstr "รวมทุกอย่าง"
+
+msgid "Tout voir"
+msgstr "ดูทั้งหมด"
+
+msgid "Toutes les actions"
+msgstr "การกระทำทั้งหมด"
+
+msgid "Traçabilité"
+msgstr "การตรวจสอบย้อนกลับ"
+
+msgid "Troisième quartile"
+msgstr "ควอไทล์ที่สาม"
+
+msgid "Type"
+msgstr "ประเภท"
+
+msgid "Type de correction"
+msgstr "ประเภทการแก้ไข"
+
+msgid "Téléchargement"
+msgstr "การดาวน์โหลด"
+
+msgid "Téléchargement de « %(name)s »"
+msgstr "การดาวน์โหลด « %(name)s »"
+
+msgid "Téléphone invalide"
+msgstr "โทรศัพท์ไม่ถูกต้อง"
+
+msgid "Téléphone non standard"
+msgstr "โทรศัพท์ที่ไม่เป็นมาตรฐาน"
+
+msgid "Téléphones non standard (%(column)s) :"
+msgstr "โทรศัพท์ที่ไม่เป็นมาตรฐาน (%(column)s):"
+
+msgid "Téléversement"
+msgstr "การอัปโหลด"
+
+msgid "Téléversement de « %(name)s »"
+msgstr "การอัปโหลด « %(name)s »"
+
+msgid "Téléverser un fichier"
+msgstr "อัปโหลดไฟล์"
+
+msgid "Téléversez votre fichier"
+msgstr "อัปโหลดไฟล์ของคุณ"
+
+msgid "Téléversé"
+msgstr "อัปโหลดแล้ว"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "URL de destination"
+msgstr "URL ปลายทาง"
+
+msgid "URL illisible."
+msgstr "อ่าน URL ไม่ได้"
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page."
+msgstr "ไม่สามารถลบบัญชีผู้ดูแลระบบจากหน้านี้ได้"
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
+msgstr "ไม่สามารถลบบัญชีผู้ดูแลระบบจากหน้านี้ได้ โปรดใช้"
+
+msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
+msgstr "แดชบอร์ดวัดคุณภาพก่อน / หลัง และอธิบายทุกคะแนนที่สูญเสียไป"
+
+msgid "Une URL de destination est requise."
+msgstr "ต้องระบุ URL ปลายทาง"
+
+msgid "Une boîte à outils complète"
+msgstr "ชุดเครื่องมือที่ครบครัน"
+
+msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
+msgstr "หนึ่งกฎต่อบรรทัดในรูปแบบ « คอลัมน์:รูปแบบ » ตัวอย่าง: « รหัสไปรษณีย์:^\\d{5}$ » ระบบจะแจ้งค่าที่ไม่ตรงรูปแบบ (แต่จะไม่แก้ไข)"
+
+msgid "Uniques"
+msgstr "ไม่ซ้ำ"
+
+msgid "Unknown"
+msgstr "ไม่ทราบ"
+
+msgid "Unknown emails included in the unknown-value statistic"
+msgstr "อีเมลที่ไม่ทราบถูกรวมไว้ในสถิติค่าที่ไม่ทราบ"
+
+msgid "Unknown values by column"
+msgstr "ค่าที่ไม่ทราบตามคอลัมน์"
+
+msgid "Utilisateur"
+msgstr "ผู้ใช้"
+
+msgid "Utilisation de l'API"
+msgstr "การใช้งาน API"
+
+msgid "Valeur"
+msgstr "ค่า"
+
+msgid "Valeur aberrante"
+msgstr "ค่าผิดปกติ"
+
+msgid "Valeur de remplacement"
+msgstr "ค่าที่ใช้แทน"
+
+msgid "Valeur de remplacement (pour le remplissage)."
+msgstr "ค่าแทนที่ (สำหรับการเติม)"
+
+msgid "Valeur manquante"
+msgstr "ค่าที่ขาดหาย"
+
+msgid "Valeur numérique invalide"
+msgstr "ค่าตัวเลขไม่ถูกต้อง"
+
+msgid "Valeurs aberrantes"
+msgstr "ค่าผิดปกติ"
+
+msgid "Valeurs aberrantes par colonne (méthode IQR)"
+msgstr "ค่าผิดปกติต่อคอลัมน์ (วิธี IQR)"
+
+msgid "Valeurs les plus fréquentes"
+msgstr "ค่าที่พบบ่อยที่สุด"
+
+msgid "Valeurs les plus fréquentes des colonnes catégorielles."
+msgstr "ค่าที่พบบ่อยที่สุดของคอลัมน์หมวดหมู่"
+
+msgid "Valeurs manquantes"
+msgstr "ค่าที่ขาดหาย"
+
+msgid "Valeurs manquantes :"
+msgstr "ค่าที่ขาดหาย:"
+
+msgid "Valeurs manquantes restantes"
+msgstr "ค่าที่ขาดหายที่เหลือ"
+
+msgid "Valeurs manquantes restantes :"
+msgstr "ค่าที่ขาดหายที่เหลือ:"
+
+msgid "Valeurs uniques"
+msgstr "ค่าที่ไม่ซ้ำ"
+
+msgid "Valeurs « Inconnu »"
+msgstr "ค่า « ไม่ทราบ »"
+
+msgid "Valeurs « Inconnu » :"
+msgstr "ค่า « ไม่ทราบ »:"
+
+msgid "Validation et correction des emails (%(corrected)s corrigé(s), %(invalid)s invalide(s))"
+msgstr "ตรวจสอบและแก้ไขอีเมล (แก้ไข %(corrected)s รายการ ไม่ถูกต้อง %(invalid)s รายการ)"
+
+msgid "Valider et corriger les emails (erreurs évidentes seulement)"
+msgstr "ตรวจสอบและแก้ไขอีเมล (เฉพาะข้อผิดพลาดที่เห็นได้ชัด)"
+
+msgid "Validité"
+msgstr "ความถูกต้อง"
+
+msgid "Visualisations statistiques"
+msgstr "การแสดงภาพทางสถิติ"
+
+msgid "Voir l'analyse complète →"
+msgstr "ดูการวิเคราะห์ทั้งหมด →"
+
+msgid "Volume"
+msgstr "ปริมาณ"
+
+msgid "Volume des anomalies restantes par catégorie."
+msgstr "ปริมาณความผิดปกติที่เหลือตามหมวดหมู่"
+
+msgid "Vos données"
+msgstr "ข้อมูลของคุณ"
+
+msgid "Vos données méritent<br> <span class=\"dz-gradient-text\">d'être impeccables.</span>"
+msgstr "ข้อมูลของคุณสมควร<br> <span class=\"dz-gradient-text\">ที่จะสมบูรณ์แบบ</span>"
+
+msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
+msgstr "ไฟล์ของคุณอยู่กับคุณ DataZen บอกคุณว่าอะไรเกินระยะเวลาเก็บรักษาที่เลือก และไม่ลบสิ่งใดโดยไม่ได้รับความยินยอมจากคุณ"
+
+msgid "Votre espace de travail"
+msgstr "พื้นที่ทำงานของคุณ"
+
+msgid "Votre mot de passe a bien été enregistré. Vous pouvez maintenant vous connecter avec celui-ci."
+msgstr "บันทึกรหัสผ่านของคุณเรียบร้อยแล้ว ตอนนี้คุณสามารถเข้าสู่ระบบด้วยรหัสผ่านนั้นได้"
+
+msgid "Votre mot de passe a été modifié. Vos autres sessions restent actives."
+msgstr "รหัสผ่านของคุณถูกเปลี่ยนแล้ว เซสชันอื่นของคุณยังคงใช้งานอยู่"
+
+msgid "Votre nom d'utilisateur <strong>@%(username)s</strong> ne peut pas être modifié."
+msgstr "ชื่อผู้ใช้ <strong>@%(username)s</strong> ของคุณไม่สามารถเปลี่ยนแปลงได้"
+
+msgid "Votre photo de profil a été supprimée."
+msgstr "รูปโปรไฟล์ของคุณถูกลบแล้ว"
+
+msgid "Votre profil a été mis à jour."
+msgstr "โปรไฟล์ของคุณได้รับการอัปเดตแล้ว"
+
+msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
+msgstr "คุณยังควบคุมได้ ไม่มีสิ่งใดถูกลบโดยไม่มีการกระทำของคุณ"
+
+msgid "Vous n'avez pas accès à ce fichier."
+msgstr "คุณไม่มีสิทธิ์เข้าถึงไฟล์นี้"
+
+msgid "Vous n'avez pas accès à ce jeton."
+msgstr "คุณไม่มีสิทธิ์เข้าถึงโทเคนนี้"
+
+msgid "Vous n'avez pas accès à ce webhook."
+msgstr "คุณไม่มีสิทธิ์เข้าถึง webhook นี้"
+
+msgid "Vous n'avez pas accès à cette règle."
+msgstr "คุณไม่มีสิทธิ์เข้าถึงกฎนี้"
+
+msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
+msgstr "มุมมองรวมของคุณภาพข้อมูลของคุณ รวมทุกไฟล์"
+
+msgid "Vue d'ensemble"
+msgstr "ภาพรวม"
+
+msgid "Vérifiez votre boîte mail"
+msgstr "ตรวจสอบกล่องจดหมายของคุณ"
+
+msgid "Webhook"
+msgstr "Webhook"
+
+msgid "Webhook « %(name)s » %(state)s."
+msgstr "webhook « %(name)s » %(state)s"
+
+msgid "Webhook « %(name)s » : test réussi (HTTP %(status)s)."
+msgstr "webhook « %(name)s »: ทดสอบสำเร็จ (HTTP %(status)s)"
+
+msgid "Webhook « %(name)s » : test échoué (HTTP %(status)s). Vérifiez l'URL et que le service accepte les appels entrants."
+msgstr "webhook « %(name)s »: ทดสอบล้มเหลว (HTTP %(status)s) ตรวจสอบ URL และตรวจว่าบริการยอมรับการเรียกขาเข้า"
+
+msgid "Webhook « %(name)s » créé."
+msgstr "สร้าง webhook « %(name)s » แล้ว"
+
+msgid "Webhook « %(name)s » supprimé."
+msgstr "ลบ webhook « %(name)s » แล้ว"
+
+msgid "Webhooks"
+msgstr "webhook"
+
+msgid "Webhooks — DataZen"
+msgstr "webhook — DataZen"
+
+msgid "YYYY-MM-DD"
+msgstr "YYYY-MM-DD"
+
+msgid "[Règle] Anonymisation (%(count)s valeur(s))"
+msgstr "[กฎ] ทำข้อมูลให้ไม่ระบุตัวตน (%(count)s ค่า)"
+
+msgid "[Règle] Conversion des montants (%(count)s converti(s))"
+msgstr "[กฎ] แปลงจำนวนเงิน (แปลง %(count)s รายการ)"
+
+msgid "[Règle] Normalisation de la casse"
+msgstr "[กฎ] ปรับรูปแบบตัวพิมพ์"
+
+msgid "[Règle] Normalisation des dates (%(count)s corrigée(s))"
+msgstr "[กฎ] ปรับวันที่ให้เป็นมาตรฐาน (แก้ไข %(count)s รายการ)"
+
+msgid "[Règle] Normalisation des emails (%(count)s corrigé(s))"
+msgstr "[กฎ] ปรับอีเมลให้เป็นมาตรฐาน (แก้ไข %(count)s รายการ)"
+
+msgid "[Règle] Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "[กฎ] ปรับหมายเลขโทรศัพท์ให้เป็นมาตรฐาน (แก้ไข %(count)s รายการ)"
+
+msgid "[Règle] Remplissage des valeurs manquantes par « %(value)s »"
+msgstr "[กฎ] เติมค่าที่ขาดหายด้วย ‘%(value)s’"
+
+msgid "[Règle] Suppression des doublons (%(count)s supprimé(s))"
+msgstr "[กฎ] ลบข้อมูลซ้ำ (ลบ %(count)s รายการ)"
+
+msgid "[Règle] Suppression des espaces superflus"
+msgstr "[กฎ] ลบช่องว่างส่วนเกิน"
+
+msgid "actif"
+msgstr "ใช้งานอยู่"
+
+msgid "activé"
+msgstr "เปิดใช้งานแล้ว"
+
+msgid "activée"
+msgstr "เปิดใช้งานแล้ว"
+
+msgid "ajoutée"
+msgstr "เพิ่มแล้ว"
+
+msgid "améliorée"
+msgstr "ปรับปรุงแล้ว"
+
+msgid "bonne qualité"
+msgstr "คุณภาพดี"
+
+msgid "catégorie"
+msgstr "หมวดหมู่"
+
+msgid "cohérence"
+msgstr "ความสอดคล้อง"
+
+msgid "colonne : %(name)s"
+msgstr "คอลัมน์: %(name)s"
+
+msgid "complétude"
+msgstr "ความครบถ้วน"
+
+msgid "conformité"
+msgstr "การปฏิบัติตามข้อกำหนด"
+
+msgid "conservée (non inventée)"
+msgstr "เก็บไว้ (ไม่ได้สร้างขึ้นเอง)"
+
+msgid "console d'administration"
+msgstr "คอนโซลผู้ดูแลระบบ"
+
+msgid "date"
+msgstr "วันที่"
+
+msgid "donnée absente"
+msgstr "ไม่มีข้อมูล"
+
+msgid "désactivé"
+msgstr "ปิดใช้งานแล้ว"
+
+msgid "désactivée"
+msgstr "ปิดใช้งานแล้ว"
+
+msgid "détail"
+msgstr "รายละเอียด"
+
+msgid "email"
+msgstr "อีเมล"
+
+msgid "et"
+msgstr "และ"
+
+msgid "ex : 0 ou Inconnu"
+msgstr "เช่น 0 หรือไม่ทราบ"
+
+msgid "ex : Emails en minuscules"
+msgstr "เช่น: อีเมลเป็นตัวพิมพ์เล็ก"
+
+msgid "ex : Intégration Power BI"
+msgstr "เช่น การเชื่อมต่อ Power BI"
+
+msgid "ex : Slack — nettoyages"
+msgstr "เช่น Slack — การล้างข้อมูล"
+
+msgid "ex : email (vide = toutes les colonnes)"
+msgstr "เช่น: email (ว่าง = ทุกคอลัมน์)"
+
+msgid "excellente qualité"
+msgstr "คุณภาพยอดเยี่ยม"
+
+msgid "fermer"
+msgstr "ปิด"
+
+msgid "format invalide"
+msgstr "รูปแบบไม่ถูกต้อง"
+
+msgid "format non reconnu"
+msgstr "ไม่รู้จักรูปแบบ"
+
+msgid "généré le"
+msgstr "สร้างเมื่อ"
+
+msgid "https://exemple.com"
+msgstr "https://exemple.com"
+
+msgid "https://hooks.exemple.com/datazen"
+msgstr "https://hooks.example.com/datazen"
+
+msgid "identifiant"
+msgstr "ตัวระบุ"
+
+msgid "inactive"
+msgstr "ไม่ใช้งาน"
+
+msgid "inchangé"
+msgstr "ไม่เปลี่ยนแปลง"
+
+msgid "jours"
+msgstr "วัน"
+
+msgid "lignes"
+msgstr "บรรทัด"
+
+msgid "longueur/format incorrect"
+msgstr "ความยาว/รูปแบบไม่ถูกต้อง"
+
+msgid "matplotlib"
+msgstr "matplotlib"
+
+msgid "naviguer"
+msgstr "นำทาง"
+
+msgid "non évalué"
+msgstr "ยังไม่ประเมิน"
+
+msgid "numérique"
+msgstr "ตัวเลข"
+
+msgid "opération : %(name)s"
+msgstr "การดำเนินการ: %(name)s"
+
+msgid "ouvrir"
+msgstr "เปิด"
+
+msgid "points"
+msgstr "คะแนน"
+
+msgid "pour «"
+msgstr "สำหรับ «"
+
+msgid "premières lignes."
+msgstr "บรรทัดแรก"
+
+msgid "qualité faible"
+msgstr "คุณภาพต่ำ"
+
+msgid "qualité moyenne"
+msgstr "คุณภาพปานกลาง"
+
+msgid "référence"
+msgstr "เอกสารอ้างอิง"
+
+msgid "révoqué"
+msgstr "เพิกถอนแล้ว"
+
+msgid "score"
+msgstr "คะแนน"
+
+msgid "score %(before)s → %(after)s"
+msgstr "คะแนน %(before)s → %(after)s"
+
+msgid "seaborn"
+msgstr "seaborn"
+
+msgid "stable"
+msgstr "คงที่"
+
+msgid "supprimée"
+msgstr "ลบแล้ว"
+
+msgid "sur"
+msgstr "บน"
+
+msgid "texte"
+msgstr "ข้อความ"
+
+msgid "téléphone"
+msgstr "โทรศัพท์"
+
+msgid "unicité"
+msgstr "ความไม่ซ้ำ"
+
+msgid "valeur(s) extrême(s)"
+msgstr "ค่าสุดขั้ว"
+
+msgid "validité"
+msgstr "ความถูกต้อง"
+
+msgid "· ancien_id :"
+msgstr "· ancien_id:"
+
+msgid "· statut filtré"
+msgstr "· สถานะที่กรองแล้ว"
+
+msgid "À compléter :"
+msgstr "ต้องกรอกเพิ่ม:"
+
+msgid "Écart"
+msgstr "ส่วนต่าง"
+
+msgid "Écart-type"
+msgstr "ส่วนเบี่ยงเบนมาตรฐาน"
+
+msgid "Échap"
+msgstr "Esc"
+
+msgid "Échec du nettoyage"
+msgstr "การล้างข้อมูลล้มเหลว"
+
+msgid "Échec du nettoyage de « %(name)s »"
+msgstr "การล้างข้อมูล « %(name)s » ล้มเหลว"
+
+msgid "Étape 1"
+msgstr "ขั้นตอนที่ 1"
+
+msgid "État"
+msgstr "สถานะ"
+
+msgid "Évolution hebdomadaire du score de qualité"
+msgstr "การเปลี่ยนแปลงรายสัปดาห์ของคะแนนคุณภาพ"
+
+msgid "Événement"
+msgstr "เหตุการณ์"
+
+msgid "Événement déclencheur"
+msgstr "เหตุการณ์ที่ทริกเกอร์"
+
+msgid "à corriger manuellement"
+msgstr "ต้องแก้ไขด้วยตนเอง"
+
+msgid "à partir des données nettoyées."
+msgstr "จากข้อมูลที่ทำความสะอาดแล้ว"
+
+msgid "à vérifier"
+msgstr "ต้องตรวจสอบ"
+
+msgid "à vérifier manuellement"
+msgstr "ต้องตรวจสอบด้วยตนเอง"
+
+msgid "—"
+msgstr "—"
+
+msgid "— Choisir une action —"
+msgstr "— เลือกการดำเนินการ —"
+
+msgid "— Tous les statuts —"
+msgstr "— ทุกสถานะ —"
+
+msgid "— Toutes les colonnes —"
+msgstr "— ทุกคอลัมน์ —"
+
+msgid "← Retour au fichier"
+msgstr "← กลับไปที่ไฟล์"
+
+msgid "⌨️ Raccourcis"
+msgstr "⌨️ ทางลัด"
+
+msgid "⌨️ Raccourcis clavier"
+msgstr "⌨️ ทางลัดแป้นพิมพ์"
+
+msgid "⏳ Fichiers expirés"
+msgstr "⏳ ไฟล์ที่หมดอายุ"
+
+msgid "⏳ Nettoyage en cours…"
+msgstr "⏳ กำลังทำความสะอาด…"
+
+msgid "⚙️ Règles de nettoyage personnalisées"
+msgstr "⚙️ กฎการทำความสะอาดที่กำหนดเอง"
+
+msgid "⚙️ Règles personnalisées"
+msgstr "⚙️ กฎที่กำหนดเอง"
+
+msgid "⚙️ Régler la durée"
+msgstr "⚙️ ตั้งระยะเวลา"
+
+msgid "⚠️ Points nécessitant une vérification humaine"
+msgstr "⚠️ จุดที่ต้องตรวจสอบโดยมนุษย์"
+
+msgid "⚠️ Problèmes restants (tous fichiers)"
+msgstr "⚠️ ปัญหาที่เหลือ (ทุกไฟล์)"
+
+msgid "⚠️ Valeurs signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ แค่ทำเครื่องหมายค่า — ไม่แก้ไขอัตโนมัติ"
+
+msgid "⚠️ Zone de danger"
+msgstr "⚠️ พื้นที่อันตราย"
+
+msgid "⚠️ À vérifier manuellement (jamais supprimés automatiquement)."
+msgstr "⚠️ ต้องตรวจสอบด้วยตนเอง (ไม่ลบอัตโนมัติ)"
+
+msgid "⚪ Conserver toutes les lignes"
+msgstr "⚪ เก็บทุกบรรทัด"
+
+msgid "⚪ Ignorer (examiné, conserver)"
+msgstr "⚪ ไม่สนใจ (ตรวจสอบแล้ว เก็บไว้)"
+
+msgid "⚪ Valeurs « Inconnu » ("
+msgstr "⚪ ค่า « ไม่ทราบ » ("
+
+msgid "✅ Aucun doublon potentiel à vérifier."
+msgstr "✅ ไม่มีรายการซ้ำที่อาจเป็นไปได้ต้องตรวจสอบ"
+
+msgid "✅ Aucune vérification manuelle nécessaire"
+msgstr "✅ ไม่จำเป็นต้องตรวจสอบด้วยตนเอง"
+
+msgid "✅ Résultat du nettoyage"
+msgstr "✅ ผลลัพธ์การทำความสะอาด"
+
+msgid "✅ Validation après nettoyage"
+msgstr "✅ การยืนยันหลังการทำความสะอาด"
+
+msgid "✅ Votre profil est complet."
+msgstr "✅ โปรไฟล์ของคุณสมบูรณ์แล้ว"
+
+msgid "✏️ Modifier mon profil"
+msgstr "✏️ แก้ไขโปรไฟล์ของฉัน"
+
+msgid "✓ Copié"
+msgstr "✓ คัดลอกแล้ว"
+
+msgid "➕ Nouveau jeton"
+msgstr "➕ โทเคนใหม่"
+
+msgid "➕ Nouveau webhook"
+msgstr "➕ webhook ใหม่"
+
+msgid "➕ Nouvelle règle"
+msgstr "➕ กฎใหม่"
+
+msgid "➕ Téléverser un fichier"
+msgstr "➕ อัปโหลดไฟล์"
+
+msgid "⬇️ Exporter mes données (JSON)"
+msgstr "⬇️ ส่งออกข้อมูลของฉัน (JSON)"
+
+msgid "⬇️ Télécharger le fichier nettoyé"
+msgstr "⬇️ ดาวน์โหลดไฟล์ที่ทำความสะอาดแล้ว"
+
+msgid "🌍 Navigation"
+msgstr "🌍 การนำทาง"
+
+msgid "🌐 HTML (.html)"
+msgstr "🌐 HTML (.html)"
+
+msgid "🌐 Rapport HTML avec graphiques"
+msgstr "🌐 รายงาน HTML พร้อมกราฟ"
+
+msgid "🎯 Répartition par niveau de qualité"
+msgstr "🎯 การกระจายตามระดับคุณภาพ"
+
+msgid "🎯 Score qualité"
+msgstr "🎯 คะแนนคุณภาพ"
+
+msgid "🏆 Meilleurs résultats"
+msgstr "🏆 ผลลัพธ์ที่ดีที่สุด"
+
+msgid "👀 Aperçu des données brutes (avant nettoyage)"
+msgstr "👀 ตัวอย่างข้อมูลดิบ (ก่อนการทำความสะอาด)"
+
+msgid "👁️ Consulter le rapport"
+msgstr "👁️ ดูรายงาน"
+
+msgid "👤 Mon profil"
+msgstr "👤 โปรไฟล์ของฉัน"
+
+msgid "📈 Analyse exploratoire"
+msgstr "📈 การวิเคราะห์เชิงสำรวจ"
+
+msgid "📈 Statistiques descriptives"
+msgstr "📈 สถิติเชิงพรรณนา"
+
+msgid "📈 Valeurs aberrantes"
+msgstr "📈 ค่าผิดปกติ"
+
+msgid "📈 Visualisations statistiques"
+msgstr "📈 การแสดงภาพทางสถิติ"
+
+msgid "📈 Évolution du score (12 semaines)"
+msgstr "📈 แนวโน้มคะแนน (12 สัปดาห์)"
+
+msgid "📉 Fichiers à traiter en priorité"
+msgstr "📉 ไฟล์ที่ต้องจัดการก่อน"
+
+msgid "📉 Répartition des problèmes"
+msgstr "📉 การกระจายของปัญหา"
+
+msgid "📊 Activité récente"
+msgstr "📊 กิจกรรมล่าสุด"
+
+msgid "📊 Dashboard Data Quality"
+msgstr "📊 แดชบอร์ดคุณภาพข้อมูล"
+
+msgid "📊 Dimensions de qualité"
+msgstr "📊 มิติของคุณภาพ"
+
+msgid "📊 Tableau de bord"
+msgstr "📊 แดชบอร์ด"
+
+msgid "📊 Tableau de bord global"
+msgstr "📊 แดชบอร์ดภาพรวม"
+
+msgid "📋 Mes règles ("
+msgstr "📋 กฎของฉัน ("
+
+msgid "📋 Qualité des colonnes"
+msgstr "📋 คุณภาพของคอลัมน์"
+
+msgid "📋 Rapport de nettoyage"
+msgstr "📋 รายงานการทำความสะอาด"
+
+msgid "📋 Télécharger le rapport"
+msgstr "📋 ดาวน์โหลดรายงาน"
+
+msgid "📕 Rapport PDF"
+msgstr "📕 รายงาน PDF"
+
+msgid "📝 Journal des modifications"
+msgstr "📝 บันทึกการแก้ไข"
+
+msgid "📥 Fichier d'origine"
+msgstr "📥 ไฟล์ต้นฉบับ"
+
+msgid "📥 Markdown (.md)"
+msgstr "📥 Markdown (.md)"
+
+msgid "📥 Télécharger le rapport complet"
+msgstr "📥 ดาวน์โหลดรายงานฉบับเต็ม"
+
+msgid "📦 Archives"
+msgstr "📦 คลังเก็บถาวร"
+
+msgid "📷 Prendre une photo"
+msgstr "📷 ถ่ายภาพ"
+
+msgid "🔌 API et jetons d'accès"
+msgstr "🔌 API และโทเคนการเข้าถึง"
+
+msgid "🔌 Jetons d'API"
+msgstr "🔌 โทเคน API"
+
+msgid "🔍 Avant / après"
+msgstr "🔍 ก่อน / หลัง"
+
+msgid "🔍 Comparaison avant / après"
+msgstr "🔍 การเปรียบเทียบก่อน / หลัง"
+
+msgid "🔍 Doublons"
+msgstr "🔍 รายการซ้ำ"
+
+msgid "🔍 Filtrer"
+msgstr "🔍 กรอง"
+
+msgid "🔍 Filtrer les lignes…"
+msgstr "🔍 กรองแถว…"
+
+msgid "🔍 Problèmes détectés"
+msgstr "🔍 ปัญหาที่ตรวจพบ"
+
+msgid "🔍 Revue manuelle des doublons potentiels"
+msgstr "🔍 การตรวจสอบรายการซ้ำที่อาจเป็นไปได้ด้วยตนเอง"
+
+msgid "🔍 Règles regex personnalisées"
+msgstr "🔍 กฎ regex ที่กำหนดเอง"
+
+msgid "🔎 Explication du score"
+msgstr "🔎 คำอธิบายคะแนน"
+
+msgid "🔑 Mes jetons"
+msgstr "🔑 โทเคนของฉัน"
+
+msgid "🔑 Votre nouveau jeton"
+msgstr "🔑 โทเคนใหม่ของคุณ"
+
+msgid "🔒 Changer mon mot de passe"
+msgstr "🔒 เปลี่ยนรหัสผ่าน"
+
+msgid "🔒 Sécurité et données"
+msgstr "🔒 ความปลอดภัยและข้อมูล"
+
+msgid "🔔 Mes webhooks"
+msgstr "🔔 webhook ของฉัน"
+
+msgid "🔔 Webhooks"
+msgstr "🔔 webhook"
+
+msgid "🔗 Voir mon profil public"
+msgstr "🔗 ดูโปรไฟล์สาธารณะของฉัน"
+
+msgid "🔢 Colonnes analysées numériquement"
+msgstr "🔢 คอลัมน์ที่วิเคราะห์เป็นตัวเลข"
+
+msgid "🔬 Profilage avancé"
+msgstr "🔬 การทำโปรไฟล์ขั้นสูง"
+
+msgid "🔵 Conserver la 2e ligne (supprimer les autres)"
+msgstr "🔵 เก็บบรรทัดที่ 2 (ลบบรรทัดอื่น)"
+
+msgid "🕒 Dernières actions"
+msgstr "🕒 การกระทำล่าสุด"
+
+msgid "🕓 Activité"
+msgstr "🕓 กิจกรรม"
+
+msgid "🕓 Dernières activités"
+msgstr "🕓 กิจกรรมล่าสุด"
+
+msgid "🕓 Journal d'activité"
+msgstr "🕓 บันทึกกิจกรรม"
+
+msgid "🗃️ Fichiers récents"
+msgstr "🗃️ ไฟล์ล่าสุด"
+
+msgid "🗄️ Rétention"
+msgstr "🗄️ การเก็บรักษา"
+
+msgid "🗄️ Rétention des données"
+msgstr "🗄️ การเก็บรักษาข้อมูล"
+
+msgid "🗑️ Purger maintenant"
+msgstr "🗑️ ล้างตอนนี้"
+
+msgid "🗑️ Supprimer"
+msgstr "🗑️ ลบ"
+
+msgid "🗑️ Supprimer ma photo de profil"
+msgstr "🗑️ ลบรูปโปรไฟล์ของฉัน"
+
+msgid "🚀 Nouveautés de l'espace pro"
+msgstr "🚀 ความใหม่ของพื้นที่ pro"
+
+msgid "🚀 Premier appel"
+msgstr "🚀 การเรียกครั้งแรก"
+
+msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
+msgstr "🟢 เก็บบรรทัดที่ 1 (ลบบรรทัดอื่น)"
+
+msgid "🟣 Fusionner toutes les lignes"
+msgstr "🟣 รวมทุกบรรทัด"
+
+msgid "🧭 Dimensions les plus fragiles"
+msgstr "🧭 มิติที่เปราะบางที่สุด"
+
+msgid "🧹 Journal d'activité"
+msgstr "🧹 บันทึกกิจกรรม"
+
+msgid "🧹 Nettoyage"
+msgstr "🧹 การล้างข้อมูล"
+
+msgid "🧹 Options de nettoyage"
+msgstr "🧹 ตัวเลือกการทำความสะอาด"
+
+msgid "🧹 Opérations de nettoyage"
+msgstr "🧹 การดำเนินการทำความสะอาด"
+
+msgid "🧽 Purger les anciennes entrées"
+msgstr "🧽 ล้างรายการเก่า"
+
+msgid "🧾 Journal des modifications"
+msgstr "🧾 บันทึกการแก้ไข"
+
+msgid "🧾 Télécharger le journal des modifications"
+msgstr "🧾 ดาวน์โหลดบันทึกการแก้ไข"
+
+msgctxt "séparateur"
+msgid "ou"
+msgstr "หรือ"

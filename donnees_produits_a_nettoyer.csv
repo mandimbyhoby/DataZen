@@ -1,0 +1,31 @@
+reference,designation,categorie,prix_unitaire,stock,fournisseur,date_ajout,actif
+REF-001,Ordinateur portable 15",Informatique,"1 299,90 €",12,TechDistrib,2024-01-15,oui
+REF-002,Souris sans fil,Accessoires,"29,99",150,TechDistrib,2024-02-20,OUI
+ref-003,Écran 27 pouces,informatique,299.90,8,TechDistrib,2024-03-10,oui
+REF-004,Clavier mécanique,Accessoires,"89,90",0,TechDistrib,15/04/2024,non
+REF-005,Casque audio,Accessoires,"59,90",45,,2024-07-01,oui
+REF-006,Disque dur externe 1To,Informatique,"109,90",-5,TechDistrib,2024-09-10,oui
+REF-007,Imprimante laser,Périphériques,"189,90",3,TechDistrib,2024-10-02,non
+REF-008,Tablette tactile 10",Informatique,"449,00",20,TechDistrib,2024-04-17,oui
+REF-009,Webcam HD,Périphériques,"49,90",999999,TechDistrib,2024-05-05,oui
+REF-010,Enceinte Bluetooth,Accessoires,"79,90",25,TechDistrib,2024-06-12,oui
+REF-011,Chargeur USB-C,Accessoires,"19,90",60,TechDistrib,2024-08-08,oui
+REF-012,SSD 500Go,Informatique,"89,90",15,TechDistrib,2024-11-30,oui
+REF-013,Hub USB,Accessoires,"34,90",40,TechDistrib,2024-03-22,oui
+REF-014,Écran 24 pouces,Informatique,"159,90",7,TechDistrib,2024-06-18,non
+REF-015,Clavier sans fil,Accessoires,"69,90",30,TechDistrib,2024-08-09,oui
+REF-016,Souris ergonomique,Accessoires,"44,90",22,TechDistrib,2024-09-27,oui
+REF-017,Ordinateur portable 15",Informatique,"1 299,90 €",12,TechDistrib,2024-01-15,oui
+REF-018,Casque audio,Accessoires,"59,90",45,TechDistrib,2024-07-01,oui
+REF-019,  Écran 27 pouces  ,Informatique,"299,90",8,TechDistrib,2024-03-10,oui
+REF-020,Imprimante laser,Périphériques,"189,90",3,TechDistrib,2024-10-02,non
+REF-021,Tablette tactile 10",Informatique,"449,00",20,TechDistrib,2024-04-17,oui
+REF-022,Webcam HD,Périphériques,"49,90",18,TechDistrib,2024-05-05,oui
+REF-023,Enceinte Bluetooth,Accessoires,"79,90",25,TechDistrib,2024-06-12,oui
+REF-024,Chargeur USB-C,Accessoires,"19,90",60,TechDistrib,2024-08-08,oui
+REF-025,SSD 500Go,Informatique,"89,90",15,TechDistrib,2024-11-30,oui
+REF-026,Hub USB,Accessoires,"34,90",40,TechDistrib,2024-03-22,oui
+REF-027,Écran 24 pouces,Informatique,"159,90",7,TechDistrib,2024-06-18,non
+REF-028,Clavier sans fil,Accessoires,"69,90",30,TechDistrib,2024-08-09,oui
+REF-029,Souris ergonomique,Accessoires,"44,90",22,TechDistrib,2024-09-27,oui
+REF-030,Produit inconnu,,,0,,,non

@@ -1,0 +1,16 @@
+﻿id,client,email,ville,produit,categorie,prix,quantite,date_vente
+1,Alice Martin,alice.martin@mail.com,Paris,Ordinateur portable,Informatique,"1 299,90 €",1,2024-01-15
+2,BOB DUPONT,bob.dupont@mail.com,Lyon,Souris sans fil,Accessoires,"29,99",3,2024-02-20
+3,charlie leblanc,charlie.leblanc@mail.com,Marseille,Écran 27 pouces,Informatique,299.90,1,2024-03-10
+4,Alice Martin,alice.martin@mail.com,Paris,Ordinateur portable,Informatique,"1 299,90 €",1,2024-01-15
+5, David Petit ,david.petit@mail.com, Lille ,Clavier mécanique,Accessoires,"89,90",2,15/04/2024
+6,Élise Moreau,elise.moreau@mail.com,Nantes,Écran 27 pouces,Informatique,"299,90",1,2024-05-05
+7,alice martin,ALICE.MARTIN@mail.com,paris,ordinateur portable,informatique,1299.90,2,2024-06-12
+8,François Girard,francois.girard@mail.com,Toulouse,Casque audio,Accessoires,"59,90",1,2024-07-01
+9,  gérard roux  ,gerard.roux@mail.com,Lyon ,Souris sans fil,Accessoires,"29,99",5,08/08/2024
+10,Hélène Fournier,,Rennes,Disque dur externe,Informatique,"109,90",1,2024-09-10
+11,bob dupont,bob.dupont@mail.com,LYON,SOURIS SANS FIL,accessoires,"29,99 €",,2024-02-20
+12,Inès Lambert,ines.lambert@mail.com,,Casque audio,,,2,2024-11-30
+1,Alice Martin,alice.martin@mail.com,Paris,Ordinateur portable,Informatique,"1 299,90 €",1,2024-01-15
+3, charlie leblanc ,charlie.leblanc@mail.com,Marseille,Écran 27 pouces,Informatique,299.90,1,2024-03-10
+12,Inès Lambert,ines.lambert@mail.com,,Casque audio,,,2,2024-11-30

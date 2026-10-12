@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+
+# Environnements virtuels
+venv/
+env/
+.venv/
+
+# Django
+db.sqlite3
+db.sqlite3-journal
+/media/
+/staticfiles/
+*.log
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Artefacts d'outillage (inventaire i18n, sondes, exports de prévisualisation)
+/files/
+
+# Secrets et configuration locale
+.env
+.env.*
+*.pem
+*.key
+
+# Sources de design (non servies : intrants de build et références)
+/design/
+
+# IDE / éditeurs
+.vscode/
+.idea/
+
+# Système d'exploitation
+Thumbs.db
+.DS_Store

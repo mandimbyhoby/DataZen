@@ -1,0 +1,111 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Règles de nettoyage — DataZen" %}{% endblock %}
+
+{% block content %}
+<div class="container dz-page">
+    <nav aria-label="{% translate "Fil d'Ariane" %}">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{% translate "Règles de nettoyage" %}</li>
+        </ol>
+    </nav>
+
+    <div class="dz-page-head">
+        <span class="dz-eyebrow">{% translate "Automatisation" %}</span>
+        <h1 class="h3 mb-1">{% translate "⚙️ Règles de nettoyage personnalisées" %}</h1>
+        <p class="text-muted mb-0">
+            {% translate "Créez une règle une fois, réutilisez-la sur tous vos fichiers." %}
+        </p>
+    </div>
+
+    <div class="row dz-grid">
+        <div class="col-lg-5">
+            <div class="card dz-card-accent">
+                <div class="card-body">
+                    <h5 class="card-title">{% translate "➕ Nouvelle règle" %}</h5>
+                    <form method="post">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <div class="mb-3">
+                                <label class="form-label small" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                                {{ field }}
+                                {% if field.help_text %}
+                                    <div class="form-text small">{{ field.help_text }}</div>
+                                {% endif %}
+                                {% for error in field.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                        <button type="submit" class="btn btn-primary w-100">{% translate "Créer la règle" %}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-7">
+            <div class="card dz-panel">
+                <div class="card-body">
+                    <h5 class="card-title">{% translate "📋 Mes règles (" %}{{ rules|length }})</h5>
+                    {% if rules %}
+                        <div class="table-responsive">
+                            <table class="table table-sm align-middle" data-searchable>
+                                <thead>
+                                    <tr>
+                                        <th>{% translate "Nom" %}</th>
+                                        <th>{% translate "Opération" %}</th>
+                                        <th>{% translate "Colonne" %}</th>
+                                        <th>{% translate "Valeur" %}</th>
+                                        <th>{% translate "État" %}</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for rule in rules %}
+                                        <tr>
+                                            <td>{{ rule.name }}</td>
+                                            <td><span class="badge text-bg-secondary">{{ rule.get_operation_display }}</span></td>
+                                            <td>{{ rule.column|default:"—" }}</td>
+                                            <td>{{ rule.value|default:"—" }}</td>
+                                            <td>
+                                                {% if rule.is_active %}
+                                                    <span class="badge text-bg-success">{% translate "Active" %}</span>
+                                                {% else %}
+                                                    <span class="badge text-bg-secondary">{% translate "Inactive" %}</span>
+                                                {% endif %}
+                                            </td>
+                                            <td class="text-end text-nowrap">
+                                                <form method="post" action="{% url 'core:rule_toggle' rule.pk %}" class="d-inline">
+                                                    {% csrf_token %}
+                                                    <button type="submit" class="btn btn-sm btn-outline-secondary">
+                                                        {% if rule.is_active %}{% translate "Désactiver" %}{% else %}{% translate "Activer" %}{% endif %}
+                                                    </button>
+                                                </form>
+                                                <form method="post" action="{% url 'core:rule_delete' rule.pk %}" class="d-inline"
+                                                      onsubmit="return confirm('Supprimer cette règle ?');">
+                                                    {% csrf_token %}
+                                                    <button type="submit" class="btn btn-sm btn-outline-danger">🗑️</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class="text-center py-4">
+                            <div class="fs-1 mb-2" aria-hidden="true">📋</div>
+                            <p class="text-muted mb-0">
+                                {% blocktranslate trimmed %}Aucune règle pour le moment. Créez-en une pour la réutiliser
+                                sur tous vos fichiers.{% endblocktranslate %}
+                            </p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

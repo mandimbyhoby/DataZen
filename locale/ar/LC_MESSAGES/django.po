@@ -1,0 +1,2836 @@
+# Catalogue de traduction DataZen.
+# Généré par tools/i18n_build.py — ne pas éditer à la main.
+msgid ""
+msgstr ""
+"Project-Id-Version: DataZen 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+
+msgid "%(actual)s correction(s) in the log vs %(reported)s reported"
+msgstr "%(actual)s تصحيحات في السجل مقابل %(reported)s مُبلَّغ عنها"
+
+msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
+msgstr "%(actual)s قيمة غير معروفة في أعمدة البريد الإلكتروني مقابل %(reported)s مُبلَّغ عنها"
+
+msgid "%(count)s colonnes"
+msgstr "%(count)s أعمدة"
+
+msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
+msgstr "%(count)s تكرار محتمل يحتاج إلى تحقق."
+
+msgid "%(count)s entrée(s) d'activité supprimée(s)."
+msgstr "تم حذف %(count)s من مدخلات سجل النشاط."
+
+msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
+msgstr "تعذّر تصحيح %(count)s من الأخطاء تلقائيًا."
+
+msgid "%(count)s exact duplicate(s) remaining"
+msgstr "%(count)s تكرار مطابق متبقٍ"
+
+msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
+msgstr "%(count)s قيمة غير متسقة متبقية (لا صالحة ولا غير معروفة)"
+
+msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
+msgstr "%(count)s بريد إلكتروني غير صالح موجود (غير فارغ وغير معروف)"
+
+msgid "%(count)s invalid value(s) among filled data"
+msgstr "%(count)s قيمة غير صالحة ضمن البيانات المُعبأة"
+
+msgid "%(count)s lignes"
+msgstr "%(count)s صفوف"
+
+msgid "%(count)s missing value(s)"
+msgstr "%(count)s قيمة مفقودة"
+
+msgid "%(count)s non-standard value(s)"
+msgstr "%(count)s قيمة غير قياسية"
+
+msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
+msgstr "%(count)s تكرار محتمل يحتاج إلى مراجعة يدوية (عقوبة مخففة)"
+
+msgid "%(count)s unknown value(s) (data unavailable)"
+msgstr "%(count)s قيمة غير معروفة (البيانات غير متاحة)"
+
+msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
+msgstr "%(count)s قيمة شاذة تم اكتشافها في الأعمدة الرقمية."
+
+msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
+msgstr "%(count)s قيمة حالياً «غير معروف»."
+
+msgid "%(counter)s doublon potentiel détecté. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgid_plural "%(counter)s doublons potentiels détectés. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgstr[0] "تم اكتشاف %(counter)s من التكرارات المحتملة. لا تُحذف هذه الصفوف <strong>أبدًا</strong> تلقائيًا؛ بل تتطلب قرارك."
+msgstr[1] "تم اكتشاف %(counter)s من التكرارات المحتملة. لا تُحذف هذه الصفوف <strong>أبدًا</strong> تلقائيًا؛ بل تتطلب قرارك."
+msgstr[2] "تم اكتشاف %(counter)s من التكرارات المحتملة. لا تُحذف هذه الصفوف <strong>أبدًا</strong> تلقائيًا؛ بل تتطلب قرارك."
+msgstr[3] "تم اكتشاف %(counter)s من التكرارات المحتملة. لا تُحذف هذه الصفوف <strong>أبدًا</strong> تلقائيًا؛ بل تتطلب قرارك."
+msgstr[4] "تم اكتشاف %(counter)s من التكرارات المحتملة. لا تُحذف هذه الصفوف <strong>أبدًا</strong> تلقائيًا؛ بل تتطلب قرارك."
+msgstr[5] "تم اكتشاف %(counter)s من التكرارات المحتملة. لا تُحذف هذه الصفوف <strong>أبدًا</strong> تلقائيًا؛ بل تتطلب قرارك."
+
+msgid "%(counter)s fichier affiché"
+msgid_plural "%(counter)s fichiers affichés"
+msgstr[0] "%(counter)s ملف معروض"
+
+msgid "%(counter)s inconnu"
+msgid_plural "%(counter)s inconnus"
+msgstr[0] "%(counter)s غير معروف"
+
+msgid "%(counter)s invalide,"
+msgid_plural "%(counter)s invalides,"
+msgstr[0] "%(counter)s غير صالح،"
+
+msgid "%(counter)s ligne concernée :"
+msgid_plural "%(counter)s lignes concernées :"
+msgstr[0] "%(counter)s صف معني:"
+
+msgid "%(counter)s valide,"
+msgid_plural "%(counter)s valides,"
+msgstr[0] "%(counter)s صالح،"
+
+msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
+msgstr "تم حذف %(purged)s ملف، وأرشفة %(archived)s."
+
+msgid "%(score)s / 100  (%(weight)s %(percent)s)"
+msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
+msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s مقابل %(expected)s متوقعة"
+
+msgid "%(value)s %(percent)s"
+msgstr "%(value)s %(percent)s"
+
+msgid "(%(counter)s modification)"
+msgid_plural "(%(counter)s modifications)"
+msgstr[0] "(%(counter)s تعديل)"
+
+msgid "(%(counter)s non-conformité)"
+msgid_plural "(%(counter)s non-conformités)"
+msgstr[0] "(%(counter)s عدم مطابقة)"
+
+msgid "(colonnes : %(columns)s)"
+msgstr "(الأعمدة: %(columns)s)"
+
+msgid "(score ≥ 0.8)"
+msgstr "(النتيجة ≥ 0.8)"
+
+msgid "(⚠️ à vérifier manuellement)"
+msgstr "(⚠️ يتطلب مراجعة يدوية)"
+
+msgid ", Vous recevez ce message parce qu'une réinitialisation de mot de passe a été demandée pour votre compte DataZen. Cliquez sur le lien ci-dessous pour choisir un nouveau mot de passe :"
+msgstr "، أنت تتلقى هذه الرسالة لأن طلب إعادة تعيين كلمة المرور قد ورد لحسابك في DataZen. انقر على الرابط أدناه لاختيار كلمة مرور جديدة:"
+
+msgid "<a href=\"#televerser\">Téléversez votre premier fichier</a> pour commencer."
+msgstr "<a href=\"#televerser\">ارفع ملفك الأول</a> للبدء."
+
+msgid "<strong>Doublons potentiels :</strong> aucun"
+msgstr "<strong>التكرارات المحتملة:</strong> لا شيء"
+
+msgid "<strong>Doublons potentiels restants :</strong> aucun"
+msgstr "<strong>التكرارات المحتملة المتبقية:</strong> لا شيء"
+
+msgid "<strong>Valeurs manquantes :</strong> aucune"
+msgstr "<strong>القيم المفقودة:</strong> لا شيء"
+
+msgid "<strong>Valeurs manquantes restantes :</strong> aucune"
+msgstr "<strong>القيم المفقودة المتبقية:</strong> لا شيء"
+
+msgid "AAAA-MM-JJ"
+msgstr "AAAA-MM-JJ"
+
+msgid "API"
+msgstr "API"
+
+msgid "API & webhooks"
+msgstr "API والـ webhooks"
+
+msgid "API REST"
+msgstr "API REST"
+
+msgid "API et intégrations"
+msgstr "API والتكاملات"
+
+msgid "API et intégrations — DataZen"
+msgstr "API والتكاملات — DataZen"
+
+msgid "Abonnements"
+msgstr "الاشتراكات"
+
+msgid "Accueil"
+msgstr "الرئيسية"
+
+msgid "Actif"
+msgstr "نشط"
+
+msgid "Actifs"
+msgstr "نشطة"
+
+msgid "Action"
+msgstr "الإجراء"
+
+msgid "Action invalide."
+msgstr "إجراء غير صالح."
+
+msgid "Actions"
+msgstr "الإجراءات"
+
+msgid "Active"
+msgstr "نشط"
+
+msgid "Activer"
+msgstr "تفعيل"
+
+msgid "Activer le thème clair"
+msgstr "تفعيل السمة الفاتحة"
+
+msgid "Activer le thème sombre"
+msgstr "تفعيل السمة الداكنة"
+
+msgid "Activité"
+msgstr "النشاط"
+
+msgid "Activités"
+msgstr "الأنشطة"
+
+msgid "Activée"
+msgstr "مُفعّل"
+
+msgid "Administrateur"
+msgstr "مشرف"
+
+msgid "Administration"
+msgstr "الإدارة"
+
+msgid "Adresse email"
+msgstr "البريد الإلكتروني"
+
+msgid "Affichage de %(shown)s lignes sur %(total)s."
+msgstr "عرض %(shown)s من %(total)s صفًا."
+
+msgid "Affichage des"
+msgstr "عرض"
+
+msgid "Afficher"
+msgstr "إظهار"
+
+msgid "Afficher le mot de passe"
+msgstr "إظهار كلمة المرور"
+
+msgid "Afficher les détails des anomalies"
+msgstr "عرض تفاصيل الحالات غير الطبيعية"
+
+msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
+msgstr "يُضاف إلى الترويسة X-DataZen-Signature ‏(HMAC-SHA256)."
+
+msgid "All filled values are valid"
+msgstr "جميع القيم المُعبأة صالحة"
+
+msgid "Aller au contenu principal"
+msgstr "الانتقال إلى المحتوى الرئيسي"
+
+msgid "Analyse exploratoire"
+msgstr "التحليل الاستكشافي"
+
+msgid "Analyse exploratoire — %(name)s"
+msgstr "التحليل الاستكشافي — %(name)s"
+
+msgid "Analyser et nettoyer"
+msgstr "تحليل وتنظيف"
+
+msgid "Analyste de données"
+msgstr "محلل بيانات"
+
+msgid "Ancienne valeur"
+msgstr "القيمة السابقة"
+
+msgid "Annuler"
+msgstr "إلغاء"
+
+msgid "Anomalies restantes (à traiter manuellement)"
+msgstr "الشذوذات المتبقية (تُعالج يدوياً)"
+
+msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
+msgstr "إخفاء هوية البيانات الحساسة (تم استبدال %(count)s بقيم مستعارة)"
+
+msgid "Anonymiser les données sensibles"
+msgstr "إخفاء هوية البيانات الحساسة"
+
+msgid "Anonymiser les données sensibles (noms, emails, téléphones)"
+msgstr "إخفاء هوية البيانات الحساسة (الأسماء والبريد الإلكتروني وأرقام الهواتف)"
+
+msgid "Antananarivo, Madagascar"
+msgstr "Antananarivo, Madagascar"
+
+msgid "Aperçu du fichier nettoyé"
+msgstr "معاينة الملف المنظّف"
+
+msgid "Appel API"
+msgstr "استدعاء API"
+
+msgid "Appel API : %(path)s"
+msgstr "استدعاء API: %(path)s"
+
+msgid "Appels"
+msgstr "الاستدعاءات"
+
+msgid "Application"
+msgstr "التطبيق"
+
+msgid "Après"
+msgstr "بعد"
+
+msgid "Archivage"
+msgstr "الأرشفة"
+
+msgid "Archivage de « %(name)s »"
+msgstr "أرشفة « %(name)s »"
+
+msgid "Archiver"
+msgstr "أرشفة"
+
+msgid "Archives"
+msgstr "???????"
+
+msgid "Archivés"
+msgstr "مؤرشفة"
+
+msgid "Aucun fichier d'origine n'est disponible."
+msgstr "لا يتوفر أي ملف أصلي."
+
+msgid "Aucun fichier expiré à purger."
+msgstr "لا يوجد ملف منتهي الصلاحية للتنظيف."
+
+msgid "Aucun fichier expiré. Votre espace de travail est à jour."
+msgstr "لا يوجد ملف منتهي الصلاحية. مساحة عملك محدّثة."
+
+msgid "Aucun fichier ne correspond à votre recherche."
+msgstr "لا يوجد ملف يطابق بحثك."
+
+msgid "Aucun fichier nettoyé n'est disponible."
+msgstr "لا يتوفر أي ملف منظّف."
+
+msgid "Aucun fichier nettoyé pour le moment."
+msgstr "لا يوجد ملف منظّف حتى الآن."
+
+msgid "Aucun fichier pour le moment."
+msgstr "لا توجد ملفات حتى الآن."
+
+msgid "Aucun fichier sélectionné"
+msgstr "لم يتم اختيار أي ملف"
+
+msgid "Aucun fichier téléversé pour le moment."
+msgstr "لم يتم رفع أي ملف حتى الآن."
+
+msgid "Aucun graphique n'est disponible pour ce jeu de données : il ne contient pas assez de valeurs numériques ou catégorielles exploitables."
+msgstr "لا يتوفر أي رسم بياني لمجموعة البيانات هذه: فهي لا تحتوي على قيم رقمية أو فئوية كافية قابلة للاستخدام."
+
+msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
+msgstr "لا يوجد رمز حتى الآن. أنشئ واحدًا لاستخدام API."
+
+msgid "Aucun journal des modifications n'est disponible."
+msgstr "لا يتوفر أي سجل تغييرات."
+
+msgid "Aucun problème détecté"
+msgstr "لم يُكتشف أي مشكلة"
+
+msgid "Aucun rapport de nettoyage n'est disponible."
+msgstr "لا يتوفر أي تقرير تنظيف."
+
+msgid "Aucun résultat pour cette recherche."
+msgstr "لا نتائج لهذا البحث."
+
+msgid "Aucun webhook configuré. Ajoutez une URL pour être notifié automatiquement."
+msgstr "لم يُعدّ أي webhook. أضف عنوان URL لتلقّي الإشعارات تلقائيًا."
+
+msgid "Aucune activité enregistrée pour le moment."
+msgstr "لا يوجد نشاط مسجّل حتى الآن."
+
+msgid "Aucune activité enregistrée."
+msgstr "لا يوجد نشاط مسجّل."
+
+msgid "Aucune anomalie restante."
+msgstr "لا توجد شذوذات متبقية."
+
+msgid "Aucune anomalie."
+msgstr "لا توجد شذوذات."
+
+msgid "Aucune colonne"
+msgstr "لا أعمدة"
+
+msgid "Aucune correction"
+msgstr "لا تصحيحات"
+
+msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
+msgstr "لا فرق ملحوظ بين الملف الأصلي والملف المنظّف: بياناتك كانت نظيفة بالفعل."
+
+msgid "Aucune dimension mesurée pour le moment."
+msgstr "لم يُقس أي بُعد حتى الآن."
+
+msgid "Aucune donnée"
+msgstr "لا بيانات"
+
+msgid "Aucune donnée nettoyée disponible."
+msgstr "لا تتوفر بيانات منظّفة."
+
+msgid "Aucune modification enregistrée."
+msgstr "لم يتم حفظ أي تعديل."
+
+msgid "Aucune règle personnalisée."
+msgstr "لا توجد قاعدة مخصصة."
+
+msgid "Aucune règle pour le moment. Créez-en une pour la réutiliser sur tous vos fichiers."
+msgstr "لا توجد قواعد حتى الآن. أنشئ واحدة لإعادة استخدامها في جميع ملفاتك."
+
+msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
+msgstr "لم يتم اكتشاف أي قيمة شاذة في الأعمدة الرقمية."
+
+msgid "Aucune valeur « Inconnu »."
+msgstr "لا توجد قيمة «غير معروف»."
+
+msgid "Audit des emails"
+msgstr "تدقيق رسائل البريد الإلكتروني"
+
+msgid "Automatisation"
+msgstr "الأتمتة"
+
+msgid "Autoriser les autres utilisateurs à consulter votre profil."
+msgstr "السماح للمستخدمين الآخرين بالاطلاع على ملفك الشخصي."
+
+msgid "Avant"
+msgstr "قبل"
+
+msgid "Avertissement"
+msgstr "تحذير"
+
+msgid "Basculer la navigation"
+msgstr "تبديل التنقل"
+
+msgid "Basculer le thème"
+msgstr "تبديل السمة"
+
+msgid "Basculer le thème clair / sombre"
+msgstr "تبديل السمة الفاتحة / الداكنة"
+
+msgid "Bienvenue %(username)s !"
+msgstr "مرحباً %(username)s!"
+
+msgid "Bon retour parmi nous"
+msgstr "مرحبًا بعودتك"
+
+msgid "Bonjour"
+msgstr "مرحبًا"
+
+msgid "Borne basse"
+msgstr "الحد الأدنى"
+
+msgid "Borne haute"
+msgstr "الحد الأعلى"
+
+msgid "Boîtes à moustaches"
+msgstr "المخططات الصندوقية"
+
+msgid "Boîtes à moustaches des colonnes numériques"
+msgstr "المخططات الصندوقية للأعمدة الرقمية"
+
+msgid "Branchez DataZen sur vos outils existants."
+msgstr "اربط DataZen بأدواتك الحالية."
+
+msgid "Branchez DataZen à vos outils : Power BI, n8n, scripts Python, tableaux de bord maison."
+msgstr "اربط DataZen بأدواتك: Power BI وn8n وسكربتات Python ولوحات المعلومات الداخلية."
+
+msgid "CSV (séparateur ;)"
+msgstr "CSV (الفاصل ؛)"
+
+msgid "Cadrez votre visage puis cliquez sur « Capturer »."
+msgstr "ضع وجهك داخل الإطار ثم انقر على «التقاط»."
+
+msgid "Calculée sur %(count)s fichier(s) nettoyé(s)."
+msgstr "محسوبة على %(count)s ملف منظّف."
+
+msgid "Canonicalisation du marqueur « Inconnu » (%(count)s corrigé(s))"
+msgstr "توحيد علامة «غير معروف» (تم تصحيح %(count)s)"
+
+msgid "Capturer"
+msgstr "التقاط"
+
+msgid "Ce graphique n'est pas disponible pour ce jeu de données."
+msgstr "هذا المخطط غير متاح لمجموعة البيانات هذه."
+
+msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
+msgstr "لقد تم استخدام رابط إعادة التعيين هذا مسبقًا أو انتهت صلاحيته."
+
+msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
+msgstr "هذا الرابط صالح لمرة واحدة فقط. إذا لم تكن مصدر هذا الطلب، تجاهل هذه الرسالة ببساطة: ستبقى كلمة مرورك دون تغيير. — DataZen"
+
+msgid "Ce profil n'est pas public."
+msgstr "هذا الملف الشخصي غير عام."
+
+msgid "Ce que le nettoyage a réellement changé dans votre fichier."
+msgstr "ما غيّره التنظيف فعليًا في ملفك."
+
+msgid "Cellules manquantes"
+msgstr "الخلايا المفقودة"
+
+msgid "Ces %(count)s fichier(s) dépassent la durée de conservation de %(days)s jours. Ils ne sont pas supprimés automatiquement tant que la purge automatique reste désactivée."
+msgstr "يتجاوز %(count)s ملف مدة الحفظ البالغة %(days)s يومًا، ولا يُحذف تلقائيًا ما دام التنظيف التلقائي معطّلًا."
+
+msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
+msgstr "تغذّي هذه العدّادات البحث الشامل والاختصارات أدناه."
+
+msgid "Champ"
+msgstr "الحقل"
+
+msgid "Champs différents :"
+msgstr "الحقول المختلفة:"
+
+msgid "Champs identiques :"
+msgstr "الحقول المتطابقة:"
+
+msgid "Champs inconnus :"
+msgstr "الحقول غير المعروفة:"
+
+msgid "Changer de langue"
+msgstr "تغيير اللغة"
+
+msgid "Changer ma photo de profil"
+msgstr "تغيير صورة ملفي الشخصي"
+
+msgid "Changer mon mot de passe"
+msgstr "تغيير كلمة المرور"
+
+msgid "Changer mon mot de passe — DataZen"
+msgstr "تغيير كلمة المرور — DataZen"
+
+msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
+msgstr "حمّل بياناتك بصيغة <code>.csv</code> أو <code>.xlsx</code> أو <code>.xls</code>، أيًا كان الفاصل."
+
+msgid "Choisir la langue du site"
+msgstr "اختيار لغة الموقع"
+
+msgid "Choisir le format"
+msgstr "اختيار الصيغة"
+
+msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
+msgstr "اختر ملف CSV أو Excel (.csv، .xlsx، .xls)."
+
+msgid "Choisissez un fichier à analyser"
+msgstr "اختر ملفًا للتحليل"
+
+msgid "Choisissez un mot de passe long et unique. Vous resterez connecté après la modification."
+msgstr "اختر كلمة مرور طويلة وفريدة. ستبقى متصلًا بعد التغيير."
+
+msgid "Choisissez un mot de passe solide : au moins 8 caractères, ni trop courant, ni entièrement numérique."
+msgstr "اختر كلمة مرور قوية: 8 أحرف على الأقل، ليست شائعة جدًا ولا رقمية بالكامل."
+
+msgid "Choisissez une colonne unique (ex. email) pour fusionner les variantes d'un même enregistrement (Alice / alice). Laissez vide pour ne supprimer que les lignes 100 % identiques."
+msgstr "اختر عمودًا فريدًا (مثل البريد الإلكتروني) لدمج صيغ السجل نفسه (Alice / alice). اتركه فارغًا لحذف الصفوف المتطابقة تمامًا فقط."
+
+msgid "Clair"
+msgstr "فاتح"
+
+msgid "Cliquer pour choisir une photo sur mon appareil"
+msgstr "انقر لاختيار صورة من جهازي"
+
+msgid "Cliquer pour trier"
+msgstr "انقر للفرز"
+
+msgid "Cliquez sur l'avatar ci-dessus pour choisir une image, ou sur l'icône appareil photo pour en prendre une instantanément. JPEG, PNG, WebP ou GIF — 5 Mo maximum."
+msgstr "انقر على الصورة الرمزية أعلاه لاختيار صورة، أو على أيقونة الكاميرا لالتقاط واحدة فورًا. JPEG أو PNG أو WebP أو GIF — 5 ميغابايت كحد أقصى."
+
+msgid "Clé de signature"
+msgstr "مفتاح التوقيع"
+
+msgid "Clé de signature HMAC (facultative)"
+msgstr "مفتاح توقيع HMAC (اختياري)"
+
+msgid "Code de langue (fr, en, es…). Vide = langue de l'application."
+msgstr "رمز اللغة (fr، en، es…). فارغ = لغة التطبيق."
+
+msgid "Coefficient de Pearson"
+msgstr "معامل بيرسون"
+
+msgid "Colonne"
+msgstr "العمود"
+
+msgid "Colonne ciblée"
+msgstr "العمود المستهدف"
+
+msgid "Colonne clé pour la déduplication"
+msgstr "عمود المفتاح لإزالة التكرار"
+
+msgid "Colonnes"
+msgstr "الأعمدة"
+
+msgid "Colonnes améliorées"
+msgstr "أعمدة مُحسّنة"
+
+msgid "Colonnes analysées"
+msgstr "أعمدة محلّلة"
+
+msgid "Colonnes différentes"
+msgstr "الأعمدة المختلفة"
+
+msgid "Colonnes différentes :"
+msgstr "الأعمدة المختلفة:"
+
+msgid "Colonnes identiques :"
+msgstr "الأعمدة المتطابقة:"
+
+msgid "Colonnes inconnues :"
+msgstr "الأعمدة غير المعروفة:"
+
+msgid "Colonnes stables"
+msgstr "أعمدة مستقرّة"
+
+msgid "Colonnes à vérifier"
+msgstr "أعمدة تستحق المراجعة"
+
+msgid "Combien de fichiers se trouvent dans chaque tranche de score."
+msgstr "عدد الملفات في كل نطاق من النقاط."
+
+msgid "Comparaison"
+msgstr "المقارنة"
+
+msgid "Comparaison avant / après — %(name)s"
+msgstr "مقارنة قبل / بعد — %(name)s"
+
+msgid "Complétion du profil"
+msgstr "اكتمال الملف الشخصي"
+
+msgid "Complétude"
+msgstr "الاكتمال"
+
+msgid "Complétude par colonne"
+msgstr "الاكتمال حسب العمود"
+
+msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
+msgstr "الاكتمال · الصحة · التفرد · الاتساق · المطابقة"
+
+msgid "Composantes du score (après nettoyage)"
+msgstr "مكونات النتيجة (بعد التنظيف)"
+
+msgid "Compte"
+msgstr "الحساب"
+
+msgid "Compte actif"
+msgstr "حساب نشط"
+
+msgid "Condensé"
+msgstr "موجز"
+
+msgid "Confiance"
+msgstr "الثقة"
+
+msgid "Confirmer la décision"
+msgstr "تأكيد القرار"
+
+msgid "Connectez-vous pour retrouver vos fichiers."
+msgstr "سجّل الدخول للوصول إلى ملفاتك."
+
+msgid "Connexion"
+msgstr "تسجيل الدخول"
+
+msgid "Connexion — DataZen"
+msgstr "تسجيل الدخول — DataZen"
+
+msgid "Consultation des graphiques"
+msgstr "عرض الرسوم البيانية"
+
+msgid "Consultation du rapport"
+msgstr "عرض التقرير"
+
+msgid "Continuer / valider une étape"
+msgstr "المتابعة / تأكيد خطوة"
+
+msgid "Contribution des cinq dimensions pondérées du score."
+msgstr "مساهمة الأبعاد الخمسة المرجّحة في النتيجة."
+
+msgid "Contrôle de cohérence"
+msgstr "فحص الاتساق"
+
+msgid "Conversion des compteurs en entiers (%(count)s converti(s))"
+msgstr "تحويل العدادات إلى أعداد صحيحة (تم تحويل %(count)s)"
+
+msgid "Conversion des montants (%(count)s converti(s))"
+msgstr "تحويل المبالغ (تم تحويل %(count)s)"
+
+msgid "Convertir les montants"
+msgstr "تحويل المبالغ"
+
+msgid "Convertir les montants en valeurs numériques"
+msgstr "تحويل المبالغ إلى قيم رقمية"
+
+msgid "Copier"
+msgstr "نسخ"
+
+msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
+msgstr "انسخه الآن: لن يُعرض مرة أخرى حفاظًا على أمانك."
+
+msgid "Corrections"
+msgstr "التصحيحات"
+
+msgid "Corrections appliquées"
+msgstr "التصحيحات المطبَّقة"
+
+msgid "Corrélations de Pearson entre les colonnes numériques."
+msgstr "ارتباطات Pearson بين الأعمدة الرقمية."
+
+msgid "Création de jeton"
+msgstr "إنشاء رمز"
+
+msgid "Création de la règle « %(name)s »"
+msgstr "إنشاء القاعدة « %(name)s »"
+
+msgid "Création de règle"
+msgstr "إنشاء قاعدة"
+
+msgid "Création du jeton « %(name)s »"
+msgstr "إنشاء الرمز « %(name)s »"
+
+msgid "Créer la règle"
+msgstr "إنشاء القاعدة"
+
+msgid "Créer le jeton"
+msgstr "إنشاء الرمز"
+
+msgid "Créer le webhook"
+msgstr "إنشاء webhook"
+
+msgid "Créer un compte"
+msgstr "إنشاء حساب"
+
+msgid "Créer une règle"
+msgstr "إنشاء قاعدة"
+
+msgid "Créez une règle une fois, réutilisez-la sur tous vos fichiers."
+msgstr "أنشئ قاعدة مرة واحدة وأعد استخدامها في جميع ملفاتك."
+
+msgid "Créez votre compte"
+msgstr "أنشئ حسابك"
+
+msgid "Data is consistent: each value is valid or unknown"
+msgstr "البيانات متسقة: كل قيمة صالحة أو غير معروفة"
+
+msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
+msgstr "DataZen — تطبيق تنظيف البيانات (DataClean Pro) · ©"
+
+msgid "DataZen — Nettoyage de données"
+msgstr "DataZen — تنظيف البيانات"
+
+msgid "Date"
+msgstr "التاريخ"
+
+msgid "Date d'expiration"
+msgstr "تاريخ الانتهاء"
+
+msgid "Date invalide"
+msgstr "تاريخ غير صالح"
+
+msgid "De l'import brut au rapport de qualité, DataZen couvre toute la chaîne."
+msgstr "من الاستيراد الخام إلى تقرير الجودة، يغطي DataZen السلسلة كاملة."
+
+msgid "Demander un nouveau lien"
+msgstr "طلب رابط جديد"
+
+msgid "Dernier appel"
+msgstr "آخر استدعاء"
+
+msgid "Dernier code HTTP"
+msgstr "آخر رمز HTTP"
+
+msgid "Dernier déclenchement"
+msgstr "آخر تشغيل"
+
+msgid "Dernier usage"
+msgstr "آخر استعمال"
+
+msgid "Derniers fichiers"
+msgstr "أحدث الملفات"
+
+msgid "Dernière connexion"
+msgstr "آخر تسجيل دخول"
+
+msgid "Dernière utilisation"
+msgstr "آخر استخدام"
+
+msgid "Dernières règles"
+msgstr "أحدث القواعد"
+
+msgid "Des incohérences ont été détectées entre les statistiques et les données."
+msgstr "تم اكتشاف حالات عدم اتساق بين الإحصاءات والبيانات."
+
+msgid "Dimension"
+msgstr "البُعد"
+
+msgid "Dimensions de qualité"
+msgstr "أبعاد الجودة"
+
+msgid "Dispersion et valeurs extrêmes des colonnes numériques."
+msgstr "التشتت والقيم المتطرفة في الأعمدة الرقمية."
+
+msgid "Distributions des colonnes numériques"
+msgstr "توزيعات الأعمدة الرقمية"
+
+msgid "Distributions numériques"
+msgstr "التوزيعات الرقمية"
+
+msgid "Django · Pandas · Bootstrap"
+msgstr "Django · Pandas · Bootstrap"
+
+msgid "Doublon par similarité"
+msgstr "تكرار بالتشابه"
+
+msgid "Doublon potentiel"
+msgstr "تكرار محتمل"
+
+msgid "Doublons"
+msgstr "التكرارات"
+
+msgid "Doublons exacts"
+msgstr "التكرارات المطابقة"
+
+msgid "Doublons exacts :"
+msgstr "التكرارات التامة:"
+
+msgid "Doublons exacts restants :"
+msgstr "التكرارات التامة المتبقية:"
+
+msgid "Doublons par similarité :"
+msgstr "التكرارات بالتشابه:"
+
+msgid "Doublons potentiels"
+msgstr "التكرارات المحتملة"
+
+msgid "Doublons potentiels (⚠️ à vérifier) :"
+msgstr "التكرارات المحتملة (⚠️ للمراجعة):"
+
+msgid "Doublons potentiels :"
+msgstr "التكرارات المحتملة:"
+
+msgid "Doublons potentiels restants :"
+msgstr "التكرارات المحتملة المتبقية:"
+
+msgid "Doublons restants (exacts + potentiels)"
+msgstr "التكرارات المتبقية (التامة + المحتملة)"
+
+msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
+msgstr "التكرارات، المسافات الزائدة، البريد الإلكتروني غير الصحيح، التواريخ غير المتسقة… يكتشف DataZen المشكلات ويصحح كل شيء تلقائيًا في ثوانٍ."
+
+msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
+msgstr "التكرارات والقيم المفقودة والمسافات وحالة الأحرف والبريد الإلكتروني والهواتف والتواريخ والرواتب — كلها موحّدة."
+
+msgid "Durée de conservation"
+msgstr "مدة الحفظ"
+
+msgid "Durée de conservation (jours)"
+msgstr "مدة الحفظ (بالأيام)"
+
+msgid "Décision appliquée avec succès."
+msgstr "تم تطبيق القرار بنجاح."
+
+msgid "Déjà un compte ?"
+msgstr "هل لديك حساب بالفعل؟"
+
+msgid "Désactiver"
+msgstr "تعطيل"
+
+msgid "Désactivée"
+msgstr "معطّلة"
+
+msgid "Détail"
+msgstr "التفاصيل"
+
+msgid "Détail par colonne"
+msgstr "التفصيل حسب العمود"
+
+msgid "Détail par semaine"
+msgstr "التفصيل حسب الأسبوع"
+
+msgid "Détails techniques"
+msgstr "تفاصيل تقنية"
+
+msgid "E-mail envoyé — DataZen"
+msgstr "تم إرسال البريد الإلكتروني — DataZen"
+
+msgid "Effacer"
+msgstr "مسح"
+
+msgid "Effectif"
+msgstr "العدد"
+
+msgid "Email invalide"
+msgstr "بريد إلكتروني غير صالح"
+
+msgid "Email nettoyé"
+msgstr "البريد الإلكتروني المنظّف"
+
+msgid "Email original"
+msgstr "البريد الإلكتروني الأصلي"
+
+msgid "Emails :"
+msgstr "رسائل البريد الإلكتروني:"
+
+msgid "Emails corrected (change log vs counter)"
+msgstr "رسائل البريد المصححة (سجل التغييرات مقابل العدّاد)"
+
+msgid "Emails invalides :"
+msgstr "رسائل البريد الإلكتروني غير الصالحة:"
+
+msgid "Emails invalides restants :"
+msgstr "رسائل البريد الإلكتروني غير الصالحة المتبقية:"
+
+msgid "Emails restants :"
+msgstr "رسائل البريد الإلكتروني المتبقية:"
+
+msgid "Emails: valid + invalid + unknown = total"
+msgstr "رسائل البريد الإلكتروني: صالحة + غير صالحة + غير معروفة = الإجمالي"
+
+msgid "En attente"
+msgstr "قيد الانتظار"
+
+msgid "En cours de traitement"
+msgstr "قيد المعالجة"
+
+msgid "En erreur"
+msgstr "فشل"
+
+msgid "En échec"
+msgstr "فاشل"
+
+msgid "Enregistrer"
+msgstr "حفظ"
+
+msgid "Enregistrer le nouveau mot de passe"
+msgstr "حفظ كلمة المرور الجديدة"
+
+msgid "Enregistrer les modifications"
+msgstr "حفظ التغييرات"
+
+msgid "Entrée"
+msgstr "إدخال"
+
+msgid "Entrées"
+msgstr "المدخلات"
+
+msgid "Envoyer le lien de réinitialisation"
+msgstr "إرسال رابط إعادة التعيين"
+
+msgid "Erreur"
+msgstr "خطأ"
+
+msgid "Erreur de nettoyage"
+msgstr "خطأ في التنظيف"
+
+msgid "Erreurs de format"
+msgstr "أخطاء التنسيق"
+
+msgid "Erreurs restantes"
+msgstr "الأخطاء المتبقية"
+
+msgid "Excel (.xlsx)"
+msgstr "Excel (.xlsx)"
+
+msgid "Expiration"
+msgstr "الانتهاء"
+
+msgid "Expiré"
+msgstr "منتهي الصلاحية"
+
+msgid "Explication du score"
+msgstr "شرح النتيجة"
+
+msgid "Export & traçabilité"
+msgstr "التصدير والتتبع"
+
+msgid "Fermer"
+msgstr "إغلاق"
+
+msgid "Fermer la fenêtre active"
+msgstr "إغلاق النافذة النشطة"
+
+msgid "Fichier"
+msgstr "ملف"
+
+msgid "Fichier de données"
+msgstr "ملف البيانات"
+
+msgid "Fichier nettoyé"
+msgstr "الملف المنظّف"
+
+msgid "Fichier supprimé"
+msgstr "ملف محذوف"
+
+msgid "Fichier téléversé"
+msgstr "ملف مرفوع"
+
+msgid "Fichier téléversé avec succès."
+msgstr "تم رفع الملف بنجاح."
+
+msgid "Fichier « %(name)s » archivé."
+msgstr "تمت أرشفة الملف « %(name)s »."
+
+msgid "Fichier « %(name)s » restauré."
+msgstr "تمت استعادة الملف « %(name)s »."
+
+msgid "Fichier « %(name)s » supprimé."
+msgstr "تم حذف الملف «%(name)s»."
+
+msgid "Fichiers"
+msgstr "الملفات"
+
+msgid "Fichiers archivés"
+msgstr "ملفات مؤرشفة"
+
+msgid "Fichiers au total"
+msgstr "إجمالي الملفات"
+
+msgid "Fichiers de données"
+msgstr "ملفات البيانات"
+
+msgid "Fichiers expirés"
+msgstr "ملفات منتهية الصلاحية"
+
+msgid "Fichiers nettoyés avant le %(cutoff)s considérés comme expirés."
+msgstr "تُعد الملفات المنظّفة قبل %(cutoff)s منتهية الصلاحية."
+
+msgid "Fichiers nettoyés plus anciens que cette durée (0 = conservation illimitée)."
+msgstr "الملفات المنظّفة الأقدم من هذه المدة (0 = حفظ غير محدود)."
+
+msgid "Fichiers récents"
+msgstr "الملفات الأخيرة"
+
+msgid "Fil d'Ariane"
+msgstr "مسار التنقل"
+
+msgid "Filtrer"
+msgstr "تصفية"
+
+msgid "Filtrer les lignes du tableau"
+msgstr "تصفية صفوف الجدول"
+
+msgid "Filtrer par action"
+msgstr "تصفية حسب الإجراء"
+
+msgid "Filtrer par statut"
+msgstr "تصفية حسب الحالة"
+
+msgid "Filtrer un tableau"
+msgstr "تصفية جدول"
+
+msgid "Fonction"
+msgstr "الوظيفة"
+
+msgid "Format de date"
+msgstr "تنسيق التاريخ"
+
+msgid "Format de la charge utile"
+msgstr "تنسيق البيانات المُرسلة"
+
+msgid "Formats acceptés : <code>.csv</code>, <code>.xlsx</code>, <code>.xls</code> — jusqu'à 20 Mo."
+msgstr "الصيغ المقبولة: <code>.csv</code> و<code>.xlsx</code> و<code>.xls</code> — حتى 20 ميغابايت."
+
+msgid "Formats de dates (%(column)s) :"
+msgstr "تنسيقات التواريخ (%(column)s):"
+
+msgid "Formats standardized (phones, dates)"
+msgstr "التنسيقات الموحّدة (الهواتف، التواريخ)"
+
+msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
+msgstr "وفّر وقتك: كل ما يهم في DataZen على مسافة تركيبة مفاتيح."
+
+msgid "Graphiques"
+msgstr "الرسوم البيانية"
+
+msgid "Graphiques générés avec matplotlib et seaborn à partir des données nettoyées."
+msgstr "رسوم بيانية مُنشأة باستخدام matplotlib و seaborn من البيانات المنظَّفة."
+
+msgid "Graphiques générés côté serveur avec"
+msgstr "رسوم بيانية تُنشأ على الخادم باستخدام"
+
+msgid "Graphiques statistiques générés avec <strong>matplotlib</strong> et <strong>seaborn</strong> à partir des données nettoyées."
+msgstr "رسوم بيانية إحصائية تُنشأ باستخدام <strong>matplotlib</strong> و<strong>seaborn</strong> من البيانات المنظّفة."
+
+msgid "Gratuit, immédiat, et vos fichiers restent privés."
+msgstr "مجاني وفوري، وتبقى ملفاتك خاصة."
+
+msgid "Gérer les règles…"
+msgstr "إدارة القواعد…"
+
+msgid "Histogrammes des colonnes numériques détectées."
+msgstr "مدرجات تكرار الأعمدة الرقمية المكتشفة."
+
+msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
+msgstr "سجل زمني لإجراءاتك: الرفع والتنظيف والتصدير وAPI."
+
+msgid "Identité"
+msgstr "الهوية"
+
+msgid "Ignorer la casse (Alice = alice)"
+msgstr "تجاهل حالة الأحرف (Alice = alice)"
+
+msgid "Import CSV & Excel"
+msgstr "استيراد CSV و Excel"
+
+msgid "Impossible d'appliquer la décision : %(error)s"
+msgstr "تعذّر تطبيق القرار: %(error)s"
+
+msgid "Impossible de convertir le fichier : %(error)s"
+msgstr "تعذّر تحويل الملف: %(error)s"
+
+msgid "Impossible de générer le PDF : %(error)s"
+msgstr "تعذّر إنشاء PDF: %(error)s"
+
+msgid "Impossible de lire ce fichier : %(error)s"
+msgstr "تعذّر قراءة هذا الملف: %(error)s"
+
+msgid "Impossible de lire le fichier : %(error)s"
+msgstr "تعذّر قراءة الملف: %(error)s"
+
+msgid "Impossible de lire le rapport : %(error)s"
+msgstr "تعذّر قراءة التقرير: %(error)s"
+
+msgid "Inactif"
+msgstr "غير نشط"
+
+msgid "Inactive"
+msgstr "غير نشط"
+
+msgid "Inconnu"
+msgstr "غير معروف"
+
+msgid "Indicateur"
+msgstr "المؤشر"
+
+msgid "Indicateurs comparés"
+msgstr "المؤشرات المقارنة"
+
+msgid "Indiquez votre adresse e-mail : nous vous enverrons un lien pour choisir un nouveau mot de passe."
+msgstr "أدخل عنوان بريدك الإلكتروني: سنرسل لك رابطًا لاختيار كلمة مرور جديدة."
+
+msgid "Information"
+msgstr "معلومة"
+
+msgid "Informations professionnelles"
+msgstr "المعلومات المهنية"
+
+msgid "Inscription — DataZen"
+msgstr "إنشاء حساب — DataZen"
+
+msgid "Intégration"
+msgstr "التكامل"
+
+msgid "Invalid emails are not counted as unknown or missing"
+msgstr "لا تُحتسب رسائل البريد غير الصالحة كقيم غير معروفة أو مفقودة"
+
+msgid "JJ/MM/AAAA"
+msgstr "JJ/MM/AAAA"
+
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+msgid "Jamais appelé"
+msgstr "لم يُستدعَ قط"
+
+msgid "Jauge du score de qualité global (sur 100)."
+msgstr "مؤشر النتيجة الإجمالية للجودة (من 100)."
+
+msgid "Jeton"
+msgstr "رمز"
+
+msgid "Jeton créé. Copiez-le maintenant : il ne sera plus affiché."
+msgstr "تم إنشاء الرمز. انسخه الآن: لن يُعرض مرة أخرى."
+
+msgid "Jeton d'API"
+msgstr "رمز API"
+
+msgid "Jeton « %(name)s » révoqué."
+msgstr "تم إلغاء الرمز « %(name)s »."
+
+msgid "Jetons"
+msgstr "الرموز"
+
+msgid "Jetons d'API"
+msgstr "رموز API"
+
+msgid "Journal d'activité"
+msgstr "سجل النشاط"
+
+msgid "Journal d'activité — DataZen"
+msgstr "سجل النشاط — DataZen"
+
+msgid "Journal des modifications"
+msgstr "سجل التغييرات"
+
+msgid "Journal des modifications (extrait)"
+msgstr "سجل التغييرات (مقتطف)"
+
+msgid "L'historique horodaté de chaque opération."
+msgstr "السجل الزمني لكل عملية."
+
+msgid "La comparaison n'est pas disponible : lancez d'abord un nettoyage sur ce fichier."
+msgstr "المقارنة غير متاحة: شغّل أولًا عملية تنظيف على هذا الملف."
+
+msgid "La confirmation ne correspond pas à votre nom d'utilisateur : suppression annulée."
+msgstr "التأكيد لا يطابق اسم المستخدم الخاص بك: تم إلغاء الحذف."
+
+msgid "La suppression du compte efface définitivement vos fichiers, vos règles et votre profil. Cette action est irréversible."
+msgstr "يؤدي حذف الحساب إلى محو ملفاتك وقواعدك وملفك الشخصي نهائيًا. لا يمكن التراجع عن هذا الإجراء."
+
+msgid "Laisser vide pour appliquer à toutes les colonnes."
+msgstr "اتركه فارغاً لتطبيقه على جميع الأعمدة."
+
+msgid "Laissez vide pour un jeton sans expiration."
+msgstr "اتركه فارغًا لرمز بلا انتهاء صلاحية."
+
+msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
+msgstr "ابدأ أولاً بعملية تنظيف للوصول إلى التحليل الاستكشافي."
+
+msgid "Lancez d'abord un nettoyage pour générer un rapport PDF."
+msgstr "شغّل أولًا عملية تنظيف لإنشاء تقرير PDF."
+
+msgid "Langue de l'interface"
+msgstr "لغة الواجهة"
+
+msgid "Le compte « %(username)s » a été supprimé."
+msgstr "تم حذف الحساب «%(username)s»."
+
+msgid "Le fichier ne doit pas dépasser 20 Mo."
+msgstr "يجب ألا يتجاوز حجم الملف 20 ميغابايت."
+
+msgid "Le journal conserve également %(days)s jours d'historique."
+msgstr "يحفظ السجل أيضًا %(days)s يومًا من التاريخ."
+
+msgid "Le nettoyage a échoué."
+msgstr "فشل التنظيف."
+
+msgid "Le nom d'hôte du webhook est introuvable."
+msgstr "تعذّر العثور على اسم مضيف الـ webhook."
+
+msgid "Le nom d'hôte du webhook pointe vers une adresse interne."
+msgstr "اسم مضيف الـ webhook يشير إلى عنوان داخلي."
+
+msgid "Le nom d'hôte est absent de l'URL."
+msgstr "اسم المضيف مفقود في عنوان URL."
+
+msgid "Le port est invalide."
+msgstr "المنفذ غير صالح."
+
+msgid "Le thème « Système » suit les réglages de votre appareil."
+msgstr "تتبع سمة «النظام» إعدادات جهازك."
+
+msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
+msgstr "تتم المعالجة في الخلفية. يتم تحديث هذه الصفحة تلقائيًا عند الانتهاء."
+
+msgid "Les adresses internes sont refusées."
+msgstr "العناوين الداخلية مرفوضة."
+
+msgid "Les adresses locales sont refusées."
+msgstr "العناوين المحلية مرفوضة."
+
+msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
+msgstr "يتم الإبلاغ عن التكرارات دون حذفها تلقائيًا. حدّد هذا المربع لحذفها صراحةً."
+
+msgid "Les fichiers archivés restent accessibles et téléchargeables."
+msgstr "تظل الملفات المؤرشفة متاحة وقابلة للتنزيل."
+
+msgid "Les fichiers expirés seront supprimés automatiquement à votre prochaine visite."
+msgstr "ستُحذف الملفات منتهية الصلاحية تلقائيًا في زيارتك القادمة."
+
+msgid "Les fichiers nettoyés sont archivés après 30 jours."
+msgstr "تتم أرشفة الملفات المنظّفة بعد 30 يوماً."
+
+msgid "Les fichiers nettoyés sont archivés puis purgés après cette durée (0 = conservation illimitée)."
+msgstr "تُؤرشف الملفات المنظّفة ثم تُحذف بعد هذه المدة (0 = حفظ غير محدود)."
+
+msgid "Les identifiants intégrés à l'URL sont refusés."
+msgstr "بيانات الاعتماد المضمّنة في عنوان URL مرفوضة."
+
+msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
+msgstr "المسارات المتاحة: /api/، /api/datasets/، /api/datasets/<id>/، /api/stats/."
+
+msgid "Les statistiques affichées correspondent aux données réelles."
+msgstr "تتوافق الإحصاءات المعروضة مع البيانات الفعلية."
+
+msgid "Lien invalide"
+msgstr "رابط غير صالح"
+
+msgid "Ligne"
+msgstr "الصف"
+
+msgid "Lignes"
+msgstr "صفوف"
+
+msgid "Lignes après nettoyage"
+msgstr "الصفوف بعد التنظيف"
+
+msgid "Lignes du journal des modifications"
+msgstr "أسطر سجل التعديلات"
+
+msgid "Lignes traitées"
+msgstr "الأسطر المعالَجة"
+
+msgid "Localisation"
+msgstr "الموقع"
+
+msgid "MM/JJ/AAAA"
+msgstr "MM/JJ/AAAA"
+
+msgid "Masquer"
+msgstr "إخفاء"
+
+msgid "Masquer le mot de passe"
+msgstr "إخفاء كلمة المرور"
+
+msgid "Matrice de corrélation"
+msgstr "مصفوفة الارتباط"
+
+msgid "Matrice de corrélation (Pearson)"
+msgstr "مصفوفة الارتباط (بيرسون)"
+
+msgid "Max"
+msgstr "الأقصى"
+
+msgid "Maîtrisez la durée de vie de vos données."
+msgstr "تحكّم في دورة حياة بياناتك."
+
+msgid "Membre depuis"
+msgstr "عضو منذ"
+
+msgid "Mes règles"
+msgstr "قواعدي"
+
+msgid "Mes règles de nettoyage"
+msgstr "قواعد التنظيف الخاصة بي"
+
+msgid "Mesuré avant et après le nettoyage."
+msgstr "مقيسة قبل التنظيف وبعده."
+
+msgid "Mettre à jour le mot de passe"
+msgstr "تحديث كلمة المرور"
+
+msgid "Min"
+msgstr "الأدنى"
+
+msgid "Missing values by column"
+msgstr "القيم المفقودة حسب العمود"
+
+msgid "Mode"
+msgstr "الوضع"
+
+msgid "Modifier mes informations"
+msgstr "تعديل معلوماتي"
+
+msgid "Modifiez votre mot de passe régulièrement et exportez vos données quand vous le souhaitez."
+msgstr "غيّر كلمة مرورك بانتظام وصدّر بياناتك وقتما تشاء."
+
+msgid "Mon profil"
+msgstr "ملفي الشخصي"
+
+msgid "Mon profil — DataZen"
+msgstr "ملفي الشخصي — DataZen"
+
+msgid "Mot de passe"
+msgstr "كلمة المرور"
+
+msgid "Mot de passe modifié"
+msgstr "تم تغيير كلمة المرور"
+
+msgid "Mot de passe modifié — DataZen"
+msgstr "تم تغيير كلمة المرور — DataZen"
+
+msgid "Mot de passe oublié ?"
+msgstr "هل نسيت كلمة المرور؟"
+
+msgid "Mot de passe oublié — DataZen"
+msgstr "نسيت كلمة المرور — DataZen"
+
+msgid "Motif"
+msgstr "السبب"
+
+msgid "Motif attendu"
+msgstr "النمط المتوقع"
+
+msgid "Moyenne"
+msgstr "المتوسط"
+
+msgid "Médiane"
+msgstr "الوسيط"
+
+msgid "Méthode"
+msgstr "الطريقة"
+
+msgid "Nettoyage"
+msgstr "التنظيف"
+
+msgid "Nettoyage du fichier « %(name)s »"
+msgstr "تنظيف الملف « %(name)s »"
+
+msgid "Nettoyage intelligent"
+msgstr "تنظيف ذكي"
+
+msgid "Nettoyage intelligent · CSV & Excel"
+msgstr "تنظيف ذكي · CSV و Excel"
+
+msgid "Nettoyage lancé en arrière-plan. La page se met à jour automatiquement."
+msgstr "تم بدء التنظيف في الخلفية. تُحدَّث الصفحة تلقائياً."
+
+msgid "Nettoyage lancé sur « %(name)s »"
+msgstr "بدأ تنظيف « %(name)s »"
+
+msgid "Nettoyage terminé"
+msgstr "اكتمل التنظيف"
+
+msgid "Nettoyage terminé : « %(name)s »"
+msgstr "اكتمل التنظيف: « %(name)s »"
+
+msgid "Nettoyer"
+msgstr "تنظيف"
+
+msgid "Nettoyer un fichier"
+msgstr "تنظيف ملف"
+
+msgid "Nettoyez, normalisez et fiabilisez vos fichiers CSV et Excel en quelques clics — sans écrire une ligne de code."
+msgstr "نظّف ملفاتك بصيغة CSV و Excel ووحّدها واجعلها موثوقة بنقرات قليلة — دون كتابة سطر واحد من التعليمات البرمجية."
+
+msgid "Nettoyé"
+msgstr "منظّف"
+
+msgid "Nettoyé le"
+msgstr "نُظّف في"
+
+msgid "Nettoyés"
+msgstr "منظَّفة"
+
+msgid "Niveau"
+msgstr "المستوى"
+
+msgid "No exact duplicates"
+msgstr "لا توجد تكرارات مطابقة"
+
+msgid "No missing or unknown values"
+msgstr "لا توجد قيم مفقودة أو غير معروفة"
+
+msgid "No potential duplicates"
+msgstr "لا توجد تكرارات محتملة"
+
+msgid "Nom"
+msgstr "الاسم"
+
+msgid "Nom d'utilisateur"
+msgstr "اسم المستخدم"
+
+msgid "Nom de la règle"
+msgstr "اسم القاعدة"
+
+msgid "Nom de votre entreprise ou équipe"
+msgstr "اسم شركتك أو فريقك"
+
+msgid "Nom du jeton"
+msgstr "اسم الرمز"
+
+msgid "Nombre d'appels"
+msgstr "عدد الاستدعاءات"
+
+msgid "Nombre d'occurrences"
+msgstr "عدد التكرارات"
+
+msgid "Nombre de nettoyages et score moyen par semaine."
+msgstr "عدد عمليات التنظيف ومتوسط النقاط أسبوعيًا."
+
+msgid "Nombre de valeurs aberrantes"
+msgstr "عدد القيم الشاذة"
+
+msgid "Nombre de valeurs aberrantes (méthode IQR) par colonne."
+msgstr "عدد القيم الشاذة (طريقة IQR) لكل عمود."
+
+msgid "Normalisation de la casse (noms, libellés, villes)"
+msgstr "توحيد حالة الأحرف (الأسماء والتسميات والمدن)"
+
+msgid "Normalisation des catégories (%(count)s corrigée(s))"
+msgstr "توحيد الفئات (تم تصحيح %(count)s)"
+
+msgid "Normalisation des choix oui/non (%(count)s corrigé(s))"
+msgstr "توحيد خيارات نعم/لا (تم تصحيح %(count)s)"
+
+msgid "Normalisation des codes/références (%(count)s corrigé(s))"
+msgstr "توحيد الرموز/المراجع (تم تصحيح %(count)s)"
+
+msgid "Normalisation des dates (%(count)s corrigée(s))"
+msgstr "توحيد التواريخ (تم تصحيح %(count)s)"
+
+msgid "Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "توحيد أرقام الهواتف (تم تصحيح %(count)s)"
+
+msgid "Normaliser la casse"
+msgstr "توحيد حالة الأحرف"
+
+msgid "Normaliser la casse (emails en minuscules, noms en Capitales)"
+msgstr "توحيد حالة الأحرف (البريد الإلكتروني بأحرف صغيرة والأسماء بأحرف كبيرة)"
+
+msgid "Normaliser les dates"
+msgstr "توحيد التواريخ"
+
+msgid "Normaliser les dates (AAAA-MM-JJ)"
+msgstr "توحيد التواريخ (YYYY-MM-DD)"
+
+msgid "Normaliser les emails"
+msgstr "توحيد رسائل البريد الإلكتروني"
+
+msgid "Normaliser les téléphones"
+msgstr "توحيد أرقام الهواتف"
+
+msgid "Normaliser les téléphones (06XXXXXXXX)"
+msgstr "توحيد أرقام الهواتف (06XXXXXXXX)"
+
+msgid "Notifications par email"
+msgstr "إشعارات البريد الإلكتروني"
+
+msgid "Nouveau jeton d API"
+msgstr "رمز API جديد"
+
+msgid "Nouveau mot de passe"
+msgstr "كلمة المرور الجديدة"
+
+msgid "Nouveau mot de passe — DataZen"
+msgstr "كلمة المرور الجديدة — DataZen"
+
+msgid "Nouvelle photo prête"
+msgstr "الصورة الجديدة جاهزة"
+
+msgid "Nouvelle valeur"
+msgstr "القيمة الجديدة"
+
+msgid "Opération"
+msgstr "العملية"
+
+msgid "Opérations de nettoyage"
+msgstr "عمليات التنظيف"
+
+msgid "Organisation"
+msgstr "المؤسسة"
+
+msgid "Outils"
+msgstr "الأدوات"
+
+msgid "Outliers"
+msgstr "القيم الشاذة"
+
+msgid "Ouvrir"
+msgstr "فتح"
+
+msgid "Ouvrir la recherche globale"
+msgstr "فتح البحث الشامل"
+
+msgid "Ouvrir le résultat sélectionné"
+msgstr "فتح النتيجة المحددة"
+
+msgid "Page"
+msgstr "صفحة"
+
+msgid "Parcourir…"
+msgstr "اختر ملفًا"
+
+msgid "Pas encore de compte ?"
+msgstr "ليس لديك حساب بعد؟"
+
+msgid "Pensez à regarder dans vos courriers indésirables. Le lien reste valable quelques heures."
+msgstr "تذكّر أن تتفقد مجلد البريد غير المرغوب فيه. يبقى الرابط صالحًا لبضع ساعات."
+
+msgid "Personnalisez votre identité, votre photo et vos préférences."
+msgstr "خصّص هويتك وصورتك وتفضيلاتك."
+
+msgid "Photo de profil"
+msgstr "صورة الملف الشخصي"
+
+msgid "Pilotage"
+msgstr "القيادة"
+
+msgid "Plus fréquent"
+msgstr "الأكثر تكرارًا"
+
+msgid "Poids"
+msgstr "الوزن"
+
+msgid "Politique en vigueur"
+msgstr "السياسة السارية"
+
+msgid "Pondération"
+msgstr "الترجيح"
+
+msgid "Premier quartile"
+msgstr "الربيع الأول"
+
+msgid "Prendre une photo avec la caméra"
+msgstr "التقاط صورة بالكاميرا"
+
+msgid "Problème"
+msgstr "مشكلة"
+
+msgid "Problèmes après"
+msgstr "مشاكل بعد"
+
+msgid "Problèmes avant"
+msgstr "مشاكل قبل"
+
+msgid "Problèmes détectés"
+msgstr "المشكلات المكتشفة"
+
+msgid "Problèmes restants"
+msgstr "المشاكل المتبقية"
+
+msgid "Productivité"
+msgstr "الإنتاجية"
+
+msgid "Profil"
+msgstr "الملف الشخصي"
+
+msgid "Profil de %(name)s — DataZen"
+msgstr "ملف %(name)s الشخصي — DataZen"
+
+msgid "Profil de %(username)s"
+msgstr "ملف %(username)s الشخصي"
+
+msgid "Profil public"
+msgstr "الملف الشخصي العام"
+
+msgid "Profil visible publiquement"
+msgstr "ملف شخصي ظاهر للعموم"
+
+msgid "Profils"
+msgstr "الملفات الشخصية"
+
+msgid "Progression"
+msgstr "التقدّم"
+
+msgid "Propriétaire"
+msgstr "المالك"
+
+msgid "Préfixe"
+msgstr "البادئة"
+
+msgid "Préférences"
+msgstr "التفضيلات"
+
+msgid "Prénom"
+msgstr "الاسم الأول"
+
+msgid "Présentation"
+msgstr "نبذة"
+
+msgid "Purge automatique"
+msgstr "التنظيف التلقائي"
+
+msgid "Purge automatique de %(count)s fichier(s) expiré(s)"
+msgstr "تنظيف تلقائي لـ %(count)s ملف منتهي الصلاحية"
+
+msgid "Purge de %(count)s fichier(s) expiré(s)"
+msgstr "تنظيف %(count)s ملف منتهي الصلاحية"
+
+msgid "Purger automatiquement"
+msgstr "التنظيف تلقائيًا"
+
+msgid "Purger automatiquement les fichiers expirés"
+msgstr "تنظيف الملفات منتهية الصلاحية تلقائيًا"
+
+msgid "Purger le journal"
+msgstr "تفريغ السجل"
+
+msgid "Purger les anciennes entrées du journal ?"
+msgstr "تفريغ مدخلات السجل القديمة؟"
+
+msgid "Q1"
+msgstr "الربع الأول"
+
+msgid "Q3"
+msgstr "الربع الثالث"
+
+msgid "Qualité moyenne"
+msgstr "متوسط الجودة"
+
+msgid "Qualité par colonne"
+msgstr "الجودة حسب العمود"
+
+msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
+msgstr "بضع كلمات عنك وعن فريقك ومجموعات بياناتك…"
+
+msgid "Raccourcis clavier"
+msgstr "اختصارات لوحة المفاتيح"
+
+msgid "Raccourcis clavier — DataZen"
+msgstr "اختصارات لوحة المفاتيح — DataZen"
+
+msgid "Raccourcis de navigation"
+msgstr "اختصارات التنقّل"
+
+msgid "Raccourcis de nettoyage"
+msgstr "اختصارات التنظيف"
+
+msgid "Raison"
+msgstr "السبب"
+
+msgid "Rapport"
+msgstr "التقرير"
+
+msgid "Rapport PDF de « %(name)s »"
+msgstr "تقرير PDF عن « %(name)s »"
+
+msgid "Rapport de nettoyage"
+msgstr "تقرير التنظيف"
+
+msgid "Rapport de qualité des données"
+msgstr "تقرير جودة البيانات"
+
+msgid "Rapport généré automatiquement par DataZen. Les scores sont calculés selon cinq dimensions pondérées : complétude, validité, unicité, cohérence et conformité."
+msgstr "تقرير يُنشئه DataZen تلقائيًا. تُحسب النقاط وفق خمسة أبعاد مرجّحة: الاكتمال والصلاحية والتفرد والاتساق والمطابقة."
+
+msgid "Rapport — %(name)s"
+msgstr "التقرير — %(name)s"
+
+msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
+msgstr "تلقَّ إشعارًا عبر HTTP فور انتهاء عملية تنظيف أو فشلها أو رفع ملف."
+
+msgid "Recevoir les notifications par email"
+msgstr "تلقي الإشعارات عبر البريد الإلكتروني"
+
+msgid "Recevoir un message lorsqu'un nettoyage se termine."
+msgstr "تلقّي رسالة عند انتهاء عملية التنظيف."
+
+msgid "Recherche en cours…"
+msgstr "جارٍ البحث…"
+
+msgid "Recherche globale"
+msgstr "بحث شامل"
+
+msgid "Recherche momentanément indisponible."
+msgstr "البحث غير متاح مؤقتًا."
+
+msgid "Rechercher"
+msgstr "بحث"
+
+msgid "Rechercher (Ctrl+K)"
+msgstr "بحث (Ctrl+K)"
+
+msgid "Rechercher un fichier"
+msgstr "البحث عن ملف"
+
+msgid "Rechercher un fichier ou une règle (Ctrl+K)"
+msgstr "ابحث عن ملف أو قاعدة (Ctrl+K)"
+
+msgid "Rechercher un fichier, une règle, une page…"
+msgstr "ابحث عن ملف أو قاعدة أو صفحة…"
+
+msgid "Rechercher un fichier…"
+msgstr "البحث عن ملف…"
+
+msgid "Recommandation"
+msgstr "التوصية"
+
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
+msgstr "يستبدل الأسماء والبريد الإلكتروني وأرقام الهواتف بأسماء مستعارة ثابتة (القيمة نفسها ← الاسم المستعار نفسه). مع الحفاظ على العلاقات بين الصفوف."
+
+msgid "Remplacer les valeurs manquantes"
+msgstr "استبدال القيم المفقودة"
+
+msgid "Remplacez le jeton par le vôtre et lancez la commande."
+msgstr "استبدل الرمز برمزك ثم شغّل الأمر."
+
+msgid "Remplir les valeurs manquantes"
+msgstr "تعبئة القيم المفقودة"
+
+msgid "Remplissage des valeurs manquantes par « %(value)s » (les montants, codes et dates ne reçoivent jamais un texte)"
+msgstr "استبدال القيم المفقودة بـ «%(value)s» (لا تُملأ المبالغ والرموز والتواريخ بنص)"
+
+msgid "Renseignées"
+msgstr "مُعبَّأ"
+
+msgid "Renumérotation des identifiants (ancien id conservé)"
+msgstr "إعادة ترقيم المعرّفات (مع الاحتفاظ بالمعرّف الأصلي)"
+
+msgid "Reported %(reported)s vs recalculated %(actual)s"
+msgstr "المُبلَّغ عنها %(reported)s مقابل المُعاد حسابها %(actual)s"
+
+msgid "Restauration"
+msgstr "الاستعادة"
+
+msgid "Restauration de « %(name)s »"
+msgstr "استعادة « %(name)s »"
+
+msgid "Restaurer"
+msgstr "استعادة"
+
+msgid "Retour à la connexion"
+msgstr "العودة إلى تسجيل الدخول"
+
+msgid "Règle"
+msgstr "قاعدة"
+
+msgid "Règle de nettoyage"
+msgstr "قاعدة التنظيف"
+
+msgid "Règle « %(name)s » %(state)s."
+msgstr "القاعدة «%(name)s» %(state)s."
+
+msgid "Règle « %(name)s » créée."
+msgstr "تم إنشاء القاعدة «%(name)s»."
+
+msgid "Règle « %(name)s » supprimée."
+msgstr "تم حذف القاعدة «%(name)s»."
+
+msgid "Règles"
+msgstr "القواعد"
+
+msgid "Règles de nettoyage"
+msgstr "قواعد التنظيف"
+
+msgid "Règles de nettoyage — DataZen"
+msgstr "قواعد التنظيف — DataZen"
+
+msgid "Règles de validation regex personnalisées"
+msgstr "قواعد تحقق مخصصة بالتعبيرات النمطية"
+
+msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
+msgstr "احصل على الملف المنظّف والتقرير المفصل وسجل التغييرات الكامل."
+
+msgid "Réinitialiser"
+msgstr "إعادة التعيين"
+
+msgid "Répartition des problèmes"
+msgstr "توزيع المشكلات"
+
+msgid "Répartition des problèmes restants"
+msgstr "توزيع المشكلات المتبقية"
+
+msgid "Résultats"
+msgstr "النتائج"
+
+msgid "Rétention"
+msgstr "الاحتفاظ"
+
+msgid "Rétention des données"
+msgstr "الاحتفاظ بالبيانات"
+
+msgid "Rétention des données — DataZen"
+msgstr "الاحتفاظ بالبيانات — DataZen"
+
+msgid "Révocation de jeton"
+msgstr "إلغاء رمز"
+
+msgid "Révocation du jeton « %(name)s »"
+msgstr "إلغاء الرمز « %(name)s »"
+
+msgid "Révoquer"
+msgstr "إلغاء"
+
+msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
+msgstr "إلغاء هذا الرمز؟ ستتوقف التكاملات التي تستخدمه عن العمل."
+
+msgid "Révoqué"
+msgstr "ملغى"
+
+msgid "S'inscrire"
+msgstr "إنشاء حساب"
+
+msgid "Saisissez <strong>%(username)s</strong> pour confirmer"
+msgstr "اكتب <strong>%(username)s</strong> للتأكيد"
+
+msgid "Score"
+msgstr "النتيجة"
+
+msgid "Score après nettoyage"
+msgstr "النقاط بعد التنظيف"
+
+msgid "Score avant nettoyage"
+msgstr "النقاط قبل التنظيف"
+
+msgid "Score de la dimension"
+msgstr "نتيجة البُعد"
+
+msgid "Score de qualité"
+msgstr "نتيجة الجودة"
+
+msgid "Score de similarité :"
+msgstr "درجة التشابه:"
+
+msgid "Score global"
+msgstr "النتيجة الإجمالية"
+
+msgid "Score global de qualité"
+msgstr "النتيجة الإجمالية للجودة"
+
+msgid "Score qualité"
+msgstr "نتيجة الجودة"
+
+msgid "Score qualité après"
+msgstr "نتيجة الجودة بعد"
+
+msgid "Score qualité avant"
+msgstr "نتيجة الجودة قبل"
+
+msgid "Se connecter"
+msgstr "تسجيل الدخول"
+
+msgid "Se déconnecter"
+msgstr "تسجيل الخروج"
+
+msgid "Se déplacer dans les résultats"
+msgstr "التنقّل في النتائج"
+
+msgid "Sert uniquement à la réinitialisation du mot de passe."
+msgstr "يُستخدم فقط لإعادة تعيين كلمة المرور."
+
+msgid "Seuls les schémas http et https sont autorisés."
+msgstr "يُسمح بمخططي http و https فقط."
+
+msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
+msgstr "إذا وُجد حساب بهذا العنوان، فقد تم للتو إرسال بريد إلكتروني يحتوي على رابط إعادة التعيين."
+
+msgid "Site web"
+msgstr "الموقع الإلكتروني"
+
+msgid "Sombre"
+msgstr "داكن"
+
+msgid "Statut"
+msgstr "الحالة"
+
+msgid "Succès"
+msgstr "نجاح"
+
+msgid "Superutilisateur"
+msgstr "مستخدم فائق"
+
+msgid "Suppression"
+msgstr "الحذف"
+
+msgid "Suppression de la règle « %(name)s »"
+msgstr "حذف القاعدة « %(name)s »"
+
+msgid "Suppression de règle"
+msgstr "حذف قاعدة"
+
+msgid "Suppression de « %(name)s »"
+msgstr "حذف « %(name)s »"
+
+msgid "Suppression des doublons exacts (%(count)s supprimé(s))"
+msgstr "إزالة التكرارات المطابقة تمامًا (تمت إزالة %(count)s)"
+
+msgid "Suppression des doublons sur « %(column)s » (%(count)s supprimé(s))"
+msgstr "إزالة التكرارات باستخدام «%(column)s» (تمت إزالة %(count)s)"
+
+msgid "Suppression des espaces superflus"
+msgstr "إزالة المسافات الزائدة"
+
+msgid "Supprimer %(name)s"
+msgstr "??? %(name)s"
+
+msgid "Supprimer ce webhook ?"
+msgstr "حذف هذا webhook؟"
+
+msgid "Supprimer définitivement ce fichier et toutes ses données ?"
+msgstr "حذف هذا الملف وكل بياناته نهائياً؟"
+
+msgid "Supprimer définitivement les fichiers expirés ? Cette action est irréversible."
+msgstr "حذف الملفات منتهية الصلاحية نهائيًا؟ هذا الإجراء لا رجعة فيه."
+
+msgid "Supprimer définitivement les fichiers expirés au lieu de les archiver."
+msgstr "حذف الملفات منتهية الصلاحية نهائيًا بدل أرشفتها."
+
+msgid "Supprimer définitivement « %(name)s » ?"
+msgstr "?? ???? ??? « %(name)s » ????????"
+
+msgid "Supprimer les doublons"
+msgstr "حذف التكرارات"
+
+msgid "Supprimer les doublons (confirmation requise)"
+msgstr "حذف التكرارات (يتطلب التأكيد)"
+
+msgid "Supprimer les espaces superflus"
+msgstr "إزالة المسافات الزائدة"
+
+msgid "Supprimer mon compte"
+msgstr "حذف حسابي"
+
+msgid "Synthèse"
+msgstr "الخلاصة"
+
+msgid "Système"
+msgstr "النظام"
+
+msgid "Sécurité"
+msgstr "الأمان"
+
+msgid "Sélectionner un fichier"
+msgstr "تحديد ملف"
+
+msgid "Tableau de bord"
+msgstr "لوحة المعلومات"
+
+msgid "Tableau de bord — DataZen"
+msgstr "لوحة المعلومات — DataZen"
+
+msgid "Tapez au moins deux caractères pour lancer la recherche."
+msgstr "اكتب حرفين على الأقل لبدء البحث."
+
+msgid "Taux de complétude (%)"
+msgstr "معدل الاكتمال (%)"
+
+msgid "Taux de remplissage de chaque colonne (les plus incomplètes d'abord)."
+msgstr "معدل التعبئة لكل عمود (الأقل اكتمالاً أولاً)."
+
+msgid "Technologies"
+msgstr "التقنيات"
+
+msgid "Tester"
+msgstr "اختبار"
+
+msgid "Thème préféré"
+msgstr "المظهر المفضل"
+
+msgid "Top des catégories"
+msgstr "أعلى الفئات"
+
+msgid "Total missing values"
+msgstr "إجمالي القيم المفقودة"
+
+msgid "Tous vos indicateurs de qualité réunis."
+msgstr "جميع مؤشرات الجودة لديك في مكان واحد."
+
+msgid "Tout est inclus"
+msgstr "كل شيء مشمول"
+
+msgid "Tout voir"
+msgstr "عرض الكل"
+
+msgid "Toutes les actions"
+msgstr "كل الإجراءات"
+
+msgid "Traçabilité"
+msgstr "قابلية التتبّع"
+
+msgid "Troisième quartile"
+msgstr "الربيع الثالث"
+
+msgid "Type"
+msgstr "النوع"
+
+msgid "Type de correction"
+msgstr "نوع التصحيح"
+
+msgid "Téléchargement"
+msgstr "التنزيل"
+
+msgid "Téléchargement de « %(name)s »"
+msgstr "تنزيل « %(name)s »"
+
+msgid "Téléphone invalide"
+msgstr "رقم هاتف غير صالح"
+
+msgid "Téléphone non standard"
+msgstr "رقم هاتف بتنسيق غير قياسي"
+
+msgid "Téléphones non standard (%(column)s) :"
+msgstr "أرقام هاتف غير قياسية (%(column)s):"
+
+msgid "Téléversement"
+msgstr "الرفع"
+
+msgid "Téléversement de « %(name)s »"
+msgstr "رفع « %(name)s »"
+
+msgid "Téléverser un fichier"
+msgstr "رفع ملف"
+
+msgid "Téléversez votre fichier"
+msgstr "ارفع ملفك"
+
+msgid "Téléversé"
+msgstr "تم الرفع"
+
+msgid "URL"
+msgstr "عنوان URL"
+
+msgid "URL de destination"
+msgstr "عنوان URL الوجهة"
+
+msgid "URL illisible."
+msgstr "تعذّر قراءة عنوان URL."
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page."
+msgstr "لا يمكن حذف حساب مسؤول من هذه الصفحة."
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
+msgstr "لا يمكن حذف حساب مشرف من هذه الصفحة. استخدم"
+
+msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
+msgstr "تقيس لوحة المعلومات الجودة قبل / بعد وتشرح كل نقطة مفقودة."
+
+msgid "Une URL de destination est requise."
+msgstr "مطلوب عنوان URL للوجهة."
+
+msgid "Une boîte à outils complète"
+msgstr "صندوق أدوات متكامل"
+
+msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
+msgstr "قاعدة واحدة في كل سطر بالتنسيق «العمود:النمط». مثال: «الرمز_البريدي:^\\d{5}$». سيتم الإبلاغ عن القيم غير المطابقة (دون تعديلها مطلقًا)."
+
+msgid "Uniques"
+msgstr "فريدة"
+
+msgid "Unknown"
+msgstr "غير معروف"
+
+msgid "Unknown emails included in the unknown-value statistic"
+msgstr "رسائل البريد غير المعروفة مشمولة في إحصاء القيم غير المعروفة"
+
+msgid "Unknown values by column"
+msgstr "القيم غير المعروفة حسب العمود"
+
+msgid "Utilisateur"
+msgstr "المستخدم"
+
+msgid "Utilisation de l'API"
+msgstr "استخدام API"
+
+msgid "Valeur"
+msgstr "القيمة"
+
+msgid "Valeur aberrante"
+msgstr "قيمة شاذة"
+
+msgid "Valeur de remplacement"
+msgstr "قيمة الاستبدال"
+
+msgid "Valeur de remplacement (pour le remplissage)."
+msgstr "قيمة بديلة (للتعبئة)."
+
+msgid "Valeur manquante"
+msgstr "قيمة مفقودة"
+
+msgid "Valeur numérique invalide"
+msgstr "قيمة رقمية غير صالحة"
+
+msgid "Valeurs aberrantes"
+msgstr "القيم الشاذة"
+
+msgid "Valeurs aberrantes par colonne (méthode IQR)"
+msgstr "القيم الشاذة لكل عمود (طريقة IQR)"
+
+msgid "Valeurs les plus fréquentes"
+msgstr "القيم الأكثر تكرارًا"
+
+msgid "Valeurs les plus fréquentes des colonnes catégorielles."
+msgstr "القيم الأكثر تكراراً في الأعمدة الفئوية."
+
+msgid "Valeurs manquantes"
+msgstr "القيم المفقودة"
+
+msgid "Valeurs manquantes :"
+msgstr "القيم المفقودة:"
+
+msgid "Valeurs manquantes restantes"
+msgstr "القيم المفقودة المتبقية"
+
+msgid "Valeurs manquantes restantes :"
+msgstr "القيم المفقودة المتبقية:"
+
+msgid "Valeurs uniques"
+msgstr "القيم الفريدة"
+
+msgid "Valeurs « Inconnu »"
+msgstr "القيم غير المعروفة"
+
+msgid "Valeurs « Inconnu » :"
+msgstr "قيم «غير معروف»:"
+
+msgid "Validation et correction des emails (%(corrected)s corrigé(s), %(invalid)s invalide(s))"
+msgstr "التحقق من البريد الإلكتروني وتصحيحه (تم تصحيح %(corrected)s، غير صالح: %(invalid)s)"
+
+msgid "Valider et corriger les emails (erreurs évidentes seulement)"
+msgstr "التحقق من عناوين البريد الإلكتروني وتصحيحها (الأخطاء الواضحة فقط)"
+
+msgid "Validité"
+msgstr "الصحة"
+
+msgid "Visualisations statistiques"
+msgstr "تصورات إحصائية"
+
+msgid "Voir l'analyse complète →"
+msgstr "عرض التحليل الكامل ←"
+
+msgid "Volume"
+msgstr "الحجم"
+
+msgid "Volume des anomalies restantes par catégorie."
+msgstr "حجم الشذوذات المتبقية حسب الفئة."
+
+msgid "Vos données"
+msgstr "بياناتك"
+
+msgid "Vos données méritent<br> <span class=\"dz-gradient-text\">d'être impeccables.</span>"
+msgstr "بياناتك تستحق<br> <span class=\"dz-gradient-text\">أن تكون بلا عيب.</span>"
+
+msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
+msgstr "ملفاتك تبقى لديك. يوضّح لك DataZen ما يتجاوز مدة الحفظ المختارة ولا يحذف شيئًا دون موافقتك."
+
+msgid "Votre espace de travail"
+msgstr "مساحة عملك"
+
+msgid "Votre mot de passe a bien été enregistré. Vous pouvez maintenant vous connecter avec celui-ci."
+msgstr "تم حفظ كلمة مرورك بنجاح. يمكنك الآن تسجيل الدخول بها."
+
+msgid "Votre mot de passe a été modifié. Vos autres sessions restent actives."
+msgstr "تم تغيير كلمة المرور. تبقى جلساتك الأخرى نشطة."
+
+msgid "Votre nom d'utilisateur <strong>@%(username)s</strong> ne peut pas être modifié."
+msgstr "لا يمكن تغيير اسم المستخدم <strong>@%(username)s</strong> الخاص بك."
+
+msgid "Votre photo de profil a été supprimée."
+msgstr "تم حذف صورة ملفك الشخصي."
+
+msgid "Votre profil a été mis à jour."
+msgstr "تم تحديث ملفك الشخصي."
+
+msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
+msgstr "القرار بيدك: لا يُحذف شيء دون إجراء منك."
+
+msgid "Vous n'avez pas accès à ce fichier."
+msgstr "ليس لديك صلاحية الوصول إلى هذا الملف."
+
+msgid "Vous n'avez pas accès à ce jeton."
+msgstr "ليس لديك صلاحية الوصول إلى هذا الرمز."
+
+msgid "Vous n'avez pas accès à ce webhook."
+msgstr "ليس لديك صلاحية الوصول إلى هذا webhook."
+
+msgid "Vous n'avez pas accès à cette règle."
+msgstr "ليس لديك صلاحية الوصول إلى هذه القاعدة."
+
+msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
+msgstr "عرض موحّد لجودة بياناتك يشمل جميع الملفات."
+
+msgid "Vue d'ensemble"
+msgstr "نظرة عامة"
+
+msgid "Vérifiez votre boîte mail"
+msgstr "تحقق من بريدك الإلكتروني"
+
+msgid "Webhook"
+msgstr "Webhook"
+
+msgid "Webhook « %(name)s » %(state)s."
+msgstr "Webhook « %(name)s » %(state)s."
+
+msgid "Webhook « %(name)s » : test réussi (HTTP %(status)s)."
+msgstr "Webhook « %(name)s »: نجح الاختبار (HTTP %(status)s)."
+
+msgid "Webhook « %(name)s » : test échoué (HTTP %(status)s). Vérifiez l'URL et que le service accepte les appels entrants."
+msgstr "Webhook « %(name)s »: فشل الاختبار (HTTP %(status)s). تحقّق من عنوان URL ومن قبول الخدمة للاستدعاءات الواردة."
+
+msgid "Webhook « %(name)s » créé."
+msgstr "تم إنشاء Webhook « %(name)s »."
+
+msgid "Webhook « %(name)s » supprimé."
+msgstr "تم حذف Webhook « %(name)s »."
+
+msgid "Webhooks"
+msgstr "Webhooks"
+
+msgid "Webhooks — DataZen"
+msgstr "Webhooks — DataZen"
+
+msgid "YYYY-MM-DD"
+msgstr "YYYY-MM-DD"
+
+msgid "[Règle] Anonymisation (%(count)s valeur(s))"
+msgstr "[قاعدة] إخفاء الهوية (عدد القيم: %(count)s)"
+
+msgid "[Règle] Conversion des montants (%(count)s converti(s))"
+msgstr "[قاعدة] تحويل المبالغ (تم تحويل %(count)s)"
+
+msgid "[Règle] Normalisation de la casse"
+msgstr "[قاعدة] توحيد حالة الأحرف"
+
+msgid "[Règle] Normalisation des dates (%(count)s corrigée(s))"
+msgstr "[قاعدة] توحيد التواريخ (تم تصحيح %(count)s)"
+
+msgid "[Règle] Normalisation des emails (%(count)s corrigé(s))"
+msgstr "[قاعدة] توحيد البريد الإلكتروني (تم تصحيح %(count)s)"
+
+msgid "[Règle] Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "[قاعدة] توحيد أرقام الهواتف (تم تصحيح %(count)s)"
+
+msgid "[Règle] Remplissage des valeurs manquantes par « %(value)s »"
+msgstr "[قاعدة] استبدال القيم المفقودة بـ «%(value)s»"
+
+msgid "[Règle] Suppression des doublons (%(count)s supprimé(s))"
+msgstr "[قاعدة] إزالة التكرارات (تمت إزالة %(count)s)"
+
+msgid "[Règle] Suppression des espaces superflus"
+msgstr "[قاعدة] إزالة المسافات الزائدة"
+
+msgid "actif"
+msgstr "نشط"
+
+msgid "activé"
+msgstr "مُفعّل"
+
+msgid "activée"
+msgstr "نشطة"
+
+msgid "ajoutée"
+msgstr "مُضافة"
+
+msgid "améliorée"
+msgstr "مُحسّنة"
+
+msgid "bonne qualité"
+msgstr "جودة جيدة"
+
+msgid "catégorie"
+msgstr "الفئة"
+
+msgid "cohérence"
+msgstr "الاتساق"
+
+msgid "colonne : %(name)s"
+msgstr "العمود: %(name)s"
+
+msgid "complétude"
+msgstr "الاكتمال"
+
+msgid "conformité"
+msgstr "المطابقة"
+
+msgid "conservée (non inventée)"
+msgstr "محفوظة (غير مُختلَقة)"
+
+msgid "console d'administration"
+msgstr "لوحة الإدارة"
+
+msgid "date"
+msgstr "التاريخ"
+
+msgid "donnée absente"
+msgstr "بيان مفقود"
+
+msgid "désactivé"
+msgstr "معطّل"
+
+msgid "désactivée"
+msgstr "غير نشطة"
+
+msgid "détail"
+msgstr "تفاصيل"
+
+msgid "email"
+msgstr "البريد الإلكتروني"
+
+msgid "et"
+msgstr "و"
+
+msgid "ex : 0 ou Inconnu"
+msgstr "مثال: 0 أو غير معروف"
+
+msgid "ex : Emails en minuscules"
+msgstr "مثال: رسائل البريد بأحرف صغيرة"
+
+msgid "ex : Intégration Power BI"
+msgstr "مثال: تكامل Power BI"
+
+msgid "ex : Slack — nettoyages"
+msgstr "مثال: Slack — عمليات التنظيف"
+
+msgid "ex : email (vide = toutes les colonnes)"
+msgstr "مثال: email (فارغ = جميع الأعمدة)"
+
+msgid "excellente qualité"
+msgstr "جودة ممتازة"
+
+msgid "fermer"
+msgstr "إغلاق"
+
+msgid "format invalide"
+msgstr "تنسيق غير صالح"
+
+msgid "format non reconnu"
+msgstr "تنسيق غير معروف"
+
+msgid "généré le"
+msgstr "أُنشئ في"
+
+msgid "https://exemple.com"
+msgstr "https://exemple.com"
+
+msgid "https://hooks.exemple.com/datazen"
+msgstr "https://hooks.example.com/datazen"
+
+msgid "identifiant"
+msgstr "المعرّف"
+
+msgid "inactive"
+msgstr "غير نشطة"
+
+msgid "inchangé"
+msgstr "دون تغيير"
+
+msgid "jours"
+msgstr "أيام"
+
+msgid "lignes"
+msgstr "أسطر"
+
+msgid "longueur/format incorrect"
+msgstr "الطول/التنسيق غير صحيح"
+
+msgid "matplotlib"
+msgstr "matplotlib"
+
+msgid "naviguer"
+msgstr "تنقّل"
+
+msgid "non évalué"
+msgstr "غير مُقيَّم"
+
+msgid "numérique"
+msgstr "رقمي"
+
+msgid "opération : %(name)s"
+msgstr "العملية: %(name)s"
+
+msgid "ouvrir"
+msgstr "فتح"
+
+msgid "points"
+msgstr "نقطة"
+
+msgid "pour «"
+msgstr "لـ «"
+
+msgid "premières lignes."
+msgstr "الصفوف الأولى."
+
+msgid "qualité faible"
+msgstr "جودة ضعيفة"
+
+msgid "qualité moyenne"
+msgstr "جودة متوسطة"
+
+msgid "référence"
+msgstr "المرجع"
+
+msgid "révoqué"
+msgstr "ملغى"
+
+msgid "score"
+msgstr "النقاط"
+
+msgid "score %(before)s → %(after)s"
+msgstr "النقاط %(before)s → %(after)s"
+
+msgid "seaborn"
+msgstr "seaborn"
+
+msgid "stable"
+msgstr "مستقر"
+
+msgid "supprimée"
+msgstr "محذوفة"
+
+msgid "sur"
+msgstr "من"
+
+msgid "texte"
+msgstr "النص"
+
+msgid "téléphone"
+msgstr "الهاتف"
+
+msgid "unicité"
+msgstr "التفرّد"
+
+msgid "valeur(s) extrême(s)"
+msgstr "قيمة (قيم) متطرفة"
+
+msgid "validité"
+msgstr "الصلاحية"
+
+msgid "· ancien_id :"
+msgstr "· ancien_id:"
+
+msgid "· statut filtré"
+msgstr "· الحالة بعد التصفية"
+
+msgid "À compléter :"
+msgstr "لاستكمال:"
+
+msgid "Écart"
+msgstr "الفارق"
+
+msgid "Écart-type"
+msgstr "الانحراف المعياري"
+
+msgid "Échap"
+msgstr "إلغاء"
+
+msgid "Échec du nettoyage"
+msgstr "فشل التنظيف"
+
+msgid "Échec du nettoyage de « %(name)s »"
+msgstr "فشل تنظيف « %(name)s »"
+
+msgid "Étape 1"
+msgstr "الخطوة 1"
+
+msgid "État"
+msgstr "الحالة"
+
+msgid "Évolution hebdomadaire du score de qualité"
+msgstr "تطوّر نقاط الجودة أسبوعيًا"
+
+msgid "Événement"
+msgstr "الحدث"
+
+msgid "Événement déclencheur"
+msgstr "الحدث المُشغِّل"
+
+msgid "à corriger manuellement"
+msgstr "يُصحَّح يدوياً"
+
+msgid "à partir des données nettoyées."
+msgstr "من البيانات المنظّفة."
+
+msgid "à vérifier"
+msgstr "تستحق المراجعة"
+
+msgid "à vérifier manuellement"
+msgstr "يُراجَع يدوياً"
+
+msgid "—"
+msgstr "—"
+
+msgid "— Choisir une action —"
+msgstr "— اختر إجراءً —"
+
+msgid "— Tous les statuts —"
+msgstr "— جميع الحالات —"
+
+msgid "— Toutes les colonnes —"
+msgstr "— جميع الأعمدة —"
+
+msgid "← Retour au fichier"
+msgstr "→ العودة إلى الملف"
+
+msgid "⌨️ Raccourcis"
+msgstr "⌨️ الاختصارات"
+
+msgid "⌨️ Raccourcis clavier"
+msgstr "⌨️ اختصارات لوحة المفاتيح"
+
+msgid "⏳ Fichiers expirés"
+msgstr "⏳ ملفات منتهية الصلاحية"
+
+msgid "⏳ Nettoyage en cours…"
+msgstr "⏳ جارٍ التنظيف…"
+
+msgid "⚙️ Règles de nettoyage personnalisées"
+msgstr "⚙️ قواعد تنظيف مخصصة"
+
+msgid "⚙️ Règles personnalisées"
+msgstr "⚙️ قواعد مخصصة"
+
+msgid "⚙️ Régler la durée"
+msgstr "⚙️ ضبط المدة"
+
+msgid "⚠️ Points nécessitant une vérification humaine"
+msgstr "⚠️ نقاط تتطلب مراجعة بشرية"
+
+msgid "⚠️ Problèmes restants (tous fichiers)"
+msgstr "⚠️ المشاكل المتبقية (كل الملفات)"
+
+msgid "⚠️ Valeurs signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ قيم مُعلَّمة فقط — لا تُعدَّل تلقائيًا أبدًا."
+
+msgid "⚠️ Zone de danger"
+msgstr "⚠️ منطقة الخطر"
+
+msgid "⚠️ À vérifier manuellement (jamais supprimés automatiquement)."
+msgstr "⚠️ للمراجعة يدويًا (لا تُحذف تلقائيًا أبدًا)."
+
+msgid "⚪ Conserver toutes les lignes"
+msgstr "⚪ الاحتفاظ بجميع الصفوف"
+
+msgid "⚪ Ignorer (examiné, conserver)"
+msgstr "⚪ تجاهل (تمت المراجعة، احتفظ)"
+
+msgid "⚪ Valeurs « Inconnu » ("
+msgstr "⚪ قيم «غير معروف» ("
+
+msgid "✅ Aucun doublon potentiel à vérifier."
+msgstr "✅ لا يوجد تكرار محتمل للمراجعة."
+
+msgid "✅ Aucune vérification manuelle nécessaire"
+msgstr "✅ لا حاجة إلى مراجعة يدوية"
+
+msgid "✅ Résultat du nettoyage"
+msgstr "✅ نتيجة التنظيف"
+
+msgid "✅ Validation après nettoyage"
+msgstr "✅ التحقق بعد التنظيف"
+
+msgid "✅ Votre profil est complet."
+msgstr "✅ ملفك الشخصي مكتمل."
+
+msgid "✏️ Modifier mon profil"
+msgstr "✏️ تعديل ملفي الشخصي"
+
+msgid "✓ Copié"
+msgstr "✓ تم النسخ"
+
+msgid "➕ Nouveau jeton"
+msgstr "➕ رمز جديد"
+
+msgid "➕ Nouveau webhook"
+msgstr "➕ Webhook جديد"
+
+msgid "➕ Nouvelle règle"
+msgstr "➕ قاعدة جديدة"
+
+msgid "➕ Téléverser un fichier"
+msgstr "➕ رفع ملف"
+
+msgid "⬇️ Exporter mes données (JSON)"
+msgstr "⬇️ تصدير بياناتي (JSON)"
+
+msgid "⬇️ Télécharger le fichier nettoyé"
+msgstr "⬇️ تنزيل الملف المنظّف"
+
+msgid "🌍 Navigation"
+msgstr "🌍 التنقّل"
+
+msgid "🌐 HTML (.html)"
+msgstr "🌐 HTML (.html)"
+
+msgid "🌐 Rapport HTML avec graphiques"
+msgstr "🌐 تقرير HTML مع رسوم بيانية"
+
+msgid "🎯 Répartition par niveau de qualité"
+msgstr "🎯 التوزيع حسب مستوى الجودة"
+
+msgid "🎯 Score qualité"
+msgstr "🎯 نتيجة الجودة"
+
+msgid "🏆 Meilleurs résultats"
+msgstr "🏆 أفضل النتائج"
+
+msgid "👀 Aperçu des données brutes (avant nettoyage)"
+msgstr "👀 معاينة البيانات الخام (قبل التنظيف)"
+
+msgid "👁️ Consulter le rapport"
+msgstr "👁️ عرض التقرير"
+
+msgid "👤 Mon profil"
+msgstr "👤 ملفي الشخصي"
+
+msgid "📈 Analyse exploratoire"
+msgstr "📈 التحليل الاستكشافي"
+
+msgid "📈 Statistiques descriptives"
+msgstr "📈 الإحصاءات الوصفية"
+
+msgid "📈 Valeurs aberrantes"
+msgstr "📈 القيم الشاذة"
+
+msgid "📈 Visualisations statistiques"
+msgstr "📈 تصورات إحصائية"
+
+msgid "📈 Évolution du score (12 semaines)"
+msgstr "📈 تطوّر النقاط (12 أسبوعًا)"
+
+msgid "📉 Fichiers à traiter en priorité"
+msgstr "📉 ملفات ذات أولوية"
+
+msgid "📉 Répartition des problèmes"
+msgstr "📉 توزيع المشكلات"
+
+msgid "📊 Activité récente"
+msgstr "📊 النشاط الأخير"
+
+msgid "📊 Dashboard Data Quality"
+msgstr "📊 لوحة جودة البيانات"
+
+msgid "📊 Dimensions de qualité"
+msgstr "📊 أبعاد الجودة"
+
+msgid "📊 Tableau de bord"
+msgstr "📊 لوحة المعلومات"
+
+msgid "📊 Tableau de bord global"
+msgstr "📊 لوحة المعلومات الشاملة"
+
+msgid "📋 Mes règles ("
+msgstr "📋 قواعدي ("
+
+msgid "📋 Qualité des colonnes"
+msgstr "📋 جودة الأعمدة"
+
+msgid "📋 Rapport de nettoyage"
+msgstr "📋 تقرير التنظيف"
+
+msgid "📋 Télécharger le rapport"
+msgstr "📋 تنزيل التقرير"
+
+msgid "📕 Rapport PDF"
+msgstr "📕 تقرير PDF"
+
+msgid "📝 Journal des modifications"
+msgstr "📝 سجل التغييرات"
+
+msgid "📥 Fichier d'origine"
+msgstr "📥 الملف الأصلي"
+
+msgid "📥 Markdown (.md)"
+msgstr "📥 Markdown (.md)"
+
+msgid "📥 Télécharger le rapport complet"
+msgstr "📥 تنزيل التقرير الكامل"
+
+msgid "📦 Archives"
+msgstr "📦 الأرشيف"
+
+msgid "📷 Prendre une photo"
+msgstr "📷 التقاط صورة"
+
+msgid "🔌 API et jetons d'accès"
+msgstr "🔌 API ورموز الوصول"
+
+msgid "🔌 Jetons d'API"
+msgstr "🔌 رموز API"
+
+msgid "🔍 Avant / après"
+msgstr "🔍 قبل / بعد"
+
+msgid "🔍 Comparaison avant / après"
+msgstr "🔍 مقارنة قبل / بعد"
+
+msgid "🔍 Doublons"
+msgstr "🔍 التكرارات"
+
+msgid "🔍 Filtrer"
+msgstr "🔍 تصفية"
+
+msgid "🔍 Filtrer les lignes…"
+msgstr "🔍 تصفية الصفوف…"
+
+msgid "🔍 Problèmes détectés"
+msgstr "🔍 المشكلات المكتشفة"
+
+msgid "🔍 Revue manuelle des doublons potentiels"
+msgstr "🔍 المراجعة اليدوية للتكرارات المحتملة"
+
+msgid "🔍 Règles regex personnalisées"
+msgstr "🔍 قواعد regex مخصصة"
+
+msgid "🔎 Explication du score"
+msgstr "🔎 شرح النتيجة"
+
+msgid "🔑 Mes jetons"
+msgstr "🔑 رموزي"
+
+msgid "🔑 Votre nouveau jeton"
+msgstr "🔑 رمزك الجديد"
+
+msgid "🔒 Changer mon mot de passe"
+msgstr "🔒 تغيير كلمة المرور"
+
+msgid "🔒 Sécurité et données"
+msgstr "🔒 الأمان والبيانات"
+
+msgid "🔔 Mes webhooks"
+msgstr "🔔 الـ webhooks الخاصة بي"
+
+msgid "🔔 Webhooks"
+msgstr "🔔 Webhooks"
+
+msgid "🔗 Voir mon profil public"
+msgstr "🔗 عرض ملفي الشخصي العام"
+
+msgid "🔢 Colonnes analysées numériquement"
+msgstr "🔢 الأعمدة المحللة رقميًا"
+
+msgid "🔬 Profilage avancé"
+msgstr "🔬 تحليل متقدم"
+
+msgid "🔵 Conserver la 2e ligne (supprimer les autres)"
+msgstr "🔵 الاحتفاظ بالصف الثاني (حذف الباقي)"
+
+msgid "🕒 Dernières actions"
+msgstr "🕒 آخر الإجراءات"
+
+msgid "🕓 Activité"
+msgstr "🕓 النشاط"
+
+msgid "🕓 Dernières activités"
+msgstr "🕓 آخر الأنشطة"
+
+msgid "🕓 Journal d'activité"
+msgstr "🕓 سجل النشاط"
+
+msgid "🗃️ Fichiers récents"
+msgstr "🗃️ الملفات الأخيرة"
+
+msgid "🗄️ Rétention"
+msgstr "🗄️ الاحتفاظ"
+
+msgid "🗄️ Rétention des données"
+msgstr "🗄️ الاحتفاظ بالبيانات"
+
+msgid "🗑️ Purger maintenant"
+msgstr "🗑️ تنظيف الآن"
+
+msgid "🗑️ Supprimer"
+msgstr "🗑️ حذف"
+
+msgid "🗑️ Supprimer ma photo de profil"
+msgstr "🗑️ حذف صورة ملفي الشخصي"
+
+msgid "🚀 Nouveautés de l'espace pro"
+msgstr "🚀 جديد المساحة الاحترافية"
+
+msgid "🚀 Premier appel"
+msgstr "🚀 أول استدعاء"
+
+msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
+msgstr "🟢 الاحتفاظ بالصف الأول (حذف الباقي)"
+
+msgid "🟣 Fusionner toutes les lignes"
+msgstr "🟣 دمج جميع الصفوف"
+
+msgid "🧭 Dimensions les plus fragiles"
+msgstr "🧭 الأبعاد الأكثر هشاشة"
+
+msgid "🧹 Journal d'activité"
+msgstr "🧹 سجل النشاط"
+
+msgid "🧹 Nettoyage"
+msgstr "🧹 التنظيف"
+
+msgid "🧹 Options de nettoyage"
+msgstr "🧹 خيارات التنظيف"
+
+msgid "🧹 Opérations de nettoyage"
+msgstr "🧹 عمليات التنظيف"
+
+msgid "🧽 Purger les anciennes entrées"
+msgstr "🧽 تنظيف المدخلات القديمة"
+
+msgid "🧾 Journal des modifications"
+msgstr "🧾 سجل التغييرات"
+
+msgid "🧾 Télécharger le journal des modifications"
+msgstr "🧾 تنزيل سجل التغييرات"
+
+msgctxt "séparateur"
+msgid "ou"
+msgstr "أو"

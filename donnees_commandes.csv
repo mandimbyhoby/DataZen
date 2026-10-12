@@ -1,0 +1,19 @@
+﻿id,numero_commande,client,email,ville,article,categorie,montant,quantite,statut,date_commande
+1,CMD-001,Alice Martin,alice.martin@mail.com,Paris,Ordinateur portable,Informatique,"1 299,90 €",1,Livré,2024-01-15
+2,CMD-002,BOB DUPONT,bob.dupont@mail.com,Lyon,Souris sans fil,Accessoires,"29,99",3,Expédié,2024-02-20
+3,CMD-003,charlie leblanc,charlie.leblanc@mail.com,Marseille,Écran 27 pouces,Informatique,299.90,1,En attente,2024-03-10
+4,CMD-001,Alice Martin,alice.martin@mail.com,Paris,Ordinateur portable,Informatique,"1 299,90 €",1,Livré,2024-01-15
+5,CMD-005, David Petit ,david.petit@mail.com, Lille ,Clavier mécanique,Accessoires,"89,90",2,Expédié,15/04/2024
+6,cmd-006,Élise Moreau,elise.moreau@mail.com,Nantes,Écran 27 pouces,Informatique,"299,90",1,En attente,2024-05-05
+7,CMD-007,alice martin,ALICE.MARTIN@mail.com,paris,ordinateur portable,informatique,1299.90,2,livré,2024-06-12
+8,CMD-008,François Girard,francois.girard@mail.com,Toulouse,Casque audio,Accessoires,"59,90",1,Expédié,2024-07-01
+9,CMD-009,  gérard roux  ,gerard.roux@mail.com,Lyon ,Souris sans fil,Accessoires,"29,99",5,En attente,08/08/2024
+10,CMD-010,Hélène Fournier,,Rennes,Disque dur externe,Informatique,"109,90",1,Livré,2024-09-10
+11,CMD-011,bob dupont,bob.dupontmail.com,LYON,SOURIS SANS FIL,accessoires,"29,99 €",,EXPÉDIÉ,2024-02-20
+12,CMD-012,Inès Lambert,ines.lambert@mail.com,,Casque audio,,,2,,2024-11-30
+13,,Karim Benali,karim.benali@,Nice,Tablette tactile,Informatique,"449,00",1,En attente,2024-04-17
+14,CMD-014,Laura Schmitt,laura.schmitt@mail.com,Strasbourg,Imprimante laser,Périphériques,"189,90",1,Livré,2024-10-02
+15,CMD-015,Inconnu,inconnu@mail.com,Paris,Ordinateur portable,Informatique,"1 299,90 €",2,Inconnu,
+1,CMD-001,Alice Martin,alice.martin@mail.com,Paris,Ordinateur portable,Informatique,"1 299,90 €",1,Livré,2024-01-15
+8,CMD-008,François Girard,francois.girard@mail.com,Toulouse,Casque audio,Accessoires,"59,90",1,Expédié,2024-07-01
+12,CMD-012,Inès Lambert,ines.lambert@mail.com,,Casque audio,,,2,,2024-11-30

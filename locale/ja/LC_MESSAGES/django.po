@@ -1,0 +1,2831 @@
+# Catalogue de traduction DataZen.
+# Généré par tools/i18n_build.py — ne pas éditer à la main.
+msgid ""
+msgstr ""
+"Project-Id-Version: DataZen 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "%(actual)s correction(s) in the log vs %(reported)s reported"
+msgstr "ログ内の修正 %(actual)s 件（申告値 %(reported)s 件）"
+
+msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
+msgstr "メール列の不明値 %(actual)s 件（申告値 %(reported)s 件）"
+
+msgid "%(count)s colonnes"
+msgstr "%(count)s 列"
+
+msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
+msgstr "%(count)s 件の潜在的な重複を確認する必要があります。"
+
+msgid "%(count)s entrée(s) d'activité supprimée(s)."
+msgstr "活動ログのエントリを %(count)s 件削除しました。"
+
+msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
+msgstr "%(count)s 件のエラーを自動修正できませんでした。"
+
+msgid "%(count)s exact duplicate(s) remaining"
+msgstr "完全な重複が %(count)s 件残っています"
+
+msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
+msgstr "一貫性のない値が %(count)s 件残っています（有効でも不明でもない）"
+
+msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
+msgstr "無効なメールアドレスが %(count)s 件あります（空でも不明でもない）"
+
+msgid "%(count)s invalid value(s) among filled data"
+msgstr "入力済みデータに無効な値が %(count)s 件"
+
+msgid "%(count)s lignes"
+msgstr "%(count)s 行"
+
+msgid "%(count)s missing value(s)"
+msgstr "欠損値 %(count)s 件"
+
+msgid "%(count)s non-standard value(s)"
+msgstr "標準外の値 %(count)s 件"
+
+msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
+msgstr "%(count)s 件の潜在的な重複は手動確認が必要です（ペナルティ軽減）"
+
+msgid "%(count)s unknown value(s) (data unavailable)"
+msgstr "不明な値 %(count)s 件（データなし）"
+
+msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
+msgstr "数値列で外れ値が %(count)s 件検出されました。"
+
+msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
+msgstr "%(count)s 件の値が現在「不明」です。"
+
+msgid "%(counter)s doublon potentiel détecté. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgid_plural "%(counter)s doublons potentiels détectés. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgstr[0] "重複の可能性がある項目を%(counter)s件検出しました。これらの行は<strong>自動では削除されません</strong>。削除には確認が必要です。"
+
+msgid "%(counter)s fichier affiché"
+msgid_plural "%(counter)s fichiers affichés"
+msgstr[0] "%(counter)s 件のファイルを表示中"
+
+msgid "%(counter)s inconnu"
+msgid_plural "%(counter)s inconnus"
+msgstr[0] "%(counter)s 件が不明"
+
+msgid "%(counter)s invalide,"
+msgid_plural "%(counter)s invalides,"
+msgstr[0] "%(counter)s 件が無効、"
+
+msgid "%(counter)s ligne concernée :"
+msgid_plural "%(counter)s lignes concernées :"
+msgstr[0] "対象となる行は %(counter)s 件:"
+
+msgid "%(counter)s valide,"
+msgid_plural "%(counter)s valides,"
+msgstr[0] "%(counter)s 件が有効、"
+
+msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
+msgstr "%(purged)s 件のファイルを削除し、%(archived)s 件をアーカイブしました。"
+
+msgid "%(score)s / 100  (%(weight)s %(percent)s)"
+msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
+msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s（期待値 %(expected)s）"
+
+msgid "%(value)s %(percent)s"
+msgstr "%(value)s %(percent)s"
+
+msgid "(%(counter)s modification)"
+msgid_plural "(%(counter)s modifications)"
+msgstr[0] "（%(counter)s 件の変更）"
+
+msgid "(%(counter)s non-conformité)"
+msgid_plural "(%(counter)s non-conformités)"
+msgstr[0] "（%(counter)s 件の不適合）"
+
+msgid "(colonnes : %(columns)s)"
+msgstr "（列: %(columns)s）"
+
+msgid "(score ≥ 0.8)"
+msgstr "（スコア ≥ 0.8）"
+
+msgid "(⚠️ à vérifier manuellement)"
+msgstr "（⚠️ 手動での確認が必要）"
+
+msgid ", Vous recevez ce message parce qu'une réinitialisation de mot de passe a été demandée pour votre compte DataZen. Cliquez sur le lien ci-dessous pour choisir un nouveau mot de passe :"
+msgstr "、DataZen アカウントのパスワード再設定が要求されたため、このメッセージをお送りしています。新しいパスワードを設定するには、以下のリンクをクリックしてください:"
+
+msgid "<a href=\"#televerser\">Téléversez votre premier fichier</a> pour commencer."
+msgstr "まずは<a href=\"#televerser\">最初のファイルをアップロード</a>してください。"
+
+msgid "<strong>Doublons potentiels :</strong> aucun"
+msgstr "<strong>潜在的な重複:</strong> なし"
+
+msgid "<strong>Doublons potentiels restants :</strong> aucun"
+msgstr "<strong>残っている潜在的な重複:</strong> なし"
+
+msgid "<strong>Valeurs manquantes :</strong> aucune"
+msgstr "<strong>欠損値:</strong> なし"
+
+msgid "<strong>Valeurs manquantes restantes :</strong> aucune"
+msgstr "<strong>残っている欠損値:</strong> なし"
+
+msgid "AAAA-MM-JJ"
+msgstr "AAAA-MM-JJ"
+
+msgid "API"
+msgstr "API"
+
+msgid "API & webhooks"
+msgstr "API と Webhook"
+
+msgid "API REST"
+msgstr "REST API"
+
+msgid "API et intégrations"
+msgstr "API と連携"
+
+msgid "API et intégrations — DataZen"
+msgstr "API と連携 — DataZen"
+
+msgid "Abonnements"
+msgstr "サブスクリプション"
+
+msgid "Accueil"
+msgstr "ホーム"
+
+msgid "Actif"
+msgstr "有効"
+
+msgid "Actifs"
+msgstr "有効項目"
+
+msgid "Action"
+msgstr "操作"
+
+msgid "Action invalide."
+msgstr "無効な操作です。"
+
+msgid "Actions"
+msgstr "操作"
+
+msgid "Active"
+msgstr "有効"
+
+msgid "Activer"
+msgstr "有効化"
+
+msgid "Activer le thème clair"
+msgstr "ライトテーマを有効化"
+
+msgid "Activer le thème sombre"
+msgstr "ダークテーマを有効化"
+
+msgid "Activité"
+msgstr "アクティビティ"
+
+msgid "Activités"
+msgstr "アクティビティ"
+
+msgid "Activée"
+msgstr "有効"
+
+msgid "Administrateur"
+msgstr "管理者"
+
+msgid "Administration"
+msgstr "管理"
+
+msgid "Adresse email"
+msgstr "メールアドレス"
+
+msgid "Affichage de %(shown)s lignes sur %(total)s."
+msgstr "%(total)s 行中 %(shown)s 行を表示しています。"
+
+msgid "Affichage des"
+msgstr "表示中:"
+
+msgid "Afficher"
+msgstr "表示"
+
+msgid "Afficher le mot de passe"
+msgstr "パスワードを表示"
+
+msgid "Afficher les détails des anomalies"
+msgstr "異常の詳細を表示"
+
+msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
+msgstr "X-DataZen-Signature ヘッダーに追加されます（HMAC-SHA256）。"
+
+msgid "All filled values are valid"
+msgstr "入力済みの値はすべて有効です"
+
+msgid "Aller au contenu principal"
+msgstr "メインコンテンツへスキップ"
+
+msgid "Analyse exploratoire"
+msgstr "探索的データ分析"
+
+msgid "Analyse exploratoire — %(name)s"
+msgstr "探索的データ分析 — %(name)s"
+
+msgid "Analyser et nettoyer"
+msgstr "分析してクレンジング"
+
+msgid "Analyste de données"
+msgstr "データアナリスト"
+
+msgid "Ancienne valeur"
+msgstr "変更前の値"
+
+msgid "Annuler"
+msgstr "キャンセル"
+
+msgid "Anomalies restantes (à traiter manuellement)"
+msgstr "残っている異常（手動対応が必要）"
+
+msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
+msgstr "機密データの匿名化（%(count)s 件を仮名化）"
+
+msgid "Anonymiser les données sensibles"
+msgstr "機密データを匿名化"
+
+msgid "Anonymiser les données sensibles (noms, emails, téléphones)"
+msgstr "機密データを匿名化（氏名、メールアドレス、電話番号）"
+
+msgid "Antananarivo, Madagascar"
+msgstr "Antananarivo, Madagascar"
+
+msgid "Aperçu du fichier nettoyé"
+msgstr "クレンジング済みファイルのプレビュー"
+
+msgid "Appel API"
+msgstr "API 呼び出し"
+
+msgid "Appel API : %(path)s"
+msgstr "API 呼び出し: %(path)s"
+
+msgid "Appels"
+msgstr "呼び出し回数"
+
+msgid "Application"
+msgstr "アプリケーション"
+
+msgid "Après"
+msgstr "後"
+
+msgid "Archivage"
+msgstr "アーカイブ"
+
+msgid "Archivage de « %(name)s »"
+msgstr "「%(name)s」のアーカイブ"
+
+msgid "Archiver"
+msgstr "アーカイブ"
+
+msgid "Archives"
+msgstr "?????"
+
+msgid "Archivés"
+msgstr "アーカイブ済み"
+
+msgid "Aucun fichier d'origine n'est disponible."
+msgstr "元のファイルは利用できません。"
+
+msgid "Aucun fichier expiré à purger."
+msgstr "削除する期限切れのファイルはありません。"
+
+msgid "Aucun fichier expiré. Votre espace de travail est à jour."
+msgstr "期限切れのファイルはありません。ワークスペースは最新の状態です。"
+
+msgid "Aucun fichier ne correspond à votre recherche."
+msgstr "検索に一致するファイルはありません。"
+
+msgid "Aucun fichier nettoyé n'est disponible."
+msgstr "クレンジング済みファイルは利用できません。"
+
+msgid "Aucun fichier nettoyé pour le moment."
+msgstr "まだクリーニング済みのファイルはありません。"
+
+msgid "Aucun fichier pour le moment."
+msgstr "ファイルはまだありません。"
+
+msgid "Aucun fichier sélectionné"
+msgstr "ファイルが選択されていません"
+
+msgid "Aucun fichier téléversé pour le moment."
+msgstr "まだファイルがアップロードされていません。"
+
+msgid "Aucun graphique n'est disponible pour ce jeu de données : il ne contient pas assez de valeurs numériques ou catégorielles exploitables."
+msgstr "このデータセットで利用できるグラフはありません。使用可能な数値またはカテゴリ値が十分に含まれていません。"
+
+msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
+msgstr "トークンがまだありません。API を使うには作成してください。"
+
+msgid "Aucun journal des modifications n'est disponible."
+msgstr "変更履歴は利用できません。"
+
+msgid "Aucun problème détecté"
+msgstr "問題は検出されませんでした"
+
+msgid "Aucun rapport de nettoyage n'est disponible."
+msgstr "クレンジングレポートは利用できません。"
+
+msgid "Aucun résultat pour cette recherche."
+msgstr "該当する結果はありません。"
+
+msgid "Aucun webhook configuré. Ajoutez une URL pour être notifié automatiquement."
+msgstr "Webhook が設定されていません。URL を追加すると自動で通知を受け取れます。"
+
+msgid "Aucune activité enregistrée pour le moment."
+msgstr "まだ記録されたアクティビティはありません。"
+
+msgid "Aucune activité enregistrée."
+msgstr "記録されたアクティビティはありません。"
+
+msgid "Aucune anomalie restante."
+msgstr "残っている異常はありません。"
+
+msgid "Aucune anomalie."
+msgstr "異常はありません。"
+
+msgid "Aucune colonne"
+msgstr "列なし"
+
+msgid "Aucune correction"
+msgstr "修正なし"
+
+msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
+msgstr "元のファイルとクリーニング後のファイルに目立った違いはありません。データはすでにきれいでした。"
+
+msgid "Aucune dimension mesurée pour le moment."
+msgstr "まだ測定された指標はありません。"
+
+msgid "Aucune donnée"
+msgstr "データなし"
+
+msgid "Aucune donnée nettoyée disponible."
+msgstr "クレンジング済みデータはありません。"
+
+msgid "Aucune modification enregistrée."
+msgstr "保存された変更はありません。"
+
+msgid "Aucune règle personnalisée."
+msgstr "カスタムルールはありません。"
+
+msgid "Aucune règle pour le moment. Créez-en une pour la réutiliser sur tous vos fichiers."
+msgstr "ルールはまだありません。1 つ作成すれば、すべてのファイルで再利用できます。"
+
+msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
+msgstr "数値列に外れ値は検出されませんでした。"
+
+msgid "Aucune valeur « Inconnu »."
+msgstr "「不明」の値はありません。"
+
+msgid "Audit des emails"
+msgstr "メールの監査"
+
+msgid "Automatisation"
+msgstr "自動化"
+
+msgid "Autoriser les autres utilisateurs à consulter votre profil."
+msgstr "他のユーザーにプロフィールの閲覧を許可する。"
+
+msgid "Avant"
+msgstr "前"
+
+msgid "Avertissement"
+msgstr "警告"
+
+msgid "Basculer la navigation"
+msgstr "ナビゲーションを切り替え"
+
+msgid "Basculer le thème"
+msgstr "テーマを切り替え"
+
+msgid "Basculer le thème clair / sombre"
+msgstr "ライト / ダークテーマを切り替え"
+
+msgid "Bienvenue %(username)s !"
+msgstr "ようこそ %(username)s さん！"
+
+msgid "Bon retour parmi nous"
+msgstr "おかえりなさい"
+
+msgid "Bonjour"
+msgstr "こんにちは"
+
+msgid "Borne basse"
+msgstr "下限"
+
+msgid "Borne haute"
+msgstr "上限"
+
+msgid "Boîtes à moustaches"
+msgstr "箱ひげ図"
+
+msgid "Boîtes à moustaches des colonnes numériques"
+msgstr "数値列の箱ひげ図"
+
+msgid "Branchez DataZen sur vos outils existants."
+msgstr "DataZen を既存のツールに接続しましょう。"
+
+msgid "Branchez DataZen à vos outils : Power BI, n8n, scripts Python, tableaux de bord maison."
+msgstr "DataZen をあなたのツールに接続: Power BI、n8n、Python スクリプト、自社ダッシュボード。"
+
+msgid "CSV (séparateur ;)"
+msgstr "CSV（区切り文字 ;）"
+
+msgid "Cadrez votre visage puis cliquez sur « Capturer »."
+msgstr "顔を枠内に合わせて「撮影」をクリックしてください。"
+
+msgid "Calculée sur %(count)s fichier(s) nettoyé(s)."
+msgstr "%(count)s 件のクリーニング済みファイルから算出。"
+
+msgid "Canonicalisation du marqueur « Inconnu » (%(count)s corrigé(s))"
+msgstr "「不明」マーカーの統一（%(count)s 件修正）"
+
+msgid "Capturer"
+msgstr "撮影"
+
+msgid "Ce graphique n'est pas disponible pour ce jeu de données."
+msgstr "このグラフはこのデータセットでは利用できません。"
+
+msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
+msgstr "この再設定リンクはすでに使用されているか、有効期限が切れています。"
+
+msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
+msgstr "このリンクは 1 回だけ有効です。このリクエストに心当たりがない場合は、このメッセージを無視してください。パスワードは変更されません。 — DataZen"
+
+msgid "Ce profil n'est pas public."
+msgstr "このプロフィールは公開されていません。"
+
+msgid "Ce que le nettoyage a réellement changé dans votre fichier."
+msgstr "クリーニングが実際にファイルをどう変えたか。"
+
+msgid "Cellules manquantes"
+msgstr "欠損セル"
+
+msgid "Ces %(count)s fichier(s) dépassent la durée de conservation de %(days)s jours. Ils ne sont pas supprimés automatiquement tant que la purge automatique reste désactivée."
+msgstr "この %(count)s 件のファイルは保持期間 %(days)s 日を超えています。自動クリーニングが無効の間は自動削除されません。"
+
+msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
+msgstr "これらのカウンターがグローバル検索と以下のショートカットを支えます。"
+
+msgid "Champ"
+msgstr "フィールド"
+
+msgid "Champs différents :"
+msgstr "異なるフィールド:"
+
+msgid "Champs identiques :"
+msgstr "一致するフィールド:"
+
+msgid "Champs inconnus :"
+msgstr "不明なフィールド:"
+
+msgid "Changer de langue"
+msgstr "言語を変更"
+
+msgid "Changer ma photo de profil"
+msgstr "プロフィール写真を変更"
+
+msgid "Changer mon mot de passe"
+msgstr "パスワードを変更"
+
+msgid "Changer mon mot de passe — DataZen"
+msgstr "パスワードの変更 — DataZen"
+
+msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
+msgstr "<code>.csv</code>、<code>.xlsx</code>、<code>.xls</code> 形式のデータを、区切り文字を問わず読み込めます。"
+
+msgid "Choisir la langue du site"
+msgstr "サイトの言語を選択"
+
+msgid "Choisir le format"
+msgstr "形式を選択"
+
+msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
+msgstr "CSV または Excel ファイル（.csv、.xlsx、.xls）を選択してください。"
+
+msgid "Choisissez un fichier à analyser"
+msgstr "分析するファイルを選択"
+
+msgid "Choisissez un mot de passe long et unique. Vous resterez connecté après la modification."
+msgstr "長くて他と重複しないパスワードを設定してください。変更後もログイン状態が維持されます。"
+
+msgid "Choisissez un mot de passe solide : au moins 8 caractères, ni trop courant, ni entièrement numérique."
+msgstr "強力なパスワードを設定してください。8 文字以上で、よくあるものや数字だけのものは避けてください。"
+
+msgid "Choisissez une colonne unique (ex. email) pour fusionner les variantes d'un même enregistrement (Alice / alice). Laissez vide pour ne supprimer que les lignes 100 % identiques."
+msgstr "一意の列（例：メールアドレス）を選択して、同じレコードの表記違い（Alice / alice）をまとめます。空欄の場合は完全に同一の行のみ削除します。"
+
+msgid "Clair"
+msgstr "ライト"
+
+msgid "Cliquer pour choisir une photo sur mon appareil"
+msgstr "クリックして端末から写真を選択"
+
+msgid "Cliquer pour trier"
+msgstr "クリックで並べ替え"
+
+msgid "Cliquez sur l'avatar ci-dessus pour choisir une image, ou sur l'icône appareil photo pour en prendre une instantanément. JPEG, PNG, WebP ou GIF — 5 Mo maximum."
+msgstr "上のアバターをクリックして画像を選ぶか、カメラアイコンをクリックしてその場で撮影できます。JPEG、PNG、WebP、GIF — 最大 5 MB。"
+
+msgid "Clé de signature"
+msgstr "署名キー"
+
+msgid "Clé de signature HMAC (facultative)"
+msgstr "HMAC 署名キー（任意）"
+
+msgid "Code de langue (fr, en, es…). Vide = langue de l'application."
+msgstr "言語コード（fr、en、es…）。空欄 = アプリの言語。"
+
+msgid "Coefficient de Pearson"
+msgstr "ピアソン係数"
+
+msgid "Colonne"
+msgstr "列"
+
+msgid "Colonne ciblée"
+msgstr "対象の列"
+
+msgid "Colonne clé pour la déduplication"
+msgstr "重複除去のキー列"
+
+msgid "Colonnes"
+msgstr "列"
+
+msgid "Colonnes améliorées"
+msgstr "改善した列"
+
+msgid "Colonnes analysées"
+msgstr "分析した列"
+
+msgid "Colonnes différentes"
+msgstr "異なる列"
+
+msgid "Colonnes différentes :"
+msgstr "異なる列:"
+
+msgid "Colonnes identiques :"
+msgstr "一致する列:"
+
+msgid "Colonnes inconnues :"
+msgstr "不明な列:"
+
+msgid "Colonnes stables"
+msgstr "安定している列"
+
+msgid "Colonnes à vérifier"
+msgstr "確認が必要な列"
+
+msgid "Combien de fichiers se trouvent dans chaque tranche de score."
+msgstr "各スコア帯に何件のファイルがあるか。"
+
+msgid "Comparaison"
+msgstr "比較"
+
+msgid "Comparaison avant / après — %(name)s"
+msgstr "クリーニング前後の比較 — %(name)s"
+
+msgid "Complétion du profil"
+msgstr "プロフィールの完成度"
+
+msgid "Complétude"
+msgstr "完全性"
+
+msgid "Complétude par colonne"
+msgstr "列ごとの充足率"
+
+msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
+msgstr "完全性 · 有効性 · 一意性 · 一貫性 · 適合性"
+
+msgid "Composantes du score (après nettoyage)"
+msgstr "スコアの構成要素（クレンジング後）"
+
+msgid "Compte"
+msgstr "アカウント"
+
+msgid "Compte actif"
+msgstr "アカウント有効"
+
+msgid "Condensé"
+msgstr "要約"
+
+msgid "Confiance"
+msgstr "信頼"
+
+msgid "Confirmer la décision"
+msgstr "判断を確定"
+
+msgid "Connectez-vous pour retrouver vos fichiers."
+msgstr "ログインしてファイルを確認しましょう。"
+
+msgid "Connexion"
+msgstr "ログイン"
+
+msgid "Connexion — DataZen"
+msgstr "ログイン — DataZen"
+
+msgid "Consultation des graphiques"
+msgstr "グラフを見る"
+
+msgid "Consultation du rapport"
+msgstr "レポートを見る"
+
+msgid "Continuer / valider une étape"
+msgstr "続行 / ステップを確定"
+
+msgid "Contribution des cinq dimensions pondérées du score."
+msgstr "スコアを構成する 5 つの重み付き指標の寄与。"
+
+msgid "Contrôle de cohérence"
+msgstr "一貫性チェック"
+
+msgid "Conversion des compteurs en entiers (%(count)s converti(s))"
+msgstr "カウンターを整数に変換（%(count)s 件変換）"
+
+msgid "Conversion des montants (%(count)s converti(s))"
+msgstr "金額の変換（%(count)s 件変換）"
+
+msgid "Convertir les montants"
+msgstr "金額を変換"
+
+msgid "Convertir les montants en valeurs numériques"
+msgstr "金額を数値に変換"
+
+msgid "Copier"
+msgstr "コピー"
+
+msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
+msgstr "今すぐコピーしてください。安全のため、再表示されることはありません。"
+
+msgid "Corrections"
+msgstr "修正"
+
+msgid "Corrections appliquées"
+msgstr "適用された修正"
+
+msgid "Corrélations de Pearson entre les colonnes numériques."
+msgstr "数値列間のPearson相関。"
+
+msgid "Création de jeton"
+msgstr "トークンの作成"
+
+msgid "Création de la règle « %(name)s »"
+msgstr "ルール「%(name)s」の作成"
+
+msgid "Création de règle"
+msgstr "ルールの作成"
+
+msgid "Création du jeton « %(name)s »"
+msgstr "トークン「%(name)s」の作成"
+
+msgid "Créer la règle"
+msgstr "ルールを作成"
+
+msgid "Créer le jeton"
+msgstr "トークンを作成"
+
+msgid "Créer le webhook"
+msgstr "Webhook を作成"
+
+msgid "Créer un compte"
+msgstr "アカウントを作成"
+
+msgid "Créer une règle"
+msgstr "ルールを作成"
+
+msgid "Créez une règle une fois, réutilisez-la sur tous vos fichiers."
+msgstr "ルールを一度作成すれば、すべてのファイルで再利用できます。"
+
+msgid "Créez votre compte"
+msgstr "アカウントを作成"
+
+msgid "Data is consistent: each value is valid or unknown"
+msgstr "データは一貫しています: 各値は有効または不明です"
+
+msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
+msgstr "DataZen — データクレンジングアプリ（DataClean Pro）· ©"
+
+msgid "DataZen — Nettoyage de données"
+msgstr "DataZen — データクレンジング"
+
+msgid "Date"
+msgstr "日付"
+
+msgid "Date d'expiration"
+msgstr "有効期限"
+
+msgid "Date invalide"
+msgstr "無効な日付"
+
+msgid "De l'import brut au rapport de qualité, DataZen couvre toute la chaîne."
+msgstr "生データの取り込みから品質レポートまで、DataZen は一連の流れをカバーします。"
+
+msgid "Demander un nouveau lien"
+msgstr "新しいリンクをリクエスト"
+
+msgid "Dernier appel"
+msgstr "最終呼び出し"
+
+msgid "Dernier code HTTP"
+msgstr "最終 HTTP コード"
+
+msgid "Dernier déclenchement"
+msgstr "最終実行"
+
+msgid "Dernier usage"
+msgstr "最終使用"
+
+msgid "Derniers fichiers"
+msgstr "最近のファイル"
+
+msgid "Dernière connexion"
+msgstr "最終ログイン"
+
+msgid "Dernière utilisation"
+msgstr "最終利用"
+
+msgid "Dernières règles"
+msgstr "最近のルール"
+
+msgid "Des incohérences ont été détectées entre les statistiques et les données."
+msgstr "統計とデータの間に不整合が検出されました。"
+
+msgid "Dimension"
+msgstr "指標"
+
+msgid "Dimensions de qualité"
+msgstr "品質指標"
+
+msgid "Dispersion et valeurs extrêmes des colonnes numériques."
+msgstr "数値列のばらつきと外れ値。"
+
+msgid "Distributions des colonnes numériques"
+msgstr "数値列の分布"
+
+msgid "Distributions numériques"
+msgstr "数値分布"
+
+msgid "Django · Pandas · Bootstrap"
+msgstr "Django · Pandas · Bootstrap"
+
+msgid "Doublon par similarité"
+msgstr "類似による重複"
+
+msgid "Doublon potentiel"
+msgstr "潜在的な重複"
+
+msgid "Doublons"
+msgstr "重複"
+
+msgid "Doublons exacts"
+msgstr "完全な重複"
+
+msgid "Doublons exacts :"
+msgstr "完全な重複:"
+
+msgid "Doublons exacts restants :"
+msgstr "残っている完全な重複:"
+
+msgid "Doublons par similarité :"
+msgstr "類似による重複:"
+
+msgid "Doublons potentiels"
+msgstr "重複の可能性"
+
+msgid "Doublons potentiels (⚠️ à vérifier) :"
+msgstr "潜在的な重複（⚠️ 要確認）:"
+
+msgid "Doublons potentiels :"
+msgstr "潜在的な重複:"
+
+msgid "Doublons potentiels restants :"
+msgstr "残っている潜在的な重複:"
+
+msgid "Doublons restants (exacts + potentiels)"
+msgstr "残っている重複（完全 + 潜在）"
+
+msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
+msgstr "重複、余分な空白、形式が不正なメールアドレス、不整合な日付… DataZen は問題を検出し、数秒ですべて自動修正します。"
+
+msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
+msgstr "重複、欠損値、空白、大文字小文字、メールアドレス、電話番号、日付、給与を正規化します。"
+
+msgid "Durée de conservation"
+msgstr "保持期間"
+
+msgid "Durée de conservation (jours)"
+msgstr "保持期間（日）"
+
+msgid "Décision appliquée avec succès."
+msgstr "判断が正常に適用されました。"
+
+msgid "Déjà un compte ?"
+msgstr "すでにアカウントをお持ちですか？"
+
+msgid "Désactiver"
+msgstr "無効化"
+
+msgid "Désactivée"
+msgstr "無効"
+
+msgid "Détail"
+msgstr "詳細"
+
+msgid "Détail par colonne"
+msgstr "列ごとの詳細"
+
+msgid "Détail par semaine"
+msgstr "週ごとの詳細"
+
+msgid "Détails techniques"
+msgstr "技術的な詳細"
+
+msgid "E-mail envoyé — DataZen"
+msgstr "メールを送信しました — DataZen"
+
+msgid "Effacer"
+msgstr "クリア"
+
+msgid "Effectif"
+msgstr "件数"
+
+msgid "Email invalide"
+msgstr "無効なメールアドレス"
+
+msgid "Email nettoyé"
+msgstr "クレンジング後のメール"
+
+msgid "Email original"
+msgstr "元のメール"
+
+msgid "Emails :"
+msgstr "メールアドレス:"
+
+msgid "Emails corrected (change log vs counter)"
+msgstr "修正されたメール（変更履歴とカウンター）"
+
+msgid "Emails invalides :"
+msgstr "無効なメールアドレス:"
+
+msgid "Emails invalides restants :"
+msgstr "残っている無効なメールアドレス:"
+
+msgid "Emails restants :"
+msgstr "残っているメールアドレス:"
+
+msgid "Emails: valid + invalid + unknown = total"
+msgstr "メール: 有効 + 無効 + 不明 = 合計"
+
+msgid "En attente"
+msgstr "待機中"
+
+msgid "En cours de traitement"
+msgstr "処理中"
+
+msgid "En erreur"
+msgstr "エラー"
+
+msgid "En échec"
+msgstr "失敗"
+
+msgid "Enregistrer"
+msgstr "保存"
+
+msgid "Enregistrer le nouveau mot de passe"
+msgstr "新しいパスワードを保存"
+
+msgid "Enregistrer les modifications"
+msgstr "変更を保存"
+
+msgid "Entrée"
+msgstr "Enter"
+
+msgid "Entrées"
+msgstr "エントリ"
+
+msgid "Envoyer le lien de réinitialisation"
+msgstr "再設定リンクを送信"
+
+msgid "Erreur"
+msgstr "エラー"
+
+msgid "Erreur de nettoyage"
+msgstr "クリーニングエラー"
+
+msgid "Erreurs de format"
+msgstr "形式エラー"
+
+msgid "Erreurs restantes"
+msgstr "残存エラー"
+
+msgid "Excel (.xlsx)"
+msgstr "Excel (.xlsx)"
+
+msgid "Expiration"
+msgstr "期限切れ"
+
+msgid "Expiré"
+msgstr "期限切れ"
+
+msgid "Explication du score"
+msgstr "スコアの説明"
+
+msgid "Export & traçabilité"
+msgstr "エクスポートと追跡"
+
+msgid "Fermer"
+msgstr "閉じる"
+
+msgid "Fermer la fenêtre active"
+msgstr "アクティブなウィンドウを閉じる"
+
+msgid "Fichier"
+msgstr "ファイル"
+
+msgid "Fichier de données"
+msgstr "データファイル"
+
+msgid "Fichier nettoyé"
+msgstr "クレンジング済みファイル"
+
+msgid "Fichier supprimé"
+msgstr "ファイルを削除しました"
+
+msgid "Fichier téléversé"
+msgstr "ファイルをアップロードしました"
+
+msgid "Fichier téléversé avec succès."
+msgstr "ファイルを正常にアップロードしました。"
+
+msgid "Fichier « %(name)s » archivé."
+msgstr "ファイル「%(name)s」をアーカイブしました。"
+
+msgid "Fichier « %(name)s » restauré."
+msgstr "ファイル「%(name)s」を復元しました。"
+
+msgid "Fichier « %(name)s » supprimé."
+msgstr "ファイル「%(name)s」を削除しました。"
+
+msgid "Fichiers"
+msgstr "ファイル"
+
+msgid "Fichiers archivés"
+msgstr "アーカイブ済みファイル"
+
+msgid "Fichiers au total"
+msgstr "ファイル総数"
+
+msgid "Fichiers de données"
+msgstr "データファイル"
+
+msgid "Fichiers expirés"
+msgstr "期限切れファイル"
+
+msgid "Fichiers nettoyés avant le %(cutoff)s considérés comme expirés."
+msgstr "%(cutoff)s より前にクリーニングされたファイルは期限切れと見なされます。"
+
+msgid "Fichiers nettoyés plus anciens que cette durée (0 = conservation illimitée)."
+msgstr "この期間より古いクリーニング済みファイル（0 = 無制限保持）。"
+
+msgid "Fichiers récents"
+msgstr "最近のファイル"
+
+msgid "Fil d'Ariane"
+msgstr "パンくずリスト"
+
+msgid "Filtrer"
+msgstr "絞り込み"
+
+msgid "Filtrer les lignes du tableau"
+msgstr "表の行を絞り込む"
+
+msgid "Filtrer par action"
+msgstr "操作で絞り込む"
+
+msgid "Filtrer par statut"
+msgstr "ステータスで絞り込み"
+
+msgid "Filtrer un tableau"
+msgstr "テーブルを絞り込む"
+
+msgid "Fonction"
+msgstr "機能"
+
+msgid "Format de date"
+msgstr "日付形式"
+
+msgid "Format de la charge utile"
+msgstr "ペイロード形式"
+
+msgid "Formats acceptés : <code>.csv</code>, <code>.xlsx</code>, <code>.xls</code> — jusqu'à 20 Mo."
+msgstr "対応形式: <code>.csv</code>、<code>.xlsx</code>、<code>.xls</code> — 最大 20 MB。"
+
+msgid "Formats de dates (%(column)s) :"
+msgstr "日付形式（%(column)s）:"
+
+msgid "Formats standardized (phones, dates)"
+msgstr "標準化された形式（電話番号、日付）"
+
+msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
+msgstr "時間を節約: DataZen の重要な機能はすべてキー操作で使えます。"
+
+msgid "Graphiques"
+msgstr "グラフ"
+
+msgid "Graphiques générés avec matplotlib et seaborn à partir des données nettoyées."
+msgstr "クリーニング済みデータから matplotlib と seaborn で生成したグラフ。"
+
+msgid "Graphiques générés côté serveur avec"
+msgstr "サーバー側で生成されたグラフ（使用ライブラリ:"
+
+msgid "Graphiques statistiques générés avec <strong>matplotlib</strong> et <strong>seaborn</strong> à partir des données nettoyées."
+msgstr "クレンジング済みデータから <strong>matplotlib</strong> と <strong>seaborn</strong> で生成された統計グラフ。"
+
+msgid "Gratuit, immédiat, et vos fichiers restent privés."
+msgstr "無料で即時、しかもファイルは非公開のままです。"
+
+msgid "Gérer les règles…"
+msgstr "ルールを管理…"
+
+msgid "Histogrammes des colonnes numériques détectées."
+msgstr "検出された数値列のヒストグラム。"
+
+msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
+msgstr "アップロード、クリーニング、エクスポート、API など、操作の時刻付き履歴。"
+
+msgid "Identité"
+msgstr "本人情報"
+
+msgid "Ignorer la casse (Alice = alice)"
+msgstr "大文字と小文字を区別しない（Alice = alice）"
+
+msgid "Import CSV & Excel"
+msgstr "CSV と Excel の取り込み"
+
+msgid "Impossible d'appliquer la décision : %(error)s"
+msgstr "判断を適用できません: %(error)s"
+
+msgid "Impossible de convertir le fichier : %(error)s"
+msgstr "ファイルを変換できません: %(error)s"
+
+msgid "Impossible de générer le PDF : %(error)s"
+msgstr "PDF を生成できません: %(error)s"
+
+msgid "Impossible de lire ce fichier : %(error)s"
+msgstr "このファイルを読み取れません: %(error)s"
+
+msgid "Impossible de lire le fichier : %(error)s"
+msgstr "ファイルを読み取れません: %(error)s"
+
+msgid "Impossible de lire le rapport : %(error)s"
+msgstr "レポートを読み取れません: %(error)s"
+
+msgid "Inactif"
+msgstr "非アクティブ"
+
+msgid "Inactive"
+msgstr "無効"
+
+msgid "Inconnu"
+msgstr "不明"
+
+msgid "Indicateur"
+msgstr "指標"
+
+msgid "Indicateurs comparés"
+msgstr "比較した指標"
+
+msgid "Indiquez votre adresse e-mail : nous vous enverrons un lien pour choisir un nouveau mot de passe."
+msgstr "メールアドレスを入力してください。新しいパスワードを設定するためのリンクをお送りします。"
+
+msgid "Information"
+msgstr "情報"
+
+msgid "Informations professionnelles"
+msgstr "職業情報"
+
+msgid "Inscription — DataZen"
+msgstr "新規登録 — DataZen"
+
+msgid "Intégration"
+msgstr "連携"
+
+msgid "Invalid emails are not counted as unknown or missing"
+msgstr "無効なメールは不明または欠損としてカウントされません"
+
+msgid "JJ/MM/AAAA"
+msgstr "JJ/MM/AAAA"
+
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+msgid "Jamais appelé"
+msgstr "未呼び出し"
+
+msgid "Jauge du score de qualité global (sur 100)."
+msgstr "総合品質スコアのゲージ（100 点満点）。"
+
+msgid "Jeton"
+msgstr "トークン"
+
+msgid "Jeton créé. Copiez-le maintenant : il ne sera plus affiché."
+msgstr "トークンを作成しました。今すぐコピーしてください。再表示されません。"
+
+msgid "Jeton d'API"
+msgstr "API トークン"
+
+msgid "Jeton « %(name)s » révoqué."
+msgstr "トークン「%(name)s」を無効化しました。"
+
+msgid "Jetons"
+msgstr "トークン"
+
+msgid "Jetons d'API"
+msgstr "API トークン"
+
+msgid "Journal d'activité"
+msgstr "アクティビティログ"
+
+msgid "Journal d'activité — DataZen"
+msgstr "アクティビティログ — DataZen"
+
+msgid "Journal des modifications"
+msgstr "変更履歴"
+
+msgid "Journal des modifications (extrait)"
+msgstr "変更履歴（抜粋）"
+
+msgid "L'historique horodaté de chaque opération."
+msgstr "すべての操作の時刻付き履歴。"
+
+msgid "La comparaison n'est pas disponible : lancez d'abord un nettoyage sur ce fichier."
+msgstr "比較できません: 先にこのファイルのクリーニングを実行してください。"
+
+msgid "La confirmation ne correspond pas à votre nom d'utilisateur : suppression annulée."
+msgstr "確認がユーザー名と一致しません: 削除を中止しました。"
+
+msgid "La suppression du compte efface définitivement vos fichiers, vos règles et votre profil. Cette action est irréversible."
+msgstr "アカウントを削除すると、ファイル、ルール、プロフィールが完全に消去されます。この操作は取り消せません。"
+
+msgid "Laisser vide pour appliquer à toutes les colonnes."
+msgstr "すべての列に適用する場合は空欄にします。"
+
+msgid "Laissez vide pour un jeton sans expiration."
+msgstr "有効期限なしのトークンにする場合は空欄にします。"
+
+msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
+msgstr "まずクレンジングを実行すると探索的データ分析を利用できます。"
+
+msgid "Lancez d'abord un nettoyage pour générer un rapport PDF."
+msgstr "PDF レポートを生成するには先にクリーニングを実行してください。"
+
+msgid "Langue de l'interface"
+msgstr "インターフェースの言語"
+
+msgid "Le compte « %(username)s » a été supprimé."
+msgstr "アカウント「%(username)s」を削除しました。"
+
+msgid "Le fichier ne doit pas dépasser 20 Mo."
+msgstr "ファイルは 20 MB を超えないようにしてください。"
+
+msgid "Le journal conserve également %(days)s jours d'historique."
+msgstr "ログはさらに %(days)s 日分の履歴を保持します。"
+
+msgid "Le nettoyage a échoué."
+msgstr "クレンジングに失敗しました。"
+
+msgid "Le nom d'hôte du webhook est introuvable."
+msgstr "Webhook のホスト名が見つかりません。"
+
+msgid "Le nom d'hôte du webhook pointe vers une adresse interne."
+msgstr "Webhook のホスト名が内部アドレスを指しています。"
+
+msgid "Le nom d'hôte est absent de l'URL."
+msgstr "URL にホスト名がありません。"
+
+msgid "Le port est invalide."
+msgstr "ポートが無効です。"
+
+msgid "Le thème « Système » suit les réglages de votre appareil."
+msgstr "「システム」テーマは端末の設定に従います。"
+
+msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
+msgstr "処理はバックグラウンドで実行されます。完了するとこのページは自動的に更新されます。"
+
+msgid "Les adresses internes sont refusées."
+msgstr "内部アドレスは拒否されます。"
+
+msgid "Les adresses locales sont refusées."
+msgstr "ローカルアドレスは拒否されます。"
+
+msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
+msgstr "重複は検出されますが、自動では削除されません。削除するにはこの項目を選択してください。"
+
+msgid "Les fichiers archivés restent accessibles et téléchargeables."
+msgstr "アーカイブされたファイルは引き続き閲覧・ダウンロードできます。"
+
+msgid "Les fichiers expirés seront supprimés automatiquement à votre prochaine visite."
+msgstr "期限切れのファイルは次回アクセス時に自動削除されます。"
+
+msgid "Les fichiers nettoyés sont archivés après 30 jours."
+msgstr "クレンジング済みファイルは 30 日後にアーカイブされます。"
+
+msgid "Les fichiers nettoyés sont archivés puis purgés après cette durée (0 = conservation illimitée)."
+msgstr "クリーニング済みファイルはアーカイブされ、この期間の後に削除されます（0 = 無制限保持）。"
+
+msgid "Les identifiants intégrés à l'URL sont refusés."
+msgstr "URL に埋め込まれた認証情報は拒否されます。"
+
+msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
+msgstr "利用可能なルート: /api/、/api/datasets/、/api/datasets/<id>/、/api/stats/。"
+
+msgid "Les statistiques affichées correspondent aux données réelles."
+msgstr "表示されている統計は実際のデータと一致しています。"
+
+msgid "Lien invalide"
+msgstr "無効なリンク"
+
+msgid "Ligne"
+msgstr "行"
+
+msgid "Lignes"
+msgstr "行"
+
+msgid "Lignes après nettoyage"
+msgstr "クリーニング後の行数"
+
+msgid "Lignes du journal des modifications"
+msgstr "変更ログの行数"
+
+msgid "Lignes traitées"
+msgstr "処理した行数"
+
+msgid "Localisation"
+msgstr "所在地"
+
+msgid "MM/JJ/AAAA"
+msgstr "MM/JJ/AAAA"
+
+msgid "Masquer"
+msgstr "非表示"
+
+msgid "Masquer le mot de passe"
+msgstr "パスワードを非表示"
+
+msgid "Matrice de corrélation"
+msgstr "相関行列"
+
+msgid "Matrice de corrélation (Pearson)"
+msgstr "相関行列（Pearson）"
+
+msgid "Max"
+msgstr "最大"
+
+msgid "Maîtrisez la durée de vie de vos données."
+msgstr "データのライフサイクルを管理しましょう。"
+
+msgid "Membre depuis"
+msgstr "登録日"
+
+msgid "Mes règles"
+msgstr "マイ ルール"
+
+msgid "Mes règles de nettoyage"
+msgstr "マイ クレンジングルール"
+
+msgid "Mesuré avant et après le nettoyage."
+msgstr "クリーニングの前後で測定。"
+
+msgid "Mettre à jour le mot de passe"
+msgstr "パスワードを更新"
+
+msgid "Min"
+msgstr "最小"
+
+msgid "Missing values by column"
+msgstr "列ごとの欠損値"
+
+msgid "Mode"
+msgstr "モード"
+
+msgid "Modifier mes informations"
+msgstr "情報を編集"
+
+msgid "Modifiez votre mot de passe régulièrement et exportez vos données quand vous le souhaitez."
+msgstr "定期的にパスワードを変更し、いつでもデータをエクスポートしましょう。"
+
+msgid "Mon profil"
+msgstr "マイプロフィール"
+
+msgid "Mon profil — DataZen"
+msgstr "マイプロフィール — DataZen"
+
+msgid "Mot de passe"
+msgstr "パスワード"
+
+msgid "Mot de passe modifié"
+msgstr "パスワードを変更しました"
+
+msgid "Mot de passe modifié — DataZen"
+msgstr "パスワードを変更しました — DataZen"
+
+msgid "Mot de passe oublié ?"
+msgstr "パスワードをお忘れですか？"
+
+msgid "Mot de passe oublié — DataZen"
+msgstr "パスワードをお忘れの方 — DataZen"
+
+msgid "Motif"
+msgstr "理由"
+
+msgid "Motif attendu"
+msgstr "期待されるパターン"
+
+msgid "Moyenne"
+msgstr "平均"
+
+msgid "Médiane"
+msgstr "中央値"
+
+msgid "Méthode"
+msgstr "方法"
+
+msgid "Nettoyage"
+msgstr "クリーニング"
+
+msgid "Nettoyage du fichier « %(name)s »"
+msgstr "ファイル「%(name)s」のクリーニング"
+
+msgid "Nettoyage intelligent"
+msgstr "スマートクレンジング"
+
+msgid "Nettoyage intelligent · CSV & Excel"
+msgstr "スマートクレンジング · CSV と Excel"
+
+msgid "Nettoyage lancé en arrière-plan. La page se met à jour automatiquement."
+msgstr "クレンジングをバックグラウンドで開始しました。ページは自動的に更新されます。"
+
+msgid "Nettoyage lancé sur « %(name)s »"
+msgstr "「%(name)s」のクリーニングを開始しました"
+
+msgid "Nettoyage terminé"
+msgstr "クリーニング完了"
+
+msgid "Nettoyage terminé : « %(name)s »"
+msgstr "クリーニング完了: 「%(name)s」"
+
+msgid "Nettoyer"
+msgstr "クレンジング"
+
+msgid "Nettoyer un fichier"
+msgstr "ファイルをクレンジング"
+
+msgid "Nettoyez, normalisez et fiabilisez vos fichiers CSV et Excel en quelques clics — sans écrire une ligne de code."
+msgstr "数回のクリックで CSV と Excel ファイルをクレンジングし、正規化して信頼できるものにできます。コードを 1 行も書く必要はありません。"
+
+msgid "Nettoyé"
+msgstr "クレンジング済み"
+
+msgid "Nettoyé le"
+msgstr "クリーニング日"
+
+msgid "Nettoyés"
+msgstr "クレンジング済み"
+
+msgid "Niveau"
+msgstr "レベル"
+
+msgid "No exact duplicates"
+msgstr "完全な重複はありません"
+
+msgid "No missing or unknown values"
+msgstr "欠損値または不明な値はありません"
+
+msgid "No potential duplicates"
+msgstr "潜在的な重複はありません"
+
+msgid "Nom"
+msgstr "名前"
+
+msgid "Nom d'utilisateur"
+msgstr "ユーザー名"
+
+msgid "Nom de la règle"
+msgstr "ルール名"
+
+msgid "Nom de votre entreprise ou équipe"
+msgstr "会社名またはチーム名"
+
+msgid "Nom du jeton"
+msgstr "トークン名"
+
+msgid "Nombre d'appels"
+msgstr "呼び出し回数"
+
+msgid "Nombre d'occurrences"
+msgstr "出現回数"
+
+msgid "Nombre de nettoyages et score moyen par semaine."
+msgstr "週ごとのクリーニング回数と平均スコア。"
+
+msgid "Nombre de valeurs aberrantes"
+msgstr "外れ値の数"
+
+msgid "Nombre de valeurs aberrantes (méthode IQR) par colonne."
+msgstr "列ごとの外れ値の数（IQR 法）。"
+
+msgid "Normalisation de la casse (noms, libellés, villes)"
+msgstr "大文字と小文字の統一（名前、ラベル、都市）"
+
+msgid "Normalisation des catégories (%(count)s corrigée(s))"
+msgstr "カテゴリの正規化（%(count)s 件修正）"
+
+msgid "Normalisation des choix oui/non (%(count)s corrigé(s))"
+msgstr "はい/いいえの正規化（%(count)s 件修正）"
+
+msgid "Normalisation des codes/références (%(count)s corrigé(s))"
+msgstr "コード/参照の正規化（%(count)s 件修正）"
+
+msgid "Normalisation des dates (%(count)s corrigée(s))"
+msgstr "日付の正規化（%(count)s 件修正）"
+
+msgid "Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "電話番号の正規化（%(count)s 件修正）"
+
+msgid "Normaliser la casse"
+msgstr "大文字と小文字を正規化"
+
+msgid "Normaliser la casse (emails en minuscules, noms en Capitales)"
+msgstr "大文字と小文字を統一（メールは小文字、名前は先頭を大文字）"
+
+msgid "Normaliser les dates"
+msgstr "日付を正規化"
+
+msgid "Normaliser les dates (AAAA-MM-JJ)"
+msgstr "日付を標準化（YYYY-MM-DD）"
+
+msgid "Normaliser les emails"
+msgstr "メールを正規化"
+
+msgid "Normaliser les téléphones"
+msgstr "電話番号を正規化"
+
+msgid "Normaliser les téléphones (06XXXXXXXX)"
+msgstr "電話番号を標準化（06XXXXXXXX）"
+
+msgid "Notifications par email"
+msgstr "メール通知"
+
+msgid "Nouveau jeton d API"
+msgstr "新しい API トークン"
+
+msgid "Nouveau mot de passe"
+msgstr "新しいパスワード"
+
+msgid "Nouveau mot de passe — DataZen"
+msgstr "新しいパスワード — DataZen"
+
+msgid "Nouvelle photo prête"
+msgstr "新しい写真の準備ができました"
+
+msgid "Nouvelle valeur"
+msgstr "新しい値"
+
+msgid "Opération"
+msgstr "操作"
+
+msgid "Opérations de nettoyage"
+msgstr "クリーニング操作"
+
+msgid "Organisation"
+msgstr "組織"
+
+msgid "Outils"
+msgstr "ツール"
+
+msgid "Outliers"
+msgstr "外れ値"
+
+msgid "Ouvrir"
+msgstr "開く"
+
+msgid "Ouvrir la recherche globale"
+msgstr "グローバル検索を開く"
+
+msgid "Ouvrir le résultat sélectionné"
+msgstr "選択した結果を開く"
+
+msgid "Page"
+msgstr "ページ"
+
+msgid "Parcourir…"
+msgstr "ファイルを選択"
+
+msgid "Pas encore de compte ?"
+msgstr "まだアカウントをお持ちでないですか？"
+
+msgid "Pensez à regarder dans vos courriers indésirables. Le lien reste valable quelques heures."
+msgstr "迷惑メールフォルダもご確認ください。リンクは数時間有効です。"
+
+msgid "Personnalisez votre identité, votre photo et vos préférences."
+msgstr "本人情報、写真、環境設定をカスタマイズできます。"
+
+msgid "Photo de profil"
+msgstr "プロフィール写真"
+
+msgid "Pilotage"
+msgstr "パイロット"
+
+msgid "Plus fréquent"
+msgstr "最頻値"
+
+msgid "Poids"
+msgstr "重み"
+
+msgid "Politique en vigueur"
+msgstr "現在のポリシー"
+
+msgid "Pondération"
+msgstr "重み"
+
+msgid "Premier quartile"
+msgstr "第1四分位数"
+
+msgid "Prendre une photo avec la caméra"
+msgstr "カメラで写真を撮る"
+
+msgid "Problème"
+msgstr "問題"
+
+msgid "Problèmes après"
+msgstr "後の問題"
+
+msgid "Problèmes avant"
+msgstr "前の問題"
+
+msgid "Problèmes détectés"
+msgstr "検出された問題"
+
+msgid "Problèmes restants"
+msgstr "残っている問題"
+
+msgid "Productivité"
+msgstr "生産性"
+
+msgid "Profil"
+msgstr "プロフィール"
+
+msgid "Profil de %(name)s — DataZen"
+msgstr "%(name)s のプロフィール — DataZen"
+
+msgid "Profil de %(username)s"
+msgstr "%(username)s のプロフィール"
+
+msgid "Profil public"
+msgstr "公開プロフィール"
+
+msgid "Profil visible publiquement"
+msgstr "プロフィールを公開"
+
+msgid "Profils"
+msgstr "プロフィール"
+
+msgid "Progression"
+msgstr "進捗"
+
+msgid "Propriétaire"
+msgstr "所有者"
+
+msgid "Préfixe"
+msgstr "プレフィックス"
+
+msgid "Préférences"
+msgstr "環境設定"
+
+msgid "Prénom"
+msgstr "名"
+
+msgid "Présentation"
+msgstr "自己紹介"
+
+msgid "Purge automatique"
+msgstr "自動クリーニング"
+
+msgid "Purge automatique de %(count)s fichier(s) expiré(s)"
+msgstr "期限切れファイル %(count)s 件を自動クリーニング"
+
+msgid "Purge de %(count)s fichier(s) expiré(s)"
+msgstr "期限切れファイル %(count)s 件をクリーニング"
+
+msgid "Purger automatiquement"
+msgstr "自動でクリーニング"
+
+msgid "Purger automatiquement les fichiers expirés"
+msgstr "期限切れファイルを自動でクリーニング"
+
+msgid "Purger le journal"
+msgstr "ログを消去"
+
+msgid "Purger les anciennes entrées du journal ?"
+msgstr "古いログエントリを消去しますか？"
+
+msgid "Q1"
+msgstr "Q1"
+
+msgid "Q3"
+msgstr "Q3"
+
+msgid "Qualité moyenne"
+msgstr "平均品質"
+
+msgid "Qualité par colonne"
+msgstr "列ごとの品質"
+
+msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
+msgstr "あなた自身、チーム、データセットについて簡単に…"
+
+msgid "Raccourcis clavier"
+msgstr "キーボードショートカット"
+
+msgid "Raccourcis clavier — DataZen"
+msgstr "キーボードショートカット — DataZen"
+
+msgid "Raccourcis de navigation"
+msgstr "ナビゲーションのショートカット"
+
+msgid "Raccourcis de nettoyage"
+msgstr "クリーニングのショートカット"
+
+msgid "Raison"
+msgstr "理由"
+
+msgid "Rapport"
+msgstr "レポート"
+
+msgid "Rapport PDF de « %(name)s »"
+msgstr "「%(name)s」の PDF レポート"
+
+msgid "Rapport de nettoyage"
+msgstr "クレンジングレポート"
+
+msgid "Rapport de qualité des données"
+msgstr "データ品質レポート"
+
+msgid "Rapport généré automatiquement par DataZen. Les scores sont calculés selon cinq dimensions pondérées : complétude, validité, unicité, cohérence et conformité."
+msgstr "DataZen が自動生成したレポートです。スコアは 5 つの重み付き軸（完全性、妥当性、一意性、一貫性、適合性）で算出されます。"
+
+msgid "Rapport — %(name)s"
+msgstr "レポート — %(name)s"
+
+msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
+msgstr "クリーニングの完了・失敗、またはファイルのアップロード時に HTTP 通知を受け取れます。"
+
+msgid "Recevoir les notifications par email"
+msgstr "メール通知を受け取る"
+
+msgid "Recevoir un message lorsqu'un nettoyage se termine."
+msgstr "クレンジング完了時にメッセージを受け取る。"
+
+msgid "Recherche en cours…"
+msgstr "検索中…"
+
+msgid "Recherche globale"
+msgstr "グローバル検索"
+
+msgid "Recherche momentanément indisponible."
+msgstr "検索は一時的に利用できません。"
+
+msgid "Rechercher"
+msgstr "検索"
+
+msgid "Rechercher (Ctrl+K)"
+msgstr "検索（Ctrl+K）"
+
+msgid "Rechercher un fichier"
+msgstr "ファイルを検索"
+
+msgid "Rechercher un fichier ou une règle (Ctrl+K)"
+msgstr "ファイルまたはルールを検索（Ctrl+K）"
+
+msgid "Rechercher un fichier, une règle, une page…"
+msgstr "ファイル、ルール、ページを検索…"
+
+msgid "Rechercher un fichier…"
+msgstr "ファイルを検索…"
+
+msgid "Recommandation"
+msgstr "推奨"
+
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
+msgstr "氏名、メールアドレス、電話番号を決定論的な仮名に置き換えます（同じ値には同じ仮名）。行間の関係は維持されます。"
+
+msgid "Remplacer les valeurs manquantes"
+msgstr "欠損値を置換"
+
+msgid "Remplacez le jeton par le vôtre et lancez la commande."
+msgstr "トークンを自分のものに置き換えてコマンドを実行します。"
+
+msgid "Remplir les valeurs manquantes"
+msgstr "欠損値を補完"
+
+msgid "Remplissage des valeurs manquantes par « %(value)s » (les montants, codes et dates ne reçoivent jamais un texte)"
+msgstr "欠損値を「%(value)s」で補完（金額、コード、日付にはテキストを設定しません）"
+
+msgid "Renseignées"
+msgstr "入力済み"
+
+msgid "Renumérotation des identifiants (ancien id conservé)"
+msgstr "識別子の再採番（元の ID を保持）"
+
+msgid "Reported %(reported)s vs recalculated %(actual)s"
+msgstr "申告値 %(reported)s に対し再計算値 %(actual)s"
+
+msgid "Restauration"
+msgstr "復元"
+
+msgid "Restauration de « %(name)s »"
+msgstr "「%(name)s」の復元"
+
+msgid "Restaurer"
+msgstr "復元"
+
+msgid "Retour à la connexion"
+msgstr "ログインに戻る"
+
+msgid "Règle"
+msgstr "ルール"
+
+msgid "Règle de nettoyage"
+msgstr "クレンジングルール"
+
+msgid "Règle « %(name)s » %(state)s."
+msgstr "ルール「%(name)s」を%(state)s。"
+
+msgid "Règle « %(name)s » créée."
+msgstr "ルール「%(name)s」を作成しました。"
+
+msgid "Règle « %(name)s » supprimée."
+msgstr "ルール「%(name)s」を削除しました。"
+
+msgid "Règles"
+msgstr "ルール"
+
+msgid "Règles de nettoyage"
+msgstr "クレンジングルール"
+
+msgid "Règles de nettoyage — DataZen"
+msgstr "クレンジングルール — DataZen"
+
+msgid "Règles de validation regex personnalisées"
+msgstr "カスタム正規表現の検証ルール"
+
+msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
+msgstr "クレンジング済みファイル、詳細レポート、完全な変更ログを取得できます。"
+
+msgid "Réinitialiser"
+msgstr "リセット"
+
+msgid "Répartition des problèmes"
+msgstr "問題の内訳"
+
+msgid "Répartition des problèmes restants"
+msgstr "残存問題の分布"
+
+msgid "Résultats"
+msgstr "結果"
+
+msgid "Rétention"
+msgstr "保持"
+
+msgid "Rétention des données"
+msgstr "データ保持"
+
+msgid "Rétention des données — DataZen"
+msgstr "データ保持 — DataZen"
+
+msgid "Révocation de jeton"
+msgstr "トークンの無効化"
+
+msgid "Révocation du jeton « %(name)s »"
+msgstr "トークン「%(name)s」の無効化"
+
+msgid "Révoquer"
+msgstr "無効化"
+
+msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
+msgstr "このトークンを無効化しますか？使用中の連携が動かなくなります。"
+
+msgid "Révoqué"
+msgstr "無効化済み"
+
+msgid "S'inscrire"
+msgstr "新規登録"
+
+msgid "Saisissez <strong>%(username)s</strong> pour confirmer"
+msgstr "確認のため <strong>%(username)s</strong> を入力してください"
+
+msgid "Score"
+msgstr "スコア"
+
+msgid "Score après nettoyage"
+msgstr "クリーニング後のスコア"
+
+msgid "Score avant nettoyage"
+msgstr "クリーニング前のスコア"
+
+msgid "Score de la dimension"
+msgstr "次元スコア"
+
+msgid "Score de qualité"
+msgstr "品質スコア"
+
+msgid "Score de similarité :"
+msgstr "類似度スコア:"
+
+msgid "Score global"
+msgstr "総合スコア"
+
+msgid "Score global de qualité"
+msgstr "総合品質スコア"
+
+msgid "Score qualité"
+msgstr "品質スコア"
+
+msgid "Score qualité après"
+msgstr "クレンジング後の品質スコア"
+
+msgid "Score qualité avant"
+msgstr "クレンジング前の品質スコア"
+
+msgid "Se connecter"
+msgstr "ログイン"
+
+msgid "Se déconnecter"
+msgstr "ログアウト"
+
+msgid "Se déplacer dans les résultats"
+msgstr "結果内を移動"
+
+msgid "Sert uniquement à la réinitialisation du mot de passe."
+msgstr "パスワードの再設定にのみ使用されます。"
+
+msgid "Seuls les schémas http et https sont autorisés."
+msgstr "使用できるのは http と https スキームのみです。"
+
+msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
+msgstr "このアドレスのアカウントが存在する場合、再設定リンクを含むメールを送信しました。"
+
+msgid "Site web"
+msgstr "ウェブサイト"
+
+msgid "Sombre"
+msgstr "ダーク"
+
+msgid "Statut"
+msgstr "ステータス"
+
+msgid "Succès"
+msgstr "成功"
+
+msgid "Superutilisateur"
+msgstr "スーパーユーザー"
+
+msgid "Suppression"
+msgstr "削除"
+
+msgid "Suppression de la règle « %(name)s »"
+msgstr "ルール「%(name)s」の削除"
+
+msgid "Suppression de règle"
+msgstr "ルールの削除"
+
+msgid "Suppression de « %(name)s »"
+msgstr "「%(name)s」の削除"
+
+msgid "Suppression des doublons exacts (%(count)s supprimé(s))"
+msgstr "完全一致する重複を削除（%(count)s 件削除）"
+
+msgid "Suppression des doublons sur « %(column)s » (%(count)s supprimé(s))"
+msgstr "「%(column)s」列で重複を削除（%(count)s 件削除）"
+
+msgid "Suppression des espaces superflus"
+msgstr "余分な空白を削除"
+
+msgid "Supprimer %(name)s"
+msgstr "%(name)sを削除"
+
+msgid "Supprimer ce webhook ?"
+msgstr "この Webhook を削除しますか？"
+
+msgid "Supprimer définitivement ce fichier et toutes ses données ?"
+msgstr "このファイルとすべてのデータを完全に削除しますか？"
+
+msgid "Supprimer définitivement les fichiers expirés ? Cette action est irréversible."
+msgstr "期限切れファイルを完全に削除しますか？この操作は取り消せません。"
+
+msgid "Supprimer définitivement les fichiers expirés au lieu de les archiver."
+msgstr "期限切れファイルはアーカイブせず完全に削除します。"
+
+msgid "Supprimer définitivement « %(name)s » ?"
+msgstr "「%(name)s」を完全に削除しますか？"
+
+msgid "Supprimer les doublons"
+msgstr "重複を削除"
+
+msgid "Supprimer les doublons (confirmation requise)"
+msgstr "重複を削除（確認が必要）"
+
+msgid "Supprimer les espaces superflus"
+msgstr "余分な空白を削除"
+
+msgid "Supprimer mon compte"
+msgstr "アカウントを削除"
+
+msgid "Synthèse"
+msgstr "総括"
+
+msgid "Système"
+msgstr "システム"
+
+msgid "Sécurité"
+msgstr "セキュリティ"
+
+msgid "Sélectionner un fichier"
+msgstr "ファイルを選択"
+
+msgid "Tableau de bord"
+msgstr "ダッシュボード"
+
+msgid "Tableau de bord — DataZen"
+msgstr "ダッシュボード — DataZen"
+
+msgid "Tapez au moins deux caractères pour lancer la recherche."
+msgstr "検索を始めるには 2 文字以上入力してください。"
+
+msgid "Taux de complétude (%)"
+msgstr "完全性率 (%)"
+
+msgid "Taux de remplissage de chaque colonne (les plus incomplètes d'abord)."
+msgstr "各列の入力率（不足の多い順）。"
+
+msgid "Technologies"
+msgstr "テクノロジー"
+
+msgid "Tester"
+msgstr "テスト"
+
+msgid "Thème préféré"
+msgstr "優先テーマ"
+
+msgid "Top des catégories"
+msgstr "カテゴリのトップ"
+
+msgid "Total missing values"
+msgstr "欠損値の合計"
+
+msgid "Tous vos indicateurs de qualité réunis."
+msgstr "すべての品質指標をひとつに。"
+
+msgid "Tout est inclus"
+msgstr "すべて込み"
+
+msgid "Tout voir"
+msgstr "すべて見る"
+
+msgid "Toutes les actions"
+msgstr "すべての操作"
+
+msgid "Traçabilité"
+msgstr "追跡性"
+
+msgid "Troisième quartile"
+msgstr "第3四分位数"
+
+msgid "Type"
+msgstr "種類"
+
+msgid "Type de correction"
+msgstr "修正の種類"
+
+msgid "Téléchargement"
+msgstr "ダウンロード"
+
+msgid "Téléchargement de « %(name)s »"
+msgstr "「%(name)s」のダウンロード"
+
+msgid "Téléphone invalide"
+msgstr "無効な電話番号"
+
+msgid "Téléphone non standard"
+msgstr "標準形式ではない電話番号"
+
+msgid "Téléphones non standard (%(column)s) :"
+msgstr "標準外の電話番号（%(column)s）:"
+
+msgid "Téléversement"
+msgstr "アップロード"
+
+msgid "Téléversement de « %(name)s »"
+msgstr "「%(name)s」のアップロード"
+
+msgid "Téléverser un fichier"
+msgstr "ファイルをアップロード"
+
+msgid "Téléversez votre fichier"
+msgstr "ファイルをアップロード"
+
+msgid "Téléversé"
+msgstr "アップロード済み"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "URL de destination"
+msgstr "送信先 URL"
+
+msgid "URL illisible."
+msgstr "URL を読み取れません。"
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page."
+msgstr "管理者アカウントはこのページから削除できません。"
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
+msgstr "管理者アカウントはこのページから削除できません。次を使用してください:"
+
+msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
+msgstr "ダッシュボードがクレンジング前後の品質を測定し、失われたポイントを一つずつ説明します。"
+
+msgid "Une URL de destination est requise."
+msgstr "宛先 URL が必要です。"
+
+msgid "Une boîte à outils complète"
+msgstr "充実したツールセット"
+
+msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
+msgstr "1行につき1つのルールを「列:パターン」の形式で入力します。例：「郵便番号:^\\d{5}$」。一致しない値は通知されます（変更されません）。"
+
+msgid "Uniques"
+msgstr "一意"
+
+msgid "Unknown"
+msgstr "不明"
+
+msgid "Unknown emails included in the unknown-value statistic"
+msgstr "不明なメールは不明値の統計に含まれます"
+
+msgid "Unknown values by column"
+msgstr "列ごとの不明な値"
+
+msgid "Utilisateur"
+msgstr "ユーザー"
+
+msgid "Utilisation de l'API"
+msgstr "API の利用状況"
+
+msgid "Valeur"
+msgstr "値"
+
+msgid "Valeur aberrante"
+msgstr "外れ値"
+
+msgid "Valeur de remplacement"
+msgstr "置換値"
+
+msgid "Valeur de remplacement (pour le remplissage)."
+msgstr "置換値（補完用）。"
+
+msgid "Valeur manquante"
+msgstr "欠損値"
+
+msgid "Valeur numérique invalide"
+msgstr "無効な数値"
+
+msgid "Valeurs aberrantes"
+msgstr "外れ値"
+
+msgid "Valeurs aberrantes par colonne (méthode IQR)"
+msgstr "列ごとの外れ値（IQR 法）"
+
+msgid "Valeurs les plus fréquentes"
+msgstr "最頻値"
+
+msgid "Valeurs les plus fréquentes des colonnes catégorielles."
+msgstr "カテゴリ列で最も頻出する値。"
+
+msgid "Valeurs manquantes"
+msgstr "欠損値"
+
+msgid "Valeurs manquantes :"
+msgstr "欠損値:"
+
+msgid "Valeurs manquantes restantes"
+msgstr "残っている欠損値"
+
+msgid "Valeurs manquantes restantes :"
+msgstr "残っている欠損値:"
+
+msgid "Valeurs uniques"
+msgstr "一意の値"
+
+msgid "Valeurs « Inconnu »"
+msgstr "不明な値"
+
+msgid "Valeurs « Inconnu » :"
+msgstr "「不明」の値:"
+
+msgid "Validation et correction des emails (%(corrected)s corrigé(s), %(invalid)s invalide(s))"
+msgstr "メールアドレスの検証と修正（%(corrected)s 件修正、%(invalid)s 件無効）"
+
+msgid "Valider et corriger les emails (erreurs évidentes seulement)"
+msgstr "メールアドレスを検証・修正（明らかな誤りのみ）"
+
+msgid "Validité"
+msgstr "有効性"
+
+msgid "Visualisations statistiques"
+msgstr "統計的可視化"
+
+msgid "Voir l'analyse complète →"
+msgstr "完全な分析を見る →"
+
+msgid "Volume"
+msgstr "データ量"
+
+msgid "Volume des anomalies restantes par catégorie."
+msgstr "カテゴリ別の残存異常の量。"
+
+msgid "Vos données"
+msgstr "あなたのデータ"
+
+msgid "Vos données méritent<br> <span class=\"dz-gradient-text\">d'être impeccables.</span>"
+msgstr "あなたのデータは<br> <span class=\"dz-gradient-text\">完璧であるべきです。</span>"
+
+msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
+msgstr "ファイルはあなたの手元に残ります。DataZen は選択した保持期間を超えたものを示すだけで、同意なく削除しません。"
+
+msgid "Votre espace de travail"
+msgstr "ワークスペース"
+
+msgid "Votre mot de passe a bien été enregistré. Vous pouvez maintenant vous connecter avec celui-ci."
+msgstr "パスワードを保存しました。このパスワードでログインできます。"
+
+msgid "Votre mot de passe a été modifié. Vos autres sessions restent actives."
+msgstr "パスワードを変更しました。他のセッションは引き続き有効です。"
+
+msgid "Votre nom d'utilisateur <strong>@%(username)s</strong> ne peut pas être modifié."
+msgstr "ユーザー名 <strong>@%(username)s</strong> は変更できません。"
+
+msgid "Votre photo de profil a été supprimée."
+msgstr "プロフィール写真を削除しました。"
+
+msgid "Votre profil a été mis à jour."
+msgstr "プロフィールが更新されました。"
+
+msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
+msgstr "主導権はあなたにあります。あなたの操作なしに何も削除されません。"
+
+msgid "Vous n'avez pas accès à ce fichier."
+msgstr "このファイルへのアクセス権がありません。"
+
+msgid "Vous n'avez pas accès à ce jeton."
+msgstr "このトークンへのアクセス権がありません。"
+
+msgid "Vous n'avez pas accès à ce webhook."
+msgstr "この Webhook へのアクセス権がありません。"
+
+msgid "Vous n'avez pas accès à cette règle."
+msgstr "このルールへのアクセス権がありません。"
+
+msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
+msgstr "すべてのファイルをまとめたデータ品質の集約ビュー。"
+
+msgid "Vue d'ensemble"
+msgstr "概要"
+
+msgid "Vérifiez votre boîte mail"
+msgstr "メールをご確認ください"
+
+msgid "Webhook"
+msgstr "Webhook"
+
+msgid "Webhook « %(name)s » %(state)s."
+msgstr "Webhook「%(name)s」%(state)s。"
+
+msgid "Webhook « %(name)s » : test réussi (HTTP %(status)s)."
+msgstr "Webhook「%(name)s」: テスト成功（HTTP %(status)s）。"
+
+msgid "Webhook « %(name)s » : test échoué (HTTP %(status)s). Vérifiez l'URL et que le service accepte les appels entrants."
+msgstr "Webhook「%(name)s」: テスト失敗（HTTP %(status)s）。URL と、受信リクエストを受け付ける設定かを確認してください。"
+
+msgid "Webhook « %(name)s » créé."
+msgstr "Webhook「%(name)s」を作成しました。"
+
+msgid "Webhook « %(name)s » supprimé."
+msgstr "Webhook「%(name)s」を削除しました。"
+
+msgid "Webhooks"
+msgstr "Webhook"
+
+msgid "Webhooks — DataZen"
+msgstr "Webhook — DataZen"
+
+msgid "YYYY-MM-DD"
+msgstr "YYYY-MM-DD"
+
+msgid "[Règle] Anonymisation (%(count)s valeur(s))"
+msgstr "[ルール] 匿名化（%(count)s 件）"
+
+msgid "[Règle] Conversion des montants (%(count)s converti(s))"
+msgstr "[ルール] 金額を変換（%(count)s 件変換）"
+
+msgid "[Règle] Normalisation de la casse"
+msgstr "[ルール] 大文字と小文字を統一"
+
+msgid "[Règle] Normalisation des dates (%(count)s corrigée(s))"
+msgstr "[ルール] 日付を正規化（%(count)s 件修正）"
+
+msgid "[Règle] Normalisation des emails (%(count)s corrigé(s))"
+msgstr "[ルール] メールを正規化（%(count)s 件修正）"
+
+msgid "[Règle] Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "[ルール] 電話番号を正規化（%(count)s 件修正）"
+
+msgid "[Règle] Remplissage des valeurs manquantes par « %(value)s »"
+msgstr "[ルール] 欠損値を「%(value)s」で補完"
+
+msgid "[Règle] Suppression des doublons (%(count)s supprimé(s))"
+msgstr "[ルール] 重複を削除（%(count)s 件削除）"
+
+msgid "[Règle] Suppression des espaces superflus"
+msgstr "[ルール] 余分な空白を削除"
+
+msgid "actif"
+msgstr "有効"
+
+msgid "activé"
+msgstr "有効"
+
+msgid "activée"
+msgstr "有効化しました"
+
+msgid "ajoutée"
+msgstr "追加済み"
+
+msgid "améliorée"
+msgstr "改善済み"
+
+msgid "bonne qualité"
+msgstr "良好な品質"
+
+msgid "catégorie"
+msgstr "カテゴリ"
+
+msgid "cohérence"
+msgstr "整合性"
+
+msgid "colonne : %(name)s"
+msgstr "列: %(name)s"
+
+msgid "complétude"
+msgstr "完全性"
+
+msgid "conformité"
+msgstr "適合性"
+
+msgid "conservée (non inventée)"
+msgstr "保持（捏造なし）"
+
+msgid "console d'administration"
+msgstr "管理コンソール"
+
+msgid "date"
+msgstr "日付"
+
+msgid "donnée absente"
+msgstr "データなし"
+
+msgid "désactivé"
+msgstr "無効"
+
+msgid "désactivée"
+msgstr "無効化しました"
+
+msgid "détail"
+msgstr "詳細"
+
+msgid "email"
+msgstr "メール"
+
+msgid "et"
+msgstr "と"
+
+msgid "ex : 0 ou Inconnu"
+msgstr "例：0 または 不明"
+
+msgid "ex : Emails en minuscules"
+msgstr "例: メールを小文字に"
+
+msgid "ex : Intégration Power BI"
+msgstr "例: Power BI 連携"
+
+msgid "ex : Slack — nettoyages"
+msgstr "例: Slack — クリーニング"
+
+msgid "ex : email (vide = toutes les colonnes)"
+msgstr "例: email（空欄 = すべての列）"
+
+msgid "excellente qualité"
+msgstr "非常に良い品質"
+
+msgid "fermer"
+msgstr "閉じる"
+
+msgid "format invalide"
+msgstr "無効な形式"
+
+msgid "format non reconnu"
+msgstr "認識されない形式"
+
+msgid "généré le"
+msgstr "生成日"
+
+msgid "https://exemple.com"
+msgstr "https://exemple.com"
+
+msgid "https://hooks.exemple.com/datazen"
+msgstr "https://hooks.example.com/datazen"
+
+msgid "identifiant"
+msgstr "識別子"
+
+msgid "inactive"
+msgstr "無効"
+
+msgid "inchangé"
+msgstr "変更なし"
+
+msgid "jours"
+msgstr "日"
+
+msgid "lignes"
+msgstr "行"
+
+msgid "longueur/format incorrect"
+msgstr "長さ/形式が不正"
+
+msgid "matplotlib"
+msgstr "matplotlib"
+
+msgid "naviguer"
+msgstr "移動"
+
+msgid "non évalué"
+msgstr "未評価"
+
+msgid "numérique"
+msgstr "数値"
+
+msgid "opération : %(name)s"
+msgstr "操作: %(name)s"
+
+msgid "ouvrir"
+msgstr "開く"
+
+msgid "points"
+msgstr "点"
+
+msgid "pour «"
+msgstr "「"
+
+msgid "premières lignes."
+msgstr "最初の数行。"
+
+msgid "qualité faible"
+msgstr "低い品質"
+
+msgid "qualité moyenne"
+msgstr "普通の品質"
+
+msgid "référence"
+msgstr "参照"
+
+msgid "révoqué"
+msgstr "失効"
+
+msgid "score"
+msgstr "スコア"
+
+msgid "score %(before)s → %(after)s"
+msgstr "スコア %(before)s → %(after)s"
+
+msgid "seaborn"
+msgstr "seaborn"
+
+msgid "stable"
+msgstr "安定"
+
+msgid "supprimée"
+msgstr "削除済み"
+
+msgid "sur"
+msgstr "/"
+
+msgid "texte"
+msgstr "テキスト"
+
+msgid "téléphone"
+msgstr "電話番号"
+
+msgid "unicité"
+msgstr "一意性"
+
+msgid "valeur(s) extrême(s)"
+msgstr "極値"
+
+msgid "validité"
+msgstr "妥当性"
+
+msgid "· ancien_id :"
+msgstr "· ancien_id:"
+
+msgid "· statut filtré"
+msgstr "· 絞り込まれたステータス"
+
+msgid "À compléter :"
+msgstr "未入力:"
+
+msgid "Écart"
+msgstr "差"
+
+msgid "Écart-type"
+msgstr "標準偏差"
+
+msgid "Échap"
+msgstr "Esc"
+
+msgid "Échec du nettoyage"
+msgstr "クリーニングに失敗しました"
+
+msgid "Échec du nettoyage de « %(name)s »"
+msgstr "「%(name)s」のクリーニングに失敗しました"
+
+msgid "Étape 1"
+msgstr "ステップ 1"
+
+msgid "État"
+msgstr "状態"
+
+msgid "Évolution hebdomadaire du score de qualité"
+msgstr "品質スコアの週次推移"
+
+msgid "Événement"
+msgstr "イベント"
+
+msgid "Événement déclencheur"
+msgstr "トリガーイベント"
+
+msgid "à corriger manuellement"
+msgstr "手動で修正"
+
+msgid "à partir des données nettoyées."
+msgstr "クレンジング済みデータから生成。"
+
+msgid "à vérifier"
+msgstr "確認が必要"
+
+msgid "à vérifier manuellement"
+msgstr "手動で確認"
+
+msgid "—"
+msgstr "—"
+
+msgid "— Choisir une action —"
+msgstr "— 操作を選択 —"
+
+msgid "— Tous les statuts —"
+msgstr "— すべてのステータス —"
+
+msgid "— Toutes les colonnes —"
+msgstr "— すべての列 —"
+
+msgid "← Retour au fichier"
+msgstr "← ファイルに戻る"
+
+msgid "⌨️ Raccourcis"
+msgstr "⌨️ ショートカット"
+
+msgid "⌨️ Raccourcis clavier"
+msgstr "⌨️ キーボードショートカット"
+
+msgid "⏳ Fichiers expirés"
+msgstr "⏳ 期限切れファイル"
+
+msgid "⏳ Nettoyage en cours…"
+msgstr "⏳ クレンジング中…"
+
+msgid "⚙️ Règles de nettoyage personnalisées"
+msgstr "⚙️ カスタムクレンジングルール"
+
+msgid "⚙️ Règles personnalisées"
+msgstr "⚙️ カスタムルール"
+
+msgid "⚙️ Régler la durée"
+msgstr "⚙️ 期間を調整"
+
+msgid "⚠️ Points nécessitant une vérification humaine"
+msgstr "⚠️ 人による確認が必要な項目"
+
+msgid "⚠️ Problèmes restants (tous fichiers)"
+msgstr "⚠️ 残っている問題（全ファイル）"
+
+msgid "⚠️ Valeurs signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ 値はフラグを立てるだけで、自動的に変更されることはありません。"
+
+msgid "⚠️ Zone de danger"
+msgstr "⚠️ 危険ゾーン"
+
+msgid "⚠️ À vérifier manuellement (jamais supprimés automatiquement)."
+msgstr "⚠️ 手動での確認が必要（自動で削除されることはありません）。"
+
+msgid "⚪ Conserver toutes les lignes"
+msgstr "⚪ すべての行を保持"
+
+msgid "⚪ Ignorer (examiné, conserver)"
+msgstr "⚪ 無視（確認済み、保持）"
+
+msgid "⚪ Valeurs « Inconnu » ("
+msgstr "⚪ 「不明」の値（"
+
+msgid "✅ Aucun doublon potentiel à vérifier."
+msgstr "✅ 確認が必要な潜在的な重複はありません。"
+
+msgid "✅ Aucune vérification manuelle nécessaire"
+msgstr "✅ 手動での確認は不要です"
+
+msgid "✅ Résultat du nettoyage"
+msgstr "✅ クレンジング結果"
+
+msgid "✅ Validation après nettoyage"
+msgstr "✅ クレンジング後の検証"
+
+msgid "✅ Votre profil est complet."
+msgstr "✅ プロフィールは完成しています。"
+
+msgid "✏️ Modifier mon profil"
+msgstr "✏️ プロフィールを編集"
+
+msgid "✓ Copié"
+msgstr "✓ コピーしました"
+
+msgid "➕ Nouveau jeton"
+msgstr "➕ 新しいトークン"
+
+msgid "➕ Nouveau webhook"
+msgstr "➕ 新しい Webhook"
+
+msgid "➕ Nouvelle règle"
+msgstr "➕ 新しいルール"
+
+msgid "➕ Téléverser un fichier"
+msgstr "➕ ファイルをアップロード"
+
+msgid "⬇️ Exporter mes données (JSON)"
+msgstr "⬇️ データをエクスポート（JSON）"
+
+msgid "⬇️ Télécharger le fichier nettoyé"
+msgstr "⬇️ クレンジング済みファイルをダウンロード"
+
+msgid "🌍 Navigation"
+msgstr "🌍 ナビゲーション"
+
+msgid "🌐 HTML (.html)"
+msgstr "🌐 HTML (.html)"
+
+msgid "🌐 Rapport HTML avec graphiques"
+msgstr "🌐 グラフ付き HTML レポート"
+
+msgid "🎯 Répartition par niveau de qualité"
+msgstr "🎯 品質レベル別の分布"
+
+msgid "🎯 Score qualité"
+msgstr "🎯 品質スコア"
+
+msgid "🏆 Meilleurs résultats"
+msgstr "🏆 ベスト結果"
+
+msgid "👀 Aperçu des données brutes (avant nettoyage)"
+msgstr "👀 生データのプレビュー（クレンジング前）"
+
+msgid "👁️ Consulter le rapport"
+msgstr "👁️ レポートを見る"
+
+msgid "👤 Mon profil"
+msgstr "👤 マイプロフィール"
+
+msgid "📈 Analyse exploratoire"
+msgstr "📈 探索的データ分析"
+
+msgid "📈 Statistiques descriptives"
+msgstr "📈 記述統計"
+
+msgid "📈 Valeurs aberrantes"
+msgstr "📈 外れ値"
+
+msgid "📈 Visualisations statistiques"
+msgstr "📈 統計的可視化"
+
+msgid "📈 Évolution du score (12 semaines)"
+msgstr "📈 スコアの推移（12 週間）"
+
+msgid "📉 Fichiers à traiter en priorité"
+msgstr "📉 優先して対応すべきファイル"
+
+msgid "📉 Répartition des problèmes"
+msgstr "📉 問題の分布"
+
+msgid "📊 Activité récente"
+msgstr "📊 最近のアクティビティ"
+
+msgid "📊 Dashboard Data Quality"
+msgstr "📊 データ品質ダッシュボード"
+
+msgid "📊 Dimensions de qualité"
+msgstr "📊 品質の次元"
+
+msgid "📊 Tableau de bord"
+msgstr "📊 ダッシュボード"
+
+msgid "📊 Tableau de bord global"
+msgstr "📊 グローバルダッシュボード"
+
+msgid "📋 Mes règles ("
+msgstr "📋 マイ ルール（"
+
+msgid "📋 Qualité des colonnes"
+msgstr "📋 列の品質"
+
+msgid "📋 Rapport de nettoyage"
+msgstr "📋 クレンジングレポート"
+
+msgid "📋 Télécharger le rapport"
+msgstr "📋 レポートをダウンロード"
+
+msgid "📕 Rapport PDF"
+msgstr "📕 PDF レポート"
+
+msgid "📝 Journal des modifications"
+msgstr "📝 変更ログ"
+
+msgid "📥 Fichier d'origine"
+msgstr "📥 元のファイル"
+
+msgid "📥 Markdown (.md)"
+msgstr "📥 Markdown (.md)"
+
+msgid "📥 Télécharger le rapport complet"
+msgstr "📥 完全なレポートをダウンロード"
+
+msgid "📦 Archives"
+msgstr "📦 アーカイブ"
+
+msgid "📷 Prendre une photo"
+msgstr "📷 写真を撮る"
+
+msgid "🔌 API et jetons d'accès"
+msgstr "🔌 API とアクセストークン"
+
+msgid "🔌 Jetons d'API"
+msgstr "🔌 API トークン"
+
+msgid "🔍 Avant / après"
+msgstr "🔍 前 / 後"
+
+msgid "🔍 Comparaison avant / après"
+msgstr "🔍 前後比較"
+
+msgid "🔍 Doublons"
+msgstr "🔍 重複"
+
+msgid "🔍 Filtrer"
+msgstr "🔍 絞り込み"
+
+msgid "🔍 Filtrer les lignes…"
+msgstr "🔍 行を絞り込む…"
+
+msgid "🔍 Problèmes détectés"
+msgstr "🔍 検出された問題"
+
+msgid "🔍 Revue manuelle des doublons potentiels"
+msgstr "🔍 潜在的な重複の手動レビュー"
+
+msgid "🔍 Règles regex personnalisées"
+msgstr "🔍 カスタム正規表現ルール"
+
+msgid "🔎 Explication du score"
+msgstr "🔎 スコアの説明"
+
+msgid "🔑 Mes jetons"
+msgstr "🔑 自分のトークン"
+
+msgid "🔑 Votre nouveau jeton"
+msgstr "🔑 新しいトークン"
+
+msgid "🔒 Changer mon mot de passe"
+msgstr "🔒 パスワードを変更"
+
+msgid "🔒 Sécurité et données"
+msgstr "🔒 セキュリティとデータ"
+
+msgid "🔔 Mes webhooks"
+msgstr "🔔 自分の Webhook"
+
+msgid "🔔 Webhooks"
+msgstr "🔔 Webhook"
+
+msgid "🔗 Voir mon profil public"
+msgstr "🔗 公開プロフィールを見る"
+
+msgid "🔢 Colonnes analysées numériquement"
+msgstr "🔢 数値として分析された列"
+
+msgid "🔬 Profilage avancé"
+msgstr "🔬 高度なプロファイリング"
+
+msgid "🔵 Conserver la 2e ligne (supprimer les autres)"
+msgstr "🔵 2 行目を保持（他を削除）"
+
+msgid "🕒 Dernières actions"
+msgstr "🕒 最近の操作"
+
+msgid "🕓 Activité"
+msgstr "🕓 アクティビティ"
+
+msgid "🕓 Dernières activités"
+msgstr "🕓 最近のアクティビティ"
+
+msgid "🕓 Journal d'activité"
+msgstr "🕓 アクティビティログ"
+
+msgid "🗃️ Fichiers récents"
+msgstr "🗃️ 最近のファイル"
+
+msgid "🗄️ Rétention"
+msgstr "🗄️ 保持"
+
+msgid "🗄️ Rétention des données"
+msgstr "🗄️ データ保持"
+
+msgid "🗑️ Purger maintenant"
+msgstr "🗑️ 今すぐクリーニング"
+
+msgid "🗑️ Supprimer"
+msgstr "🗑️ 削除"
+
+msgid "🗑️ Supprimer ma photo de profil"
+msgstr "🗑️ プロフィール写真を削除"
+
+msgid "🚀 Nouveautés de l'espace pro"
+msgstr "🚀 プロ機能の新着"
+
+msgid "🚀 Premier appel"
+msgstr "🚀 最初の呼び出し"
+
+msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
+msgstr "🟢 1 行目を保持（他を削除）"
+
+msgid "🟣 Fusionner toutes les lignes"
+msgstr "🟣 すべての行を統合"
+
+msgid "🧭 Dimensions les plus fragiles"
+msgstr "🧭 最も弱い軸"
+
+msgid "🧹 Journal d'activité"
+msgstr "🧹 アクティビティログ"
+
+msgid "🧹 Nettoyage"
+msgstr "🧹 クリーニング"
+
+msgid "🧹 Options de nettoyage"
+msgstr "🧹 クレンジングオプション"
+
+msgid "🧹 Opérations de nettoyage"
+msgstr "🧹 クレンジング操作"
+
+msgid "🧽 Purger les anciennes entrées"
+msgstr "🧽 古いエントリを消去"
+
+msgid "🧾 Journal des modifications"
+msgstr "🧾 変更ログ"
+
+msgid "🧾 Télécharger le journal des modifications"
+msgstr "🧾 変更ログをダウンロード"
+
+msgctxt "séparateur"
+msgid "ou"
+msgstr "または"

@@ -1,0 +1,281 @@
+﻿{% extends "core/base.html" %}
+{% load static i18n l10n %}
+
+{% block title %}{% translate "DataZen — Nettoyage de données" %}{% endblock %}
+
+{% block content %}
+<section class="dz-hero">
+    {# Décor animé : purement esthétique, donc masqué aux lecteurs d'écran. #}
+    <div class="dz-hero-video" aria-hidden="true">
+        <video class="dz-hero-video__media" autoplay muted loop playsinline preload="metadata"
+               poster="{% static 'img/hero-poster.jpg' %}" tabindex="-1">
+            <source src="{% static 'video/hero.webm' %}" type="video/webm">
+            <source src="{% static 'video/hero.mp4' %}" type="video/mp4">
+        </video>
+        <div class="dz-hero-video__overlay"></div>
+    </div>
+    <div class="container">
+        <span class="dz-pill" data-dz-reveal>
+            <span class="dz-pill-dot" aria-hidden="true"></span>
+            {% translate "Nettoyage intelligent · CSV & Excel" %}
+        </span>
+        <h1 data-dz-reveal data-dz-delay="1">
+            {% blocktranslate trimmed %}Vos données méritent<br>
+            <span class="dz-gradient-text">d'être impeccables.</span>{% endblocktranslate %}
+        </h1>
+        <p class="dz-hero-lead" data-dz-reveal data-dz-delay="2">
+            {% blocktranslate trimmed %}Doublons, espaces parasites, e-mails mal formés, dates incohérentes…
+            DataZen détecte les problèmes et corrige tout automatiquement,
+            en quelques secondes.{% endblocktranslate %}
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-2" data-dz-reveal data-dz-delay="3">
+            <a class="btn btn-primary btn-lg" href="#televerser">{% translate "Nettoyer un fichier" %}</a>
+            <a class="btn btn-light btn-lg" href="{% url 'core:rules_list' %}">{% translate "Mes règles de nettoyage" %}</a>
+        </div>
+    </div>
+</section>
+
+<div class="container pb-5">
+
+    <div class="row g-3 g-md-4 dz-section" data-dz-reveal data-dz-delay="4">
+        <div class="col-6 col-lg-3">
+            <div class="dz-stat">
+                <div class="dz-stat-icon" aria-hidden="true">🗂️</div>
+                <div class="dz-stat-value">{{ global_stats.total }}</div>
+                <div class="dz-stat-label">{% translate "Fichiers au total" %}</div>
+            </div>
+        </div>
+        <div class="col-6 col-lg-3">
+            <div class="dz-stat">
+                <div class="dz-stat-icon" aria-hidden="true">✅</div>
+                <div class="dz-stat-value text-success">{{ global_stats.cleaned }}</div>
+                <div class="dz-stat-label">{% translate "Nettoyés" %}</div>
+            </div>
+        </div>
+        <div class="col-6 col-lg-3">
+            <div class="dz-stat">
+                <div class="dz-stat-icon" aria-hidden="true">⏳</div>
+                <div class="dz-stat-value text-secondary">{{ global_stats.pending }}</div>
+                <div class="dz-stat-label">{% translate "En attente" %}</div>
+            </div>
+        </div>
+        <div class="col-6 col-lg-3">
+            <div class="dz-stat">
+                <div class="dz-stat-icon" aria-hidden="true">⚠️</div>
+                <div class="dz-stat-value text-danger">{{ global_stats.errors }}</div>
+                <div class="dz-stat-label">{% translate "En erreur" %}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center dz-section" id="televerser">
+        <div class="col-lg-8">
+            <div class="card dz-card-accent dz-panel-xl">
+                <div class="card-body p-4 p-md-5">
+                    <div class="dz-section-head">
+                        <span class="dz-eyebrow">{% translate "Étape 1" %}</span>
+                        <h2 class="dz-section-title">{% translate "Téléversez votre fichier" %}</h2>
+                        <p class="dz-section-subtitle mx-auto mb-0">
+                            {% blocktranslate trimmed %}Formats acceptés : <code>.csv</code>, <code>.xlsx</code>, <code>.xls</code> —
+                            jusqu'à 20 Mo.{% endblocktranslate %}
+                        </p>
+                    </div>
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="dz-dropzone mb-3">
+                            <div class="dz-dropzone-icon" aria-hidden="true">📤</div>
+                            <p class="fw-semibold mb-2">{% translate "Choisissez un fichier à analyser" %}</p>
+                            <div class="dz-file-picker">
+                                <label class="btn btn-outline-primary dz-file-button" for="{{ form.file.id_for_label }}">
+                                    {% translate "Parcourir…" %}
+                                    {{ form.file }}
+                                </label>
+                                <span class="dz-file-name" data-empty-label="{% translate 'Aucun fichier sélectionné' %}" aria-live="polite">
+                                    {% translate "Aucun fichier sélectionné" %}
+                                </span>
+                            </div>
+                            {% for error in form.file.errors %}
+                                <div class="text-danger small mt-2">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">
+                            {% translate "Analyser et nettoyer" %}
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dz-section-head">
+        <span class="dz-eyebrow">{% translate "Tout est inclus" %}</span>
+        <h2 class="dz-section-title">{% translate "Une boîte à outils complète" %}</h2>
+        <p class="dz-section-subtitle mx-auto">
+            {% translate "De l'import brut au rapport de qualité, DataZen couvre toute la chaîne." %}
+        </p>
+    </div>
+
+    <div class="row dz-grid dz-section">
+        <div class="col-md-6 col-lg-3">
+            <div class="dz-feature">
+                <div class="dz-feature-icon" aria-hidden="true">🗂️</div>
+                <h5>{% translate "Import CSV & Excel" %}</h5>
+                <p>
+                    {% blocktranslate trimmed %}Chargez vos données au format <code>.csv</code>, <code>.xlsx</code>
+                    ou <code>.xls</code>, quel que soit le séparateur.{% endblocktranslate %}
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="dz-feature">
+                <div class="dz-feature-icon" aria-hidden="true">✨</div>
+                <h5>{% translate "Nettoyage intelligent" %}</h5>
+                <p>
+                    {% blocktranslate trimmed %}Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones,
+                    dates et salaires normalisés.{% endblocktranslate %}
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="dz-feature">
+                <div class="dz-feature-icon" aria-hidden="true">📊</div>
+                <h5>{% translate "Score de qualité" %}</h5>
+                <p>
+                    {% blocktranslate trimmed %}Un tableau de bord mesure la qualité avant / après et explique
+                    chaque point perdu.{% endblocktranslate %}
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="dz-feature">
+                <div class="dz-feature-icon" aria-hidden="true">📥</div>
+                <h5>{% translate "Export & traçabilité" %}</h5>
+                <p>
+                    {% blocktranslate trimmed %}Récupérez le fichier nettoyé, le rapport détaillé et le journal
+                    complet des modifications.{% endblocktranslate %}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card dz-panel dz-panel-xl">
+        <div class="card-body p-4">
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3">
+                <div>
+                    <span class="dz-eyebrow">{% translate "Vos données" %}</span>
+                    <h2 class="h5 mb-0">
+                        {% if archive %}{% translate "📦 Archives" %}{% else %}{% translate "🗃️ Fichiers récents" %}{% endif %}
+                    </h2>
+                    <p class="text-muted small mb-0 mt-1">
+                        {% if archive %}{% translate "Les fichiers archivés restent accessibles et téléchargeables." %}{% else %}{% translate "Les fichiers nettoyés sont archivés après 30 jours." %}{% endif %}
+                    </p>
+                </div>
+                <div class="d-flex flex-wrap gap-2">
+                    {% if archive %}
+                        <a class="btn btn-sm btn-outline-primary" href="{% url 'core:index' %}">{% translate "Fichiers récents" %}</a>
+                    {% else %}
+                        <a class="btn btn-sm btn-outline-primary" href="{% url 'core:index' %}?archive=1">{% translate "Archives" %} ({{ archived_count }})</a>
+                    {% endif %}
+                </div>
+                <form method="get" class="d-flex flex-wrap gap-2 dz-filter-form">
+                    {% if archive %}<input type="hidden" name="archive" value="1">{% endif %}
+                    <input type="text" name="q" value="{{ query }}" class="form-control form-control-sm dz-filter-search"
+                           placeholder="{% translate "Rechercher un fichier…" %}"
+                           aria-label="{% translate "Rechercher un fichier" %}">
+                    <select name="status" class="form-select form-select-sm dz-filter-select"
+                            aria-label="{% translate "Filtrer par statut" %}">
+                        <option value="">{% translate "— Tous les statuts —" %}</option>
+                        {% for value, label in status_choices %}
+                            <option value="{{ value }}" {% if status == value %}selected{% endif %}>{{ label }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit" class="btn btn-sm btn-primary">{% translate "🔍 Filtrer" %}</button>
+                    {% if query or status %}
+                        <a class="btn btn-sm btn-outline-secondary" href="{% url 'core:index' %}">{% translate "Effacer" %}</a>
+                    {% endif %}
+                </form>
+            </div>
+
+            {% if recent_files %}
+            <p class="text-muted small mb-2">
+                {% blocktranslate trimmed count counter=recent_files|length %}
+                {{ counter }} fichier affiché
+                {% plural %}
+                {{ counter }} fichiers affichés
+                {% endblocktranslate %}
+                {% if total_files > recent_files|length %}{% translate "sur" %} {{ total_files }}{% endif %}
+                {% if query %}{% translate "pour «" %} {{ query }} »{% endif %}
+                {% if status %}{% translate "· statut filtré" %}{% endif %}.
+            </p>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle" data-searchable>
+                    <thead class="table-light">
+                        <tr>
+                            <th>{% translate "Nom" %}</th>
+                            <th>{% translate "Statut" %}</th>
+                            <th>{% translate "Date" %}</th>
+                            <th class="text-end">{% translate "Actions" %}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for f in recent_files %}
+                        <tr>
+                            <td class="fw-semibold">{{ f.original_name }}</td>
+                            <td>
+                                <span class="badge bg-{% if f.status == 'cleaned' %}success{% elif f.status == 'error' %}danger{% elif f.status == 'processing' %}info{% else %}secondary{% endif %}">
+                                    {{ f.get_status_display }}
+                                </span>
+                                {% if f.status == 'processing' %}
+                                    <div class="progress mt-2 dz-progress-thin">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                             style="width: {{ f.progress|unlocalize }}%;"></div>
+                                    </div>
+                                {% endif %}
+                            </td>
+                            <td class="text-muted small">{{ f.created_at|date:"d/m/Y H:i" }}</td>
+                            <td class="text-end">
+                                <a class="btn btn-sm btn-outline-primary" href="{% url 'core:dataset_detail' f.pk %}">
+                                    {% translate "Ouvrir" %}
+                                </a>
+                                {% if archive and f.archived_at %}
+                                    <form method="post" action="{% url 'core:restore_dataset' f.pk %}" class="d-inline">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-sm btn-outline-success">{% translate "Restaurer" %}</button>
+                                    </form>
+                                {% elif not archive and not f.archived_at %}
+                                    <form method="post" action="{% url 'core:archive_dataset' f.pk %}" class="d-inline">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary">{% translate "Archiver" %}</button>
+                                    </form>
+                                {% endif %}
+                                <form method="post" action="{% url 'core:delete_dataset' f.pk %}" class="d-inline"
+                                      onsubmit="return confirm(this.dataset.confirm);"
+                                      data-confirm="{% blocktranslate with name=f.original_name %}Supprimer définitivement « {{ name }} » ?{% endblocktranslate %}">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-sm btn-outline-danger"
+                                            aria-label="{% blocktranslate with name=f.original_name %}Supprimer {{ name }}{% endblocktranslate %}">🗑️</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+                <div class="text-center py-5">
+                    <div class="fs-1 mb-2" aria-hidden="true">📭</div>
+                    <p class="text-muted mb-0">
+                        {% if query or status %}
+                            {% translate "Aucun fichier ne correspond à votre recherche." %}
+                        {% else %}
+                            {% translate "Aucun fichier téléversé pour le moment." %}<br>
+                            {% blocktranslate trimmed %}<a href="#televerser">Téléversez votre premier fichier</a> pour commencer.{% endblocktranslate %}
+                        {% endif %}
+                    </p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+

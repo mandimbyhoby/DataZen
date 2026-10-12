@@ -1,0 +1,14 @@
+Django>=5.0,<6.0
+pandas>=2.2
+openpyxl>=3.1
+Pillow>=10.0
+matplotlib>=3.8
+seaborn>=0.13
+# Façonnage des libellés arabes dans les graphiques (facultatif : sans ces
+# paquets, les graphiques restent générés mais l'arabe n'est pas réordonné).
+arabic-reshaper>=3.0
+python-bidi>=0.6
+# Outillage : encodage de la vidéo de fond du héros (tools/generate_hero_video.py).
+# Facultatif : les fichiers de static/video/ sont versionnés, ce paquet n'est
+# nécessaire que pour les régénérer.
+imageio-ffmpeg>=0.4

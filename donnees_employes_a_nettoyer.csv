@@ -1,0 +1,31 @@
+matricule,nom,prenom,email,service,poste,salaire,date_embauche,date_naissance,telephone
+EMP001,Martin,Alice,alice.martin@entreprise.com,Informatique,Développeuse,"45 000 €",2020-03-01,1990-05-12,06 12 34 56 78
+EMP002,DUPONT,Bob,bob.dupont@entreprise.com,Commercial,Commercial,"38 000",2019-07-15,1985-11-23,0612345679
+emp003,leblanc,charlie,charlie.leblanc@entreprise.com,informatique,Développeur,42000,2021-01-10,1992-02-08,06.12.34.56.80
+EMP004,Petit,David,david.petit@entreprise.com,Comptabilité,Comptable,"41 500 €",2018-09-05,1988-06-30,06-12-34-56-81
+EMP005,Moreau,Élise,elise.moreau@entreprise.com,RH,Chargée de recrutement,"36 000",2022-04-20,1995-09-14,0612345682
+EMP006,Girard,François,francois.girard@entreprise.com,Informatique,Chef de projet,"58 000 €",2017-02-01,1980-12-01,0612345683
+EMP007,Roux,Gérard,gerard.roux@entreprise.com,Commercial,Directeur commercial,"72 000",2015-06-15,1975-03-22,06 12 34 56 84
+EMP008,Fournier,Hélène,,RH,Assistante,"28 000 €",2023-01-09,1998-07-19,0612345685
+EMP009,Lambert,Inès,ines.lambert@entreprise.com,Informatique,Développeuse,"45 000",2021-11-30,1993-10-05,
+EMP010,Schmitt,Laura,laura.schmitt@entreprise.com,Marketing,Chef de produit,"52 000 €",2019-10-02,1987-04-17,06 12 34 56 88
+EMP011,Bernard,Paul,paul.bernard@entreprise.com,Comptabilité,Comptable,"41 500",2020-03-22,1991-08-25,0612345690
+EMP012,Dubois,Marie,marie.dubois@entreprise.com,RH,Directrice RH,"68 000 €",2016-06-18,1978-01-30,06 12 34 56 91
+EMP013,Petit,Jean-Pierre,jean.petit@entreprise.com,Informatique,Administrateur système,"49 000",2018-08-09,1983-05-11,0612345692
+EMP014,Laurent,Sophie,sophie.laurent@entreprise.com,Marketing,Community manager,"34 000 €",2022-09-27,1996-12-03,06 12 34 56 93
+EMP015,Moreau,Thomas,thomas.moreau@entreprise.com,Commercial,Commercial,"38 000",2021-11-11,1994-02-14,0612345694
+EMP016,Roux,Camille,camille.roux@entreprise.com,Informatique,Développeuse,"45 000 €",2020-01-30,1992-06-08,06 12 34 56 95
+EMP017,Fournier,Nicolas,nicolas.fournier@entreprise.com,Comptabilité,Comptable,"41 500",2019-05-14,1989-09-21,0612345696
+EMP018,Girard,Julie,julie.girard@entreprise.com,RH,Chargée de recrutement,"36 000 €",2023-07-07,1997-03-16,06 12 34 56 97
+EMP019,Lefebvre,Antoine,antoine.lefebvre@entreprise.com,Informatique,Chef de projet,"58 000",2017-02-11,1981-11-28,0612345699
+EMP020,Mercier,Chloé,chloe.mercier@entreprise.com,Marketing,Chef de produit,"52 000 €",2020-04-25,1990-07-04,06 12 34 57 00
+EMP021,Blanc,Lucas,lucas.blanc@entreprise.com,Commercial,Commercial,"38 000",2021-06-30,1993-01-19,0612345701
+EMP022,Martin,Alice,alice.martin@entreprise.com,Informatique,Développeuse,"45 000 €",2020-03-01,1990-05-12,06 12 34 56 78
+EMP023,DUPONT,Bob,bob.dupont@entreprise.com,Commercial,Commercial,"38 000",2019-07-15,1985-11-23,0612345679
+EMP024,  leblanc  ,charlie,charlie.leblanc@entreprise.com,Informatique,Développeur,42000,2021-01-10,1992-02-08,06.12.34.56.80
+EMP025,Petit,David,david.petit@entreprise.com,Comptabilité,Comptable,"41 500 €",2018-09-05,1988-06-30,06-12-34-56-81
+EMP026,Moreau,Élise,elise.moreau@entreprise.com,RH,Chargée de recrutement,"36 000",2022-04-20,1995-09-14,0612345682
+EMP027,Girard,François,francois.girard@entreprise.com,Informatique,Chef de projet,"58 000 €",2017-02-01,1980-12-01,0612345683
+EMP028,Roux,Gérard,gerard.roux@entreprise.com,Commercial,Directeur commercial,"72 000",2015-06-15,1975-03-22,06 12 34 56 84
+EMP029,Fournier,Hélène,,RH,Assistante,"28 000 €",2023-01-09,1998-07-19,0612345685
+EMP030,Lambert,Inès,ines.lambert@entreprise.com,Informatique,Développeuse,"45 000",2021-11-30,1993-10-05,

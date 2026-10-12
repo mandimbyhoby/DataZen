@@ -1,0 +1,2831 @@
+# Catalogue de traduction DataZen.
+# Généré par tools/i18n_build.py — ne pas éditer à la main.
+msgid ""
+msgstr ""
+"Project-Id-Version: DataZen 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh-hans\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "%(actual)s correction(s) in the log vs %(reported)s reported"
+msgstr "日志中有 %(actual)s 处修正，但报告为 %(reported)s 处"
+
+msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
+msgstr "邮箱列中有 %(actual)s 个未知值，但报告为 %(reported)s 个"
+
+msgid "%(count)s colonnes"
+msgstr "%(count)s 列"
+
+msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
+msgstr "有 %(count)s 个潜在重复项需要核查。"
+
+msgid "%(count)s entrée(s) d'activité supprimée(s)."
+msgstr "已删除 %(count)s 条活动记录。"
+
+msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
+msgstr "%(count)s 个错误无法自动修正。"
+
+msgid "%(count)s exact duplicate(s) remaining"
+msgstr "剩余 %(count)s 个完全重复项"
+
+msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
+msgstr "剩余 %(count)s 个不一致的值（既非有效也非未知）"
+
+msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
+msgstr "存在 %(count)s 个无效邮箱（非空且非未知）"
+
+msgid "%(count)s invalid value(s) among filled data"
+msgstr "已填写数据中有 %(count)s 个无效值"
+
+msgid "%(count)s lignes"
+msgstr "%(count)s 行"
+
+msgid "%(count)s missing value(s)"
+msgstr "%(count)s 个缺失值"
+
+msgid "%(count)s non-standard value(s)"
+msgstr "%(count)s 个非标准值"
+
+msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
+msgstr "%(count)s 个潜在重复项需人工复核（减轻扣分）"
+
+msgid "%(count)s unknown value(s) (data unavailable)"
+msgstr "%(count)s 个未知值（数据不可用）"
+
+msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
+msgstr "在数值列中检测到 %(count)s 个异常值。"
+
+msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
+msgstr "目前有 %(count)s 个值为「未知」。"
+
+msgid "%(counter)s doublon potentiel détecté. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgid_plural "%(counter)s doublons potentiels détectés. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgstr[0] "检测到 %(counter)s 个潜在重复项。这些行<strong>绝不会</strong>自动删除，需要您决定。"
+
+msgid "%(counter)s fichier affiché"
+msgid_plural "%(counter)s fichiers affichés"
+msgstr[0] "已显示 %(counter)s 个文件"
+
+msgid "%(counter)s inconnu"
+msgid_plural "%(counter)s inconnus"
+msgstr[0] "%(counter)s 个未知项"
+
+msgid "%(counter)s invalide,"
+msgid_plural "%(counter)s invalides,"
+msgstr[0] "%(counter)s 个无效，"
+
+msgid "%(counter)s ligne concernée :"
+msgid_plural "%(counter)s lignes concernées :"
+msgstr[0] "涉及 %(counter)s 行："
+
+msgid "%(counter)s valide,"
+msgid_plural "%(counter)s valides,"
+msgstr[0] "%(counter)s 个有效，"
+
+msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
+msgstr "已删除 %(purged)s 个文件，归档 %(archived)s 个文件。"
+
+msgid "%(score)s / 100  (%(weight)s %(percent)s)"
+msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
+msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s，预期为 %(expected)s"
+
+msgid "%(value)s %(percent)s"
+msgstr "%(value)s %(percent)s"
+
+msgid "(%(counter)s modification)"
+msgid_plural "(%(counter)s modifications)"
+msgstr[0] "（%(counter)s 处修改）"
+
+msgid "(%(counter)s non-conformité)"
+msgid_plural "(%(counter)s non-conformités)"
+msgstr[0] "（%(counter)s 处不符合规范）"
+
+msgid "(colonnes : %(columns)s)"
+msgstr "（列：%(columns)s）"
+
+msgid "(score ≥ 0.8)"
+msgstr "（得分 ≥ 0.8）"
+
+msgid "(⚠️ à vérifier manuellement)"
+msgstr "（⚠️ 需人工核查）"
+
+msgid ", Vous recevez ce message parce qu'une réinitialisation de mot de passe a été demandée pour votre compte DataZen. Cliquez sur le lien ci-dessous pour choisir un nouveau mot de passe :"
+msgstr "，您收到此邮件是因为您的 DataZen 账户请求了密码重置。请点击下方链接设置新密码："
+
+msgid "<a href=\"#televerser\">Téléversez votre premier fichier</a> pour commencer."
+msgstr "<a href=\"#televerser\">上传您的第一个文件</a>即可开始。"
+
+msgid "<strong>Doublons potentiels :</strong> aucun"
+msgstr "<strong>潜在重复项：</strong>无"
+
+msgid "<strong>Doublons potentiels restants :</strong> aucun"
+msgstr "<strong>剩余潜在重复项：</strong>无"
+
+msgid "<strong>Valeurs manquantes :</strong> aucune"
+msgstr "<strong>缺失值：</strong>无"
+
+msgid "<strong>Valeurs manquantes restantes :</strong> aucune"
+msgstr "<strong>剩余缺失值：</strong>无"
+
+msgid "AAAA-MM-JJ"
+msgstr "AAAA-MM-JJ"
+
+msgid "API"
+msgstr "API"
+
+msgid "API & webhooks"
+msgstr "API 与 Webhook"
+
+msgid "API REST"
+msgstr "REST API"
+
+msgid "API et intégrations"
+msgstr "API 与集成"
+
+msgid "API et intégrations — DataZen"
+msgstr "API 与集成 — DataZen"
+
+msgid "Abonnements"
+msgstr "订阅"
+
+msgid "Accueil"
+msgstr "首页"
+
+msgid "Actif"
+msgstr "活跃"
+
+msgid "Actifs"
+msgstr "活跃项"
+
+msgid "Action"
+msgstr "操作"
+
+msgid "Action invalide."
+msgstr "无效操作。"
+
+msgid "Actions"
+msgstr "操作"
+
+msgid "Active"
+msgstr "已启用"
+
+msgid "Activer"
+msgstr "启用"
+
+msgid "Activer le thème clair"
+msgstr "启用浅色主题"
+
+msgid "Activer le thème sombre"
+msgstr "启用深色主题"
+
+msgid "Activité"
+msgstr "活动"
+
+msgid "Activités"
+msgstr "活动记录"
+
+msgid "Activée"
+msgstr "已启用"
+
+msgid "Administrateur"
+msgstr "管理员"
+
+msgid "Administration"
+msgstr "管理"
+
+msgid "Adresse email"
+msgstr "邮箱地址"
+
+msgid "Affichage de %(shown)s lignes sur %(total)s."
+msgstr "正在显示 %(total)s 行中的 %(shown)s 行。"
+
+msgid "Affichage des"
+msgstr "显示"
+
+msgid "Afficher"
+msgstr "显示"
+
+msgid "Afficher le mot de passe"
+msgstr "显示密码"
+
+msgid "Afficher les détails des anomalies"
+msgstr "显示异常详情"
+
+msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
+msgstr "已加入请求头 X-DataZen-Signature（HMAC-SHA256）。"
+
+msgid "All filled values are valid"
+msgstr "所有已填写的值均有效"
+
+msgid "Aller au contenu principal"
+msgstr "跳转到主要内容"
+
+msgid "Analyse exploratoire"
+msgstr "探索性分析"
+
+msgid "Analyse exploratoire — %(name)s"
+msgstr "探索性分析 — %(name)s"
+
+msgid "Analyser et nettoyer"
+msgstr "分析并清洗"
+
+msgid "Analyste de données"
+msgstr "数据分析师"
+
+msgid "Ancienne valeur"
+msgstr "原值"
+
+msgid "Annuler"
+msgstr "取消"
+
+msgid "Anomalies restantes (à traiter manuellement)"
+msgstr "剩余异常（需人工处理）"
+
+msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
+msgstr "匿名化敏感数据（已替换 %(count)s 项）"
+
+msgid "Anonymiser les données sensibles"
+msgstr "匿名化敏感数据"
+
+msgid "Anonymiser les données sensibles (noms, emails, téléphones)"
+msgstr "匿名化敏感数据（姓名、电子邮件、电话号码）"
+
+msgid "Antananarivo, Madagascar"
+msgstr "Antananarivo, Madagascar"
+
+msgid "Aperçu du fichier nettoyé"
+msgstr "已清洗文件预览"
+
+msgid "Appel API"
+msgstr "API 调用"
+
+msgid "Appel API : %(path)s"
+msgstr "API 调用：%(path)s"
+
+msgid "Appels"
+msgstr "调用次数"
+
+msgid "Application"
+msgstr "应用"
+
+msgid "Après"
+msgstr "之后"
+
+msgid "Archivage"
+msgstr "归档"
+
+msgid "Archivage de « %(name)s »"
+msgstr "归档“%(name)s”"
+
+msgid "Archiver"
+msgstr "归档"
+
+msgid "Archives"
+msgstr "??"
+
+msgid "Archivés"
+msgstr "已归档"
+
+msgid "Aucun fichier d'origine n'est disponible."
+msgstr "没有可用的原始文件。"
+
+msgid "Aucun fichier expiré à purger."
+msgstr "没有需要清理的过期文件。"
+
+msgid "Aucun fichier expiré. Votre espace de travail est à jour."
+msgstr "没有过期文件。你的工作区已是最新状态。"
+
+msgid "Aucun fichier ne correspond à votre recherche."
+msgstr "没有与您的搜索匹配的文件。"
+
+msgid "Aucun fichier nettoyé n'est disponible."
+msgstr "没有可用的已清洗文件。"
+
+msgid "Aucun fichier nettoyé pour le moment."
+msgstr "暂无已清理的文件。"
+
+msgid "Aucun fichier pour le moment."
+msgstr "暂无文件。"
+
+msgid "Aucun fichier sélectionné"
+msgstr "未选择文件"
+
+msgid "Aucun fichier téléversé pour le moment."
+msgstr "尚未上传任何文件。"
+
+msgid "Aucun graphique n'est disponible pour ce jeu de données : il ne contient pas assez de valeurs numériques ou catégorielles exploitables."
+msgstr "此数据集暂无可用图表：其中可用的数值型或分类型取值不足。"
+
+msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
+msgstr "暂无令牌。创建一个即可使用 API。"
+
+msgid "Aucun journal des modifications n'est disponible."
+msgstr "没有可用的修改日志。"
+
+msgid "Aucun problème détecté"
+msgstr "未检测到问题"
+
+msgid "Aucun rapport de nettoyage n'est disponible."
+msgstr "没有可用的清洗报告。"
+
+msgid "Aucun résultat pour cette recherche."
+msgstr "没有找到相关结果。"
+
+msgid "Aucun webhook configuré. Ajoutez une URL pour être notifié automatiquement."
+msgstr "尚未配置 Webhook。添加一个 URL 即可自动接收通知。"
+
+msgid "Aucune activité enregistrée pour le moment."
+msgstr "暂无活动记录。"
+
+msgid "Aucune activité enregistrée."
+msgstr "暂无活动记录。"
+
+msgid "Aucune anomalie restante."
+msgstr "无剩余异常。"
+
+msgid "Aucune anomalie."
+msgstr "无异常。"
+
+msgid "Aucune colonne"
+msgstr "无列"
+
+msgid "Aucune correction"
+msgstr "无修正"
+
+msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
+msgstr "原始文件与清理后的文件没有明显差异：你的数据本来就很干净。"
+
+msgid "Aucune dimension mesurée pour le moment."
+msgstr "暂无已度量的维度。"
+
+msgid "Aucune donnée"
+msgstr "无数据"
+
+msgid "Aucune donnée nettoyée disponible."
+msgstr "没有可用的已清洗数据。"
+
+msgid "Aucune modification enregistrée."
+msgstr "未保存任何修改。"
+
+msgid "Aucune règle personnalisée."
+msgstr "没有自定义规则。"
+
+msgid "Aucune règle pour le moment. Créez-en une pour la réutiliser sur tous vos fichiers."
+msgstr "暂无规则。创建一条规则即可在所有文件中复用。"
+
+msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
+msgstr "数值列中未检测到异常值。"
+
+msgid "Aucune valeur « Inconnu »."
+msgstr "没有“未知”值。"
+
+msgid "Audit des emails"
+msgstr "邮箱审计"
+
+msgid "Automatisation"
+msgstr "自动化"
+
+msgid "Autoriser les autres utilisateurs à consulter votre profil."
+msgstr "允许其他用户查看您的个人资料。"
+
+msgid "Avant"
+msgstr "之前"
+
+msgid "Avertissement"
+msgstr "警告"
+
+msgid "Basculer la navigation"
+msgstr "切换导航"
+
+msgid "Basculer le thème"
+msgstr "切换主题"
+
+msgid "Basculer le thème clair / sombre"
+msgstr "切换浅色 / 深色主题"
+
+msgid "Bienvenue %(username)s !"
+msgstr "欢迎 %(username)s！"
+
+msgid "Bon retour parmi nous"
+msgstr "欢迎回来"
+
+msgid "Bonjour"
+msgstr "您好"
+
+msgid "Borne basse"
+msgstr "下界"
+
+msgid "Borne haute"
+msgstr "上界"
+
+msgid "Boîtes à moustaches"
+msgstr "箱线图"
+
+msgid "Boîtes à moustaches des colonnes numériques"
+msgstr "数值列箱线图"
+
+msgid "Branchez DataZen sur vos outils existants."
+msgstr "把 DataZen 接入你现有的工具。"
+
+msgid "Branchez DataZen à vos outils : Power BI, n8n, scripts Python, tableaux de bord maison."
+msgstr "把 DataZen 接入你的工具：Power BI、n8n、Python 脚本、自制仪表板。"
+
+msgid "CSV (séparateur ;)"
+msgstr "CSV（分隔符 ；）"
+
+msgid "Cadrez votre visage puis cliquez sur « Capturer »."
+msgstr "将面部置于取景框内，然后点击“拍摄”。"
+
+msgid "Calculée sur %(count)s fichier(s) nettoyé(s)."
+msgstr "基于 %(count)s 个已清理文件计算。"
+
+msgid "Canonicalisation du marqueur « Inconnu » (%(count)s corrigé(s))"
+msgstr "统一“未知”标记（已修正 %(count)s 项）"
+
+msgid "Capturer"
+msgstr "拍摄"
+
+msgid "Ce graphique n'est pas disponible pour ce jeu de données."
+msgstr "此图表不适用于该数据集。"
+
+msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
+msgstr "此重置链接已被使用或已过期。"
+
+msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
+msgstr "此链接仅可使用一次。如果并非您本人发起该请求，请忽略此邮件：您的密码保持不变。 — DataZen"
+
+msgid "Ce profil n'est pas public."
+msgstr "此资料不公开。"
+
+msgid "Ce que le nettoyage a réellement changé dans votre fichier."
+msgstr "清理究竟改变了你文件中的什么。"
+
+msgid "Cellules manquantes"
+msgstr "缺失单元格"
+
+msgid "Ces %(count)s fichier(s) dépassent la durée de conservation de %(days)s jours. Ils ne sont pas supprimés automatiquement tant que la purge automatique reste désactivée."
+msgstr "这 %(count)s 个文件已超过 %(days)s 天的保留时长。只要自动清理保持关闭，它们就不会被自动删除。"
+
+msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
+msgstr "这些计数用于全局搜索和下方快捷键。"
+
+msgid "Champ"
+msgstr "字段"
+
+msgid "Champs différents :"
+msgstr "不同字段："
+
+msgid "Champs identiques :"
+msgstr "相同字段："
+
+msgid "Champs inconnus :"
+msgstr "未知字段："
+
+msgid "Changer de langue"
+msgstr "切换语言"
+
+msgid "Changer ma photo de profil"
+msgstr "更换我的头像"
+
+msgid "Changer mon mot de passe"
+msgstr "修改我的密码"
+
+msgid "Changer mon mot de passe — DataZen"
+msgstr "修改我的密码 — DataZen"
+
+msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
+msgstr "加载 <code>.csv</code>、<code>.xlsx</code> 或 <code>.xls</code> 格式的数据，无论使用何种分隔符。"
+
+msgid "Choisir la langue du site"
+msgstr "选择网站语言"
+
+msgid "Choisir le format"
+msgstr "选择格式"
+
+msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
+msgstr "请选择 CSV 或 Excel 文件（.csv、.xlsx、.xls）。"
+
+msgid "Choisissez un fichier à analyser"
+msgstr "选择一个要分析的文件"
+
+msgid "Choisissez un mot de passe long et unique. Vous resterez connecté après la modification."
+msgstr "请选择一个足够长且唯一的密码。修改后您将保持登录状态。"
+
+msgid "Choisissez un mot de passe solide : au moins 8 caractères, ni trop courant, ni entièrement numérique."
+msgstr "请选择强度较高的密码：至少 8 个字符，不过于常见，也不要全部为数字。"
+
+msgid "Choisissez une colonne unique (ex. email) pour fusionner les variantes d'un même enregistrement (Alice / alice). Laissez vide pour ne supprimer que les lignes 100 % identiques."
+msgstr "选择唯一列（例如电子邮件）以合并同一记录的不同形式（Alice / alice）。留空则仅删除完全相同的行。"
+
+msgid "Clair"
+msgstr "浅色"
+
+msgid "Cliquer pour choisir une photo sur mon appareil"
+msgstr "点击从我的设备中选择照片"
+
+msgid "Cliquer pour trier"
+msgstr "点击排序"
+
+msgid "Cliquez sur l'avatar ci-dessus pour choisir une image, ou sur l'icône appareil photo pour en prendre une instantanément. JPEG, PNG, WebP ou GIF — 5 Mo maximum."
+msgstr "点击上方的头像选择图片，或点击相机图标立即拍摄一张。支持 JPEG、PNG、WebP 或 GIF — 最大 5 MB。"
+
+msgid "Clé de signature"
+msgstr "签名密钥"
+
+msgid "Clé de signature HMAC (facultative)"
+msgstr "HMAC 签名密钥（可选）"
+
+msgid "Code de langue (fr, en, es…). Vide = langue de l'application."
+msgstr "语言代码（fr、en、es…）。留空 = 应用语言。"
+
+msgid "Coefficient de Pearson"
+msgstr "皮尔逊系数"
+
+msgid "Colonne"
+msgstr "列"
+
+msgid "Colonne ciblée"
+msgstr "目标列"
+
+msgid "Colonne clé pour la déduplication"
+msgstr "去重键列"
+
+msgid "Colonnes"
+msgstr "列"
+
+msgid "Colonnes améliorées"
+msgstr "已改善的列"
+
+msgid "Colonnes analysées"
+msgstr "已分析的列"
+
+msgid "Colonnes différentes"
+msgstr "不同的列"
+
+msgid "Colonnes différentes :"
+msgstr "不同的列："
+
+msgid "Colonnes identiques :"
+msgstr "相同的列："
+
+msgid "Colonnes inconnues :"
+msgstr "未知的列："
+
+msgid "Colonnes stables"
+msgstr "稳定的列"
+
+msgid "Colonnes à vérifier"
+msgstr "待检查的列"
+
+msgid "Combien de fichiers se trouvent dans chaque tranche de score."
+msgstr "每个分数区间包含多少文件。"
+
+msgid "Comparaison"
+msgstr "对比"
+
+msgid "Comparaison avant / après — %(name)s"
+msgstr "清理前后对比 — %(name)s"
+
+msgid "Complétion du profil"
+msgstr "资料完整度"
+
+msgid "Complétude"
+msgstr "完整性"
+
+msgid "Complétude par colonne"
+msgstr "按列统计完整度"
+
+msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
+msgstr "完整性 · 有效性 · 唯一性 · 一致性 · 规范性"
+
+msgid "Composantes du score (après nettoyage)"
+msgstr "得分构成（清洗后）"
+
+msgid "Compte"
+msgstr "账户"
+
+msgid "Compte actif"
+msgstr "账户已激活"
+
+msgid "Condensé"
+msgstr "摘要"
+
+msgid "Confiance"
+msgstr "信心"
+
+msgid "Confirmer la décision"
+msgstr "确认决定"
+
+msgid "Connectez-vous pour retrouver vos fichiers."
+msgstr "登录以查看您的文件。"
+
+msgid "Connexion"
+msgstr "登录"
+
+msgid "Connexion — DataZen"
+msgstr "登录 — DataZen"
+
+msgid "Consultation des graphiques"
+msgstr "查看图表"
+
+msgid "Consultation du rapport"
+msgstr "查看报告"
+
+msgid "Continuer / valider une étape"
+msgstr "继续 / 确认一步"
+
+msgid "Contribution des cinq dimensions pondérées du score."
+msgstr "得分的五个加权维度的贡献。"
+
+msgid "Contrôle de cohérence"
+msgstr "一致性检查"
+
+msgid "Conversion des compteurs en entiers (%(count)s converti(s))"
+msgstr "将计数器转换为整数（已转换 %(count)s 项）"
+
+msgid "Conversion des montants (%(count)s converti(s))"
+msgstr "转换金额（已转换 %(count)s 项）"
+
+msgid "Convertir les montants"
+msgstr "换算金额"
+
+msgid "Convertir les montants en valeurs numériques"
+msgstr "将金额转换为数值"
+
+msgid "Copier"
+msgstr "复制"
+
+msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
+msgstr "请立即复制：出于安全考虑，它不会再显示。"
+
+msgid "Corrections"
+msgstr "修正"
+
+msgid "Corrections appliquées"
+msgstr "已应用的修正"
+
+msgid "Corrélations de Pearson entre les colonnes numériques."
+msgstr "数值列之间的 Pearson 相关性。"
+
+msgid "Création de jeton"
+msgstr "创建令牌"
+
+msgid "Création de la règle « %(name)s »"
+msgstr "创建规则“%(name)s”"
+
+msgid "Création de règle"
+msgstr "创建规则"
+
+msgid "Création du jeton « %(name)s »"
+msgstr "创建令牌“%(name)s”"
+
+msgid "Créer la règle"
+msgstr "创建规则"
+
+msgid "Créer le jeton"
+msgstr "创建令牌"
+
+msgid "Créer le webhook"
+msgstr "创建 Webhook"
+
+msgid "Créer un compte"
+msgstr "创建账户"
+
+msgid "Créer une règle"
+msgstr "创建规则"
+
+msgid "Créez une règle une fois, réutilisez-la sur tous vos fichiers."
+msgstr "只需创建一次规则，即可在所有文件中复用。"
+
+msgid "Créez votre compte"
+msgstr "创建您的账户"
+
+msgid "Data is consistent: each value is valid or unknown"
+msgstr "数据一致：每个值都是有效或未知"
+
+msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
+msgstr "DataZen — 数据清洗应用（DataClean Pro）· ©"
+
+msgid "DataZen — Nettoyage de données"
+msgstr "DataZen — 数据清洗"
+
+msgid "Date"
+msgstr "日期"
+
+msgid "Date d'expiration"
+msgstr "到期日期"
+
+msgid "Date invalide"
+msgstr "无效日期"
+
+msgid "De l'import brut au rapport de qualité, DataZen couvre toute la chaîne."
+msgstr "从原始导入到质量报告，DataZen 覆盖整个流程。"
+
+msgid "Demander un nouveau lien"
+msgstr "申请新链接"
+
+msgid "Dernier appel"
+msgstr "最近调用"
+
+msgid "Dernier code HTTP"
+msgstr "最近 HTTP 状态码"
+
+msgid "Dernier déclenchement"
+msgstr "最近触发"
+
+msgid "Dernier usage"
+msgstr "最近使用"
+
+msgid "Derniers fichiers"
+msgstr "最近的文件"
+
+msgid "Dernière connexion"
+msgstr "上次登录"
+
+msgid "Dernière utilisation"
+msgstr "最后使用时间"
+
+msgid "Dernières règles"
+msgstr "最近的规则"
+
+msgid "Des incohérences ont été détectées entre les statistiques et les données."
+msgstr "检测到统计数据与数据之间存在不一致。"
+
+msgid "Dimension"
+msgstr "维度"
+
+msgid "Dimensions de qualité"
+msgstr "质量维度"
+
+msgid "Dispersion et valeurs extrêmes des colonnes numériques."
+msgstr "数值列的离散程度与极值。"
+
+msgid "Distributions des colonnes numériques"
+msgstr "数值列分布"
+
+msgid "Distributions numériques"
+msgstr "数值分布"
+
+msgid "Django · Pandas · Bootstrap"
+msgstr "Django · Pandas · Bootstrap"
+
+msgid "Doublon par similarité"
+msgstr "相似重复项"
+
+msgid "Doublon potentiel"
+msgstr "潜在重复项"
+
+msgid "Doublons"
+msgstr "重复项"
+
+msgid "Doublons exacts"
+msgstr "完全重复项"
+
+msgid "Doublons exacts :"
+msgstr "完全重复项："
+
+msgid "Doublons exacts restants :"
+msgstr "剩余完全重复项："
+
+msgid "Doublons par similarité :"
+msgstr "相似重复项："
+
+msgid "Doublons potentiels"
+msgstr "潜在重复项"
+
+msgid "Doublons potentiels (⚠️ à vérifier) :"
+msgstr "潜在重复项（⚠️ 待核查）："
+
+msgid "Doublons potentiels :"
+msgstr "潜在重复项："
+
+msgid "Doublons potentiels restants :"
+msgstr "剩余潜在重复项："
+
+msgid "Doublons restants (exacts + potentiels)"
+msgstr "剩余重复项（完全 + 潜在）"
+
+msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
+msgstr "重复项、多余空格、格式错误的邮箱、不一致的日期……DataZen 能在几秒内自动发现问题并全部修正。"
+
+msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
+msgstr "重复项、缺失值、空格、大小写、邮箱、电话、日期和薪资均已规范化。"
+
+msgid "Durée de conservation"
+msgstr "保留时长"
+
+msgid "Durée de conservation (jours)"
+msgstr "保留时长（天）"
+
+msgid "Décision appliquée avec succès."
+msgstr "已成功应用决策。"
+
+msgid "Déjà un compte ?"
+msgstr "已经有账户？"
+
+msgid "Désactiver"
+msgstr "停用"
+
+msgid "Désactivée"
+msgstr "已停用"
+
+msgid "Détail"
+msgstr "详情"
+
+msgid "Détail par colonne"
+msgstr "按列明细"
+
+msgid "Détail par semaine"
+msgstr "按周明细"
+
+msgid "Détails techniques"
+msgstr "技术细节"
+
+msgid "E-mail envoyé — DataZen"
+msgstr "邮件已发送 — DataZen"
+
+msgid "Effacer"
+msgstr "清除"
+
+msgid "Effectif"
+msgstr "数量"
+
+msgid "Email invalide"
+msgstr "无效电子邮件"
+
+msgid "Email nettoyé"
+msgstr "清洗后邮箱"
+
+msgid "Email original"
+msgstr "原始邮箱"
+
+msgid "Emails :"
+msgstr "邮箱："
+
+msgid "Emails corrected (change log vs counter)"
+msgstr "已修正邮箱（修改日志与计数器对比）"
+
+msgid "Emails invalides :"
+msgstr "无效邮箱："
+
+msgid "Emails invalides restants :"
+msgstr "剩余无效邮箱："
+
+msgid "Emails restants :"
+msgstr "剩余邮箱："
+
+msgid "Emails: valid + invalid + unknown = total"
+msgstr "邮箱：有效 + 无效 + 未知 = 总计"
+
+msgid "En attente"
+msgstr "等待中"
+
+msgid "En cours de traitement"
+msgstr "处理中"
+
+msgid "En erreur"
+msgstr "失败"
+
+msgid "En échec"
+msgstr "失败"
+
+msgid "Enregistrer"
+msgstr "保存"
+
+msgid "Enregistrer le nouveau mot de passe"
+msgstr "保存新密码"
+
+msgid "Enregistrer les modifications"
+msgstr "保存修改"
+
+msgid "Entrée"
+msgstr "回车"
+
+msgid "Entrées"
+msgstr "条目"
+
+msgid "Envoyer le lien de réinitialisation"
+msgstr "发送重置链接"
+
+msgid "Erreur"
+msgstr "错误"
+
+msgid "Erreur de nettoyage"
+msgstr "清理错误"
+
+msgid "Erreurs de format"
+msgstr "格式错误"
+
+msgid "Erreurs restantes"
+msgstr "剩余错误"
+
+msgid "Excel (.xlsx)"
+msgstr "Excel (.xlsx)"
+
+msgid "Expiration"
+msgstr "过期"
+
+msgid "Expiré"
+msgstr "已过期"
+
+msgid "Explication du score"
+msgstr "得分说明"
+
+msgid "Export & traçabilité"
+msgstr "导出与追溯"
+
+msgid "Fermer"
+msgstr "关闭"
+
+msgid "Fermer la fenêtre active"
+msgstr "关闭当前窗口"
+
+msgid "Fichier"
+msgstr "文件"
+
+msgid "Fichier de données"
+msgstr "数据文件"
+
+msgid "Fichier nettoyé"
+msgstr "已清洗文件"
+
+msgid "Fichier supprimé"
+msgstr "文件已删除"
+
+msgid "Fichier téléversé"
+msgstr "文件已上传"
+
+msgid "Fichier téléversé avec succès."
+msgstr "文件上传成功。"
+
+msgid "Fichier « %(name)s » archivé."
+msgstr "文件“%(name)s”已归档。"
+
+msgid "Fichier « %(name)s » restauré."
+msgstr "文件“%(name)s”已恢复。"
+
+msgid "Fichier « %(name)s » supprimé."
+msgstr "文件“%(name)s”已删除。"
+
+msgid "Fichiers"
+msgstr "文件"
+
+msgid "Fichiers archivés"
+msgstr "已归档的文件"
+
+msgid "Fichiers au total"
+msgstr "文件总数"
+
+msgid "Fichiers de données"
+msgstr "数据文件"
+
+msgid "Fichiers expirés"
+msgstr "过期文件"
+
+msgid "Fichiers nettoyés avant le %(cutoff)s considérés comme expirés."
+msgstr "在 %(cutoff)s 之前清理的文件视为过期。"
+
+msgid "Fichiers nettoyés plus anciens que cette durée (0 = conservation illimitée)."
+msgstr "早于该时长清理的文件（0 = 无限保留）。"
+
+msgid "Fichiers récents"
+msgstr "最近的文件"
+
+msgid "Fil d'Ariane"
+msgstr "面包屑导航"
+
+msgid "Filtrer"
+msgstr "筛选"
+
+msgid "Filtrer les lignes du tableau"
+msgstr "筛选表格行"
+
+msgid "Filtrer par action"
+msgstr "按操作筛选"
+
+msgid "Filtrer par statut"
+msgstr "按状态筛选"
+
+msgid "Filtrer un tableau"
+msgstr "筛选表格"
+
+msgid "Fonction"
+msgstr "功能"
+
+msgid "Format de date"
+msgstr "日期格式"
+
+msgid "Format de la charge utile"
+msgstr "负载格式"
+
+msgid "Formats acceptés : <code>.csv</code>, <code>.xlsx</code>, <code>.xls</code> — jusqu'à 20 Mo."
+msgstr "支持的格式：<code>.csv</code>、<code>.xlsx</code>、<code>.xls</code> — 最大 20 MB。"
+
+msgid "Formats de dates (%(column)s) :"
+msgstr "日期格式（%(column)s）："
+
+msgid "Formats standardized (phones, dates)"
+msgstr "已标准化的格式（电话、日期）"
+
+msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
+msgstr "节省时间：DataZen 里所有重要的功能都有快捷键。"
+
+msgid "Graphiques"
+msgstr "图表"
+
+msgid "Graphiques générés avec matplotlib et seaborn à partir des données nettoyées."
+msgstr "使用 matplotlib 和 seaborn 基于清洗后数据生成的图表。"
+
+msgid "Graphiques générés côté serveur avec"
+msgstr "由服务器端生成的图表，使用"
+
+msgid "Graphiques statistiques générés avec <strong>matplotlib</strong> et <strong>seaborn</strong> à partir des données nettoyées."
+msgstr "基于清洗后的数据，使用 <strong>matplotlib</strong> 和 <strong>seaborn</strong> 生成的统计图表。"
+
+msgid "Gratuit, immédiat, et vos fichiers restent privés."
+msgstr "免费、即时，且您的文件保持私密。"
+
+msgid "Gérer les règles…"
+msgstr "管理规则…"
+
+msgid "Histogrammes des colonnes numériques détectées."
+msgstr "已检测的数值列直方图。"
+
+msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
+msgstr "带时间戳的操作历史：上传、清理、导出、API。"
+
+msgid "Identité"
+msgstr "身份信息"
+
+msgid "Ignorer la casse (Alice = alice)"
+msgstr "忽略大小写（Alice = alice）"
+
+msgid "Import CSV & Excel"
+msgstr "CSV 与 Excel 导入"
+
+msgid "Impossible d'appliquer la décision : %(error)s"
+msgstr "无法应用决策：%(error)s"
+
+msgid "Impossible de convertir le fichier : %(error)s"
+msgstr "无法转换文件：%(error)s"
+
+msgid "Impossible de générer le PDF : %(error)s"
+msgstr "无法生成 PDF：%(error)s"
+
+msgid "Impossible de lire ce fichier : %(error)s"
+msgstr "无法读取此文件：%(error)s"
+
+msgid "Impossible de lire le fichier : %(error)s"
+msgstr "无法读取文件：%(error)s"
+
+msgid "Impossible de lire le rapport : %(error)s"
+msgstr "无法读取报告：%(error)s"
+
+msgid "Inactif"
+msgstr "未启用"
+
+msgid "Inactive"
+msgstr "未启用"
+
+msgid "Inconnu"
+msgstr "未知"
+
+msgid "Indicateur"
+msgstr "指标"
+
+msgid "Indicateurs comparés"
+msgstr "对比指标"
+
+msgid "Indiquez votre adresse e-mail : nous vous enverrons un lien pour choisir un nouveau mot de passe."
+msgstr "请输入您的电子邮箱地址：我们将向您发送一个链接，用于设置新密码。"
+
+msgid "Information"
+msgstr "提示"
+
+msgid "Informations professionnelles"
+msgstr "职业信息"
+
+msgid "Inscription — DataZen"
+msgstr "注册 — DataZen"
+
+msgid "Intégration"
+msgstr "集成"
+
+msgid "Invalid emails are not counted as unknown or missing"
+msgstr "无效邮箱不计入未知或缺失"
+
+msgid "JJ/MM/AAAA"
+msgstr "JJ/MM/AAAA"
+
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+msgid "Jamais appelé"
+msgstr "从未调用"
+
+msgid "Jauge du score de qualité global (sur 100)."
+msgstr "总体质量得分仪表（满分 100）。"
+
+msgid "Jeton"
+msgstr "令牌"
+
+msgid "Jeton créé. Copiez-le maintenant : il ne sera plus affiché."
+msgstr "令牌已创建。请立即复制：它不会再显示。"
+
+msgid "Jeton d'API"
+msgstr "API 令牌"
+
+msgid "Jeton « %(name)s » révoqué."
+msgstr "令牌“%(name)s”已撤销。"
+
+msgid "Jetons"
+msgstr "令牌"
+
+msgid "Jetons d'API"
+msgstr "API 令牌"
+
+msgid "Journal d'activité"
+msgstr "活动日志"
+
+msgid "Journal d'activité — DataZen"
+msgstr "活动日志 — DataZen"
+
+msgid "Journal des modifications"
+msgstr "修改日志"
+
+msgid "Journal des modifications (extrait)"
+msgstr "修改日志（摘录）"
+
+msgid "L'historique horodaté de chaque opération."
+msgstr "每次操作的带时间戳历史。"
+
+msgid "La comparaison n'est pas disponible : lancez d'abord un nettoyage sur ce fichier."
+msgstr "无法对比：请先对该文件运行一次清理。"
+
+msgid "La confirmation ne correspond pas à votre nom d'utilisateur : suppression annulée."
+msgstr "确认内容与您的用户名不一致：已取消删除。"
+
+msgid "La suppression du compte efface définitivement vos fichiers, vos règles et votre profil. Cette action est irréversible."
+msgstr "删除账户将永久清除您的文件、规则和个人资料。此操作不可撤销。"
+
+msgid "Laisser vide pour appliquer à toutes les colonnes."
+msgstr "留空则应用于所有列。"
+
+msgid "Laissez vide pour un jeton sans expiration."
+msgstr "留空表示令牌永不过期。"
+
+msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
+msgstr "请先运行清洗以使用探索性分析。"
+
+msgid "Lancez d'abord un nettoyage pour générer un rapport PDF."
+msgstr "请先运行一次清理以生成 PDF 报告。"
+
+msgid "Langue de l'interface"
+msgstr "界面语言"
+
+msgid "Le compte « %(username)s » a été supprimé."
+msgstr "账户「%(username)s」已被删除。"
+
+msgid "Le fichier ne doit pas dépasser 20 Mo."
+msgstr "文件不得超过 20 MB。"
+
+msgid "Le journal conserve également %(days)s jours d'historique."
+msgstr "日志还会保留 %(days)s 天的历史。"
+
+msgid "Le nettoyage a échoué."
+msgstr "清洗失败。"
+
+msgid "Le nom d'hôte du webhook est introuvable."
+msgstr "找不到 Webhook 的主机名。"
+
+msgid "Le nom d'hôte du webhook pointe vers une adresse interne."
+msgstr "Webhook 的主机名指向内部地址。"
+
+msgid "Le nom d'hôte est absent de l'URL."
+msgstr "URL 中缺少主机名。"
+
+msgid "Le port est invalide."
+msgstr "端口无效。"
+
+msgid "Le thème « Système » suit les réglages de votre appareil."
+msgstr "“系统”主题会跟随您的设备设置。"
+
+msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
+msgstr "处理在后台运行。完成后此页面会自动更新。"
+
+msgid "Les adresses internes sont refusées."
+msgstr "拒绝内部地址。"
+
+msgid "Les adresses locales sont refusées."
+msgstr "拒绝本地地址。"
+
+msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
+msgstr "系统会标记重复项，但不会自动删除。勾选此项以明确删除重复项。"
+
+msgid "Les fichiers archivés restent accessibles et téléchargeables."
+msgstr "已归档的文件仍可访问和下载。"
+
+msgid "Les fichiers expirés seront supprimés automatiquement à votre prochaine visite."
+msgstr "过期文件将在你下次访问时自动删除。"
+
+msgid "Les fichiers nettoyés sont archivés après 30 jours."
+msgstr "已清洗的文件将在 30 天后归档。"
+
+msgid "Les fichiers nettoyés sont archivés puis purgés après cette durée (0 = conservation illimitée)."
+msgstr "清理过的文件会先归档，超过该时长后被清理（0 = 无限保留）。"
+
+msgid "Les identifiants intégrés à l'URL sont refusés."
+msgstr "拒绝 URL 中嵌入的凭据。"
+
+msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
+msgstr "可用路由：/api/、/api/datasets/、/api/datasets/<id>/、/api/stats/。"
+
+msgid "Les statistiques affichées correspondent aux données réelles."
+msgstr "显示的统计数据与实际数据一致。"
+
+msgid "Lien invalide"
+msgstr "无效链接"
+
+msgid "Ligne"
+msgstr "行"
+
+msgid "Lignes"
+msgstr "行"
+
+msgid "Lignes après nettoyage"
+msgstr "清理后的行数"
+
+msgid "Lignes du journal des modifications"
+msgstr "变更日志行数"
+
+msgid "Lignes traitées"
+msgstr "已处理行数"
+
+msgid "Localisation"
+msgstr "所在地"
+
+msgid "MM/JJ/AAAA"
+msgstr "MM/JJ/AAAA"
+
+msgid "Masquer"
+msgstr "隐藏"
+
+msgid "Masquer le mot de passe"
+msgstr "隐藏密码"
+
+msgid "Matrice de corrélation"
+msgstr "相关矩阵"
+
+msgid "Matrice de corrélation (Pearson)"
+msgstr "相关矩阵（Pearson）"
+
+msgid "Max"
+msgstr "最大值"
+
+msgid "Maîtrisez la durée de vie de vos données."
+msgstr "掌控你数据的生命周期。"
+
+msgid "Membre depuis"
+msgstr "注册时间"
+
+msgid "Mes règles"
+msgstr "我的规则"
+
+msgid "Mes règles de nettoyage"
+msgstr "我的清洗规则"
+
+msgid "Mesuré avant et après le nettoyage."
+msgstr "在清理前后分别度量。"
+
+msgid "Mettre à jour le mot de passe"
+msgstr "更新密码"
+
+msgid "Min"
+msgstr "最小值"
+
+msgid "Missing values by column"
+msgstr "各列缺失值"
+
+msgid "Mode"
+msgstr "模式"
+
+msgid "Modifier mes informations"
+msgstr "编辑我的信息"
+
+msgid "Modifiez votre mot de passe régulièrement et exportez vos données quand vous le souhaitez."
+msgstr "请定期修改密码，并可随时导出您的数据。"
+
+msgid "Mon profil"
+msgstr "我的资料"
+
+msgid "Mon profil — DataZen"
+msgstr "我的资料 — DataZen"
+
+msgid "Mot de passe"
+msgstr "密码"
+
+msgid "Mot de passe modifié"
+msgstr "密码已修改"
+
+msgid "Mot de passe modifié — DataZen"
+msgstr "密码已修改 — DataZen"
+
+msgid "Mot de passe oublié ?"
+msgstr "忘记密码？"
+
+msgid "Mot de passe oublié — DataZen"
+msgstr "忘记密码 — DataZen"
+
+msgid "Motif"
+msgstr "原因"
+
+msgid "Motif attendu"
+msgstr "预期格式"
+
+msgid "Moyenne"
+msgstr "平均值"
+
+msgid "Médiane"
+msgstr "中位数"
+
+msgid "Méthode"
+msgstr "方法"
+
+msgid "Nettoyage"
+msgstr "清理"
+
+msgid "Nettoyage du fichier « %(name)s »"
+msgstr "清理文件“%(name)s”"
+
+msgid "Nettoyage intelligent"
+msgstr "智能清洗"
+
+msgid "Nettoyage intelligent · CSV & Excel"
+msgstr "智能清洗 · CSV 与 Excel"
+
+msgid "Nettoyage lancé en arrière-plan. La page se met à jour automatiquement."
+msgstr "清洗已在后台启动。页面会自动更新。"
+
+msgid "Nettoyage lancé sur « %(name)s »"
+msgstr "已启动对“%(name)s”的清理"
+
+msgid "Nettoyage terminé"
+msgstr "清理完成"
+
+msgid "Nettoyage terminé : « %(name)s »"
+msgstr "清理完成：“%(name)s”"
+
+msgid "Nettoyer"
+msgstr "清洗"
+
+msgid "Nettoyer un fichier"
+msgstr "清洗文件"
+
+msgid "Nettoyez, normalisez et fiabilisez vos fichiers CSV et Excel en quelques clics — sans écrire une ligne de code."
+msgstr "只需点击几下，即可清洗、规范并提升 CSV 和 Excel 文件的可靠性 — 无需编写任何代码。"
+
+msgid "Nettoyé"
+msgstr "已清洗"
+
+msgid "Nettoyé le"
+msgstr "清理于"
+
+msgid "Nettoyés"
+msgstr "已清洗"
+
+msgid "Niveau"
+msgstr "级别"
+
+msgid "No exact duplicates"
+msgstr "无完全重复项"
+
+msgid "No missing or unknown values"
+msgstr "无缺失或未知值"
+
+msgid "No potential duplicates"
+msgstr "无潜在重复项"
+
+msgid "Nom"
+msgstr "名称"
+
+msgid "Nom d'utilisateur"
+msgstr "用户名"
+
+msgid "Nom de la règle"
+msgstr "规则名称"
+
+msgid "Nom de votre entreprise ou équipe"
+msgstr "您的公司或团队名称"
+
+msgid "Nom du jeton"
+msgstr "令牌名称"
+
+msgid "Nombre d'appels"
+msgstr "调用次数"
+
+msgid "Nombre d'occurrences"
+msgstr "出现次数"
+
+msgid "Nombre de nettoyages et score moyen par semaine."
+msgstr "每周的清理次数与平均得分。"
+
+msgid "Nombre de valeurs aberrantes"
+msgstr "异常值数量"
+
+msgid "Nombre de valeurs aberrantes (méthode IQR) par colonne."
+msgstr "各列异常值数量（IQR 方法）。"
+
+msgid "Normalisation de la casse (noms, libellés, villes)"
+msgstr "统一大小写（姓名、标签、城市）"
+
+msgid "Normalisation des catégories (%(count)s corrigée(s))"
+msgstr "规范类别（已修正 %(count)s 项）"
+
+msgid "Normalisation des choix oui/non (%(count)s corrigé(s))"
+msgstr "规范是/否选项（已修正 %(count)s 项）"
+
+msgid "Normalisation des codes/références (%(count)s corrigé(s))"
+msgstr "规范代码/引用（已修正 %(count)s 项）"
+
+msgid "Normalisation des dates (%(count)s corrigée(s))"
+msgstr "规范日期（已修正 %(count)s 项）"
+
+msgid "Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "规范电话号码（已修正 %(count)s 项）"
+
+msgid "Normaliser la casse"
+msgstr "统一大小写"
+
+msgid "Normaliser la casse (emails en minuscules, noms en Capitales)"
+msgstr "统一大小写（电子邮件转为小写，姓名首字母大写）"
+
+msgid "Normaliser les dates"
+msgstr "统一日期"
+
+msgid "Normaliser les dates (AAAA-MM-JJ)"
+msgstr "规范日期（YYYY-MM-DD）"
+
+msgid "Normaliser les emails"
+msgstr "统一邮箱"
+
+msgid "Normaliser les téléphones"
+msgstr "统一电话号码"
+
+msgid "Normaliser les téléphones (06XXXXXXXX)"
+msgstr "规范电话号码（06XXXXXXXX）"
+
+msgid "Notifications par email"
+msgstr "邮件通知"
+
+msgid "Nouveau jeton d API"
+msgstr "新建 API 令牌"
+
+msgid "Nouveau mot de passe"
+msgstr "新密码"
+
+msgid "Nouveau mot de passe — DataZen"
+msgstr "新密码 — DataZen"
+
+msgid "Nouvelle photo prête"
+msgstr "新照片已就绪"
+
+msgid "Nouvelle valeur"
+msgstr "新值"
+
+msgid "Opération"
+msgstr "操作"
+
+msgid "Opérations de nettoyage"
+msgstr "清理操作"
+
+msgid "Organisation"
+msgstr "组织"
+
+msgid "Outils"
+msgstr "工具"
+
+msgid "Outliers"
+msgstr "异常值"
+
+msgid "Ouvrir"
+msgstr "打开"
+
+msgid "Ouvrir la recherche globale"
+msgstr "打开全局搜索"
+
+msgid "Ouvrir le résultat sélectionné"
+msgstr "打开所选结果"
+
+msgid "Page"
+msgstr "页面"
+
+msgid "Parcourir…"
+msgstr "选择文件"
+
+msgid "Pas encore de compte ?"
+msgstr "还没有账户？"
+
+msgid "Pensez à regarder dans vos courriers indésirables. Le lien reste valable quelques heures."
+msgstr "记得查看垃圾邮件文件夹。该链接在数小时内仍然有效。"
+
+msgid "Personnalisez votre identité, votre photo et vos préférences."
+msgstr "自定义您的身份信息、头像和偏好设置。"
+
+msgid "Photo de profil"
+msgstr "头像"
+
+msgid "Pilotage"
+msgstr "总览"
+
+msgid "Plus fréquent"
+msgstr "出现最多"
+
+msgid "Poids"
+msgstr "权重"
+
+msgid "Politique en vigueur"
+msgstr "当前策略"
+
+msgid "Pondération"
+msgstr "权重"
+
+msgid "Premier quartile"
+msgstr "第一四分位数"
+
+msgid "Prendre une photo avec la caméra"
+msgstr "使用摄像头拍照"
+
+msgid "Problème"
+msgstr "问题"
+
+msgid "Problèmes après"
+msgstr "清理后的问题"
+
+msgid "Problèmes avant"
+msgstr "清理前的问题"
+
+msgid "Problèmes détectés"
+msgstr "检测到的问题"
+
+msgid "Problèmes restants"
+msgstr "剩余问题"
+
+msgid "Productivité"
+msgstr "效率"
+
+msgid "Profil"
+msgstr "个人资料"
+
+msgid "Profil de %(name)s — DataZen"
+msgstr "%(name)s 的资料 — DataZen"
+
+msgid "Profil de %(username)s"
+msgstr "%(username)s 的资料"
+
+msgid "Profil public"
+msgstr "公开资料"
+
+msgid "Profil visible publiquement"
+msgstr "公开显示个人资料"
+
+msgid "Profils"
+msgstr "个人资料"
+
+msgid "Progression"
+msgstr "进展"
+
+msgid "Propriétaire"
+msgstr "所有者"
+
+msgid "Préfixe"
+msgstr "前缀"
+
+msgid "Préférences"
+msgstr "偏好设置"
+
+msgid "Prénom"
+msgstr "名字"
+
+msgid "Présentation"
+msgstr "简介"
+
+msgid "Purge automatique"
+msgstr "自动清理"
+
+msgid "Purge automatique de %(count)s fichier(s) expiré(s)"
+msgstr "自动清理 %(count)s 个过期文件"
+
+msgid "Purge de %(count)s fichier(s) expiré(s)"
+msgstr "清理 %(count)s 个过期文件"
+
+msgid "Purger automatiquement"
+msgstr "自动清理"
+
+msgid "Purger automatiquement les fichiers expirés"
+msgstr "自动清理过期文件"
+
+msgid "Purger le journal"
+msgstr "清空日志"
+
+msgid "Purger les anciennes entrées du journal ?"
+msgstr "清空旧的日志条目？"
+
+msgid "Q1"
+msgstr "Q1"
+
+msgid "Q3"
+msgstr "Q3"
+
+msgid "Qualité moyenne"
+msgstr "平均质量"
+
+msgid "Qualité par colonne"
+msgstr "按列质量"
+
+msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
+msgstr "简单介绍一下您、您的团队和您的数据集…"
+
+msgid "Raccourcis clavier"
+msgstr "键盘快捷键"
+
+msgid "Raccourcis clavier — DataZen"
+msgstr "键盘快捷键 — DataZen"
+
+msgid "Raccourcis de navigation"
+msgstr "导航快捷键"
+
+msgid "Raccourcis de nettoyage"
+msgstr "清理快捷键"
+
+msgid "Raison"
+msgstr "原因"
+
+msgid "Rapport"
+msgstr "报告"
+
+msgid "Rapport PDF de « %(name)s »"
+msgstr "“%(name)s”的 PDF 报告"
+
+msgid "Rapport de nettoyage"
+msgstr "清洗报告"
+
+msgid "Rapport de qualité des données"
+msgstr "数据质量报告"
+
+msgid "Rapport généré automatiquement par DataZen. Les scores sont calculés selon cinq dimensions pondérées : complétude, validité, unicité, cohérence et conformité."
+msgstr "由 DataZen 自动生成的报告。得分按五个加权维度计算：完整性、有效性、唯一性、一致性、合规性。"
+
+msgid "Rapport — %(name)s"
+msgstr "报告 — %(name)s"
+
+msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
+msgstr "清理结束、失败或文件上传时立即收到 HTTP 通知。"
+
+msgid "Recevoir les notifications par email"
+msgstr "接收邮件通知"
+
+msgid "Recevoir un message lorsqu'un nettoyage se termine."
+msgstr "清洗完成时接收通知。"
+
+msgid "Recherche en cours…"
+msgstr "搜索中…"
+
+msgid "Recherche globale"
+msgstr "全局搜索"
+
+msgid "Recherche momentanément indisponible."
+msgstr "搜索暂时不可用。"
+
+msgid "Rechercher"
+msgstr "搜索"
+
+msgid "Rechercher (Ctrl+K)"
+msgstr "搜索（Ctrl+K）"
+
+msgid "Rechercher un fichier"
+msgstr "搜索文件"
+
+msgid "Rechercher un fichier ou une règle (Ctrl+K)"
+msgstr "搜索文件或规则（Ctrl+K）"
+
+msgid "Rechercher un fichier, une règle, une page…"
+msgstr "搜索文件、规则或页面…"
+
+msgid "Rechercher un fichier…"
+msgstr "搜索文件…"
+
+msgid "Recommandation"
+msgstr "建议"
+
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
+msgstr "将姓名、电子邮件和电话号码替换为确定性化名（相同值对应相同化名），并保留行之间的关系。"
+
+msgid "Remplacer les valeurs manquantes"
+msgstr "替换缺失值"
+
+msgid "Remplacez le jeton par le vôtre et lancez la commande."
+msgstr "把令牌替换成你自己的，然后运行命令。"
+
+msgid "Remplir les valeurs manquantes"
+msgstr "填充缺失值"
+
+msgid "Remplissage des valeurs manquantes par « %(value)s » (les montants, codes et dates ne reçoivent jamais un texte)"
+msgstr "用“%(value)s”填充缺失值（金额、代码和日期不会填入文本）"
+
+msgid "Renseignées"
+msgstr "已填写"
+
+msgid "Renumérotation des identifiants (ancien id conservé)"
+msgstr "重新编号标识符（保留原始 ID）"
+
+msgid "Reported %(reported)s vs recalculated %(actual)s"
+msgstr "报告为 %(reported)s，重新计算为 %(actual)s"
+
+msgid "Restauration"
+msgstr "恢复"
+
+msgid "Restauration de « %(name)s »"
+msgstr "恢复“%(name)s”"
+
+msgid "Restaurer"
+msgstr "恢复"
+
+msgid "Retour à la connexion"
+msgstr "返回登录"
+
+msgid "Règle"
+msgstr "规则"
+
+msgid "Règle de nettoyage"
+msgstr "清洗规则"
+
+msgid "Règle « %(name)s » %(state)s."
+msgstr "规则「%(name)s」%(state)s。"
+
+msgid "Règle « %(name)s » créée."
+msgstr "规则「%(name)s」已创建。"
+
+msgid "Règle « %(name)s » supprimée."
+msgstr "规则「%(name)s」已删除。"
+
+msgid "Règles"
+msgstr "规则"
+
+msgid "Règles de nettoyage"
+msgstr "清洗规则"
+
+msgid "Règles de nettoyage — DataZen"
+msgstr "清洗规则 — DataZen"
+
+msgid "Règles de validation regex personnalisées"
+msgstr "自定义正则表达式验证规则"
+
+msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
+msgstr "获取清洗后的文件、详细报告和完整的变更日志。"
+
+msgid "Réinitialiser"
+msgstr "重置"
+
+msgid "Répartition des problèmes"
+msgstr "问题分布"
+
+msgid "Répartition des problèmes restants"
+msgstr "剩余问题分布"
+
+msgid "Résultats"
+msgstr "结果"
+
+msgid "Rétention"
+msgstr "保留"
+
+msgid "Rétention des données"
+msgstr "数据保留"
+
+msgid "Rétention des données — DataZen"
+msgstr "数据保留 — DataZen"
+
+msgid "Révocation de jeton"
+msgstr "撤销令牌"
+
+msgid "Révocation du jeton « %(name)s »"
+msgstr "撤销令牌“%(name)s”"
+
+msgid "Révoquer"
+msgstr "撤销"
+
+msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
+msgstr "撤销此令牌？使用它的集成将停止工作。"
+
+msgid "Révoqué"
+msgstr "已撤销"
+
+msgid "S'inscrire"
+msgstr "注册"
+
+msgid "Saisissez <strong>%(username)s</strong> pour confirmer"
+msgstr "输入 <strong>%(username)s</strong> 以确认"
+
+msgid "Score"
+msgstr "得分"
+
+msgid "Score après nettoyage"
+msgstr "清理后得分"
+
+msgid "Score avant nettoyage"
+msgstr "清理前得分"
+
+msgid "Score de la dimension"
+msgstr "维度得分"
+
+msgid "Score de qualité"
+msgstr "质量得分"
+
+msgid "Score de similarité :"
+msgstr "相似度得分："
+
+msgid "Score global"
+msgstr "总体得分"
+
+msgid "Score global de qualité"
+msgstr "总体质量得分"
+
+msgid "Score qualité"
+msgstr "质量得分"
+
+msgid "Score qualité après"
+msgstr "清洗后质量得分"
+
+msgid "Score qualité avant"
+msgstr "清洗前质量得分"
+
+msgid "Se connecter"
+msgstr "登录"
+
+msgid "Se déconnecter"
+msgstr "退出登录"
+
+msgid "Se déplacer dans les résultats"
+msgstr "在结果中移动"
+
+msgid "Sert uniquement à la réinitialisation du mot de passe."
+msgstr "仅用于密码重置。"
+
+msgid "Seuls les schémas http et https sont autorisés."
+msgstr "仅允许 http 和 https 协议。"
+
+msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
+msgstr "如果该地址对应的账户存在，包含重置链接的邮件刚刚已发送。"
+
+msgid "Site web"
+msgstr "网站"
+
+msgid "Sombre"
+msgstr "深色"
+
+msgid "Statut"
+msgstr "状态"
+
+msgid "Succès"
+msgstr "成功"
+
+msgid "Superutilisateur"
+msgstr "超级用户"
+
+msgid "Suppression"
+msgstr "删除"
+
+msgid "Suppression de la règle « %(name)s »"
+msgstr "删除规则“%(name)s”"
+
+msgid "Suppression de règle"
+msgstr "删除规则"
+
+msgid "Suppression de « %(name)s »"
+msgstr "删除“%(name)s”"
+
+msgid "Suppression des doublons exacts (%(count)s supprimé(s))"
+msgstr "删除完全重复项（已删除 %(count)s 项）"
+
+msgid "Suppression des doublons sur « %(column)s » (%(count)s supprimé(s))"
+msgstr "按“%(column)s”列删除重复项（已删除 %(count)s 项）"
+
+msgid "Suppression des espaces superflus"
+msgstr "删除多余空格"
+
+msgid "Supprimer %(name)s"
+msgstr "删除 %(name)s"
+
+msgid "Supprimer ce webhook ?"
+msgstr "删除此 Webhook？"
+
+msgid "Supprimer définitivement ce fichier et toutes ses données ?"
+msgstr "确定要永久删除此文件及其所有数据吗？"
+
+msgid "Supprimer définitivement les fichiers expirés ? Cette action est irréversible."
+msgstr "永久删除过期文件？此操作不可撤销。"
+
+msgid "Supprimer définitivement les fichiers expirés au lieu de les archiver."
+msgstr "直接永久删除过期文件，而不是归档。"
+
+msgid "Supprimer définitivement « %(name)s » ?"
+msgstr "确定永久删除“%(name)s”吗？"
+
+msgid "Supprimer les doublons"
+msgstr "删除重复项"
+
+msgid "Supprimer les doublons (confirmation requise)"
+msgstr "删除重复项（需要确认）"
+
+msgid "Supprimer les espaces superflus"
+msgstr "删除多余空格"
+
+msgid "Supprimer mon compte"
+msgstr "删除我的账户"
+
+msgid "Synthèse"
+msgstr "综合"
+
+msgid "Système"
+msgstr "系统"
+
+msgid "Sécurité"
+msgstr "安全"
+
+msgid "Sélectionner un fichier"
+msgstr "选择一个文件"
+
+msgid "Tableau de bord"
+msgstr "仪表板"
+
+msgid "Tableau de bord — DataZen"
+msgstr "仪表板 — DataZen"
+
+msgid "Tapez au moins deux caractères pour lancer la recherche."
+msgstr "输入至少两个字符即可开始搜索。"
+
+msgid "Taux de complétude (%)"
+msgstr "完整率 (%)"
+
+msgid "Taux de remplissage de chaque colonne (les plus incomplètes d'abord)."
+msgstr "各列的填充率（最不完整的排在前面）。"
+
+msgid "Technologies"
+msgstr "技术栈"
+
+msgid "Tester"
+msgstr "测试"
+
+msgid "Thème préféré"
+msgstr "首选主题"
+
+msgid "Top des catégories"
+msgstr "类别排行"
+
+msgid "Total missing values"
+msgstr "缺失值总数"
+
+msgid "Tous vos indicateurs de qualité réunis."
+msgstr "你的所有质量指标汇聚一处。"
+
+msgid "Tout est inclus"
+msgstr "一应俱全"
+
+msgid "Tout voir"
+msgstr "查看全部"
+
+msgid "Toutes les actions"
+msgstr "所有操作"
+
+msgid "Traçabilité"
+msgstr "可追溯性"
+
+msgid "Troisième quartile"
+msgstr "第三四分位数"
+
+msgid "Type"
+msgstr "类型"
+
+msgid "Type de correction"
+msgstr "修正类型"
+
+msgid "Téléchargement"
+msgstr "下载"
+
+msgid "Téléchargement de « %(name)s »"
+msgstr "下载“%(name)s”"
+
+msgid "Téléphone invalide"
+msgstr "无效电话"
+
+msgid "Téléphone non standard"
+msgstr "格式不规范的电话号码"
+
+msgid "Téléphones non standard (%(column)s) :"
+msgstr "非标准电话号码（%(column)s）："
+
+msgid "Téléversement"
+msgstr "上传"
+
+msgid "Téléversement de « %(name)s »"
+msgstr "上传“%(name)s”"
+
+msgid "Téléverser un fichier"
+msgstr "上传文件"
+
+msgid "Téléversez votre fichier"
+msgstr "上传您的文件"
+
+msgid "Téléversé"
+msgstr "已上传"
+
+msgid "URL"
+msgstr "网址"
+
+msgid "URL de destination"
+msgstr "目标 URL"
+
+msgid "URL illisible."
+msgstr "URL 无法读取。"
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page."
+msgstr "无法从此页面删除管理员账户。"
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
+msgstr "管理员账户无法从本页面删除。请使用"
+
+msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
+msgstr "仪表板会对比清洗前后的质量，并说明每一处失分的原因。"
+
+msgid "Une URL de destination est requise."
+msgstr "需要目标 URL。"
+
+msgid "Une boîte à outils complète"
+msgstr "一整套工具"
+
+msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
+msgstr "每行一条规则，格式为“列:模式”。示例：“邮政编码:^\\d{5}$”。不匹配的值将被标记（不会修改）。"
+
+msgid "Uniques"
+msgstr "唯一值"
+
+msgid "Unknown"
+msgstr "未知"
+
+msgid "Unknown emails included in the unknown-value statistic"
+msgstr "未知邮箱计入未知值统计"
+
+msgid "Unknown values by column"
+msgstr "各列未知值"
+
+msgid "Utilisateur"
+msgstr "用户"
+
+msgid "Utilisation de l'API"
+msgstr "API 使用情况"
+
+msgid "Valeur"
+msgstr "值"
+
+msgid "Valeur aberrante"
+msgstr "异常值"
+
+msgid "Valeur de remplacement"
+msgstr "替换值"
+
+msgid "Valeur de remplacement (pour le remplissage)."
+msgstr "替换值（用于填充）。"
+
+msgid "Valeur manquante"
+msgstr "缺失值"
+
+msgid "Valeur numérique invalide"
+msgstr "无效数值"
+
+msgid "Valeurs aberrantes"
+msgstr "异常值"
+
+msgid "Valeurs aberrantes par colonne (méthode IQR)"
+msgstr "各列异常值（IQR 方法）"
+
+msgid "Valeurs les plus fréquentes"
+msgstr "最常见值"
+
+msgid "Valeurs les plus fréquentes des colonnes catégorielles."
+msgstr "分类列中最常见的值。"
+
+msgid "Valeurs manquantes"
+msgstr "缺失值"
+
+msgid "Valeurs manquantes :"
+msgstr "缺失值："
+
+msgid "Valeurs manquantes restantes"
+msgstr "剩余缺失值"
+
+msgid "Valeurs manquantes restantes :"
+msgstr "剩余缺失值："
+
+msgid "Valeurs uniques"
+msgstr "唯一值数量"
+
+msgid "Valeurs « Inconnu »"
+msgstr "未知值"
+
+msgid "Valeurs « Inconnu » :"
+msgstr "“未知”值："
+
+msgid "Validation et correction des emails (%(corrected)s corrigé(s), %(invalid)s invalide(s))"
+msgstr "验证并修正电子邮件（已修正 %(corrected)s 项，无效 %(invalid)s 项）"
+
+msgid "Valider et corriger les emails (erreurs évidentes seulement)"
+msgstr "验证并修正电子邮件（仅修正明显错误）"
+
+msgid "Validité"
+msgstr "有效性"
+
+msgid "Visualisations statistiques"
+msgstr "统计可视化"
+
+msgid "Voir l'analyse complète →"
+msgstr "查看完整分析 →"
+
+msgid "Volume"
+msgstr "数据量"
+
+msgid "Volume des anomalies restantes par catégorie."
+msgstr "各类别中剩余异常的数量。"
+
+msgid "Vos données"
+msgstr "您的数据"
+
+msgid "Vos données méritent<br> <span class=\"dz-gradient-text\">d'être impeccables.</span>"
+msgstr "您的数据值得<br> <span class=\"dz-gradient-text\">完美无瑕。</span>"
+
+msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
+msgstr "你的文件始终留在你这里。DataZen 会告诉你哪些超出了所选保留时长，未经你同意不会删除任何内容。"
+
+msgid "Votre espace de travail"
+msgstr "你的工作区"
+
+msgid "Votre mot de passe a bien été enregistré. Vous pouvez maintenant vous connecter avec celui-ci."
+msgstr "您的密码已成功保存。现在可以使用它登录了。"
+
+msgid "Votre mot de passe a été modifié. Vos autres sessions restent actives."
+msgstr "您的密码已修改。其他会话仍然有效。"
+
+msgid "Votre nom d'utilisateur <strong>@%(username)s</strong> ne peut pas être modifié."
+msgstr "您的用户名 <strong>@%(username)s</strong> 无法修改。"
+
+msgid "Votre photo de profil a été supprimée."
+msgstr "您的头像已删除。"
+
+msgid "Votre profil a été mis à jour."
+msgstr "你的个人资料已更新。"
+
+msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
+msgstr "主动权在你手里：没有你的操作，不会删除任何内容。"
+
+msgid "Vous n'avez pas accès à ce fichier."
+msgstr "您无权访问此文件。"
+
+msgid "Vous n'avez pas accès à ce jeton."
+msgstr "你无权访问此令牌。"
+
+msgid "Vous n'avez pas accès à ce webhook."
+msgstr "你无权访问此 Webhook。"
+
+msgid "Vous n'avez pas accès à cette règle."
+msgstr "您无权访问此规则。"
+
+msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
+msgstr "汇总全部文件的数据质量视图。"
+
+msgid "Vue d'ensemble"
+msgstr "概览"
+
+msgid "Vérifiez votre boîte mail"
+msgstr "请查收邮件"
+
+msgid "Webhook"
+msgstr "Webhook"
+
+msgid "Webhook « %(name)s » %(state)s."
+msgstr "Webhook“%(name)s”%(state)s。"
+
+msgid "Webhook « %(name)s » : test réussi (HTTP %(status)s)."
+msgstr "Webhook“%(name)s”：测试成功（HTTP %(status)s）。"
+
+msgid "Webhook « %(name)s » : test échoué (HTTP %(status)s). Vérifiez l'URL et que le service accepte les appels entrants."
+msgstr "Webhook“%(name)s”：测试失败（HTTP %(status)s）。请检查 URL，并确认该服务接受传入调用。"
+
+msgid "Webhook « %(name)s » créé."
+msgstr "Webhook“%(name)s”已创建。"
+
+msgid "Webhook « %(name)s » supprimé."
+msgstr "Webhook“%(name)s”已删除。"
+
+msgid "Webhooks"
+msgstr "Webhook"
+
+msgid "Webhooks — DataZen"
+msgstr "Webhook — DataZen"
+
+msgid "YYYY-MM-DD"
+msgstr "YYYY-MM-DD"
+
+msgid "[Règle] Anonymisation (%(count)s valeur(s))"
+msgstr "[规则] 匿名化（%(count)s 项）"
+
+msgid "[Règle] Conversion des montants (%(count)s converti(s))"
+msgstr "[规则] 转换金额（已转换 %(count)s 项）"
+
+msgid "[Règle] Normalisation de la casse"
+msgstr "[规则] 统一大小写"
+
+msgid "[Règle] Normalisation des dates (%(count)s corrigée(s))"
+msgstr "[规则] 规范日期（已修正 %(count)s 项）"
+
+msgid "[Règle] Normalisation des emails (%(count)s corrigé(s))"
+msgstr "[规则] 规范电子邮件（已修正 %(count)s 项）"
+
+msgid "[Règle] Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "[规则] 规范电话号码（已修正 %(count)s 项）"
+
+msgid "[Règle] Remplissage des valeurs manquantes par « %(value)s »"
+msgstr "[规则] 用“%(value)s”填充缺失值"
+
+msgid "[Règle] Suppression des doublons (%(count)s supprimé(s))"
+msgstr "[规则] 删除重复项（已删除 %(count)s 项）"
+
+msgid "[Règle] Suppression des espaces superflus"
+msgstr "[规则] 删除多余空格"
+
+msgid "actif"
+msgstr "有效"
+
+msgid "activé"
+msgstr "已启用"
+
+msgid "activée"
+msgstr "已启用"
+
+msgid "ajoutée"
+msgstr "已添加"
+
+msgid "améliorée"
+msgstr "已改善"
+
+msgid "bonne qualité"
+msgstr "质量良好"
+
+msgid "catégorie"
+msgstr "类别"
+
+msgid "cohérence"
+msgstr "一致性"
+
+msgid "colonne : %(name)s"
+msgstr "列：%(name)s"
+
+msgid "complétude"
+msgstr "完整性"
+
+msgid "conformité"
+msgstr "符合性"
+
+msgid "conservée (non inventée)"
+msgstr "保留（未虚构）"
+
+msgid "console d'administration"
+msgstr "管理后台"
+
+msgid "date"
+msgstr "日期"
+
+msgid "donnée absente"
+msgstr "数据缺失"
+
+msgid "désactivé"
+msgstr "已停用"
+
+msgid "désactivée"
+msgstr "已停用"
+
+msgid "détail"
+msgstr "详情"
+
+msgid "email"
+msgstr "电子邮件"
+
+msgid "et"
+msgstr "和"
+
+msgid "ex : 0 ou Inconnu"
+msgstr "例如：0 或 未知"
+
+msgid "ex : Emails en minuscules"
+msgstr "例如：邮箱转为小写"
+
+msgid "ex : Intégration Power BI"
+msgstr "例如：Power BI 集成"
+
+msgid "ex : Slack — nettoyages"
+msgstr "例如：Slack — 清理"
+
+msgid "ex : email (vide = toutes les colonnes)"
+msgstr "例如：email（留空 = 所有列）"
+
+msgid "excellente qualité"
+msgstr "质量极佳"
+
+msgid "fermer"
+msgstr "关闭"
+
+msgid "format invalide"
+msgstr "格式无效"
+
+msgid "format non reconnu"
+msgstr "格式无法识别"
+
+msgid "généré le"
+msgstr "生成于"
+
+msgid "https://exemple.com"
+msgstr "https://exemple.com"
+
+msgid "https://hooks.exemple.com/datazen"
+msgstr "https://hooks.example.com/datazen"
+
+msgid "identifiant"
+msgstr "标识符"
+
+msgid "inactive"
+msgstr "已停用"
+
+msgid "inchangé"
+msgstr "未变化"
+
+msgid "jours"
+msgstr "天"
+
+msgid "lignes"
+msgstr "行"
+
+msgid "longueur/format incorrect"
+msgstr "长度/格式不正确"
+
+msgid "matplotlib"
+msgstr "matplotlib"
+
+msgid "naviguer"
+msgstr "导航"
+
+msgid "non évalué"
+msgstr "未评估"
+
+msgid "numérique"
+msgstr "数值"
+
+msgid "opération : %(name)s"
+msgstr "操作：%(name)s"
+
+msgid "ouvrir"
+msgstr "打开"
+
+msgid "points"
+msgstr "分"
+
+msgid "pour «"
+msgstr "为“"
+
+msgid "premières lignes."
+msgstr "前几行。"
+
+msgid "qualité faible"
+msgstr "质量较差"
+
+msgid "qualité moyenne"
+msgstr "质量中等"
+
+msgid "référence"
+msgstr "引用"
+
+msgid "révoqué"
+msgstr "已撤销"
+
+msgid "score"
+msgstr "得分"
+
+msgid "score %(before)s → %(after)s"
+msgstr "得分 %(before)s → %(after)s"
+
+msgid "seaborn"
+msgstr "seaborn"
+
+msgid "stable"
+msgstr "稳定"
+
+msgid "supprimée"
+msgstr "已删除"
+
+msgid "sur"
+msgstr "共"
+
+msgid "texte"
+msgstr "文本"
+
+msgid "téléphone"
+msgstr "电话"
+
+msgid "unicité"
+msgstr "唯一性"
+
+msgid "valeur(s) extrême(s)"
+msgstr "极端值"
+
+msgid "validité"
+msgstr "有效性"
+
+msgid "· ancien_id :"
+msgstr "· ancien_id："
+
+msgid "· statut filtré"
+msgstr "· 已筛选状态"
+
+msgid "À compléter :"
+msgstr "待完善："
+
+msgid "Écart"
+msgstr "差异"
+
+msgid "Écart-type"
+msgstr "标准差"
+
+msgid "Échap"
+msgstr "退出"
+
+msgid "Échec du nettoyage"
+msgstr "清理失败"
+
+msgid "Échec du nettoyage de « %(name)s »"
+msgstr "“%(name)s”清理失败"
+
+msgid "Étape 1"
+msgstr "第 1 步"
+
+msgid "État"
+msgstr "状态"
+
+msgid "Évolution hebdomadaire du score de qualité"
+msgstr "数据质量得分周变化"
+
+msgid "Événement"
+msgstr "事件"
+
+msgid "Événement déclencheur"
+msgstr "触发事件"
+
+msgid "à corriger manuellement"
+msgstr "需手动修正"
+
+msgid "à partir des données nettoyées."
+msgstr "基于清洗后的数据生成。"
+
+msgid "à vérifier"
+msgstr "待检查"
+
+msgid "à vérifier manuellement"
+msgstr "需手动核查"
+
+msgid "—"
+msgstr "—"
+
+msgid "— Choisir une action —"
+msgstr "— 选择操作 —"
+
+msgid "— Tous les statuts —"
+msgstr "— 所有状态 —"
+
+msgid "— Toutes les colonnes —"
+msgstr "— 所有列 —"
+
+msgid "← Retour au fichier"
+msgstr "← 返回文件"
+
+msgid "⌨️ Raccourcis"
+msgstr "⌨️ 快捷键"
+
+msgid "⌨️ Raccourcis clavier"
+msgstr "⌨️ 键盘快捷键"
+
+msgid "⏳ Fichiers expirés"
+msgstr "⏳ 过期文件"
+
+msgid "⏳ Nettoyage en cours…"
+msgstr "⏳ 正在清洗…"
+
+msgid "⚙️ Règles de nettoyage personnalisées"
+msgstr "⚙️ 自定义清洗规则"
+
+msgid "⚙️ Règles personnalisées"
+msgstr "⚙️ 自定义规则"
+
+msgid "⚙️ Régler la durée"
+msgstr "⚙️ 调整时长"
+
+msgid "⚠️ Points nécessitant une vérification humaine"
+msgstr "⚠️ 需要人工核查的项目"
+
+msgid "⚠️ Problèmes restants (tous fichiers)"
+msgstr "⚠️ 剩余问题（全部文件）"
+
+msgid "⚠️ Valeurs signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ 仅标记的取值 — 绝不会被自动修改。"
+
+msgid "⚠️ Zone de danger"
+msgstr "⚠️ 危险区域"
+
+msgid "⚠️ À vérifier manuellement (jamais supprimés automatiquement)."
+msgstr "⚠️ 需人工核查（绝不会被自动删除）。"
+
+msgid "⚪ Conserver toutes les lignes"
+msgstr "⚪ 保留所有行"
+
+msgid "⚪ Ignorer (examiné, conserver)"
+msgstr "⚪ 忽略（已检查，保留）"
+
+msgid "⚪ Valeurs « Inconnu » ("
+msgstr "⚪ “未知”值（"
+
+msgid "✅ Aucun doublon potentiel à vérifier."
+msgstr "✅ 没有需要核查的潜在重复项。"
+
+msgid "✅ Aucune vérification manuelle nécessaire"
+msgstr "✅ 无需人工核查"
+
+msgid "✅ Résultat du nettoyage"
+msgstr "✅ 清洗结果"
+
+msgid "✅ Validation après nettoyage"
+msgstr "✅ 清洗后验证"
+
+msgid "✅ Votre profil est complet."
+msgstr "✅ 您的资料已完整。"
+
+msgid "✏️ Modifier mon profil"
+msgstr "✏️ 编辑我的资料"
+
+msgid "✓ Copié"
+msgstr "✓ 已复制"
+
+msgid "➕ Nouveau jeton"
+msgstr "➕ 新建令牌"
+
+msgid "➕ Nouveau webhook"
+msgstr "➕ 新建 Webhook"
+
+msgid "➕ Nouvelle règle"
+msgstr "➕ 新建规则"
+
+msgid "➕ Téléverser un fichier"
+msgstr "➕ 上传文件"
+
+msgid "⬇️ Exporter mes données (JSON)"
+msgstr "⬇️ 导出我的数据（JSON）"
+
+msgid "⬇️ Télécharger le fichier nettoyé"
+msgstr "⬇️ 下载清洗后的文件"
+
+msgid "🌍 Navigation"
+msgstr "🌍 导航"
+
+msgid "🌐 HTML (.html)"
+msgstr "🌐 HTML (.html)"
+
+msgid "🌐 Rapport HTML avec graphiques"
+msgstr "🌐 带图表的 HTML 报告"
+
+msgid "🎯 Répartition par niveau de qualité"
+msgstr "🎯 质量等级分布"
+
+msgid "🎯 Score qualité"
+msgstr "🎯 质量得分"
+
+msgid "🏆 Meilleurs résultats"
+msgstr "🏆 最佳结果"
+
+msgid "👀 Aperçu des données brutes (avant nettoyage)"
+msgstr "👀 原始数据预览（清洗前）"
+
+msgid "👁️ Consulter le rapport"
+msgstr "👁️ 查看报告"
+
+msgid "👤 Mon profil"
+msgstr "👤 我的资料"
+
+msgid "📈 Analyse exploratoire"
+msgstr "📈 探索性分析"
+
+msgid "📈 Statistiques descriptives"
+msgstr "📈 描述性统计"
+
+msgid "📈 Valeurs aberrantes"
+msgstr "📈 异常值"
+
+msgid "📈 Visualisations statistiques"
+msgstr "📈 统计可视化"
+
+msgid "📈 Évolution du score (12 semaines)"
+msgstr "📈 得分变化（12 周）"
+
+msgid "📉 Fichiers à traiter en priorité"
+msgstr "📉 需优先处理的文件"
+
+msgid "📉 Répartition des problèmes"
+msgstr "📉 问题分布"
+
+msgid "📊 Activité récente"
+msgstr "📊 最近活动"
+
+msgid "📊 Dashboard Data Quality"
+msgstr "📊 数据质量仪表板"
+
+msgid "📊 Dimensions de qualité"
+msgstr "📊 质量维度"
+
+msgid "📊 Tableau de bord"
+msgstr "📊 仪表板"
+
+msgid "📊 Tableau de bord global"
+msgstr "📊 全局仪表板"
+
+msgid "📋 Mes règles ("
+msgstr "📋 我的规则（"
+
+msgid "📋 Qualité des colonnes"
+msgstr "📋 列质量"
+
+msgid "📋 Rapport de nettoyage"
+msgstr "📋 清洗报告"
+
+msgid "📋 Télécharger le rapport"
+msgstr "📋 下载报告"
+
+msgid "📕 Rapport PDF"
+msgstr "📕 PDF 报告"
+
+msgid "📝 Journal des modifications"
+msgstr "📝 变更日志"
+
+msgid "📥 Fichier d'origine"
+msgstr "📥 原始文件"
+
+msgid "📥 Markdown (.md)"
+msgstr "📥 Markdown (.md)"
+
+msgid "📥 Télécharger le rapport complet"
+msgstr "📥 下载完整报告"
+
+msgid "📦 Archives"
+msgstr "📦 归档"
+
+msgid "📷 Prendre une photo"
+msgstr "📷 拍照"
+
+msgid "🔌 API et jetons d'accès"
+msgstr "🔌 API 与访问令牌"
+
+msgid "🔌 Jetons d'API"
+msgstr "🔌 API 令牌"
+
+msgid "🔍 Avant / après"
+msgstr "🔍 前后对比"
+
+msgid "🔍 Comparaison avant / après"
+msgstr "🔍 清理前后对比"
+
+msgid "🔍 Doublons"
+msgstr "🔍 重复项"
+
+msgid "🔍 Filtrer"
+msgstr "🔍 筛选"
+
+msgid "🔍 Filtrer les lignes…"
+msgstr "🔍 筛选行…"
+
+msgid "🔍 Problèmes détectés"
+msgstr "🔍 检测到的问题"
+
+msgid "🔍 Revue manuelle des doublons potentiels"
+msgstr "🔍 人工复核潜在重复项"
+
+msgid "🔍 Règles regex personnalisées"
+msgstr "🔍 自定义正则规则"
+
+msgid "🔎 Explication du score"
+msgstr "🔎 得分说明"
+
+msgid "🔑 Mes jetons"
+msgstr "🔑 我的令牌"
+
+msgid "🔑 Votre nouveau jeton"
+msgstr "🔑 你的新令牌"
+
+msgid "🔒 Changer mon mot de passe"
+msgstr "🔒 修改我的密码"
+
+msgid "🔒 Sécurité et données"
+msgstr "🔒 安全与数据"
+
+msgid "🔔 Mes webhooks"
+msgstr "🔔 我的 Webhook"
+
+msgid "🔔 Webhooks"
+msgstr "🔔 Webhook"
+
+msgid "🔗 Voir mon profil public"
+msgstr "🔗 查看我的公开资料"
+
+msgid "🔢 Colonnes analysées numériquement"
+msgstr "🔢 已进行数值分析的列"
+
+msgid "🔬 Profilage avancé"
+msgstr "🔬 高级剖析"
+
+msgid "🔵 Conserver la 2e ligne (supprimer les autres)"
+msgstr "🔵 保留第 2 行（删除其余行）"
+
+msgid "🕒 Dernières actions"
+msgstr "🕒 最近操作"
+
+msgid "🕓 Activité"
+msgstr "🕓 活动"
+
+msgid "🕓 Dernières activités"
+msgstr "🕓 最近活动"
+
+msgid "🕓 Journal d'activité"
+msgstr "🕓 活动日志"
+
+msgid "🗃️ Fichiers récents"
+msgstr "🗃️ 最近的文件"
+
+msgid "🗄️ Rétention"
+msgstr "🗄️ 保留"
+
+msgid "🗄️ Rétention des données"
+msgstr "🗄️ 数据保留"
+
+msgid "🗑️ Purger maintenant"
+msgstr "🗑️ 立即清理"
+
+msgid "🗑️ Supprimer"
+msgstr "🗑️ 删除"
+
+msgid "🗑️ Supprimer ma photo de profil"
+msgstr "🗑️ 删除我的头像"
+
+msgid "🚀 Nouveautés de l'espace pro"
+msgstr "🚀 专业版新功能"
+
+msgid "🚀 Premier appel"
+msgstr "🚀 首次调用"
+
+msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
+msgstr "🟢 保留第 1 行（删除其余行）"
+
+msgid "🟣 Fusionner toutes les lignes"
+msgstr "🟣 合并所有行"
+
+msgid "🧭 Dimensions les plus fragiles"
+msgstr "🧭 最薄弱的维度"
+
+msgid "🧹 Journal d'activité"
+msgstr "🧹 活动日志"
+
+msgid "🧹 Nettoyage"
+msgstr "🧹 清理"
+
+msgid "🧹 Options de nettoyage"
+msgstr "🧹 清洗选项"
+
+msgid "🧹 Opérations de nettoyage"
+msgstr "🧹 清洗操作"
+
+msgid "🧽 Purger les anciennes entrées"
+msgstr "🧽 清理旧条目"
+
+msgid "🧾 Journal des modifications"
+msgstr "🧾 变更日志"
+
+msgid "🧾 Télécharger le journal des modifications"
+msgstr "🧾 下载变更日志"
+
+msgctxt "séparateur"
+msgid "ou"
+msgstr "或"

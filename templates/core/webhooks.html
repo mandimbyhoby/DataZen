@@ -1,0 +1,174 @@
+{% extends "core/base.html" %}
+{% load i18n humanize %}
+
+{% block title %}{% translate "Webhooks — DataZen" %}{% endblock %}
+
+{% block content %}
+<div class="container dz-page">
+    <nav aria-label="{% translate "Fil d'Ariane" %}">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'core:api_tokens' %}">{% translate "API" %}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{% translate "Webhooks" %}</li>
+        </ol>
+    </nav>
+
+    <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 dz-page-head">
+        <div>
+            <span class="dz-eyebrow">{% translate "Intégration" %}</span>
+            <h1 class="h3 mb-1">{% translate "🔔 Webhooks" %}</h1>
+            <p class="text-muted mb-0">
+                {% translate "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé." %}
+            </p>
+        </div>
+        <a class="btn btn-outline-secondary" href="{% url 'core:api_tokens' %}">
+            {% translate "🔌 Jetons d'API" %}
+        </a>
+    </div>
+
+    <section class="dz-kpi-dashboard dz-block" aria-labelledby="dz-hook-kpi">
+        <div class="dz-kpi-heading">
+            <div>
+                <h2 class="h5 mb-1" id="dz-hook-kpi">{% translate "Abonnements" %}</h2>
+            </div>
+        </div>
+        <div class="dz-kpi-grid">
+            <article class="dz-kpi-card dz-kpi-card--primary">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">🔔</span>
+                    <span class="dz-kpi-card__label">{% translate "Webhooks" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ stats.total }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--success">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">✅</span>
+                    <span class="dz-kpi-card__label">{% translate "Actifs" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ stats.active }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--danger">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">⚠️</span>
+                    <span class="dz-kpi-card__label">{% translate "En échec" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ stats.failing }}</div>
+            </article>
+        </div>
+    </section>
+
+    <div class="row dz-grid">
+        <div class="col-lg-5">
+            <div class="card dz-card-accent">
+                <div class="card-body">
+                    <h2 class="card-title h5">{% translate "➕ Nouveau webhook" %}</h2>
+                    <form method="post">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <div class="mb-3">
+                                <label class="form-label small" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                                {{ field }}
+                                {% if field.help_text %}
+                                    <div class="form-text small">{{ field.help_text }}</div>
+                                {% endif %}
+                                {% for error in field.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                        <button type="submit" class="btn btn-primary w-100">{% translate "Créer le webhook" %}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-7">
+            <div class="card dz-panel">
+                <div class="card-body">
+                    <h2 class="card-title h5">{% translate "🔔 Mes webhooks" %}</h2>
+                    {% if hooks %}
+                        <div class="table-responsive">
+                            <table class="table align-middle" data-searchable>
+                                <thead>
+                                    <tr>
+                                        <th>{% translate "Nom" %}</th>
+                                        <th>{% translate "Événement" %}</th>
+                                        <th>{% translate "Dernier appel" %}</th>
+                                        <th>{% translate "État" %}</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for hook in hooks %}
+                                        <tr>
+                                            <td>
+                                                {{ hook.name }}
+                                                <div class="text-muted small text-break">{{ hook.url }}</div>
+                                            </td>
+                                            <td><span class="badge text-bg-info">{{ hook.get_event_display }}</span></td>
+                                            <td>
+                                                {% if hook.last_status %}
+                                                    <span class="badge text-bg-{% if hook.last_status < 400 %}success{% else %}danger{% endif %}">
+                                                        HTTP {{ hook.last_status }}
+                                                    </span>
+                                                {% else %}
+                                                    <span class="badge text-bg-secondary">{% translate "Jamais appelé" %}</span>
+                                                {% endif %}
+                                                {% if hook.last_triggered_at %}
+                                                    <div class="text-muted small">{{ hook.last_triggered_at|naturaltime }}</div>
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                {% if hook.is_active %}
+                                                    <span class="badge text-bg-success">{% translate "Actif" %}</span>
+                                                {% else %}
+                                                    <span class="badge text-bg-secondary">{% translate "Inactif" %}</span>
+                                                {% endif %}
+                                            </td>
+                                            <td class="text-end text-nowrap">
+                                                <form method="post" action="{% url 'core:webhook_test' hook.pk %}" class="d-inline">
+                                                    {% csrf_token %}
+                                                    <button type="submit" class="btn btn-sm btn-outline-primary">
+                                                        {% translate "Tester" %}
+                                                    </button>
+                                                </form>
+                                                <form method="post" action="{% url 'core:webhook_toggle' hook.pk %}" class="d-inline">
+                                                    {% csrf_token %}
+                                                    <button type="submit" class="btn btn-sm btn-outline-secondary">
+                                                        {% if hook.is_active %}{% translate "Désactiver" %}{% else %}{% translate "Activer" %}{% endif %}
+                                                    </button>
+                                                </form>
+                                                <form method="post" action="{% url 'core:webhook_delete' hook.pk %}" class="d-inline"
+                                                      data-dz-confirm="{% translate 'Supprimer ce webhook ?' %}">
+                                                    {% csrf_token %}
+                                                    <button type="submit" class="btn btn-sm btn-outline-danger">🗑️</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class="text-center py-5">
+                            <div class="fs-1 mb-2" aria-hidden="true">🔔</div>
+                            <p class="text-muted mb-0">
+                                {% translate "Aucun webhook configuré. Ajoutez une URL pour être notifié automatiquement." %}
+                            </p>
+                        </div>
+                    {% endif %}
+
+                    <hr class="dz-divider">
+                    <h3 class="h6">{% translate "Format de la charge utile" %}</h3>
+                    <pre class="dz-pre-wrap small mb-0">{
+  "event": "cleaning_done",
+  "sent_at": "2026-01-31T10:15:00+00:00",
+  "application": "DataZen",
+  "dataset": { "id": 12, "name": "ventes.csv", "score_after": 96.4, "rows": 1520 }
+}</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

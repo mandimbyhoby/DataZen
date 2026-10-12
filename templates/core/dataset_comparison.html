@@ -1,0 +1,202 @@
+{% extends "core/base.html" %}
+{% load i18n humanize l10n %}
+
+{% block title %}{% blocktranslate trimmed with name=data_file.original_name %}Comparaison avant / après — {{ name }}{% endblocktranslate %}{% endblock %}
+
+{% block content %}
+<div class="container dz-page">
+    <nav aria-label="{% translate "Fil d'Ariane" %}">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+            <li class="breadcrumb-item">
+                <a href="{% url 'core:dataset_detail' data_file.pk %}">{{ data_file.original_name }}</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">{% translate "Comparaison" %}</li>
+        </ol>
+    </nav>
+
+    <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 dz-page-head">
+        <div>
+            <span class="dz-eyebrow">{% translate "Confiance" %}</span>
+            <h1 class="h3 mb-1">{% translate "🔍 Comparaison avant / après" %}</h1>
+            <p class="text-muted mb-0">
+                {% translate "Ce que le nettoyage a réellement changé dans votre fichier." %}
+            </p>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-outline-secondary" href="{% url 'core:dataset_detail' data_file.pk %}">
+                {% translate "← Retour au fichier" %}
+            </a>
+            <a class="btn btn-outline-secondary" href="{% url 'core:download_pdf_report' data_file.pk %}">
+                {% translate "📕 Rapport PDF" %}
+            </a>
+            <a class="btn btn-primary" href="{% url 'core:dataset_analysis' data_file.pk %}">
+                {% translate "📈 Analyse exploratoire" %}
+            </a>
+        </div>
+    </div>
+
+    <section class="dz-kpi-dashboard dz-block" aria-labelledby="dz-compare-kpi">
+        <div class="dz-kpi-heading">
+            <div>
+                <h2 class="h5 mb-1" id="dz-compare-kpi">{% translate "Score de qualité" %}</h2>
+                <p class="text-muted small mb-0">
+                    {% translate "Mesuré avant et après le nettoyage." %}
+                </p>
+            </div>
+            <div class="text-end">
+                <div class="display-6 fw-bold lh-1">
+                    {{ comparison.before.score }}<span class="fs-6 text-muted"> → </span>{{ comparison.after.score }}
+                </div>
+                <span class="badge text-bg-{{ delta.css }}">
+                    {{ delta.text }}
+                </span>
+            </div>
+        </div>
+        <div class="dz-kpi-grid">
+            <article class="dz-kpi-card dz-kpi-card--primary">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">✅</span>
+                    <span class="dz-kpi-card__label">{% translate "Colonnes améliorées" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ comparison.improved_columns }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--warning">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">⚠️</span>
+                    <span class="dz-kpi-card__label">{% translate "Colonnes à vérifier" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ comparison.regressed_columns }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--secondary">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">➖</span>
+                    <span class="dz-kpi-card__label">{% translate "Colonnes stables" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ comparison.stable_columns }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--primary">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">🔢</span>
+                    <span class="dz-kpi-card__label">{% translate "Colonnes analysées" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ comparison.columns|length }}</div>
+            </article>
+        </div>
+    </section>
+
+    {% if not comparison.has_changes %}
+        <div class="alert alert-info">
+            {% translate "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres." %}
+        </div>
+    {% endif %}
+
+    <div class="card dz-panel dz-block">
+        <div class="card-body">
+            <h2 class="h6 mb-3">{% translate "Indicateurs comparés" %}</h2>
+            <div class="table-responsive">
+                <table class="table align-middle mb-0" data-searchable>
+                    <thead>
+                        <tr>
+                            <th>{% translate "Indicateur" %}</th>
+                            <th class="text-end">{% translate "Avant" %}</th>
+                            <th class="text-end">{% translate "Après" %}</th>
+                            <th class="text-end">{% translate "Écart" %}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in comparison.indicators %}
+                            <tr>
+                                <td>{{ row.label }}</td>
+                                <td class="text-end text-muted">{{ row.before|default:"—" }}{{ row.unit }}</td>
+                                <td class="text-end fw-semibold">{{ row.after|default:"—" }}{{ row.unit }}</td>
+                                <td class="text-end">
+                                    <span class="badge text-bg-{{ row.css }}">{{ row.text }}</span>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row dz-grid">
+        <div class="col-lg-5">
+            <div class="card dz-panel h-100">
+                <div class="card-body">
+                    <h2 class="h6 mb-3">{% translate "Dimensions de qualité" %}</h2>
+                    {% for dimension in comparison.dimensions %}
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between small mb-1">
+                                <span>{{ dimension.name }}</span>
+                                <span>
+                                    <span class="text-muted">{{ dimension.before|default:"—" }}</span>
+                                    <span class="text-muted"> → </span>
+                                    <span class="fw-semibold">{{ dimension.after }}</span>
+                                </span>
+                            </div>
+                            <div class="progress dz-progress-thin" role="progressbar"
+                                 aria-label="{{ dimension.name }}"
+                                 aria-valuenow="{{ dimension.after|unlocalize }}" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-{% if dimension.after >= 90 %}success{% elif dimension.after >= 75 %}info{% elif dimension.after >= 50 %}warning{% else %}danger{% endif %}"
+                                     style="width: {{ dimension.after|unlocalize }}%"></div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-7">
+            <div class="card dz-panel h-100">
+                <div class="card-body">
+                    <h2 class="h6 mb-3">{% translate "Détail par colonne" %}</h2>
+                    <div class="table-responsive">
+                        <table class="table table-sm align-middle mb-0" data-searchable>
+                            <thead>
+                                <tr>
+                                    <th>{% translate "Colonne" %}</th>
+                                    <th class="text-end">{% translate "Problèmes avant" %}</th>
+                                    <th class="text-end">{% translate "Problèmes après" %}</th>
+                                    <th class="text-end">{% translate "Complétude" %}</th>
+                                    <th>{% translate "État" %}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for column in comparison.columns %}
+                                    <tr>
+                                        <td>
+                                            {{ column.name }}
+                                            {% if column.after.type %}
+                                                <span class="badge text-bg-light border">{{ column.after.type }}</span>
+                                            {% endif %}
+                                        </td>
+                                        <td class="text-end text-muted">{{ column.before.issues|default:"—" }}</td>
+                                        <td class="text-end">{{ column.after.issues|default:"—" }}</td>
+                                        <td class="text-end">
+                                            {% if column.after %}
+                                                {{ column.after.completeness }}%
+                                                {% if column.delta_completeness %}
+                                                    <span class="badge text-bg-{% if column.delta_completeness > 0 %}success{% else %}danger{% endif %}">
+                                                        {% if column.delta_completeness > 0 %}+{% endif %}{{ column.delta_completeness }}
+                                                    </span>
+                                                {% endif %}
+                                            {% else %}
+                                                —
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            <span class="badge text-bg-{{ column.status_css }}">{{ column.status_label }}</span>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

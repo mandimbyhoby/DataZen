@@ -1,0 +1,31 @@
+id	nom	email	telephone	ville	date_inscription	montant_achat	statut	newsletter
+1	Alice Martin	alice.martin@mail.com	06 12 34 56 78	Paris	2024-01-15	1 299,90 €	Actif	oui
+2	BOB DUPONT	bob.dupont@mail.com	0612345679	Lyon	2024-02-20	29,99	actif	OUI
+3	charlie leblanc	charlie.leblanc@mail.com	06.12.34.56.80	Marseille	2024-03-10	299.90	Inactif	non
+4	Alice Martin	alice.martin@mail.com	06 12 34 56 78	Paris	2024-01-15	1 299,90 €	Actif	oui
+5	 David Petit 	david.petit@mail.com	06-12-34-56-81	 Lille 	15/04/2024	89,90	Actif	Non
+6	Élise Moreau	elise.moreau@mail.com	0612345682	Nantes	2024-05-05	299,90	Inactif	oui
+7	alice martin	ALICE.MARTIN@mail.com	06 12 34 56 78	paris	2024-06-12	1299.90	ACTIF	OUI
+8	François Girard	francois.girard@mail.com	0612345683	Toulouse	2024-07-01	59,90	Actif	non
+9	  gérard roux  	gerard.roux@mail.com	06 12 34 56 84	Lyon 	08/08/2024	29,99	Inactif	NON
+10	Hélène Fournier		0612345685	Rennes	2024-09-10	109,90	Actif	oui
+11	bob dupont	bob.dupontmail.com	06 12 34 56 79	LYON	2024-02-20	29,99 €	ACTIF	OUI
+12	Inès Lambert	ines.lambert@mail.com		 	2024-11-30		Inconnu	
+13		karim.benali@	0612345687	Nice	2024-04-17	449,00	Actif	oui
+14	Laura Schmitt	laura.schmitt@mail.com	06 12 34 56 88	Strasbourg	2024-10-02	189,90	Actif	non
+15	Inconnu	inconnu@mail.com	0612345689	Paris	2024-12-01	1 299,90 €	Inconnu	oui
+16	Paul Bernard	paul.bernard@mail.com	06 12 34 56 90	Bordeaux	2024-03-22	75,50	Actif	oui
+17	paul bernard	paul.bernard@mail.com	0612345690	bordeaux	2024-03-22	75,50	actif	OUI
+18	Marie Dubois	marie.dubois@mail.com	06 12 34 56 91	Lille	2024-06-18	1 050,00 €	Inactif	non
+19	Jean-Pierre Petit	jean.petit@mail.com	0612345692	Nancy	2024-08-09	320,00	Actif	oui
+20	Sophie Laurent	sophie.laurent@mail.com	06 12 34 56 93	Montpellier	2024-09-27	89,90 €	Inactif	NON
+21	Thomas Moreau	thomas.moreau@mail.com	0612345694	Grenoble	2024-11-11	540,00	Actif	oui
+22	thomas moreau	thomas.moreau@mail.com	06 12 34 56 94	grenoble	2024-11-11	540,00	ACTIF	OUI
+23	Camille Roux	camille.roux@mail.com	0612345695	Dijon	2024-01-30	210,00	Inactif	non
+24	Nicolas Fournier	nicolas.fournier@mail.com	06 12 34 56 96	Reims	2024-05-14	1 299,90 €	Actif	oui
+25	Julie Girard	julie.girard@mail.com	0612345697	Le Havre	2024-07-07	45,00	Inactif	non
+26	Inconnu	inconnu@mail.com	0612345698	Paris	2024-12-01	1 299,90 €	Inconnu	oui
+27	Antoine Lefebvre	antoine.lefebvre@mail.com	06 12 34 56 99	Amiens	2024-02-11	670,00	Actif	oui
+28	antoine lefebvre	antoine.lefebvre@mail.com	0612345699	amiens	2024-02-11	670,00	actif	OUI
+29	Chloé Mercier	chloe.mercier@mail.com	06 12 34 57 00	Tours	2024-04-25	150,00	Inactif	non
+30	Lucas Blanc	lucas.blanc@mail.com	0612345701	Limoges	2024-06-30	980,00	Actif	oui

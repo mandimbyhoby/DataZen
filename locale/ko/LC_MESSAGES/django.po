@@ -1,0 +1,2831 @@
+# Catalogue de traduction DataZen.
+# Généré par tools/i18n_build.py — ne pas éditer à la main.
+msgid ""
+msgstr ""
+"Project-Id-Version: DataZen 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "%(actual)s correction(s) in the log vs %(reported)s reported"
+msgstr "로그의 수정 %(actual)s건 대 보고된 %(reported)s건"
+
+msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
+msgstr "이메일 열의 알 수 없는 값 %(actual)s건 대 보고된 %(reported)s건"
+
+msgid "%(count)s colonnes"
+msgstr "%(count)s개 열"
+
+msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
+msgstr "잠재적 중복 %(count)s건을 확인해야 합니다."
+
+msgid "%(count)s entrée(s) d'activité supprimée(s)."
+msgstr "활동 로그 항목 %(count)s건을 삭제했습니다."
+
+msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
+msgstr "오류 %(count)s개를 자동으로 수정하지 못했습니다."
+
+msgid "%(count)s exact duplicate(s) remaining"
+msgstr "완전 중복 %(count)s건 남음"
+
+msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
+msgstr "일관되지 않은 값 %(count)s건 남음(유효하지도 알 수 없지도 않음)"
+
+msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
+msgstr "유효하지 않은 이메일 %(count)s건 있음(비어 있지 않고 알 수 없지도 않음)"
+
+msgid "%(count)s invalid value(s) among filled data"
+msgstr "채워진 데이터 중 유효하지 않은 값 %(count)s건"
+
+msgid "%(count)s lignes"
+msgstr "%(count)s개 행"
+
+msgid "%(count)s missing value(s)"
+msgstr "결측값 %(count)s건"
+
+msgid "%(count)s non-standard value(s)"
+msgstr "비표준 값 %(count)s건"
+
+msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
+msgstr "잠재적 중복 %(count)s건은 수동 검토가 필요합니다(패널티 완화)"
+
+msgid "%(count)s unknown value(s) (data unavailable)"
+msgstr "알 수 없는 값 %(count)s건(데이터 없음)"
+
+msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
+msgstr "숫자 열에서 이상값 %(count)s건이 감지되었습니다."
+
+msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
+msgstr "현재 %(count)s건의 값이 «알 수 없음»입니다."
+
+msgid "%(counter)s doublon potentiel détecté. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgid_plural "%(counter)s doublons potentiels détectés. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgstr[0] "잠재적 중복 %(counter)s개가 감지되었습니다. 이 행은 <strong>절대</strong> 자동으로 삭제되지 않으며, 사용자의 결정이 필요합니다."
+
+msgid "%(counter)s fichier affiché"
+msgid_plural "%(counter)s fichiers affichés"
+msgstr[0] "%(counter)s개 파일 표시됨"
+
+msgid "%(counter)s inconnu"
+msgid_plural "%(counter)s inconnus"
+msgstr[0] "%(counter)s개 알 수 없음"
+
+msgid "%(counter)s invalide,"
+msgid_plural "%(counter)s invalides,"
+msgstr[0] "%(counter)s개 유효하지 않음,"
+
+msgid "%(counter)s ligne concernée :"
+msgid_plural "%(counter)s lignes concernées :"
+msgstr[0] "영향을 받은 행 %(counter)s개:"
+
+msgid "%(counter)s valide,"
+msgid_plural "%(counter)s valides,"
+msgstr[0] "%(counter)s개 유효함,"
+
+msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
+msgstr "파일 %(purged)s개를 삭제하고 %(archived)s개를 보관했습니다."
+
+msgid "%(score)s / 100  (%(weight)s %(percent)s)"
+msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
+msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s 대 예상 %(expected)s"
+
+msgid "%(value)s %(percent)s"
+msgstr "%(value)s %(percent)s"
+
+msgid "(%(counter)s modification)"
+msgid_plural "(%(counter)s modifications)"
+msgstr[0] "(%(counter)s건 수정)"
+
+msgid "(%(counter)s non-conformité)"
+msgid_plural "(%(counter)s non-conformités)"
+msgstr[0] "(%(counter)s건 부적합)"
+
+msgid "(colonnes : %(columns)s)"
+msgstr "(열: %(columns)s)"
+
+msgid "(score ≥ 0.8)"
+msgstr "(점수 ≥ 0.8)"
+
+msgid "(⚠️ à vérifier manuellement)"
+msgstr "(⚠️ 수동 확인 필요)"
+
+msgid ", Vous recevez ce message parce qu'une réinitialisation de mot de passe a été demandée pour votre compte DataZen. Cliquez sur le lien ci-dessous pour choisir un nouveau mot de passe :"
+msgstr ", DataZen 계정의 비밀번호 재설정이 요청되어 이 메일을 보내드립니다. 아래 링크를 클릭하여 새 비밀번호를 선택하세요:"
+
+msgid "<a href=\"#televerser\">Téléversez votre premier fichier</a> pour commencer."
+msgstr "<a href=\"#televerser\">첫 번째 파일을 업로드</a>하여 시작하세요."
+
+msgid "<strong>Doublons potentiels :</strong> aucun"
+msgstr "<strong>잠재적 중복:</strong> 없음"
+
+msgid "<strong>Doublons potentiels restants :</strong> aucun"
+msgstr "<strong>남은 잠재적 중복:</strong> 없음"
+
+msgid "<strong>Valeurs manquantes :</strong> aucune"
+msgstr "<strong>결측값:</strong> 없음"
+
+msgid "<strong>Valeurs manquantes restantes :</strong> aucune"
+msgstr "<strong>남은 결측값:</strong> 없음"
+
+msgid "AAAA-MM-JJ"
+msgstr "AAAA-MM-JJ"
+
+msgid "API"
+msgstr "API"
+
+msgid "API & webhooks"
+msgstr "API 및 webhook"
+
+msgid "API REST"
+msgstr "REST API"
+
+msgid "API et intégrations"
+msgstr "API 및 연동"
+
+msgid "API et intégrations — DataZen"
+msgstr "API 및 연동 — DataZen"
+
+msgid "Abonnements"
+msgstr "구독"
+
+msgid "Accueil"
+msgstr "홈"
+
+msgid "Actif"
+msgstr "활성"
+
+msgid "Actifs"
+msgstr "활성 항목"
+
+msgid "Action"
+msgstr "작업"
+
+msgid "Action invalide."
+msgstr "유효하지 않은 작업입니다."
+
+msgid "Actions"
+msgstr "작업"
+
+msgid "Active"
+msgstr "활성"
+
+msgid "Activer"
+msgstr "사용"
+
+msgid "Activer le thème clair"
+msgstr "밝은 테마 켜기"
+
+msgid "Activer le thème sombre"
+msgstr "어두운 테마 켜기"
+
+msgid "Activité"
+msgstr "활동"
+
+msgid "Activités"
+msgstr "활동"
+
+msgid "Activée"
+msgstr "활성화됨"
+
+msgid "Administrateur"
+msgstr "관리자"
+
+msgid "Administration"
+msgstr "관리"
+
+msgid "Adresse email"
+msgstr "이메일 주소"
+
+msgid "Affichage de %(shown)s lignes sur %(total)s."
+msgstr "전체 %(total)s개 행 중 %(shown)s개 표시."
+
+msgid "Affichage des"
+msgstr "표시:"
+
+msgid "Afficher"
+msgstr "표시"
+
+msgid "Afficher le mot de passe"
+msgstr "비밀번호 표시"
+
+msgid "Afficher les détails des anomalies"
+msgstr "이상 항목 세부정보 표시"
+
+msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
+msgstr "X-DataZen-Signature 헤더에 추가됩니다(HMAC-SHA256)."
+
+msgid "All filled values are valid"
+msgstr "채워진 값이 모두 유효합니다"
+
+msgid "Aller au contenu principal"
+msgstr "본문으로 건너뛰기"
+
+msgid "Analyse exploratoire"
+msgstr "탐색적 분석"
+
+msgid "Analyse exploratoire — %(name)s"
+msgstr "탐색적 분석 — %(name)s"
+
+msgid "Analyser et nettoyer"
+msgstr "분석 및 정제"
+
+msgid "Analyste de données"
+msgstr "데이터 분석가"
+
+msgid "Ancienne valeur"
+msgstr "이전 값"
+
+msgid "Annuler"
+msgstr "취소"
+
+msgid "Anomalies restantes (à traiter manuellement)"
+msgstr "남은 이상 항목(수동 처리 필요)"
+
+msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
+msgstr "민감한 데이터 익명화(%(count)s개 값 가명 처리)"
+
+msgid "Anonymiser les données sensibles"
+msgstr "민감한 데이터 익명화"
+
+msgid "Anonymiser les données sensibles (noms, emails, téléphones)"
+msgstr "민감한 데이터 익명화(이름, 이메일, 전화번호)"
+
+msgid "Antananarivo, Madagascar"
+msgstr "Antananarivo, Madagascar"
+
+msgid "Aperçu du fichier nettoyé"
+msgstr "정제된 파일 미리보기"
+
+msgid "Appel API"
+msgstr "API 호출"
+
+msgid "Appel API : %(path)s"
+msgstr "API 호출: %(path)s"
+
+msgid "Appels"
+msgstr "호출 수"
+
+msgid "Application"
+msgstr "애플리케이션"
+
+msgid "Après"
+msgstr "이후"
+
+msgid "Archivage"
+msgstr "보관"
+
+msgid "Archivage de « %(name)s »"
+msgstr "「%(name)s」 보관"
+
+msgid "Archiver"
+msgstr "보관"
+
+msgid "Archives"
+msgstr "???"
+
+msgid "Archivés"
+msgstr "보관됨"
+
+msgid "Aucun fichier d'origine n'est disponible."
+msgstr "원본 파일을 사용할 수 없습니다."
+
+msgid "Aucun fichier expiré à purger."
+msgstr "정리할 만료 파일이 없습니다."
+
+msgid "Aucun fichier expiré. Votre espace de travail est à jour."
+msgstr "만료된 파일이 없습니다. 워크스페이스가 최신 상태입니다."
+
+msgid "Aucun fichier ne correspond à votre recherche."
+msgstr "검색과 일치하는 파일이 없습니다."
+
+msgid "Aucun fichier nettoyé n'est disponible."
+msgstr "정제된 파일을 사용할 수 없습니다."
+
+msgid "Aucun fichier nettoyé pour le moment."
+msgstr "아직 정리된 파일이 없습니다."
+
+msgid "Aucun fichier pour le moment."
+msgstr "아직 파일이 없습니다."
+
+msgid "Aucun fichier sélectionné"
+msgstr "선택된 파일 없음"
+
+msgid "Aucun fichier téléversé pour le moment."
+msgstr "아직 업로드된 파일이 없습니다."
+
+msgid "Aucun graphique n'est disponible pour ce jeu de données : il ne contient pas assez de valeurs numériques ou catégorielles exploitables."
+msgstr "이 데이터셋에서는 사용할 수 있는 그래프가 없습니다. 활용 가능한 수치형 또는 범주형 값이 충분하지 않습니다."
+
+msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
+msgstr "아직 토큰이 없습니다. API를 사용하려면 하나 만드세요."
+
+msgid "Aucun journal des modifications n'est disponible."
+msgstr "변경 로그를 사용할 수 없습니다."
+
+msgid "Aucun problème détecté"
+msgstr "문제가 감지되지 않았습니다"
+
+msgid "Aucun rapport de nettoyage n'est disponible."
+msgstr "정제 보고서를 사용할 수 없습니다."
+
+msgid "Aucun résultat pour cette recherche."
+msgstr "이 검색에 대한 결과가 없습니다."
+
+msgid "Aucun webhook configuré. Ajoutez une URL pour être notifié automatiquement."
+msgstr "설정된 webhook이 없습니다. URL을 추가하면 자동으로 알림을 받습니다."
+
+msgid "Aucune activité enregistrée pour le moment."
+msgstr "아직 기록된 활동이 없습니다."
+
+msgid "Aucune activité enregistrée."
+msgstr "기록된 활동이 없습니다."
+
+msgid "Aucune anomalie restante."
+msgstr "남은 이상 항목이 없습니다."
+
+msgid "Aucune anomalie."
+msgstr "이상 항목이 없습니다."
+
+msgid "Aucune colonne"
+msgstr "열 없음"
+
+msgid "Aucune correction"
+msgstr "수정 없음"
+
+msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
+msgstr "원본 파일과 정리된 파일에 눈에 띄는 차이가 없습니다. 데이터가 이미 깨끗했습니다."
+
+msgid "Aucune dimension mesurée pour le moment."
+msgstr "아직 측정된 차원이 없습니다."
+
+msgid "Aucune donnée"
+msgstr "데이터 없음"
+
+msgid "Aucune donnée nettoyée disponible."
+msgstr "정제된 데이터가 없습니다."
+
+msgid "Aucune modification enregistrée."
+msgstr "저장된 변경 사항이 없습니다."
+
+msgid "Aucune règle personnalisée."
+msgstr "사용자 지정 규칙이 없습니다."
+
+msgid "Aucune règle pour le moment. Créez-en une pour la réutiliser sur tous vos fichiers."
+msgstr "아직 규칙이 없습니다. 하나 만들어 모든 파일에서 재사용해 보세요."
+
+msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
+msgstr "수치형 열에서 이상값이 감지되지 않았습니다."
+
+msgid "Aucune valeur « Inconnu »."
+msgstr "«알 수 없음» 값이 없습니다."
+
+msgid "Audit des emails"
+msgstr "이메일 감사"
+
+msgid "Automatisation"
+msgstr "자동화"
+
+msgid "Autoriser les autres utilisateurs à consulter votre profil."
+msgstr "다른 사용자가 내 프로필을 볼 수 있도록 허용합니다."
+
+msgid "Avant"
+msgstr "이전"
+
+msgid "Avertissement"
+msgstr "경고"
+
+msgid "Basculer la navigation"
+msgstr "내비게이션 전환"
+
+msgid "Basculer le thème"
+msgstr "테마 전환"
+
+msgid "Basculer le thème clair / sombre"
+msgstr "라이트/다크 테마 전환"
+
+msgid "Bienvenue %(username)s !"
+msgstr "환영합니다, %(username)s님!"
+
+msgid "Bon retour parmi nous"
+msgstr "다시 오신 것을 환영합니다"
+
+msgid "Bonjour"
+msgstr "안녕하세요"
+
+msgid "Borne basse"
+msgstr "하한"
+
+msgid "Borne haute"
+msgstr "상한"
+
+msgid "Boîtes à moustaches"
+msgstr "상자 수염 그림"
+
+msgid "Boîtes à moustaches des colonnes numériques"
+msgstr "숫자 열 상자 그림"
+
+msgid "Branchez DataZen sur vos outils existants."
+msgstr "DataZen을 기존 도구에 연결하세요."
+
+msgid "Branchez DataZen à vos outils : Power BI, n8n, scripts Python, tableaux de bord maison."
+msgstr "DataZen을 사용 중인 도구에 연결하세요: Power BI, n8n, Python 스크립트, 자체 대시보드."
+
+msgid "CSV (séparateur ;)"
+msgstr "CSV (구분 기호 ;)"
+
+msgid "Cadrez votre visage puis cliquez sur « Capturer »."
+msgstr "얼굴을 화면에 맞춘 뒤 «캡처»를 클릭하세요."
+
+msgid "Calculée sur %(count)s fichier(s) nettoyé(s)."
+msgstr "정리된 파일 %(count)s개를 기준으로 계산했습니다."
+
+msgid "Canonicalisation du marqueur « Inconnu » (%(count)s corrigé(s))"
+msgstr "‘알 수 없음’ 표시 정규화(%(count)s개 수정)"
+
+msgid "Capturer"
+msgstr "캡처"
+
+msgid "Ce graphique n'est pas disponible pour ce jeu de données."
+msgstr "이 그래프는 이 데이터셋에서 사용할 수 없습니다."
+
+msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
+msgstr "이 재설정 링크는 이미 사용되었거나 만료되었습니다."
+
+msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
+msgstr "이 링크는 한 번만 사용할 수 있습니다. 본인이 요청한 것이 아니라면 이 메시지를 무시하세요. 비밀번호는 변경되지 않습니다. — DataZen"
+
+msgid "Ce profil n'est pas public."
+msgstr "이 프로필은 공개되지 않았습니다."
+
+msgid "Ce que le nettoyage a réellement changé dans votre fichier."
+msgstr "정리가 파일에서 실제로 무엇을 바꿨는지 보여줍니다."
+
+msgid "Cellules manquantes"
+msgstr "누락된 셀"
+
+msgid "Ces %(count)s fichier(s) dépassent la durée de conservation de %(days)s jours. Ils ne sont pas supprimés automatiquement tant que la purge automatique reste désactivée."
+msgstr "이 파일 %(count)s개는 보존 기간 %(days)s일을 초과했습니다. 자동 정리가 꺼져 있는 동안에는 자동으로 삭제되지 않습니다."
+
+msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
+msgstr "이 카운터가 전역 검색과 아래 단축키를 구성합니다."
+
+msgid "Champ"
+msgstr "필드"
+
+msgid "Champs différents :"
+msgstr "다른 필드:"
+
+msgid "Champs identiques :"
+msgstr "동일한 필드:"
+
+msgid "Champs inconnus :"
+msgstr "알 수 없는 필드:"
+
+msgid "Changer de langue"
+msgstr "언어 변경"
+
+msgid "Changer ma photo de profil"
+msgstr "프로필 사진 변경"
+
+msgid "Changer mon mot de passe"
+msgstr "비밀번호 변경"
+
+msgid "Changer mon mot de passe — DataZen"
+msgstr "비밀번호 변경 — DataZen"
+
+msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
+msgstr "<code>.csv</code>, <code>.xlsx</code> 또는 <code>.xls</code> 형식의 데이터를 불러오세요. 구분 기호는 상관없습니다."
+
+msgid "Choisir la langue du site"
+msgstr "사이트 언어 선택"
+
+msgid "Choisir le format"
+msgstr "형식 선택"
+
+msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
+msgstr "CSV 또는 Excel 파일(.csv, .xlsx, .xls)을 선택하세요."
+
+msgid "Choisissez un fichier à analyser"
+msgstr "분석할 파일을 선택하세요"
+
+msgid "Choisissez un mot de passe long et unique. Vous resterez connecté après la modification."
+msgstr "길고 고유한 비밀번호를 선택하세요. 변경 후에도 로그인 상태가 유지됩니다."
+
+msgid "Choisissez un mot de passe solide : au moins 8 caractères, ni trop courant, ni entièrement numérique."
+msgstr "강력한 비밀번호를 사용하세요: 8자 이상, 너무 흔하지 않고 숫자로만 구성되지 않아야 합니다."
+
+msgid "Choisissez une colonne unique (ex. email) pour fusionner les variantes d'un même enregistrement (Alice / alice). Laissez vide pour ne supprimer que les lignes 100 % identiques."
+msgstr "고유 열(예: 이메일)을 선택해 같은 레코드의 변형(Alice / alice)을 병합하세요. 비워 두면 완전히 동일한 행만 삭제합니다."
+
+msgid "Clair"
+msgstr "라이트"
+
+msgid "Cliquer pour choisir une photo sur mon appareil"
+msgstr "기기에서 사진을 선택하려면 클릭"
+
+msgid "Cliquer pour trier"
+msgstr "클릭하여 정렬"
+
+msgid "Cliquez sur l'avatar ci-dessus pour choisir une image, ou sur l'icône appareil photo pour en prendre une instantanément. JPEG, PNG, WebP ou GIF — 5 Mo maximum."
+msgstr "위의 아바타를 클릭해 이미지를 선택하거나 카메라 아이콘을 눌러 즉시 촬영하세요. JPEG, PNG, WebP 또는 GIF — 최대 5MB."
+
+msgid "Clé de signature"
+msgstr "서명 키"
+
+msgid "Clé de signature HMAC (facultative)"
+msgstr "HMAC 서명 키(선택)"
+
+msgid "Code de langue (fr, en, es…). Vide = langue de l'application."
+msgstr "언어 코드(fr, en, es…). 비우면 앱 언어를 사용합니다."
+
+msgid "Coefficient de Pearson"
+msgstr "피어슨 계수"
+
+msgid "Colonne"
+msgstr "열"
+
+msgid "Colonne ciblée"
+msgstr "대상 열"
+
+msgid "Colonne clé pour la déduplication"
+msgstr "중복 제거 기준 열"
+
+msgid "Colonnes"
+msgstr "열"
+
+msgid "Colonnes améliorées"
+msgstr "개선된 열"
+
+msgid "Colonnes analysées"
+msgstr "분석한 열"
+
+msgid "Colonnes différentes"
+msgstr "다른 열"
+
+msgid "Colonnes différentes :"
+msgstr "다른 열:"
+
+msgid "Colonnes identiques :"
+msgstr "동일한 열:"
+
+msgid "Colonnes inconnues :"
+msgstr "알 수 없는 열:"
+
+msgid "Colonnes stables"
+msgstr "안정적인 열"
+
+msgid "Colonnes à vérifier"
+msgstr "확인이 필요한 열"
+
+msgid "Combien de fichiers se trouvent dans chaque tranche de score."
+msgstr "각 점수 구간에 파일이 몇 개 있는지 보여줍니다."
+
+msgid "Comparaison"
+msgstr "비교"
+
+msgid "Comparaison avant / après — %(name)s"
+msgstr "정리 전후 비교 — %(name)s"
+
+msgid "Complétion du profil"
+msgstr "프로필 완성도"
+
+msgid "Complétude"
+msgstr "완전성"
+
+msgid "Complétude par colonne"
+msgstr "열별 완성도"
+
+msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
+msgstr "완전성 · 유효성 · 고유성 · 일관성 · 적합성"
+
+msgid "Composantes du score (après nettoyage)"
+msgstr "점수 구성 요소(정제 후)"
+
+msgid "Compte"
+msgstr "계정"
+
+msgid "Compte actif"
+msgstr "활성 계정"
+
+msgid "Condensé"
+msgstr "요약"
+
+msgid "Confiance"
+msgstr "신뢰"
+
+msgid "Confirmer la décision"
+msgstr "결정 확인"
+
+msgid "Connectez-vous pour retrouver vos fichiers."
+msgstr "로그인하여 파일을 다시 확인하세요."
+
+msgid "Connexion"
+msgstr "로그인"
+
+msgid "Connexion — DataZen"
+msgstr "로그인 — DataZen"
+
+msgid "Consultation des graphiques"
+msgstr "차트 보기"
+
+msgid "Consultation du rapport"
+msgstr "보고서 보기"
+
+msgid "Continuer / valider une étape"
+msgstr "계속 / 단계 확정"
+
+msgid "Contribution des cinq dimensions pondérées du score."
+msgstr "점수를 구성하는 5개 가중 차원의 기여도."
+
+msgid "Contrôle de cohérence"
+msgstr "일관성 검사"
+
+msgid "Conversion des compteurs en entiers (%(count)s converti(s))"
+msgstr "카운터를 정수로 변환(%(count)s개 변환)"
+
+msgid "Conversion des montants (%(count)s converti(s))"
+msgstr "금액 변환(%(count)s개 변환)"
+
+msgid "Convertir les montants"
+msgstr "금액 변환"
+
+msgid "Convertir les montants en valeurs numériques"
+msgstr "금액을 숫자 값으로 변환"
+
+msgid "Copier"
+msgstr "복사"
+
+msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
+msgstr "지금 복사하세요. 보안을 위해 다시 표시되지 않습니다."
+
+msgid "Corrections"
+msgstr "수정"
+
+msgid "Corrections appliquées"
+msgstr "적용된 수정"
+
+msgid "Corrélations de Pearson entre les colonnes numériques."
+msgstr "숫자 열 간의 Pearson 상관."
+
+msgid "Création de jeton"
+msgstr "토큰 생성"
+
+msgid "Création de la règle « %(name)s »"
+msgstr "규칙 「%(name)s」 생성"
+
+msgid "Création de règle"
+msgstr "규칙 생성"
+
+msgid "Création du jeton « %(name)s »"
+msgstr "토큰 「%(name)s」 생성"
+
+msgid "Créer la règle"
+msgstr "규칙 만들기"
+
+msgid "Créer le jeton"
+msgstr "토큰 만들기"
+
+msgid "Créer le webhook"
+msgstr "webhook 만들기"
+
+msgid "Créer un compte"
+msgstr "계정 만들기"
+
+msgid "Créer une règle"
+msgstr "규칙 만들기"
+
+msgid "Créez une règle une fois, réutilisez-la sur tous vos fichiers."
+msgstr "규칙을 한 번 만들면 모든 파일에서 재사용할 수 있습니다."
+
+msgid "Créez votre compte"
+msgstr "계정을 만드세요"
+
+msgid "Data is consistent: each value is valid or unknown"
+msgstr "데이터가 일관됩니다: 모든 값이 유효하거나 알 수 없음"
+
+msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
+msgstr "DataZen — 데이터 정제 애플리케이션 (DataClean Pro) · ©"
+
+msgid "DataZen — Nettoyage de données"
+msgstr "DataZen — 데이터 정제"
+
+msgid "Date"
+msgstr "날짜"
+
+msgid "Date d'expiration"
+msgstr "만료 날짜"
+
+msgid "Date invalide"
+msgstr "잘못된 날짜"
+
+msgid "De l'import brut au rapport de qualité, DataZen couvre toute la chaîne."
+msgstr "원시 데이터 가져오기부터 품질 보고서까지, DataZen은 전체 과정을 지원합니다."
+
+msgid "Demander un nouveau lien"
+msgstr "새 링크 요청"
+
+msgid "Dernier appel"
+msgstr "마지막 호출"
+
+msgid "Dernier code HTTP"
+msgstr "마지막 HTTP 코드"
+
+msgid "Dernier déclenchement"
+msgstr "마지막 트리거"
+
+msgid "Dernier usage"
+msgstr "마지막 사용"
+
+msgid "Derniers fichiers"
+msgstr "최근 파일"
+
+msgid "Dernière connexion"
+msgstr "마지막 로그인"
+
+msgid "Dernière utilisation"
+msgstr "마지막 사용 시각"
+
+msgid "Dernières règles"
+msgstr "최근 규칙"
+
+msgid "Des incohérences ont été détectées entre les statistiques et les données."
+msgstr "통계와 데이터 간의 불일치가 감지되었습니다."
+
+msgid "Dimension"
+msgstr "차원"
+
+msgid "Dimensions de qualité"
+msgstr "품질 차원"
+
+msgid "Dispersion et valeurs extrêmes des colonnes numériques."
+msgstr "숫자 열의 분산과 극단값."
+
+msgid "Distributions des colonnes numériques"
+msgstr "숫자 열 분포"
+
+msgid "Distributions numériques"
+msgstr "숫자 분포"
+
+msgid "Django · Pandas · Bootstrap"
+msgstr "Django · Pandas · Bootstrap"
+
+msgid "Doublon par similarité"
+msgstr "유사 중복"
+
+msgid "Doublon potentiel"
+msgstr "잠재적 중복"
+
+msgid "Doublons"
+msgstr "중복"
+
+msgid "Doublons exacts"
+msgstr "정확히 중복된 항목"
+
+msgid "Doublons exacts :"
+msgstr "완전 중복:"
+
+msgid "Doublons exacts restants :"
+msgstr "남은 완전 중복:"
+
+msgid "Doublons par similarité :"
+msgstr "유사 중복:"
+
+msgid "Doublons potentiels"
+msgstr "중복 가능 항목"
+
+msgid "Doublons potentiels (⚠️ à vérifier) :"
+msgstr "잠재적 중복 (⚠️ 확인 필요):"
+
+msgid "Doublons potentiels :"
+msgstr "잠재적 중복:"
+
+msgid "Doublons potentiels restants :"
+msgstr "남은 잠재적 중복:"
+
+msgid "Doublons restants (exacts + potentiels)"
+msgstr "남은 중복 (완전 + 잠재적)"
+
+msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
+msgstr "중복, 불필요한 공백, 잘못된 이메일 형식, 일관성 없는 날짜… DataZen이 문제를 감지하고 몇 초 만에 모두 자동으로 수정합니다."
+
+msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
+msgstr "중복, 결측값, 공백, 대소문자, 이메일, 전화번호, 날짜와 급여를 표준화합니다."
+
+msgid "Durée de conservation"
+msgstr "보존 기간"
+
+msgid "Durée de conservation (jours)"
+msgstr "보존 기간(일)"
+
+msgid "Décision appliquée avec succès."
+msgstr "결정이 적용되었습니다."
+
+msgid "Déjà un compte ?"
+msgstr "이미 계정이 있으신가요?"
+
+msgid "Désactiver"
+msgstr "비활성화"
+
+msgid "Désactivée"
+msgstr "비활성화됨"
+
+msgid "Détail"
+msgstr "세부 정보"
+
+msgid "Détail par colonne"
+msgstr "열별 상세"
+
+msgid "Détail par semaine"
+msgstr "주별 상세"
+
+msgid "Détails techniques"
+msgstr "기술 세부 정보"
+
+msgid "E-mail envoyé — DataZen"
+msgstr "이메일 전송됨 — DataZen"
+
+msgid "Effacer"
+msgstr "지우기"
+
+msgid "Effectif"
+msgstr "개수"
+
+msgid "Email invalide"
+msgstr "잘못된 이메일"
+
+msgid "Email nettoyé"
+msgstr "정제된 이메일"
+
+msgid "Email original"
+msgstr "원본 이메일"
+
+msgid "Emails :"
+msgstr "이메일:"
+
+msgid "Emails corrected (change log vs counter)"
+msgstr "수정된 이메일(변경 로그 대 카운터)"
+
+msgid "Emails invalides :"
+msgstr "유효하지 않은 이메일:"
+
+msgid "Emails invalides restants :"
+msgstr "남은 유효하지 않은 이메일:"
+
+msgid "Emails restants :"
+msgstr "남은 이메일:"
+
+msgid "Emails: valid + invalid + unknown = total"
+msgstr "이메일: 유효 + 무효 + 알 수 없음 = 합계"
+
+msgid "En attente"
+msgstr "대기 중"
+
+msgid "En cours de traitement"
+msgstr "처리 중"
+
+msgid "En erreur"
+msgstr "오류"
+
+msgid "En échec"
+msgstr "실패"
+
+msgid "Enregistrer"
+msgstr "저장"
+
+msgid "Enregistrer le nouveau mot de passe"
+msgstr "새 비밀번호 저장"
+
+msgid "Enregistrer les modifications"
+msgstr "변경사항 저장"
+
+msgid "Entrée"
+msgstr "Enter"
+
+msgid "Entrées"
+msgstr "항목"
+
+msgid "Envoyer le lien de réinitialisation"
+msgstr "재설정 링크 보내기"
+
+msgid "Erreur"
+msgstr "오류"
+
+msgid "Erreur de nettoyage"
+msgstr "정리 오류"
+
+msgid "Erreurs de format"
+msgstr "형식 오류"
+
+msgid "Erreurs restantes"
+msgstr "남은 오류"
+
+msgid "Excel (.xlsx)"
+msgstr "Excel (.xlsx)"
+
+msgid "Expiration"
+msgstr "만료"
+
+msgid "Expiré"
+msgstr "만료됨"
+
+msgid "Explication du score"
+msgstr "점수 설명"
+
+msgid "Export & traçabilité"
+msgstr "내보내기 및 추적"
+
+msgid "Fermer"
+msgstr "닫기"
+
+msgid "Fermer la fenêtre active"
+msgstr "활성 창 닫기"
+
+msgid "Fichier"
+msgstr "파일"
+
+msgid "Fichier de données"
+msgstr "데이터 파일"
+
+msgid "Fichier nettoyé"
+msgstr "정제된 파일"
+
+msgid "Fichier supprimé"
+msgstr "파일 삭제됨"
+
+msgid "Fichier téléversé"
+msgstr "파일 업로드됨"
+
+msgid "Fichier téléversé avec succès."
+msgstr "파일이 성공적으로 업로드되었습니다."
+
+msgid "Fichier « %(name)s » archivé."
+msgstr "파일 “%(name)s”을(를) 보관했습니다."
+
+msgid "Fichier « %(name)s » restauré."
+msgstr "파일 “%(name)s”을(를) 복원했습니다."
+
+msgid "Fichier « %(name)s » supprimé."
+msgstr "파일 ‘%(name)s’이(가) 삭제되었습니다."
+
+msgid "Fichiers"
+msgstr "파일"
+
+msgid "Fichiers archivés"
+msgstr "보관된 파일"
+
+msgid "Fichiers au total"
+msgstr "전체 파일"
+
+msgid "Fichiers de données"
+msgstr "데이터 파일"
+
+msgid "Fichiers expirés"
+msgstr "만료된 파일"
+
+msgid "Fichiers nettoyés avant le %(cutoff)s considérés comme expirés."
+msgstr "%(cutoff)s 이전에 정리된 파일은 만료된 것으로 간주합니다."
+
+msgid "Fichiers nettoyés plus anciens que cette durée (0 = conservation illimitée)."
+msgstr "이 기간보다 오래된 정리된 파일(0 = 무제한 보존)."
+
+msgid "Fichiers récents"
+msgstr "최근 파일"
+
+msgid "Fil d'Ariane"
+msgstr "경로 탐색"
+
+msgid "Filtrer"
+msgstr "필터"
+
+msgid "Filtrer les lignes du tableau"
+msgstr "표 행 필터"
+
+msgid "Filtrer par action"
+msgstr "작업별 필터"
+
+msgid "Filtrer par statut"
+msgstr "상태별 필터"
+
+msgid "Filtrer un tableau"
+msgstr "표 필터"
+
+msgid "Fonction"
+msgstr "기능"
+
+msgid "Format de date"
+msgstr "날짜 형식"
+
+msgid "Format de la charge utile"
+msgstr "페이로드 형식"
+
+msgid "Formats acceptés : <code>.csv</code>, <code>.xlsx</code>, <code>.xls</code> — jusqu'à 20 Mo."
+msgstr "지원 형식: <code>.csv</code>, <code>.xlsx</code>, <code>.xls</code> — 최대 20MB."
+
+msgid "Formats de dates (%(column)s) :"
+msgstr "날짜 형식 (%(column)s):"
+
+msgid "Formats standardized (phones, dates)"
+msgstr "표준화된 형식(전화번호, 날짜)"
+
+msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
+msgstr "시간을 아끼세요. DataZen의 모든 핵심 기능은 단축키로 사용할 수 있습니다."
+
+msgid "Graphiques"
+msgstr "차트"
+
+msgid "Graphiques générés avec matplotlib et seaborn à partir des données nettoyées."
+msgstr "정리된 데이터로 matplotlib과 seaborn을 사용해 생성한 차트."
+
+msgid "Graphiques générés côté serveur avec"
+msgstr "서버 측에서 생성된 그래프:"
+
+msgid "Graphiques statistiques générés avec <strong>matplotlib</strong> et <strong>seaborn</strong> à partir des données nettoyées."
+msgstr "정제된 데이터를 바탕으로 <strong>matplotlib</strong>과 <strong>seaborn</strong>으로 생성된 통계 그래프."
+
+msgid "Gratuit, immédiat, et vos fichiers restent privés."
+msgstr "무료이고 즉시 사용할 수 있으며 파일은 비공개로 유지됩니다."
+
+msgid "Gérer les règles…"
+msgstr "규칙 관리…"
+
+msgid "Histogrammes des colonnes numériques détectées."
+msgstr "감지된 숫자 열의 히스토그램."
+
+msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
+msgstr "업로드, 정리, 내보내기, API 등 작업의 시간별 이력."
+
+msgid "Identité"
+msgstr "신원"
+
+msgid "Ignorer la casse (Alice = alice)"
+msgstr "대소문자 구분 안 함(Alice = alice)"
+
+msgid "Import CSV & Excel"
+msgstr "CSV 및 Excel 가져오기"
+
+msgid "Impossible d'appliquer la décision : %(error)s"
+msgstr "결정을 적용할 수 없습니다: %(error)s"
+
+msgid "Impossible de convertir le fichier : %(error)s"
+msgstr "파일을 변환할 수 없습니다: %(error)s"
+
+msgid "Impossible de générer le PDF : %(error)s"
+msgstr "PDF를 생성할 수 없습니다: %(error)s"
+
+msgid "Impossible de lire ce fichier : %(error)s"
+msgstr "이 파일을 읽을 수 없습니다: %(error)s"
+
+msgid "Impossible de lire le fichier : %(error)s"
+msgstr "파일을 읽을 수 없습니다: %(error)s"
+
+msgid "Impossible de lire le rapport : %(error)s"
+msgstr "보고서를 읽을 수 없습니다: %(error)s"
+
+msgid "Inactif"
+msgstr "비활성"
+
+msgid "Inactive"
+msgstr "비활성"
+
+msgid "Inconnu"
+msgstr "알 수 없음"
+
+msgid "Indicateur"
+msgstr "지표"
+
+msgid "Indicateurs comparés"
+msgstr "비교한 지표"
+
+msgid "Indiquez votre adresse e-mail : nous vous enverrons un lien pour choisir un nouveau mot de passe."
+msgstr "이메일 주소를 입력하세요. 새 비밀번호를 선택할 수 있는 링크를 보내드립니다."
+
+msgid "Information"
+msgstr "정보"
+
+msgid "Informations professionnelles"
+msgstr "직업 정보"
+
+msgid "Inscription — DataZen"
+msgstr "회원가입 — DataZen"
+
+msgid "Intégration"
+msgstr "연동"
+
+msgid "Invalid emails are not counted as unknown or missing"
+msgstr "유효하지 않은 이메일은 알 수 없음이나 결측으로 집계되지 않습니다"
+
+msgid "JJ/MM/AAAA"
+msgstr "JJ/MM/AAAA"
+
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+msgid "Jamais appelé"
+msgstr "호출 없음"
+
+msgid "Jauge du score de qualité global (sur 100)."
+msgstr "전체 품질 점수 게이지(100점 만점)."
+
+msgid "Jeton"
+msgstr "토큰"
+
+msgid "Jeton créé. Copiez-le maintenant : il ne sera plus affiché."
+msgstr "토큰이 생성되었습니다. 지금 복사하세요. 다시 표시되지 않습니다."
+
+msgid "Jeton d'API"
+msgstr "API 토큰"
+
+msgid "Jeton « %(name)s » révoqué."
+msgstr "토큰 「%(name)s」을(를) 폐기했습니다."
+
+msgid "Jetons"
+msgstr "토큰"
+
+msgid "Jetons d'API"
+msgstr "API 토큰"
+
+msgid "Journal d'activité"
+msgstr "활동 로그"
+
+msgid "Journal d'activité — DataZen"
+msgstr "활동 로그 — DataZen"
+
+msgid "Journal des modifications"
+msgstr "변경 로그"
+
+msgid "Journal des modifications (extrait)"
+msgstr "변경 로그(발췌)"
+
+msgid "L'historique horodaté de chaque opération."
+msgstr "모든 작업의 시간별 이력."
+
+msgid "La comparaison n'est pas disponible : lancez d'abord un nettoyage sur ce fichier."
+msgstr "비교할 수 없습니다. 먼저 이 파일을 정리하세요."
+
+msgid "La confirmation ne correspond pas à votre nom d'utilisateur : suppression annulée."
+msgstr "확인이 사용자 이름과 일치하지 않습니다: 삭제가 취소되었습니다."
+
+msgid "La suppression du compte efface définitivement vos fichiers, vos règles et votre profil. Cette action est irréversible."
+msgstr "계정을 삭제하면 파일, 규칙, 프로필이 영구적으로 삭제됩니다. 이 작업은 되돌릴 수 없습니다."
+
+msgid "Laisser vide pour appliquer à toutes les colonnes."
+msgstr "모든 열에 적용하려면 비워 두세요."
+
+msgid "Laissez vide pour un jeton sans expiration."
+msgstr "만료 없는 토큰으로 만들려면 비워 두세요."
+
+msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
+msgstr "먼저 정제를 실행해야 탐색적 분석을 사용할 수 있습니다."
+
+msgid "Lancez d'abord un nettoyage pour générer un rapport PDF."
+msgstr "PDF 보고서를 생성하려면 먼저 정리를 실행하세요."
+
+msgid "Langue de l'interface"
+msgstr "인터페이스 언어"
+
+msgid "Le compte « %(username)s » a été supprimé."
+msgstr "«%(username)s» 계정이 삭제되었습니다."
+
+msgid "Le fichier ne doit pas dépasser 20 Mo."
+msgstr "파일은 20MB를 초과할 수 없습니다."
+
+msgid "Le journal conserve également %(days)s jours d'historique."
+msgstr "로그는 %(days)s일의 이력도 함께 보관합니다."
+
+msgid "Le nettoyage a échoué."
+msgstr "정제에 실패했습니다."
+
+msgid "Le nom d'hôte du webhook est introuvable."
+msgstr "웹훅의 호스트 이름을 찾을 수 없습니다."
+
+msgid "Le nom d'hôte du webhook pointe vers une adresse interne."
+msgstr "웹훅의 호스트 이름이 내부 주소를 가리킵니다."
+
+msgid "Le nom d'hôte est absent de l'URL."
+msgstr "URL에 호스트 이름이 없습니다."
+
+msgid "Le port est invalide."
+msgstr "포트가 유효하지 않습니다."
+
+msgid "Le thème « Système » suit les réglages de votre appareil."
+msgstr "«시스템» 테마는 기기 설정을 따릅니다."
+
+msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
+msgstr "처리는 백그라운드에서 실행됩니다. 완료되면 이 페이지가 자동으로 업데이트됩니다."
+
+msgid "Les adresses internes sont refusées."
+msgstr "내부 주소는 거부됩니다."
+
+msgid "Les adresses locales sont refusées."
+msgstr "로컬 주소는 거부됩니다."
+
+msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
+msgstr "중복 항목은 표시되지만 자동으로 삭제되지 않습니다. 삭제하려면 이 항목을 선택하세요."
+
+msgid "Les fichiers archivés restent accessibles et téléchargeables."
+msgstr "보관된 파일은 계속 열람하고 다운로드할 수 있습니다."
+
+msgid "Les fichiers expirés seront supprimés automatiquement à votre prochaine visite."
+msgstr "만료된 파일은 다음 방문 시 자동으로 삭제됩니다."
+
+msgid "Les fichiers nettoyés sont archivés après 30 jours."
+msgstr "정제된 파일은 30일 후 보관됩니다."
+
+msgid "Les fichiers nettoyés sont archivés puis purgés après cette durée (0 = conservation illimitée)."
+msgstr "정리된 파일은 보관된 뒤 이 기간이 지나면 삭제됩니다(0 = 무제한 보존)."
+
+msgid "Les identifiants intégrés à l'URL sont refusés."
+msgstr "URL에 포함된 자격 증명은 거부됩니다."
+
+msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
+msgstr "사용 가능한 경로: /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
+
+msgid "Les statistiques affichées correspondent aux données réelles."
+msgstr "표시된 통계는 실제 데이터와 일치합니다."
+
+msgid "Lien invalide"
+msgstr "유효하지 않은 링크"
+
+msgid "Ligne"
+msgstr "행"
+
+msgid "Lignes"
+msgstr "행"
+
+msgid "Lignes après nettoyage"
+msgstr "정리 후 행"
+
+msgid "Lignes du journal des modifications"
+msgstr "변경 로그 행 수"
+
+msgid "Lignes traitées"
+msgstr "처리한 행 수"
+
+msgid "Localisation"
+msgstr "위치"
+
+msgid "MM/JJ/AAAA"
+msgstr "MM/JJ/AAAA"
+
+msgid "Masquer"
+msgstr "숨기기"
+
+msgid "Masquer le mot de passe"
+msgstr "비밀번호 숨기기"
+
+msgid "Matrice de corrélation"
+msgstr "상관 행렬"
+
+msgid "Matrice de corrélation (Pearson)"
+msgstr "상관 행렬(Pearson)"
+
+msgid "Max"
+msgstr "최댓값"
+
+msgid "Maîtrisez la durée de vie de vos données."
+msgstr "데이터의 수명 주기를 관리하세요."
+
+msgid "Membre depuis"
+msgstr "가입일"
+
+msgid "Mes règles"
+msgstr "내 규칙"
+
+msgid "Mes règles de nettoyage"
+msgstr "내 정제 규칙"
+
+msgid "Mesuré avant et après le nettoyage."
+msgstr "정리 전후로 측정됩니다."
+
+msgid "Mettre à jour le mot de passe"
+msgstr "비밀번호 업데이트"
+
+msgid "Min"
+msgstr "최솟값"
+
+msgid "Missing values by column"
+msgstr "열별 결측값"
+
+msgid "Mode"
+msgstr "모드"
+
+msgid "Modifier mes informations"
+msgstr "내 정보 수정"
+
+msgid "Modifiez votre mot de passe régulièrement et exportez vos données quand vous le souhaitez."
+msgstr "비밀번호를 정기적으로 변경하고 원할 때 데이터를 내보내세요."
+
+msgid "Mon profil"
+msgstr "내 프로필"
+
+msgid "Mon profil — DataZen"
+msgstr "내 프로필 — DataZen"
+
+msgid "Mot de passe"
+msgstr "비밀번호"
+
+msgid "Mot de passe modifié"
+msgstr "비밀번호 변경됨"
+
+msgid "Mot de passe modifié — DataZen"
+msgstr "비밀번호 변경됨 — DataZen"
+
+msgid "Mot de passe oublié ?"
+msgstr "비밀번호를 잊으셨나요?"
+
+msgid "Mot de passe oublié — DataZen"
+msgstr "비밀번호 찾기 — DataZen"
+
+msgid "Motif"
+msgstr "사유"
+
+msgid "Motif attendu"
+msgstr "예상 패턴"
+
+msgid "Moyenne"
+msgstr "평균"
+
+msgid "Médiane"
+msgstr "중앙값"
+
+msgid "Méthode"
+msgstr "방법"
+
+msgid "Nettoyage"
+msgstr "정리"
+
+msgid "Nettoyage du fichier « %(name)s »"
+msgstr "파일 「%(name)s」 정리"
+
+msgid "Nettoyage intelligent"
+msgstr "스마트 정제"
+
+msgid "Nettoyage intelligent · CSV & Excel"
+msgstr "스마트 정제 · CSV 및 Excel"
+
+msgid "Nettoyage lancé en arrière-plan. La page se met à jour automatiquement."
+msgstr "정제가 백그라운드에서 시작되었습니다. 페이지가 자동으로 업데이트됩니다."
+
+msgid "Nettoyage lancé sur « %(name)s »"
+msgstr "「%(name)s」 정리 시작"
+
+msgid "Nettoyage terminé"
+msgstr "정리 완료"
+
+msgid "Nettoyage terminé : « %(name)s »"
+msgstr "정리 완료: 「%(name)s」"
+
+msgid "Nettoyer"
+msgstr "정제"
+
+msgid "Nettoyer un fichier"
+msgstr "파일 정제"
+
+msgid "Nettoyez, normalisez et fiabilisez vos fichiers CSV et Excel en quelques clics — sans écrire une ligne de code."
+msgstr "코드를 한 줄도 작성하지 않고 몇 번의 클릭으로 CSV 및 Excel 파일을 정제하고 표준화하며 신뢰할 수 있게 만드세요."
+
+msgid "Nettoyé"
+msgstr "정제됨"
+
+msgid "Nettoyé le"
+msgstr "정리 시각"
+
+msgid "Nettoyés"
+msgstr "정제됨"
+
+msgid "Niveau"
+msgstr "수준"
+
+msgid "No exact duplicates"
+msgstr "완전 중복 없음"
+
+msgid "No missing or unknown values"
+msgstr "결측값 또는 알 수 없는 값 없음"
+
+msgid "No potential duplicates"
+msgstr "잠재적 중복 없음"
+
+msgid "Nom"
+msgstr "이름"
+
+msgid "Nom d'utilisateur"
+msgstr "사용자 이름"
+
+msgid "Nom de la règle"
+msgstr "규칙 이름"
+
+msgid "Nom de votre entreprise ou équipe"
+msgstr "회사 또는 팀 이름"
+
+msgid "Nom du jeton"
+msgstr "토큰 이름"
+
+msgid "Nombre d'appels"
+msgstr "호출 수"
+
+msgid "Nombre d'occurrences"
+msgstr "발생 횟수"
+
+msgid "Nombre de nettoyages et score moyen par semaine."
+msgstr "주별 정리 횟수와 평균 점수."
+
+msgid "Nombre de valeurs aberrantes"
+msgstr "이상치 수"
+
+msgid "Nombre de valeurs aberrantes (méthode IQR) par colonne."
+msgstr "열별 이상값 수(IQR 방법)."
+
+msgid "Normalisation de la casse (noms, libellés, villes)"
+msgstr "대소문자 정규화(이름, 레이블, 도시)"
+
+msgid "Normalisation des catégories (%(count)s corrigée(s))"
+msgstr "범주 정규화(%(count)s개 수정)"
+
+msgid "Normalisation des choix oui/non (%(count)s corrigé(s))"
+msgstr "예/아니요 선택 정규화(%(count)s개 수정)"
+
+msgid "Normalisation des codes/références (%(count)s corrigé(s))"
+msgstr "코드/참조 정규화(%(count)s개 수정)"
+
+msgid "Normalisation des dates (%(count)s corrigée(s))"
+msgstr "날짜 정규화(%(count)s개 수정)"
+
+msgid "Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "전화번호 정규화(%(count)s개 수정)"
+
+msgid "Normaliser la casse"
+msgstr "대소문자 정규화"
+
+msgid "Normaliser la casse (emails en minuscules, noms en Capitales)"
+msgstr "대소문자 정규화(이메일은 소문자, 이름은 첫 글자 대문자)"
+
+msgid "Normaliser les dates"
+msgstr "날짜 정규화"
+
+msgid "Normaliser les dates (AAAA-MM-JJ)"
+msgstr "날짜 정규화(YYYY-MM-DD)"
+
+msgid "Normaliser les emails"
+msgstr "이메일 정규화"
+
+msgid "Normaliser les téléphones"
+msgstr "전화번호 정규화"
+
+msgid "Normaliser les téléphones (06XXXXXXXX)"
+msgstr "전화번호 정규화(06XXXXXXXX)"
+
+msgid "Notifications par email"
+msgstr "이메일 알림"
+
+msgid "Nouveau jeton d API"
+msgstr "새 API 토큰"
+
+msgid "Nouveau mot de passe"
+msgstr "새 비밀번호"
+
+msgid "Nouveau mot de passe — DataZen"
+msgstr "새 비밀번호 — DataZen"
+
+msgid "Nouvelle photo prête"
+msgstr "새 사진 준비 완료"
+
+msgid "Nouvelle valeur"
+msgstr "새 값"
+
+msgid "Opération"
+msgstr "작업"
+
+msgid "Opérations de nettoyage"
+msgstr "정리 작업"
+
+msgid "Organisation"
+msgstr "조직"
+
+msgid "Outils"
+msgstr "도구"
+
+msgid "Outliers"
+msgstr "이상값"
+
+msgid "Ouvrir"
+msgstr "열기"
+
+msgid "Ouvrir la recherche globale"
+msgstr "전역 검색 열기"
+
+msgid "Ouvrir le résultat sélectionné"
+msgstr "선택한 결과 열기"
+
+msgid "Page"
+msgstr "페이지"
+
+msgid "Parcourir…"
+msgstr "파일 선택"
+
+msgid "Pas encore de compte ?"
+msgstr "아직 계정이 없으신가요?"
+
+msgid "Pensez à regarder dans vos courriers indésirables. Le lien reste valable quelques heures."
+msgstr "스팸 메일함도 확인해 보세요. 링크는 몇 시간 동안 유효합니다."
+
+msgid "Personnalisez votre identité, votre photo et vos préférences."
+msgstr "신원, 사진 및 환경설정을 사용자 지정하세요."
+
+msgid "Photo de profil"
+msgstr "프로필 사진"
+
+msgid "Pilotage"
+msgstr "파일럿"
+
+msgid "Plus fréquent"
+msgstr "최빈값"
+
+msgid "Poids"
+msgstr "가중치"
+
+msgid "Politique en vigueur"
+msgstr "현재 정책"
+
+msgid "Pondération"
+msgstr "가중치"
+
+msgid "Premier quartile"
+msgstr "제1사분위수"
+
+msgid "Prendre une photo avec la caméra"
+msgstr "카메라로 사진 찍기"
+
+msgid "Problème"
+msgstr "문제"
+
+msgid "Problèmes après"
+msgstr "이후 문제"
+
+msgid "Problèmes avant"
+msgstr "이전 문제"
+
+msgid "Problèmes détectés"
+msgstr "감지된 문제"
+
+msgid "Problèmes restants"
+msgstr "남은 문제"
+
+msgid "Productivité"
+msgstr "생산성"
+
+msgid "Profil"
+msgstr "프로필"
+
+msgid "Profil de %(name)s — DataZen"
+msgstr "%(name)s님의 프로필 — DataZen"
+
+msgid "Profil de %(username)s"
+msgstr "%(username)s님의 프로필"
+
+msgid "Profil public"
+msgstr "공개 프로필"
+
+msgid "Profil visible publiquement"
+msgstr "프로필 공개"
+
+msgid "Profils"
+msgstr "프로필"
+
+msgid "Progression"
+msgstr "진행 상황"
+
+msgid "Propriétaire"
+msgstr "소유자"
+
+msgid "Préfixe"
+msgstr "접두사"
+
+msgid "Préférences"
+msgstr "환경설정"
+
+msgid "Prénom"
+msgstr "이름"
+
+msgid "Présentation"
+msgstr "소개"
+
+msgid "Purge automatique"
+msgstr "자동 정리"
+
+msgid "Purge automatique de %(count)s fichier(s) expiré(s)"
+msgstr "만료 파일 %(count)s개 자동 정리"
+
+msgid "Purge de %(count)s fichier(s) expiré(s)"
+msgstr "만료 파일 %(count)s개 정리"
+
+msgid "Purger automatiquement"
+msgstr "자동으로 정리"
+
+msgid "Purger automatiquement les fichiers expirés"
+msgstr "만료된 파일 자동 정리"
+
+msgid "Purger le journal"
+msgstr "로그 비우기"
+
+msgid "Purger les anciennes entrées du journal ?"
+msgstr "오래된 로그 항목을 비울까요?"
+
+msgid "Q1"
+msgstr "Q1"
+
+msgid "Q3"
+msgstr "Q3"
+
+msgid "Qualité moyenne"
+msgstr "평균 품질"
+
+msgid "Qualité par colonne"
+msgstr "열별 품질"
+
+msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
+msgstr "본인, 팀, 데이터셋에 대해 간단히 소개해 주세요…"
+
+msgid "Raccourcis clavier"
+msgstr "키보드 단축키"
+
+msgid "Raccourcis clavier — DataZen"
+msgstr "키보드 단축키 — DataZen"
+
+msgid "Raccourcis de navigation"
+msgstr "탐색 단축키"
+
+msgid "Raccourcis de nettoyage"
+msgstr "정리 단축키"
+
+msgid "Raison"
+msgstr "사유"
+
+msgid "Rapport"
+msgstr "보고서"
+
+msgid "Rapport PDF de « %(name)s »"
+msgstr "「%(name)s」 PDF 보고서"
+
+msgid "Rapport de nettoyage"
+msgstr "정제 보고서"
+
+msgid "Rapport de qualité des données"
+msgstr "데이터 품질 보고서"
+
+msgid "Rapport généré automatiquement par DataZen. Les scores sont calculés selon cinq dimensions pondérées : complétude, validité, unicité, cohérence et conformité."
+msgstr "DataZen이 자동으로 생성한 보고서입니다. 점수는 다섯 가지 가중 차원(완전성, 유효성, 고유성, 일관성, 적합성)으로 계산됩니다."
+
+msgid "Rapport — %(name)s"
+msgstr "보고서 — %(name)s"
+
+msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
+msgstr "정리가 끝나거나 실패할 때, 파일이 업로드될 때 HTTP 알림을 받습니다."
+
+msgid "Recevoir les notifications par email"
+msgstr "이메일 알림 받기"
+
+msgid "Recevoir un message lorsqu'un nettoyage se termine."
+msgstr "정제가 완료되면 메시지를 받습니다."
+
+msgid "Recherche en cours…"
+msgstr "검색 중…"
+
+msgid "Recherche globale"
+msgstr "전역 검색"
+
+msgid "Recherche momentanément indisponible."
+msgstr "검색을 일시적으로 사용할 수 없습니다."
+
+msgid "Rechercher"
+msgstr "검색"
+
+msgid "Rechercher (Ctrl+K)"
+msgstr "검색(Ctrl+K)"
+
+msgid "Rechercher un fichier"
+msgstr "파일 검색"
+
+msgid "Rechercher un fichier ou une règle (Ctrl+K)"
+msgstr "파일 또는 규칙 검색(Ctrl+K)"
+
+msgid "Rechercher un fichier, une règle, une page…"
+msgstr "파일, 규칙, 페이지 검색…"
+
+msgid "Rechercher un fichier…"
+msgstr "파일 검색…"
+
+msgid "Recommandation"
+msgstr "권장 사항"
+
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
+msgstr "이름, 이메일, 전화번호를 결정적 별칭으로 바꿉니다(같은 값은 같은 별칭 사용). 행 간 관계는 유지됩니다."
+
+msgid "Remplacer les valeurs manquantes"
+msgstr "누락된 값 바꾸기"
+
+msgid "Remplacez le jeton par le vôtre et lancez la commande."
+msgstr "토큰을 본인의 토큰으로 바꾸고 명령을 실행하세요."
+
+msgid "Remplir les valeurs manquantes"
+msgstr "결측값 채우기"
+
+msgid "Remplissage des valeurs manquantes par « %(value)s » (les montants, codes et dates ne reçoivent jamais un texte)"
+msgstr "누락된 값을 ‘%(value)s’(으)로 채우기(금액, 코드, 날짜에는 텍스트를 입력하지 않음)"
+
+msgid "Renseignées"
+msgstr "입력됨"
+
+msgid "Renumérotation des identifiants (ancien id conservé)"
+msgstr "식별자 다시 번호 지정(기존 ID 보존)"
+
+msgid "Reported %(reported)s vs recalculated %(actual)s"
+msgstr "보고된 %(reported)s 대 재계산된 %(actual)s"
+
+msgid "Restauration"
+msgstr "복원"
+
+msgid "Restauration de « %(name)s »"
+msgstr "「%(name)s」 복원"
+
+msgid "Restaurer"
+msgstr "복원"
+
+msgid "Retour à la connexion"
+msgstr "로그인으로 돌아가기"
+
+msgid "Règle"
+msgstr "규칙"
+
+msgid "Règle de nettoyage"
+msgstr "정제 규칙"
+
+msgid "Règle « %(name)s » %(state)s."
+msgstr "규칙 «%(name)s»이(가) %(state)s."
+
+msgid "Règle « %(name)s » créée."
+msgstr "규칙 «%(name)s»이(가) 생성되었습니다."
+
+msgid "Règle « %(name)s » supprimée."
+msgstr "규칙 «%(name)s»이(가) 삭제되었습니다."
+
+msgid "Règles"
+msgstr "규칙"
+
+msgid "Règles de nettoyage"
+msgstr "정제 규칙"
+
+msgid "Règles de nettoyage — DataZen"
+msgstr "정제 규칙 — DataZen"
+
+msgid "Règles de validation regex personnalisées"
+msgstr "사용자 지정 정규식 검증 규칙"
+
+msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
+msgstr "정제된 파일, 상세 보고서, 전체 변경 로그를 받아보세요."
+
+msgid "Réinitialiser"
+msgstr "초기화"
+
+msgid "Répartition des problèmes"
+msgstr "문제 분포"
+
+msgid "Répartition des problèmes restants"
+msgstr "남은 문제 분포"
+
+msgid "Résultats"
+msgstr "결과"
+
+msgid "Rétention"
+msgstr "보존"
+
+msgid "Rétention des données"
+msgstr "데이터 보존"
+
+msgid "Rétention des données — DataZen"
+msgstr "데이터 보존 — DataZen"
+
+msgid "Révocation de jeton"
+msgstr "토큰 폐기"
+
+msgid "Révocation du jeton « %(name)s »"
+msgstr "토큰 「%(name)s」 폐기"
+
+msgid "Révoquer"
+msgstr "폐기"
+
+msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
+msgstr "이 토큰을 폐기할까요? 이 토큰을 쓰는 연동이 작동을 멈춥니다."
+
+msgid "Révoqué"
+msgstr "폐기됨"
+
+msgid "S'inscrire"
+msgstr "가입"
+
+msgid "Saisissez <strong>%(username)s</strong> pour confirmer"
+msgstr "확인하려면 <strong>%(username)s</strong>을(를) 입력하세요"
+
+msgid "Score"
+msgstr "점수"
+
+msgid "Score après nettoyage"
+msgstr "정리 후 점수"
+
+msgid "Score avant nettoyage"
+msgstr "정리 전 점수"
+
+msgid "Score de la dimension"
+msgstr "차원 점수"
+
+msgid "Score de qualité"
+msgstr "품질 점수"
+
+msgid "Score de similarité :"
+msgstr "유사도 점수:"
+
+msgid "Score global"
+msgstr "전체 점수"
+
+msgid "Score global de qualité"
+msgstr "전체 품질 점수"
+
+msgid "Score qualité"
+msgstr "품질 점수"
+
+msgid "Score qualité après"
+msgstr "정제 후 품질 점수"
+
+msgid "Score qualité avant"
+msgstr "정제 전 품질 점수"
+
+msgid "Se connecter"
+msgstr "로그인"
+
+msgid "Se déconnecter"
+msgstr "로그아웃"
+
+msgid "Se déplacer dans les résultats"
+msgstr "결과 내에서 이동"
+
+msgid "Sert uniquement à la réinitialisation du mot de passe."
+msgstr "비밀번호 재설정에만 사용됩니다."
+
+msgid "Seuls les schémas http et https sont autorisés."
+msgstr "http 및 https 스킴만 허용됩니다."
+
+msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
+msgstr "이 주소로 계정이 존재하는 경우 재설정 링크가 포함된 이메일이 방금 전송되었습니다."
+
+msgid "Site web"
+msgstr "웹사이트"
+
+msgid "Sombre"
+msgstr "다크"
+
+msgid "Statut"
+msgstr "상태"
+
+msgid "Succès"
+msgstr "성공"
+
+msgid "Superutilisateur"
+msgstr "최고 관리자"
+
+msgid "Suppression"
+msgstr "삭제"
+
+msgid "Suppression de la règle « %(name)s »"
+msgstr "규칙 「%(name)s」 삭제"
+
+msgid "Suppression de règle"
+msgstr "규칙 삭제"
+
+msgid "Suppression de « %(name)s »"
+msgstr "「%(name)s」 삭제"
+
+msgid "Suppression des doublons exacts (%(count)s supprimé(s))"
+msgstr "완전히 동일한 중복 삭제(%(count)s개 삭제)"
+
+msgid "Suppression des doublons sur « %(column)s » (%(count)s supprimé(s))"
+msgstr "‘%(column)s’ 열을 기준으로 중복 삭제(%(count)s개 삭제)"
+
+msgid "Suppression des espaces superflus"
+msgstr "불필요한 공백 제거"
+
+msgid "Supprimer %(name)s"
+msgstr "%(name)s 삭제"
+
+msgid "Supprimer ce webhook ?"
+msgstr "이 webhook을 삭제할까요?"
+
+msgid "Supprimer définitivement ce fichier et toutes ses données ?"
+msgstr "이 파일과 모든 데이터를 영구적으로 삭제할까요?"
+
+msgid "Supprimer définitivement les fichiers expirés ? Cette action est irréversible."
+msgstr "만료된 파일을 완전히 삭제할까요? 이 작업은 되돌릴 수 없습니다."
+
+msgid "Supprimer définitivement les fichiers expirés au lieu de les archiver."
+msgstr "만료된 파일을 보관하지 않고 완전히 삭제합니다."
+
+msgid "Supprimer définitivement « %(name)s » ?"
+msgstr "“%(name)s” 파일을 영구 삭제할까요?"
+
+msgid "Supprimer les doublons"
+msgstr "중복 삭제"
+
+msgid "Supprimer les doublons (confirmation requise)"
+msgstr "중복 삭제(확인 필요)"
+
+msgid "Supprimer les espaces superflus"
+msgstr "불필요한 공백 제거"
+
+msgid "Supprimer mon compte"
+msgstr "내 계정 삭제"
+
+msgid "Synthèse"
+msgstr "종합"
+
+msgid "Système"
+msgstr "시스템"
+
+msgid "Sécurité"
+msgstr "보안"
+
+msgid "Sélectionner un fichier"
+msgstr "파일 선택"
+
+msgid "Tableau de bord"
+msgstr "대시보드"
+
+msgid "Tableau de bord — DataZen"
+msgstr "대시보드 — DataZen"
+
+msgid "Tapez au moins deux caractères pour lancer la recherche."
+msgstr "검색을 시작하려면 두 글자 이상 입력하세요."
+
+msgid "Taux de complétude (%)"
+msgstr "완전성 비율 (%)"
+
+msgid "Taux de remplissage de chaque colonne (les plus incomplètes d'abord)."
+msgstr "각 열의 채움률(불완전한 순서)."
+
+msgid "Technologies"
+msgstr "기술"
+
+msgid "Tester"
+msgstr "테스트"
+
+msgid "Thème préféré"
+msgstr "선호 테마"
+
+msgid "Top des catégories"
+msgstr "카테고리 상위"
+
+msgid "Total missing values"
+msgstr "전체 결측값"
+
+msgid "Tous vos indicateurs de qualité réunis."
+msgstr "모든 품질 지표를 한곳에서."
+
+msgid "Tout est inclus"
+msgstr "모두 포함"
+
+msgid "Tout voir"
+msgstr "모두 보기"
+
+msgid "Toutes les actions"
+msgstr "모든 작업"
+
+msgid "Traçabilité"
+msgstr "추적성"
+
+msgid "Troisième quartile"
+msgstr "제3사분위수"
+
+msgid "Type"
+msgstr "유형"
+
+msgid "Type de correction"
+msgstr "수정 유형"
+
+msgid "Téléchargement"
+msgstr "다운로드"
+
+msgid "Téléchargement de « %(name)s »"
+msgstr "「%(name)s」 다운로드"
+
+msgid "Téléphone invalide"
+msgstr "유효하지 않은 전화번호"
+
+msgid "Téléphone non standard"
+msgstr "표준 형식이 아닌 전화번호"
+
+msgid "Téléphones non standard (%(column)s) :"
+msgstr "비표준 전화번호 (%(column)s):"
+
+msgid "Téléversement"
+msgstr "업로드"
+
+msgid "Téléversement de « %(name)s »"
+msgstr "「%(name)s」 업로드"
+
+msgid "Téléverser un fichier"
+msgstr "파일 업로드"
+
+msgid "Téléversez votre fichier"
+msgstr "파일을 업로드하세요"
+
+msgid "Téléversé"
+msgstr "업로드됨"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "URL de destination"
+msgstr "대상 URL"
+
+msgid "URL illisible."
+msgstr "URL을 읽을 수 없습니다."
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page."
+msgstr "관리자 계정은 이 페이지에서 삭제할 수 없습니다."
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
+msgstr "관리자 계정은 이 페이지에서 삭제할 수 없습니다. 다음을 사용하세요:"
+
+msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
+msgstr "대시보드가 정제 전/후 품질을 측정하고 감점된 각 항목을 설명합니다."
+
+msgid "Une URL de destination est requise."
+msgstr "대상 URL이 필요합니다."
+
+msgid "Une boîte à outils complète"
+msgstr "완전한 도구 모음"
+
+msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
+msgstr "한 줄에 규칙 하나를 ‘열:패턴’ 형식으로 입력하세요. 예: ‘우편번호:^\\d{5}$’. 패턴과 일치하지 않는 값은 표시되며 변경되지 않습니다."
+
+msgid "Uniques"
+msgstr "고유값"
+
+msgid "Unknown"
+msgstr "알 수 없음"
+
+msgid "Unknown emails included in the unknown-value statistic"
+msgstr "알 수 없는 이메일은 알 수 없는 값 통계에 포함됩니다"
+
+msgid "Unknown values by column"
+msgstr "열별 알 수 없는 값"
+
+msgid "Utilisateur"
+msgstr "사용자"
+
+msgid "Utilisation de l'API"
+msgstr "API 사용량"
+
+msgid "Valeur"
+msgstr "값"
+
+msgid "Valeur aberrante"
+msgstr "이상값"
+
+msgid "Valeur de remplacement"
+msgstr "대체 값"
+
+msgid "Valeur de remplacement (pour le remplissage)."
+msgstr "대체 값(채우기용)."
+
+msgid "Valeur manquante"
+msgstr "결측값"
+
+msgid "Valeur numérique invalide"
+msgstr "잘못된 숫자 값"
+
+msgid "Valeurs aberrantes"
+msgstr "이상치"
+
+msgid "Valeurs aberrantes par colonne (méthode IQR)"
+msgstr "열별 이상치(IQR 방법)"
+
+msgid "Valeurs les plus fréquentes"
+msgstr "최빈값"
+
+msgid "Valeurs les plus fréquentes des colonnes catégorielles."
+msgstr "범주형 열에서 가장 빈번한 값."
+
+msgid "Valeurs manquantes"
+msgstr "결측값"
+
+msgid "Valeurs manquantes :"
+msgstr "결측값:"
+
+msgid "Valeurs manquantes restantes"
+msgstr "남은 결측값"
+
+msgid "Valeurs manquantes restantes :"
+msgstr "남은 결측값:"
+
+msgid "Valeurs uniques"
+msgstr "고유값"
+
+msgid "Valeurs « Inconnu »"
+msgstr "알 수 없는 값"
+
+msgid "Valeurs « Inconnu » :"
+msgstr "«알 수 없음» 값:"
+
+msgid "Validation et correction des emails (%(corrected)s corrigé(s), %(invalid)s invalide(s))"
+msgstr "이메일 확인 및 수정(%(corrected)s개 수정, %(invalid)s개 유효하지 않음)"
+
+msgid "Valider et corriger les emails (erreurs évidentes seulement)"
+msgstr "이메일 확인 및 수정(명백한 오류만)"
+
+msgid "Validité"
+msgstr "유효성"
+
+msgid "Visualisations statistiques"
+msgstr "통계 시각화"
+
+msgid "Voir l'analyse complète →"
+msgstr "전체 분석 보기 →"
+
+msgid "Volume"
+msgstr "데이터 양"
+
+msgid "Volume des anomalies restantes par catégorie."
+msgstr "카테고리별 남은 이상 항목의 양."
+
+msgid "Vos données"
+msgstr "내 데이터"
+
+msgid "Vos données méritent<br> <span class=\"dz-gradient-text\">d'être impeccables.</span>"
+msgstr "당신의 데이터는<br> <span class=\"dz-gradient-text\">완벽할 자격이 있습니다.</span>"
+
+msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
+msgstr "파일은 당신 곁에 남습니다. DataZen은 선택한 보존 기간을 넘긴 항목을 알려주며, 동의 없이 아무것도 삭제하지 않습니다."
+
+msgid "Votre espace de travail"
+msgstr "워크스페이스"
+
+msgid "Votre mot de passe a bien été enregistré. Vous pouvez maintenant vous connecter avec celui-ci."
+msgstr "비밀번호가 저장되었습니다. 이제 이 비밀번호로 로그인할 수 있습니다."
+
+msgid "Votre mot de passe a été modifié. Vos autres sessions restent actives."
+msgstr "비밀번호가 변경되었습니다. 다른 세션은 계속 활성 상태입니다."
+
+msgid "Votre nom d'utilisateur <strong>@%(username)s</strong> ne peut pas être modifié."
+msgstr "사용자 이름 <strong>@%(username)s</strong>은(는) 변경할 수 없습니다."
+
+msgid "Votre photo de profil a été supprimée."
+msgstr "프로필 사진이 삭제되었습니다."
+
+msgid "Votre profil a été mis à jour."
+msgstr "프로필이 업데이트되었습니다."
+
+msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
+msgstr "결정권은 당신에게 있습니다. 직접 실행하지 않으면 아무것도 삭제되지 않습니다."
+
+msgid "Vous n'avez pas accès à ce fichier."
+msgstr "이 파일에 접근할 수 없습니다."
+
+msgid "Vous n'avez pas accès à ce jeton."
+msgstr "이 토큰에 접근할 수 없습니다."
+
+msgid "Vous n'avez pas accès à ce webhook."
+msgstr "이 webhook에 접근할 수 없습니다."
+
+msgid "Vous n'avez pas accès à cette règle."
+msgstr "이 규칙에 접근할 수 없습니다."
+
+msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
+msgstr "모든 파일을 합친 데이터 품질 통합 보기."
+
+msgid "Vue d'ensemble"
+msgstr "개요"
+
+msgid "Vérifiez votre boîte mail"
+msgstr "메일함을 확인하세요"
+
+msgid "Webhook"
+msgstr "Webhook"
+
+msgid "Webhook « %(name)s » %(state)s."
+msgstr "Webhook 「%(name)s」 %(state)s."
+
+msgid "Webhook « %(name)s » : test réussi (HTTP %(status)s)."
+msgstr "Webhook 「%(name)s」: 테스트 성공(HTTP %(status)s)."
+
+msgid "Webhook « %(name)s » : test échoué (HTTP %(status)s). Vérifiez l'URL et que le service accepte les appels entrants."
+msgstr "Webhook 「%(name)s」: 테스트 실패(HTTP %(status)s). URL과 서비스가 수신 호출을 허용하는지 확인하세요."
+
+msgid "Webhook « %(name)s » créé."
+msgstr "Webhook 「%(name)s」을(를) 만들었습니다."
+
+msgid "Webhook « %(name)s » supprimé."
+msgstr "Webhook 「%(name)s」을(를) 삭제했습니다."
+
+msgid "Webhooks"
+msgstr "Webhook"
+
+msgid "Webhooks — DataZen"
+msgstr "Webhook — DataZen"
+
+msgid "YYYY-MM-DD"
+msgstr "YYYY-MM-DD"
+
+msgid "[Règle] Anonymisation (%(count)s valeur(s))"
+msgstr "[규칙] 익명화(%(count)s개 값)"
+
+msgid "[Règle] Conversion des montants (%(count)s converti(s))"
+msgstr "[규칙] 금액 변환(%(count)s개 변환)"
+
+msgid "[Règle] Normalisation de la casse"
+msgstr "[규칙] 대소문자 정규화"
+
+msgid "[Règle] Normalisation des dates (%(count)s corrigée(s))"
+msgstr "[규칙] 날짜 정규화(%(count)s개 수정)"
+
+msgid "[Règle] Normalisation des emails (%(count)s corrigé(s))"
+msgstr "[규칙] 이메일 정규화(%(count)s개 수정)"
+
+msgid "[Règle] Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "[규칙] 전화번호 정규화(%(count)s개 수정)"
+
+msgid "[Règle] Remplissage des valeurs manquantes par « %(value)s »"
+msgstr "[규칙] 누락된 값을 ‘%(value)s’(으)로 채우기"
+
+msgid "[Règle] Suppression des doublons (%(count)s supprimé(s))"
+msgstr "[규칙] 중복 삭제(%(count)s개 삭제)"
+
+msgid "[Règle] Suppression des espaces superflus"
+msgstr "[규칙] 불필요한 공백 제거"
+
+msgid "actif"
+msgstr "활성"
+
+msgid "activé"
+msgstr "활성화됨"
+
+msgid "activée"
+msgstr "활성화되었습니다"
+
+msgid "ajoutée"
+msgstr "추가됨"
+
+msgid "améliorée"
+msgstr "개선됨"
+
+msgid "bonne qualité"
+msgstr "양호한 품질"
+
+msgid "catégorie"
+msgstr "범주"
+
+msgid "cohérence"
+msgstr "일관성"
+
+msgid "colonne : %(name)s"
+msgstr "열: %(name)s"
+
+msgid "complétude"
+msgstr "완전성"
+
+msgid "conformité"
+msgstr "적합성"
+
+msgid "conservée (non inventée)"
+msgstr "보존됨(임의 생성 아님)"
+
+msgid "console d'administration"
+msgstr "관리 콘솔"
+
+msgid "date"
+msgstr "날짜"
+
+msgid "donnée absente"
+msgstr "데이터 없음"
+
+msgid "désactivé"
+msgstr "비활성화됨"
+
+msgid "désactivée"
+msgstr "비활성화되었습니다"
+
+msgid "détail"
+msgstr "세부 정보"
+
+msgid "email"
+msgstr "이메일"
+
+msgid "et"
+msgstr "그리고"
+
+msgid "ex : 0 ou Inconnu"
+msgstr "예: 0 또는 알 수 없음"
+
+msgid "ex : Emails en minuscules"
+msgstr "예: 이메일을 소문자로"
+
+msgid "ex : Intégration Power BI"
+msgstr "예: Power BI 연동"
+
+msgid "ex : Slack — nettoyages"
+msgstr "예: Slack — 정리"
+
+msgid "ex : email (vide = toutes les colonnes)"
+msgstr "예: email(비우면 모든 열)"
+
+msgid "excellente qualité"
+msgstr "매우 우수한 품질"
+
+msgid "fermer"
+msgstr "닫기"
+
+msgid "format invalide"
+msgstr "유효하지 않은 형식"
+
+msgid "format non reconnu"
+msgstr "인식되지 않는 형식"
+
+msgid "généré le"
+msgstr "생성 시각"
+
+msgid "https://exemple.com"
+msgstr "https://exemple.com"
+
+msgid "https://hooks.exemple.com/datazen"
+msgstr "https://hooks.example.com/datazen"
+
+msgid "identifiant"
+msgstr "식별자"
+
+msgid "inactive"
+msgstr "비활성"
+
+msgid "inchangé"
+msgstr "변경 없음"
+
+msgid "jours"
+msgstr "일"
+
+msgid "lignes"
+msgstr "행"
+
+msgid "longueur/format incorrect"
+msgstr "길이/형식 부적절"
+
+msgid "matplotlib"
+msgstr "matplotlib"
+
+msgid "naviguer"
+msgstr "이동"
+
+msgid "non évalué"
+msgstr "평가되지 않음"
+
+msgid "numérique"
+msgstr "숫자"
+
+msgid "opération : %(name)s"
+msgstr "작업: %(name)s"
+
+msgid "ouvrir"
+msgstr "열기"
+
+msgid "points"
+msgstr "점"
+
+msgid "pour «"
+msgstr "«"
+
+msgid "premières lignes."
+msgstr "처음 몇 행."
+
+msgid "qualité faible"
+msgstr "낮은 품질"
+
+msgid "qualité moyenne"
+msgstr "보통 품질"
+
+msgid "référence"
+msgstr "참조"
+
+msgid "révoqué"
+msgstr "폐기됨"
+
+msgid "score"
+msgstr "점수"
+
+msgid "score %(before)s → %(after)s"
+msgstr "점수 %(before)s → %(after)s"
+
+msgid "seaborn"
+msgstr "seaborn"
+
+msgid "stable"
+msgstr "안정"
+
+msgid "supprimée"
+msgstr "삭제됨"
+
+msgid "sur"
+msgstr "/"
+
+msgid "texte"
+msgstr "텍스트"
+
+msgid "téléphone"
+msgstr "전화번호"
+
+msgid "unicité"
+msgstr "고유성"
+
+msgid "valeur(s) extrême(s)"
+msgstr "극단값"
+
+msgid "validité"
+msgstr "유효성"
+
+msgid "· ancien_id :"
+msgstr "· 이전 ID:"
+
+msgid "· statut filtré"
+msgstr "· 필터링된 상태"
+
+msgid "À compléter :"
+msgstr "보완 필요:"
+
+msgid "Écart"
+msgstr "차이"
+
+msgid "Écart-type"
+msgstr "표준편차"
+
+msgid "Échap"
+msgstr "Esc"
+
+msgid "Échec du nettoyage"
+msgstr "정리 실패"
+
+msgid "Échec du nettoyage de « %(name)s »"
+msgstr "「%(name)s」 정리 실패"
+
+msgid "Étape 1"
+msgstr "1단계"
+
+msgid "État"
+msgstr "상태"
+
+msgid "Évolution hebdomadaire du score de qualité"
+msgstr "품질 점수 주간 추이"
+
+msgid "Événement"
+msgstr "이벤트"
+
+msgid "Événement déclencheur"
+msgstr "트리거 이벤트"
+
+msgid "à corriger manuellement"
+msgstr "수동으로 수정"
+
+msgid "à partir des données nettoyées."
+msgstr "정제된 데이터를 바탕으로."
+
+msgid "à vérifier"
+msgstr "확인 필요"
+
+msgid "à vérifier manuellement"
+msgstr "수동으로 확인"
+
+msgid "—"
+msgstr "—"
+
+msgid "— Choisir une action —"
+msgstr "— 작업 선택 —"
+
+msgid "— Tous les statuts —"
+msgstr "— 모든 상태 —"
+
+msgid "— Toutes les colonnes —"
+msgstr "— 모든 열 —"
+
+msgid "← Retour au fichier"
+msgstr "← 파일로 돌아가기"
+
+msgid "⌨️ Raccourcis"
+msgstr "⌨️ 단축키"
+
+msgid "⌨️ Raccourcis clavier"
+msgstr "⌨️ 키보드 단축키"
+
+msgid "⏳ Fichiers expirés"
+msgstr "⏳ 만료된 파일"
+
+msgid "⏳ Nettoyage en cours…"
+msgstr "⏳ 정제 진행 중…"
+
+msgid "⚙️ Règles de nettoyage personnalisées"
+msgstr "⚙️ 사용자 지정 정제 규칙"
+
+msgid "⚙️ Règles personnalisées"
+msgstr "⚙️ 사용자 지정 규칙"
+
+msgid "⚙️ Régler la durée"
+msgstr "⚙️ 기간 조정"
+
+msgid "⚠️ Points nécessitant une vérification humaine"
+msgstr "⚠️ 사람의 확인이 필요한 항목"
+
+msgid "⚠️ Problèmes restants (tous fichiers)"
+msgstr "⚠️ 남은 문제(모든 파일)"
+
+msgid "⚠️ Valeurs signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ 값은 표시만 되며 자동으로 수정되지 않습니다."
+
+msgid "⚠️ Zone de danger"
+msgstr "⚠️ 위험 구역"
+
+msgid "⚠️ À vérifier manuellement (jamais supprimés automatiquement)."
+msgstr "⚠️ 수동 확인 필요 (자동으로 삭제되지 않음)."
+
+msgid "⚪ Conserver toutes les lignes"
+msgstr "⚪ 모든 행 유지"
+
+msgid "⚪ Ignorer (examiné, conserver)"
+msgstr "⚪ 무시 (검토함, 유지)"
+
+msgid "⚪ Valeurs « Inconnu » ("
+msgstr "⚪ «알 수 없음» 값 ("
+
+msgid "✅ Aucun doublon potentiel à vérifier."
+msgstr "✅ 확인할 잠재적 중복이 없습니다."
+
+msgid "✅ Aucune vérification manuelle nécessaire"
+msgstr "✅ 수동 확인이 필요하지 않습니다"
+
+msgid "✅ Résultat du nettoyage"
+msgstr "✅ 정제 결과"
+
+msgid "✅ Validation après nettoyage"
+msgstr "✅ 정제 후 검증"
+
+msgid "✅ Votre profil est complet."
+msgstr "✅ 프로필이 완성되었습니다."
+
+msgid "✏️ Modifier mon profil"
+msgstr "✏️ 프로필 수정"
+
+msgid "✓ Copié"
+msgstr "✓ 복사됨"
+
+msgid "➕ Nouveau jeton"
+msgstr "➕ 새 토큰"
+
+msgid "➕ Nouveau webhook"
+msgstr "➕ 새 webhook"
+
+msgid "➕ Nouvelle règle"
+msgstr "➕ 새 규칙"
+
+msgid "➕ Téléverser un fichier"
+msgstr "➕ 파일 업로드"
+
+msgid "⬇️ Exporter mes données (JSON)"
+msgstr "⬇️ 내 데이터 내보내기 (JSON)"
+
+msgid "⬇️ Télécharger le fichier nettoyé"
+msgstr "⬇️ 정제된 파일 다운로드"
+
+msgid "🌍 Navigation"
+msgstr "🌍 탐색"
+
+msgid "🌐 HTML (.html)"
+msgstr "🌐 HTML (.html)"
+
+msgid "🌐 Rapport HTML avec graphiques"
+msgstr "🌐 그래프가 포함된 HTML 보고서"
+
+msgid "🎯 Répartition par niveau de qualité"
+msgstr "🎯 품질 등급별 분포"
+
+msgid "🎯 Score qualité"
+msgstr "🎯 품질 점수"
+
+msgid "🏆 Meilleurs résultats"
+msgstr "🏆 최고 결과"
+
+msgid "👀 Aperçu des données brutes (avant nettoyage)"
+msgstr "👀 원시 데이터 미리보기 (정제 전)"
+
+msgid "👁️ Consulter le rapport"
+msgstr "👁️ 보고서 보기"
+
+msgid "👤 Mon profil"
+msgstr "👤 내 프로필"
+
+msgid "📈 Analyse exploratoire"
+msgstr "📈 탐색적 분석"
+
+msgid "📈 Statistiques descriptives"
+msgstr "📈 기술 통계"
+
+msgid "📈 Valeurs aberrantes"
+msgstr "📈 이상값"
+
+msgid "📈 Visualisations statistiques"
+msgstr "📈 통계 시각화"
+
+msgid "📈 Évolution du score (12 semaines)"
+msgstr "📈 점수 추이(12주)"
+
+msgid "📉 Fichiers à traiter en priorité"
+msgstr "📉 우선 처리할 파일"
+
+msgid "📉 Répartition des problèmes"
+msgstr "📉 문제 분포"
+
+msgid "📊 Activité récente"
+msgstr "📊 최근 활동"
+
+msgid "📊 Dashboard Data Quality"
+msgstr "📊 데이터 품질 대시보드"
+
+msgid "📊 Dimensions de qualité"
+msgstr "📊 품질 차원"
+
+msgid "📊 Tableau de bord"
+msgstr "📊 대시보드"
+
+msgid "📊 Tableau de bord global"
+msgstr "📊 전역 대시보드"
+
+msgid "📋 Mes règles ("
+msgstr "📋 내 규칙 ("
+
+msgid "📋 Qualité des colonnes"
+msgstr "📋 열 품질"
+
+msgid "📋 Rapport de nettoyage"
+msgstr "📋 정제 보고서"
+
+msgid "📋 Télécharger le rapport"
+msgstr "📋 보고서 다운로드"
+
+msgid "📕 Rapport PDF"
+msgstr "📕 PDF 보고서"
+
+msgid "📝 Journal des modifications"
+msgstr "📝 변경 로그"
+
+msgid "📥 Fichier d'origine"
+msgstr "📥 원본 파일"
+
+msgid "📥 Markdown (.md)"
+msgstr "📥 Markdown (.md)"
+
+msgid "📥 Télécharger le rapport complet"
+msgstr "📥 전체 보고서 다운로드"
+
+msgid "📦 Archives"
+msgstr "📦 보관함"
+
+msgid "📷 Prendre une photo"
+msgstr "📷 사진 찍기"
+
+msgid "🔌 API et jetons d'accès"
+msgstr "🔌 API 및 액세스 토큰"
+
+msgid "🔌 Jetons d'API"
+msgstr "🔌 API 토큰"
+
+msgid "🔍 Avant / après"
+msgstr "🔍 이전 / 이후"
+
+msgid "🔍 Comparaison avant / après"
+msgstr "🔍 정리 전후 비교"
+
+msgid "🔍 Doublons"
+msgstr "🔍 중복"
+
+msgid "🔍 Filtrer"
+msgstr "🔍 필터"
+
+msgid "🔍 Filtrer les lignes…"
+msgstr "🔍 행 필터…"
+
+msgid "🔍 Problèmes détectés"
+msgstr "🔍 감지된 문제"
+
+msgid "🔍 Revue manuelle des doublons potentiels"
+msgstr "🔍 잠재적 중복 수동 검토"
+
+msgid "🔍 Règles regex personnalisées"
+msgstr "🔍 사용자 지정 정규식 규칙"
+
+msgid "🔎 Explication du score"
+msgstr "🔎 점수 설명"
+
+msgid "🔑 Mes jetons"
+msgstr "🔑 내 토큰"
+
+msgid "🔑 Votre nouveau jeton"
+msgstr "🔑 새 토큰"
+
+msgid "🔒 Changer mon mot de passe"
+msgstr "🔒 비밀번호 변경"
+
+msgid "🔒 Sécurité et données"
+msgstr "🔒 보안 및 데이터"
+
+msgid "🔔 Mes webhooks"
+msgstr "🔔 내 webhook"
+
+msgid "🔔 Webhooks"
+msgstr "🔔 Webhook"
+
+msgid "🔗 Voir mon profil public"
+msgstr "🔗 내 공개 프로필 보기"
+
+msgid "🔢 Colonnes analysées numériquement"
+msgstr "🔢 수치로 분석된 열"
+
+msgid "🔬 Profilage avancé"
+msgstr "🔬 고급 프로파일링"
+
+msgid "🔵 Conserver la 2e ligne (supprimer les autres)"
+msgstr "🔵 두 번째 행 유지 (나머지 삭제)"
+
+msgid "🕒 Dernières actions"
+msgstr "🕒 최근 작업"
+
+msgid "🕓 Activité"
+msgstr "🕓 활동"
+
+msgid "🕓 Dernières activités"
+msgstr "🕓 최근 활동"
+
+msgid "🕓 Journal d'activité"
+msgstr "🕓 활동 로그"
+
+msgid "🗃️ Fichiers récents"
+msgstr "🗃️ 최근 파일"
+
+msgid "🗄️ Rétention"
+msgstr "🗄️ 보존"
+
+msgid "🗄️ Rétention des données"
+msgstr "🗄️ 데이터 보존"
+
+msgid "🗑️ Purger maintenant"
+msgstr "🗑️ 지금 정리"
+
+msgid "🗑️ Supprimer"
+msgstr "🗑️ 삭제"
+
+msgid "🗑️ Supprimer ma photo de profil"
+msgstr "🗑️ 프로필 사진 삭제"
+
+msgid "🚀 Nouveautés de l'espace pro"
+msgstr "🚀 프로 공간 신기능"
+
+msgid "🚀 Premier appel"
+msgstr "🚀 첫 호출"
+
+msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
+msgstr "🟢 첫 번째 행 유지 (나머지 삭제)"
+
+msgid "🟣 Fusionner toutes les lignes"
+msgstr "🟣 모든 행 병합"
+
+msgid "🧭 Dimensions les plus fragiles"
+msgstr "🧭 가장 취약한 차원"
+
+msgid "🧹 Journal d'activité"
+msgstr "🧹 활동 로그"
+
+msgid "🧹 Nettoyage"
+msgstr "🧹 정리"
+
+msgid "🧹 Options de nettoyage"
+msgstr "🧹 정제 옵션"
+
+msgid "🧹 Opérations de nettoyage"
+msgstr "🧹 정제 작업"
+
+msgid "🧽 Purger les anciennes entrées"
+msgstr "🧽 오래된 항목 비우기"
+
+msgid "🧾 Journal des modifications"
+msgstr "🧾 변경 로그"
+
+msgid "🧾 Télécharger le journal des modifications"
+msgstr "🧾 변경 로그 다운로드"
+
+msgctxt "séparateur"
+msgid "ou"
+msgstr "또는"

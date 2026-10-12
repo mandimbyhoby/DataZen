@@ -1,0 +1,31 @@
+id_transaction;date_vente;client;produit;quantite;prix_unitaire;remise;total;mode_paiement;region
+TXN-0001;2024-01-15;Alice Martin;Ordinateur portable;1;1299.90;0;1299.90;Carte bancaire;Île-de-France
+TXN-0002;2024-02-20;BOB DUPONT;Souris sans fil;3;29.99;0.1;80.97;PayPal;Auvergne-Rhône-Alpes
+TXN-0003;2024-03-10;charlie leblanc;Écran 27 pouces;1;299.90;0;299.90;Espèces;PACA
+TXN-0004;15/04/2024; David Petit ;Clavier mécanique;2;89.90;0.05;170.81;Carte bancaire;Hauts-de-France
+TXN-0005;2024-05-05;Élise Moreau;Écran 27 pouces;1;299.90;0;299.90;PayPal;Pays de la Loire
+TXN-0006;2024-06-12;alice martin;ordinateur portable;2;1299.90;0.15;2209.83;Carte bancaire;île-de-france
+TXN-0007;2024-07-01;François Girard;Casque audio;1;59.90;0;59.90;Virement;Occitanie
+TXN-0008;08/08/2024;  gérard roux  ;Souris sans fil;5;29.99;0.2;119.96;PayPal;Auvergne-Rhône-Alpes
+TXN-0009;2024-09-10;Hélène Fournier;Disque dur externe;1;109.90;0;109.90;Carte bancaire;Bretagne
+TXN-0010;2024-10-02;Laura Schmitt;Imprimante laser;1;189.90;0;189.90;Virement;Grand Est
+TXN-0011;2024-11-30;Inès Lambert;Casque audio;2;;0;;;Île-de-France
+TXN-0012;2024-04-17;Karim Benali;Tablette tactile;1;449.00;0.1;404.10;Carte bancaire;PACA
+TXN-0013;2024-01-15;Alice Martin;Ordinateur portable;1;1299.90;0;1299.90;Carte bancaire;Île-de-France
+TXN-0014;2024-02-20;BOB DUPONT;Souris sans fil;3;29.99;0.1;80.97;PayPal;Auvergne-Rhône-Alpes
+TXN-0015;2024-03-10;charlie leblanc;Écran 27 pouces;1;299.90;0;299.90;Espèces;PACA
+TXN-0016;2024-12-01;Inconnu;Produit inconnu;0;0;0;0;; 
+TXN-0017;2024-06-18;Marie Dubois;Écran 24 pouces;1;159.90;0.05;151.91;Carte bancaire;Hauts-de-France
+TXN-0018;2024-08-09;Jean-Pierre Petit;Clavier sans fil;1;69.90;0;69.90;PayPal;Grand Est
+TXN-0019;2024-09-27;Sophie Laurent;Souris ergonomique;1;44.90;0;44.90;Carte bancaire;Occitanie
+TXN-0020;2024-11-11;Thomas Moreau;Hub USB;2;34.90;0.1;62.82;Virement;Auvergne-Rhône-Alpes
+TXN-0021;2024-01-30;Camille Roux;SSD 500Go;1;89.90;0;89.90;Carte bancaire;Grand Est
+TXN-0022;2024-05-14;Nicolas Fournier;Chargeur USB-C;3;19.90;0;59.70;PayPal;Bretagne
+TXN-0023;2024-07-07;Julie Girard;Enceinte Bluetooth;1;79.90;0.1;71.91;Espèces;Normandie
+TXN-0024;2024-02-11;Antoine Lefebvre;Webcam HD;1;49.90;0;49.90;Carte bancaire;Hauts-de-France
+TXN-0025;2024-04-25;Chloé Mercier;Écran 27 pouces;1;299.90;0.2;239.92;Virement;Centre-Val de Loire
+TXN-0026;2024-06-30;Lucas Blanc;Ordinateur portable;1;1299.90;0.1;1169.91;Carte bancaire;Nouvelle-Aquitaine
+TXN-0027;2024-03-15;Alice Martin;Souris sans fil;1;29.99;0;29.99;PayPal;Île-de-France
+TXN-0028;2024-03-15;Alice Martin;Souris sans fil;1;29.99;0;29.99;PayPal;Île-de-France
+TXN-0029;2024-09-01;Test Test;Produit test;1;999999.99;0;999999.99;Carte bancaire;Inconnue
+TXN-0030;2024-09-02;Test Test;Produit test;1;-50.00;0;-50.00;Carte bancaire;Inconnue

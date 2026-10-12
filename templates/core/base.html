@@ -1,0 +1,319 @@
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}{% if user.is_authenticated %} data-theme-pref="{{ user.profile.theme_preference }}"{% endif %}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DataZen — nettoyez, normalisez et fiabilisez vos fichiers CSV et Excel en quelques clics.">
+    <title>{% block title %}{% translate "DataZen — Nettoyage de données" %}{% endblock %}</title>
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" sizes="any">
+    <link rel="apple-touch-icon" href="{% static 'img/favicon-180.png' %}">
+    <script>
+        // Applique le thème mémorisé avant le rendu pour éviter un flash clair.
+        // Priorité : choix explicite de l'appareil, puis préférence du profil.
+        (function () {
+            var pref = document.documentElement.getAttribute("data-theme-pref") || "system";
+            var theme = null;
+            try {
+                theme = localStorage.getItem("datazen-theme");
+            } catch (e) { /* localStorage indisponible */ }
+            if (theme !== "dark" && theme !== "light") {
+                if (pref === "dark" || pref === "light") {
+                    theme = pref;
+                } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                    theme = "dark";
+                }
+            }
+            if (theme === "dark" || theme === "light") {
+                document.documentElement.setAttribute("data-bs-theme", theme);
+            }
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=20261018-auth">
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="d-flex flex-column min-vh-100"
+      data-dz-msg-show="{% translate 'Afficher' %}"
+      data-dz-msg-hide="{% translate 'Masquer' %}"
+      data-dz-msg-show-password="{% translate 'Afficher le mot de passe' %}"
+      data-dz-msg-hide-password="{% translate 'Masquer le mot de passe' %}"
+      data-dz-msg-theme-light="{% translate 'Activer le thème clair' %}"
+      data-dz-msg-theme-dark="{% translate 'Activer le thème sombre' %}"
+      data-dz-msg-filter-rows="{% translate '🔍 Filtrer les lignes…' %}"
+      data-dz-msg-filter-rows-label="{% translate 'Filtrer les lignes du tableau' %}"
+      data-dz-msg-sort-hint="{% translate 'Cliquer pour trier' %}"
+      data-dz-msg-copied="{% translate '✓ Copié' %}">
+
+    <a class="dz-skip-link" href="#contenu-principal">{% translate "Aller au contenu principal" %}</a>
+
+    <nav class="navbar navbar-expand-lg dz-navbar sticky-top" id="dz-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'core:index' %}">
+                <img class="dz-logo-img dz-logo-img--light" src="{% static 'img/logo-datazen.png' %}"
+                     alt="DataZen — clarté des données" width="600" height="179">
+                <img class="dz-logo-img dz-logo-img--dark" src="{% static 'img/logo-datazen-dark.png' %}"
+                     alt="" aria-hidden="true" width="600" height="179">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="{% translate "Basculer la navigation" %}">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                    <li class="nav-item">
+                        <a class="nav-link{% if request.resolver_match.url_name == 'index' %} active{% endif %}"
+                           href="{% url 'core:index' %}">{% translate "Accueil" %}</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link{% if request.resolver_match.url_name == 'dashboard' %} active{% endif %}"
+                               href="{% url 'core:dashboard' %}">{% translate "Tableau de bord" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link{% if request.resolver_match.url_name == 'rules_list' %} active{% endif %}"
+                               href="{% url 'core:rules_list' %}">{% translate "Règles" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link{% if request.resolver_match.url_name == 'activity' %} active{% endif %}"
+                               href="{% url 'core:activity' %}">{% translate "Activité" %}</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle{% if request.resolver_match.url_name in 'api_tokens,webhooks,retention,shortcuts' %} active{% endif %}"
+                               href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {% translate "Outils" %}
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow">
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'core:api_tokens' %}">
+                                        {% translate "🔌 Jetons d'API" %}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'core:webhooks' %}">
+                                        {% translate "🔔 Webhooks" %}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'core:retention' %}">
+                                        {% translate "🗄️ Rétention des données" %}
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'core:shortcuts' %}">
+                                        {% translate "⌨️ Raccourcis clavier" %}
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    {% endif %}
+                    {% if user.is_staff %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'admin:index' %}">{% translate "Administration" %}</a>
+                        </li>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle dz-nav-user" href="#" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="dz-avatar dz-avatar-sm" aria-hidden="true">
+                                    {% if user.profile.avatar %}
+                                        <img src="{{ user.profile.avatar.url }}" alt="">
+                                    {% else %}
+                                        <img src="{% static 'img/avatar-default.svg' %}" alt="">
+                                    {% endif %}
+                                </span>
+                                <span class="dz-nav-username">{{ user.username }}</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow">
+                                <li>
+                                    <a class="dropdown-item{% if request.resolver_match.url_name == 'profile' %} active{% endif %}"
+                                       href="{% url 'core:profile' %}">{% translate "👤 Mon profil" %}</a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <form method="post" action="{% url 'core:logout' %}" class="px-3 py-1">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary w-100">
+                                            {% translate "Se déconnecter" %}
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link{% if request.resolver_match.url_name == 'login' %} active{% endif %}"
+                               href="{% url 'core:login' %}">{% translate "Connexion" %}</a>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-sm btn-primary" href="{% url 'core:signup' %}">{% translate "Créer un compte" %}</a>
+                        </li>
+                    {% endif %}
+                    <li class="nav-item dropdown dz-lang-picker">
+                        <button type="button" class="nav-link dropdown-toggle dz-lang-toggle"
+                                id="dz-lang-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                title="{% translate 'Changer de langue' %}"
+                                aria-label="{% translate 'Changer de langue' %}">
+                            <span class="dz-lang-flag" aria-hidden="true">{{ active_language.flag }}</span>
+                            <span class="dz-lang-code">{{ active_language.code|upper }}</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow dz-lang-menu"
+                            aria-labelledby="dz-lang-toggle">
+                            <li>
+                                <h6 class="dropdown-header">
+                                    {% translate "Choisir la langue du site" %}
+                                </h6>
+                            </li>
+                            {% for lang in site_languages %}
+                                <li>
+                                    <form method="post" action="{% url 'core:set_language' %}" class="dz-lang-form">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="language" value="{{ lang.code }}">
+                                        <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                                        <button type="submit"
+                                                class="dropdown-item dz-lang-item{% if lang.is_active %} active{% endif %}"
+                                                lang="{{ lang.code }}" dir="{{ lang.dir }}"
+                                                {% if lang.is_active %}aria-current="true"{% endif %}>
+                                            <span class="dz-lang-flag" aria-hidden="true">{{ lang.flag }}</span>
+                                            <span class="dz-lang-name">{{ lang.name }}</span>
+                                            <span class="dz-lang-english">{{ lang.english }}</span>
+                                            {% if lang.is_active %}
+                                                <span class="dz-lang-check" aria-hidden="true">✓</span>
+                                            {% endif %}
+                                        </button>
+                                    </form>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        {% if user.is_authenticated %}
+                            <button type="button" id="dz-search-open" class="btn dz-search-trigger"
+                                    aria-label="{% translate 'Rechercher (Ctrl+K)' %}"
+                                    title="{% translate 'Rechercher un fichier ou une règle (Ctrl+K)' %}"
+                                    data-dz-search-url="{% url 'core:global_search' %}">
+                                <span aria-hidden="true">🔍</span>
+                                <span class="dz-search-trigger__label">{% translate "Rechercher" %}</span>
+                                <kbd class="dz-kbd" aria-hidden="true">Ctrl K</kbd>
+                            </button>
+                        {% endif %}
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <button type="button" id="theme-toggle" class="btn"
+                                aria-label="{% translate 'Basculer le thème' %}"
+                                title="{% translate 'Basculer le thème clair / sombre' %}">🌙</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow-1" id="contenu-principal">
+        {% if messages %}
+            <div class="container dz-page-top">
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags|default:'info' }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="{% translate "Fermer" %}"></button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="dz-footer">
+        <div class="container">
+            <div class="row gy-4 align-items-start">
+                <div class="col-lg-5">
+                    <div class="dz-footer-brand mb-2">
+                        <img class="dz-logo-img dz-logo-img--light" src="{% static 'img/logo-datazen.png' %}"
+                             alt="DataZen — clarté des données" width="600" height="179">
+                        <img class="dz-logo-img dz-logo-img--dark" src="{% static 'img/logo-datazen-dark.png' %}"
+                             alt="" aria-hidden="true" width="600" height="179">
+                    </div>
+                    <p class="dz-footer-note mb-0">
+                        {% blocktranslate trimmed %}Nettoyez, normalisez et fiabilisez vos fichiers CSV et Excel
+                        en quelques clics — sans écrire une ligne de code.{% endblocktranslate %}
+                    </p>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h6 class="text-uppercase small fw-bold mb-3">{% translate "Application" %}</h6>
+                    <ul class="list-unstyled dz-footer-links d-grid gap-2 mb-0">
+                        <li><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+                        {% if user.is_authenticated %}
+                            <li><a href="{% url 'core:dashboard' %}">{% translate "Tableau de bord" %}</a></li>
+                            <li><a href="{% url 'core:rules_list' %}">{% translate "Mes règles" %}</a></li>
+                            <li><a href="{% url 'core:activity' %}">{% translate "Journal d'activité" %}</a></li>
+                            <li><a href="{% url 'core:api_tokens' %}">{% translate "API & webhooks" %}</a></li>
+                            <li><a href="{% url 'core:shortcuts' %}">{% translate "Raccourcis clavier" %}</a></li>
+                        {% else %}
+                            <li><a href="{% url 'core:login' %}">{% translate "Connexion" %}</a></li>
+                            <li><a href="{% url 'core:signup' %}">{% translate "Créer un compte" %}</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <h6 class="text-uppercase small fw-bold mb-3">{% translate "Technologies" %}</h6>
+                    <ul class="list-unstyled dz-footer-links d-grid gap-2 mb-0">
+                        <li><span class="dz-footer-note">{% translate "Django · Pandas · Bootstrap" %}</span></li>
+                        {% if user.is_staff %}
+                            <li><a href="{% url 'admin:index' %}">{% translate "Administration" %}</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            <hr class="dz-divider my-4">
+            <p class="dz-footer-note text-center mb-0">
+                {% translate "DataZen — Application de nettoyage de données (DataClean Pro) · ©" %} {% now "Y" %}
+            </p>
+        </div>
+    </footer>
+
+    <div class="dz-palette" id="dz-palette" hidden
+         {% if user.is_authenticated %}
+         data-dz-search-url="{% url 'core:global_search' %}"
+         data-dz-msg-help="{% translate 'Tapez au moins deux caractères pour lancer la recherche.' %}"
+         data-dz-msg-empty="{% translate 'Aucun résultat pour cette recherche.' %}"
+         data-dz-msg-loading="{% translate 'Recherche en cours…' %}"
+         data-dz-msg-error="{% translate 'Recherche momentanément indisponible.' %}"
+         {% endif %}>
+        <div class="dz-palette__backdrop" data-dz-palette-close></div>
+        <div class="dz-palette__dialog" role="dialog" aria-modal="true"
+             aria-label="{% translate 'Recherche globale' %}">
+            <div class="dz-palette__field">
+                <span aria-hidden="true">🔍</span>
+                <input type="search" id="dz-palette-input" autocomplete="off" maxlength="80"
+                       placeholder="{% translate 'Rechercher un fichier, une règle, une page…' %}"
+                       aria-label="{% translate 'Recherche globale' %}"
+                       aria-controls="dz-palette-results">
+                <kbd class="dz-kbd" aria-hidden="true">{% translate "Échap" %}</kbd>
+            </div>
+            <div class="dz-palette__results" id="dz-palette-results" role="listbox"
+                 aria-label="{% translate 'Résultats' %}" aria-live="polite">
+                <p class="dz-palette__empty">{% translate "Tapez au moins deux caractères pour lancer la recherche." %}</p>
+            </div>
+            <div class="dz-palette__hint">
+                <span><kbd class="dz-kbd">↑</kbd> <kbd class="dz-kbd">↓</kbd> {% translate "naviguer" %}</span>
+                <span><kbd class="dz-kbd">{% translate "Entrée" %}</kbd> {% translate "ouvrir" %}</span>
+                <span><kbd class="dz-kbd">{% translate "Échap" %}</kbd> {% translate "fermer" %}</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/main.js' %}?v=20261016-search"></script>
+        {# Graphiques interactifs (React + Chart.js). Le PNG matplotlib reste le repli. #}
+        <script src="{% static 'js/charts/datazen-charts.js' %}?v=20261010-charts-4" defer></script>
+        {% block extra_js %}{% endblock %}
+</body>
+</html>

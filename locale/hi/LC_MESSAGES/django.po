@@ -1,0 +1,2832 @@
+# Catalogue de traduction DataZen.
+# Généré par tools/i18n_build.py — ne pas éditer à la main.
+msgid ""
+msgstr ""
+"Project-Id-Version: DataZen 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "%(actual)s correction(s) in the log vs %(reported)s reported"
+msgstr "%(actual)s सुधार लॉग में बनाम %(reported)s रिपोर्ट किए गए"
+
+msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
+msgstr "ईमेल कॉलम में %(actual)s अज्ञात मान बनाम %(reported)s रिपोर्ट किए गए"
+
+msgid "%(count)s colonnes"
+msgstr "%(count)s कॉलम"
+
+msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
+msgstr "%(count)s संभावित डुप्लिकेट की समीक्षा आवश्यक है।"
+
+msgid "%(count)s entrée(s) d'activité supprimée(s)."
+msgstr "गतिविधि लॉग की %(count)s प्रविष्टियाँ हटाई गईं।"
+
+msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
+msgstr "%(count)s त्रुटियाँ स्वतः ठीक नहीं की जा सकीं।"
+
+msgid "%(count)s exact duplicate(s) remaining"
+msgstr "%(count)s सटीक डुप्लिकेट शेष"
+
+msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
+msgstr "%(count)s असंगत मान शेष (न मान्य न अज्ञात)"
+
+msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
+msgstr "%(count)s अमान्य ईमेल मौजूद (रिक्त नहीं और अज्ञात नहीं)"
+
+msgid "%(count)s invalid value(s) among filled data"
+msgstr "भरे गए डेटा में %(count)s अमान्य मान"
+
+msgid "%(count)s lignes"
+msgstr "%(count)s पंक्तियाँ"
+
+msgid "%(count)s missing value(s)"
+msgstr "%(count)s अनुपलब्ध मान"
+
+msgid "%(count)s non-standard value(s)"
+msgstr "%(count)s गैर-मानक मान"
+
+msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
+msgstr "%(count)s संभावित डुप्लिकेट को मैन्युअल समीक्षा चाहिए (कम दंड)"
+
+msgid "%(count)s unknown value(s) (data unavailable)"
+msgstr "%(count)s अज्ञात मान (डेटा अनुपलब्ध)"
+
+msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
+msgstr "संख्यात्मक कॉलम में %(count)s आउटलायर पाए गए।"
+
+msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
+msgstr "%(count)s मान वर्तमान में « अज्ञात » हैं।"
+
+msgid "%(counter)s doublon potentiel détecté. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgid_plural "%(counter)s doublons potentiels détectés. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgstr[0] "%(counter)s संभावित डुप्लिकेट मिला। ये पंक्तियाँ <strong>कभी भी</strong> अपने-आप हटाई नहीं जातीं; इनके लिए आपका निर्णय आवश्यक है।"
+msgstr[1] "%(counter)s संभावित डुप्लिकेट मिले। ये पंक्तियाँ <strong>कभी भी</strong> अपने-आप हटाई नहीं जातीं; इनके लिए आपका निर्णय आवश्यक है।"
+
+msgid "%(counter)s fichier affiché"
+msgid_plural "%(counter)s fichiers affichés"
+msgstr[0] "%(counter)s फ़ाइल दिखाई गई"
+
+msgid "%(counter)s inconnu"
+msgid_plural "%(counter)s inconnus"
+msgstr[0] "%(counter)s अज्ञात"
+
+msgid "%(counter)s invalide,"
+msgid_plural "%(counter)s invalides,"
+msgstr[0] "%(counter)s अमान्य,"
+
+msgid "%(counter)s ligne concernée :"
+msgid_plural "%(counter)s lignes concernées :"
+msgstr[0] "%(counter)s संबंधित पंक्ति:"
+
+msgid "%(counter)s valide,"
+msgid_plural "%(counter)s valides,"
+msgstr[0] "%(counter)s मान्य,"
+
+msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
+msgstr "%(purged)s फ़ाइल हटाई गईं, %(archived)s संग्रहित की गईं।"
+
+msgid "%(score)s / 100  (%(weight)s %(percent)s)"
+msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
+msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s बनाम %(expected)s अपेक्षित"
+
+msgid "%(value)s %(percent)s"
+msgstr "%(value)s %(percent)s"
+
+msgid "(%(counter)s modification)"
+msgid_plural "(%(counter)s modifications)"
+msgstr[0] "(%(counter)s परिवर्तन)"
+
+msgid "(%(counter)s non-conformité)"
+msgid_plural "(%(counter)s non-conformités)"
+msgstr[0] "(%(counter)s गैर-अनुपालन)"
+
+msgid "(colonnes : %(columns)s)"
+msgstr "(कॉलम: %(columns)s)"
+
+msgid "(score ≥ 0.8)"
+msgstr "(स्कोर ≥ 0.8)"
+
+msgid "(⚠️ à vérifier manuellement)"
+msgstr "(⚠️ मैन्युअल रूप से जाँचें)"
+
+msgid ", Vous recevez ce message parce qu'une réinitialisation de mot de passe a été demandée pour votre compte DataZen. Cliquez sur le lien ci-dessous pour choisir un nouveau mot de passe :"
+msgstr ", आपको यह संदेश इसलिए मिला क्योंकि आपके DataZen खाते के लिए पासवर्ड रीसेट का अनुरोध किया गया था। नया पासवर्ड चुनने के लिए नीचे दिए लिंक पर क्लिक करें:"
+
+msgid "<a href=\"#televerser\">Téléversez votre premier fichier</a> pour commencer."
+msgstr "<a href=\"#televerser\">अपनी पहली फ़ाइल अपलोड करें</a> और शुरू करें।"
+
+msgid "<strong>Doublons potentiels :</strong> aucun"
+msgstr "<strong>संभावित डुप्लिकेट:</strong> कोई नहीं"
+
+msgid "<strong>Doublons potentiels restants :</strong> aucun"
+msgstr "<strong>शेष संभावित डुप्लिकेट:</strong> कोई नहीं"
+
+msgid "<strong>Valeurs manquantes :</strong> aucune"
+msgstr "<strong>अनुपलब्ध मान:</strong> कोई नहीं"
+
+msgid "<strong>Valeurs manquantes restantes :</strong> aucune"
+msgstr "<strong>शेष अनुपलब्ध मान:</strong> कोई नहीं"
+
+msgid "AAAA-MM-JJ"
+msgstr "AAAA-MM-JJ"
+
+msgid "API"
+msgstr "API"
+
+msgid "API & webhooks"
+msgstr "API और webhook"
+
+msgid "API REST"
+msgstr "REST API"
+
+msgid "API et intégrations"
+msgstr "API और एकीकरण"
+
+msgid "API et intégrations — DataZen"
+msgstr "API और एकीकरण — DataZen"
+
+msgid "Abonnements"
+msgstr "सदस्यताएँ"
+
+msgid "Accueil"
+msgstr "होम"
+
+msgid "Actif"
+msgstr "सक्रिय"
+
+msgid "Actifs"
+msgstr "सक्रिय"
+
+msgid "Action"
+msgstr "क्रिया"
+
+msgid "Action invalide."
+msgstr "अमान्य क्रिया।"
+
+msgid "Actions"
+msgstr "क्रियाएँ"
+
+msgid "Active"
+msgstr "सक्रिय"
+
+msgid "Activer"
+msgstr "सक्रिय करें"
+
+msgid "Activer le thème clair"
+msgstr "लाइट थीम सक्रिय करें"
+
+msgid "Activer le thème sombre"
+msgstr "डार्क थीम सक्रिय करें"
+
+msgid "Activité"
+msgstr "गतिविधि"
+
+msgid "Activités"
+msgstr "गतिविधियाँ"
+
+msgid "Activée"
+msgstr "सक्षम"
+
+msgid "Administrateur"
+msgstr "प्रशासक"
+
+msgid "Administration"
+msgstr "प्रशासन"
+
+msgid "Adresse email"
+msgstr "ईमेल पता"
+
+msgid "Affichage de %(shown)s lignes sur %(total)s."
+msgstr "%(total)s में से %(shown)s पंक्तियाँ दिखाई जा रही हैं।"
+
+msgid "Affichage des"
+msgstr "प्रदर्शित"
+
+msgid "Afficher"
+msgstr "दिखाएँ"
+
+msgid "Afficher le mot de passe"
+msgstr "पासवर्ड दिखाएँ"
+
+msgid "Afficher les détails des anomalies"
+msgstr "विसंगतियों का विवरण दिखाएँ"
+
+msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
+msgstr "X-DataZen-Signature हेडर में जोड़ा गया (HMAC-SHA256)।"
+
+msgid "All filled values are valid"
+msgstr "सभी भरे मान मान्य हैं"
+
+msgid "Aller au contenu principal"
+msgstr "मुख्य सामग्री पर जाएँ"
+
+msgid "Analyse exploratoire"
+msgstr "खोजपूर्ण विश्लेषण"
+
+msgid "Analyse exploratoire — %(name)s"
+msgstr "खोजपूर्ण विश्लेषण — %(name)s"
+
+msgid "Analyser et nettoyer"
+msgstr "विश्लेषण करें और साफ़ करें"
+
+msgid "Analyste de données"
+msgstr "डेटा विश्लेषक"
+
+msgid "Ancienne valeur"
+msgstr "पुराना मान"
+
+msgid "Annuler"
+msgstr "रद्द करें"
+
+msgid "Anomalies restantes (à traiter manuellement)"
+msgstr "शेष विसंगतियाँ (मैन्युअल रूप से निपटाने योग्य)"
+
+msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
+msgstr "संवेदनशील डेटा गुमनाम करना (%(count)s मानों के छद्मनाम बनाए गए)"
+
+msgid "Anonymiser les données sensibles"
+msgstr "संवेदनशील डेटा को अनाम करें"
+
+msgid "Anonymiser les données sensibles (noms, emails, téléphones)"
+msgstr "संवेदनशील डेटा गुमनाम करें (नाम, ईमेल, फ़ोन नंबर)"
+
+msgid "Antananarivo, Madagascar"
+msgstr "Antananarivo, Madagascar"
+
+msgid "Aperçu du fichier nettoyé"
+msgstr "साफ़ की गई फ़ाइल का पूर्वावलोकन"
+
+msgid "Appel API"
+msgstr "API कॉल"
+
+msgid "Appel API : %(path)s"
+msgstr "API कॉल: %(path)s"
+
+msgid "Appels"
+msgstr "कॉल"
+
+msgid "Application"
+msgstr "एप्लिकेशन"
+
+msgid "Après"
+msgstr "बाद में"
+
+msgid "Archivage"
+msgstr "संग्रहण"
+
+msgid "Archivage de « %(name)s »"
+msgstr "« %(name)s » का संग्रहण"
+
+msgid "Archiver"
+msgstr "संग्रहित करें"
+
+msgid "Archives"
+msgstr "संग्रह"
+
+msgid "Archivés"
+msgstr "संग्रहित"
+
+msgid "Aucun fichier d'origine n'est disponible."
+msgstr "कोई मूल फ़ाइल उपलब्ध नहीं है।"
+
+msgid "Aucun fichier expiré à purger."
+msgstr "साफ़ करने के लिए कोई समय-समाप्त फ़ाइल नहीं।"
+
+msgid "Aucun fichier expiré. Votre espace de travail est à jour."
+msgstr "कोई समय-समाप्त फ़ाइल नहीं। आपका कार्यक्षेत्र अद्यतित है।"
+
+msgid "Aucun fichier ne correspond à votre recherche."
+msgstr "आपकी खोज से कोई फ़ाइल मेल नहीं खाती।"
+
+msgid "Aucun fichier nettoyé n'est disponible."
+msgstr "कोई साफ़ की गई फ़ाइल उपलब्ध नहीं है।"
+
+msgid "Aucun fichier nettoyé pour le moment."
+msgstr "अभी तक कोई साफ़ की गई फ़ाइल नहीं।"
+
+msgid "Aucun fichier pour le moment."
+msgstr "अभी कोई फ़ाइल नहीं।"
+
+msgid "Aucun fichier sélectionné"
+msgstr "कोई फ़ाइल चयनित नहीं"
+
+msgid "Aucun fichier téléversé pour le moment."
+msgstr "अभी तक कोई फ़ाइल अपलोड नहीं की गई।"
+
+msgid "Aucun graphique n'est disponible pour ce jeu de données : il ne contient pas assez de valeurs numériques ou catégorielles exploitables."
+msgstr "इस डेटासेट के लिए कोई चार्ट उपलब्ध नहीं है: इसमें पर्याप्त उपयोगी संख्यात्मक या श्रेणीबद्ध मान नहीं हैं।"
+
+msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
+msgstr "अभी कोई टोकन नहीं। API का उपयोग करने के लिए एक बनाएँ।"
+
+msgid "Aucun journal des modifications n'est disponible."
+msgstr "कोई परिवर्तन लॉग उपलब्ध नहीं है।"
+
+msgid "Aucun problème détecté"
+msgstr "कोई समस्या नहीं मिली"
+
+msgid "Aucun rapport de nettoyage n'est disponible."
+msgstr "कोई सफ़ाई रिपोर्ट उपलब्ध नहीं है।"
+
+msgid "Aucun résultat pour cette recherche."
+msgstr "इस खोज के लिए कोई परिणाम नहीं।"
+
+msgid "Aucun webhook configuré. Ajoutez une URL pour être notifié automatiquement."
+msgstr "कोई webhook कॉन्फ़िगर नहीं है। स्वचालित सूचना पाने के लिए URL जोड़ें।"
+
+msgid "Aucune activité enregistrée pour le moment."
+msgstr "अभी कोई गतिविधि दर्ज नहीं हुई।"
+
+msgid "Aucune activité enregistrée."
+msgstr "कोई गतिविधि दर्ज नहीं हुई।"
+
+msgid "Aucune anomalie restante."
+msgstr "कोई शेष विसंगति नहीं।"
+
+msgid "Aucune anomalie."
+msgstr "कोई विसंगति नहीं।"
+
+msgid "Aucune colonne"
+msgstr "कोई कॉलम नहीं"
+
+msgid "Aucune correction"
+msgstr "कोई सुधार नहीं"
+
+msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
+msgstr "मूल फ़ाइल और साफ़ की गई फ़ाइल में कोई उल्लेखनीय अंतर नहीं: आपका डेटा पहले से साफ़ था।"
+
+msgid "Aucune dimension mesurée pour le moment."
+msgstr "अभी कोई आयाम मापा नहीं गया।"
+
+msgid "Aucune donnée"
+msgstr "कोई डेटा नहीं"
+
+msgid "Aucune donnée nettoyée disponible."
+msgstr "कोई साफ़ किया गया डेटा उपलब्ध नहीं।"
+
+msgid "Aucune modification enregistrée."
+msgstr "कोई परिवर्तन सहेजा नहीं गया।"
+
+msgid "Aucune règle personnalisée."
+msgstr "कोई कस्टम नियम नहीं।"
+
+msgid "Aucune règle pour le moment. Créez-en une pour la réutiliser sur tous vos fichiers."
+msgstr "अभी कोई नियम नहीं। अपनी सभी फ़ाइलों पर दोबारा उपयोग के लिए एक बनाएँ।"
+
+msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
+msgstr "संख्यात्मक कॉलम में कोई आउटलायर नहीं पाया गया।"
+
+msgid "Aucune valeur « Inconnu »."
+msgstr "कोई « अज्ञात » मान नहीं।"
+
+msgid "Audit des emails"
+msgstr "ईमेल ऑडिट"
+
+msgid "Automatisation"
+msgstr "स्वचालन"
+
+msgid "Autoriser les autres utilisateurs à consulter votre profil."
+msgstr "अन्य उपयोगकर्ताओं को आपकी प्रोफ़ाइल देखने की अनुमति दें।"
+
+msgid "Avant"
+msgstr "पहले"
+
+msgid "Avertissement"
+msgstr "चेतावनी"
+
+msgid "Basculer la navigation"
+msgstr "नेविगेशन टॉगल करें"
+
+msgid "Basculer le thème"
+msgstr "थीम टॉगल करें"
+
+msgid "Basculer le thème clair / sombre"
+msgstr "हल्की / गहरी थीम टॉगल करें"
+
+msgid "Bienvenue %(username)s !"
+msgstr "स्वागत है %(username)s!"
+
+msgid "Bon retour parmi nous"
+msgstr "फिर से स्वागत है"
+
+msgid "Bonjour"
+msgstr "नमस्ते"
+
+msgid "Borne basse"
+msgstr "निचली सीमा"
+
+msgid "Borne haute"
+msgstr "ऊपरी सीमा"
+
+msgid "Boîtes à moustaches"
+msgstr "बॉक्स प्लॉट"
+
+msgid "Boîtes à moustaches des colonnes numériques"
+msgstr "संख्यात्मक स्तंभों के बॉक्स प्लॉट"
+
+msgid "Branchez DataZen sur vos outils existants."
+msgstr "DataZen को अपने मौजूदा टूल से जोड़ें।"
+
+msgid "Branchez DataZen à vos outils : Power BI, n8n, scripts Python, tableaux de bord maison."
+msgstr "DataZen को अपने टूल से जोड़ें: Power BI, n8n, Python स्क्रिप्ट, अपने डैशबोर्ड।"
+
+msgid "CSV (séparateur ;)"
+msgstr "CSV (विभाजक ;)"
+
+msgid "Cadrez votre visage puis cliquez sur « Capturer »."
+msgstr "अपना चेहरा फ़्रेम में रखें और « कैप्चर » पर क्लिक करें।"
+
+msgid "Calculée sur %(count)s fichier(s) nettoyé(s)."
+msgstr "%(count)s साफ़ की गई फ़ाइलों के आधार पर गणना।"
+
+msgid "Canonicalisation du marqueur « Inconnu » (%(count)s corrigé(s))"
+msgstr "‘अज्ञात’ चिह्न सामान्य करना (%(count)s सुधारे गए)"
+
+msgid "Capturer"
+msgstr "कैप्चर करें"
+
+msgid "Ce graphique n'est pas disponible pour ce jeu de données."
+msgstr "यह चार्ट इस डेटासेट के लिए उपलब्ध नहीं है।"
+
+msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
+msgstr "यह रीसेट लिंक पहले ही उपयोग किया जा चुका है या समाप्त हो गया है।"
+
+msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
+msgstr "यह लिंक केवल एक बार मान्य है। यदि आपने यह अनुरोध नहीं किया है, तो इस संदेश को अनदेखा करें: आपका पासवर्ड अपरिवर्तित रहेगा। — DataZen"
+
+msgid "Ce profil n'est pas public."
+msgstr "यह प्रोफ़ाइल सार्वजनिक नहीं है।"
+
+msgid "Ce que le nettoyage a réellement changé dans votre fichier."
+msgstr "सफ़ाई ने आपकी फ़ाइल में वास्तव में क्या बदला।"
+
+msgid "Cellules manquantes"
+msgstr "अनुपस्थित सेल"
+
+msgid "Ces %(count)s fichier(s) dépassent la durée de conservation de %(days)s jours. Ils ne sont pas supprimés automatiquement tant que la purge automatique reste désactivée."
+msgstr "ये %(count)s फ़ाइलें %(days)s दिन की प्रतिधारण अवधि से अधिक हैं। जब तक स्वचालित सफ़ाई बंद है, ये स्वतः नहीं हटाई जातीं।"
+
+msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
+msgstr "ये गणक वैश्विक खोज और नीचे दिए शॉर्टकट को पोषित करते हैं।"
+
+msgid "Champ"
+msgstr "फ़ील्ड"
+
+msgid "Champs différents :"
+msgstr "भिन्न फ़ील्ड:"
+
+msgid "Champs identiques :"
+msgstr "समान फ़ील्ड:"
+
+msgid "Champs inconnus :"
+msgstr "अज्ञात फ़ील्ड:"
+
+msgid "Changer de langue"
+msgstr "भाषा बदलें"
+
+msgid "Changer ma photo de profil"
+msgstr "अपनी प्रोफ़ाइल फ़ोटो बदलें"
+
+msgid "Changer mon mot de passe"
+msgstr "अपना पासवर्ड बदलें"
+
+msgid "Changer mon mot de passe — DataZen"
+msgstr "अपना पासवर्ड बदलें — DataZen"
+
+msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
+msgstr "अपना डेटा <code>.csv</code>, <code>.xlsx</code> या <code>.xls</code> प्रारूप में लोड करें, चाहे कोई भी विभाजक हो।"
+
+msgid "Choisir la langue du site"
+msgstr "साइट की भाषा चुनें"
+
+msgid "Choisir le format"
+msgstr "प्रारूप चुनें"
+
+msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
+msgstr "CSV या Excel फ़ाइल चुनें (.csv, .xlsx, .xls)।"
+
+msgid "Choisissez un fichier à analyser"
+msgstr "विश्लेषण के लिए फ़ाइल चुनें"
+
+msgid "Choisissez un mot de passe long et unique. Vous resterez connecté après la modification."
+msgstr "लंबा और अनोखा पासवर्ड चुनें। बदलाव के बाद आप लॉग इन रहेंगे।"
+
+msgid "Choisissez un mot de passe solide : au moins 8 caractères, ni trop courant, ni entièrement numérique."
+msgstr "मज़बूत पासवर्ड चुनें: कम से कम 8 अक्षर, न बहुत सामान्य, न पूरी तरह संख्यात्मक।"
+
+msgid "Choisissez une colonne unique (ex. email) pour fusionner les variantes d'un même enregistrement (Alice / alice). Laissez vide pour ne supprimer que les lignes 100 % identiques."
+msgstr "एक ही रिकॉर्ड के अलग-अलग रूप (Alice / alice) मिलाने के लिए एक विशिष्ट कॉलम (जैसे ईमेल) चुनें। केवल पूरी तरह समान पंक्तियाँ हटाने के लिए खाली छोड़ें।"
+
+msgid "Clair"
+msgstr "हल्का"
+
+msgid "Cliquer pour choisir une photo sur mon appareil"
+msgstr "अपने डिवाइस से फ़ोटो चुनने के लिए क्लिक करें"
+
+msgid "Cliquer pour trier"
+msgstr "क्रमबद्ध करने के लिए क्लिक करें"
+
+msgid "Cliquez sur l'avatar ci-dessus pour choisir une image, ou sur l'icône appareil photo pour en prendre une instantanément. JPEG, PNG, WebP ou GIF — 5 Mo maximum."
+msgstr "छवि चुनने के लिए ऊपर दिए अवतार पर, या तुरंत फ़ोटो लेने के लिए कैमरा आइकन पर क्लिक करें। JPEG, PNG, WebP या GIF — अधिकतम 5 MB।"
+
+msgid "Clé de signature"
+msgstr "हस्ताक्षर कुंजी"
+
+msgid "Clé de signature HMAC (facultative)"
+msgstr "HMAC हस्ताक्षर कुंजी (वैकल्पिक)"
+
+msgid "Code de langue (fr, en, es…). Vide = langue de l'application."
+msgstr "भाषा कोड (fr, en, es…)। खाली = एप्लिकेशन की भाषा।"
+
+msgid "Coefficient de Pearson"
+msgstr "पियर्सन गुणांक"
+
+msgid "Colonne"
+msgstr "कॉलम"
+
+msgid "Colonne ciblée"
+msgstr "लक्षित कॉलम"
+
+msgid "Colonne clé pour la déduplication"
+msgstr "डुप्लिकेट हटाने के लिए कुंजी कॉलम"
+
+msgid "Colonnes"
+msgstr "कॉलम"
+
+msgid "Colonnes améliorées"
+msgstr "बेहतर हुए कॉलम"
+
+msgid "Colonnes analysées"
+msgstr "विश्लेषित कॉलम"
+
+msgid "Colonnes différentes"
+msgstr "भिन्न कॉलम"
+
+msgid "Colonnes différentes :"
+msgstr "भिन्न कॉलम:"
+
+msgid "Colonnes identiques :"
+msgstr "समान कॉलम:"
+
+msgid "Colonnes inconnues :"
+msgstr "अज्ञात कॉलम:"
+
+msgid "Colonnes stables"
+msgstr "स्थिर कॉलम"
+
+msgid "Colonnes à vérifier"
+msgstr "जाँचने योग्य कॉलम"
+
+msgid "Combien de fichiers se trouvent dans chaque tranche de score."
+msgstr "प्रत्येक स्कोर श्रेणी में कितनी फ़ाइलें हैं।"
+
+msgid "Comparaison"
+msgstr "तुलना"
+
+msgid "Comparaison avant / après — %(name)s"
+msgstr "सफ़ाई से पहले / बाद की तुलना — %(name)s"
+
+msgid "Complétion du profil"
+msgstr "प्रोफ़ाइल पूर्णता"
+
+msgid "Complétude"
+msgstr "पूर्णता"
+
+msgid "Complétude par colonne"
+msgstr "प्रति कॉलम पूर्णता"
+
+msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
+msgstr "पूर्णता · वैधता · विशिष्टता · संगति · अनुपालन"
+
+msgid "Composantes du score (après nettoyage)"
+msgstr "स्कोर के घटक (सफ़ाई के बाद)"
+
+msgid "Compte"
+msgstr "खाता"
+
+msgid "Compte actif"
+msgstr "सक्रिय खाता"
+
+msgid "Condensé"
+msgstr "सारांश"
+
+msgid "Confiance"
+msgstr "भरोसा"
+
+msgid "Confirmer la décision"
+msgstr "निर्णय की पुष्टि करें"
+
+msgid "Connectez-vous pour retrouver vos fichiers."
+msgstr "अपनी फ़ाइलें देखने के लिए लॉग इन करें।"
+
+msgid "Connexion"
+msgstr "लॉग इन"
+
+msgid "Connexion — DataZen"
+msgstr "लॉग इन — DataZen"
+
+msgid "Consultation des graphiques"
+msgstr "चार्ट देखें"
+
+msgid "Consultation du rapport"
+msgstr "रिपोर्ट देखें"
+
+msgid "Continuer / valider une étape"
+msgstr "जारी रखें / चरण की पुष्टि करें"
+
+msgid "Contribution des cinq dimensions pondérées du score."
+msgstr "स्कोर के पाँच भारित आयामों का योगदान।"
+
+msgid "Contrôle de cohérence"
+msgstr "संगति जाँच"
+
+msgid "Conversion des compteurs en entiers (%(count)s converti(s))"
+msgstr "काउंटर को पूर्णांक में बदलना (%(count)s बदले गए)"
+
+msgid "Conversion des montants (%(count)s converti(s))"
+msgstr "राशियाँ बदलना (%(count)s बदली गईं)"
+
+msgid "Convertir les montants"
+msgstr "राशियाँ परिवर्तित करें"
+
+msgid "Convertir les montants en valeurs numériques"
+msgstr "राशियों को संख्यात्मक मानों में बदलें"
+
+msgid "Copier"
+msgstr "कॉपी करें"
+
+msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
+msgstr "अभी कॉपी करें: आपकी सुरक्षा के लिए यह दोबारा नहीं दिखाया जाएगा।"
+
+msgid "Corrections"
+msgstr "सुधार"
+
+msgid "Corrections appliquées"
+msgstr "लागू किए गए सुधार"
+
+msgid "Corrélations de Pearson entre les colonnes numériques."
+msgstr "संख्यात्मक कॉलम के बीच Pearson सहसंबंध।"
+
+msgid "Création de jeton"
+msgstr "टोकन बनाना"
+
+msgid "Création de la règle « %(name)s »"
+msgstr "« %(name)s » नियम बनाना"
+
+msgid "Création de règle"
+msgstr "नियम बनाना"
+
+msgid "Création du jeton « %(name)s »"
+msgstr "« %(name)s » टोकन बनाना"
+
+msgid "Créer la règle"
+msgstr "नियम बनाएँ"
+
+msgid "Créer le jeton"
+msgstr "टोकन बनाएँ"
+
+msgid "Créer le webhook"
+msgstr "webhook बनाएँ"
+
+msgid "Créer un compte"
+msgstr "खाता बनाएँ"
+
+msgid "Créer une règle"
+msgstr "नियम बनाएँ"
+
+msgid "Créez une règle une fois, réutilisez-la sur tous vos fichiers."
+msgstr "एक बार नियम बनाएँ, अपनी सभी फ़ाइलों पर दोबारा उपयोग करें।"
+
+msgid "Créez votre compte"
+msgstr "अपना खाता बनाएँ"
+
+msgid "Data is consistent: each value is valid or unknown"
+msgstr "डेटा संगत है: प्रत्येक मान मान्य या अज्ञात है"
+
+msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
+msgstr "DataZen — डेटा सफ़ाई एप्लिकेशन (DataClean Pro) · ©"
+
+msgid "DataZen — Nettoyage de données"
+msgstr "DataZen — डेटा सफ़ाई"
+
+msgid "Date"
+msgstr "दिनांक"
+
+msgid "Date d'expiration"
+msgstr "समाप्ति तिथि"
+
+msgid "Date invalide"
+msgstr "अमान्य दिनांक"
+
+msgid "De l'import brut au rapport de qualité, DataZen couvre toute la chaîne."
+msgstr "कच्चे आयात से गुणवत्ता रिपोर्ट तक, DataZen पूरी प्रक्रिया कवर करता है।"
+
+msgid "Demander un nouveau lien"
+msgstr "नया लिंक अनुरोध करें"
+
+msgid "Dernier appel"
+msgstr "अंतिम कॉल"
+
+msgid "Dernier code HTTP"
+msgstr "अंतिम HTTP कोड"
+
+msgid "Dernier déclenchement"
+msgstr "अंतिम ट्रिगर"
+
+msgid "Dernier usage"
+msgstr "अंतिम उपयोग"
+
+msgid "Derniers fichiers"
+msgstr "नवीनतम फ़ाइलें"
+
+msgid "Dernière connexion"
+msgstr "अंतिम लॉग इन"
+
+msgid "Dernière utilisation"
+msgstr "अंतिम बार उपयोग"
+
+msgid "Dernières règles"
+msgstr "नवीनतम नियम"
+
+msgid "Des incohérences ont été détectées entre les statistiques et les données."
+msgstr "आँकड़ों और डेटा के बीच असंगतियाँ पाई गईं।"
+
+msgid "Dimension"
+msgstr "आयाम"
+
+msgid "Dimensions de qualité"
+msgstr "गुणवत्ता आयाम"
+
+msgid "Dispersion et valeurs extrêmes des colonnes numériques."
+msgstr "संख्यात्मक कॉलम का प्रसार और चरम मान।"
+
+msgid "Distributions des colonnes numériques"
+msgstr "संख्यात्मक स्तंभों का वितरण"
+
+msgid "Distributions numériques"
+msgstr "संख्यात्मक वितरण"
+
+msgid "Django · Pandas · Bootstrap"
+msgstr "Django · Pandas · Bootstrap"
+
+msgid "Doublon par similarité"
+msgstr "समानता के आधार पर डुप्लिकेट"
+
+msgid "Doublon potentiel"
+msgstr "संभावित डुप्लिकेट"
+
+msgid "Doublons"
+msgstr "डुप्लिकेट"
+
+msgid "Doublons exacts"
+msgstr "सटीक डुप्लिकेट"
+
+msgid "Doublons exacts :"
+msgstr "सटीक डुप्लिकेट:"
+
+msgid "Doublons exacts restants :"
+msgstr "शेष सटीक डुप्लिकेट:"
+
+msgid "Doublons par similarité :"
+msgstr "समानता के आधार पर डुप्लिकेट:"
+
+msgid "Doublons potentiels"
+msgstr "संभावित डुप्लिकेट"
+
+msgid "Doublons potentiels (⚠️ à vérifier) :"
+msgstr "संभावित डुप्लिकेट (⚠️ जाँचें):"
+
+msgid "Doublons potentiels :"
+msgstr "संभावित डुप्लिकेट:"
+
+msgid "Doublons potentiels restants :"
+msgstr "शेष संभावित डुप्लिकेट:"
+
+msgid "Doublons restants (exacts + potentiels)"
+msgstr "शेष डुप्लिकेट (सटीक + संभावित)"
+
+msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
+msgstr "डुप्लिकेट, अतिरिक्त रिक्त स्थान, खराब ईमेल, असंगत दिनांक… DataZen समस्याएँ पहचानता है और कुछ ही सेकंड में सब कुछ स्वतः ठीक कर देता है।"
+
+msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
+msgstr "डुप्लिकेट, अनुपलब्ध मान, रिक्त स्थान, केस, ईमेल, फ़ोन, दिनांक और वेतन सामान्यीकृत।"
+
+msgid "Durée de conservation"
+msgstr "प्रतिधारण अवधि"
+
+msgid "Durée de conservation (jours)"
+msgstr "प्रतिधारण अवधि (दिन)"
+
+msgid "Décision appliquée avec succès."
+msgstr "निर्णय सफलतापूर्वक लागू किया गया।"
+
+msgid "Déjà un compte ?"
+msgstr "पहले से खाता है?"
+
+msgid "Désactiver"
+msgstr "निष्क्रिय करें"
+
+msgid "Désactivée"
+msgstr "अक्षम"
+
+msgid "Détail"
+msgstr "विवरण"
+
+msgid "Détail par colonne"
+msgstr "कॉलम-वार विवरण"
+
+msgid "Détail par semaine"
+msgstr "सप्ताह-वार विवरण"
+
+msgid "Détails techniques"
+msgstr "तकनीकी विवरण"
+
+msgid "E-mail envoyé — DataZen"
+msgstr "ईमेल भेजा गया — DataZen"
+
+msgid "Effacer"
+msgstr "साफ़ करें"
+
+msgid "Effectif"
+msgstr "संख्या"
+
+msgid "Email invalide"
+msgstr "अमान्य ईमेल"
+
+msgid "Email nettoyé"
+msgstr "साफ़ किया गया ईमेल"
+
+msgid "Email original"
+msgstr "मूल ईमेल"
+
+msgid "Emails :"
+msgstr "ईमेल:"
+
+msgid "Emails corrected (change log vs counter)"
+msgstr "सुधारे गए ईमेल (परिवर्तन लॉग बनाम काउंटर)"
+
+msgid "Emails invalides :"
+msgstr "अमान्य ईमेल:"
+
+msgid "Emails invalides restants :"
+msgstr "शेष अमान्य ईमेल:"
+
+msgid "Emails restants :"
+msgstr "शेष ईमेल:"
+
+msgid "Emails: valid + invalid + unknown = total"
+msgstr "ईमेल: मान्य + अमान्य + अज्ञात = कुल"
+
+msgid "En attente"
+msgstr "प्रतीक्षारत"
+
+msgid "En cours de traitement"
+msgstr "प्रक्रिया में"
+
+msgid "En erreur"
+msgstr "त्रुटि में"
+
+msgid "En échec"
+msgstr "विफल"
+
+msgid "Enregistrer"
+msgstr "सहेजें"
+
+msgid "Enregistrer le nouveau mot de passe"
+msgstr "नया पासवर्ड सहेजें"
+
+msgid "Enregistrer les modifications"
+msgstr "परिवर्तन सहेजें"
+
+msgid "Entrée"
+msgstr "एंटर"
+
+msgid "Entrées"
+msgstr "प्रविष्टियाँ"
+
+msgid "Envoyer le lien de réinitialisation"
+msgstr "रीसेट लिंक भेजें"
+
+msgid "Erreur"
+msgstr "त्रुटि"
+
+msgid "Erreur de nettoyage"
+msgstr "सफ़ाई त्रुटि"
+
+msgid "Erreurs de format"
+msgstr "फ़ॉर्मैट त्रुटियाँ"
+
+msgid "Erreurs restantes"
+msgstr "शेष त्रुटियाँ"
+
+msgid "Excel (.xlsx)"
+msgstr "Excel (.xlsx)"
+
+msgid "Expiration"
+msgstr "समाप्ति"
+
+msgid "Expiré"
+msgstr "समय-समाप्त"
+
+msgid "Explication du score"
+msgstr "स्कोर की व्याख्या"
+
+msgid "Export & traçabilité"
+msgstr "निर्यात और ट्रेसबिलिटी"
+
+msgid "Fermer"
+msgstr "बंद करें"
+
+msgid "Fermer la fenêtre active"
+msgstr "सक्रिय विंडो बंद करें"
+
+msgid "Fichier"
+msgstr "फ़ाइल"
+
+msgid "Fichier de données"
+msgstr "डेटा फ़ाइल"
+
+msgid "Fichier nettoyé"
+msgstr "साफ़ की गई फ़ाइल"
+
+msgid "Fichier supprimé"
+msgstr "फ़ाइल हटाई गई"
+
+msgid "Fichier téléversé"
+msgstr "फ़ाइल अपलोड की गई"
+
+msgid "Fichier téléversé avec succès."
+msgstr "फ़ाइल सफलतापूर्वक अपलोड की गई।"
+
+msgid "Fichier « %(name)s » archivé."
+msgstr "फ़ाइल « %(name)s » संग्रहित की गई।"
+
+msgid "Fichier « %(name)s » restauré."
+msgstr "फ़ाइल « %(name)s » पुनर्स्थापित की गई।"
+
+msgid "Fichier « %(name)s » supprimé."
+msgstr "फ़ाइल ‘%(name)s’ हटा दी गई।"
+
+msgid "Fichiers"
+msgstr "फ़ाइलें"
+
+msgid "Fichiers archivés"
+msgstr "संग्रहित फ़ाइलें"
+
+msgid "Fichiers au total"
+msgstr "कुल फ़ाइलें"
+
+msgid "Fichiers de données"
+msgstr "डेटा फ़ाइलें"
+
+msgid "Fichiers expirés"
+msgstr "समय-समाप्त फ़ाइलें"
+
+msgid "Fichiers nettoyés avant le %(cutoff)s considérés comme expirés."
+msgstr "%(cutoff)s से पहले साफ़ की गई फ़ाइलें समय-समाप्त मानी जाती हैं।"
+
+msgid "Fichiers nettoyés plus anciens que cette durée (0 = conservation illimitée)."
+msgstr "इस अवधि से पुरानी साफ़ की गई फ़ाइलें (0 = असीमित प्रतिधारण)।"
+
+msgid "Fichiers récents"
+msgstr "हाल की फ़ाइलें"
+
+msgid "Fil d'Ariane"
+msgstr "ब्रेडक्रंब"
+
+msgid "Filtrer"
+msgstr "फ़िल्टर करें"
+
+msgid "Filtrer les lignes du tableau"
+msgstr "तालिका की पंक्तियाँ फ़िल्टर करें"
+
+msgid "Filtrer par action"
+msgstr "क्रिया से फ़िल्टर करें"
+
+msgid "Filtrer par statut"
+msgstr "स्थिति के अनुसार फ़िल्टर करें"
+
+msgid "Filtrer un tableau"
+msgstr "तालिका फ़िल्टर करें"
+
+msgid "Fonction"
+msgstr "फ़ंक्शन"
+
+msgid "Format de date"
+msgstr "दिनांक प्रारूप"
+
+msgid "Format de la charge utile"
+msgstr "पेलोड प्रारूप"
+
+msgid "Formats acceptés : <code>.csv</code>, <code>.xlsx</code>, <code>.xls</code> — jusqu'à 20 Mo."
+msgstr "स्वीकृत प्रारूप: <code>.csv</code>, <code>.xlsx</code>, <code>.xls</code> — अधिकतम 20 MB।"
+
+msgid "Formats de dates (%(column)s) :"
+msgstr "दिनांक प्रारूप (%(column)s):"
+
+msgid "Formats standardized (phones, dates)"
+msgstr "मानकीकृत प्रारूप (फ़ोन, दिनांक)"
+
+msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
+msgstr "समय बचाएँ: DataZen में हर महत्वपूर्ण चीज़ कुंजी संयोजन पर है।"
+
+msgid "Graphiques"
+msgstr "चार्ट"
+
+msgid "Graphiques générés avec matplotlib et seaborn à partir des données nettoyées."
+msgstr "साफ़ किए गए डेटा से matplotlib और seaborn के साथ बनाए गए चार्ट।"
+
+msgid "Graphiques générés côté serveur avec"
+msgstr "सर्वर-साइड पर बनाए गए चार्ट"
+
+msgid "Graphiques statistiques générés avec <strong>matplotlib</strong> et <strong>seaborn</strong> à partir des données nettoyées."
+msgstr "साफ़ किए गए डेटा से <strong>matplotlib</strong> और <strong>seaborn</strong> के साथ बनाए गए सांख्यिकीय चार्ट।"
+
+msgid "Gratuit, immédiat, et vos fichiers restent privés."
+msgstr "मुफ़्त, तुरंत, और आपकी फ़ाइलें निजी रहती हैं।"
+
+msgid "Gérer les règles…"
+msgstr "नियम प्रबंधित करें…"
+
+msgid "Histogrammes des colonnes numériques détectées."
+msgstr "पाई गई संख्यात्मक कॉलम के हिस्टोग्राम।"
+
+msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
+msgstr "अपलोड, सफ़ाई, निर्यात, API — आपकी क्रियाओं का समय-अंकित इतिहास।"
+
+msgid "Identité"
+msgstr "पहचान"
+
+msgid "Ignorer la casse (Alice = alice)"
+msgstr "बड़े और छोटे अक्षरों का अंतर अनदेखा करें (Alice = alice)"
+
+msgid "Import CSV & Excel"
+msgstr "CSV और Excel आयात"
+
+msgid "Impossible d'appliquer la décision : %(error)s"
+msgstr "निर्णय लागू नहीं किया जा सका: %(error)s"
+
+msgid "Impossible de convertir le fichier : %(error)s"
+msgstr "फ़ाइल परिवर्तित नहीं की जा सकी: %(error)s"
+
+msgid "Impossible de générer le PDF : %(error)s"
+msgstr "PDF नहीं बनाया जा सका: %(error)s"
+
+msgid "Impossible de lire ce fichier : %(error)s"
+msgstr "यह फ़ाइल पढ़ी नहीं जा सकी: %(error)s"
+
+msgid "Impossible de lire le fichier : %(error)s"
+msgstr "फ़ाइल पढ़ी नहीं जा सकी: %(error)s"
+
+msgid "Impossible de lire le rapport : %(error)s"
+msgstr "रिपोर्ट पढ़ी नहीं जा सकी: %(error)s"
+
+msgid "Inactif"
+msgstr "निष्क्रिय"
+
+msgid "Inactive"
+msgstr "निष्क्रिय"
+
+msgid "Inconnu"
+msgstr "अज्ञात"
+
+msgid "Indicateur"
+msgstr "संकेतक"
+
+msgid "Indicateurs comparés"
+msgstr "तुलना किए गए संकेतक"
+
+msgid "Indiquez votre adresse e-mail : nous vous enverrons un lien pour choisir un nouveau mot de passe."
+msgstr "अपना ईमेल पता दर्ज करें: हम आपको नया पासवर्ड चुनने के लिए लिंक भेजेंगे।"
+
+msgid "Information"
+msgstr "जानकारी"
+
+msgid "Informations professionnelles"
+msgstr "व्यावसायिक जानकारी"
+
+msgid "Inscription — DataZen"
+msgstr "पंजीकरण — DataZen"
+
+msgid "Intégration"
+msgstr "एकीकरण"
+
+msgid "Invalid emails are not counted as unknown or missing"
+msgstr "अमान्य ईमेल को अज्ञात या अनुपलब्ध नहीं गिना जाता"
+
+msgid "JJ/MM/AAAA"
+msgstr "JJ/MM/AAAA"
+
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+msgid "Jamais appelé"
+msgstr "कभी कॉल नहीं"
+
+msgid "Jauge du score de qualité global (sur 100)."
+msgstr "समग्र गुणवत्ता स्कोर गेज (100 में से)।"
+
+msgid "Jeton"
+msgstr "टोकन"
+
+msgid "Jeton créé. Copiez-le maintenant : il ne sera plus affiché."
+msgstr "टोकन बनाया गया। अभी कॉपी करें: यह दोबारा नहीं दिखाया जाएगा।"
+
+msgid "Jeton d'API"
+msgstr "API टोकन"
+
+msgid "Jeton « %(name)s » révoqué."
+msgstr "« %(name)s » टोकन निरस्त किया गया।"
+
+msgid "Jetons"
+msgstr "टोकन"
+
+msgid "Jetons d'API"
+msgstr "API टोकन"
+
+msgid "Journal d'activité"
+msgstr "गतिविधि लॉग"
+
+msgid "Journal d'activité — DataZen"
+msgstr "गतिविधि लॉग — DataZen"
+
+msgid "Journal des modifications"
+msgstr "परिवर्तन लॉग"
+
+msgid "Journal des modifications (extrait)"
+msgstr "परिवर्तन लॉग (अंश)"
+
+msgid "L'historique horodaté de chaque opération."
+msgstr "प्रत्येक कार्य का समय-अंकित इतिहास।"
+
+msgid "La comparaison n'est pas disponible : lancez d'abord un nettoyage sur ce fichier."
+msgstr "तुलना उपलब्ध नहीं: पहले इस फ़ाइल पर सफ़ाई चलाएँ।"
+
+msgid "La confirmation ne correspond pas à votre nom d'utilisateur : suppression annulée."
+msgstr "पुष्टि आपके उपयोगकर्ता नाम से मेल नहीं खाती: हटाना रद्द किया गया।"
+
+msgid "La suppression du compte efface définitivement vos fichiers, vos règles et votre profil. Cette action est irréversible."
+msgstr "खाता हटाने से आपकी फ़ाइलें, नियम और प्रोफ़ाइल स्थायी रूप से मिट जाती हैं। यह क्रिया अपरिवर्तनीय है।"
+
+msgid "Laisser vide pour appliquer à toutes les colonnes."
+msgstr "सभी कॉलम पर लागू करने के लिए खाली छोड़ें।"
+
+msgid "Laissez vide pour un jeton sans expiration."
+msgstr "बिना समाप्ति वाले टोकन के लिए खाली छोड़ें।"
+
+msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
+msgstr "खोजपूर्ण विश्लेषण के लिए पहले सफ़ाई शुरू करें।"
+
+msgid "Lancez d'abord un nettoyage pour générer un rapport PDF."
+msgstr "PDF रिपोर्ट बनाने के लिए पहले सफ़ाई चलाएँ।"
+
+msgid "Langue de l'interface"
+msgstr "इंटरफ़ेस भाषा"
+
+msgid "Le compte « %(username)s » a été supprimé."
+msgstr "खाता « %(username)s » हटा दिया गया।"
+
+msgid "Le fichier ne doit pas dépasser 20 Mo."
+msgstr "फ़ाइल 20 MB से अधिक नहीं होनी चाहिए।"
+
+msgid "Le journal conserve également %(days)s jours d'historique."
+msgstr "लॉग %(days)s दिन का इतिहास भी रखता है।"
+
+msgid "Le nettoyage a échoué."
+msgstr "सफ़ाई विफल रही।"
+
+msgid "Le nom d'hôte du webhook est introuvable."
+msgstr "वेबहुक का होस्ट नाम नहीं मिला।"
+
+msgid "Le nom d'hôte du webhook pointe vers une adresse interne."
+msgstr "वेबहुक का होस्ट नाम किसी आंतरिक पते की ओर इशारा करता है।"
+
+msgid "Le nom d'hôte est absent de l'URL."
+msgstr "URL में होस्ट नाम मौजूद नहीं है।"
+
+msgid "Le port est invalide."
+msgstr "पोर्ट अमान्य है।"
+
+msgid "Le thème « Système » suit les réglages de votre appareil."
+msgstr "« सिस्टम » थीम आपके डिवाइस की सेटिंग्स का पालन करती है।"
+
+msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
+msgstr "प्रक्रिया पृष्ठभूमि में चलती है। यह पृष्ठ पूरा होने पर स्वतः अपडेट हो जाता है।"
+
+msgid "Les adresses internes sont refusées."
+msgstr "आंतरिक पते अस्वीकार किए जाते हैं।"
+
+msgid "Les adresses locales sont refusées."
+msgstr "स्थानीय पते अस्वीकार किए जाते हैं।"
+
+msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
+msgstr "डुप्लिकेट चिह्नित किए जाते हैं, लेकिन अपने-आप नहीं हटाए जाते। उन्हें स्पष्ट रूप से हटाने के लिए यह बॉक्स चुनें।"
+
+msgid "Les fichiers archivés restent accessibles et téléchargeables."
+msgstr "संग्रहित फ़ाइलें सुलभ और डाउनलोड करने योग्य रहती हैं।"
+
+msgid "Les fichiers expirés seront supprimés automatiquement à votre prochaine visite."
+msgstr "समय-समाप्त फ़ाइलें आपकी अगली यात्रा पर स्वतः हटा दी जाएँगी।"
+
+msgid "Les fichiers nettoyés sont archivés après 30 jours."
+msgstr "साफ़ की गई फ़ाइलें 30 दिनों बाद संग्रहित हो जाती हैं।"
+
+msgid "Les fichiers nettoyés sont archivés puis purgés après cette durée (0 = conservation illimitée)."
+msgstr "साफ़ की गई फ़ाइलें संग्रहित की जाती हैं और इस अवधि के बाद हटा दी जाती हैं (0 = असीमित प्रतिधारण)।"
+
+msgid "Les identifiants intégrés à l'URL sont refusés."
+msgstr "URL में एम्बेड किए गए क्रेडेंशियल अस्वीकार किए जाते हैं।"
+
+msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
+msgstr "उपलब्ध रूट: /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/।"
+
+msgid "Les statistiques affichées correspondent aux données réelles."
+msgstr "दिखाए गए आँकड़े वास्तविक डेटा से मेल खाते हैं।"
+
+msgid "Lien invalide"
+msgstr "अमान्य लिंक"
+
+msgid "Ligne"
+msgstr "पंक्ति"
+
+msgid "Lignes"
+msgstr "पंक्तियाँ"
+
+msgid "Lignes après nettoyage"
+msgstr "सफ़ाई के बाद पंक्तियाँ"
+
+msgid "Lignes du journal des modifications"
+msgstr "परिवर्तन लॉग की पंक्तियाँ"
+
+msgid "Lignes traitées"
+msgstr "संसाधित पंक्तियाँ"
+
+msgid "Localisation"
+msgstr "स्थान"
+
+msgid "MM/JJ/AAAA"
+msgstr "MM/JJ/AAAA"
+
+msgid "Masquer"
+msgstr "छिपाएँ"
+
+msgid "Masquer le mot de passe"
+msgstr "पासवर्ड छिपाएँ"
+
+msgid "Matrice de corrélation"
+msgstr "सहसंबंध मैट्रिक्स"
+
+msgid "Matrice de corrélation (Pearson)"
+msgstr "सहसंबंध मैट्रिक्स (पियर्सन)"
+
+msgid "Max"
+msgstr "अधिकतम"
+
+msgid "Maîtrisez la durée de vie de vos données."
+msgstr "अपने डेटा के जीवनचक्र पर नियंत्रण रखें।"
+
+msgid "Membre depuis"
+msgstr "सदस्यता तिथि"
+
+msgid "Mes règles"
+msgstr "मेरे नियम"
+
+msgid "Mes règles de nettoyage"
+msgstr "मेरे सफ़ाई नियम"
+
+msgid "Mesuré avant et après le nettoyage."
+msgstr "सफ़ाई से पहले और बाद में मापा गया।"
+
+msgid "Mettre à jour le mot de passe"
+msgstr "पासवर्ड अपडेट करें"
+
+msgid "Min"
+msgstr "न्यूनतम"
+
+msgid "Missing values by column"
+msgstr "प्रति कॉलम अनुपलब्ध मान"
+
+msgid "Mode"
+msgstr "मोड"
+
+msgid "Modifier mes informations"
+msgstr "मेरी जानकारी संपादित करें"
+
+msgid "Modifiez votre mot de passe régulièrement et exportez vos données quand vous le souhaitez."
+msgstr "अपना पासवर्ड नियमित रूप से बदलें और जब चाहें अपना डेटा निर्यात करें।"
+
+msgid "Mon profil"
+msgstr "मेरी प्रोफ़ाइल"
+
+msgid "Mon profil — DataZen"
+msgstr "मेरी प्रोफ़ाइल — DataZen"
+
+msgid "Mot de passe"
+msgstr "पासवर्ड"
+
+msgid "Mot de passe modifié"
+msgstr "पासवर्ड बदला गया"
+
+msgid "Mot de passe modifié — DataZen"
+msgstr "पासवर्ड बदला गया — DataZen"
+
+msgid "Mot de passe oublié ?"
+msgstr "पासवर्ड भूल गए?"
+
+msgid "Mot de passe oublié — DataZen"
+msgstr "पासवर्ड भूल गए — DataZen"
+
+msgid "Motif"
+msgstr "पैटर्न"
+
+msgid "Motif attendu"
+msgstr "अपेक्षित पैटर्न"
+
+msgid "Moyenne"
+msgstr "औसत"
+
+msgid "Médiane"
+msgstr "माध्यिका"
+
+msgid "Méthode"
+msgstr "विधि"
+
+msgid "Nettoyage"
+msgstr "सफ़ाई"
+
+msgid "Nettoyage du fichier « %(name)s »"
+msgstr "« %(name)s » फ़ाइल की सफ़ाई"
+
+msgid "Nettoyage intelligent"
+msgstr "स्मार्ट सफ़ाई"
+
+msgid "Nettoyage intelligent · CSV & Excel"
+msgstr "स्मार्ट सफ़ाई · CSV और Excel"
+
+msgid "Nettoyage lancé en arrière-plan. La page se met à jour automatiquement."
+msgstr "सफ़ाई पृष्ठभूमि में शुरू की गई। पृष्ठ स्वतः अपडेट होता है।"
+
+msgid "Nettoyage lancé sur « %(name)s »"
+msgstr "« %(name)s » पर सफ़ाई शुरू हुई"
+
+msgid "Nettoyage terminé"
+msgstr "सफ़ाई पूरी हुई"
+
+msgid "Nettoyage terminé : « %(name)s »"
+msgstr "सफ़ाई पूरी हुई: « %(name)s »"
+
+msgid "Nettoyer"
+msgstr "साफ़ करें"
+
+msgid "Nettoyer un fichier"
+msgstr "फ़ाइल साफ़ करें"
+
+msgid "Nettoyez, normalisez et fiabilisez vos fichiers CSV et Excel en quelques clics — sans écrire une ligne de code."
+msgstr "अपनी CSV और Excel फ़ाइलों को कुछ क्लिक में साफ़ करें, सामान्यीकृत करें और विश्वसनीय बनाएँ — कोड की एक पंक्ति लिखे बिना।"
+
+msgid "Nettoyé"
+msgstr "साफ़ किया गया"
+
+msgid "Nettoyé le"
+msgstr "सफ़ाई की तिथि"
+
+msgid "Nettoyés"
+msgstr "साफ़ किए गए"
+
+msgid "Niveau"
+msgstr "स्तर"
+
+msgid "No exact duplicates"
+msgstr "कोई सटीक डुप्लिकेट नहीं"
+
+msgid "No missing or unknown values"
+msgstr "कोई अनुपलब्ध या अज्ञात मान नहीं"
+
+msgid "No potential duplicates"
+msgstr "कोई संभावित डुप्लिकेट नहीं"
+
+msgid "Nom"
+msgstr "नाम"
+
+msgid "Nom d'utilisateur"
+msgstr "उपयोगकर्ता नाम"
+
+msgid "Nom de la règle"
+msgstr "नियम का नाम"
+
+msgid "Nom de votre entreprise ou équipe"
+msgstr "आपकी कंपनी या टीम का नाम"
+
+msgid "Nom du jeton"
+msgstr "टोकन नाम"
+
+msgid "Nombre d'appels"
+msgstr "कॉल की संख्या"
+
+msgid "Nombre d'occurrences"
+msgstr "घटनाओं की संख्या"
+
+msgid "Nombre de nettoyages et score moyen par semaine."
+msgstr "प्रति सप्ताह सफ़ाई की संख्या और औसत स्कोर।"
+
+msgid "Nombre de valeurs aberrantes"
+msgstr "आउटलायर की संख्या"
+
+msgid "Nombre de valeurs aberrantes (méthode IQR) par colonne."
+msgstr "प्रति कॉलम आउटलायर की संख्या (IQR विधि)।"
+
+msgid "Normalisation de la casse (noms, libellés, villes)"
+msgstr "अक्षरों का केस सामान्य करना (नाम, लेबल, शहर)"
+
+msgid "Normalisation des catégories (%(count)s corrigée(s))"
+msgstr "श्रेणियाँ सामान्य करना (%(count)s सुधारे गए)"
+
+msgid "Normalisation des choix oui/non (%(count)s corrigé(s))"
+msgstr "हाँ/नहीं विकल्प सामान्य करना (%(count)s सुधारे गए)"
+
+msgid "Normalisation des codes/références (%(count)s corrigé(s))"
+msgstr "कोड/संदर्भ सामान्य करना (%(count)s सुधारे गए)"
+
+msgid "Normalisation des dates (%(count)s corrigée(s))"
+msgstr "तारीखें सामान्य करना (%(count)s सुधारी गईं)"
+
+msgid "Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "फ़ोन सामान्य करना (%(count)s सुधारे गए)"
+
+msgid "Normaliser la casse"
+msgstr "केस सामान्यीकृत करें"
+
+msgid "Normaliser la casse (emails en minuscules, noms en Capitales)"
+msgstr "अक्षरों का केस सामान्य करें (ईमेल छोटे अक्षरों में, नाम बड़े अक्षर से)"
+
+msgid "Normaliser les dates"
+msgstr "दिनांक सामान्यीकृत करें"
+
+msgid "Normaliser les dates (AAAA-MM-JJ)"
+msgstr "तारीखें सामान्य करें (YYYY-MM-DD)"
+
+msgid "Normaliser les emails"
+msgstr "ईमेल सामान्यीकृत करें"
+
+msgid "Normaliser les téléphones"
+msgstr "फ़ोन सामान्यीकृत करें"
+
+msgid "Normaliser les téléphones (06XXXXXXXX)"
+msgstr "फ़ोन नंबर सामान्य करें (06XXXXXXXX)"
+
+msgid "Notifications par email"
+msgstr "ईमेल सूचनाएँ"
+
+msgid "Nouveau jeton d API"
+msgstr "नया API टोकन"
+
+msgid "Nouveau mot de passe"
+msgstr "नया पासवर्ड"
+
+msgid "Nouveau mot de passe — DataZen"
+msgstr "नया पासवर्ड — DataZen"
+
+msgid "Nouvelle photo prête"
+msgstr "नई फ़ोटो तैयार"
+
+msgid "Nouvelle valeur"
+msgstr "नया मान"
+
+msgid "Opération"
+msgstr "संक्रिया"
+
+msgid "Opérations de nettoyage"
+msgstr "सफ़ाई कार्य"
+
+msgid "Organisation"
+msgstr "संगठन"
+
+msgid "Outils"
+msgstr "टूल"
+
+msgid "Outliers"
+msgstr "आउटलायर"
+
+msgid "Ouvrir"
+msgstr "खोलें"
+
+msgid "Ouvrir la recherche globale"
+msgstr "वैश्विक खोज खोलें"
+
+msgid "Ouvrir le résultat sélectionné"
+msgstr "चयनित परिणाम खोलें"
+
+msgid "Page"
+msgstr "पृष्ठ"
+
+msgid "Parcourir…"
+msgstr "ब्राउज़ करें…"
+
+msgid "Pas encore de compte ?"
+msgstr "अभी तक खाता नहीं है?"
+
+msgid "Pensez à regarder dans vos courriers indésirables. Le lien reste valable quelques heures."
+msgstr "अपने स्पैम फ़ोल्डर में देखना न भूलें। लिंक कुछ घंटों तक मान्य रहता है।"
+
+msgid "Personnalisez votre identité, votre photo et vos préférences."
+msgstr "अपनी पहचान, फ़ोटो और प्राथमिकताएँ अनुकूलित करें।"
+
+msgid "Photo de profil"
+msgstr "प्रोफ़ाइल फ़ोटो"
+
+msgid "Pilotage"
+msgstr "पायलटेज"
+
+msgid "Plus fréquent"
+msgstr "सबसे सामान्य"
+
+msgid "Poids"
+msgstr "भार"
+
+msgid "Politique en vigueur"
+msgstr "वर्तमान नीति"
+
+msgid "Pondération"
+msgstr "भार"
+
+msgid "Premier quartile"
+msgstr "प्रथम चतुर्थक"
+
+msgid "Prendre une photo avec la caméra"
+msgstr "कैमरे से फ़ोटो लें"
+
+msgid "Problème"
+msgstr "समस्या"
+
+msgid "Problèmes après"
+msgstr "बाद की समस्याएँ"
+
+msgid "Problèmes avant"
+msgstr "पहले की समस्याएँ"
+
+msgid "Problèmes détectés"
+msgstr "पाई गई समस्याएँ"
+
+msgid "Problèmes restants"
+msgstr "शेष समस्याएँ"
+
+msgid "Productivité"
+msgstr "उत्पादकता"
+
+msgid "Profil"
+msgstr "प्रोफ़ाइल"
+
+msgid "Profil de %(name)s — DataZen"
+msgstr "%(name)s की प्रोफ़ाइल — DataZen"
+
+msgid "Profil de %(username)s"
+msgstr "%(username)s की प्रोफ़ाइल"
+
+msgid "Profil public"
+msgstr "सार्वजनिक प्रोफ़ाइल"
+
+msgid "Profil visible publiquement"
+msgstr "सार्वजनिक रूप से दिखने वाली प्रोफ़ाइल"
+
+msgid "Profils"
+msgstr "प्रोफ़ाइलें"
+
+msgid "Progression"
+msgstr "प्रगति"
+
+msgid "Propriétaire"
+msgstr "स्वामी"
+
+msgid "Préfixe"
+msgstr "उपसर्ग"
+
+msgid "Préférences"
+msgstr "प्राथमिकताएँ"
+
+msgid "Prénom"
+msgstr "पहला नाम"
+
+msgid "Présentation"
+msgstr "परिचय"
+
+msgid "Purge automatique"
+msgstr "स्वचालित सफ़ाई"
+
+msgid "Purge automatique de %(count)s fichier(s) expiré(s)"
+msgstr "%(count)s समय-समाप्त फ़ाइलों की स्वचालित सफ़ाई"
+
+msgid "Purge de %(count)s fichier(s) expiré(s)"
+msgstr "%(count)s समय-समाप्त फ़ाइलों की सफ़ाई"
+
+msgid "Purger automatiquement"
+msgstr "स्वतः साफ़ करें"
+
+msgid "Purger automatiquement les fichiers expirés"
+msgstr "समय-समाप्त फ़ाइलें स्वतः साफ़ करें"
+
+msgid "Purger le journal"
+msgstr "लॉग खाली करें"
+
+msgid "Purger les anciennes entrées du journal ?"
+msgstr "पुरानी लॉग प्रविष्टियाँ खाली करें?"
+
+msgid "Q1"
+msgstr "Q1"
+
+msgid "Q3"
+msgstr "Q3"
+
+msgid "Qualité moyenne"
+msgstr "औसत गुणवत्ता"
+
+msgid "Qualité par colonne"
+msgstr "कॉलम-वार गुणवत्ता"
+
+msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
+msgstr "अपने, अपनी टीम और अपने डेटासेट के बारे में कुछ शब्द…"
+
+msgid "Raccourcis clavier"
+msgstr "कीबोर्ड शॉर्टकट"
+
+msgid "Raccourcis clavier — DataZen"
+msgstr "कीबोर्ड शॉर्टकट — DataZen"
+
+msgid "Raccourcis de navigation"
+msgstr "नेविगेशन शॉर्टकट"
+
+msgid "Raccourcis de nettoyage"
+msgstr "सफ़ाई शॉर्टकट"
+
+msgid "Raison"
+msgstr "कारण"
+
+msgid "Rapport"
+msgstr "रिपोर्ट"
+
+msgid "Rapport PDF de « %(name)s »"
+msgstr "« %(name)s » की PDF रिपोर्ट"
+
+msgid "Rapport de nettoyage"
+msgstr "सफ़ाई रिपोर्ट"
+
+msgid "Rapport de qualité des données"
+msgstr "डेटा गुणवत्ता रिपोर्ट"
+
+msgid "Rapport généré automatiquement par DataZen. Les scores sont calculés selon cinq dimensions pondérées : complétude, validité, unicité, cohérence et conformité."
+msgstr "DataZen द्वारा स्वतः बनाई गई रिपोर्ट। स्कोर पाँच भारित आयामों पर गणना किए जाते हैं: पूर्णता, वैधता, विशिष्टता, संगति और अनुरूपता।"
+
+msgid "Rapport — %(name)s"
+msgstr "रिपोर्ट — %(name)s"
+
+msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
+msgstr "सफ़ाई समाप्त होने, विफल होने या फ़ाइल अपलोड होने पर HTTP सूचना पाएँ।"
+
+msgid "Recevoir les notifications par email"
+msgstr "ईमेल सूचनाएँ प्राप्त करें"
+
+msgid "Recevoir un message lorsqu'un nettoyage se termine."
+msgstr "सफ़ाई पूरी होने पर संदेश प्राप्त करें।"
+
+msgid "Recherche en cours…"
+msgstr "खोज जारी…"
+
+msgid "Recherche globale"
+msgstr "वैश्विक खोज"
+
+msgid "Recherche momentanément indisponible."
+msgstr "खोज अभी उपलब्ध नहीं है।"
+
+msgid "Rechercher"
+msgstr "खोजें"
+
+msgid "Rechercher (Ctrl+K)"
+msgstr "खोजें (Ctrl+K)"
+
+msgid "Rechercher un fichier"
+msgstr "फ़ाइल खोजें"
+
+msgid "Rechercher un fichier ou une règle (Ctrl+K)"
+msgstr "फ़ाइल या नियम खोजें (Ctrl+K)"
+
+msgid "Rechercher un fichier, une règle, une page…"
+msgstr "फ़ाइल, नियम, पृष्ठ खोजें…"
+
+msgid "Rechercher un fichier…"
+msgstr "फ़ाइल खोजें…"
+
+msgid "Recommandation"
+msgstr "सिफ़ारिश"
+
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
+msgstr "नाम, ईमेल और फ़ोन नंबर को नियत छद्मनामों से बदलता है (एक ही मान → एक ही छद्मनाम)। पंक्तियों के बीच संबंध सुरक्षित रहते हैं।"
+
+msgid "Remplacer les valeurs manquantes"
+msgstr "गुम मान बदलें"
+
+msgid "Remplacez le jeton par le vôtre et lancez la commande."
+msgstr "टोकन को अपने टोकन से बदलें और कमांड चलाएँ।"
+
+msgid "Remplir les valeurs manquantes"
+msgstr "अनुपलब्ध मान भरें"
+
+msgid "Remplissage des valeurs manquantes par « %(value)s » (les montants, codes et dates ne reçoivent jamais un texte)"
+msgstr "छूटे मानों को ‘%(value)s’ से भरना (राशि, कोड और तारीख में टेक्स्ट नहीं भरा जाता)"
+
+msgid "Renseignées"
+msgstr "भरे गए"
+
+msgid "Renumérotation des identifiants (ancien id conservé)"
+msgstr "पहचानकर्ताओं को फिर से क्रमांकित करना (मूल ID सुरक्षित)"
+
+msgid "Reported %(reported)s vs recalculated %(actual)s"
+msgstr "रिपोर्ट किया गया %(reported)s बनाम पुनर्गणित %(actual)s"
+
+msgid "Restauration"
+msgstr "पुनर्स्थापन"
+
+msgid "Restauration de « %(name)s »"
+msgstr "« %(name)s » का पुनर्स्थापन"
+
+msgid "Restaurer"
+msgstr "पुनर्स्थापित करें"
+
+msgid "Retour à la connexion"
+msgstr "लॉग इन पर वापस जाएँ"
+
+msgid "Règle"
+msgstr "नियम"
+
+msgid "Règle de nettoyage"
+msgstr "सफ़ाई नियम"
+
+msgid "Règle « %(name)s » %(state)s."
+msgstr "नियम « %(name)s » %(state)s।"
+
+msgid "Règle « %(name)s » créée."
+msgstr "नियम « %(name)s » बनाया गया।"
+
+msgid "Règle « %(name)s » supprimée."
+msgstr "नियम « %(name)s » हटाया गया।"
+
+msgid "Règles"
+msgstr "नियम"
+
+msgid "Règles de nettoyage"
+msgstr "सफ़ाई नियम"
+
+msgid "Règles de nettoyage — DataZen"
+msgstr "सफ़ाई नियम — DataZen"
+
+msgid "Règles de validation regex personnalisées"
+msgstr "कस्टम regex सत्यापन नियम"
+
+msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
+msgstr "साफ़ की गई फ़ाइल, विस्तृत रिपोर्ट और पूरा परिवर्तन लॉग प्राप्त करें।"
+
+msgid "Réinitialiser"
+msgstr "रीसेट"
+
+msgid "Répartition des problèmes"
+msgstr "समस्याओं का वितरण"
+
+msgid "Répartition des problèmes restants"
+msgstr "शेष समस्याओं का वितरण"
+
+msgid "Résultats"
+msgstr "परिणाम"
+
+msgid "Rétention"
+msgstr "प्रतिधारण"
+
+msgid "Rétention des données"
+msgstr "डेटा प्रतिधारण"
+
+msgid "Rétention des données — DataZen"
+msgstr "डेटा प्रतिधारण — DataZen"
+
+msgid "Révocation de jeton"
+msgstr "टोकन निरस्त करें"
+
+msgid "Révocation du jeton « %(name)s »"
+msgstr "« %(name)s » टोकन का निरसन"
+
+msgid "Révoquer"
+msgstr "निरस्त करें"
+
+msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
+msgstr "यह टोकन निरस्त करें? इसका उपयोग करने वाले एकीकरण काम करना बंद कर देंगे।"
+
+msgid "Révoqué"
+msgstr "निरस्त"
+
+msgid "S'inscrire"
+msgstr "साइन अप करें"
+
+msgid "Saisissez <strong>%(username)s</strong> pour confirmer"
+msgstr "पुष्टि के लिए <strong>%(username)s</strong> दर्ज करें"
+
+msgid "Score"
+msgstr "स्कोर"
+
+msgid "Score après nettoyage"
+msgstr "सफ़ाई के बाद स्कोर"
+
+msgid "Score avant nettoyage"
+msgstr "सफ़ाई से पहले स्कोर"
+
+msgid "Score de la dimension"
+msgstr "आयाम स्कोर"
+
+msgid "Score de qualité"
+msgstr "गुणवत्ता स्कोर"
+
+msgid "Score de similarité :"
+msgstr "समानता स्कोर:"
+
+msgid "Score global"
+msgstr "समग्र स्कोर"
+
+msgid "Score global de qualité"
+msgstr "समग्र गुणवत्ता स्कोर"
+
+msgid "Score qualité"
+msgstr "गुणवत्ता स्कोर"
+
+msgid "Score qualité après"
+msgstr "सफ़ाई के बाद गुणवत्ता स्कोर"
+
+msgid "Score qualité avant"
+msgstr "सफ़ाई से पहले गुणवत्ता स्कोर"
+
+msgid "Se connecter"
+msgstr "लॉग इन करें"
+
+msgid "Se déconnecter"
+msgstr "लॉग आउट करें"
+
+msgid "Se déplacer dans les résultats"
+msgstr "परिणामों में घूमें"
+
+msgid "Sert uniquement à la réinitialisation du mot de passe."
+msgstr "केवल पासवर्ड रीसेट के लिए उपयोग किया जाता है।"
+
+msgid "Seuls les schémas http et https sont autorisés."
+msgstr "केवल http और https स्कीम की अनुमति है।"
+
+msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
+msgstr "यदि इस पते से कोई खाता मौजूद है, तो रीसेट लिंक वाला ईमेल अभी भेजा गया है।"
+
+msgid "Site web"
+msgstr "वेबसाइट"
+
+msgid "Sombre"
+msgstr "गहरा"
+
+msgid "Statut"
+msgstr "स्थिति"
+
+msgid "Succès"
+msgstr "सफल"
+
+msgid "Superutilisateur"
+msgstr "सुपरयूज़र"
+
+msgid "Suppression"
+msgstr "हटाना"
+
+msgid "Suppression de la règle « %(name)s »"
+msgstr "« %(name)s » नियम हटाना"
+
+msgid "Suppression de règle"
+msgstr "नियम हटाना"
+
+msgid "Suppression de « %(name)s »"
+msgstr "« %(name)s » हटाना"
+
+msgid "Suppression des doublons exacts (%(count)s supprimé(s))"
+msgstr "पूरी तरह समान डुप्लिकेट हटाना (%(count)s हटाए गए)"
+
+msgid "Suppression des doublons sur « %(column)s » (%(count)s supprimé(s))"
+msgstr "‘%(column)s’ के आधार पर डुप्लिकेट हटाना (%(count)s हटाए गए)"
+
+msgid "Suppression des espaces superflus"
+msgstr "अतिरिक्त खाली जगह हटाना"
+
+msgid "Supprimer %(name)s"
+msgstr "%(name)s हटाएँ"
+
+msgid "Supprimer ce webhook ?"
+msgstr "यह webhook हटाएँ?"
+
+msgid "Supprimer définitivement ce fichier et toutes ses données ?"
+msgstr "इस फ़ाइल और इसका सारा डेटा स्थायी रूप से हटाएँ?"
+
+msgid "Supprimer définitivement les fichiers expirés ? Cette action est irréversible."
+msgstr "समय-समाप्त फ़ाइलें स्थायी रूप से हटाएँ? यह क्रिया अपरिवर्तनीय है।"
+
+msgid "Supprimer définitivement les fichiers expirés au lieu de les archiver."
+msgstr "समय-समाप्त फ़ाइलों को संग्रहित करने के बजाय स्थायी रूप से हटाएँ।"
+
+msgid "Supprimer définitivement « %(name)s » ?"
+msgstr "« %(name)s » को स्थायी रूप से हटाएँ?"
+
+msgid "Supprimer les doublons"
+msgstr "डुप्लिकेट हटाएँ"
+
+msgid "Supprimer les doublons (confirmation requise)"
+msgstr "डुप्लिकेट हटाएँ (पुष्टि आवश्यक)"
+
+msgid "Supprimer les espaces superflus"
+msgstr "अतिरिक्त खाली जगह हटाएँ"
+
+msgid "Supprimer mon compte"
+msgstr "मेरा खाता हटाएँ"
+
+msgid "Synthèse"
+msgstr "सार"
+
+msgid "Système"
+msgstr "सिस्टम"
+
+msgid "Sécurité"
+msgstr "सुरक्षा"
+
+msgid "Sélectionner un fichier"
+msgstr "एक फ़ाइल चुनें"
+
+msgid "Tableau de bord"
+msgstr "डैशबोर्ड"
+
+msgid "Tableau de bord — DataZen"
+msgstr "डैशबोर्ड — DataZen"
+
+msgid "Tapez au moins deux caractères pour lancer la recherche."
+msgstr "खोज शुरू करने के लिए कम से कम दो अक्षर लिखें।"
+
+msgid "Taux de complétude (%)"
+msgstr "पूर्णता दर (%)"
+
+msgid "Taux de remplissage de chaque colonne (les plus incomplètes d'abord)."
+msgstr "प्रत्येक कॉलम की भराव दर (सबसे अपूर्ण पहले)।"
+
+msgid "Technologies"
+msgstr "तकनीकें"
+
+msgid "Tester"
+msgstr "परीक्षण करें"
+
+msgid "Thème préféré"
+msgstr "पसंदीदा थीम"
+
+msgid "Top des catégories"
+msgstr "शीर्ष श्रेणियाँ"
+
+msgid "Total missing values"
+msgstr "कुल अनुपलब्ध मान"
+
+msgid "Tous vos indicateurs de qualité réunis."
+msgstr "आपके सभी गुणवत्ता संकेतक एक स्थान पर।"
+
+msgid "Tout est inclus"
+msgstr "सब कुछ शामिल है"
+
+msgid "Tout voir"
+msgstr "सब देखें"
+
+msgid "Toutes les actions"
+msgstr "सभी क्रियाएँ"
+
+msgid "Traçabilité"
+msgstr "ट्रेसबिलिटी"
+
+msgid "Troisième quartile"
+msgstr "तृतीय चतुर्थक"
+
+msgid "Type"
+msgstr "प्रकार"
+
+msgid "Type de correction"
+msgstr "सुधार का प्रकार"
+
+msgid "Téléchargement"
+msgstr "डाउनलोड"
+
+msgid "Téléchargement de « %(name)s »"
+msgstr "« %(name)s » का डाउनलोड"
+
+msgid "Téléphone invalide"
+msgstr "अमान्य फ़ोन"
+
+msgid "Téléphone non standard"
+msgstr "गैर-मानक फ़ोन"
+
+msgid "Téléphones non standard (%(column)s) :"
+msgstr "गैर-मानक फ़ोन (%(column)s):"
+
+msgid "Téléversement"
+msgstr "अपलोड"
+
+msgid "Téléversement de « %(name)s »"
+msgstr "« %(name)s » का अपलोड"
+
+msgid "Téléverser un fichier"
+msgstr "फ़ाइल अपलोड करें"
+
+msgid "Téléversez votre fichier"
+msgstr "अपनी फ़ाइल अपलोड करें"
+
+msgid "Téléversé"
+msgstr "अपलोड किया गया"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "URL de destination"
+msgstr "लक्ष्य URL"
+
+msgid "URL illisible."
+msgstr "URL पढ़ा नहीं जा सका।"
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page."
+msgstr "इस पृष्ठ से प्रशासक खाता हटाया नहीं जा सकता।"
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
+msgstr "इस पृष्ठ से प्रशासक खाता हटाया नहीं जा सकता। उपयोग करें"
+
+msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
+msgstr "एक डैशबोर्ड सफ़ाई से पहले / बाद की गुणवत्ता मापता है और खोए प्रत्येक अंक की व्याख्या करता है।"
+
+msgid "Une URL de destination est requise."
+msgstr "गंतव्य URL आवश्यक है।"
+
+msgid "Une boîte à outils complète"
+msgstr "एक पूर्ण टूलकिट"
+
+msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
+msgstr "हर पंक्ति में « कॉलम:पैटर्न » प्रारूप में एक नियम लिखें। उदाहरण: « पिन_कोड:^\\d{5}$ ». मेल न खाने वाले मान चिह्नित होंगे (बदले नहीं जाएँगे)।"
+
+msgid "Uniques"
+msgstr "अद्वितीय"
+
+msgid "Unknown"
+msgstr "अज्ञात"
+
+msgid "Unknown emails included in the unknown-value statistic"
+msgstr "अज्ञात ईमेल अज्ञात-मान आँकड़े में शामिल"
+
+msgid "Unknown values by column"
+msgstr "प्रति कॉलम अज्ञात मान"
+
+msgid "Utilisateur"
+msgstr "उपयोगकर्ता"
+
+msgid "Utilisation de l'API"
+msgstr "API उपयोग"
+
+msgid "Valeur"
+msgstr "मान"
+
+msgid "Valeur aberrante"
+msgstr "आउटलायर"
+
+msgid "Valeur de remplacement"
+msgstr "बदलने का मान"
+
+msgid "Valeur de remplacement (pour le remplissage)."
+msgstr "प्रतिस्थापन मान (भरने के लिए)।"
+
+msgid "Valeur manquante"
+msgstr "अनुपलब्ध मान"
+
+msgid "Valeur numérique invalide"
+msgstr "अमान्य संख्यात्मक मान"
+
+msgid "Valeurs aberrantes"
+msgstr "आउटलायर"
+
+msgid "Valeurs aberrantes par colonne (méthode IQR)"
+msgstr "प्रति स्तंभ आउटलायर (IQR विधि)"
+
+msgid "Valeurs les plus fréquentes"
+msgstr "सर्वाधिक बार आने वाले मान"
+
+msgid "Valeurs les plus fréquentes des colonnes catégorielles."
+msgstr "श्रेणीबद्ध कॉलम के सबसे सामान्य मान।"
+
+msgid "Valeurs manquantes"
+msgstr "अनुपलब्ध मान"
+
+msgid "Valeurs manquantes :"
+msgstr "अनुपलब्ध मान:"
+
+msgid "Valeurs manquantes restantes"
+msgstr "शेष अनुपलब्ध मान"
+
+msgid "Valeurs manquantes restantes :"
+msgstr "शेष अनुपलब्ध मान:"
+
+msgid "Valeurs uniques"
+msgstr "अद्वितीय मान"
+
+msgid "Valeurs « Inconnu »"
+msgstr "« अज्ञात » मान"
+
+msgid "Valeurs « Inconnu » :"
+msgstr "« अज्ञात » मान:"
+
+msgid "Validation et correction des emails (%(corrected)s corrigé(s), %(invalid)s invalide(s))"
+msgstr "ईमेल सत्यापित और ठीक करना (%(corrected)s सुधारे गए, %(invalid)s अमान्य)"
+
+msgid "Valider et corriger les emails (erreurs évidentes seulement)"
+msgstr "ईमेल की जाँच और सुधार करें (केवल स्पष्ट त्रुटियाँ)"
+
+msgid "Validité"
+msgstr "वैधता"
+
+msgid "Visualisations statistiques"
+msgstr "सांख्यिकीय दृश्यावलोकन"
+
+msgid "Voir l'analyse complète →"
+msgstr "पूरा विश्लेषण देखें →"
+
+msgid "Volume"
+msgstr "मात्रा"
+
+msgid "Volume des anomalies restantes par catégorie."
+msgstr "श्रेणी के अनुसार शेष विसंगतियों की मात्रा।"
+
+msgid "Vos données"
+msgstr "आपका डेटा"
+
+msgid "Vos données méritent<br> <span class=\"dz-gradient-text\">d'être impeccables.</span>"
+msgstr "आपका डेटा<br> <span class=\"dz-gradient-text\">त्रुटिहीन होने योग्य है।</span>"
+
+msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
+msgstr "आपकी फ़ाइलें आपके पास रहती हैं। DataZen बताता है कि चुनी गई प्रतिधारण अवधि से क्या आगे है और आपकी सहमति के बिना कुछ नहीं हटाता।"
+
+msgid "Votre espace de travail"
+msgstr "आपका कार्यक्षेत्र"
+
+msgid "Votre mot de passe a bien été enregistré. Vous pouvez maintenant vous connecter avec celui-ci."
+msgstr "आपका पासवर्ड सहेज लिया गया है। अब आप इससे लॉग इन कर सकते हैं।"
+
+msgid "Votre mot de passe a été modifié. Vos autres sessions restent actives."
+msgstr "आपका पासवर्ड बदल दिया गया है। आपके अन्य सत्र सक्रिय रहते हैं।"
+
+msgid "Votre nom d'utilisateur <strong>@%(username)s</strong> ne peut pas être modifié."
+msgstr "आपका उपयोगकर्ता नाम <strong>@%(username)s</strong> बदला नहीं जा सकता।"
+
+msgid "Votre photo de profil a été supprimée."
+msgstr "आपकी प्रोफ़ाइल फ़ोटो हटा दी गई है।"
+
+msgid "Votre profil a été mis à jour."
+msgstr "आपकी प्रोफ़ाइल अपडेट कर दी गई है।"
+
+msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
+msgstr "नियंत्रण आपके पास है: आपकी क्रिया के बिना कुछ नहीं हटाया जाता।"
+
+msgid "Vous n'avez pas accès à ce fichier."
+msgstr "आपके पास इस फ़ाइल तक पहुँच नहीं है।"
+
+msgid "Vous n'avez pas accès à ce jeton."
+msgstr "आपके पास इस टोकन तक पहुँच नहीं है।"
+
+msgid "Vous n'avez pas accès à ce webhook."
+msgstr "आपके पास इस webhook तक पहुँच नहीं है।"
+
+msgid "Vous n'avez pas accès à cette règle."
+msgstr "आपके पास इस नियम तक पहुँच नहीं है।"
+
+msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
+msgstr "सभी फ़ाइलों सहित आपके डेटा गुणवत्ता का समेकित दृश्य।"
+
+msgid "Vue d'ensemble"
+msgstr "अवलोकन"
+
+msgid "Vérifiez votre boîte mail"
+msgstr "अपना ईमेल इनबॉक्स जाँचें"
+
+msgid "Webhook"
+msgstr "Webhook"
+
+msgid "Webhook « %(name)s » %(state)s."
+msgstr "Webhook « %(name)s » %(state)s।"
+
+msgid "Webhook « %(name)s » : test réussi (HTTP %(status)s)."
+msgstr "Webhook « %(name)s »: परीक्षण सफल (HTTP %(status)s)।"
+
+msgid "Webhook « %(name)s » : test échoué (HTTP %(status)s). Vérifiez l'URL et que le service accepte les appels entrants."
+msgstr "Webhook « %(name)s »: परीक्षण विफल (HTTP %(status)s)। URL जाँचें और देखें कि सेवा आने वाली कॉल स्वीकार करती है।"
+
+msgid "Webhook « %(name)s » créé."
+msgstr "Webhook « %(name)s » बनाया गया।"
+
+msgid "Webhook « %(name)s » supprimé."
+msgstr "Webhook « %(name)s » हटाया गया।"
+
+msgid "Webhooks"
+msgstr "Webhook"
+
+msgid "Webhooks — DataZen"
+msgstr "Webhook — DataZen"
+
+msgid "YYYY-MM-DD"
+msgstr "YYYY-MM-DD"
+
+msgid "[Règle] Anonymisation (%(count)s valeur(s))"
+msgstr "[नियम] गुमनाम करना (%(count)s मान)"
+
+msgid "[Règle] Conversion des montants (%(count)s converti(s))"
+msgstr "[नियम] राशियाँ बदलना (%(count)s बदली गईं)"
+
+msgid "[Règle] Normalisation de la casse"
+msgstr "[नियम] अक्षरों का केस सामान्य करना"
+
+msgid "[Règle] Normalisation des dates (%(count)s corrigée(s))"
+msgstr "[नियम] तारीखें सामान्य करना (%(count)s सुधारी गईं)"
+
+msgid "[Règle] Normalisation des emails (%(count)s corrigé(s))"
+msgstr "[नियम] ईमेल सामान्य करना (%(count)s सुधारे गए)"
+
+msgid "[Règle] Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "[नियम] फ़ोन सामान्य करना (%(count)s सुधारे गए)"
+
+msgid "[Règle] Remplissage des valeurs manquantes par « %(value)s »"
+msgstr "[नियम] छूटे मानों को ‘%(value)s’ से भरना"
+
+msgid "[Règle] Suppression des doublons (%(count)s supprimé(s))"
+msgstr "[नियम] डुप्लिकेट हटाना (%(count)s हटाए गए)"
+
+msgid "[Règle] Suppression des espaces superflus"
+msgstr "[नियम] अतिरिक्त खाली जगह हटाना"
+
+msgid "actif"
+msgstr "सक्रिय"
+
+msgid "activé"
+msgstr "सक्षम"
+
+msgid "activée"
+msgstr "सक्रिय"
+
+msgid "ajoutée"
+msgstr "जोड़ा गया"
+
+msgid "améliorée"
+msgstr "बेहतर हुआ"
+
+msgid "bonne qualité"
+msgstr "अच्छी गुणवत्ता"
+
+msgid "catégorie"
+msgstr "श्रेणी"
+
+msgid "cohérence"
+msgstr "संगति"
+
+msgid "colonne : %(name)s"
+msgstr "कॉलम: %(name)s"
+
+msgid "complétude"
+msgstr "पूर्णता"
+
+msgid "conformité"
+msgstr "अनुपालन"
+
+msgid "conservée (non inventée)"
+msgstr "सुरक्षित रखा गया (बनाया नहीं गया)"
+
+msgid "console d'administration"
+msgstr "प्रशासन कंसोल"
+
+msgid "date"
+msgstr "दिनांक"
+
+msgid "donnée absente"
+msgstr "डेटा अनुपलब्ध"
+
+msgid "désactivé"
+msgstr "अक्षम"
+
+msgid "désactivée"
+msgstr "निष्क्रिय"
+
+msgid "détail"
+msgstr "विवरण"
+
+msgid "email"
+msgstr "ईमेल"
+
+msgid "et"
+msgstr "और"
+
+msgid "ex : 0 ou Inconnu"
+msgstr "उदा.: 0 या अज्ञात"
+
+msgid "ex : Emails en minuscules"
+msgstr "उदा.: ईमेल छोटे अक्षरों में"
+
+msgid "ex : Intégration Power BI"
+msgstr "जैसे Power BI एकीकरण"
+
+msgid "ex : Slack — nettoyages"
+msgstr "जैसे Slack — सफ़ाई"
+
+msgid "ex : email (vide = toutes les colonnes)"
+msgstr "उदा.: email (खाली = सभी कॉलम)"
+
+msgid "excellente qualité"
+msgstr "उत्कृष्ट गुणवत्ता"
+
+msgid "fermer"
+msgstr "बंद करें"
+
+msgid "format invalide"
+msgstr "अमान्य प्रारूप"
+
+msgid "format non reconnu"
+msgstr "अपरिचित प्रारूप"
+
+msgid "généré le"
+msgstr "बनाया गया"
+
+msgid "https://exemple.com"
+msgstr "https://exemple.com"
+
+msgid "https://hooks.exemple.com/datazen"
+msgstr "https://hooks.example.com/datazen"
+
+msgid "identifiant"
+msgstr "पहचानकर्ता"
+
+msgid "inactive"
+msgstr "निष्क्रिय"
+
+msgid "inchangé"
+msgstr "अपरिवर्तित"
+
+msgid "jours"
+msgstr "दिन"
+
+msgid "lignes"
+msgstr "पंक्तियाँ"
+
+msgid "longueur/format incorrect"
+msgstr "गलत लंबाई/प्रारूप"
+
+msgid "matplotlib"
+msgstr "matplotlib"
+
+msgid "naviguer"
+msgstr "नेविगेट करें"
+
+msgid "non évalué"
+msgstr "मूल्यांकित नहीं"
+
+msgid "numérique"
+msgstr "संख्यात्मक"
+
+msgid "opération : %(name)s"
+msgstr "ऑपरेशन: %(name)s"
+
+msgid "ouvrir"
+msgstr "खोलें"
+
+msgid "points"
+msgstr "अंक"
+
+msgid "pour «"
+msgstr "« के लिए"
+
+msgid "premières lignes."
+msgstr "पहली पंक्तियाँ।"
+
+msgid "qualité faible"
+msgstr "कम गुणवत्ता"
+
+msgid "qualité moyenne"
+msgstr "मध्यम गुणवत्ता"
+
+msgid "référence"
+msgstr "संदर्भ"
+
+msgid "révoqué"
+msgstr "निरस्त"
+
+msgid "score"
+msgstr "स्कोर"
+
+msgid "score %(before)s → %(after)s"
+msgstr "स्कोर %(before)s → %(after)s"
+
+msgid "seaborn"
+msgstr "seaborn"
+
+msgid "stable"
+msgstr "स्थिर"
+
+msgid "supprimée"
+msgstr "हटाया गया"
+
+msgid "sur"
+msgstr "पर"
+
+msgid "texte"
+msgstr "पाठ"
+
+msgid "téléphone"
+msgstr "फ़ोन"
+
+msgid "unicité"
+msgstr "विशिष्टता"
+
+msgid "valeur(s) extrême(s)"
+msgstr "चरम मान"
+
+msgid "validité"
+msgstr "वैधता"
+
+msgid "· ancien_id :"
+msgstr "· पुराना_id:"
+
+msgid "· statut filtré"
+msgstr "· फ़िल्टर की गई स्थिति"
+
+msgid "À compléter :"
+msgstr "पूरा करना है:"
+
+msgid "Écart"
+msgstr "अंतर"
+
+msgid "Écart-type"
+msgstr "मानक विचलन"
+
+msgid "Échap"
+msgstr "एस्केप"
+
+msgid "Échec du nettoyage"
+msgstr "सफ़ाई विफल"
+
+msgid "Échec du nettoyage de « %(name)s »"
+msgstr "« %(name)s » की सफ़ाई विफल"
+
+msgid "Étape 1"
+msgstr "चरण 1"
+
+msgid "État"
+msgstr "स्थिति"
+
+msgid "Évolution hebdomadaire du score de qualité"
+msgstr "गुणवत्ता स्कोर का साप्ताहिक विकास"
+
+msgid "Événement"
+msgstr "घटना"
+
+msgid "Événement déclencheur"
+msgstr "ट्रिगर घटना"
+
+msgid "à corriger manuellement"
+msgstr "मैन्युअल रूप से ठीक करना है"
+
+msgid "à partir des données nettoyées."
+msgstr "साफ़ किए गए डेटा से।"
+
+msgid "à vérifier"
+msgstr "जाँचने योग्य"
+
+msgid "à vérifier manuellement"
+msgstr "मैन्युअल रूप से जाँचना है"
+
+msgid "—"
+msgstr "—"
+
+msgid "— Choisir une action —"
+msgstr "— कोई क्रिया चुनें —"
+
+msgid "— Tous les statuts —"
+msgstr "— सभी स्थितियाँ —"
+
+msgid "— Toutes les colonnes —"
+msgstr "— सभी कॉलम —"
+
+msgid "← Retour au fichier"
+msgstr "← फ़ाइल पर वापस जाएँ"
+
+msgid "⌨️ Raccourcis"
+msgstr "⌨️ शॉर्टकट"
+
+msgid "⌨️ Raccourcis clavier"
+msgstr "⌨️ कीबोर्ड शॉर्टकट"
+
+msgid "⏳ Fichiers expirés"
+msgstr "⏳ समय-समाप्त फ़ाइलें"
+
+msgid "⏳ Nettoyage en cours…"
+msgstr "⏳ सफ़ाई जारी है…"
+
+msgid "⚙️ Règles de nettoyage personnalisées"
+msgstr "⚙️ कस्टम सफ़ाई नियम"
+
+msgid "⚙️ Règles personnalisées"
+msgstr "⚙️ कस्टम नियम"
+
+msgid "⚙️ Régler la durée"
+msgstr "⚙️ अवधि समायोजित करें"
+
+msgid "⚠️ Points nécessitant une vérification humaine"
+msgstr "⚠️ मानवीय जाँच आवश्यक बिंदु"
+
+msgid "⚠️ Problèmes restants (tous fichiers)"
+msgstr "⚠️ शेष समस्याएँ (सभी फ़ाइलें)"
+
+msgid "⚠️ Valeurs signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ केवल चिह्नित मान — कभी स्वतः नहीं बदले जाते।"
+
+msgid "⚠️ Zone de danger"
+msgstr "⚠️ खतरे का क्षेत्र"
+
+msgid "⚠️ À vérifier manuellement (jamais supprimés automatiquement)."
+msgstr "⚠️ मैन्युअल रूप से जाँचें (कभी स्वतः नहीं हटाए जाते)।"
+
+msgid "⚪ Conserver toutes les lignes"
+msgstr "⚪ सभी पंक्तियाँ रखें"
+
+msgid "⚪ Ignorer (examiné, conserver)"
+msgstr "⚪ अनदेखा करें (समीक्षित, रखें)"
+
+msgid "⚪ Valeurs « Inconnu » ("
+msgstr "⚪ « अज्ञात » मान ("
+
+msgid "✅ Aucun doublon potentiel à vérifier."
+msgstr "✅ जाँचने के लिए कोई संभावित डुप्लिकेट नहीं।"
+
+msgid "✅ Aucune vérification manuelle nécessaire"
+msgstr "✅ कोई मैन्युअल जाँच आवश्यक नहीं"
+
+msgid "✅ Résultat du nettoyage"
+msgstr "✅ सफ़ाई का परिणाम"
+
+msgid "✅ Validation après nettoyage"
+msgstr "✅ सफ़ाई के बाद सत्यापन"
+
+msgid "✅ Votre profil est complet."
+msgstr "✅ आपकी प्रोफ़ाइल पूर्ण है।"
+
+msgid "✏️ Modifier mon profil"
+msgstr "✏️ मेरी प्रोफ़ाइल संपादित करें"
+
+msgid "✓ Copié"
+msgstr "✓ कॉपी किया गया"
+
+msgid "➕ Nouveau jeton"
+msgstr "➕ नया टोकन"
+
+msgid "➕ Nouveau webhook"
+msgstr "➕ नया webhook"
+
+msgid "➕ Nouvelle règle"
+msgstr "➕ नया नियम"
+
+msgid "➕ Téléverser un fichier"
+msgstr "➕ फ़ाइल अपलोड करें"
+
+msgid "⬇️ Exporter mes données (JSON)"
+msgstr "⬇️ मेरा डेटा निर्यात करें (JSON)"
+
+msgid "⬇️ Télécharger le fichier nettoyé"
+msgstr "⬇️ साफ़ की गई फ़ाइल डाउनलोड करें"
+
+msgid "🌍 Navigation"
+msgstr "🌍 नेविगेशन"
+
+msgid "🌐 HTML (.html)"
+msgstr "🌐 HTML (.html)"
+
+msgid "🌐 Rapport HTML avec graphiques"
+msgstr "🌐 चार्ट के साथ HTML रिपोर्ट"
+
+msgid "🎯 Répartition par niveau de qualité"
+msgstr "🎯 गुणवत्ता स्तर के अनुसार वितरण"
+
+msgid "🎯 Score qualité"
+msgstr "🎯 गुणवत्ता स्कोर"
+
+msgid "🏆 Meilleurs résultats"
+msgstr "🏆 सर्वोत्तम परिणाम"
+
+msgid "👀 Aperçu des données brutes (avant nettoyage)"
+msgstr "👀 कच्चे डेटा का पूर्वावलोकन (सफ़ाई से पहले)"
+
+msgid "👁️ Consulter le rapport"
+msgstr "👁️ रिपोर्ट देखें"
+
+msgid "👤 Mon profil"
+msgstr "👤 मेरी प्रोफ़ाइल"
+
+msgid "📈 Analyse exploratoire"
+msgstr "📈 खोजपूर्ण विश्लेषण"
+
+msgid "📈 Statistiques descriptives"
+msgstr "📈 वर्णनात्मक आँकड़े"
+
+msgid "📈 Valeurs aberrantes"
+msgstr "📈 आउटलायर"
+
+msgid "📈 Visualisations statistiques"
+msgstr "📈 सांख्यिकीय दृश्यावलोकन"
+
+msgid "📈 Évolution du score (12 semaines)"
+msgstr "📈 स्कोर का विकास (12 सप्ताह)"
+
+msgid "📉 Fichiers à traiter en priorité"
+msgstr "📉 प्राथमिकता वाली फ़ाइलें"
+
+msgid "📉 Répartition des problèmes"
+msgstr "📉 समस्याओं का वितरण"
+
+msgid "📊 Activité récente"
+msgstr "📊 हाल की गतिविधि"
+
+msgid "📊 Dashboard Data Quality"
+msgstr "📊 डेटा गुणवत्ता डैशबोर्ड"
+
+msgid "📊 Dimensions de qualité"
+msgstr "📊 गुणवत्ता आयाम"
+
+msgid "📊 Tableau de bord"
+msgstr "📊 डैशबोर्ड"
+
+msgid "📊 Tableau de bord global"
+msgstr "📊 वैश्विक डैशबोर्ड"
+
+msgid "📋 Mes règles ("
+msgstr "📋 मेरे नियम ("
+
+msgid "📋 Qualité des colonnes"
+msgstr "📋 कॉलम गुणवत्ता"
+
+msgid "📋 Rapport de nettoyage"
+msgstr "📋 सफ़ाई रिपोर्ट"
+
+msgid "📋 Télécharger le rapport"
+msgstr "📋 रिपोर्ट डाउनलोड करें"
+
+msgid "📕 Rapport PDF"
+msgstr "📕 PDF रिपोर्ट"
+
+msgid "📝 Journal des modifications"
+msgstr "📝 परिवर्तन लॉग"
+
+msgid "📥 Fichier d'origine"
+msgstr "📥 मूल फ़ाइल"
+
+msgid "📥 Markdown (.md)"
+msgstr "📥 Markdown (.md)"
+
+msgid "📥 Télécharger le rapport complet"
+msgstr "📥 पूरी रिपोर्ट डाउनलोड करें"
+
+msgid "📦 Archives"
+msgstr "📦 संग्रह"
+
+msgid "📷 Prendre une photo"
+msgstr "📷 फ़ोटो लें"
+
+msgid "🔌 API et jetons d'accès"
+msgstr "🔌 API और एक्सेस टोकन"
+
+msgid "🔌 Jetons d'API"
+msgstr "🔌 API टोकन"
+
+msgid "🔍 Avant / après"
+msgstr "🔍 पहले / बाद"
+
+msgid "🔍 Comparaison avant / après"
+msgstr "🔍 सफ़ाई से पहले / बाद की तुलना"
+
+msgid "🔍 Doublons"
+msgstr "🔍 डुप्लिकेट"
+
+msgid "🔍 Filtrer"
+msgstr "🔍 फ़िल्टर करें"
+
+msgid "🔍 Filtrer les lignes…"
+msgstr "🔍 पंक्तियाँ फ़िल्टर करें…"
+
+msgid "🔍 Problèmes détectés"
+msgstr "🔍 पाई गई समस्याएँ"
+
+msgid "🔍 Revue manuelle des doublons potentiels"
+msgstr "🔍 संभावित डुप्लिकेट की मैन्युअल समीक्षा"
+
+msgid "🔍 Règles regex personnalisées"
+msgstr "🔍 कस्टम regex नियम"
+
+msgid "🔎 Explication du score"
+msgstr "🔎 स्कोर की व्याख्या"
+
+msgid "🔑 Mes jetons"
+msgstr "🔑 मेरे टोकन"
+
+msgid "🔑 Votre nouveau jeton"
+msgstr "🔑 आपका नया टोकन"
+
+msgid "🔒 Changer mon mot de passe"
+msgstr "🔒 मेरा पासवर्ड बदलें"
+
+msgid "🔒 Sécurité et données"
+msgstr "🔒 सुरक्षा और डेटा"
+
+msgid "🔔 Mes webhooks"
+msgstr "🔔 मेरे webhook"
+
+msgid "🔔 Webhooks"
+msgstr "🔔 Webhook"
+
+msgid "🔗 Voir mon profil public"
+msgstr "🔗 मेरी सार्वजनिक प्रोफ़ाइल देखें"
+
+msgid "🔢 Colonnes analysées numériquement"
+msgstr "🔢 संख्यात्मक रूप से विश्लेषित कॉलम"
+
+msgid "🔬 Profilage avancé"
+msgstr "🔬 उन्नत प्रोफ़ाइलिंग"
+
+msgid "🔵 Conserver la 2e ligne (supprimer les autres)"
+msgstr "🔵 दूसरी पंक्ति रखें (अन्य हटाएँ)"
+
+msgid "🕒 Dernières actions"
+msgstr "🕒 हाल की क्रियाएँ"
+
+msgid "🕓 Activité"
+msgstr "🕓 गतिविधि"
+
+msgid "🕓 Dernières activités"
+msgstr "🕓 हाल की गतिविधियाँ"
+
+msgid "🕓 Journal d'activité"
+msgstr "🕓 गतिविधि लॉग"
+
+msgid "🗃️ Fichiers récents"
+msgstr "🗃️ हाल की फ़ाइलें"
+
+msgid "🗄️ Rétention"
+msgstr "🗄️ प्रतिधारण"
+
+msgid "🗄️ Rétention des données"
+msgstr "🗄️ डेटा प्रतिधारण"
+
+msgid "🗑️ Purger maintenant"
+msgstr "🗑️ अभी साफ़ करें"
+
+msgid "🗑️ Supprimer"
+msgstr "🗑️ हटाएँ"
+
+msgid "🗑️ Supprimer ma photo de profil"
+msgstr "🗑️ मेरी प्रोफ़ाइल फ़ोटो हटाएँ"
+
+msgid "🚀 Nouveautés de l'espace pro"
+msgstr "🚀 प्रो क्षेत्र की नई सुविधाएँ"
+
+msgid "🚀 Premier appel"
+msgstr "🚀 पहला कॉल"
+
+msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
+msgstr "🟢 पहली पंक्ति रखें (अन्य हटाएँ)"
+
+msgid "🟣 Fusionner toutes les lignes"
+msgstr "🟣 सभी पंक्तियाँ मर्ज करें"
+
+msgid "🧭 Dimensions les plus fragiles"
+msgstr "🧭 सबसे कमज़ोर आयाम"
+
+msgid "🧹 Journal d'activité"
+msgstr "🧹 गतिविधि लॉग"
+
+msgid "🧹 Nettoyage"
+msgstr "🧹 सफ़ाई"
+
+msgid "🧹 Options de nettoyage"
+msgstr "🧹 सफ़ाई विकल्प"
+
+msgid "🧹 Opérations de nettoyage"
+msgstr "🧹 सफ़ाई संक्रियाएँ"
+
+msgid "🧽 Purger les anciennes entrées"
+msgstr "🧽 पुरानी प्रविष्टियाँ खाली करें"
+
+msgid "🧾 Journal des modifications"
+msgstr "🧾 परिवर्तन लॉग"
+
+msgid "🧾 Télécharger le journal des modifications"
+msgstr "🧾 परिवर्तन लॉग डाउनलोड करें"
+
+msgctxt "séparateur"
+msgid "ou"
+msgstr "या"

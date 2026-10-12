@@ -1,0 +1,665 @@
+{% extends "core/base.html" %}
+{% load static i18n l10n %}
+
+{% block title %}{% translate "Mon profil — DataZen" %}{% endblock %}
+
+{% block content %}
+<div class="container dz-page">
+    <nav aria-label="{% translate "Fil d'Ariane" %}">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{% translate "Mon profil" %}</li>
+        </ol>
+    </nav>
+
+    <div class="dz-page-head">
+        <span class="dz-eyebrow">{% translate "Compte" %}</span>
+        <h1 class="h3 mb-1">{% translate "👤 Mon profil" %}</h1>
+        <p class="text-muted mb-0">
+            {% translate "Personnalisez votre identité, votre photo et vos préférences." %}
+        </p>
+    </div>
+
+    <div class="row dz-grid">
+        <div class="col-lg-4">
+            <div class="card dz-card-accent dz-profile-card">
+                <div class="card-body text-center">
+                    <div class="dz-avatar-picker mx-auto mb-2" data-avatar-picker>
+                        <button type="button" class="dz-avatar-preview" id="avatar-preview"
+                                aria-label="{% translate "Changer ma photo de profil" %}"
+                                title="{% translate "Cliquer pour choisir une photo sur mon appareil" %}">
+                            {% if profile.avatar %}
+                                <img src="{{ profile.avatar.url }}" alt="Photo de profil de {{ user.username }}">
+                            {% else %}
+                                <img src="{% static 'img/avatar-default.svg' %}" alt=""
+                                     class="dz-avatar-default">
+                            {% endif %}
+                        </button>
+                        <button type="button" class="dz-avatar-camera" id="avatar-camera"
+                                aria-label="{% translate "Prendre une photo avec la caméra" %}"
+                                title="{% translate "Prendre une photo avec la caméra" %}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                 fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                                <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="dz-avatar-actions d-none" id="avatar-actions">
+                        <span class="small text-muted d-block mb-1">{% translate "Nouvelle photo prête" %}</span>
+                        <div class="d-flex justify-content-center gap-2">
+                            <button type="button" class="btn btn-sm btn-primary" id="avatar-save">
+                                {% translate "Enregistrer" %}
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" id="avatar-cancel">
+                                {% translate "Annuler" %}
+                            </button>
+                        </div>
+                    </div>
+
+                    <h2 class="h5 mb-1">{{ profile.display_name }}</h2>
+                    <p class="text-muted small mb-2">@{{ user.username }}</p>
+
+                    {% if profile.job_title or profile.organisation %}
+                        <p class="small mb-2">
+                            {% if profile.job_title %}{{ profile.job_title }}{% endif %}
+                            {% if profile.job_title and profile.organisation %} · {% endif %}
+                            {% if profile.organisation %}{{ profile.organisation }}{% endif %}
+                        </p>
+                    {% endif %}
+
+                    {% if user.email %}
+                        <p class="small mb-2">
+                            <a href="mailto:{{ user.email }}">{{ user.email }}</a>
+                        </p>
+                    {% endif %}
+
+                    <div class="d-flex flex-wrap justify-content-center gap-2 mb-2">
+                        {% if user.is_superuser %}
+                            <span class="badge text-bg-danger">{% translate "Superutilisateur" %}</span>
+                        {% elif user.is_staff %}
+                            <span class="badge text-bg-warning">{% translate "Administrateur" %}</span>
+                        {% else %}
+                            <span class="badge text-bg-secondary">{% translate "Utilisateur" %}</span>
+                        {% endif %}
+                        {% if user.is_active %}
+                            <span class="badge text-bg-success">{% translate "Compte actif" %}</span>
+                        {% endif %}
+                        {% if profile.public_profile %}
+                            <span class="badge text-bg-info">{% translate "Profil public" %}</span>
+                        {% endif %}
+                    </div>
+
+                    {% if profile.bio %}
+                        <p class="small text-muted mb-2 dz-break">{{ profile.bio }}</p>
+                    {% endif %}
+
+                    <dl class="row small text-start mb-0 dz-profile-meta">
+                        {% if profile.location %}
+                            <dt class="col-6 text-muted fw-normal">{% translate "Localisation" %}</dt>
+                            <dd class="col-6 text-end mb-1">{{ profile.location }}</dd>
+                        {% endif %}
+                        {% if profile.website %}
+                            <dt class="col-6 text-muted fw-normal">{% translate "Site web" %}</dt>
+                            <dd class="col-6 text-end mb-1 dz-break">
+                                <a href="{{ profile.website }}" target="_blank" rel="noopener noreferrer">
+                                    {{ profile.website|truncatechars:28 }}
+                                </a>
+                            </dd>
+                        {% endif %}
+                        <dt class="col-6 text-muted fw-normal">{% translate "Membre depuis" %}</dt>
+                        <dd class="col-6 text-end mb-1">{{ user.date_joined|date:"d/m/Y" }}</dd>
+                        <dt class="col-6 text-muted fw-normal">{% translate "Dernière connexion" %}</dt>
+                        <dd class="col-6 text-end mb-0">
+                            {{ user.last_login|date:"d/m/Y H:i"|default:"—" }}
+                        </dd>
+                    </dl>
+
+                    <hr class="dz-divider dz-divider-tight">
+
+                    <div class="dz-profile-stats">
+                        <div class="dz-profile-stat">
+                            <span class="dz-profile-stat-value">{{ stats.files }}</span>
+                            <span class="dz-profile-stat-label">{% translate "Fichiers" %}</span>
+                        </div>
+                        <div class="dz-profile-stat">
+                            <span class="dz-profile-stat-value">{{ stats.cleaned }}</span>
+                            <span class="dz-profile-stat-label">{% translate "Nettoyés" %}</span>
+                        </div>
+                        <div class="dz-profile-stat">
+                            <span class="dz-profile-stat-value">{{ stats.rules }}</span>
+                            <span class="dz-profile-stat-label">{% translate "Règles" %}</span>
+                        </div>
+                    </div>
+
+                    <div class="dz-completion mt-3 text-start">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="small fw-semibold">{% translate "Complétion du profil" %}</span>
+                            <span class="small text-muted">{{ completion.percent }} %</span>
+                        </div>
+                        <div class="progress dz-completion-bar" role="progressbar"
+                             aria-label="{% translate "Complétion du profil" %}"
+                             aria-valuenow="{{ completion.percent }}" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar" style="width: {{ completion.percent|unlocalize }}%"></div>
+                        </div>
+                        {% if completion.missing %}
+                            <p class="small text-muted mb-0 mt-2">
+                                {% translate "À compléter :" %}
+                                {% for label in completion.missing %}{{ label }}{% if not forloop.last %}, {% endif %}{% endfor %}
+                            </p>
+                        {% else %}
+                            <p class="small text-success mb-0 mt-2">{% translate "✅ Votre profil est complet." %}</p>
+                        {% endif %}
+                    </div>
+
+                    {% if profile.public_profile %}
+                        <a class="btn btn-sm btn-outline-secondary mt-3"
+                           href="{% url 'core:profile_public' user.username %}">
+                            {% translate "🔗 Voir mon profil public" %}
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <div class="card dz-panel">
+                <div class="card-body">
+                    <h2 class="h5 card-title mb-1">{% translate "Modifier mes informations" %}</h2>
+                    <p class="text-muted small mb-4">
+                        {% blocktranslate trimmed with username=user.username %}Votre nom d'utilisateur <strong>@{{ username }}</strong> ne peut pas être modifié.{% endblocktranslate %}
+                    </p>
+
+                    <form method="post" enctype="multipart/form-data" novalidate id="profile-form">
+                        {% csrf_token %}
+
+                        {% if form.non_field_errors %}
+                            <div class="alert alert-danger" role="alert">
+                                {% for error in form.non_field_errors %}{{ error }}{% endfor %}
+                            </div>
+                        {% endif %}
+
+                        <h3 class="h6 dz-form-section">{% translate "Identité" %}</h3>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label small" for="{{ form.first_name.id_for_label }}">
+                                    {{ form.first_name.label }}
+                                </label>
+                                {{ form.first_name }}
+                                {% for error in form.first_name.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small" for="{{ form.last_name.id_for_label }}">
+                                    {{ form.last_name.label }}
+                                </label>
+                                {{ form.last_name }}
+                                {% for error in form.last_name.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label small" for="{{ form.email.id_for_label }}">
+                                    {{ form.email.label }}
+                                </label>
+                                {{ form.email }}
+                                <div class="form-text small">
+                                    {% translate "Sert uniquement à la réinitialisation du mot de passe." %}
+                                </div>
+                                {% for error in form.email.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <hr class="dz-divider my-4">
+
+                        <h3 class="h6 dz-form-section">{% translate "Photo de profil" %}</h3>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                {% comment %}
+                                    Champ conservé dans le DOM (soumission + JS) mais masqué :
+                                    la photo se choisit en cliquant sur l'avatar. Le libellé
+                                    reste présent pour les lecteurs d'écran.
+                                {% endcomment %}
+                                <div class="dz-avatar-file visually-hidden">
+                                    <label for="{{ form.avatar.id_for_label }}">
+                                        {{ form.avatar.label }}
+                                    </label>
+                                    {{ form.avatar }}
+                                </div>
+                                <div class="form-text small">
+                                    {% blocktranslate trimmed %}Cliquez sur l'avatar ci-dessus pour choisir une image, ou sur l'icône
+                                    appareil photo pour en prendre une instantanément.
+                                    JPEG, PNG, WebP ou GIF — 5 Mo maximum.{% endblocktranslate %}
+                                </div>
+                                {% for error in form.avatar.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <hr class="dz-divider my-4">
+
+                        <h3 class="h6 dz-form-section">{% translate "Informations professionnelles" %}</h3>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label small" for="{{ form.job_title.id_for_label }}">
+                                    {{ form.job_title.label }}
+                                </label>
+                                {{ form.job_title }}
+                                {% for error in form.job_title.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small" for="{{ form.organisation.id_for_label }}">
+                                    {{ form.organisation.label }}
+                                </label>
+                                {{ form.organisation }}
+                                {% for error in form.organisation.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small" for="{{ form.location.id_for_label }}">
+                                    {{ form.location.label }}
+                                </label>
+                                {{ form.location }}
+                                {% for error in form.location.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small" for="{{ form.website.id_for_label }}">
+                                    {{ form.website.label }}
+                                </label>
+                                {{ form.website }}
+                                {% for error in form.website.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label small" for="{{ form.bio.id_for_label }}">
+                                    {{ form.bio.label }}
+                                </label>
+                                {{ form.bio }}
+                                {% for error in form.bio.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <hr class="dz-divider my-4">
+
+                        <h3 class="h6 dz-form-section">{% translate "Préférences" %}</h3>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label small" for="{{ form.theme_preference.id_for_label }}">
+                                    {{ form.theme_preference.label }}
+                                </label>
+                                {{ form.theme_preference }}
+                                <div class="form-text small">
+                                    {% translate "Le thème « Système » suit les réglages de votre appareil." %}
+                                </div>
+                                {% for error in form.theme_preference.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small" for="{{ form.date_format.id_for_label }}">
+                                    {{ form.date_format.label }}
+                                </label>
+                                {{ form.date_format }}
+                                {% for error in form.date_format.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check form-switch">
+                                    {{ form.email_notifications }}
+                                    <label class="form-check-label small"
+                                           for="{{ form.email_notifications.id_for_label }}">
+                                        {{ form.email_notifications.label }}
+                                    </label>
+                                    <div class="form-text small">{{ form.email_notifications.help_text }}</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check form-switch">
+                                    {{ form.public_profile }}
+                                    <label class="form-check-label small"
+                                           for="{{ form.public_profile.id_for_label }}">
+                                        {{ form.public_profile.label }}
+                                    </label>
+                                    <div class="form-text small">{{ form.public_profile.help_text }}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-2 mt-4">
+                            <button type="submit" class="btn btn-primary">{% translate "Enregistrer les modifications" %}</button>
+                            <a class="btn btn-outline-secondary" href="{% url 'core:index' %}">{% translate "Annuler" %}</a>
+                        </div>
+                    </form>
+
+                    {% if profile.avatar %}
+                        <hr class="dz-divider my-4">
+                        <form method="post" action="{% url 'core:profile_avatar_delete' %}"
+                              onsubmit="return confirm('Supprimer définitivement votre photo de profil ?');">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-sm btn-outline-danger">
+                                {% translate "🗑️ Supprimer ma photo de profil" %}
+                            </button>
+                        </form>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="card dz-panel mt-4">
+                <div class="card-body">
+                    <h2 class="h5 card-title mb-3">{% translate "📊 Activité récente" %}</h2>
+
+                    <h3 class="h6 dz-form-section">{% translate "Derniers fichiers" %}</h3>
+                    {% if recent_files %}
+                        <ul class="list-unstyled dz-activity mb-4">
+                            {% for data_file in recent_files %}
+                                <li class="dz-activity-item">
+                                    <a href="{% url 'core:dataset_detail' data_file.pk %}"
+                                       class="dz-activity-title dz-break">{{ data_file.original_name }}</a>
+                                    <span class="dz-activity-meta">
+                                        <span class="badge text-bg-light">{{ data_file.get_status_display }}</span>
+                                        {{ data_file.created_at|date:"d/m/Y H:i" }}
+                                    </span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="text-muted small mb-4">
+                            {% translate "Aucun fichier pour le moment." %}
+                            <a href="{% url 'core:index' %}">{% translate "Téléverser un fichier" %}</a>.
+                        </p>
+                    {% endif %}
+
+                    <h3 class="h6 dz-form-section">{% translate "Dernières règles" %}</h3>
+                    {% if recent_rules %}
+                        <ul class="list-unstyled dz-activity mb-0">
+                            {% for rule in recent_rules %}
+                                <li class="dz-activity-item">
+                                    <span class="dz-activity-title dz-break">{{ rule.name }}</span>
+                                    <span class="dz-activity-meta">
+                                        <span class="badge text-bg-light">{{ rule.get_operation_display }}</span>
+                                        {% if rule.is_active %}
+                                            <span class="badge text-bg-success">{% translate "Active" %}</span>
+                                        {% else %}
+                                            <span class="badge text-bg-secondary">{% translate "Inactive" %}</span>
+                                        {% endif %}
+                                    </span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="text-muted small mb-0">
+                            {% translate "Aucune règle personnalisée." %}
+                            <a href="{% url 'core:rules_list' %}">{% translate "Créer une règle" %}</a>.
+                        </p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="card dz-panel mt-4">
+                <div class="card-body">
+                    <h2 class="h5 card-title mb-3">{% translate "🔒 Sécurité et données" %}</h2>
+                    <p class="text-muted small mb-3">
+                        {% blocktranslate trimmed %}Modifiez votre mot de passe régulièrement et exportez vos données
+                        quand vous le souhaitez.{% endblocktranslate %}
+                    </p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-outline-primary btn-sm"
+                           href="{% url 'core:profile_password' %}">{% translate "Changer mon mot de passe" %}</a>
+                        <a class="btn btn-outline-secondary btn-sm"
+                           href="{% url 'core:profile_export' %}">{% translate "⬇️ Exporter mes données (JSON)" %}</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card dz-panel dz-danger-zone mt-4">
+                <div class="card-body">
+                    <h2 class="h5 card-title mb-2">{% translate "⚠️ Zone de danger" %}</h2>
+                    {% if user.is_superuser %}
+                        <p class="text-muted small mb-0">
+                            {% blocktranslate trimmed %}Un compte administrateur ne peut pas être supprimé depuis cette page.
+                            Utilisez la{% endblocktranslate %} <a href="{% url 'admin:index' %}">{% translate "console d'administration" %}</a>.
+                        </p>
+                    {% else %}
+                        <p class="text-muted small mb-3">
+                            {% blocktranslate trimmed %}La suppression du compte efface définitivement vos fichiers, vos règles
+                            et votre profil. Cette action est irréversible.{% endblocktranslate %}
+                        </p>
+                        <form method="post" action="{% url 'core:profile_delete' %}"
+                              onsubmit="return confirm('Supprimer définitivement votre compte et toutes vos données ?');">
+                            {% csrf_token %}
+                            <label class="form-label small" for="id_confirmation">
+                                {% blocktranslate trimmed with username=user.username %}Saisissez <strong>{{ username }}</strong> pour confirmer{% endblocktranslate %}
+                            </label>
+                            <div class="row g-2 align-items-start">
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control form-control-sm"
+                                           id="id_confirmation" name="confirmation"
+                                           autocomplete="off" placeholder="{{ user.username }}">
+                                </div>
+                                <div class="col-sm-auto">
+                                    <button type="submit" class="btn btn-sm btn-danger">
+                                        {% translate "Supprimer mon compte" %}
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="avatarCameraModal" tabindex="-1" aria-labelledby="avatarCameraTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="h6 modal-title" id="avatarCameraTitle">{% translate "📷 Prendre une photo" %}</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="{% translate "Fermer" %}"></button>
+            </div>
+            <div class="modal-body">
+                <div class="dz-camera-stage">
+                    <video id="avatar-camera-video" playsinline autoplay muted></video>
+                    <canvas id="avatar-camera-canvas" class="d-none"></canvas>
+                </div>
+                <p class="small text-muted mt-2 mb-0" id="avatar-camera-status">
+                    {% translate "Cadrez votre visage puis cliquez sur « Capturer »." %}
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    {% translate "Annuler" %}
+                </button>
+                <button type="button" class="btn btn-primary" id="avatar-camera-capture" disabled>
+                    {% translate "Capturer" %}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Sélecteur d'avatar : clic sur l'avatar → fichier local, clic sur l'icône
+    // appareil photo → capture via la webcam. Aucune soumission automatique :
+    // l'utilisateur confirme avec « Enregistrer ».
+    (function () {
+        "use strict";
+
+        var form = document.getElementById("profile-form");
+        var input = document.getElementById("{{ form.avatar.id_for_label }}");
+        var preview = document.getElementById("avatar-preview");
+        var cameraBtn = document.getElementById("avatar-camera");
+        var actions = document.getElementById("avatar-actions");
+        var saveBtn = document.getElementById("avatar-save");
+        var cancelBtn = document.getElementById("avatar-cancel");
+        if (!form || !input || !preview) { return; }
+
+        var modalEl = document.getElementById("avatarCameraModal");
+        var video = document.getElementById("avatar-camera-video");
+        var canvas = document.getElementById("avatar-camera-canvas");
+        var captureBtn = document.getElementById("avatar-camera-capture");
+        var statusEl = document.getElementById("avatar-camera-status");
+        var modal = modalEl && window.bootstrap ? new bootstrap.Modal(modalEl) : null;
+        var stream = null;
+        var previousSrc = preview.querySelector("img") ? preview.querySelector("img").src : null;
+
+        function showPreview(src) {
+            var img = preview.querySelector("img");
+            if (!img) {
+                img = document.createElement("img");
+                preview.innerHTML = "";
+                preview.appendChild(img);
+            }
+            img.src = src;
+            img.alt = "Aperçu de la nouvelle photo de profil";
+            img.classList.remove("dz-avatar-default");
+        }
+
+        function setPending(file) {
+            if (!file) { return; }
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                showPreview(e.target.result);
+                if (actions) { actions.classList.remove("d-none"); }
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function assignFile(file) {
+            // Injecte le fichier (venant de la webcam) dans le champ du formulaire.
+            try {
+                var dt = new DataTransfer();
+                dt.items.add(file);
+                input.files = dt.files;
+            } catch (e) {
+                return false;
+            }
+            return true;
+        }
+
+        // --- Choix d'un fichier local -------------------------------------
+        preview.addEventListener("click", function () {
+            input.click();
+        });
+
+        input.addEventListener("change", function () {
+            var file = input.files && input.files[0];
+            if (!file || !file.type || file.type.indexOf("image/") !== 0) { return; }
+            setPending(file);
+        });
+
+        // --- Webcam --------------------------------------------------------
+        function stopStream() {
+            if (stream) {
+                stream.getTracks().forEach(function (track) { track.stop(); });
+                stream = null;
+            }
+            if (video) { video.srcObject = null; }
+        }
+
+        function startStream() {
+            if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                statusEl.textContent =
+                    "La caméra n'est pas disponible sur cet appareil ou ce navigateur.";
+                return;
+            }
+            statusEl.textContent = "Activation de la caméra…";
+            navigator.mediaDevices
+                .getUserMedia({ video: { facingMode: "user" }, audio: false })
+                .then(function (s) {
+                    stream = s;
+                    video.srcObject = s;
+                    captureBtn.disabled = false;
+                    statusEl.textContent = "Cadrez votre visage puis cliquez sur « Capturer ».";
+                })
+                .catch(function () {
+                    captureBtn.disabled = true;
+                    statusEl.textContent =
+                        "Accès à la caméra refusé ou indisponible. La caméra nécessite une " +
+                        "connexion sécurisée (HTTPS ou localhost).";
+                });
+        }
+
+        if (cameraBtn && modal) {
+            cameraBtn.addEventListener("click", function () {
+                modal.show();
+            });
+            modalEl.addEventListener("shown.bs.modal", startStream);
+            modalEl.addEventListener("hidden.bs.modal", function () {
+                stopStream();
+                captureBtn.disabled = true;
+            });
+        } else if (cameraBtn) {
+            cameraBtn.classList.add("d-none");
+        }
+
+        if (captureBtn) {
+            captureBtn.addEventListener("click", function () {
+                if (!stream || !video.videoWidth) { return; }
+                var size = Math.min(video.videoWidth, video.videoHeight);
+                canvas.width = size;
+                canvas.height = size;
+                var ctx = canvas.getContext("2d");
+                ctx.drawImage(
+                    video,
+                    (video.videoWidth - size) / 2,
+                    (video.videoHeight - size) / 2,
+                    size,
+                    size,
+                    0,
+                    0,
+                    size,
+                    size
+                );
+                canvas.toBlob(function (blob) {
+                    if (!blob) { return; }
+                    var file = new File([blob], "avatar-camera.jpg", { type: "image/jpeg" });
+                    if (assignFile(file)) {
+                        setPending(file);
+                        modal.hide();
+                    } else {
+                        statusEl.textContent =
+                            "Impossible d'utiliser cette capture, choisissez une image depuis " +
+                            "votre appareil.";
+                    }
+                }, "image/jpeg", 0.92);
+            });
+        }
+
+        // --- Confirmation / annulation -------------------------------------
+        if (saveBtn) {
+            saveBtn.addEventListener("click", function () {
+                form.submit();
+            });
+        }
+
+        if (cancelBtn) {
+            cancelBtn.addEventListener("click", function () {
+                input.value = "";
+                if (previousSrc) {
+                    showPreview(previousSrc);
+                }
+                if (actions) { actions.classList.add("d-none"); }
+            });
+        }
+    })();
+</script>
+{% endblock %}

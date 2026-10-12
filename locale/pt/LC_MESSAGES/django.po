@@ -1,0 +1,2832 @@
+# Catalogue de traduction DataZen.
+# Généré par tools/i18n_build.py — ne pas éditer à la main.
+msgid ""
+msgstr ""
+"Project-Id-Version: DataZen 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "%(actual)s correction(s) in the log vs %(reported)s reported"
+msgstr "%(actual)s correção(ões) no registo vs %(reported)s comunicadas"
+
+msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
+msgstr "%(actual)s valor(es) desconhecido(s) nas colunas de e-mail vs %(reported)s comunicados"
+
+msgid "%(count)s colonnes"
+msgstr "%(count)s colunas"
+
+msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
+msgstr "%(count)s duplicado(s) potencial(is) requerem verificação."
+
+msgid "%(count)s entrée(s) d'activité supprimée(s)."
+msgstr "%(count)s entrada(s) do registro de atividades excluída(s)."
+
+msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
+msgstr "Não foi possível corrigir automaticamente %(count)s erro(s)."
+
+msgid "%(count)s exact duplicate(s) remaining"
+msgstr "%(count)s duplicado(s) exato(s) restantes"
+
+msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
+msgstr "%(count)s valor(es) inconsistente(s) restantes (nem válidos nem desconhecidos)"
+
+msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
+msgstr "%(count)s e-mail(s) inválido(s) presentes (não vazios e não desconhecidos)"
+
+msgid "%(count)s invalid value(s) among filled data"
+msgstr "%(count)s valor(es) inválido(s) entre os dados preenchidos"
+
+msgid "%(count)s lignes"
+msgstr "%(count)s linhas"
+
+msgid "%(count)s missing value(s)"
+msgstr "%(count)s valor(es) em falta"
+
+msgid "%(count)s non-standard value(s)"
+msgstr "%(count)s valor(es) não normalizado(s)"
+
+msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
+msgstr "%(count)s duplicado(s) potencial(is) requerem revisão manual (penalização reduzida)"
+
+msgid "%(count)s unknown value(s) (data unavailable)"
+msgstr "%(count)s valor(es) desconhecido(s) (dados indisponíveis)"
+
+msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
+msgstr "%(count)s valor(es) aberrante(s) detetado(s) nas colunas numéricas."
+
+msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
+msgstr "%(count)s valor(es) estão atualmente «Desconhecido»."
+
+msgid "%(counter)s doublon potentiel détecté. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgid_plural "%(counter)s doublons potentiels détectés. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgstr[0] "Foi detetado %(counter)s possível duplicado. Estas linhas <strong>nunca</strong> são eliminadas automaticamente: é necessária a sua decisão."
+msgstr[1] "Foram detetados %(counter)s possíveis duplicados. Estas linhas <strong>nunca</strong> são eliminadas automaticamente: é necessária a sua decisão."
+
+msgid "%(counter)s fichier affiché"
+msgid_plural "%(counter)s fichiers affichés"
+msgstr[0] "%(counter)s ficheiro apresentado"
+
+msgid "%(counter)s inconnu"
+msgid_plural "%(counter)s inconnus"
+msgstr[0] "%(counter)s desconhecido"
+
+msgid "%(counter)s invalide,"
+msgid_plural "%(counter)s invalides,"
+msgstr[0] "%(counter)s inválido,"
+
+msgid "%(counter)s ligne concernée :"
+msgid_plural "%(counter)s lignes concernées :"
+msgstr[0] "%(counter)s linha afetada:"
+
+msgid "%(counter)s valide,"
+msgid_plural "%(counter)s valides,"
+msgstr[0] "%(counter)s válido,"
+
+msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
+msgstr "%(purged)s arquivo(s) excluído(s), %(archived)s arquivado(s)."
+
+msgid "%(score)s / 100  (%(weight)s %(percent)s)"
+msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
+msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s esperados"
+
+msgid "%(value)s %(percent)s"
+msgstr "%(value)s %(percent)s"
+
+msgid "(%(counter)s modification)"
+msgid_plural "(%(counter)s modifications)"
+msgstr[0] "(%(counter)s alteração)"
+
+msgid "(%(counter)s non-conformité)"
+msgid_plural "(%(counter)s non-conformités)"
+msgstr[0] "(%(counter)s não conformidade)"
+
+msgid "(colonnes : %(columns)s)"
+msgstr "(colunas: %(columns)s)"
+
+msgid "(score ≥ 0.8)"
+msgstr "(pontuação ≥ 0.8)"
+
+msgid "(⚠️ à vérifier manuellement)"
+msgstr "(⚠️ a verificar manualmente)"
+
+msgid ", Vous recevez ce message parce qu'une réinitialisation de mot de passe a été demandée pour votre compte DataZen. Cliquez sur le lien ci-dessous pour choisir un nouveau mot de passe :"
+msgstr ", Recebe esta mensagem porque foi pedida uma redefinição de palavra-passe para a sua conta DataZen. Clique na ligação abaixo para escolher uma nova palavra-passe:"
+
+msgid "<a href=\"#televerser\">Téléversez votre premier fichier</a> pour commencer."
+msgstr "<a href=\"#televerser\">Carregue o seu primeiro ficheiro</a> para começar."
+
+msgid "<strong>Doublons potentiels :</strong> aucun"
+msgstr "<strong>Duplicados potenciais:</strong> nenhum"
+
+msgid "<strong>Doublons potentiels restants :</strong> aucun"
+msgstr "<strong>Duplicados potenciais restantes:</strong> nenhum"
+
+msgid "<strong>Valeurs manquantes :</strong> aucune"
+msgstr "<strong>Valores em falta:</strong> nenhum"
+
+msgid "<strong>Valeurs manquantes restantes :</strong> aucune"
+msgstr "<strong>Valores em falta restantes:</strong> nenhum"
+
+msgid "AAAA-MM-JJ"
+msgstr "AAAA-MM-JJ"
+
+msgid "API"
+msgstr "API"
+
+msgid "API & webhooks"
+msgstr "API e webhooks"
+
+msgid "API REST"
+msgstr "API REST"
+
+msgid "API et intégrations"
+msgstr "API e integrações"
+
+msgid "API et intégrations — DataZen"
+msgstr "API e integrações — DataZen"
+
+msgid "Abonnements"
+msgstr "Assinaturas"
+
+msgid "Accueil"
+msgstr "Início"
+
+msgid "Actif"
+msgstr "Ativo"
+
+msgid "Actifs"
+msgstr "Ativos"
+
+msgid "Action"
+msgstr "Ação"
+
+msgid "Action invalide."
+msgstr "Ação inválida."
+
+msgid "Actions"
+msgstr "Ações"
+
+msgid "Active"
+msgstr "Ativo"
+
+msgid "Activer"
+msgstr "Ativar"
+
+msgid "Activer le thème clair"
+msgstr "Ativar o tema claro"
+
+msgid "Activer le thème sombre"
+msgstr "Ativar o tema escuro"
+
+msgid "Activité"
+msgstr "Atividade"
+
+msgid "Activités"
+msgstr "Atividades"
+
+msgid "Activée"
+msgstr "Ativada"
+
+msgid "Administrateur"
+msgstr "Administrador"
+
+msgid "Administration"
+msgstr "Administração"
+
+msgid "Adresse email"
+msgstr "Endereço de e-mail"
+
+msgid "Affichage de %(shown)s lignes sur %(total)s."
+msgstr "Apresentação de %(shown)s de %(total)s linhas."
+
+msgid "Affichage des"
+msgstr "Apresentação das"
+
+msgid "Afficher"
+msgstr "Mostrar"
+
+msgid "Afficher le mot de passe"
+msgstr "Mostrar palavra-passe"
+
+msgid "Afficher les détails des anomalies"
+msgstr "Mostrar detalhes das anomalias"
+
+msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
+msgstr "Adicionada ao cabeçalho X-DataZen-Signature (HMAC-SHA256)."
+
+msgid "All filled values are valid"
+msgstr "Todos os valores preenchidos são válidos"
+
+msgid "Aller au contenu principal"
+msgstr "Ir para o conteúdo principal"
+
+msgid "Analyse exploratoire"
+msgstr "Análise exploratória"
+
+msgid "Analyse exploratoire — %(name)s"
+msgstr "Análise exploratória — %(name)s"
+
+msgid "Analyser et nettoyer"
+msgstr "Analisar e limpar"
+
+msgid "Analyste de données"
+msgstr "Analista de dados"
+
+msgid "Ancienne valeur"
+msgstr "Valor antigo"
+
+msgid "Annuler"
+msgstr "Cancelar"
+
+msgid "Anomalies restantes (à traiter manuellement)"
+msgstr "Anomalias restantes (a tratar manualmente)"
+
+msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
+msgstr "Anonimização de dados sensíveis (%(count)s valores pseudonimizados)"
+
+msgid "Anonymiser les données sensibles"
+msgstr "Anonimizar os dados sensíveis"
+
+msgid "Anonymiser les données sensibles (noms, emails, téléphones)"
+msgstr "Anonimizar dados sensíveis (nomes, emails, telefones)"
+
+msgid "Antananarivo, Madagascar"
+msgstr "Antananarivo, Madagascar"
+
+msgid "Aperçu du fichier nettoyé"
+msgstr "Pré-visualização do ficheiro limpo"
+
+msgid "Appel API"
+msgstr "Chamada de API"
+
+msgid "Appel API : %(path)s"
+msgstr "Chamada de API: %(path)s"
+
+msgid "Appels"
+msgstr "Chamadas"
+
+msgid "Application"
+msgstr "Aplicação"
+
+msgid "Après"
+msgstr "Depois"
+
+msgid "Archivage"
+msgstr "Arquivamento"
+
+msgid "Archivage de « %(name)s »"
+msgstr "Arquivamento de « %(name)s »"
+
+msgid "Archiver"
+msgstr "Arquivar"
+
+msgid "Archives"
+msgstr "Arquivo"
+
+msgid "Archivés"
+msgstr "Arquivados"
+
+msgid "Aucun fichier d'origine n'est disponible."
+msgstr "Nenhum ficheiro de origem está disponível."
+
+msgid "Aucun fichier expiré à purger."
+msgstr "Nenhum arquivo expirado para limpar."
+
+msgid "Aucun fichier expiré. Votre espace de travail est à jour."
+msgstr "Nenhum arquivo expirado. Seu espaço de trabalho está em dia."
+
+msgid "Aucun fichier ne correspond à votre recherche."
+msgstr "Nenhum ficheiro corresponde à sua pesquisa."
+
+msgid "Aucun fichier nettoyé n'est disponible."
+msgstr "Nenhum ficheiro limpo está disponível."
+
+msgid "Aucun fichier nettoyé pour le moment."
+msgstr "Nenhum arquivo limpo por enquanto."
+
+msgid "Aucun fichier pour le moment."
+msgstr "Nenhum ficheiro por agora."
+
+msgid "Aucun fichier sélectionné"
+msgstr "Nenhum arquivo selecionado"
+
+msgid "Aucun fichier téléversé pour le moment."
+msgstr "Nenhum ficheiro carregado por agora."
+
+msgid "Aucun graphique n'est disponible pour ce jeu de données : il ne contient pas assez de valeurs numériques ou catégorielles exploitables."
+msgstr "Nenhum gráfico está disponível para este conjunto de dados: não contém valores numéricos ou categóricos utilizáveis suficientes."
+
+msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
+msgstr "Nenhum token por enquanto. Crie um para usar a API."
+
+msgid "Aucun journal des modifications n'est disponible."
+msgstr "Nenhum registo de alterações está disponível."
+
+msgid "Aucun problème détecté"
+msgstr "Nenhum problema detectado"
+
+msgid "Aucun rapport de nettoyage n'est disponible."
+msgstr "Nenhum relatório de limpeza está disponível."
+
+msgid "Aucun résultat pour cette recherche."
+msgstr "Nenhum resultado para esta pesquisa."
+
+msgid "Aucun webhook configuré. Ajoutez une URL pour être notifié automatiquement."
+msgstr "Nenhum webhook configurado. Adicione uma URL para ser notificado automaticamente."
+
+msgid "Aucune activité enregistrée pour le moment."
+msgstr "Nenhuma atividade registrada por enquanto."
+
+msgid "Aucune activité enregistrée."
+msgstr "Nenhuma atividade registrada."
+
+msgid "Aucune anomalie restante."
+msgstr "Nenhuma anomalia restante."
+
+msgid "Aucune anomalie."
+msgstr "Nenhuma anomalia."
+
+msgid "Aucune colonne"
+msgstr "Nenhuma coluna"
+
+msgid "Aucune correction"
+msgstr "Nenhuma correção"
+
+msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
+msgstr "Nenhuma diferença relevante entre o arquivo original e o arquivo limpo: seus dados já estavam limpos."
+
+msgid "Aucune dimension mesurée pour le moment."
+msgstr "Nenhuma dimensão medida por enquanto."
+
+msgid "Aucune donnée"
+msgstr "Nenhum dado"
+
+msgid "Aucune donnée nettoyée disponible."
+msgstr "Nenhum dado limpo disponível."
+
+msgid "Aucune modification enregistrée."
+msgstr "Nenhuma alteração registada."
+
+msgid "Aucune règle personnalisée."
+msgstr "Nenhuma regra personalizada."
+
+msgid "Aucune règle pour le moment. Créez-en une pour la réutiliser sur tous vos fichiers."
+msgstr "Nenhuma regra por agora. Crie uma para a reutilizar em todos os seus ficheiros."
+
+msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
+msgstr "Nenhum valor aberrante detetado nas colunas numéricas."
+
+msgid "Aucune valeur « Inconnu »."
+msgstr "Nenhum valor «Desconhecido»."
+
+msgid "Audit des emails"
+msgstr "Auditoria de e-mails"
+
+msgid "Automatisation"
+msgstr "Automatização"
+
+msgid "Autoriser les autres utilisateurs à consulter votre profil."
+msgstr "Permitir que os outros utilizadores consultem o seu perfil."
+
+msgid "Avant"
+msgstr "Antes"
+
+msgid "Avertissement"
+msgstr "Aviso"
+
+msgid "Basculer la navigation"
+msgstr "Alternar a navegação"
+
+msgid "Basculer le thème"
+msgstr "Alternar o tema"
+
+msgid "Basculer le thème clair / sombre"
+msgstr "Alternar o tema claro / escuro"
+
+msgid "Bienvenue %(username)s !"
+msgstr "Bem-vindo %(username)s!"
+
+msgid "Bon retour parmi nous"
+msgstr "Bem-vindo de volta"
+
+msgid "Bonjour"
+msgstr "Olá"
+
+msgid "Borne basse"
+msgstr "Limite inferior"
+
+msgid "Borne haute"
+msgstr "Limite superior"
+
+msgid "Boîtes à moustaches"
+msgstr "Diagramas de caixa"
+
+msgid "Boîtes à moustaches des colonnes numériques"
+msgstr "Diagramas de caixa das colunas numéricas"
+
+msgid "Branchez DataZen sur vos outils existants."
+msgstr "Conecte o DataZen às suas ferramentas existentes."
+
+msgid "Branchez DataZen à vos outils : Power BI, n8n, scripts Python, tableaux de bord maison."
+msgstr "Conecte o DataZen às suas ferramentas: Power BI, n8n, scripts Python, dashboards próprios."
+
+msgid "CSV (séparateur ;)"
+msgstr "CSV (separador ;)"
+
+msgid "Cadrez votre visage puis cliquez sur « Capturer »."
+msgstr "Enquadre o seu rosto e depois clique em «Capturar»."
+
+msgid "Calculée sur %(count)s fichier(s) nettoyé(s)."
+msgstr "Calculada em %(count)s arquivo(s) limpo(s)."
+
+msgid "Canonicalisation du marqueur « Inconnu » (%(count)s corrigé(s))"
+msgstr "Padronização do marcador «Desconhecido» (%(count)s corrigidos)"
+
+msgid "Capturer"
+msgstr "Capturar"
+
+msgid "Ce graphique n'est pas disponible pour ce jeu de données."
+msgstr "Este gráfico não está disponível para este conjunto de dados."
+
+msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
+msgstr "Esta ligação de redefinição já foi utilizada ou expirou."
+
+msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
+msgstr "Esta ligação é válida apenas uma vez. Se não foi o autor deste pedido, ignore simplesmente esta mensagem: a sua palavra-passe permanece inalterada. — DataZen"
+
+msgid "Ce profil n'est pas public."
+msgstr "Este perfil não é público."
+
+msgid "Ce que le nettoyage a réellement changé dans votre fichier."
+msgstr "O que a limpeza realmente mudou no seu arquivo."
+
+msgid "Cellules manquantes"
+msgstr "Células ausentes"
+
+msgid "Ces %(count)s fichier(s) dépassent la durée de conservation de %(days)s jours. Ils ne sont pas supprimés automatiquement tant que la purge automatique reste désactivée."
+msgstr "Estes %(count)s arquivo(s) ultrapassam o período de retenção de %(days)s dias. Eles não são excluídos automaticamente enquanto a limpeza automática permanecer desativada."
+
+msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
+msgstr "Estes contadores alimentam a pesquisa global e os atalhos abaixo."
+
+msgid "Champ"
+msgstr "Campo"
+
+msgid "Champs différents :"
+msgstr "Campos diferentes:"
+
+msgid "Champs identiques :"
+msgstr "Campos idênticos:"
+
+msgid "Champs inconnus :"
+msgstr "Campos desconhecidos:"
+
+msgid "Changer de langue"
+msgstr "Alterar idioma"
+
+msgid "Changer ma photo de profil"
+msgstr "Alterar a minha foto de perfil"
+
+msgid "Changer mon mot de passe"
+msgstr "Alterar a minha palavra-passe"
+
+msgid "Changer mon mot de passe — DataZen"
+msgstr "Alterar a minha palavra-passe — DataZen"
+
+msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
+msgstr "Carregue os seus dados no formato <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, qualquer que seja o separador."
+
+msgid "Choisir la langue du site"
+msgstr "Escolher o idioma do site"
+
+msgid "Choisir le format"
+msgstr "Escolher o formato"
+
+msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
+msgstr "Escolha um ficheiro CSV ou Excel (.csv, .xlsx, .xls)."
+
+msgid "Choisissez un fichier à analyser"
+msgstr "Escolha um ficheiro para analisar"
+
+msgid "Choisissez un mot de passe long et unique. Vous resterez connecté après la modification."
+msgstr "Escolha uma palavra-passe longa e única. Continuará com sessão iniciada após a alteração."
+
+msgid "Choisissez un mot de passe solide : au moins 8 caractères, ni trop courant, ni entièrement numérique."
+msgstr "Escolha uma palavra-passe forte: pelo menos 8 caracteres, nem demasiado comum nem totalmente numérica."
+
+msgid "Choisissez une colonne unique (ex. email) pour fusionner les variantes d'un même enregistrement (Alice / alice). Laissez vide pour ne supprimer que les lignes 100 % identiques."
+msgstr "Escolha uma coluna única (por exemplo, email) para combinar variantes do mesmo registo (Alice / alice). Deixe em branco para remover apenas linhas 100% idênticas."
+
+msgid "Clair"
+msgstr "Claro"
+
+msgid "Cliquer pour choisir une photo sur mon appareil"
+msgstr "Clique para escolher uma foto no meu dispositivo"
+
+msgid "Cliquer pour trier"
+msgstr "Clique para ordenar"
+
+msgid "Cliquez sur l'avatar ci-dessus pour choisir une image, ou sur l'icône appareil photo pour en prendre une instantanément. JPEG, PNG, WebP ou GIF — 5 Mo maximum."
+msgstr "Clique no avatar acima para escolher uma imagem, ou no ícone da câmara para tirar uma imediatamente. JPEG, PNG, WebP ou GIF — 5 MB no máximo."
+
+msgid "Clé de signature"
+msgstr "Chave de assinatura"
+
+msgid "Clé de signature HMAC (facultative)"
+msgstr "Chave de assinatura HMAC (opcional)"
+
+msgid "Code de langue (fr, en, es…). Vide = langue de l'application."
+msgstr "Código de idioma (fr, en, es…). Vazio = idioma da aplicação."
+
+msgid "Coefficient de Pearson"
+msgstr "Coeficiente de Pearson"
+
+msgid "Colonne"
+msgstr "Coluna"
+
+msgid "Colonne ciblée"
+msgstr "Coluna alvo"
+
+msgid "Colonne clé pour la déduplication"
+msgstr "Coluna-chave para desduplicação"
+
+msgid "Colonnes"
+msgstr "Colunas"
+
+msgid "Colonnes améliorées"
+msgstr "Colunas melhoradas"
+
+msgid "Colonnes analysées"
+msgstr "Colunas analisadas"
+
+msgid "Colonnes différentes"
+msgstr "Colunas diferentes"
+
+msgid "Colonnes différentes :"
+msgstr "Colunas diferentes:"
+
+msgid "Colonnes identiques :"
+msgstr "Colunas idênticas:"
+
+msgid "Colonnes inconnues :"
+msgstr "Colunas desconhecidas:"
+
+msgid "Colonnes stables"
+msgstr "Colunas estáveis"
+
+msgid "Colonnes à vérifier"
+msgstr "Colunas a verificar"
+
+msgid "Combien de fichiers se trouvent dans chaque tranche de score."
+msgstr "Quantos arquivos existem em cada faixa de pontuação."
+
+msgid "Comparaison"
+msgstr "Comparação"
+
+msgid "Comparaison avant / après — %(name)s"
+msgstr "Comparação antes / depois — %(name)s"
+
+msgid "Complétion du profil"
+msgstr "Conclusão do perfil"
+
+msgid "Complétude"
+msgstr "Completude"
+
+msgid "Complétude par colonne"
+msgstr "Completude por coluna"
+
+msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
+msgstr "Completude · Validade · Unicidade · Consistência · Conformidade"
+
+msgid "Composantes du score (après nettoyage)"
+msgstr "Componentes da pontuação (após limpeza)"
+
+msgid "Compte"
+msgstr "Conta"
+
+msgid "Compte actif"
+msgstr "Conta ativa"
+
+msgid "Condensé"
+msgstr "Resumo"
+
+msgid "Confiance"
+msgstr "Confiança"
+
+msgid "Confirmer la décision"
+msgstr "Confirmar a decisão"
+
+msgid "Connectez-vous pour retrouver vos fichiers."
+msgstr "Inicie sessão para voltar a encontrar os seus ficheiros."
+
+msgid "Connexion"
+msgstr "Iniciar sessão"
+
+msgid "Connexion — DataZen"
+msgstr "Iniciar sessão — DataZen"
+
+msgid "Consultation des graphiques"
+msgstr "Consulta dos gráficos"
+
+msgid "Consultation du rapport"
+msgstr "Consulta do relatório"
+
+msgid "Continuer / valider une étape"
+msgstr "Continuar / confirmar uma etapa"
+
+msgid "Contribution des cinq dimensions pondérées du score."
+msgstr "Contribuição das cinco dimensões ponderadas da pontuação."
+
+msgid "Contrôle de cohérence"
+msgstr "Verificação de consistência"
+
+msgid "Conversion des compteurs en entiers (%(count)s converti(s))"
+msgstr "Conversão de contadores para inteiros (%(count)s convertidos)"
+
+msgid "Conversion des montants (%(count)s converti(s))"
+msgstr "Conversão de valores (%(count)s convertidos)"
+
+msgid "Convertir les montants"
+msgstr "Converter os montantes"
+
+msgid "Convertir les montants en valeurs numériques"
+msgstr "Converter valores monetários em números"
+
+msgid "Copier"
+msgstr "Copiar"
+
+msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
+msgstr "Copie agora: por sua segurança, nunca será exibido novamente."
+
+msgid "Corrections"
+msgstr "Correções"
+
+msgid "Corrections appliquées"
+msgstr "Correções aplicadas"
+
+msgid "Corrélations de Pearson entre les colonnes numériques."
+msgstr "Correlações de Pearson entre as colunas numéricas."
+
+msgid "Création de jeton"
+msgstr "Criação de token"
+
+msgid "Création de la règle « %(name)s »"
+msgstr "Criação da regra « %(name)s »"
+
+msgid "Création de règle"
+msgstr "Criação de regra"
+
+msgid "Création du jeton « %(name)s »"
+msgstr "Criação do token « %(name)s »"
+
+msgid "Créer la règle"
+msgstr "Criar a regra"
+
+msgid "Créer le jeton"
+msgstr "Criar o token"
+
+msgid "Créer le webhook"
+msgstr "Criar o webhook"
+
+msgid "Créer un compte"
+msgstr "Criar uma conta"
+
+msgid "Créer une règle"
+msgstr "Criar uma regra"
+
+msgid "Créez une règle une fois, réutilisez-la sur tous vos fichiers."
+msgstr "Crie uma regra uma vez e reutilize-a em todos os seus ficheiros."
+
+msgid "Créez votre compte"
+msgstr "Crie a sua conta"
+
+msgid "Data is consistent: each value is valid or unknown"
+msgstr "Os dados são consistentes: cada valor é válido ou desconhecido"
+
+msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
+msgstr "DataZen — Aplicação de limpeza de dados (DataClean Pro) · ©"
+
+msgid "DataZen — Nettoyage de données"
+msgstr "DataZen — Limpeza de dados"
+
+msgid "Date"
+msgstr "Data"
+
+msgid "Date d'expiration"
+msgstr "Data de expiração"
+
+msgid "Date invalide"
+msgstr "Data inválida"
+
+msgid "De l'import brut au rapport de qualité, DataZen couvre toute la chaîne."
+msgstr "Da importação em bruto ao relatório de qualidade, a DataZen cobre toda a cadeia."
+
+msgid "Demander un nouveau lien"
+msgstr "Pedir uma nova ligação"
+
+msgid "Dernier appel"
+msgstr "Última chamada"
+
+msgid "Dernier code HTTP"
+msgstr "Último código HTTP"
+
+msgid "Dernier déclenchement"
+msgstr "Último acionamento"
+
+msgid "Dernier usage"
+msgstr "Último uso"
+
+msgid "Derniers fichiers"
+msgstr "Ficheiros recentes"
+
+msgid "Dernière connexion"
+msgstr "Último início de sessão"
+
+msgid "Dernière utilisation"
+msgstr "Última utilização"
+
+msgid "Dernières règles"
+msgstr "Regras recentes"
+
+msgid "Des incohérences ont été détectées entre les statistiques et les données."
+msgstr "Foram detetadas incoerências entre as estatísticas e os dados."
+
+msgid "Dimension"
+msgstr "Dimensão"
+
+msgid "Dimensions de qualité"
+msgstr "Dimensões de qualidade"
+
+msgid "Dispersion et valeurs extrêmes des colonnes numériques."
+msgstr "Dispersão e valores extremos das colunas numéricas."
+
+msgid "Distributions des colonnes numériques"
+msgstr "Distribuições das colunas numéricas"
+
+msgid "Distributions numériques"
+msgstr "Distribuições numéricas"
+
+msgid "Django · Pandas · Bootstrap"
+msgstr "Django · Pandas · Bootstrap"
+
+msgid "Doublon par similarité"
+msgstr "Duplicado por semelhança"
+
+msgid "Doublon potentiel"
+msgstr "Duplicado potencial"
+
+msgid "Doublons"
+msgstr "Duplicados"
+
+msgid "Doublons exacts"
+msgstr "Duplicados exatos"
+
+msgid "Doublons exacts :"
+msgstr "Duplicados exatos:"
+
+msgid "Doublons exacts restants :"
+msgstr "Duplicados exatos restantes:"
+
+msgid "Doublons par similarité :"
+msgstr "Duplicados por semelhança:"
+
+msgid "Doublons potentiels"
+msgstr "Duplicados potenciais"
+
+msgid "Doublons potentiels (⚠️ à vérifier) :"
+msgstr "Duplicados potenciais (⚠️ a verificar):"
+
+msgid "Doublons potentiels :"
+msgstr "Duplicados potenciais:"
+
+msgid "Doublons potentiels restants :"
+msgstr "Duplicados potenciais restantes:"
+
+msgid "Doublons restants (exacts + potentiels)"
+msgstr "Duplicados restantes (exatos + potenciais)"
+
+msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
+msgstr "Duplicados, espaços supérfluos, e-mails mal formados, datas incoerentes… A DataZen deteta os problemas e corrige tudo automaticamente, em poucos segundos."
+
+msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
+msgstr "Duplicados, valores em falta, espaços, maiúsculas/minúsculas, e-mails, telefones, datas e salários normalizados."
+
+msgid "Durée de conservation"
+msgstr "Período de retenção"
+
+msgid "Durée de conservation (jours)"
+msgstr "Período de retenção (dias)"
+
+msgid "Décision appliquée avec succès."
+msgstr "Decisão aplicada com sucesso."
+
+msgid "Déjà un compte ?"
+msgstr "Já tem uma conta?"
+
+msgid "Désactiver"
+msgstr "Desativar"
+
+msgid "Désactivée"
+msgstr "Desativada"
+
+msgid "Détail"
+msgstr "Detalhe"
+
+msgid "Détail par colonne"
+msgstr "Detalhe por coluna"
+
+msgid "Détail par semaine"
+msgstr "Detalhe por semana"
+
+msgid "Détails techniques"
+msgstr "Detalhes técnicos"
+
+msgid "E-mail envoyé — DataZen"
+msgstr "E-mail enviado — DataZen"
+
+msgid "Effacer"
+msgstr "Limpar"
+
+msgid "Effectif"
+msgstr "Contagem"
+
+msgid "Email invalide"
+msgstr "Email inválido"
+
+msgid "Email nettoyé"
+msgstr "E-mail limpo"
+
+msgid "Email original"
+msgstr "E-mail original"
+
+msgid "Emails :"
+msgstr "E-mails:"
+
+msgid "Emails corrected (change log vs counter)"
+msgstr "E-mails corrigidos (registo de alterações vs contador)"
+
+msgid "Emails invalides :"
+msgstr "E-mails inválidos:"
+
+msgid "Emails invalides restants :"
+msgstr "E-mails inválidos restantes:"
+
+msgid "Emails restants :"
+msgstr "E-mails restantes:"
+
+msgid "Emails: valid + invalid + unknown = total"
+msgstr "E-mails: válidos + inválidos + desconhecidos = total"
+
+msgid "En attente"
+msgstr "Em espera"
+
+msgid "En cours de traitement"
+msgstr "Em processamento"
+
+msgid "En erreur"
+msgstr "Com erro"
+
+msgid "En échec"
+msgstr "Com falha"
+
+msgid "Enregistrer"
+msgstr "Guardar"
+
+msgid "Enregistrer le nouveau mot de passe"
+msgstr "Guardar a nova palavra-passe"
+
+msgid "Enregistrer les modifications"
+msgstr "Guardar as alterações"
+
+msgid "Entrée"
+msgstr "Enter"
+
+msgid "Entrées"
+msgstr "Entradas"
+
+msgid "Envoyer le lien de réinitialisation"
+msgstr "Enviar a ligação de redefinição"
+
+msgid "Erreur"
+msgstr "Erro"
+
+msgid "Erreur de nettoyage"
+msgstr "Erro de limpeza"
+
+msgid "Erreurs de format"
+msgstr "Erros de formato"
+
+msgid "Erreurs restantes"
+msgstr "Erros restantes"
+
+msgid "Excel (.xlsx)"
+msgstr "Excel (.xlsx)"
+
+msgid "Expiration"
+msgstr "Expiração"
+
+msgid "Expiré"
+msgstr "Expirado"
+
+msgid "Explication du score"
+msgstr "Explicação da pontuação"
+
+msgid "Export & traçabilité"
+msgstr "Exportação e rastreabilidade"
+
+msgid "Fermer"
+msgstr "Fechar"
+
+msgid "Fermer la fenêtre active"
+msgstr "Fechar a janela ativa"
+
+msgid "Fichier"
+msgstr "Arquivo"
+
+msgid "Fichier de données"
+msgstr "Ficheiro de dados"
+
+msgid "Fichier nettoyé"
+msgstr "Ficheiro limpo"
+
+msgid "Fichier supprimé"
+msgstr "Arquivo excluído"
+
+msgid "Fichier téléversé"
+msgstr "Arquivo enviado"
+
+msgid "Fichier téléversé avec succès."
+msgstr "Ficheiro carregado com sucesso."
+
+msgid "Fichier « %(name)s » archivé."
+msgstr "Ficheiro « %(name)s » arquivado."
+
+msgid "Fichier « %(name)s » restauré."
+msgstr "Ficheiro « %(name)s » restaurado."
+
+msgid "Fichier « %(name)s » supprimé."
+msgstr "O ficheiro «%(name)s» foi eliminado."
+
+msgid "Fichiers"
+msgstr "Ficheiros"
+
+msgid "Fichiers archivés"
+msgstr "Arquivos arquivados"
+
+msgid "Fichiers au total"
+msgstr "Ficheiros no total"
+
+msgid "Fichiers de données"
+msgstr "Ficheiros de dados"
+
+msgid "Fichiers expirés"
+msgstr "Arquivos expirados"
+
+msgid "Fichiers nettoyés avant le %(cutoff)s considérés comme expirés."
+msgstr "Arquivos limpos antes de %(cutoff)s são considerados expirados."
+
+msgid "Fichiers nettoyés plus anciens que cette durée (0 = conservation illimitée)."
+msgstr "Arquivos limpos mais antigos que este período (0 = retenção ilimitada)."
+
+msgid "Fichiers récents"
+msgstr "Ficheiros recentes"
+
+msgid "Fil d'Ariane"
+msgstr "Trilha de navegação"
+
+msgid "Filtrer"
+msgstr "Filtrar"
+
+msgid "Filtrer les lignes du tableau"
+msgstr "Filtrar as linhas da tabela"
+
+msgid "Filtrer par action"
+msgstr "Filtrar por ação"
+
+msgid "Filtrer par statut"
+msgstr "Filtrar por estado"
+
+msgid "Filtrer un tableau"
+msgstr "Filtrar uma tabela"
+
+msgid "Fonction"
+msgstr "Função"
+
+msgid "Format de date"
+msgstr "Formato de data"
+
+msgid "Format de la charge utile"
+msgstr "Formato da carga útil"
+
+msgid "Formats acceptés : <code>.csv</code>, <code>.xlsx</code>, <code>.xls</code> — jusqu'à 20 Mo."
+msgstr "Formatos aceites: <code>.csv</code>, <code>.xlsx</code>, <code>.xls</code> — até 20 MB."
+
+msgid "Formats de dates (%(column)s) :"
+msgstr "Formatos de data (%(column)s):"
+
+msgid "Formats standardized (phones, dates)"
+msgstr "Formatos normalizados (telefones, datas)"
+
+msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
+msgstr "Ganhe tempo: tudo o que importa no DataZen está a uma combinação de teclas."
+
+msgid "Graphiques"
+msgstr "Gráficos"
+
+msgid "Graphiques générés avec matplotlib et seaborn à partir des données nettoyées."
+msgstr "Gráficos gerados com matplotlib e seaborn a partir dos dados limpos."
+
+msgid "Graphiques générés côté serveur avec"
+msgstr "Gráficos gerados no servidor com"
+
+msgid "Graphiques statistiques générés avec <strong>matplotlib</strong> et <strong>seaborn</strong> à partir des données nettoyées."
+msgstr "Gráficos estatísticos gerados com <strong>matplotlib</strong> e <strong>seaborn</strong> a partir dos dados limpos."
+
+msgid "Gratuit, immédiat, et vos fichiers restent privés."
+msgstr "Gratuito, imediato e os seus ficheiros permanecem privados."
+
+msgid "Gérer les règles…"
+msgstr "Gerir as regras…"
+
+msgid "Histogrammes des colonnes numériques détectées."
+msgstr "Histogramas das colunas numéricas detetadas."
+
+msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
+msgstr "Histórico com data e hora das suas ações: uploads, limpezas, exportações, API."
+
+msgid "Identité"
+msgstr "Identidade"
+
+msgid "Ignorer la casse (Alice = alice)"
+msgstr "Ignorar maiúsculas e minúsculas (Alice = alice)"
+
+msgid "Import CSV & Excel"
+msgstr "Importação CSV e Excel"
+
+msgid "Impossible d'appliquer la décision : %(error)s"
+msgstr "Não foi possível aplicar a decisão: %(error)s"
+
+msgid "Impossible de convertir le fichier : %(error)s"
+msgstr "Não foi possível converter o ficheiro: %(error)s"
+
+msgid "Impossible de générer le PDF : %(error)s"
+msgstr "Não foi possível gerar o PDF: %(error)s"
+
+msgid "Impossible de lire ce fichier : %(error)s"
+msgstr "Não foi possível ler este ficheiro: %(error)s"
+
+msgid "Impossible de lire le fichier : %(error)s"
+msgstr "Não foi possível ler o ficheiro: %(error)s"
+
+msgid "Impossible de lire le rapport : %(error)s"
+msgstr "Não foi possível ler o relatório: %(error)s"
+
+msgid "Inactif"
+msgstr "Inativo"
+
+msgid "Inactive"
+msgstr "Inativo"
+
+msgid "Inconnu"
+msgstr "Desconhecido"
+
+msgid "Indicateur"
+msgstr "Indicador"
+
+msgid "Indicateurs comparés"
+msgstr "Indicadores comparados"
+
+msgid "Indiquez votre adresse e-mail : nous vous enverrons un lien pour choisir un nouveau mot de passe."
+msgstr "Indique o seu endereço de e-mail: enviar-lhe-emos uma ligação para escolher uma nova palavra-passe."
+
+msgid "Information"
+msgstr "Informação"
+
+msgid "Informations professionnelles"
+msgstr "Informações profissionais"
+
+msgid "Inscription — DataZen"
+msgstr "Registo — DataZen"
+
+msgid "Intégration"
+msgstr "Integração"
+
+msgid "Invalid emails are not counted as unknown or missing"
+msgstr "Os e-mails inválidos não são contados como desconhecidos ou em falta"
+
+msgid "JJ/MM/AAAA"
+msgstr "JJ/MM/AAAA"
+
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+msgid "Jamais appelé"
+msgstr "Nunca chamado"
+
+msgid "Jauge du score de qualité global (sur 100)."
+msgstr "Indicador da pontuação de qualidade global (em 100)."
+
+msgid "Jeton"
+msgstr "Token"
+
+msgid "Jeton créé. Copiez-le maintenant : il ne sera plus affiché."
+msgstr "Token criado. Copie agora: ele não será exibido novamente."
+
+msgid "Jeton d'API"
+msgstr "Token de API"
+
+msgid "Jeton « %(name)s » révoqué."
+msgstr "Token « %(name)s » revogado."
+
+msgid "Jetons"
+msgstr "Tokens"
+
+msgid "Jetons d'API"
+msgstr "Tokens de API"
+
+msgid "Journal d'activité"
+msgstr "Registro de atividades"
+
+msgid "Journal d'activité — DataZen"
+msgstr "Registro de atividades — DataZen"
+
+msgid "Journal des modifications"
+msgstr "Registo de alterações"
+
+msgid "Journal des modifications (extrait)"
+msgstr "Registo de alterações (excerto)"
+
+msgid "L'historique horodaté de chaque opération."
+msgstr "O histórico com data e hora de cada operação."
+
+msgid "La comparaison n'est pas disponible : lancez d'abord un nettoyage sur ce fichier."
+msgstr "A comparação não está disponível: execute primeiro uma limpeza neste arquivo."
+
+msgid "La confirmation ne correspond pas à votre nom d'utilisateur : suppression annulée."
+msgstr "A confirmação não corresponde ao seu nome de utilizador: eliminação cancelada."
+
+msgid "La suppression du compte efface définitivement vos fichiers, vos règles et votre profil. Cette action est irréversible."
+msgstr "A eliminação da conta apaga definitivamente os seus ficheiros, as suas regras e o seu perfil. Esta ação é irreversível."
+
+msgid "Laisser vide pour appliquer à toutes les colonnes."
+msgstr "Deixar vazio para aplicar a todas as colunas."
+
+msgid "Laissez vide pour un jeton sans expiration."
+msgstr "Deixe em branco para um token sem expiração."
+
+msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
+msgstr "Execute primeiro uma limpeza para aceder à análise exploratória."
+
+msgid "Lancez d'abord un nettoyage pour générer un rapport PDF."
+msgstr "Execute primeiro uma limpeza para gerar um relatório PDF."
+
+msgid "Langue de l'interface"
+msgstr "Idioma da interface"
+
+msgid "Le compte « %(username)s » a été supprimé."
+msgstr "A conta «%(username)s» foi eliminada."
+
+msgid "Le fichier ne doit pas dépasser 20 Mo."
+msgstr "O ficheiro não deve exceder 20 MB."
+
+msgid "Le journal conserve également %(days)s jours d'historique."
+msgstr "O registro também mantém %(days)s dias de histórico."
+
+msgid "Le nettoyage a échoué."
+msgstr "A limpeza falhou."
+
+msgid "Le nom d'hôte du webhook est introuvable."
+msgstr "O nome do host do webhook não foi encontrado."
+
+msgid "Le nom d'hôte du webhook pointe vers une adresse interne."
+msgstr "O nome do host do webhook aponta para um endereço interno."
+
+msgid "Le nom d'hôte est absent de l'URL."
+msgstr "Falta o nome do host na URL."
+
+msgid "Le port est invalide."
+msgstr "A porta é inválida."
+
+msgid "Le thème « Système » suit les réglages de votre appareil."
+msgstr "O tema «Sistema» segue as definições do seu dispositivo."
+
+msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
+msgstr "O processamento é executado em segundo plano. Esta página atualiza-se automaticamente no final."
+
+msgid "Les adresses internes sont refusées."
+msgstr "Os endereços internos são recusados."
+
+msgid "Les adresses locales sont refusées."
+msgstr "Os endereços locais são recusados."
+
+msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
+msgstr "Os duplicados são assinalados, mas nunca removidos automaticamente. Marque esta caixa para os remover explicitamente."
+
+msgid "Les fichiers archivés restent accessibles et téléchargeables."
+msgstr "Os ficheiros arquivados continuam acessíveis e disponíveis para transferência."
+
+msgid "Les fichiers expirés seront supprimés automatiquement à votre prochaine visite."
+msgstr "Os arquivos expirados serão excluídos automaticamente na sua próxima visita."
+
+msgid "Les fichiers nettoyés sont archivés après 30 jours."
+msgstr "Os ficheiros limpos são arquivados após 30 dias."
+
+msgid "Les fichiers nettoyés sont archivés puis purgés après cette durée (0 = conservation illimitée)."
+msgstr "Os arquivos limpos são arquivados e depois removidos após este período (0 = retenção ilimitada)."
+
+msgid "Les identifiants intégrés à l'URL sont refusés."
+msgstr "As credenciais incorporadas na URL são recusadas."
+
+msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
+msgstr "Rotas disponíveis: /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
+
+msgid "Les statistiques affichées correspondent aux données réelles."
+msgstr "As estatísticas apresentadas correspondem aos dados reais."
+
+msgid "Lien invalide"
+msgstr "Ligação inválida"
+
+msgid "Ligne"
+msgstr "Linha"
+
+msgid "Lignes"
+msgstr "Linhas"
+
+msgid "Lignes après nettoyage"
+msgstr "Linhas após a limpeza"
+
+msgid "Lignes du journal des modifications"
+msgstr "Linhas do registro de alterações"
+
+msgid "Lignes traitées"
+msgstr "Linhas processadas"
+
+msgid "Localisation"
+msgstr "Localização"
+
+msgid "MM/JJ/AAAA"
+msgstr "MM/JJ/AAAA"
+
+msgid "Masquer"
+msgstr "Ocultar"
+
+msgid "Masquer le mot de passe"
+msgstr "Ocultar palavra-passe"
+
+msgid "Matrice de corrélation"
+msgstr "Matriz de correlação"
+
+msgid "Matrice de corrélation (Pearson)"
+msgstr "Matriz de correlação (Pearson)"
+
+msgid "Max"
+msgstr "Máx"
+
+msgid "Maîtrisez la durée de vie de vos données."
+msgstr "Assuma o controle do ciclo de vida dos seus dados."
+
+msgid "Membre depuis"
+msgstr "Membro desde"
+
+msgid "Mes règles"
+msgstr "As minhas regras"
+
+msgid "Mes règles de nettoyage"
+msgstr "As minhas regras de limpeza"
+
+msgid "Mesuré avant et après le nettoyage."
+msgstr "Medido antes e depois da limpeza."
+
+msgid "Mettre à jour le mot de passe"
+msgstr "Atualizar a palavra-passe"
+
+msgid "Min"
+msgstr "Mín"
+
+msgid "Missing values by column"
+msgstr "Valores em falta por coluna"
+
+msgid "Mode"
+msgstr "Modo"
+
+msgid "Modifier mes informations"
+msgstr "Editar as minhas informações"
+
+msgid "Modifiez votre mot de passe régulièrement et exportez vos données quand vous le souhaitez."
+msgstr "Altere a sua palavra-passe regularmente e exporte os seus dados quando quiser."
+
+msgid "Mon profil"
+msgstr "O meu perfil"
+
+msgid "Mon profil — DataZen"
+msgstr "O meu perfil — DataZen"
+
+msgid "Mot de passe"
+msgstr "Palavra-passe"
+
+msgid "Mot de passe modifié"
+msgstr "Palavra-passe alterada"
+
+msgid "Mot de passe modifié — DataZen"
+msgstr "Palavra-passe alterada — DataZen"
+
+msgid "Mot de passe oublié ?"
+msgstr "Esqueceu-se da palavra-passe?"
+
+msgid "Mot de passe oublié — DataZen"
+msgstr "Palavra-passe esquecida — DataZen"
+
+msgid "Motif"
+msgstr "Motivo"
+
+msgid "Motif attendu"
+msgstr "Padrão esperado"
+
+msgid "Moyenne"
+msgstr "Média"
+
+msgid "Médiane"
+msgstr "Mediana"
+
+msgid "Méthode"
+msgstr "Método"
+
+msgid "Nettoyage"
+msgstr "Limpeza"
+
+msgid "Nettoyage du fichier « %(name)s »"
+msgstr "Limpeza do arquivo « %(name)s »"
+
+msgid "Nettoyage intelligent"
+msgstr "Limpeza inteligente"
+
+msgid "Nettoyage intelligent · CSV & Excel"
+msgstr "Limpeza inteligente · CSV e Excel"
+
+msgid "Nettoyage lancé en arrière-plan. La page se met à jour automatiquement."
+msgstr "Limpeza iniciada em segundo plano. A página atualiza-se automaticamente."
+
+msgid "Nettoyage lancé sur « %(name)s »"
+msgstr "Limpeza iniciada em « %(name)s »"
+
+msgid "Nettoyage terminé"
+msgstr "Limpeza concluída"
+
+msgid "Nettoyage terminé : « %(name)s »"
+msgstr "Limpeza concluída: « %(name)s »"
+
+msgid "Nettoyer"
+msgstr "Limpar"
+
+msgid "Nettoyer un fichier"
+msgstr "Limpar um ficheiro"
+
+msgid "Nettoyez, normalisez et fiabilisez vos fichiers CSV et Excel en quelques clics — sans écrire une ligne de code."
+msgstr "Limpe, normalize e torne fiáveis os seus ficheiros CSV e Excel em poucos cliques — sem escrever uma linha de código."
+
+msgid "Nettoyé"
+msgstr "Limpo"
+
+msgid "Nettoyé le"
+msgstr "Limpo em"
+
+msgid "Nettoyés"
+msgstr "Limpos"
+
+msgid "Niveau"
+msgstr "Nível"
+
+msgid "No exact duplicates"
+msgstr "Nenhum duplicado exato"
+
+msgid "No missing or unknown values"
+msgstr "Sem valores em falta ou desconhecidos"
+
+msgid "No potential duplicates"
+msgstr "Nenhum duplicado potencial"
+
+msgid "Nom"
+msgstr "Nome"
+
+msgid "Nom d'utilisateur"
+msgstr "Nome de utilizador"
+
+msgid "Nom de la règle"
+msgstr "Nome da regra"
+
+msgid "Nom de votre entreprise ou équipe"
+msgstr "Nome da sua empresa ou equipa"
+
+msgid "Nom du jeton"
+msgstr "Nome do token"
+
+msgid "Nombre d'appels"
+msgstr "Número de chamadas"
+
+msgid "Nombre d'occurrences"
+msgstr "Número de ocorrências"
+
+msgid "Nombre de nettoyages et score moyen par semaine."
+msgstr "Número de limpezas e pontuação média por semana."
+
+msgid "Nombre de valeurs aberrantes"
+msgstr "Número de valores atípicos"
+
+msgid "Nombre de valeurs aberrantes (méthode IQR) par colonne."
+msgstr "Número de valores aberrantes (método IQR) por coluna."
+
+msgid "Normalisation de la casse (noms, libellés, villes)"
+msgstr "Normalização de maiúsculas e minúsculas (nomes, rótulos, cidades)"
+
+msgid "Normalisation des catégories (%(count)s corrigée(s))"
+msgstr "Normalização de categorias (%(count)s corrigidas)"
+
+msgid "Normalisation des choix oui/non (%(count)s corrigé(s))"
+msgstr "Normalização de opções sim/não (%(count)s corrigidas)"
+
+msgid "Normalisation des codes/références (%(count)s corrigé(s))"
+msgstr "Normalização de códigos/referências (%(count)s corrigidos)"
+
+msgid "Normalisation des dates (%(count)s corrigée(s))"
+msgstr "Normalização de datas (%(count)s corrigidas)"
+
+msgid "Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "Normalização de telefones (%(count)s corrigidos)"
+
+msgid "Normaliser la casse"
+msgstr "Normalizar as maiúsculas e minúsculas"
+
+msgid "Normaliser la casse (emails en minuscules, noms en Capitales)"
+msgstr "Normalizar maiúsculas e minúsculas (emails em minúsculas, nomes com inicial maiúscula)"
+
+msgid "Normaliser les dates"
+msgstr "Normalizar as datas"
+
+msgid "Normaliser les dates (AAAA-MM-JJ)"
+msgstr "Normalizar datas (AAAA-MM-DD)"
+
+msgid "Normaliser les emails"
+msgstr "Normalizar os e-mails"
+
+msgid "Normaliser les téléphones"
+msgstr "Normalizar os telefones"
+
+msgid "Normaliser les téléphones (06XXXXXXXX)"
+msgstr "Normalizar telefones (06XXXXXXXX)"
+
+msgid "Notifications par email"
+msgstr "Notificações por e-mail"
+
+msgid "Nouveau jeton d API"
+msgstr "Novo token de API"
+
+msgid "Nouveau mot de passe"
+msgstr "Nova palavra-passe"
+
+msgid "Nouveau mot de passe — DataZen"
+msgstr "Nova palavra-passe — DataZen"
+
+msgid "Nouvelle photo prête"
+msgstr "Nova foto pronta"
+
+msgid "Nouvelle valeur"
+msgstr "Novo valor"
+
+msgid "Opération"
+msgstr "Operação"
+
+msgid "Opérations de nettoyage"
+msgstr "Operações de limpeza"
+
+msgid "Organisation"
+msgstr "Organização"
+
+msgid "Outils"
+msgstr "Ferramentas"
+
+msgid "Outliers"
+msgstr "Valores aberrantes"
+
+msgid "Ouvrir"
+msgstr "Abrir"
+
+msgid "Ouvrir la recherche globale"
+msgstr "Abrir a pesquisa global"
+
+msgid "Ouvrir le résultat sélectionné"
+msgstr "Abrir o resultado selecionado"
+
+msgid "Page"
+msgstr "Página"
+
+msgid "Parcourir…"
+msgstr "Escolher arquivo"
+
+msgid "Pas encore de compte ?"
+msgstr "Ainda não tem conta?"
+
+msgid "Pensez à regarder dans vos courriers indésirables. Le lien reste valable quelques heures."
+msgstr "Lembre-se de verificar a pasta de spam. A ligação permanece válida durante algumas horas."
+
+msgid "Personnalisez votre identité, votre photo et vos préférences."
+msgstr "Personalize a sua identidade, a sua foto e as suas preferências."
+
+msgid "Photo de profil"
+msgstr "Foto de perfil"
+
+msgid "Pilotage"
+msgstr "Pilotagem"
+
+msgid "Plus fréquent"
+msgstr "Mais frequente"
+
+msgid "Poids"
+msgstr "Peso"
+
+msgid "Politique en vigueur"
+msgstr "Política em vigor"
+
+msgid "Pondération"
+msgstr "Ponderação"
+
+msgid "Premier quartile"
+msgstr "Primeiro quartil"
+
+msgid "Prendre une photo avec la caméra"
+msgstr "Tirar uma foto com a câmara"
+
+msgid "Problème"
+msgstr "Problema"
+
+msgid "Problèmes après"
+msgstr "Problemas depois"
+
+msgid "Problèmes avant"
+msgstr "Problemas antes"
+
+msgid "Problèmes détectés"
+msgstr "Problemas detetados"
+
+msgid "Problèmes restants"
+msgstr "Problemas restantes"
+
+msgid "Productivité"
+msgstr "Produtividade"
+
+msgid "Profil"
+msgstr "Perfil"
+
+msgid "Profil de %(name)s — DataZen"
+msgstr "Perfil de %(name)s — DataZen"
+
+msgid "Profil de %(username)s"
+msgstr "Perfil de %(username)s"
+
+msgid "Profil public"
+msgstr "Perfil público"
+
+msgid "Profil visible publiquement"
+msgstr "Perfil visível publicamente"
+
+msgid "Profils"
+msgstr "Perfis"
+
+msgid "Progression"
+msgstr "Progresso"
+
+msgid "Propriétaire"
+msgstr "Proprietário"
+
+msgid "Préfixe"
+msgstr "Prefixo"
+
+msgid "Préférences"
+msgstr "Preferências"
+
+msgid "Prénom"
+msgstr "Nome próprio"
+
+msgid "Présentation"
+msgstr "Apresentação"
+
+msgid "Purge automatique"
+msgstr "Limpeza automática"
+
+msgid "Purge automatique de %(count)s fichier(s) expiré(s)"
+msgstr "Limpeza automática de %(count)s arquivo(s) expirado(s)"
+
+msgid "Purge de %(count)s fichier(s) expiré(s)"
+msgstr "Limpeza de %(count)s arquivo(s) expirado(s)"
+
+msgid "Purger automatiquement"
+msgstr "Limpar automaticamente"
+
+msgid "Purger automatiquement les fichiers expirés"
+msgstr "Limpar automaticamente os arquivos expirados"
+
+msgid "Purger le journal"
+msgstr "Limpar o registro"
+
+msgid "Purger les anciennes entrées du journal ?"
+msgstr "Limpar as entradas antigas do registro?"
+
+msgid "Q1"
+msgstr "Q1"
+
+msgid "Q3"
+msgstr "Q3"
+
+msgid "Qualité moyenne"
+msgstr "Qualidade média"
+
+msgid "Qualité par colonne"
+msgstr "Qualidade por coluna"
+
+msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
+msgstr "Algumas palavras sobre si, a sua equipa, os seus conjuntos de dados…"
+
+msgid "Raccourcis clavier"
+msgstr "Atalhos de teclado"
+
+msgid "Raccourcis clavier — DataZen"
+msgstr "Atalhos de teclado — DataZen"
+
+msgid "Raccourcis de navigation"
+msgstr "Atalhos de navegação"
+
+msgid "Raccourcis de nettoyage"
+msgstr "Atalhos de limpeza"
+
+msgid "Raison"
+msgstr "Motivo"
+
+msgid "Rapport"
+msgstr "Relatório"
+
+msgid "Rapport PDF de « %(name)s »"
+msgstr "Relatório PDF de « %(name)s »"
+
+msgid "Rapport de nettoyage"
+msgstr "Relatório de limpeza"
+
+msgid "Rapport de qualité des données"
+msgstr "Relatório de qualidade dos dados"
+
+msgid "Rapport généré automatiquement par DataZen. Les scores sont calculés selon cinq dimensions pondérées : complétude, validité, unicité, cohérence et conformité."
+msgstr "Relatório gerado automaticamente pelo DataZen. As pontuações são calculadas segundo cinco dimensões ponderadas: completude, validade, unicidade, consistência e conformidade."
+
+msgid "Rapport — %(name)s"
+msgstr "Relatório — %(name)s"
+
+msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
+msgstr "Receba uma notificação HTTP assim que uma limpeza termina, falha ou um arquivo é enviado."
+
+msgid "Recevoir les notifications par email"
+msgstr "Receber notificações por e-mail"
+
+msgid "Recevoir un message lorsqu'un nettoyage se termine."
+msgstr "Receber uma mensagem quando uma limpeza terminar."
+
+msgid "Recherche en cours…"
+msgstr "Pesquisando…"
+
+msgid "Recherche globale"
+msgstr "Pesquisa global"
+
+msgid "Recherche momentanément indisponible."
+msgstr "Pesquisa momentaneamente indisponível."
+
+msgid "Rechercher"
+msgstr "Pesquisar"
+
+msgid "Rechercher (Ctrl+K)"
+msgstr "Pesquisar (Ctrl+K)"
+
+msgid "Rechercher un fichier"
+msgstr "Procurar um ficheiro"
+
+msgid "Rechercher un fichier ou une règle (Ctrl+K)"
+msgstr "Pesquisar um arquivo ou uma regra (Ctrl+K)"
+
+msgid "Rechercher un fichier, une règle, une page…"
+msgstr "Pesquisar um arquivo, uma regra, uma página…"
+
+msgid "Rechercher un fichier…"
+msgstr "Procurar um ficheiro…"
+
+msgid "Recommandation"
+msgstr "Recomendação"
+
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
+msgstr "Substitui nomes, emails e telefones por pseudónimos determinísticos (mesmo valor → mesmo pseudónimo). As relações entre linhas são preservadas."
+
+msgid "Remplacer les valeurs manquantes"
+msgstr "Substituir valores em falta"
+
+msgid "Remplacez le jeton par le vôtre et lancez la commande."
+msgstr "Substitua o token pelo seu e execute o comando."
+
+msgid "Remplir les valeurs manquantes"
+msgstr "Preencher os valores em falta"
+
+msgid "Remplissage des valeurs manquantes par « %(value)s » (les montants, codes et dates ne reçoivent jamais un texte)"
+msgstr "Preencher valores em falta com «%(value)s» (valores, códigos e datas nunca recebem texto)"
+
+msgid "Renseignées"
+msgstr "Preenchidas"
+
+msgid "Renumérotation des identifiants (ancien id conservé)"
+msgstr "Renumeração dos identificadores (ID original preservado)"
+
+msgid "Reported %(reported)s vs recalculated %(actual)s"
+msgstr "Comunicados %(reported)s vs recalculados %(actual)s"
+
+msgid "Restauration"
+msgstr "Restauração"
+
+msgid "Restauration de « %(name)s »"
+msgstr "Restauração de « %(name)s »"
+
+msgid "Restaurer"
+msgstr "Restaurar"
+
+msgid "Retour à la connexion"
+msgstr "Voltar ao início de sessão"
+
+msgid "Règle"
+msgstr "Regra"
+
+msgid "Règle de nettoyage"
+msgstr "Regra de limpeza"
+
+msgid "Règle « %(name)s » %(state)s."
+msgstr "Regra «%(name)s» %(state)s."
+
+msgid "Règle « %(name)s » créée."
+msgstr "Regra «%(name)s» criada."
+
+msgid "Règle « %(name)s » supprimée."
+msgstr "Regra «%(name)s» eliminada."
+
+msgid "Règles"
+msgstr "Regras"
+
+msgid "Règles de nettoyage"
+msgstr "Regras de limpeza"
+
+msgid "Règles de nettoyage — DataZen"
+msgstr "Regras de limpeza — DataZen"
+
+msgid "Règles de validation regex personnalisées"
+msgstr "Regras personalizadas de validação regex"
+
+msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
+msgstr "Obtenha o ficheiro limpo, o relatório detalhado e o registo completo das alterações."
+
+msgid "Réinitialiser"
+msgstr "Redefinir"
+
+msgid "Répartition des problèmes"
+msgstr "Distribuição dos problemas"
+
+msgid "Répartition des problèmes restants"
+msgstr "Distribuição dos problemas restantes"
+
+msgid "Résultats"
+msgstr "Resultados"
+
+msgid "Rétention"
+msgstr "Retenção"
+
+msgid "Rétention des données"
+msgstr "Retenção de dados"
+
+msgid "Rétention des données — DataZen"
+msgstr "Retenção de dados — DataZen"
+
+msgid "Révocation de jeton"
+msgstr "Revogação de token"
+
+msgid "Révocation du jeton « %(name)s »"
+msgstr "Revogação do token « %(name)s »"
+
+msgid "Révoquer"
+msgstr "Revogar"
+
+msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
+msgstr "Revogar este token? As integrações que o usam deixarão de funcionar."
+
+msgid "Révoqué"
+msgstr "Revogado"
+
+msgid "S'inscrire"
+msgstr "Registar"
+
+msgid "Saisissez <strong>%(username)s</strong> pour confirmer"
+msgstr "Escreva <strong>%(username)s</strong> para confirmar"
+
+msgid "Score"
+msgstr "Pontuação"
+
+msgid "Score après nettoyage"
+msgstr "Pontuação após a limpeza"
+
+msgid "Score avant nettoyage"
+msgstr "Pontuação antes da limpeza"
+
+msgid "Score de la dimension"
+msgstr "Pontuação da dimensão"
+
+msgid "Score de qualité"
+msgstr "Pontuação de qualidade"
+
+msgid "Score de similarité :"
+msgstr "Pontuação de semelhança:"
+
+msgid "Score global"
+msgstr "Pontuação global"
+
+msgid "Score global de qualité"
+msgstr "Pontuação global de qualidade"
+
+msgid "Score qualité"
+msgstr "Pontuação de qualidade"
+
+msgid "Score qualité après"
+msgstr "Pontuação de qualidade depois"
+
+msgid "Score qualité avant"
+msgstr "Pontuação de qualidade antes"
+
+msgid "Se connecter"
+msgstr "Iniciar sessão"
+
+msgid "Se déconnecter"
+msgstr "Terminar sessão"
+
+msgid "Se déplacer dans les résultats"
+msgstr "Navegar pelos resultados"
+
+msgid "Sert uniquement à la réinitialisation du mot de passe."
+msgstr "Serve apenas para a redefinição da palavra-passe."
+
+msgid "Seuls les schémas http et https sont autorisés."
+msgstr "Apenas os esquemas http e https são permitidos."
+
+msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
+msgstr "Se existir uma conta com este endereço, acabou de ser enviado um e-mail com a ligação de redefinição."
+
+msgid "Site web"
+msgstr "Site"
+
+msgid "Sombre"
+msgstr "Escuro"
+
+msgid "Statut"
+msgstr "Estado"
+
+msgid "Succès"
+msgstr "Sucesso"
+
+msgid "Superutilisateur"
+msgstr "Superutilizador"
+
+msgid "Suppression"
+msgstr "Exclusão"
+
+msgid "Suppression de la règle « %(name)s »"
+msgstr "Exclusão da regra « %(name)s »"
+
+msgid "Suppression de règle"
+msgstr "Exclusão de regra"
+
+msgid "Suppression de « %(name)s »"
+msgstr "Exclusão de « %(name)s »"
+
+msgid "Suppression des doublons exacts (%(count)s supprimé(s))"
+msgstr "Remover duplicados exatos (%(count)s removidos)"
+
+msgid "Suppression des doublons sur « %(column)s » (%(count)s supprimé(s))"
+msgstr "Remover duplicados pela coluna «%(column)s» (%(count)s removidos)"
+
+msgid "Suppression des espaces superflus"
+msgstr "Remoção de espaços excedentes"
+
+msgid "Supprimer %(name)s"
+msgstr "Eliminar %(name)s"
+
+msgid "Supprimer ce webhook ?"
+msgstr "Excluir este webhook?"
+
+msgid "Supprimer définitivement ce fichier et toutes ses données ?"
+msgstr "Eliminar definitivamente este ficheiro e todos os seus dados?"
+
+msgid "Supprimer définitivement les fichiers expirés ? Cette action est irréversible."
+msgstr "Excluir definitivamente os arquivos expirados? Esta ação é irreversível."
+
+msgid "Supprimer définitivement les fichiers expirés au lieu de les archiver."
+msgstr "Excluir definitivamente os arquivos expirados em vez de arquivá-los."
+
+msgid "Supprimer définitivement « %(name)s » ?"
+msgstr "Eliminar definitivamente « %(name)s »?"
+
+msgid "Supprimer les doublons"
+msgstr "Eliminar os duplicados"
+
+msgid "Supprimer les doublons (confirmation requise)"
+msgstr "Remover duplicados (confirmação necessária)"
+
+msgid "Supprimer les espaces superflus"
+msgstr "Remover espaços excedentes"
+
+msgid "Supprimer mon compte"
+msgstr "Eliminar a minha conta"
+
+msgid "Synthèse"
+msgstr "Síntese"
+
+msgid "Système"
+msgstr "Sistema"
+
+msgid "Sécurité"
+msgstr "Segurança"
+
+msgid "Sélectionner un fichier"
+msgstr "Selecionar um arquivo"
+
+msgid "Tableau de bord"
+msgstr "Painel"
+
+msgid "Tableau de bord — DataZen"
+msgstr "Painel — DataZen"
+
+msgid "Tapez au moins deux caractères pour lancer la recherche."
+msgstr "Digite pelo menos dois caracteres para iniciar a pesquisa."
+
+msgid "Taux de complétude (%)"
+msgstr "Taxa de completude (%)"
+
+msgid "Taux de remplissage de chaque colonne (les plus incomplètes d'abord)."
+msgstr "Taxa de preenchimento de cada coluna (as mais incompletas primeiro)."
+
+msgid "Technologies"
+msgstr "Tecnologias"
+
+msgid "Tester"
+msgstr "Testar"
+
+msgid "Thème préféré"
+msgstr "Tema preferido"
+
+msgid "Top des catégories"
+msgstr "Principais categorias"
+
+msgid "Total missing values"
+msgstr "Total de valores em falta"
+
+msgid "Tous vos indicateurs de qualité réunis."
+msgstr "Todos os seus indicadores de qualidade reunidos."
+
+msgid "Tout est inclus"
+msgstr "Tudo incluído"
+
+msgid "Tout voir"
+msgstr "Ver tudo"
+
+msgid "Toutes les actions"
+msgstr "Todas as ações"
+
+msgid "Traçabilité"
+msgstr "Rastreabilidade"
+
+msgid "Troisième quartile"
+msgstr "Terceiro quartil"
+
+msgid "Type"
+msgstr "Tipo"
+
+msgid "Type de correction"
+msgstr "Tipo de correção"
+
+msgid "Téléchargement"
+msgstr "Download"
+
+msgid "Téléchargement de « %(name)s »"
+msgstr "Download de « %(name)s »"
+
+msgid "Téléphone invalide"
+msgstr "Telefone inválido"
+
+msgid "Téléphone non standard"
+msgstr "Número de telefone fora do padrão"
+
+msgid "Téléphones non standard (%(column)s) :"
+msgstr "Números de telefone não padrão (%(column)s):"
+
+msgid "Téléversement"
+msgstr "Envio"
+
+msgid "Téléversement de « %(name)s »"
+msgstr "Envio de « %(name)s »"
+
+msgid "Téléverser un fichier"
+msgstr "Carregar um ficheiro"
+
+msgid "Téléversez votre fichier"
+msgstr "Carregue o seu ficheiro"
+
+msgid "Téléversé"
+msgstr "Carregado"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "URL de destination"
+msgstr "URL de destino"
+
+msgid "URL illisible."
+msgstr "URL ilegível."
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page."
+msgstr "Uma conta de administrador não pode ser eliminada a partir desta página."
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
+msgstr "Uma conta de administrador não pode ser eliminada nesta página. Utilize a"
+
+msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
+msgstr "Um painel mede a qualidade antes / depois e explica cada ponto perdido."
+
+msgid "Une URL de destination est requise."
+msgstr "É necessária uma URL de destino."
+
+msgid "Une boîte à outils complète"
+msgstr "Uma caixa de ferramentas completa"
+
+msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
+msgstr "Uma regra por linha, no formato « coluna:padrão ». Exemplo: « código_postal:^\\d{5}$ ». Os valores que não corresponderem serão assinalados (nunca alterados)."
+
+msgid "Uniques"
+msgstr "Únicos"
+
+msgid "Unknown"
+msgstr "Desconhecido"
+
+msgid "Unknown emails included in the unknown-value statistic"
+msgstr "E-mails desconhecidos incluídos na estatística de valores desconhecidos"
+
+msgid "Unknown values by column"
+msgstr "Valores desconhecidos por coluna"
+
+msgid "Utilisateur"
+msgstr "Utilizador"
+
+msgid "Utilisation de l'API"
+msgstr "Uso da API"
+
+msgid "Valeur"
+msgstr "Valor"
+
+msgid "Valeur aberrante"
+msgstr "Valor aberrante"
+
+msgid "Valeur de remplacement"
+msgstr "Valor de substituição"
+
+msgid "Valeur de remplacement (pour le remplissage)."
+msgstr "Valor de substituição (para o preenchimento)."
+
+msgid "Valeur manquante"
+msgstr "Valor em falta"
+
+msgid "Valeur numérique invalide"
+msgstr "Valor numérico inválido"
+
+msgid "Valeurs aberrantes"
+msgstr "Valores atípicos"
+
+msgid "Valeurs aberrantes par colonne (méthode IQR)"
+msgstr "Valores atípicos por coluna (método IQR)"
+
+msgid "Valeurs les plus fréquentes"
+msgstr "Valores mais frequentes"
+
+msgid "Valeurs les plus fréquentes des colonnes catégorielles."
+msgstr "Valores mais frequentes das colunas categóricas."
+
+msgid "Valeurs manquantes"
+msgstr "Valores em falta"
+
+msgid "Valeurs manquantes :"
+msgstr "Valores em falta:"
+
+msgid "Valeurs manquantes restantes"
+msgstr "Valores em falta restantes"
+
+msgid "Valeurs manquantes restantes :"
+msgstr "Valores em falta restantes:"
+
+msgid "Valeurs uniques"
+msgstr "Valores únicos"
+
+msgid "Valeurs « Inconnu »"
+msgstr "Valores desconhecidos"
+
+msgid "Valeurs « Inconnu » :"
+msgstr "Valores «Desconhecido»:"
+
+msgid "Validation et correction des emails (%(corrected)s corrigé(s), %(invalid)s invalide(s))"
+msgstr "Validação e correção de emails (%(corrected)s corrigidos, %(invalid)s inválidos)"
+
+msgid "Valider et corriger les emails (erreurs évidentes seulement)"
+msgstr "Validar e corrigir emails (apenas erros evidentes)"
+
+msgid "Validité"
+msgstr "Validade"
+
+msgid "Visualisations statistiques"
+msgstr "Visualizações estatísticas"
+
+msgid "Voir l'analyse complète →"
+msgstr "Ver a análise completa →"
+
+msgid "Volume"
+msgstr "Volume"
+
+msgid "Volume des anomalies restantes par catégorie."
+msgstr "Volume das anomalias restantes por categoria."
+
+msgid "Vos données"
+msgstr "Os seus dados"
+
+msgid "Vos données méritent<br> <span class=\"dz-gradient-text\">d'être impeccables.</span>"
+msgstr "Os seus dados merecem<br> <span class=\"dz-gradient-text\">ser impecáveis.</span>"
+
+msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
+msgstr "Seus arquivos ficam com você. O DataZen mostra o que ultrapassa o período de retenção escolhido e não exclui nada sem o seu acordo."
+
+msgid "Votre espace de travail"
+msgstr "Seu espaço de trabalho"
+
+msgid "Votre mot de passe a bien été enregistré. Vous pouvez maintenant vous connecter avec celui-ci."
+msgstr "A sua palavra-passe foi guardada. Agora pode iniciar sessão com ela."
+
+msgid "Votre mot de passe a été modifié. Vos autres sessions restent actives."
+msgstr "A sua palavra-passe foi alterada. As suas outras sessões permanecem ativas."
+
+msgid "Votre nom d'utilisateur <strong>@%(username)s</strong> ne peut pas être modifié."
+msgstr "O seu nome de utilizador <strong>@%(username)s</strong> não pode ser alterado."
+
+msgid "Votre photo de profil a été supprimée."
+msgstr "A sua foto de perfil foi eliminada."
+
+msgid "Votre profil a été mis à jour."
+msgstr "O seu perfil foi atualizado."
+
+msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
+msgstr "Você mantém o controle: nada é excluído sem uma ação sua."
+
+msgid "Vous n'avez pas accès à ce fichier."
+msgstr "Não tem acesso a este ficheiro."
+
+msgid "Vous n'avez pas accès à ce jeton."
+msgstr "Você não tem acesso a este token."
+
+msgid "Vous n'avez pas accès à ce webhook."
+msgstr "Você não tem acesso a este webhook."
+
+msgid "Vous n'avez pas accès à cette règle."
+msgstr "Não tem acesso a esta regra."
+
+msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
+msgstr "Visão consolidada da qualidade dos seus dados, todos os arquivos incluídos."
+
+msgid "Vue d'ensemble"
+msgstr "Visão geral"
+
+msgid "Vérifiez votre boîte mail"
+msgstr "Verifique a sua caixa de correio"
+
+msgid "Webhook"
+msgstr "Webhook"
+
+msgid "Webhook « %(name)s » %(state)s."
+msgstr "Webhook « %(name)s » %(state)s."
+
+msgid "Webhook « %(name)s » : test réussi (HTTP %(status)s)."
+msgstr "Webhook « %(name)s »: teste bem-sucedido (HTTP %(status)s)."
+
+msgid "Webhook « %(name)s » : test échoué (HTTP %(status)s). Vérifiez l'URL et que le service accepte les appels entrants."
+msgstr "Webhook « %(name)s »: teste falhou (HTTP %(status)s). Verifique a URL e se o serviço aceita chamadas de entrada."
+
+msgid "Webhook « %(name)s » créé."
+msgstr "Webhook « %(name)s » criado."
+
+msgid "Webhook « %(name)s » supprimé."
+msgstr "Webhook « %(name)s » excluído."
+
+msgid "Webhooks"
+msgstr "Webhooks"
+
+msgid "Webhooks — DataZen"
+msgstr "Webhooks — DataZen"
+
+msgid "YYYY-MM-DD"
+msgstr "YYYY-MM-DD"
+
+msgid "[Règle] Anonymisation (%(count)s valeur(s))"
+msgstr "[Regra] Anonimizar (%(count)s valores)"
+
+msgid "[Règle] Conversion des montants (%(count)s converti(s))"
+msgstr "[Regra] Converter valores (%(count)s convertidos)"
+
+msgid "[Règle] Normalisation de la casse"
+msgstr "[Regra] Normalizar maiúsculas e minúsculas"
+
+msgid "[Règle] Normalisation des dates (%(count)s corrigée(s))"
+msgstr "[Regra] Normalizar datas (%(count)s corrigidas)"
+
+msgid "[Règle] Normalisation des emails (%(count)s corrigé(s))"
+msgstr "[Regra] Normalizar emails (%(count)s corrigidos)"
+
+msgid "[Règle] Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "[Regra] Normalizar telefones (%(count)s corrigidos)"
+
+msgid "[Règle] Remplissage des valeurs manquantes par « %(value)s »"
+msgstr "[Regra] Preencher valores em falta com «%(value)s»"
+
+msgid "[Règle] Suppression des doublons (%(count)s supprimé(s))"
+msgstr "[Regra] Remover duplicados (%(count)s removidos)"
+
+msgid "[Règle] Suppression des espaces superflus"
+msgstr "[Regra] Remover espaços excedentes"
+
+msgid "actif"
+msgstr "ativo"
+
+msgid "activé"
+msgstr "ativado"
+
+msgid "activée"
+msgstr "ativada"
+
+msgid "ajoutée"
+msgstr "adicionada"
+
+msgid "améliorée"
+msgstr "melhorada"
+
+msgid "bonne qualité"
+msgstr "boa qualidade"
+
+msgid "catégorie"
+msgstr "categoria"
+
+msgid "cohérence"
+msgstr "coerência"
+
+msgid "colonne : %(name)s"
+msgstr "coluna: %(name)s"
+
+msgid "complétude"
+msgstr "completude"
+
+msgid "conformité"
+msgstr "conformidade"
+
+msgid "conservée (non inventée)"
+msgstr "conservada (não inventada)"
+
+msgid "console d'administration"
+msgstr "consola de administração"
+
+msgid "date"
+msgstr "data"
+
+msgid "donnée absente"
+msgstr "dado ausente"
+
+msgid "désactivé"
+msgstr "desativado"
+
+msgid "désactivée"
+msgstr "desativada"
+
+msgid "détail"
+msgstr "detalhe"
+
+msgid "email"
+msgstr "email"
+
+msgid "et"
+msgstr "e"
+
+msgid "ex : 0 ou Inconnu"
+msgstr "ex.: 0 ou Desconhecido"
+
+msgid "ex : Emails en minuscules"
+msgstr "ex.: e-mails em minúsculas"
+
+msgid "ex : Intégration Power BI"
+msgstr "ex: Integração Power BI"
+
+msgid "ex : Slack — nettoyages"
+msgstr "ex: Slack — limpezas"
+
+msgid "ex : email (vide = toutes les colonnes)"
+msgstr "ex.: e-mail (vazio = todas as colunas)"
+
+msgid "excellente qualité"
+msgstr "excelente qualidade"
+
+msgid "fermer"
+msgstr "fechar"
+
+msgid "format invalide"
+msgstr "formato inválido"
+
+msgid "format non reconnu"
+msgstr "formato não reconhecido"
+
+msgid "généré le"
+msgstr "gerado em"
+
+msgid "https://exemple.com"
+msgstr "https://exemple.com"
+
+msgid "https://hooks.exemple.com/datazen"
+msgstr "https://hooks.exemplo.com/datazen"
+
+msgid "identifiant"
+msgstr "identificador"
+
+msgid "inactive"
+msgstr "inativa"
+
+msgid "inchangé"
+msgstr "inalterado"
+
+msgid "jours"
+msgstr "dias"
+
+msgid "lignes"
+msgstr "linhas"
+
+msgid "longueur/format incorrect"
+msgstr "comprimento/formato incorreto"
+
+msgid "matplotlib"
+msgstr "matplotlib"
+
+msgid "naviguer"
+msgstr "navegar"
+
+msgid "non évalué"
+msgstr "não avaliado"
+
+msgid "numérique"
+msgstr "numérico"
+
+msgid "opération : %(name)s"
+msgstr "operação: %(name)s"
+
+msgid "ouvrir"
+msgstr "abrir"
+
+msgid "points"
+msgstr "pontos"
+
+msgid "pour «"
+msgstr "para «"
+
+msgid "premières lignes."
+msgstr "primeiras linhas."
+
+msgid "qualité faible"
+msgstr "qualidade fraca"
+
+msgid "qualité moyenne"
+msgstr "qualidade média"
+
+msgid "référence"
+msgstr "referência"
+
+msgid "révoqué"
+msgstr "revogado"
+
+msgid "score"
+msgstr "pontuação"
+
+msgid "score %(before)s → %(after)s"
+msgstr "pontuação %(before)s → %(after)s"
+
+msgid "seaborn"
+msgstr "seaborn"
+
+msgid "stable"
+msgstr "estável"
+
+msgid "supprimée"
+msgstr "removida"
+
+msgid "sur"
+msgstr "de"
+
+msgid "texte"
+msgstr "texto"
+
+msgid "téléphone"
+msgstr "telefone"
+
+msgid "unicité"
+msgstr "unicidade"
+
+msgid "valeur(s) extrême(s)"
+msgstr "valor(es) extremo(s)"
+
+msgid "validité"
+msgstr "validade"
+
+msgid "· ancien_id :"
+msgstr "· id_antigo:"
+
+msgid "· statut filtré"
+msgstr "· estado filtrado"
+
+msgid "À compléter :"
+msgstr "A completar:"
+
+msgid "Écart"
+msgstr "Desvio"
+
+msgid "Écart-type"
+msgstr "Desvio padrão"
+
+msgid "Échap"
+msgstr "Esc"
+
+msgid "Échec du nettoyage"
+msgstr "Falha na limpeza"
+
+msgid "Échec du nettoyage de « %(name)s »"
+msgstr "Falha na limpeza de « %(name)s »"
+
+msgid "Étape 1"
+msgstr "Passo 1"
+
+msgid "État"
+msgstr "Estado"
+
+msgid "Évolution hebdomadaire du score de qualité"
+msgstr "Evolução semanal da pontuação de qualidade"
+
+msgid "Événement"
+msgstr "Evento"
+
+msgid "Événement déclencheur"
+msgstr "Evento desencadeador"
+
+msgid "à corriger manuellement"
+msgstr "a corrigir manualmente"
+
+msgid "à partir des données nettoyées."
+msgstr "a partir dos dados limpos."
+
+msgid "à vérifier"
+msgstr "a verificar"
+
+msgid "à vérifier manuellement"
+msgstr "a verificar manualmente"
+
+msgid "—"
+msgstr "—"
+
+msgid "— Choisir une action —"
+msgstr "— Escolher uma ação —"
+
+msgid "— Tous les statuts —"
+msgstr "— Todos os estados —"
+
+msgid "— Toutes les colonnes —"
+msgstr "— Todas as colunas —"
+
+msgid "← Retour au fichier"
+msgstr "← Voltar ao ficheiro"
+
+msgid "⌨️ Raccourcis"
+msgstr "⌨️ Atalhos"
+
+msgid "⌨️ Raccourcis clavier"
+msgstr "⌨️ Atalhos de teclado"
+
+msgid "⏳ Fichiers expirés"
+msgstr "⏳ Arquivos expirados"
+
+msgid "⏳ Nettoyage en cours…"
+msgstr "⏳ Limpeza em curso…"
+
+msgid "⚙️ Règles de nettoyage personnalisées"
+msgstr "⚙️ Regras de limpeza personalizadas"
+
+msgid "⚙️ Règles personnalisées"
+msgstr "⚙️ Regras personalizadas"
+
+msgid "⚙️ Régler la durée"
+msgstr "⚙️ Ajustar o período"
+
+msgid "⚠️ Points nécessitant une vérification humaine"
+msgstr "⚠️ Pontos que exigem uma verificação humana"
+
+msgid "⚠️ Problèmes restants (tous fichiers)"
+msgstr "⚠️ Problemas restantes (todos os arquivos)"
+
+msgid "⚠️ Valeurs signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ Valores apenas sinalizados — nunca alterados automaticamente."
+
+msgid "⚠️ Zone de danger"
+msgstr "⚠️ Zona de perigo"
+
+msgid "⚠️ À vérifier manuellement (jamais supprimés automatiquement)."
+msgstr "⚠️ A verificar manualmente (nunca eliminados automaticamente)."
+
+msgid "⚪ Conserver toutes les lignes"
+msgstr "⚪ Manter todas as linhas"
+
+msgid "⚪ Ignorer (examiné, conserver)"
+msgstr "⚪ Ignorar (analisado, manter)"
+
+msgid "⚪ Valeurs « Inconnu » ("
+msgstr "⚪ Valores «Desconhecido» ("
+
+msgid "✅ Aucun doublon potentiel à vérifier."
+msgstr "✅ Nenhum duplicado potencial a verificar."
+
+msgid "✅ Aucune vérification manuelle nécessaire"
+msgstr "✅ Nenhuma verificação manual necessária"
+
+msgid "✅ Résultat du nettoyage"
+msgstr "✅ Resultado da limpeza"
+
+msgid "✅ Validation après nettoyage"
+msgstr "✅ Validação após a limpeza"
+
+msgid "✅ Votre profil est complet."
+msgstr "✅ O seu perfil está completo."
+
+msgid "✏️ Modifier mon profil"
+msgstr "✏️ Editar o meu perfil"
+
+msgid "✓ Copié"
+msgstr "✓ Copiado"
+
+msgid "➕ Nouveau jeton"
+msgstr "➕ Novo token"
+
+msgid "➕ Nouveau webhook"
+msgstr "➕ Novo webhook"
+
+msgid "➕ Nouvelle règle"
+msgstr "➕ Nova regra"
+
+msgid "➕ Téléverser un fichier"
+msgstr "➕ Enviar um arquivo"
+
+msgid "⬇️ Exporter mes données (JSON)"
+msgstr "⬇️ Exportar os meus dados (JSON)"
+
+msgid "⬇️ Télécharger le fichier nettoyé"
+msgstr "⬇️ Transferir o ficheiro limpo"
+
+msgid "🌍 Navigation"
+msgstr "🌍 Navegação"
+
+msgid "🌐 HTML (.html)"
+msgstr "🌐 HTML (.html)"
+
+msgid "🌐 Rapport HTML avec graphiques"
+msgstr "🌐 Relatório HTML com gráficos"
+
+msgid "🎯 Répartition par niveau de qualité"
+msgstr "🎯 Distribuição por nível de qualidade"
+
+msgid "🎯 Score qualité"
+msgstr "🎯 Pontuação de qualidade"
+
+msgid "🏆 Meilleurs résultats"
+msgstr "🏆 Melhores resultados"
+
+msgid "👀 Aperçu des données brutes (avant nettoyage)"
+msgstr "👀 Pré-visualização dos dados em bruto (antes da limpeza)"
+
+msgid "👁️ Consulter le rapport"
+msgstr "👁️ Consultar o relatório"
+
+msgid "👤 Mon profil"
+msgstr "👤 O meu perfil"
+
+msgid "📈 Analyse exploratoire"
+msgstr "📈 Análise exploratória"
+
+msgid "📈 Statistiques descriptives"
+msgstr "📈 Estatísticas descritivas"
+
+msgid "📈 Valeurs aberrantes"
+msgstr "📈 Valores aberrantes"
+
+msgid "📈 Visualisations statistiques"
+msgstr "📈 Visualizações estatísticas"
+
+msgid "📈 Évolution du score (12 semaines)"
+msgstr "📈 Evolução da pontuação (12 semanas)"
+
+msgid "📉 Fichiers à traiter en priorité"
+msgstr "📉 Arquivos a tratar com prioridade"
+
+msgid "📉 Répartition des problèmes"
+msgstr "📉 Distribuição dos problemas"
+
+msgid "📊 Activité récente"
+msgstr "📊 Atividade recente"
+
+msgid "📊 Dashboard Data Quality"
+msgstr "📊 Dashboard Data Quality"
+
+msgid "📊 Dimensions de qualité"
+msgstr "📊 Dimensões de qualidade"
+
+msgid "📊 Tableau de bord"
+msgstr "📊 Painel"
+
+msgid "📊 Tableau de bord global"
+msgstr "📊 Painel global"
+
+msgid "📋 Mes règles ("
+msgstr "📋 As minhas regras ("
+
+msgid "📋 Qualité des colonnes"
+msgstr "📋 Qualidade das colunas"
+
+msgid "📋 Rapport de nettoyage"
+msgstr "📋 Relatório de limpeza"
+
+msgid "📋 Télécharger le rapport"
+msgstr "📋 Transferir o relatório"
+
+msgid "📕 Rapport PDF"
+msgstr "📕 Relatório PDF"
+
+msgid "📝 Journal des modifications"
+msgstr "📝 Registo de alterações"
+
+msgid "📥 Fichier d'origine"
+msgstr "📥 Ficheiro original"
+
+msgid "📥 Markdown (.md)"
+msgstr "📥 Markdown (.md)"
+
+msgid "📥 Télécharger le rapport complet"
+msgstr "📥 Transferir o relatório completo"
+
+msgid "📦 Archives"
+msgstr "📦 Arquivo"
+
+msgid "📷 Prendre une photo"
+msgstr "📷 Tirar uma foto"
+
+msgid "🔌 API et jetons d'accès"
+msgstr "🔌 API e tokens de acesso"
+
+msgid "🔌 Jetons d'API"
+msgstr "🔌 Tokens de API"
+
+msgid "🔍 Avant / après"
+msgstr "🔍 Antes / depois"
+
+msgid "🔍 Comparaison avant / après"
+msgstr "🔍 Comparação antes / depois"
+
+msgid "🔍 Doublons"
+msgstr "🔍 Duplicados"
+
+msgid "🔍 Filtrer"
+msgstr "🔍 Filtrar"
+
+msgid "🔍 Filtrer les lignes…"
+msgstr "🔍 Filtrar linhas…"
+
+msgid "🔍 Problèmes détectés"
+msgstr "🔍 Problemas detetados"
+
+msgid "🔍 Revue manuelle des doublons potentiels"
+msgstr "🔍 Revisão manual dos duplicados potenciais"
+
+msgid "🔍 Règles regex personnalisées"
+msgstr "🔍 Regras regex personalizadas"
+
+msgid "🔎 Explication du score"
+msgstr "🔎 Explicação da pontuação"
+
+msgid "🔑 Mes jetons"
+msgstr "🔑 Meus tokens"
+
+msgid "🔑 Votre nouveau jeton"
+msgstr "🔑 Seu novo token"
+
+msgid "🔒 Changer mon mot de passe"
+msgstr "🔒 Alterar a minha palavra-passe"
+
+msgid "🔒 Sécurité et données"
+msgstr "🔒 Segurança e dados"
+
+msgid "🔔 Mes webhooks"
+msgstr "🔔 Meus webhooks"
+
+msgid "🔔 Webhooks"
+msgstr "🔔 Webhooks"
+
+msgid "🔗 Voir mon profil public"
+msgstr "🔗 Ver o meu perfil público"
+
+msgid "🔢 Colonnes analysées numériquement"
+msgstr "🔢 Colunas analisadas numericamente"
+
+msgid "🔬 Profilage avancé"
+msgstr "🔬 Perfilagem avançada"
+
+msgid "🔵 Conserver la 2e ligne (supprimer les autres)"
+msgstr "🔵 Manter a 2.ª linha (eliminar as outras)"
+
+msgid "🕒 Dernières actions"
+msgstr "🕒 Últimas ações"
+
+msgid "🕓 Activité"
+msgstr "🕓 Atividade"
+
+msgid "🕓 Dernières activités"
+msgstr "🕓 Últimas atividades"
+
+msgid "🕓 Journal d'activité"
+msgstr "🕓 Registro de atividades"
+
+msgid "🗃️ Fichiers récents"
+msgstr "🗃️ Ficheiros recentes"
+
+msgid "🗄️ Rétention"
+msgstr "🗄️ Retenção"
+
+msgid "🗄️ Rétention des données"
+msgstr "🗄️ Retenção de dados"
+
+msgid "🗑️ Purger maintenant"
+msgstr "🗑️ Limpar agora"
+
+msgid "🗑️ Supprimer"
+msgstr "🗑️ Eliminar"
+
+msgid "🗑️ Supprimer ma photo de profil"
+msgstr "🗑️ Eliminar a minha foto de perfil"
+
+msgid "🚀 Nouveautés de l'espace pro"
+msgstr "🚀 Novidades do espaço pro"
+
+msgid "🚀 Premier appel"
+msgstr "🚀 Primeira chamada"
+
+msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
+msgstr "🟢 Manter a 1.ª linha (eliminar as outras)"
+
+msgid "🟣 Fusionner toutes les lignes"
+msgstr "🟣 Fundir todas as linhas"
+
+msgid "🧭 Dimensions les plus fragiles"
+msgstr "🧭 Dimensões mais frágeis"
+
+msgid "🧹 Journal d'activité"
+msgstr "🧹 Registro de atividades"
+
+msgid "🧹 Nettoyage"
+msgstr "🧹 Limpeza"
+
+msgid "🧹 Options de nettoyage"
+msgstr "🧹 Opções de limpeza"
+
+msgid "🧹 Opérations de nettoyage"
+msgstr "🧹 Operações de limpeza"
+
+msgid "🧽 Purger les anciennes entrées"
+msgstr "🧽 Limpar as entradas antigas"
+
+msgid "🧾 Journal des modifications"
+msgstr "🧾 Registo de alterações"
+
+msgid "🧾 Télécharger le journal des modifications"
+msgstr "🧾 Transferir o registo de alterações"
+
+msgctxt "séparateur"
+msgid "ou"
+msgstr "ou"

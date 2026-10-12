@@ -1,0 +1,325 @@
+{% extends "core/base.html" %}
+{% load i18n humanize l10n %}
+
+{% block title %}{% translate "Tableau de bord — DataZen" %}{% endblock %}
+
+{% block content %}
+<div class="container dz-page">
+    <nav aria-label="{% translate "Fil d'Ariane" %}">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{% translate "Tableau de bord" %}</li>
+        </ol>
+    </nav>
+
+    <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 dz-page-head">
+        <div>
+            <span class="dz-eyebrow">{% translate "Pilotage" %}</span>
+            <h1 class="h3 mb-1">{% translate "📊 Tableau de bord global" %}</h1>
+            <p class="text-muted mb-0">
+                {% translate "Vue consolidée de la qualité de vos données, tous fichiers confondus." %}
+            </p>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-outline-secondary" href="{% url 'core:activity' %}">
+                {% translate "🕓 Activité" %}
+            </a>
+            <a class="btn btn-outline-secondary" href="{% url 'core:retention' %}">
+                {% translate "🗄️ Rétention" %}
+            </a>
+            <a class="btn btn-primary" href="{% url 'core:index' %}">
+                {% translate "➕ Téléverser un fichier" %}
+            </a>
+        </div>
+    </div>
+
+    <section class="dz-kpi-dashboard dz-block" aria-labelledby="dz-global-kpi">
+        <div class="dz-kpi-heading">
+            <div>
+                <h2 class="h5 mb-1" id="dz-global-kpi">{% translate "Qualité moyenne" %}</h2>
+                <p class="text-muted small mb-0">
+                    {% blocktranslate with count=totals.cleaned %}Calculée sur {{ count }} fichier(s) nettoyé(s).{% endblocktranslate %}
+                </p>
+            </div>
+            <div class="text-end">
+                {% if average_score is not None %}
+                    <div class="display-5 fw-bold lh-1">{{ average_score }}<span class="fs-6 text-muted">/100</span></div>
+                {% else %}
+                    <div class="display-5 fw-bold lh-1 text-muted">—</div>
+                {% endif %}
+                <span class="badge text-bg-{{ category_class }}">{{ category_label }}</span>
+            </div>
+        </div>
+        <div class="dz-kpi-grid">
+            <article class="dz-kpi-card dz-kpi-card--primary">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">📁</span>
+                    <span class="dz-kpi-card__label">{% translate "Fichiers" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ totals.files }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--success">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">✅</span>
+                    <span class="dz-kpi-card__label">{% translate "Nettoyés" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ totals.cleaned }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--warning">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">⏳</span>
+                    <span class="dz-kpi-card__label">{% translate "En attente" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ totals.pending }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--danger">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">❌</span>
+                    <span class="dz-kpi-card__label">{% translate "En erreur" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ totals.errors }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--secondary">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">🗄️</span>
+                    <span class="dz-kpi-card__label">{% translate "Archivés" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ totals.archived }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--primary">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">▦</span>
+                    <span class="dz-kpi-card__label">{% translate "Lignes traitées" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ rows_total|intcomma }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--warning">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">🔧</span>
+                    <span class="dz-kpi-card__label">{% translate "Corrections" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ changes_total|intcomma }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--danger">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">⚠️</span>
+                    <span class="dz-kpi-card__label">{% translate "Problèmes restants" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ issues_total|intcomma }}</div>
+            </article>
+        </div>
+    </section>
+
+    <div class="row dz-grid">
+        <div class="col-lg-7">
+            <div class="card dz-panel h-100">
+                <div class="card-body">
+                    <h2 class="h6 mb-1">{% translate "📈 Évolution du score (12 semaines)" %}</h2>
+                    <p class="text-muted small mb-3">
+                        {% translate "Nombre de nettoyages et score moyen par semaine." %}
+                    </p>
+                    <div id="dz-timeline" class="dz-timeline" role="img"
+                         aria-label="{% translate 'Évolution hebdomadaire du score de qualité' %}">
+                        {% if sparkline %}
+                            <svg class="dz-timeline__svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                                <polyline class="dz-timeline__line" fill="none"
+                                          points="{% for point in sparkline %}{{ point.x|unlocalize }},{{ point.y|unlocalize }} {% endfor %}"></polyline>
+                                {% for point in sparkline %}
+                                    <circle class="dz-timeline__dot" cx="{{ point.x|unlocalize }}" cy="{{ point.y|unlocalize }}" r="1.4">
+                                        <title>{{ point.label }} — {{ point.score }}/100</title>
+                                    </circle>
+                                {% endfor %}
+                            </svg>
+                        {% endif %}
+                        <div class="dz-timeline__bars" aria-hidden="true">
+                            {% for bucket in timeline %}
+                                <div class="dz-timeline__bar" title="{{ bucket.label }} — {{ bucket.count }}">
+                                    <span style="height: {{ bucket.height|unlocalize }}%"></span>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="dz-timeline__labels" aria-hidden="true">
+                            {% for bucket in timeline %}
+                                <span>{{ bucket.label }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <h3 class="h6 mt-4 mb-2">{% translate "Détail par semaine" %}</h3>
+                    <ul class="list-unstyled dz-timeline-list mb-0">
+                        {% for bucket in timeline %}
+                            <li class="d-flex justify-content-between small py-1 border-bottom">
+                                <span class="text-muted">{{ bucket.label }}</span>
+                                <span>
+                                    <span class="badge text-bg-secondary">{{ bucket.count }}</span>
+                                    {% if bucket.score is not None %}
+                                        <span class="fw-semibold">{{ bucket.score }}/100</span>
+                                    {% else %}
+                                        <span class="text-muted">—</span>
+                                    {% endif %}
+                                </span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="card dz-panel h-100">
+                <div class="card-body">
+                    <h2 class="h6 mb-1">{% translate "🎯 Répartition par niveau de qualité" %}</h2>
+                    <p class="text-muted small mb-3">
+                        {% translate "Combien de fichiers se trouvent dans chaque tranche de score." %}
+                    </p>
+                    {% for bucket in distribution %}
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between small mb-1">
+                                <span>{{ bucket.label }}</span>
+                                <span class="fw-semibold">{{ bucket.count }}</span>
+                            </div>
+                            <div class="progress dz-progress-thin" role="progressbar"
+                                 aria-label="{{ bucket.label }}"
+                                 aria-valuenow="{{ bucket.count }}" aria-valuemin="0"
+                                 aria-valuemax="{{ totals.cleaned }}">
+                                <div class="progress-bar bg-{{ bucket.css }}" style="width: {{ bucket.width|unlocalize }}%"></div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    <h3 class="h6 mt-4 mb-2">{% translate "🧭 Dimensions les plus fragiles" %}</h3>
+                    {% if dimensions %}
+                        {% for dimension in dimensions|slice:":5" %}
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between small mb-1">
+                                    <span>{{ dimension.name }}</span>
+                                    <span class="fw-semibold">{{ dimension.score }}/100</span>
+                                </div>
+                                <div class="progress dz-progress-thin" role="progressbar"
+                                     aria-label="{{ dimension.name }}"
+                                     aria-valuenow="{{ dimension.score|unlocalize }}" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-{% if dimension.score >= 90 %}success{% elif dimension.score >= 75 %}info{% elif dimension.score >= 50 %}warning{% else %}danger{% endif %}"
+                                         style="width: {{ dimension.width|unlocalize }}%"></div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-muted small mb-0">
+                            {% translate "Aucune dimension mesurée pour le moment." %}
+                        </p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card dz-panel h-100">
+                <div class="card-body">
+                    <h2 class="h6 mb-3">{% translate "⚠️ Problèmes restants (tous fichiers)" %}</h2>
+                    {% for problem in problems %}
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between small mb-1">
+                                <span><span aria-hidden="true">{{ problem.icon }}</span> {{ problem.label }}</span>
+                                <span class="fw-semibold">{{ problem.value|intcomma }}</span>
+                            </div>
+                            <div class="progress dz-progress-thin" role="progressbar"
+                                 aria-label="{{ problem.label }}"
+                                 aria-valuenow="{{ problem.value }}" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-{{ problem.css }}" style="width: {{ problem.width|unlocalize }}%"></div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card dz-panel h-100">
+                <div class="card-body">
+                    <h2 class="h6 mb-3">{% translate "📉 Fichiers à traiter en priorité" %}</h2>
+                    {% if worst_files %}
+                        <div class="table-responsive">
+                            <table class="table table-sm align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>{% translate "Fichier" %}</th>
+                                        <th class="text-end">{% translate "Score" %}</th>
+                                        <th class="text-end">{% translate "Progression" %}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for file in worst_files %}
+                                        <tr>
+                                            <td>
+                                                <a href="{% url 'core:dataset_detail' file.pk %}">{{ file.original_name }}</a>
+                                                <div class="text-muted small">{{ file.rows_count|default:"—"|intcomma }} {% translate "lignes" %}</div>
+                                            </td>
+                                            <td class="text-end fw-semibold">
+                                                {{ file.quality_after|default:"—" }}{% if file.quality_after is not None %}<span class="text-muted">/100</span>{% endif %}
+                                            </td>
+                                            <td class="text-end">
+                                                <span class="badge text-bg-{{ file.delta_css|default:'secondary' }}">
+                                                    {{ file.delta_text|default:"—" }}
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <p class="text-muted small mb-0">{% translate "Aucun fichier nettoyé pour le moment." %}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card dz-panel h-100">
+                <div class="card-body">
+                    <h2 class="h6 mb-3">{% translate "🏆 Meilleurs résultats" %}</h2>
+                    {% if best_files %}
+                        <ul class="list-unstyled mb-0">
+                            {% for file in best_files %}
+                                <li class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                                    <a href="{% url 'core:dataset_detail' file.pk %}" class="text-truncate me-3">
+                                        {{ file.original_name }}
+                                    </a>
+                                    <span class="badge text-bg-success">{{ file.quality_after|default:"—" }}/100</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="text-muted small mb-0">{% translate "Aucun fichier nettoyé pour le moment." %}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card dz-panel h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h2 class="h6 mb-0">{% translate "🕓 Dernières activités" %}</h2>
+                        <a class="small" href="{% url 'core:activity' %}">{% translate "Tout voir" %}</a>
+                    </div>
+                    {% if activities %}
+                        <ul class="list-unstyled dz-activity mb-0">
+                            {% for item in activities %}
+                                <li class="dz-activity-item">
+                                    <div class="dz-activity-title">{{ item.message|default:item.get_action_display }}</div>
+                                    <div class="dz-activity-meta">
+                                        <span class="badge text-bg-{{ item.level }}">{{ item.get_action_display }}</span>
+                                        {{ item.created_at|naturaltime }}
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="text-muted small mb-0">{% translate "Aucune activité enregistrée." %}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

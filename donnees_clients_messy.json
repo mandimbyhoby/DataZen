@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "nom": "Alice Martin",
+    "email": "alice.martin@mail.com",
+    "telephone": "06 12 34 56 78",
+    "ville": "Paris",
+    "date_inscription": "2024-01-15",
+    "montant_achat": "1 299,90 €",
+    "statut": "Actif",
+    "newsletter": "oui"
+  },
+  {
+    "id": 2,
+    "nom": "BOB DUPONT",
+    "email": "bob.dupont@mail.com",
+    "telephone": "0612345679",
+    "ville": "Lyon",
+    "date_inscription": "2024-02-20",
+    "montant_achat": "29,99",
+    "statut": "actif",
+    "newsletter": "OUI"
+  },
+  {
+    "id": 3,
+    "nom": "charlie leblanc",
+    "email": "charlie.leblanc@mail.com",
+    "telephone": "06.12.34.56.80",
+    "ville": "Marseille",
+    "date_inscription": "2024-03-10",
+    "montant_achat": 299.9,
+    "statut": "Inactif",
+    "newsletter": "non"
+  },
+  {
+    "id": 4,
+    "nom": "Alice Martin",
+    "email": "alice.martin@mail.com",
+    "telephone": "06 12 34 56 78",
+    "ville": "Paris",
+    "date_inscription": "2024-01-15",
+    "montant_achat": "1 299,90 €",
+    "statut": "Actif",
+    "newsletter": "oui"
+  },
+  {
+    "id": 5,
+    "nom": " David Petit ",
+    "email": "david.petit@mail.com",
+    "telephone": "06-12-34-56-81",
+    "ville": " Lille ",
+    "date_inscription": "15/04/2024",
+    "montant_achat": "89,90",
+    "statut": "Actif",
+    "newsletter": "Non"
+  },
+  {
+    "id": 6,
+    "nom": "Élise Moreau",
+    "email": "elise.moreau@mail.com",
+    "telephone": "0612345682",
+    "ville": "Nantes",
+    "date_inscription": "2024-05-05",
+    "montant_achat": "299,90",
+    "statut": "Inactif",
+    "newsletter": "oui"
+  },
+  {
+    "id": 7,
+    "nom": "alice martin",
+    "email": "ALICE.MARTIN@mail.com",
+    "telephone": "06 12 34 56 78",
+    "ville": "paris",
+    "date_inscription": "2024-06-12",
+    "montant_achat": 1299.9,
+    "statut": "ACTIF",
+    "newsletter": "OUI"
+  },
+  {
+    "id": 8,
+    "nom": "François Girard",
+    "email": "francois.girard@mail.com",
+    "telephone": "0612345683",
+    "ville": "Toulouse",
+    "date_inscription": "2024-07-01",
+    "montant_achat": "59,90",
+    "statut": "Actif",
+    "newsletter": "non"
+  },
+  {
+    "id": 9,
+    "nom": "  gérard roux  ",
+    "email": "gerard.roux@mail.com",
+    "telephone": "06 12 34 56 84",
+    "ville": "Lyon ",
+    "date_inscription": "08/08/2024",
+    "montant_achat": "29,99",
+    "statut": "Inactif",
+    "newsletter": "NON"
+  },
+  {
+    "id": 10,
+    "nom": "Hélène Fournier",
+    "email": null,
+    "telephone": "0612345685",
+    "ville": "Rennes",
+    "date_inscription": "2024-09-10",
+    "montant_achat": "109,90",
+    "statut": "Actif",
+    "newsletter": "oui"
+  },
+  {
+    "id": 11,
+    "nom": "bob dupont",
+    "email": "bob.dupontmail.com",
+    "telephone": "06 12 34 56 79",
+    "ville": "LYON",
+    "date_inscription": "2024-02-20",
+    "montant_achat": "29,99 €",
+    "statut": "ACTIF",
+    "newsletter": "OUI"
+  },
+  {
+    "id": 12,
+    "nom": "Inès Lambert",
+    "email": "ines.lambert@mail.com",
+    "telephone": "",
+    "ville": "",
+    "date_inscription": "2024-11-30",
+    "montant_achat": null,
+    "statut": "Inconnu",
+    "newsletter": ""
+  },
+  {
+    "id": 13,
+    "nom": "",
+    "email": "karim.benali@",
+    "telephone": "0612345687",
+    "ville": "Nice",
+    "date_inscription": "2024-04-17",
+    "montant_achat": "449,00",
+    "statut": "Actif",
+    "newsletter": "oui"
+  },
+  {
+    "id": 14,
+    "nom": "Laura Schmitt",
+    "email": "laura.schmitt@mail.com",
+    "telephone": "06 12 34 56 88",
+    "ville": "Strasbourg",
+    "date_inscription": "2024-10-02",
+    "montant_achat": "189,90",
+    "statut": "Actif",
+    "newsletter": "non"
+  },
+  {
+    "id": 15,
+    "nom": "Inconnu",
+    "email": "inconnu@mail.com",
+    "telephone": "0612345689",
+    "ville": "Paris",
+    "date_inscription": "2024-12-01",
+    "montant_achat": "1 299,90 €",
+    "statut": "Inconnu",
+    "newsletter": "oui"
+  }
+]

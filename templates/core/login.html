@@ -1,0 +1,65 @@
+{% extends "core/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% translate "Connexion — DataZen" %}{% endblock %}
+
+{% block content %}
+<section class="dz-auth-shell">
+    {# Décor animé : purement esthétique, donc masqué aux lecteurs d'écran. #}
+    <div class="dz-auth-video" aria-hidden="true">
+        <video class="dz-auth-video__media" autoplay muted loop playsinline preload="metadata"
+               poster="{% static 'img/login-poster.jpg' %}" tabindex="-1">
+            <source src="{% static 'video/login.webm' %}" type="video/webm">
+            <source src="{% static 'video/login.mp4' %}" type="video/mp4">
+        </video>
+        <div class="dz-auth-video__overlay"></div>
+    </div>
+    <div class="container dz-auth">
+    <div class="row justify-content-center w-100">
+        <div class="col-md-7 col-lg-5 col-xl-4">
+            <div class="dz-auth-card" data-dz-reveal>
+                <div class="dz-auth-header">
+                    <div class="dz-auth-icon" aria-hidden="true">🔐</div>
+                    <h1>{% translate "Bon retour parmi nous" %}</h1>
+                    <p class="dz-auth-subtitle">{% translate "Connectez-vous pour retrouver vos fichiers." %}</p>
+                </div>
+
+                <div class="dz-auth-body">
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            {% for error in form.non_field_errors %}{{ error }}{% endfor %}
+                        </div>
+                    {% endif %}
+
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label class="form-label" for="{{ form.username.id_for_label }}">{% translate "Nom d'utilisateur" %}</label>
+                            <input type="text" name="username" id="{{ form.username.id_for_label }}"
+                                   class="form-control" autofocus required autocomplete="username">
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <label class="form-label mb-0" for="{{ form.password.id_for_label }}">{% translate "Mot de passe" %}</label>
+                                <a class="small" href="{% url 'core:password_reset' %}">{% translate "Mot de passe oublié ?" %}</a>
+                            </div>
+                            <input type="password" name="password" id="{{ form.password.id_for_label }}"
+                                   class="form-control mt-1" required autocomplete="current-password">
+                        </div>
+                        <input type="hidden" name="next" value="{{ next }}">
+                        <button type="submit" class="btn btn-primary btn-lg w-100">{% translate "Se connecter" %}</button>
+                    </form>
+
+                    <div class="dz-auth-divider">{% translate "ou" context "séparateur" %}</div>
+
+                    <p class="text-center text-muted small mb-0">
+                        {% translate "Pas encore de compte ?" %}
+                        <a href="{% url 'core:signup' %}" class="fw-semibold">{% translate "Créer un compte" %}</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,2833 @@
+# Catalogue de traduction DataZen.
+# Généré par tools/i18n_build.py — ne pas éditer à la main.
+msgid ""
+msgstr ""
+"Project-Id-Version: DataZen 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+msgid "%(actual)s correction(s) in the log vs %(reported)s reported"
+msgstr "%(actual)s oprava/oprav v protokolu vs %(reported)s nahlášených"
+
+msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
+msgstr "%(actual)s neznámých hodnot ve sloupcích e-mailu vs %(reported)s nahlášených"
+
+msgid "%(count)s colonnes"
+msgstr "%(count)s sloupců"
+
+msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
+msgstr "%(count)s možných duplicit vyžaduje kontrolu."
+
+msgid "%(count)s entrée(s) d'activité supprimée(s)."
+msgstr "Odstraněno %(count)s záznamů protokolu aktivity."
+
+msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
+msgstr "%(count)s chyb se nepodařilo automaticky opravit."
+
+msgid "%(count)s exact duplicate(s) remaining"
+msgstr "%(count)s přesných duplicit zbývá"
+
+msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
+msgstr "%(count)s nekonzistentních hodnot zbývá (ani platné, ani neznámé)"
+
+msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
+msgstr "%(count)s neplatných e-mailů (nejsou prázdné ani neznámé)"
+
+msgid "%(count)s invalid value(s) among filled data"
+msgstr "%(count)s neplatných hodnot mezi vyplněnými daty"
+
+msgid "%(count)s lignes"
+msgstr "%(count)s řádků"
+
+msgid "%(count)s missing value(s)"
+msgstr "%(count)s chybějících hodnot"
+
+msgid "%(count)s non-standard value(s)"
+msgstr "%(count)s nestandardních hodnot"
+
+msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
+msgstr "%(count)s možných duplicit vyžaduje ruční kontrolu (snížená penalizace)"
+
+msgid "%(count)s unknown value(s) (data unavailable)"
+msgstr "%(count)s neznámých hodnot (data nejsou k dispozici)"
+
+msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
+msgstr "V číselných sloupcích bylo zjištěno %(count)s odlehlých hodnot."
+
+msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
+msgstr "%(count)s hodnot je aktuálně „Neznámé“."
+
+msgid "%(counter)s doublon potentiel détecté. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgid_plural "%(counter)s doublons potentiels détectés. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgstr[0] "Byla zjištěna %(counter)s možná duplicita. Tyto řádky se <strong>nikdy</strong> nemažou automaticky: vyžadují vaše rozhodnutí."
+msgstr[1] "Byly zjištěny %(counter)s možné duplicity. Tyto řádky se <strong>nikdy</strong> nemažou automaticky: vyžadují vaše rozhodnutí."
+msgstr[2] "Bylo zjištěno %(counter)s možných duplicit. Tyto řádky se <strong>nikdy</strong> nemažou automaticky: vyžadují vaše rozhodnutí."
+
+msgid "%(counter)s fichier affiché"
+msgid_plural "%(counter)s fichiers affichés"
+msgstr[0] "%(counter)s zobrazený soubor"
+
+msgid "%(counter)s inconnu"
+msgid_plural "%(counter)s inconnus"
+msgstr[0] "%(counter)s neznámé"
+
+msgid "%(counter)s invalide,"
+msgid_plural "%(counter)s invalides,"
+msgstr[0] "%(counter)s neplatné,"
+
+msgid "%(counter)s ligne concernée :"
+msgid_plural "%(counter)s lignes concernées :"
+msgstr[0] "%(counter)s dotčený řádek:"
+
+msgid "%(counter)s valide,"
+msgid_plural "%(counter)s valides,"
+msgstr[0] "%(counter)s platné,"
+
+msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
+msgstr "Odstraněno %(purged)s souborů, archivováno %(archived)s."
+
+msgid "%(score)s / 100  (%(weight)s %(percent)s)"
+msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
+msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs očekávaných %(expected)s"
+
+msgid "%(value)s %(percent)s"
+msgstr "%(value)s %(percent)s"
+
+msgid "(%(counter)s modification)"
+msgid_plural "(%(counter)s modifications)"
+msgstr[0] "(%(counter)s změna)"
+
+msgid "(%(counter)s non-conformité)"
+msgid_plural "(%(counter)s non-conformités)"
+msgstr[0] "(%(counter)s neshoda)"
+
+msgid "(colonnes : %(columns)s)"
+msgstr "(sloupce: %(columns)s)"
+
+msgid "(score ≥ 0.8)"
+msgstr "(skóre ≥ 0.8)"
+
+msgid "(⚠️ à vérifier manuellement)"
+msgstr "(⚠️ vyžaduje ruční kontrolu)"
+
+msgid ", Vous recevez ce message parce qu'une réinitialisation de mot de passe a été demandée pour votre compte DataZen. Cliquez sur le lien ci-dessous pour choisir un nouveau mot de passe :"
+msgstr ", Tuto zprávu dostáváte, protože bylo požádáno o obnovení hesla k vašemu účtu DataZen. Kliknutím na odkaz níže si zvolte nové heslo:"
+
+msgid "<a href=\"#televerser\">Téléversez votre premier fichier</a> pour commencer."
+msgstr "<a href=\"#televerser\">Nahrajte svůj první soubor</a> a začněte."
+
+msgid "<strong>Doublons potentiels :</strong> aucun"
+msgstr "<strong>Možné duplicity:</strong> žádné"
+
+msgid "<strong>Doublons potentiels restants :</strong> aucun"
+msgstr "<strong>Zbývající možné duplicity:</strong> žádné"
+
+msgid "<strong>Valeurs manquantes :</strong> aucune"
+msgstr "<strong>Chybějící hodnoty:</strong> žádné"
+
+msgid "<strong>Valeurs manquantes restantes :</strong> aucune"
+msgstr "<strong>Zbývající chybějící hodnoty:</strong> žádné"
+
+msgid "AAAA-MM-JJ"
+msgstr "AAAA-MM-JJ"
+
+msgid "API"
+msgstr "API"
+
+msgid "API & webhooks"
+msgstr "API a webhooky"
+
+msgid "API REST"
+msgstr "REST API"
+
+msgid "API et intégrations"
+msgstr "API a integrace"
+
+msgid "API et intégrations — DataZen"
+msgstr "API a integrace — DataZen"
+
+msgid "Abonnements"
+msgstr "Odběry"
+
+msgid "Accueil"
+msgstr "Domů"
+
+msgid "Actif"
+msgstr "Aktivní"
+
+msgid "Actifs"
+msgstr "Aktivní"
+
+msgid "Action"
+msgstr "Akce"
+
+msgid "Action invalide."
+msgstr "Neplatná akce."
+
+msgid "Actions"
+msgstr "Akce"
+
+msgid "Active"
+msgstr "Aktivní"
+
+msgid "Activer"
+msgstr "Aktivovat"
+
+msgid "Activer le thème clair"
+msgstr "Zapnout světlé téma"
+
+msgid "Activer le thème sombre"
+msgstr "Zapnout tmavé téma"
+
+msgid "Activité"
+msgstr "Aktivita"
+
+msgid "Activités"
+msgstr "Aktivity"
+
+msgid "Activée"
+msgstr "Zapnuto"
+
+msgid "Administrateur"
+msgstr "Administrátor"
+
+msgid "Administration"
+msgstr "Správa"
+
+msgid "Adresse email"
+msgstr "E-mailová adresa"
+
+msgid "Affichage de %(shown)s lignes sur %(total)s."
+msgstr "Zobrazeno %(shown)s z %(total)s řádků."
+
+msgid "Affichage des"
+msgstr "Zobrazení"
+
+msgid "Afficher"
+msgstr "Zobrazit"
+
+msgid "Afficher le mot de passe"
+msgstr "Zobrazit heslo"
+
+msgid "Afficher les détails des anomalies"
+msgstr "Zobrazit podrobnosti anomálií"
+
+msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
+msgstr "Přidá se do hlavičky X-DataZen-Signature (HMAC-SHA256)."
+
+msgid "All filled values are valid"
+msgstr "Všechny vyplněné hodnoty jsou platné"
+
+msgid "Aller au contenu principal"
+msgstr "Přejít k hlavnímu obsahu"
+
+msgid "Analyse exploratoire"
+msgstr "Explorativní analýza"
+
+msgid "Analyse exploratoire — %(name)s"
+msgstr "Explorativní analýza — %(name)s"
+
+msgid "Analyser et nettoyer"
+msgstr "Analyzovat a vyčistit"
+
+msgid "Analyste de données"
+msgstr "Datový analytik"
+
+msgid "Ancienne valeur"
+msgstr "Původní hodnota"
+
+msgid "Annuler"
+msgstr "Zrušit"
+
+msgid "Anomalies restantes (à traiter manuellement)"
+msgstr "Zbývající anomálie (k ručnímu zpracování)"
+
+msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
+msgstr "Anonymizace citlivých údajů (pseudonymizováno hodnot: %(count)s)"
+
+msgid "Anonymiser les données sensibles"
+msgstr "Anonymizovat citlivá data"
+
+msgid "Anonymiser les données sensibles (noms, emails, téléphones)"
+msgstr "Anonymizovat citlivá data (jména, e-maily, telefonní čísla)"
+
+msgid "Antananarivo, Madagascar"
+msgstr "Antananarivo, Madagascar"
+
+msgid "Aperçu du fichier nettoyé"
+msgstr "Náhled vyčištěného souboru"
+
+msgid "Appel API"
+msgstr "Volání API"
+
+msgid "Appel API : %(path)s"
+msgstr "Volání API: %(path)s"
+
+msgid "Appels"
+msgstr "Volání"
+
+msgid "Application"
+msgstr "Aplikace"
+
+msgid "Après"
+msgstr "Po"
+
+msgid "Archivage"
+msgstr "Archivace"
+
+msgid "Archivage de « %(name)s »"
+msgstr "Archivace « %(name)s »"
+
+msgid "Archiver"
+msgstr "Archivovat"
+
+msgid "Archives"
+msgstr "Archiv"
+
+msgid "Archivés"
+msgstr "Archivováno"
+
+msgid "Aucun fichier d'origine n'est disponible."
+msgstr "Původní soubor není k dispozici."
+
+msgid "Aucun fichier expiré à purger."
+msgstr "Žádné prošlé soubory k vyčištění."
+
+msgid "Aucun fichier expiré. Votre espace de travail est à jour."
+msgstr "Žádné prošlé soubory. Váš pracovní prostor je aktuální."
+
+msgid "Aucun fichier ne correspond à votre recherche."
+msgstr "Vašemu hledání neodpovídá žádný soubor."
+
+msgid "Aucun fichier nettoyé n'est disponible."
+msgstr "Vyčištěný soubor není k dispozici."
+
+msgid "Aucun fichier nettoyé pour le moment."
+msgstr "Zatím žádné vyčištěné soubory."
+
+msgid "Aucun fichier pour le moment."
+msgstr "Zatím žádné soubory."
+
+msgid "Aucun fichier sélectionné"
+msgstr "Není vybrán žádný soubor"
+
+msgid "Aucun fichier téléversé pour le moment."
+msgstr "Zatím nebyl nahrán žádný soubor."
+
+msgid "Aucun graphique n'est disponible pour ce jeu de données : il ne contient pas assez de valeurs numériques ou catégorielles exploitables."
+msgstr "Pro tuto datovou sadu není k dispozici žádný graf: neobsahuje dostatek použitelných číselných nebo kategoriálních hodnot."
+
+msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
+msgstr "Zatím žádné tokeny. Vytvořte jeden pro použití API."
+
+msgid "Aucun journal des modifications n'est disponible."
+msgstr "Protokol změn není k dispozici."
+
+msgid "Aucun problème détecté"
+msgstr "Nebyl zjištěn žádný problém"
+
+msgid "Aucun rapport de nettoyage n'est disponible."
+msgstr "Zpráva o čištění není k dispozici."
+
+msgid "Aucun résultat pour cette recherche."
+msgstr "Pro toto hledání nejsou žádné výsledky."
+
+msgid "Aucun webhook configuré. Ajoutez une URL pour être notifié automatiquement."
+msgstr "Není nakonfigurován žádný webhook. Přidejte URL a získáte automatická oznámení."
+
+msgid "Aucune activité enregistrée pour le moment."
+msgstr "Zatím není zaznamenána žádná aktivita."
+
+msgid "Aucune activité enregistrée."
+msgstr "Není zaznamenána žádná aktivita."
+
+msgid "Aucune anomalie restante."
+msgstr "Žádné zbývající anomálie."
+
+msgid "Aucune anomalie."
+msgstr "Žádné anomálie."
+
+msgid "Aucune colonne"
+msgstr "Žádné sloupce"
+
+msgid "Aucune correction"
+msgstr "Žádné opravy"
+
+msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
+msgstr "Mezi původním a vyčištěným souborem není patrný rozdíl: vaše data už byla čistá."
+
+msgid "Aucune dimension mesurée pour le moment."
+msgstr "Zatím není změřena žádná dimenze."
+
+msgid "Aucune donnée"
+msgstr "Žádná data"
+
+msgid "Aucune donnée nettoyée disponible."
+msgstr "Nejsou k dispozici žádná vyčištěná data."
+
+msgid "Aucune modification enregistrée."
+msgstr "Nejsou uloženy žádné změny."
+
+msgid "Aucune règle personnalisée."
+msgstr "Žádné vlastní pravidlo."
+
+msgid "Aucune règle pour le moment. Créez-en une pour la réutiliser sur tous vos fichiers."
+msgstr "Zatím žádná pravidla. Vytvořte pravidlo a znovu je použijte u všech svých souborů."
+
+msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
+msgstr "V číselných sloupcích nebyly zjištěny žádné odlehlé hodnoty."
+
+msgid "Aucune valeur « Inconnu »."
+msgstr "Žádná hodnota „Neznámé“."
+
+msgid "Audit des emails"
+msgstr "Audit e-mailů"
+
+msgid "Automatisation"
+msgstr "Automatizace"
+
+msgid "Autoriser les autres utilisateurs à consulter votre profil."
+msgstr "Povolit ostatním uživatelům zobrazit váš profil."
+
+msgid "Avant"
+msgstr "Před"
+
+msgid "Avertissement"
+msgstr "Upozornění"
+
+msgid "Basculer la navigation"
+msgstr "Přepnout navigaci"
+
+msgid "Basculer le thème"
+msgstr "Přepnout motiv"
+
+msgid "Basculer le thème clair / sombre"
+msgstr "Přepnout světlý / tmavý motiv"
+
+msgid "Bienvenue %(username)s !"
+msgstr "Vítejte, %(username)s!"
+
+msgid "Bon retour parmi nous"
+msgstr "Vítejte zpět"
+
+msgid "Bonjour"
+msgstr "Dobrý den"
+
+msgid "Borne basse"
+msgstr "Dolní mez"
+
+msgid "Borne haute"
+msgstr "Horní mez"
+
+msgid "Boîtes à moustaches"
+msgstr "Krabicové grafy"
+
+msgid "Boîtes à moustaches des colonnes numériques"
+msgstr "Krabicové grafy číselných sloupců"
+
+msgid "Branchez DataZen sur vos outils existants."
+msgstr "Propojte DataZen se svými stávajícími nástroji."
+
+msgid "Branchez DataZen à vos outils : Power BI, n8n, scripts Python, tableaux de bord maison."
+msgstr "Propojte DataZen se svými nástroji: Power BI, n8n, skripty v Pythonu, vlastní dashboardy."
+
+msgid "CSV (séparateur ;)"
+msgstr "CSV (oddělovač ;)"
+
+msgid "Cadrez votre visage puis cliquez sur « Capturer »."
+msgstr "Zarámujte svou tvář a klikněte na „Zachytit“."
+
+msgid "Calculée sur %(count)s fichier(s) nettoyé(s)."
+msgstr "Vypočteno z %(count)s vyčištěných souborů."
+
+msgid "Canonicalisation du marqueur « Inconnu » (%(count)s corrigé(s))"
+msgstr "Sjednocení značky „Neznámé“ (opraveno: %(count)s)"
+
+msgid "Capturer"
+msgstr "Zachytit"
+
+msgid "Ce graphique n'est pas disponible pour ce jeu de données."
+msgstr "Tento graf není pro tuto datovou sadu k dispozici."
+
+msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
+msgstr "Tento odkaz pro obnovení již byl použit nebo vypršel."
+
+msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
+msgstr "Tento odkaz platí pouze jednou. Pokud jste o obnovení nežádali, tuto zprávu jednoduše ignorujte: vaše heslo zůstane nezměněno. — DataZen"
+
+msgid "Ce profil n'est pas public."
+msgstr "Tento profil není veřejný."
+
+msgid "Ce que le nettoyage a réellement changé dans votre fichier."
+msgstr "Co čištění ve vašem souboru skutečně změnilo."
+
+msgid "Cellules manquantes"
+msgstr "Chybějící buňky"
+
+msgid "Ces %(count)s fichier(s) dépassent la durée de conservation de %(days)s jours. Ils ne sont pas supprimés automatiquement tant que la purge automatique reste désactivée."
+msgstr "Tyto %(count)s souborů překračují dobu uchování %(days)s dnů. Nejsou automaticky mazány, dokud je automatické čištění vypnuté."
+
+msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
+msgstr "Tyto počítadla napájejí globální hledání a zkratky níže."
+
+msgid "Champ"
+msgstr "Pole"
+
+msgid "Champs différents :"
+msgstr "Různá pole:"
+
+msgid "Champs identiques :"
+msgstr "Shodná pole:"
+
+msgid "Champs inconnus :"
+msgstr "Neznámá pole:"
+
+msgid "Changer de langue"
+msgstr "Změnit jazyk"
+
+msgid "Changer ma photo de profil"
+msgstr "Změnit můj profilový obrázek"
+
+msgid "Changer mon mot de passe"
+msgstr "Změnit mé heslo"
+
+msgid "Changer mon mot de passe — DataZen"
+msgstr "Změnit mé heslo — DataZen"
+
+msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
+msgstr "Načtěte svá data ve formátu <code>.csv</code>, <code>.xlsx</code> nebo <code>.xls</code> bez ohledu na oddělovač."
+
+msgid "Choisir la langue du site"
+msgstr "Zvolte jazyk webu"
+
+msgid "Choisir le format"
+msgstr "Zvolte formát"
+
+msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
+msgstr "Zvolte soubor CSV nebo Excel (.csv, .xlsx, .xls)."
+
+msgid "Choisissez un fichier à analyser"
+msgstr "Zvolte soubor k analýze"
+
+msgid "Choisissez un mot de passe long et unique. Vous resterez connecté après la modification."
+msgstr "Zvolte dlouhé a jedinečné heslo. Po změně zůstanete přihlášeni."
+
+msgid "Choisissez un mot de passe solide : au moins 8 caractères, ni trop courant, ni entièrement numérique."
+msgstr "Zvolte silné heslo: alespoň 8 znaků, ne příliš běžné a ne zcela číselné."
+
+msgid "Choisissez une colonne unique (ex. email) pour fusionner les variantes d'un même enregistrement (Alice / alice). Laissez vide pour ne supprimer que les lignes 100 % identiques."
+msgstr "Vyberte jedinečný sloupec (např. e-mail) pro sloučení variant stejného záznamu (Alice / alice). Chcete-li odstranit pouze zcela totožné řádky, ponechte prázdné."
+
+msgid "Clair"
+msgstr "Světlý"
+
+msgid "Cliquer pour choisir une photo sur mon appareil"
+msgstr "Kliknutím zvolte fotografii ze svého zařízení"
+
+msgid "Cliquer pour trier"
+msgstr "Kliknutím seřadíte"
+
+msgid "Cliquez sur l'avatar ci-dessus pour choisir une image, ou sur l'icône appareil photo pour en prendre une instantanément. JPEG, PNG, WebP ou GIF — 5 Mo maximum."
+msgstr "Kliknutím na avatar výše zvolte obrázek, nebo kliknutím na ikonu fotoaparátu pořiďte snímek okamžitě. JPEG, PNG, WebP nebo GIF — maximálně 5 MB."
+
+msgid "Clé de signature"
+msgstr "Klíč podpisu"
+
+msgid "Clé de signature HMAC (facultative)"
+msgstr "Klíč podpisu HMAC (volitelné)"
+
+msgid "Code de langue (fr, en, es…). Vide = langue de l'application."
+msgstr "Kód jazyka (fr, en, es…). Prázdné = jazyk aplikace."
+
+msgid "Coefficient de Pearson"
+msgstr "Pearsonův koeficient"
+
+msgid "Colonne"
+msgstr "Sloupec"
+
+msgid "Colonne ciblée"
+msgstr "Cílový sloupec"
+
+msgid "Colonne clé pour la déduplication"
+msgstr "Klíčový sloupec pro odstranění duplicit"
+
+msgid "Colonnes"
+msgstr "Sloupce"
+
+msgid "Colonnes améliorées"
+msgstr "Vylepšené sloupce"
+
+msgid "Colonnes analysées"
+msgstr "Analyzované sloupce"
+
+msgid "Colonnes différentes"
+msgstr "Různé sloupce"
+
+msgid "Colonnes différentes :"
+msgstr "Různé sloupce:"
+
+msgid "Colonnes identiques :"
+msgstr "Shodné sloupce:"
+
+msgid "Colonnes inconnues :"
+msgstr "Neznámé sloupce:"
+
+msgid "Colonnes stables"
+msgstr "Stabilní sloupce"
+
+msgid "Colonnes à vérifier"
+msgstr "Sloupce ke kontrole"
+
+msgid "Combien de fichiers se trouvent dans chaque tranche de score."
+msgstr "Kolik souborů se nachází v každém pásmu skóre."
+
+msgid "Comparaison"
+msgstr "Porovnání"
+
+msgid "Comparaison avant / après — %(name)s"
+msgstr "Srovnání před / po — %(name)s"
+
+msgid "Complétion du profil"
+msgstr "Úplnost profilu"
+
+msgid "Complétude"
+msgstr "Úplnost"
+
+msgid "Complétude par colonne"
+msgstr "Úplnost podle sloupce"
+
+msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
+msgstr "Úplnost · Platnost · Jedinečnost · Konzistence · Shoda"
+
+msgid "Composantes du score (après nettoyage)"
+msgstr "Složky skóre (po vyčištění)"
+
+msgid "Compte"
+msgstr "Účet"
+
+msgid "Compte actif"
+msgstr "Aktivní účet"
+
+msgid "Condensé"
+msgstr "Shrnutí"
+
+msgid "Confiance"
+msgstr "Důvěra"
+
+msgid "Confirmer la décision"
+msgstr "Potvrdit rozhodnutí"
+
+msgid "Connectez-vous pour retrouver vos fichiers."
+msgstr "Přihlaste se a vraťte se ke svým souborům."
+
+msgid "Connexion"
+msgstr "Přihlášení"
+
+msgid "Connexion — DataZen"
+msgstr "Přihlášení — DataZen"
+
+msgid "Consultation des graphiques"
+msgstr "Zobrazit grafy"
+
+msgid "Consultation du rapport"
+msgstr "Zobrazit report"
+
+msgid "Continuer / valider une étape"
+msgstr "Pokračovat / potvrdit krok"
+
+msgid "Contribution des cinq dimensions pondérées du score."
+msgstr "Příspěvek pěti vážených dimenzí skóre."
+
+msgid "Contrôle de cohérence"
+msgstr "Kontrola konzistence"
+
+msgid "Conversion des compteurs en entiers (%(count)s converti(s))"
+msgstr "Převod počítadel na celá čísla (převedeno: %(count)s)"
+
+msgid "Conversion des montants (%(count)s converti(s))"
+msgstr "Převod částek (převedeno: %(count)s)"
+
+msgid "Convertir les montants"
+msgstr "Převést částky"
+
+msgid "Convertir les montants en valeurs numériques"
+msgstr "Převést částky na číselné hodnoty"
+
+msgid "Copier"
+msgstr "Kopírovat"
+
+msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
+msgstr "Zkopírujte nyní: z bezpečnostních důvodů už nebude zobrazen."
+
+msgid "Corrections"
+msgstr "Opravy"
+
+msgid "Corrections appliquées"
+msgstr "Použité opravy"
+
+msgid "Corrélations de Pearson entre les colonnes numériques."
+msgstr "Pearsonovy korelace mezi číselnými sloupci."
+
+msgid "Création de jeton"
+msgstr "Vytvoření tokenu"
+
+msgid "Création de la règle « %(name)s »"
+msgstr "Vytvoření pravidla « %(name)s »"
+
+msgid "Création de règle"
+msgstr "Vytvoření pravidla"
+
+msgid "Création du jeton « %(name)s »"
+msgstr "Vytvoření tokenu « %(name)s »"
+
+msgid "Créer la règle"
+msgstr "Vytvořit pravidlo"
+
+msgid "Créer le jeton"
+msgstr "Vytvořit token"
+
+msgid "Créer le webhook"
+msgstr "Vytvořit webhook"
+
+msgid "Créer un compte"
+msgstr "Vytvořit účet"
+
+msgid "Créer une règle"
+msgstr "Vytvořit pravidlo"
+
+msgid "Créez une règle une fois, réutilisez-la sur tous vos fichiers."
+msgstr "Vytvořte pravidlo jednou a znovu je použijte u všech svých souborů."
+
+msgid "Créez votre compte"
+msgstr "Vytvořte si účet"
+
+msgid "Data is consistent: each value is valid or unknown"
+msgstr "Data jsou konzistentní: každá hodnota je platná nebo neznámá"
+
+msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
+msgstr "DataZen — Aplikace pro čištění dat (DataClean Pro) · ©"
+
+msgid "DataZen — Nettoyage de données"
+msgstr "DataZen — Čištění dat"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Date d'expiration"
+msgstr "Datum vypršení"
+
+msgid "Date invalide"
+msgstr "Neplatné datum"
+
+msgid "De l'import brut au rapport de qualité, DataZen couvre toute la chaîne."
+msgstr "Od surového importu po zprávu o kvalitě pokrývá DataZen celý řetězec."
+
+msgid "Demander un nouveau lien"
+msgstr "Požádat o nový odkaz"
+
+msgid "Dernier appel"
+msgstr "Poslední volání"
+
+msgid "Dernier code HTTP"
+msgstr "Poslední kód HTTP"
+
+msgid "Dernier déclenchement"
+msgstr "Poslední spuštění"
+
+msgid "Dernier usage"
+msgstr "Poslední použití"
+
+msgid "Derniers fichiers"
+msgstr "Nedávné soubory"
+
+msgid "Dernière connexion"
+msgstr "Poslední přihlášení"
+
+msgid "Dernière utilisation"
+msgstr "Poslední použití"
+
+msgid "Dernières règles"
+msgstr "Nedávná pravidla"
+
+msgid "Des incohérences ont été détectées entre les statistiques et les données."
+msgstr "Byly zjištěny nesrovnalosti mezi statistikami a daty."
+
+msgid "Dimension"
+msgstr "Dimenze"
+
+msgid "Dimensions de qualité"
+msgstr "Dimenze kvality"
+
+msgid "Dispersion et valeurs extrêmes des colonnes numériques."
+msgstr "Rozptyl a extrémní hodnoty číselných sloupců."
+
+msgid "Distributions des colonnes numériques"
+msgstr "Rozložení číselných sloupců"
+
+msgid "Distributions numériques"
+msgstr "Číselná rozdělení"
+
+msgid "Django · Pandas · Bootstrap"
+msgstr "Django · Pandas · Bootstrap"
+
+msgid "Doublon par similarité"
+msgstr "Duplicita podle podobnosti"
+
+msgid "Doublon potentiel"
+msgstr "Možná duplicita"
+
+msgid "Doublons"
+msgstr "Duplicity"
+
+msgid "Doublons exacts"
+msgstr "Přesné duplicity"
+
+msgid "Doublons exacts :"
+msgstr "Přesné duplicity:"
+
+msgid "Doublons exacts restants :"
+msgstr "Zbývající přesné duplicity:"
+
+msgid "Doublons par similarité :"
+msgstr "Duplicity podle podobnosti:"
+
+msgid "Doublons potentiels"
+msgstr "Možné duplicity"
+
+msgid "Doublons potentiels (⚠️ à vérifier) :"
+msgstr "Možné duplicity (⚠️ ke kontrole):"
+
+msgid "Doublons potentiels :"
+msgstr "Možné duplicity:"
+
+msgid "Doublons potentiels restants :"
+msgstr "Zbývající možné duplicity:"
+
+msgid "Doublons restants (exacts + potentiels)"
+msgstr "Zbývající duplicity (přesné + možné)"
+
+msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
+msgstr "Duplicity, přebytečné mezery, chybně formátované e-maily, nekonzistentní data… DataZen problémy odhalí a vše automaticky opraví během několika sekund."
+
+msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
+msgstr "Duplicity, chybějící hodnoty, mezery, velikost písmen, e-maily, telefony, data a mzdy normalizovány."
+
+msgid "Durée de conservation"
+msgstr "Doba uchování"
+
+msgid "Durée de conservation (jours)"
+msgstr "Doba uchování (dny)"
+
+msgid "Décision appliquée avec succès."
+msgstr "Rozhodnutí bylo úspěšně použito."
+
+msgid "Déjà un compte ?"
+msgstr "Máte již účet?"
+
+msgid "Désactiver"
+msgstr "Deaktivovat"
+
+msgid "Désactivée"
+msgstr "Vypnuto"
+
+msgid "Détail"
+msgstr "Podrobnosti"
+
+msgid "Détail par colonne"
+msgstr "Podrobnosti podle sloupce"
+
+msgid "Détail par semaine"
+msgstr "Podrobnosti podle týdne"
+
+msgid "Détails techniques"
+msgstr "Technické podrobnosti"
+
+msgid "E-mail envoyé — DataZen"
+msgstr "E-mail odeslán — DataZen"
+
+msgid "Effacer"
+msgstr "Vymazat"
+
+msgid "Effectif"
+msgstr "Počet"
+
+msgid "Email invalide"
+msgstr "Neplatný e-mail"
+
+msgid "Email nettoyé"
+msgstr "Vyčištěný e-mail"
+
+msgid "Email original"
+msgstr "Původní e-mail"
+
+msgid "Emails :"
+msgstr "E-maily:"
+
+msgid "Emails corrected (change log vs counter)"
+msgstr "Opravené e-maily (protokol změn vs počítadlo)"
+
+msgid "Emails invalides :"
+msgstr "Neplatné e-maily:"
+
+msgid "Emails invalides restants :"
+msgstr "Zbývající neplatné e-maily:"
+
+msgid "Emails restants :"
+msgstr "Zbývající e-maily:"
+
+msgid "Emails: valid + invalid + unknown = total"
+msgstr "E-maily: platné + neplatné + neznámé = celkem"
+
+msgid "En attente"
+msgstr "Čeká"
+
+msgid "En cours de traitement"
+msgstr "Zpracovává se"
+
+msgid "En erreur"
+msgstr "Selhalo"
+
+msgid "En échec"
+msgstr "Neúspěch"
+
+msgid "Enregistrer"
+msgstr "Uložit"
+
+msgid "Enregistrer le nouveau mot de passe"
+msgstr "Uložit nové heslo"
+
+msgid "Enregistrer les modifications"
+msgstr "Uložit změny"
+
+msgid "Entrée"
+msgstr "Enter"
+
+msgid "Entrées"
+msgstr "Záznamy"
+
+msgid "Envoyer le lien de réinitialisation"
+msgstr "Odeslat odkaz pro obnovení"
+
+msgid "Erreur"
+msgstr "Chyba"
+
+msgid "Erreur de nettoyage"
+msgstr "Chyba čištění"
+
+msgid "Erreurs de format"
+msgstr "Chyby formátu"
+
+msgid "Erreurs restantes"
+msgstr "Zbývající chyby"
+
+msgid "Excel (.xlsx)"
+msgstr "Excel (.xlsx)"
+
+msgid "Expiration"
+msgstr "Vypršení"
+
+msgid "Expiré"
+msgstr "Prošlé"
+
+msgid "Explication du score"
+msgstr "Vysvětlení skóre"
+
+msgid "Export & traçabilité"
+msgstr "Export a sledovatelnost"
+
+msgid "Fermer"
+msgstr "Zavřít"
+
+msgid "Fermer la fenêtre active"
+msgstr "Zavřít aktivní okno"
+
+msgid "Fichier"
+msgstr "Soubor"
+
+msgid "Fichier de données"
+msgstr "Datový soubor"
+
+msgid "Fichier nettoyé"
+msgstr "Vyčištěný soubor"
+
+msgid "Fichier supprimé"
+msgstr "Soubor odstraněn"
+
+msgid "Fichier téléversé"
+msgstr "Soubor nahrán"
+
+msgid "Fichier téléversé avec succès."
+msgstr "Soubor byl úspěšně nahrán."
+
+msgid "Fichier « %(name)s » archivé."
+msgstr "Soubor „%(name)s“ byl archivován."
+
+msgid "Fichier « %(name)s » restauré."
+msgstr "Soubor „%(name)s“ byl obnoven."
+
+msgid "Fichier « %(name)s » supprimé."
+msgstr "Soubor „%(name)s“ byl odstraněn."
+
+msgid "Fichiers"
+msgstr "Soubory"
+
+msgid "Fichiers archivés"
+msgstr "Archivované soubory"
+
+msgid "Fichiers au total"
+msgstr "Celkem souborů"
+
+msgid "Fichiers de données"
+msgstr "Datové soubory"
+
+msgid "Fichiers expirés"
+msgstr "Prošlé soubory"
+
+msgid "Fichiers nettoyés avant le %(cutoff)s considérés comme expirés."
+msgstr "Soubory vyčištěné před %(cutoff)s se považují za prošlé."
+
+msgid "Fichiers nettoyés plus anciens que cette durée (0 = conservation illimitée)."
+msgstr "Vyčištěné soubory starší než tato doba (0 = neomezené uchování)."
+
+msgid "Fichiers récents"
+msgstr "Nedávné soubory"
+
+msgid "Fil d'Ariane"
+msgstr "Drobečková navigace"
+
+msgid "Filtrer"
+msgstr "Filtrovat"
+
+msgid "Filtrer les lignes du tableau"
+msgstr "Filtrovat řádky tabulky"
+
+msgid "Filtrer par action"
+msgstr "Filtrovat podle akce"
+
+msgid "Filtrer par statut"
+msgstr "Filtrovat podle stavu"
+
+msgid "Filtrer un tableau"
+msgstr "Filtrovat tabulku"
+
+msgid "Fonction"
+msgstr "Funkce"
+
+msgid "Format de date"
+msgstr "Formát data"
+
+msgid "Format de la charge utile"
+msgstr "Formát datové zprávy"
+
+msgid "Formats acceptés : <code>.csv</code>, <code>.xlsx</code>, <code>.xls</code> — jusqu'à 20 Mo."
+msgstr "Přijímané formáty: <code>.csv</code>, <code>.xlsx</code>, <code>.xls</code> — až 20 MB."
+
+msgid "Formats de dates (%(column)s) :"
+msgstr "Formáty data (%(column)s):"
+
+msgid "Formats standardized (phones, dates)"
+msgstr "Standardizované formáty (telefony, data)"
+
+msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
+msgstr "Šetřete čas: vše důležité v DataZen je na klávesové zkratce."
+
+msgid "Graphiques"
+msgstr "Grafy"
+
+msgid "Graphiques générés avec matplotlib et seaborn à partir des données nettoyées."
+msgstr "Grafy vytvořené pomocí matplotlib a seaborn z vyčištěných dat."
+
+msgid "Graphiques générés côté serveur avec"
+msgstr "Grafy generované na serveru pomocí"
+
+msgid "Graphiques statistiques générés avec <strong>matplotlib</strong> et <strong>seaborn</strong> à partir des données nettoyées."
+msgstr "Statistické grafy generované pomocí <strong>matplotlib</strong> a <strong>seaborn</strong> z vyčištěných dat."
+
+msgid "Gratuit, immédiat, et vos fichiers restent privés."
+msgstr "Zdarma, okamžitě a vaše soubory zůstávají v soukromí."
+
+msgid "Gérer les règles…"
+msgstr "Spravovat pravidla…"
+
+msgid "Histogrammes des colonnes numériques détectées."
+msgstr "Histogramy zjištěných číselných sloupců."
+
+msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
+msgstr "Časově označená historie vašich akcí: nahrání, čištění, exporty, API."
+
+msgid "Identité"
+msgstr "Identita"
+
+msgid "Ignorer la casse (Alice = alice)"
+msgstr "Ignorovat velikost písmen (Alice = alice)"
+
+msgid "Import CSV & Excel"
+msgstr "Import CSV a Excel"
+
+msgid "Impossible d'appliquer la décision : %(error)s"
+msgstr "Rozhodnutí nelze použít: %(error)s"
+
+msgid "Impossible de convertir le fichier : %(error)s"
+msgstr "Soubor nelze převést: %(error)s"
+
+msgid "Impossible de générer le PDF : %(error)s"
+msgstr "PDF nelze vytvořit: %(error)s"
+
+msgid "Impossible de lire ce fichier : %(error)s"
+msgstr "Tento soubor nelze přečíst: %(error)s"
+
+msgid "Impossible de lire le fichier : %(error)s"
+msgstr "Soubor nelze přečíst: %(error)s"
+
+msgid "Impossible de lire le rapport : %(error)s"
+msgstr "Zprávu nelze přečíst: %(error)s"
+
+msgid "Inactif"
+msgstr "Neaktivní"
+
+msgid "Inactive"
+msgstr "Neaktivní"
+
+msgid "Inconnu"
+msgstr "Neznámé"
+
+msgid "Indicateur"
+msgstr "Ukazatel"
+
+msgid "Indicateurs comparés"
+msgstr "Srovnávané ukazatele"
+
+msgid "Indiquez votre adresse e-mail : nous vous enverrons un lien pour choisir un nouveau mot de passe."
+msgstr "Zadejte svou e-mailovou adresu: pošleme vám odkaz pro zvolení nového hesla."
+
+msgid "Information"
+msgstr "Informace"
+
+msgid "Informations professionnelles"
+msgstr "Profesní informace"
+
+msgid "Inscription — DataZen"
+msgstr "Registrace — DataZen"
+
+msgid "Intégration"
+msgstr "Integrace"
+
+msgid "Invalid emails are not counted as unknown or missing"
+msgstr "Neplatné e-maily se nepočítají jako neznámé nebo chybějící"
+
+msgid "JJ/MM/AAAA"
+msgstr "JJ/MM/AAAA"
+
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+msgid "Jamais appelé"
+msgstr "Nikdy nevoláno"
+
+msgid "Jauge du score de qualité global (sur 100)."
+msgstr "Měřič celkového skóre kvality (ze 100)."
+
+msgid "Jeton"
+msgstr "Token"
+
+msgid "Jeton créé. Copiez-le maintenant : il ne sera plus affiché."
+msgstr "Token vytvořen. Zkopírujte ho nyní: už nebude zobrazen."
+
+msgid "Jeton d'API"
+msgstr "API token"
+
+msgid "Jeton « %(name)s » révoqué."
+msgstr "Token « %(name)s » odvolán."
+
+msgid "Jetons"
+msgstr "Tokeny"
+
+msgid "Jetons d'API"
+msgstr "API tokeny"
+
+msgid "Journal d'activité"
+msgstr "Protokol aktivity"
+
+msgid "Journal d'activité — DataZen"
+msgstr "Protokol aktivity — DataZen"
+
+msgid "Journal des modifications"
+msgstr "Protokol změn"
+
+msgid "Journal des modifications (extrait)"
+msgstr "Protokol změn (výňatek)"
+
+msgid "L'historique horodaté de chaque opération."
+msgstr "Časově označená historie každé operace."
+
+msgid "La comparaison n'est pas disponible : lancez d'abord un nettoyage sur ce fichier."
+msgstr "Srovnání není k dispozici: nejprve spusťte čištění tohoto souboru."
+
+msgid "La confirmation ne correspond pas à votre nom d'utilisateur : suppression annulée."
+msgstr "Potvrzení neodpovídá vašemu uživatelskému jménu: smazání bylo zrušeno."
+
+msgid "La suppression du compte efface définitivement vos fichiers, vos règles et votre profil. Cette action est irréversible."
+msgstr "Smazáním účtu trvale vymažete své soubory, svá pravidla i profil. Tuto akci nelze vrátit zpět."
+
+msgid "Laisser vide pour appliquer à toutes les colonnes."
+msgstr "Ponechte prázdné pro použití na všechny sloupce."
+
+msgid "Laissez vide pour un jeton sans expiration."
+msgstr "Ponechte prázdné pro token bez vypršení."
+
+msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
+msgstr "Nejprve spusťte čištění, abyste získali přístup k průzkumné analýze."
+
+msgid "Lancez d'abord un nettoyage pour générer un rapport PDF."
+msgstr "Pro vytvoření PDF reportu nejprve spusťte čištění."
+
+msgid "Langue de l'interface"
+msgstr "Jazyk rozhraní"
+
+msgid "Le compte « %(username)s » a été supprimé."
+msgstr "Účet „%(username)s“ byl smazán."
+
+msgid "Le fichier ne doit pas dépasser 20 Mo."
+msgstr "Soubor nesmí přesáhnout 20 MB."
+
+msgid "Le journal conserve également %(days)s jours d'historique."
+msgstr "Protokol uchovává také %(days)s dnů historie."
+
+msgid "Le nettoyage a échoué."
+msgstr "Čištění se nezdařilo."
+
+msgid "Le nom d'hôte du webhook est introuvable."
+msgstr "Název hostitele webhooku nebyl nalezen."
+
+msgid "Le nom d'hôte du webhook pointe vers une adresse interne."
+msgstr "Název hostitele webhooku ukazuje na interní adresu."
+
+msgid "Le nom d'hôte est absent de l'URL."
+msgstr "V URL chybí název hostitele."
+
+msgid "Le port est invalide."
+msgstr "Neplatný port."
+
+msgid "Le thème « Système » suit les réglages de votre appareil."
+msgstr "Motiv „Systém“ se řídí nastavením vašeho zařízení."
+
+msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
+msgstr "Zpracování probíhá na pozadí. Tato stránka se po dokončení automaticky aktualizuje."
+
+msgid "Les adresses internes sont refusées."
+msgstr "Interní adresy jsou odmítnuty."
+
+msgid "Les adresses locales sont refusées."
+msgstr "Místní adresy jsou odmítnuty."
+
+msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
+msgstr "Duplicity se označí, ale nikdy se neodstraňují automaticky. Zaškrtnutím tohoto políčka je výslovně odstraníte."
+
+msgid "Les fichiers archivés restent accessibles et téléchargeables."
+msgstr "Archivované soubory zůstávají přístupné a lze je stáhnout."
+
+msgid "Les fichiers expirés seront supprimés automatiquement à votre prochaine visite."
+msgstr "Prošlé soubory budou automaticky smazány při vaší příští návštěvě."
+
+msgid "Les fichiers nettoyés sont archivés après 30 jours."
+msgstr "Vyčištěné soubory se archivují po 30 dnech."
+
+msgid "Les fichiers nettoyés sont archivés puis purgés après cette durée (0 = conservation illimitée)."
+msgstr "Vyčištěné soubory se archivují a po této době se mažou (0 = neomezené uchování)."
+
+msgid "Les identifiants intégrés à l'URL sont refusés."
+msgstr "Přihlašovací údaje vložené do URL jsou odmítnuty."
+
+msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
+msgstr "Dostupné cesty: /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
+
+msgid "Les statistiques affichées correspondent aux données réelles."
+msgstr "Zobrazené statistiky odpovídají skutečným datům."
+
+msgid "Lien invalide"
+msgstr "Neplatný odkaz"
+
+msgid "Ligne"
+msgstr "Řádek"
+
+msgid "Lignes"
+msgstr "Řádky"
+
+msgid "Lignes après nettoyage"
+msgstr "Řádky po vyčištění"
+
+msgid "Lignes du journal des modifications"
+msgstr "Řádky protokolu změn"
+
+msgid "Lignes traitées"
+msgstr "Zpracované řádky"
+
+msgid "Localisation"
+msgstr "Lokalita"
+
+msgid "MM/JJ/AAAA"
+msgstr "MM/JJ/AAAA"
+
+msgid "Masquer"
+msgstr "Skrýt"
+
+msgid "Masquer le mot de passe"
+msgstr "Skrýt heslo"
+
+msgid "Matrice de corrélation"
+msgstr "Korelační matice"
+
+msgid "Matrice de corrélation (Pearson)"
+msgstr "Korelační matice (Pearson)"
+
+msgid "Max"
+msgstr "Max"
+
+msgid "Maîtrisez la durée de vie de vos données."
+msgstr "Mějte pod kontrolou životní cyklus svých dat."
+
+msgid "Membre depuis"
+msgstr "Členem od"
+
+msgid "Mes règles"
+msgstr "Moje pravidla"
+
+msgid "Mes règles de nettoyage"
+msgstr "Moje pravidla čištění"
+
+msgid "Mesuré avant et après le nettoyage."
+msgstr "Měřeno před čištěním a po něm."
+
+msgid "Mettre à jour le mot de passe"
+msgstr "Aktualizovat heslo"
+
+msgid "Min"
+msgstr "Min"
+
+msgid "Missing values by column"
+msgstr "Chybějící hodnoty podle sloupce"
+
+msgid "Mode"
+msgstr "Režim"
+
+msgid "Modifier mes informations"
+msgstr "Upravit mé údaje"
+
+msgid "Modifiez votre mot de passe régulièrement et exportez vos données quand vous le souhaitez."
+msgstr "Heslo měňte pravidelně a svá data exportujte, kdykoli chcete."
+
+msgid "Mon profil"
+msgstr "Můj profil"
+
+msgid "Mon profil — DataZen"
+msgstr "Můj profil — DataZen"
+
+msgid "Mot de passe"
+msgstr "Heslo"
+
+msgid "Mot de passe modifié"
+msgstr "Heslo změněno"
+
+msgid "Mot de passe modifié — DataZen"
+msgstr "Heslo změněno — DataZen"
+
+msgid "Mot de passe oublié ?"
+msgstr "Zapomněli jste heslo?"
+
+msgid "Mot de passe oublié — DataZen"
+msgstr "Zapomenuté heslo — DataZen"
+
+msgid "Motif"
+msgstr "Důvod"
+
+msgid "Motif attendu"
+msgstr "Očekávaný vzor"
+
+msgid "Moyenne"
+msgstr "Průměr"
+
+msgid "Médiane"
+msgstr "Medián"
+
+msgid "Méthode"
+msgstr "Metoda"
+
+msgid "Nettoyage"
+msgstr "Čištění"
+
+msgid "Nettoyage du fichier « %(name)s »"
+msgstr "Čištění souboru « %(name)s »"
+
+msgid "Nettoyage intelligent"
+msgstr "Inteligentní čištění"
+
+msgid "Nettoyage intelligent · CSV & Excel"
+msgstr "Inteligentní čištění · CSV a Excel"
+
+msgid "Nettoyage lancé en arrière-plan. La page se met à jour automatiquement."
+msgstr "Čištění bylo spuštěno na pozadí. Stránka se aktualizuje automaticky."
+
+msgid "Nettoyage lancé sur « %(name)s »"
+msgstr "Čištění « %(name)s » spuštěno"
+
+msgid "Nettoyage terminé"
+msgstr "Čištění dokončeno"
+
+msgid "Nettoyage terminé : « %(name)s »"
+msgstr "Čištění dokončeno: « %(name)s »"
+
+msgid "Nettoyer"
+msgstr "Vyčistit"
+
+msgid "Nettoyer un fichier"
+msgstr "Vyčistit soubor"
+
+msgid "Nettoyez, normalisez et fiabilisez vos fichiers CSV et Excel en quelques clics — sans écrire une ligne de code."
+msgstr "Vyčistěte, normalizujte a zprovozněte své soubory CSV a Excel několika kliknutími — bez psaní jediného řádku kódu."
+
+msgid "Nettoyé"
+msgstr "Vyčištěno"
+
+msgid "Nettoyé le"
+msgstr "Vyčištěno"
+
+msgid "Nettoyés"
+msgstr "Vyčištěné"
+
+msgid "Niveau"
+msgstr "Úroveň"
+
+msgid "No exact duplicates"
+msgstr "Žádné přesné duplicity"
+
+msgid "No missing or unknown values"
+msgstr "Žádné chybějící nebo neznámé hodnoty"
+
+msgid "No potential duplicates"
+msgstr "Žádné možné duplicity"
+
+msgid "Nom"
+msgstr "Název"
+
+msgid "Nom d'utilisateur"
+msgstr "Uživatelské jméno"
+
+msgid "Nom de la règle"
+msgstr "Název pravidla"
+
+msgid "Nom de votre entreprise ou équipe"
+msgstr "Název vaší společnosti nebo týmu"
+
+msgid "Nom du jeton"
+msgstr "Název tokenu"
+
+msgid "Nombre d'appels"
+msgstr "Počet volání"
+
+msgid "Nombre d'occurrences"
+msgstr "Počet výskytů"
+
+msgid "Nombre de nettoyages et score moyen par semaine."
+msgstr "Počet čištění a průměrné skóre za týden."
+
+msgid "Nombre de valeurs aberrantes"
+msgstr "Počet odlehlých hodnot"
+
+msgid "Nombre de valeurs aberrantes (méthode IQR) par colonne."
+msgstr "Počet odlehlých hodnot (metoda IQR) podle sloupce."
+
+msgid "Normalisation de la casse (noms, libellés, villes)"
+msgstr "Sjednocení velikosti písmen (jména, štítky, města)"
+
+msgid "Normalisation des catégories (%(count)s corrigée(s))"
+msgstr "Normalizace kategorií (opraveno: %(count)s)"
+
+msgid "Normalisation des choix oui/non (%(count)s corrigé(s))"
+msgstr "Normalizace voleb ano/ne (opraveno: %(count)s)"
+
+msgid "Normalisation des codes/références (%(count)s corrigé(s))"
+msgstr "Normalizace kódů/odkazů (opraveno: %(count)s)"
+
+msgid "Normalisation des dates (%(count)s corrigée(s))"
+msgstr "Normalizace dat (opraveno: %(count)s)"
+
+msgid "Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "Normalizace telefonů (opraveno: %(count)s)"
+
+msgid "Normaliser la casse"
+msgstr "Normalizovat velikost písmen"
+
+msgid "Normaliser la casse (emails en minuscules, noms en Capitales)"
+msgstr "Sjednotit velikost písmen (e-maily malými, jména s velkým počátečním písmenem)"
+
+msgid "Normaliser les dates"
+msgstr "Normalizovat data"
+
+msgid "Normaliser les dates (AAAA-MM-JJ)"
+msgstr "Normalizovat data (RRRR-MM-DD)"
+
+msgid "Normaliser les emails"
+msgstr "Normalizovat e-maily"
+
+msgid "Normaliser les téléphones"
+msgstr "Normalizovat telefony"
+
+msgid "Normaliser les téléphones (06XXXXXXXX)"
+msgstr "Normalizovat telefonní čísla (06XXXXXXXX)"
+
+msgid "Notifications par email"
+msgstr "E-mailová oznámení"
+
+msgid "Nouveau jeton d API"
+msgstr "Nový API token"
+
+msgid "Nouveau mot de passe"
+msgstr "Nové heslo"
+
+msgid "Nouveau mot de passe — DataZen"
+msgstr "Nové heslo — DataZen"
+
+msgid "Nouvelle photo prête"
+msgstr "Nový obrázek je připraven"
+
+msgid "Nouvelle valeur"
+msgstr "Nová hodnota"
+
+msgid "Opération"
+msgstr "Operace"
+
+msgid "Opérations de nettoyage"
+msgstr "Operace čištění"
+
+msgid "Organisation"
+msgstr "Organizace"
+
+msgid "Outils"
+msgstr "Nástroje"
+
+msgid "Outliers"
+msgstr "Odlehlé hodnoty"
+
+msgid "Ouvrir"
+msgstr "Otevřít"
+
+msgid "Ouvrir la recherche globale"
+msgstr "Otevřít globální hledání"
+
+msgid "Ouvrir le résultat sélectionné"
+msgstr "Otevřít vybraný výsledek"
+
+msgid "Page"
+msgstr "Stránka"
+
+msgid "Parcourir…"
+msgstr "Vybrat soubor"
+
+msgid "Pas encore de compte ?"
+msgstr "Ještě nemáte účet?"
+
+msgid "Pensez à regarder dans vos courriers indésirables. Le lien reste valable quelques heures."
+msgstr "Nezapomeňte se podívat do složky s nevyžádanou poštou. Odkaz platí několik hodin."
+
+msgid "Personnalisez votre identité, votre photo et vos préférences."
+msgstr "Přizpůsobte si svou identitu, svůj obrázek a své předvolby."
+
+msgid "Photo de profil"
+msgstr "Profilový obrázek"
+
+msgid "Pilotage"
+msgstr "Řízení"
+
+msgid "Plus fréquent"
+msgstr "Nejčastější"
+
+msgid "Poids"
+msgstr "Váha"
+
+msgid "Politique en vigueur"
+msgstr "Platná politika"
+
+msgid "Pondération"
+msgstr "Váha"
+
+msgid "Premier quartile"
+msgstr "První kvartil"
+
+msgid "Prendre une photo avec la caméra"
+msgstr "Pořídit snímek kamerou"
+
+msgid "Problème"
+msgstr "Problém"
+
+msgid "Problèmes après"
+msgstr "Problémy po"
+
+msgid "Problèmes avant"
+msgstr "Problémy před"
+
+msgid "Problèmes détectés"
+msgstr "Zjištěné problémy"
+
+msgid "Problèmes restants"
+msgstr "Zbývající problémy"
+
+msgid "Productivité"
+msgstr "Produktivita"
+
+msgid "Profil"
+msgstr "Profil"
+
+msgid "Profil de %(name)s — DataZen"
+msgstr "Profil uživatele %(name)s — DataZen"
+
+msgid "Profil de %(username)s"
+msgstr "Profil uživatele %(username)s"
+
+msgid "Profil public"
+msgstr "Veřejný profil"
+
+msgid "Profil visible publiquement"
+msgstr "Profil veřejně viditelný"
+
+msgid "Profils"
+msgstr "Profily"
+
+msgid "Progression"
+msgstr "Pokrok"
+
+msgid "Propriétaire"
+msgstr "Vlastník"
+
+msgid "Préfixe"
+msgstr "Předpona"
+
+msgid "Préférences"
+msgstr "Předvolby"
+
+msgid "Prénom"
+msgstr "Jméno"
+
+msgid "Présentation"
+msgstr "Představení"
+
+msgid "Purge automatique"
+msgstr "Automatické čištění"
+
+msgid "Purge automatique de %(count)s fichier(s) expiré(s)"
+msgstr "Automatické čištění %(count)s prošlých souborů"
+
+msgid "Purge de %(count)s fichier(s) expiré(s)"
+msgstr "Čištění %(count)s prošlých souborů"
+
+msgid "Purger automatiquement"
+msgstr "Čistit automaticky"
+
+msgid "Purger automatiquement les fichiers expirés"
+msgstr "Automaticky čistit prošlé soubory"
+
+msgid "Purger le journal"
+msgstr "Vyčistit protokol"
+
+msgid "Purger les anciennes entrées du journal ?"
+msgstr "Vyčistit staré záznamy protokolu?"
+
+msgid "Q1"
+msgstr "Q1"
+
+msgid "Q3"
+msgstr "Q3"
+
+msgid "Qualité moyenne"
+msgstr "Průměrná kvalita"
+
+msgid "Qualité par colonne"
+msgstr "Kvalita podle sloupce"
+
+msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
+msgstr "Několik slov o vás, vašem týmu a vašich datových sadách…"
+
+msgid "Raccourcis clavier"
+msgstr "Klávesové zkratky"
+
+msgid "Raccourcis clavier — DataZen"
+msgstr "Klávesové zkratky — DataZen"
+
+msgid "Raccourcis de navigation"
+msgstr "Zkratky pro navigaci"
+
+msgid "Raccourcis de nettoyage"
+msgstr "Zkratky pro čištění"
+
+msgid "Raison"
+msgstr "Důvod"
+
+msgid "Rapport"
+msgstr "Zpráva"
+
+msgid "Rapport PDF de « %(name)s »"
+msgstr "PDF report « %(name)s »"
+
+msgid "Rapport de nettoyage"
+msgstr "Zpráva o čištění"
+
+msgid "Rapport de qualité des données"
+msgstr "Report o kvalitě dat"
+
+msgid "Rapport généré automatiquement par DataZen. Les scores sont calculés selon cinq dimensions pondérées : complétude, validité, unicité, cohérence et conformité."
+msgstr "Report automaticky vytvořený DataZen. Skóre se počítá podle pěti vážených dimenzí: úplnost, platnost, jedinečnost, konzistence a shoda."
+
+msgid "Rapport — %(name)s"
+msgstr "Zpráva — %(name)s"
+
+msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
+msgstr "Získávejte HTTP oznámení, jakmile čištění skončí, selže nebo se nahraje soubor."
+
+msgid "Recevoir les notifications par email"
+msgstr "Dostávat e-mailová oznámení"
+
+msgid "Recevoir un message lorsqu'un nettoyage se termine."
+msgstr "Dostat zprávu po dokončení čištění."
+
+msgid "Recherche en cours…"
+msgstr "Hledám…"
+
+msgid "Recherche globale"
+msgstr "Globální hledání"
+
+msgid "Recherche momentanément indisponible."
+msgstr "Hledání je dočasně nedostupné."
+
+msgid "Rechercher"
+msgstr "Hledat"
+
+msgid "Rechercher (Ctrl+K)"
+msgstr "Hledat (Ctrl+K)"
+
+msgid "Rechercher un fichier"
+msgstr "Hledat soubor"
+
+msgid "Rechercher un fichier ou une règle (Ctrl+K)"
+msgstr "Hledat soubor nebo pravidlo (Ctrl+K)"
+
+msgid "Rechercher un fichier, une règle, une page…"
+msgstr "Hledat soubor, pravidlo, stránku…"
+
+msgid "Rechercher un fichier…"
+msgstr "Hledat soubor…"
+
+msgid "Recommandation"
+msgstr "Doporučení"
+
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
+msgstr "Nahrazuje jména, e-maily a telefonní čísla deterministickými pseudonymy (stejná hodnota → stejný pseudonym). Vztahy mezi řádky zůstávají zachovány."
+
+msgid "Remplacer les valeurs manquantes"
+msgstr "Nahradit chybějící hodnoty"
+
+msgid "Remplacez le jeton par le vôtre et lancez la commande."
+msgstr "Nahraďte token svým a spusťte příkaz."
+
+msgid "Remplir les valeurs manquantes"
+msgstr "Vyplnit chybějící hodnoty"
+
+msgid "Remplissage des valeurs manquantes par « %(value)s » (les montants, codes et dates ne reçoivent jamais un texte)"
+msgstr "Vyplnění chybějících hodnot pomocí „%(value)s“ (částky, kódy a data nikdy nedostávají text)"
+
+msgid "Renseignées"
+msgstr "Vyplněné"
+
+msgid "Renumérotation des identifiants (ancien id conservé)"
+msgstr "Přečíslování identifikátorů (původní ID zůstává zachováno)"
+
+msgid "Reported %(reported)s vs recalculated %(actual)s"
+msgstr "Nahlášeno %(reported)s vs přepočítáno %(actual)s"
+
+msgid "Restauration"
+msgstr "Obnovení"
+
+msgid "Restauration de « %(name)s »"
+msgstr "Obnovení « %(name)s »"
+
+msgid "Restaurer"
+msgstr "Obnovit"
+
+msgid "Retour à la connexion"
+msgstr "Zpět na přihlášení"
+
+msgid "Règle"
+msgstr "Pravidlo"
+
+msgid "Règle de nettoyage"
+msgstr "Pravidlo čištění"
+
+msgid "Règle « %(name)s » %(state)s."
+msgstr "Pravidlo „%(name)s“ %(state)s."
+
+msgid "Règle « %(name)s » créée."
+msgstr "Pravidlo „%(name)s“ bylo vytvořeno."
+
+msgid "Règle « %(name)s » supprimée."
+msgstr "Pravidlo „%(name)s“ bylo smazáno."
+
+msgid "Règles"
+msgstr "Pravidla"
+
+msgid "Règles de nettoyage"
+msgstr "Pravidla čištění"
+
+msgid "Règles de nettoyage — DataZen"
+msgstr "Pravidla čištění — DataZen"
+
+msgid "Règles de validation regex personnalisées"
+msgstr "Vlastní pravidla ověření regex"
+
+msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
+msgstr "Získejte vyčištěný soubor, podrobnou zprávu a úplný protokol změn."
+
+msgid "Réinitialiser"
+msgstr "Obnovit"
+
+msgid "Répartition des problèmes"
+msgstr "Rozložení problémů"
+
+msgid "Répartition des problèmes restants"
+msgstr "Rozložení zbývajících problémů"
+
+msgid "Résultats"
+msgstr "Výsledky"
+
+msgid "Rétention"
+msgstr "Uchování"
+
+msgid "Rétention des données"
+msgstr "Uchování dat"
+
+msgid "Rétention des données — DataZen"
+msgstr "Uchování dat — DataZen"
+
+msgid "Révocation de jeton"
+msgstr "Odvolat token"
+
+msgid "Révocation du jeton « %(name)s »"
+msgstr "Odvolání tokenu « %(name)s »"
+
+msgid "Révoquer"
+msgstr "Odvolat"
+
+msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
+msgstr "Odvolat tento token? Integrace, které ho používají, přestanou fungovat."
+
+msgid "Révoqué"
+msgstr "Odvolán"
+
+msgid "S'inscrire"
+msgstr "Zaregistrovat se"
+
+msgid "Saisissez <strong>%(username)s</strong> pour confirmer"
+msgstr "Potvrďte zadáním <strong>%(username)s</strong>"
+
+msgid "Score"
+msgstr "Skóre"
+
+msgid "Score après nettoyage"
+msgstr "Skóre po čištění"
+
+msgid "Score avant nettoyage"
+msgstr "Skóre před čištěním"
+
+msgid "Score de la dimension"
+msgstr "Skóre dimenze"
+
+msgid "Score de qualité"
+msgstr "Skóre kvality"
+
+msgid "Score de similarité :"
+msgstr "Skóre podobnosti:"
+
+msgid "Score global"
+msgstr "Celkové skóre"
+
+msgid "Score global de qualité"
+msgstr "Celkové skóre kvality"
+
+msgid "Score qualité"
+msgstr "Skóre kvality"
+
+msgid "Score qualité après"
+msgstr "Skóre kvality po"
+
+msgid "Score qualité avant"
+msgstr "Skóre kvality před"
+
+msgid "Se connecter"
+msgstr "Přihlásit se"
+
+msgid "Se déconnecter"
+msgstr "Odhlásit se"
+
+msgid "Se déplacer dans les résultats"
+msgstr "Pohyb ve výsledcích"
+
+msgid "Sert uniquement à la réinitialisation du mot de passe."
+msgstr "Slouží pouze k obnovení hesla."
+
+msgid "Seuls les schémas http et https sont autorisés."
+msgstr "Povolena jsou pouze schémata http a https."
+
+msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
+msgstr "Pokud účet s touto adresou existuje, byl právě odeslán e-mail s odkazem pro obnovení."
+
+msgid "Site web"
+msgstr "Webové stránky"
+
+msgid "Sombre"
+msgstr "Tmavý"
+
+msgid "Statut"
+msgstr "Stav"
+
+msgid "Succès"
+msgstr "Úspěch"
+
+msgid "Superutilisateur"
+msgstr "Superuživatel"
+
+msgid "Suppression"
+msgstr "Smazání"
+
+msgid "Suppression de la règle « %(name)s »"
+msgstr "Smazání pravidla « %(name)s »"
+
+msgid "Suppression de règle"
+msgstr "Smazání pravidla"
+
+msgid "Suppression de « %(name)s »"
+msgstr "Smazání « %(name)s »"
+
+msgid "Suppression des doublons exacts (%(count)s supprimé(s))"
+msgstr "Odstranění přesných duplicit (odstraněno: %(count)s)"
+
+msgid "Suppression des doublons sur « %(column)s » (%(count)s supprimé(s))"
+msgstr "Odstranění duplicit podle sloupce „%(column)s“ (odstraněno: %(count)s)"
+
+msgid "Suppression des espaces superflus"
+msgstr "Odstranění nadbytečných mezer"
+
+msgid "Supprimer %(name)s"
+msgstr "Odstranit %(name)s"
+
+msgid "Supprimer ce webhook ?"
+msgstr "Smazat tento webhook?"
+
+msgid "Supprimer définitivement ce fichier et toutes ses données ?"
+msgstr "Trvale smazat tento soubor a všechna jeho data?"
+
+msgid "Supprimer définitivement les fichiers expirés ? Cette action est irréversible."
+msgstr "Smazat prošlé soubory natrvalo? Tuto akci nelze vrátit."
+
+msgid "Supprimer définitivement les fichiers expirés au lieu de les archiver."
+msgstr "Mazat prošlé soubory natrvalo místo archivace."
+
+msgid "Supprimer définitivement « %(name)s » ?"
+msgstr "Opravdu trvale odstranit soubor „%(name)s“?"
+
+msgid "Supprimer les doublons"
+msgstr "Smazat duplicity"
+
+msgid "Supprimer les doublons (confirmation requise)"
+msgstr "Odstranit duplicity (vyžaduje potvrzení)"
+
+msgid "Supprimer les espaces superflus"
+msgstr "Odstranit nadbytečné mezery"
+
+msgid "Supprimer mon compte"
+msgstr "Smazat můj účet"
+
+msgid "Synthèse"
+msgstr "Souhrn"
+
+msgid "Système"
+msgstr "Systém"
+
+msgid "Sécurité"
+msgstr "Zabezpečení"
+
+msgid "Sélectionner un fichier"
+msgstr "Vyberte soubor"
+
+msgid "Tableau de bord"
+msgstr "Dashboard"
+
+msgid "Tableau de bord — DataZen"
+msgstr "Dashboard — DataZen"
+
+msgid "Tapez au moins deux caractères pour lancer la recherche."
+msgstr "Začněte hledat zadáním alespoň dvou znaků."
+
+msgid "Taux de complétude (%)"
+msgstr "Míra úplnosti (%)"
+
+msgid "Taux de remplissage de chaque colonne (les plus incomplètes d'abord)."
+msgstr "Míra vyplnění každého sloupce (nejprve nejméně úplné)."
+
+msgid "Technologies"
+msgstr "Technologie"
+
+msgid "Tester"
+msgstr "Otestovat"
+
+msgid "Thème préféré"
+msgstr "Preferované téma"
+
+msgid "Top des catégories"
+msgstr "Nejlepší kategorie"
+
+msgid "Total missing values"
+msgstr "Celkem chybějících hodnot"
+
+msgid "Tous vos indicateurs de qualité réunis."
+msgstr "Všechny vaše ukazatele kvality na jednom místě."
+
+msgid "Tout est inclus"
+msgstr "Vše je zahrnuto"
+
+msgid "Tout voir"
+msgstr "Zobrazit vše"
+
+msgid "Toutes les actions"
+msgstr "Všechny akce"
+
+msgid "Traçabilité"
+msgstr "Vysledovatelnost"
+
+msgid "Troisième quartile"
+msgstr "Třetí kvartil"
+
+msgid "Type"
+msgstr "Typ"
+
+msgid "Type de correction"
+msgstr "Typ opravy"
+
+msgid "Téléchargement"
+msgstr "Stažení"
+
+msgid "Téléchargement de « %(name)s »"
+msgstr "Stažení « %(name)s »"
+
+msgid "Téléphone invalide"
+msgstr "Neplatný telefon"
+
+msgid "Téléphone non standard"
+msgstr "Telefonní číslo v nestandardním formátu"
+
+msgid "Téléphones non standard (%(column)s) :"
+msgstr "Nestandardní telefonní čísla (%(column)s):"
+
+msgid "Téléversement"
+msgstr "Nahrání"
+
+msgid "Téléversement de « %(name)s »"
+msgstr "Nahrání « %(name)s »"
+
+msgid "Téléverser un fichier"
+msgstr "Nahrát soubor"
+
+msgid "Téléversez votre fichier"
+msgstr "Nahrajte svůj soubor"
+
+msgid "Téléversé"
+msgstr "Nahráno"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "URL de destination"
+msgstr "Cílová URL"
+
+msgid "URL illisible."
+msgstr "URL nelze přečíst."
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page."
+msgstr "Účet správce nelze z této stránky smazat."
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
+msgstr "Účet správce nelze z této stránky smazat. Použijte"
+
+msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
+msgstr "Řídicí panel měří kvalitu před / po a vysvětluje každý ztracený bod."
+
+msgid "Une URL de destination est requise."
+msgstr "Je vyžadována cílová URL."
+
+msgid "Une boîte à outils complète"
+msgstr "Kompletní sada nástrojů"
+
+msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
+msgstr "Jedno pravidlo na řádek ve formátu „sloupec:vzor“. Příklad: „PSČ:^\\d{5}$“. Hodnoty, které vzoru neodpovídají, budou označeny (nikdy změněny)."
+
+msgid "Uniques"
+msgstr "Jedinečné"
+
+msgid "Unknown"
+msgstr "Neznámé"
+
+msgid "Unknown emails included in the unknown-value statistic"
+msgstr "Neznámé e-maily jsou zahrnuty ve statistice neznámých hodnot"
+
+msgid "Unknown values by column"
+msgstr "Neznámé hodnoty podle sloupce"
+
+msgid "Utilisateur"
+msgstr "Uživatel"
+
+msgid "Utilisation de l'API"
+msgstr "Využití API"
+
+msgid "Valeur"
+msgstr "Hodnota"
+
+msgid "Valeur aberrante"
+msgstr "Odlehlá hodnota"
+
+msgid "Valeur de remplacement"
+msgstr "Náhradní hodnota"
+
+msgid "Valeur de remplacement (pour le remplissage)."
+msgstr "Náhradní hodnota (pro vyplnění)."
+
+msgid "Valeur manquante"
+msgstr "Chybějící hodnota"
+
+msgid "Valeur numérique invalide"
+msgstr "Neplatná číselná hodnota"
+
+msgid "Valeurs aberrantes"
+msgstr "Odlehlé hodnoty"
+
+msgid "Valeurs aberrantes par colonne (méthode IQR)"
+msgstr "Odlehlé hodnoty podle sloupce (metoda IQR)"
+
+msgid "Valeurs les plus fréquentes"
+msgstr "Nejčastější hodnoty"
+
+msgid "Valeurs les plus fréquentes des colonnes catégorielles."
+msgstr "Nejčastější hodnoty kategoriálních sloupců."
+
+msgid "Valeurs manquantes"
+msgstr "Chybějící hodnoty"
+
+msgid "Valeurs manquantes :"
+msgstr "Chybějící hodnoty:"
+
+msgid "Valeurs manquantes restantes"
+msgstr "Zbývající chybějící hodnoty"
+
+msgid "Valeurs manquantes restantes :"
+msgstr "Zbývající chybějící hodnoty:"
+
+msgid "Valeurs uniques"
+msgstr "Jedinečné hodnoty"
+
+msgid "Valeurs « Inconnu »"
+msgstr "Neznámé hodnoty"
+
+msgid "Valeurs « Inconnu » :"
+msgstr "Hodnoty „Neznámé“:"
+
+msgid "Validation et correction des emails (%(corrected)s corrigé(s), %(invalid)s invalide(s))"
+msgstr "Ověření a oprava e-mailů (opraveno: %(corrected)s, neplatných: %(invalid)s)"
+
+msgid "Valider et corriger les emails (erreurs évidentes seulement)"
+msgstr "Ověřit a opravit e-maily (pouze zjevné chyby)"
+
+msgid "Validité"
+msgstr "Platnost"
+
+msgid "Visualisations statistiques"
+msgstr "Statistické vizualizace"
+
+msgid "Voir l'analyse complète →"
+msgstr "Zobrazit úplnou analýzu →"
+
+msgid "Volume"
+msgstr "Objem"
+
+msgid "Volume des anomalies restantes par catégorie."
+msgstr "Objem zbývajících anomálií podle kategorie."
+
+msgid "Vos données"
+msgstr "Vaše data"
+
+msgid "Vos données méritent<br> <span class=\"dz-gradient-text\">d'être impeccables.</span>"
+msgstr "Vaše data si zaslouží<br> <span class=\"dz-gradient-text\">být bezchybná.</span>"
+
+msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
+msgstr "Vaše soubory zůstávají u vás. DataZen ukazuje, co překračuje zvolenou dobu uchování, a nic nesmaže bez vašeho souhlasu."
+
+msgid "Votre espace de travail"
+msgstr "Váš pracovní prostor"
+
+msgid "Votre mot de passe a bien été enregistré. Vous pouvez maintenant vous connecter avec celui-ci."
+msgstr "Vaše heslo bylo uloženo. Nyní se s ním můžete přihlásit."
+
+msgid "Votre mot de passe a été modifié. Vos autres sessions restent actives."
+msgstr "Vaše heslo bylo změněno. Vaše ostatní relace zůstávají aktivní."
+
+msgid "Votre nom d'utilisateur <strong>@%(username)s</strong> ne peut pas être modifié."
+msgstr "Vaše uživatelské jméno <strong>@%(username)s</strong> nelze změnit."
+
+msgid "Votre photo de profil a été supprimée."
+msgstr "Váš profilový obrázek byl smazán."
+
+msgid "Votre profil a été mis à jour."
+msgstr "Váš profil byl aktualizován."
+
+msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
+msgstr "Kontrola je na vás: nic se nesmaže bez vaší akce."
+
+msgid "Vous n'avez pas accès à ce fichier."
+msgstr "K tomuto souboru nemáte přístup."
+
+msgid "Vous n'avez pas accès à ce jeton."
+msgstr "K tomuto tokenu nemáte přístup."
+
+msgid "Vous n'avez pas accès à ce webhook."
+msgstr "K tomuto webhooku nemáte přístup."
+
+msgid "Vous n'avez pas accès à cette règle."
+msgstr "K tomuto pravidlu nemáte přístup."
+
+msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
+msgstr "Souhrnný pohled na kvalitu vašich dat včetně všech souborů."
+
+msgid "Vue d'ensemble"
+msgstr "Přehled"
+
+msgid "Vérifiez votre boîte mail"
+msgstr "Zkontrolujte svou e-mailovou schránku"
+
+msgid "Webhook"
+msgstr "Webhook"
+
+msgid "Webhook « %(name)s » %(state)s."
+msgstr "Webhook « %(name)s » %(state)s."
+
+msgid "Webhook « %(name)s » : test réussi (HTTP %(status)s)."
+msgstr "Webhook « %(name)s »: test úspěšný (HTTP %(status)s)."
+
+msgid "Webhook « %(name)s » : test échoué (HTTP %(status)s). Vérifiez l'URL et que le service accepte les appels entrants."
+msgstr "Webhook « %(name)s »: test neúspěšný (HTTP %(status)s). Zkontrolujte URL a zda služba přijímá příchozí volání."
+
+msgid "Webhook « %(name)s » créé."
+msgstr "Webhook « %(name)s » vytvořen."
+
+msgid "Webhook « %(name)s » supprimé."
+msgstr "Webhook « %(name)s » smazán."
+
+msgid "Webhooks"
+msgstr "Webhooky"
+
+msgid "Webhooks — DataZen"
+msgstr "Webhooky — DataZen"
+
+msgid "YYYY-MM-DD"
+msgstr "YYYY-MM-DD"
+
+msgid "[Règle] Anonymisation (%(count)s valeur(s))"
+msgstr "[Pravidlo] Anonymizace (hodnot: %(count)s)"
+
+msgid "[Règle] Conversion des montants (%(count)s converti(s))"
+msgstr "[Pravidlo] Převod částek (převedeno: %(count)s)"
+
+msgid "[Règle] Normalisation de la casse"
+msgstr "[Pravidlo] Sjednocení velikosti písmen"
+
+msgid "[Règle] Normalisation des dates (%(count)s corrigée(s))"
+msgstr "[Pravidlo] Normalizace dat (opraveno: %(count)s)"
+
+msgid "[Règle] Normalisation des emails (%(count)s corrigé(s))"
+msgstr "[Pravidlo] Normalizace e-mailů (opraveno: %(count)s)"
+
+msgid "[Règle] Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "[Pravidlo] Normalizace telefonů (opraveno: %(count)s)"
+
+msgid "[Règle] Remplissage des valeurs manquantes par « %(value)s »"
+msgstr "[Pravidlo] Vyplnění chybějících hodnot pomocí „%(value)s“"
+
+msgid "[Règle] Suppression des doublons (%(count)s supprimé(s))"
+msgstr "[Pravidlo] Odstranění duplicit (odstraněno: %(count)s)"
+
+msgid "[Règle] Suppression des espaces superflus"
+msgstr "[Pravidlo] Odstranění nadbytečných mezer"
+
+msgid "actif"
+msgstr "aktivní"
+
+msgid "activé"
+msgstr "zapnuto"
+
+msgid "activée"
+msgstr "aktivováno"
+
+msgid "ajoutée"
+msgstr "přidána"
+
+msgid "améliorée"
+msgstr "vylepšena"
+
+msgid "bonne qualité"
+msgstr "dobrá kvalita"
+
+msgid "catégorie"
+msgstr "kategorie"
+
+msgid "cohérence"
+msgstr "konzistence"
+
+msgid "colonne : %(name)s"
+msgstr "sloupec: %(name)s"
+
+msgid "complétude"
+msgstr "úplnost"
+
+msgid "conformité"
+msgstr "shoda"
+
+msgid "conservée (non inventée)"
+msgstr "zachováno (nevymyšleno)"
+
+msgid "console d'administration"
+msgstr "konzole pro správu"
+
+msgid "date"
+msgstr "datum"
+
+msgid "donnée absente"
+msgstr "údaj chybí"
+
+msgid "désactivé"
+msgstr "vypnuto"
+
+msgid "désactivée"
+msgstr "deaktivováno"
+
+msgid "détail"
+msgstr "detail"
+
+msgid "email"
+msgstr "e-mail"
+
+msgid "et"
+msgstr "a"
+
+msgid "ex : 0 ou Inconnu"
+msgstr "např. 0 nebo Neznámé"
+
+msgid "ex : Emails en minuscules"
+msgstr "např. e-maily malými písmeny"
+
+msgid "ex : Intégration Power BI"
+msgstr "např. integrace Power BI"
+
+msgid "ex : Slack — nettoyages"
+msgstr "např. Slack — čištění"
+
+msgid "ex : email (vide = toutes les colonnes)"
+msgstr "např. email (prázdné = všechny sloupce)"
+
+msgid "excellente qualité"
+msgstr "vynikající kvalita"
+
+msgid "fermer"
+msgstr "zavřít"
+
+msgid "format invalide"
+msgstr "neplatný formát"
+
+msgid "format non reconnu"
+msgstr "nerozpoznaný formát"
+
+msgid "généré le"
+msgstr "vytvořeno"
+
+msgid "https://exemple.com"
+msgstr "https://exemple.com"
+
+msgid "https://hooks.exemple.com/datazen"
+msgstr "https://hooks.example.com/datazen"
+
+msgid "identifiant"
+msgstr "identifikátor"
+
+msgid "inactive"
+msgstr "neaktivní"
+
+msgid "inchangé"
+msgstr "beze změny"
+
+msgid "jours"
+msgstr "dní"
+
+msgid "lignes"
+msgstr "řádků"
+
+msgid "longueur/format incorrect"
+msgstr "nesprávná délka/formát"
+
+msgid "matplotlib"
+msgstr "matplotlib"
+
+msgid "naviguer"
+msgstr "navigovat"
+
+msgid "non évalué"
+msgstr "nevyhodnoceno"
+
+msgid "numérique"
+msgstr "číselný"
+
+msgid "opération : %(name)s"
+msgstr "operace: %(name)s"
+
+msgid "ouvrir"
+msgstr "otevřít"
+
+msgid "points"
+msgstr "bodů"
+
+msgid "pour «"
+msgstr "pro „"
+
+msgid "premières lignes."
+msgstr "první řádky."
+
+msgid "qualité faible"
+msgstr "nízká kvalita"
+
+msgid "qualité moyenne"
+msgstr "průměrná kvalita"
+
+msgid "référence"
+msgstr "reference"
+
+msgid "révoqué"
+msgstr "odvoláno"
+
+msgid "score"
+msgstr "skóre"
+
+msgid "score %(before)s → %(after)s"
+msgstr "skóre %(before)s → %(after)s"
+
+msgid "seaborn"
+msgstr "seaborn"
+
+msgid "stable"
+msgstr "stabilní"
+
+msgid "supprimée"
+msgstr "odstraněna"
+
+msgid "sur"
+msgstr "z"
+
+msgid "texte"
+msgstr "text"
+
+msgid "téléphone"
+msgstr "telefon"
+
+msgid "unicité"
+msgstr "jedinečnost"
+
+msgid "valeur(s) extrême(s)"
+msgstr "extrémní hodnota(y)"
+
+msgid "validité"
+msgstr "platnost"
+
+msgid "· ancien_id :"
+msgstr "· stare_id:"
+
+msgid "· statut filtré"
+msgstr "· filtrovaný stav"
+
+msgid "À compléter :"
+msgstr "K doplnění:"
+
+msgid "Écart"
+msgstr "Odchylka"
+
+msgid "Écart-type"
+msgstr "Směrodatná odchylka"
+
+msgid "Échap"
+msgstr "Esc"
+
+msgid "Échec du nettoyage"
+msgstr "Čištění selhalo"
+
+msgid "Échec du nettoyage de « %(name)s »"
+msgstr "Čištění « %(name)s » selhalo"
+
+msgid "Étape 1"
+msgstr "Krok 1"
+
+msgid "État"
+msgstr "Stav"
+
+msgid "Évolution hebdomadaire du score de qualité"
+msgstr "Týdenní vývoj skóre kvality"
+
+msgid "Événement"
+msgstr "Událost"
+
+msgid "Événement déclencheur"
+msgstr "Spouštěcí událost"
+
+msgid "à corriger manuellement"
+msgstr "k ruční opravě"
+
+msgid "à partir des données nettoyées."
+msgstr "z vyčištěných dat."
+
+msgid "à vérifier"
+msgstr "ke kontrole"
+
+msgid "à vérifier manuellement"
+msgstr "k ruční kontrole"
+
+msgid "—"
+msgstr "—"
+
+msgid "— Choisir une action —"
+msgstr "— Zvolte akci —"
+
+msgid "— Tous les statuts —"
+msgstr "— Všechny stavy —"
+
+msgid "— Toutes les colonnes —"
+msgstr "— Všechny sloupce —"
+
+msgid "← Retour au fichier"
+msgstr "← Zpět k souboru"
+
+msgid "⌨️ Raccourcis"
+msgstr "⌨️ Zkratky"
+
+msgid "⌨️ Raccourcis clavier"
+msgstr "⌨️ Klávesové zkratky"
+
+msgid "⏳ Fichiers expirés"
+msgstr "⏳ Prošlé soubory"
+
+msgid "⏳ Nettoyage en cours…"
+msgstr "⏳ Probíhá čištění…"
+
+msgid "⚙️ Règles de nettoyage personnalisées"
+msgstr "⚙️ Vlastní pravidla čištění"
+
+msgid "⚙️ Règles personnalisées"
+msgstr "⚙️ Vlastní pravidla"
+
+msgid "⚙️ Régler la durée"
+msgstr "⚙️ Upravit dobu"
+
+msgid "⚠️ Points nécessitant une vérification humaine"
+msgstr "⚠️ Body vyžadující ruční kontrolu"
+
+msgid "⚠️ Problèmes restants (tous fichiers)"
+msgstr "⚠️ Zbývající problémy (všechny soubory)"
+
+msgid "⚠️ Valeurs signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ Hodnoty pouze označené — nikdy se nemění automaticky."
+
+msgid "⚠️ Zone de danger"
+msgstr "⚠️ Nebezpečná zóna"
+
+msgid "⚠️ À vérifier manuellement (jamais supprimés automatiquement)."
+msgstr "⚠️ Zkontrolujte ručně (nikdy se neodstraňují automaticky)."
+
+msgid "⚪ Conserver toutes les lignes"
+msgstr "⚪ Zachovat všechny řádky"
+
+msgid "⚪ Ignorer (examiné, conserver)"
+msgstr "⚪ Ignorovat (zkontrolováno, zachovat)"
+
+msgid "⚪ Valeurs « Inconnu » ("
+msgstr "⚪ Hodnoty „Neznámé“ ("
+
+msgid "✅ Aucun doublon potentiel à vérifier."
+msgstr "✅ Žádná možná duplicita ke kontrole."
+
+msgid "✅ Aucune vérification manuelle nécessaire"
+msgstr "✅ Není nutná ruční kontrola"
+
+msgid "✅ Résultat du nettoyage"
+msgstr "✅ Výsledek čištění"
+
+msgid "✅ Validation après nettoyage"
+msgstr "✅ Ověření po vyčištění"
+
+msgid "✅ Votre profil est complet."
+msgstr "✅ Váš profil je úplný."
+
+msgid "✏️ Modifier mon profil"
+msgstr "✏️ Upravit můj profil"
+
+msgid "✓ Copié"
+msgstr "✓ Zkopírováno"
+
+msgid "➕ Nouveau jeton"
+msgstr "➕ Nový token"
+
+msgid "➕ Nouveau webhook"
+msgstr "➕ Nový webhook"
+
+msgid "➕ Nouvelle règle"
+msgstr "➕ Nové pravidlo"
+
+msgid "➕ Téléverser un fichier"
+msgstr "➕ Nahrát soubor"
+
+msgid "⬇️ Exporter mes données (JSON)"
+msgstr "⬇️ Exportovat moje data (JSON)"
+
+msgid "⬇️ Télécharger le fichier nettoyé"
+msgstr "⬇️ Stáhnout vyčištěný soubor"
+
+msgid "🌍 Navigation"
+msgstr "🌍 Navigace"
+
+msgid "🌐 HTML (.html)"
+msgstr "🌐 HTML (.html)"
+
+msgid "🌐 Rapport HTML avec graphiques"
+msgstr "🌐 HTML zpráva s grafy"
+
+msgid "🎯 Répartition par niveau de qualité"
+msgstr "🎯 Rozdělení podle úrovně kvality"
+
+msgid "🎯 Score qualité"
+msgstr "🎯 Skóre kvality"
+
+msgid "🏆 Meilleurs résultats"
+msgstr "🏆 Nejlepší výsledky"
+
+msgid "👀 Aperçu des données brutes (avant nettoyage)"
+msgstr "👀 Náhled surových dat (před čištěním)"
+
+msgid "👁️ Consulter le rapport"
+msgstr "👁️ Zobrazit zprávu"
+
+msgid "👤 Mon profil"
+msgstr "👤 Můj profil"
+
+msgid "📈 Analyse exploratoire"
+msgstr "📈 Explorativní analýza"
+
+msgid "📈 Statistiques descriptives"
+msgstr "📈 Popisné statistiky"
+
+msgid "📈 Valeurs aberrantes"
+msgstr "📈 Odlehlé hodnoty"
+
+msgid "📈 Visualisations statistiques"
+msgstr "📈 Statistické vizualizace"
+
+msgid "📈 Évolution du score (12 semaines)"
+msgstr "📈 Vývoj skóre (12 týdnů)"
+
+msgid "📉 Fichiers à traiter en priorité"
+msgstr "📉 Soubory k přednostnímu řešení"
+
+msgid "📉 Répartition des problèmes"
+msgstr "📉 Rozložení problémů"
+
+msgid "📊 Activité récente"
+msgstr "📊 Nedávná aktivita"
+
+msgid "📊 Dashboard Data Quality"
+msgstr "📊 Dashboard kvality dat"
+
+msgid "📊 Dimensions de qualité"
+msgstr "📊 Dimenze kvality"
+
+msgid "📊 Tableau de bord"
+msgstr "📊 Dashboard"
+
+msgid "📊 Tableau de bord global"
+msgstr "📊 Globální dashboard"
+
+msgid "📋 Mes règles ("
+msgstr "📋 Moje pravidla ("
+
+msgid "📋 Qualité des colonnes"
+msgstr "📋 Kvalita sloupců"
+
+msgid "📋 Rapport de nettoyage"
+msgstr "📋 Zpráva o čištění"
+
+msgid "📋 Télécharger le rapport"
+msgstr "📋 Stáhnout zprávu"
+
+msgid "📕 Rapport PDF"
+msgstr "📕 PDF report"
+
+msgid "📝 Journal des modifications"
+msgstr "📝 Protokol změn"
+
+msgid "📥 Fichier d'origine"
+msgstr "📥 Původní soubor"
+
+msgid "📥 Markdown (.md)"
+msgstr "📥 Markdown (.md)"
+
+msgid "📥 Télécharger le rapport complet"
+msgstr "📥 Stáhnout úplnou zprávu"
+
+msgid "📦 Archives"
+msgstr "📦 Archiv"
+
+msgid "📷 Prendre une photo"
+msgstr "📷 Pořídit snímek"
+
+msgid "🔌 API et jetons d'accès"
+msgstr "🔌 API a přístupové tokeny"
+
+msgid "🔌 Jetons d'API"
+msgstr "🔌 API tokeny"
+
+msgid "🔍 Avant / après"
+msgstr "🔍 Před / po"
+
+msgid "🔍 Comparaison avant / après"
+msgstr "🔍 Srovnání před / po"
+
+msgid "🔍 Doublons"
+msgstr "🔍 Duplicity"
+
+msgid "🔍 Filtrer"
+msgstr "🔍 Filtrovat"
+
+msgid "🔍 Filtrer les lignes…"
+msgstr "🔍 Filtrovat řádky…"
+
+msgid "🔍 Problèmes détectés"
+msgstr "🔍 Zjištěné problémy"
+
+msgid "🔍 Revue manuelle des doublons potentiels"
+msgstr "🔍 Ruční kontrola možných duplicit"
+
+msgid "🔍 Règles regex personnalisées"
+msgstr "🔍 Vlastní pravidla regex"
+
+msgid "🔎 Explication du score"
+msgstr "🔎 Vysvětlení skóre"
+
+msgid "🔑 Mes jetons"
+msgstr "🔑 Moje tokeny"
+
+msgid "🔑 Votre nouveau jeton"
+msgstr "🔑 Váš nový token"
+
+msgid "🔒 Changer mon mot de passe"
+msgstr "🔒 Změnit mé heslo"
+
+msgid "🔒 Sécurité et données"
+msgstr "🔒 Zabezpečení a data"
+
+msgid "🔔 Mes webhooks"
+msgstr "🔔 Moje webhooky"
+
+msgid "🔔 Webhooks"
+msgstr "🔔 Webhooky"
+
+msgid "🔗 Voir mon profil public"
+msgstr "🔗 Zobrazit můj veřejný profil"
+
+msgid "🔢 Colonnes analysées numériquement"
+msgstr "🔢 Číselně analyzované sloupce"
+
+msgid "🔬 Profilage avancé"
+msgstr "🔬 Pokročilé profilování"
+
+msgid "🔵 Conserver la 2e ligne (supprimer les autres)"
+msgstr "🔵 Zachovat 2. řádek (odstranit ostatní)"
+
+msgid "🕒 Dernières actions"
+msgstr "🕒 Poslední akce"
+
+msgid "🕓 Activité"
+msgstr "🕓 Aktivita"
+
+msgid "🕓 Dernières activités"
+msgstr "🕓 Poslední aktivity"
+
+msgid "🕓 Journal d'activité"
+msgstr "🕓 Protokol aktivity"
+
+msgid "🗃️ Fichiers récents"
+msgstr "🗃️ Nedávné soubory"
+
+msgid "🗄️ Rétention"
+msgstr "🗄️ Uchování"
+
+msgid "🗄️ Rétention des données"
+msgstr "🗄️ Uchování dat"
+
+msgid "🗑️ Purger maintenant"
+msgstr "🗑️ Vyčistit nyní"
+
+msgid "🗑️ Supprimer"
+msgstr "🗑️ Smazat"
+
+msgid "🗑️ Supprimer ma photo de profil"
+msgstr "🗑️ Smazat můj profilový obrázek"
+
+msgid "🚀 Nouveautés de l'espace pro"
+msgstr "🚀 Novinky v pro prostoru"
+
+msgid "🚀 Premier appel"
+msgstr "🚀 První volání"
+
+msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
+msgstr "🟢 Zachovat 1. řádek (odstranit ostatní)"
+
+msgid "🟣 Fusionner toutes les lignes"
+msgstr "🟣 Sloučit všechny řádky"
+
+msgid "🧭 Dimensions les plus fragiles"
+msgstr "🧭 Nejslabší dimenze"
+
+msgid "🧹 Journal d'activité"
+msgstr "🧹 Protokol aktivity"
+
+msgid "🧹 Nettoyage"
+msgstr "🧹 Čištění"
+
+msgid "🧹 Options de nettoyage"
+msgstr "🧹 Možnosti čištění"
+
+msgid "🧹 Opérations de nettoyage"
+msgstr "🧹 Operace čištění"
+
+msgid "🧽 Purger les anciennes entrées"
+msgstr "🧽 Vyčistit staré záznamy"
+
+msgid "🧾 Journal des modifications"
+msgstr "🧾 Protokol změn"
+
+msgid "🧾 Télécharger le journal des modifications"
+msgstr "🧾 Stáhnout protokol změn"
+
+msgctxt "séparateur"
+msgid "ou"
+msgstr "nebo"

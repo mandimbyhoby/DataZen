@@ -1,0 +1,184 @@
+{% extends "core/base.html" %}
+{% load i18n humanize %}
+
+{% block title %}{% translate "Rétention des données — DataZen" %}{% endblock %}
+
+{% block content %}
+<div class="container dz-page">
+    <nav aria-label="{% translate "Fil d'Ariane" %}">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'core:profile' %}">{% translate "Profil" %}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{% translate "Rétention" %}</li>
+        </ol>
+    </nav>
+
+    <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 dz-page-head">
+        <div>
+            <span class="dz-eyebrow">{% translate "Confiance" %}</span>
+            <h1 class="h3 mb-1">{% translate "🗄️ Rétention des données" %}</h1>
+            <p class="text-muted mb-0">
+                {% translate "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord." %}
+            </p>
+        </div>
+        <a class="btn btn-outline-secondary" href="{% url 'core:profile' %}">
+            {% translate "⚙️ Régler la durée" %}
+        </a>
+    </div>
+
+    <section class="dz-kpi-dashboard dz-block" aria-labelledby="dz-retention-kpi">
+        <div class="dz-kpi-heading">
+            <div>
+                <h2 class="h5 mb-1" id="dz-retention-kpi">{% translate "Politique en vigueur" %}</h2>
+                <p class="text-muted small mb-0">
+                    {% blocktranslate with cutoff=cutoff|date:"d/m/Y" %}Fichiers nettoyés avant le {{ cutoff }} considérés comme expirés.{% endblocktranslate %}
+                </p>
+            </div>
+        </div>
+        <div class="dz-kpi-grid">
+            <article class="dz-kpi-card dz-kpi-card--primary">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">📅</span>
+                    <span class="dz-kpi-card__label">{% translate "Durée de conservation" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ days }}<span class="dz-kpi-card__unit">{% translate "jours" %}</span></div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--warning">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">⏳</span>
+                    <span class="dz-kpi-card__label">{% translate "Fichiers expirés" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ expired_count }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--secondary">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">📦</span>
+                    <span class="dz-kpi-card__label">{% translate "Fichiers archivés" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ archived_count }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--{% if auto_purge %}danger{% else %}success{% endif %}">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">{% if auto_purge %}⚠️{% else %}🔒{% endif %}</span>
+                    <span class="dz-kpi-card__label">{% translate "Purge automatique" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">
+                    {% if auto_purge %}{% translate "Activée" %}{% else %}{% translate "Désactivée" %}{% endif %}
+                </div>
+                <p class="dz-kpi-card__hint small mb-0">
+                    {% if auto_purge %}
+                        {% translate "Les fichiers expirés seront supprimés automatiquement à votre prochaine visite." %}
+                    {% else %}
+                        {% translate "Vous gardez la main : rien n'est supprimé sans action de votre part." %}
+                    {% endif %}
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <div class="row dz-grid">
+        <div class="col-lg-8">
+            <div class="card dz-panel">
+                <div class="card-body">
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                        <h2 class="card-title h5 mb-0">{% translate "⏳ Fichiers expirés" %}</h2>
+                        {% if expired_count %}
+                            <form method="post" action="{% url 'core:retention_purge' %}"
+                                  data-dz-confirm="{% translate 'Supprimer définitivement les fichiers expirés ? Cette action est irréversible.' %}">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-outline-danger btn-sm">
+                                    {% translate "🗑️ Purger maintenant" %}
+                                </button>
+                            </form>
+                        {% endif %}
+                    </div>
+
+                    {% if expired %}
+                        <div class="table-responsive">
+                            <table class="table align-middle" data-searchable>
+                                <thead>
+                                    <tr>
+                                        <th>{% translate "Fichier" %}</th>
+                                        <th>{% translate "Nettoyé le" %}</th>
+                                        <th>{% translate "Lignes" %}</th>
+                                        <th>{% translate "Score" %}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for data_file in expired %}
+                                        <tr>
+                                            <td class="text-break">{{ data_file.original_name }}</td>
+                                            <td>
+                                                {% if data_file.cleaned_at %}
+                                                    {{ data_file.cleaned_at|naturaltime }}
+                                                {% else %}
+                                                    {{ data_file.updated_at|naturaltime }}
+                                                {% endif %}
+                                            </td>
+                                            <td>{{ data_file.rows_count|default_if_none:"—" }}</td>
+                                            <td>
+                                                {% if data_file.quality_after is not None %}
+                                                    {{ data_file.quality_after|floatformat:1 }} %
+                                                {% else %}
+                                                    —
+                                                {% endif %}
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p class="text-muted small mb-0">
+                            {% blocktranslate with count=expired_count days=days %}Ces {{ count }} fichier(s) dépassent la durée de conservation de {{ days }} jours. Ils ne sont pas supprimés automatiquement tant que la purge automatique reste désactivée.{% endblocktranslate %}
+                        </p>
+                    {% else %}
+                        <div class="text-center py-5">
+                            <div class="fs-1 mb-2" aria-hidden="true">✨</div>
+                            <p class="text-muted mb-0">
+                                {% translate "Aucun fichier expiré. Votre espace de travail est à jour." %}
+                            </p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card dz-panel dz-block">
+                <div class="card-body">
+                    <h2 class="card-title h5">{% translate "🧹 Journal d'activité" %}</h2>
+                    <p class="text-muted small">
+                        {% blocktranslate with days=days %}Le journal conserve également {{ days }} jours d'historique.{% endblocktranslate %}
+                    </p>
+                    <form method="post" action="{% url 'core:retention_cleanup_activity' %}"
+                          data-dz-confirm="{% translate 'Purger les anciennes entrées du journal ?' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-secondary btn-sm w-100">
+                            {% translate "Purger le journal" %}
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card dz-panel">
+                <div class="card-body">
+                    <h2 class="card-title h5">{% translate "🕒 Dernières actions" %}</h2>
+                    {% if activities %}
+                        <ul class="dz-activity list-unstyled mb-0">
+                            {% for item in activities %}
+                                <li class="dz-activity-item">
+                                    <span class="dz-activity-title">{{ item.message }}</span>
+                                    <span class="dz-activity-meta">{{ item.created_at|naturaltime }}</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="text-muted small mb-0">{% translate "Aucune activité enregistrée." %}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

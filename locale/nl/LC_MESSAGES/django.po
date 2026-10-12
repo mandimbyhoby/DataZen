@@ -1,0 +1,2832 @@
+# Catalogue de traduction DataZen.
+# Généré par tools/i18n_build.py — ne pas éditer à la main.
+msgid ""
+msgstr ""
+"Project-Id-Version: DataZen 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "%(actual)s correction(s) in the log vs %(reported)s reported"
+msgstr "%(actual)s correctie(s) in het logboek vs %(reported)s gerapporteerd"
+
+msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
+msgstr "%(actual)s onbekende waarde(n) in e-mailkolom(men) vs %(reported)s gerapporteerd"
+
+msgid "%(count)s colonnes"
+msgstr "%(count)s kolommen"
+
+msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
+msgstr "%(count)s mogelijke duplicaten vereisen controle."
+
+msgid "%(count)s entrée(s) d'activité supprimée(s)."
+msgstr "%(count)s item(s) van het activiteitenlog verwijderd."
+
+msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
+msgstr "%(count)s fout(en) konden niet automatisch worden gecorrigeerd."
+
+msgid "%(count)s exact duplicate(s) remaining"
+msgstr "%(count)s exacte duplicaten resteren"
+
+msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
+msgstr "%(count)s inconsistente waarde(n) resteren (niet geldig en niet onbekend)"
+
+msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
+msgstr "%(count)s ongeldige e-mailadressen aanwezig (niet leeg en niet onbekend)"
+
+msgid "%(count)s invalid value(s) among filled data"
+msgstr "%(count)s ongeldige waarde(n) in de ingevulde gegevens"
+
+msgid "%(count)s lignes"
+msgstr "%(count)s rijen"
+
+msgid "%(count)s missing value(s)"
+msgstr "%(count)s ontbrekende waarde(n)"
+
+msgid "%(count)s non-standard value(s)"
+msgstr "%(count)s niet-gestandaardiseerde waarde(n)"
+
+msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
+msgstr "%(count)s mogelijke duplicaten vereisen handmatige controle (verminderde straf)"
+
+msgid "%(count)s unknown value(s) (data unavailable)"
+msgstr "%(count)s onbekende waarde(n) (gegevens niet beschikbaar)"
+
+msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
+msgstr "%(count)s uitbijter(s) gedetecteerd in de numerieke kolommen."
+
+msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
+msgstr "%(count)s waarde(n) zijn momenteel «onbekend»."
+
+msgid "%(counter)s doublon potentiel détecté. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgid_plural "%(counter)s doublons potentiels détectés. Ces lignes ne sont <strong>jamais</strong> supprimées automatiquement : elles nécessitent votre décision."
+msgstr[0] "%(counter)s mogelijk duplicaat gevonden. Deze rijen worden <strong>nooit</strong> automatisch verwijderd: uw beslissing is nodig."
+msgstr[1] "%(counter)s mogelijke duplicaten gevonden. Deze rijen worden <strong>nooit</strong> automatisch verwijderd: uw beslissing is nodig."
+
+msgid "%(counter)s fichier affiché"
+msgid_plural "%(counter)s fichiers affichés"
+msgstr[0] "%(counter)s bestand weergegeven"
+
+msgid "%(counter)s inconnu"
+msgid_plural "%(counter)s inconnus"
+msgstr[0] "%(counter)s onbekend"
+
+msgid "%(counter)s invalide,"
+msgid_plural "%(counter)s invalides,"
+msgstr[0] "%(counter)s ongeldig,"
+
+msgid "%(counter)s ligne concernée :"
+msgid_plural "%(counter)s lignes concernées :"
+msgstr[0] "%(counter)s betrokken rij:"
+
+msgid "%(counter)s valide,"
+msgid_plural "%(counter)s valides,"
+msgstr[0] "%(counter)s geldig,"
+
+msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
+msgstr "%(purged)s bestand(en) verwijderd, %(archived)s gearchiveerd."
+
+msgid "%(score)s / 100  (%(weight)s %(percent)s)"
+msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
+msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s verwacht"
+
+msgid "%(value)s %(percent)s"
+msgstr "%(value)s %(percent)s"
+
+msgid "(%(counter)s modification)"
+msgid_plural "(%(counter)s modifications)"
+msgstr[0] "(%(counter)s wijziging)"
+
+msgid "(%(counter)s non-conformité)"
+msgid_plural "(%(counter)s non-conformités)"
+msgstr[0] "(%(counter)s non-conformiteit)"
+
+msgid "(colonnes : %(columns)s)"
+msgstr "(kolommen: %(columns)s)"
+
+msgid "(score ≥ 0.8)"
+msgstr "(score ≥ 0.8)"
+
+msgid "(⚠️ à vérifier manuellement)"
+msgstr "(⚠️ handmatig te controleren)"
+
+msgid ", Vous recevez ce message parce qu'une réinitialisation de mot de passe a été demandée pour votre compte DataZen. Cliquez sur le lien ci-dessous pour choisir un nouveau mot de passe :"
+msgstr ", U ontvangt dit bericht omdat er een wachtwoordreset is aangevraagd voor uw DataZen-account. Klik op de onderstaande link om een nieuw wachtwoord te kiezen:"
+
+msgid "<a href=\"#televerser\">Téléversez votre premier fichier</a> pour commencer."
+msgstr "<a href=\"#televerser\">Upload uw eerste bestand</a> om te beginnen."
+
+msgid "<strong>Doublons potentiels :</strong> aucun"
+msgstr "<strong>Mogelijke duplicaten:</strong> geen"
+
+msgid "<strong>Doublons potentiels restants :</strong> aucun"
+msgstr "<strong>Resterende mogelijke duplicaten:</strong> geen"
+
+msgid "<strong>Valeurs manquantes :</strong> aucune"
+msgstr "<strong>Ontbrekende waarden:</strong> geen"
+
+msgid "<strong>Valeurs manquantes restantes :</strong> aucune"
+msgstr "<strong>Resterende ontbrekende waarden:</strong> geen"
+
+msgid "AAAA-MM-JJ"
+msgstr "AAAA-MM-JJ"
+
+msgid "API"
+msgstr "API"
+
+msgid "API & webhooks"
+msgstr "API en webhooks"
+
+msgid "API REST"
+msgstr "REST-API"
+
+msgid "API et intégrations"
+msgstr "API en integraties"
+
+msgid "API et intégrations — DataZen"
+msgstr "API en integraties — DataZen"
+
+msgid "Abonnements"
+msgstr "Abonnementen"
+
+msgid "Accueil"
+msgstr "Home"
+
+msgid "Actif"
+msgstr "Actief"
+
+msgid "Actifs"
+msgstr "Actieve"
+
+msgid "Action"
+msgstr "Actie"
+
+msgid "Action invalide."
+msgstr "Ongeldige actie."
+
+msgid "Actions"
+msgstr "Acties"
+
+msgid "Active"
+msgstr "Actief"
+
+msgid "Activer"
+msgstr "Inschakelen"
+
+msgid "Activer le thème clair"
+msgstr "Licht thema inschakelen"
+
+msgid "Activer le thème sombre"
+msgstr "Donker thema inschakelen"
+
+msgid "Activité"
+msgstr "Activiteit"
+
+msgid "Activités"
+msgstr "Activiteiten"
+
+msgid "Activée"
+msgstr "Ingeschakeld"
+
+msgid "Administrateur"
+msgstr "Beheerder"
+
+msgid "Administration"
+msgstr "Beheer"
+
+msgid "Adresse email"
+msgstr "E-mailadres"
+
+msgid "Affichage de %(shown)s lignes sur %(total)s."
+msgstr "Weergave van %(shown)s van %(total)s rijen."
+
+msgid "Affichage des"
+msgstr "Weergave van de"
+
+msgid "Afficher"
+msgstr "Tonen"
+
+msgid "Afficher le mot de passe"
+msgstr "Wachtwoord tonen"
+
+msgid "Afficher les détails des anomalies"
+msgstr "Details van afwijkingen weergeven"
+
+msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
+msgstr "Toegevoegd aan de kop X-DataZen-Signature (HMAC-SHA256)."
+
+msgid "All filled values are valid"
+msgstr "Alle ingevulde waarden zijn geldig"
+
+msgid "Aller au contenu principal"
+msgstr "Naar de hoofdinhoud gaan"
+
+msgid "Analyse exploratoire"
+msgstr "Exploratieve analyse"
+
+msgid "Analyse exploratoire — %(name)s"
+msgstr "Exploratieve analyse — %(name)s"
+
+msgid "Analyser et nettoyer"
+msgstr "Analyseren en opschonen"
+
+msgid "Analyste de données"
+msgstr "Data-analist"
+
+msgid "Ancienne valeur"
+msgstr "Oude waarde"
+
+msgid "Annuler"
+msgstr "Annuleren"
+
+msgid "Anomalies restantes (à traiter manuellement)"
+msgstr "Resterende afwijkingen (handmatig te behandelen)"
+
+msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
+msgstr "Gevoelige gegevens anonimiseren (%(count)s waarden gepseudonimiseerd)"
+
+msgid "Anonymiser les données sensibles"
+msgstr "Gevoelige gegevens anonimiseren"
+
+msgid "Anonymiser les données sensibles (noms, emails, téléphones)"
+msgstr "Gevoelige gegevens anonimiseren (namen, e-mails, telefoonnummers)"
+
+msgid "Antananarivo, Madagascar"
+msgstr "Antananarivo, Madagascar"
+
+msgid "Aperçu du fichier nettoyé"
+msgstr "Voorbeeld van het opgeschoonde bestand"
+
+msgid "Appel API"
+msgstr "API-aanroep"
+
+msgid "Appel API : %(path)s"
+msgstr "API-aanroep: %(path)s"
+
+msgid "Appels"
+msgstr "Aanroepen"
+
+msgid "Application"
+msgstr "Applicatie"
+
+msgid "Après"
+msgstr "Na"
+
+msgid "Archivage"
+msgstr "Archivering"
+
+msgid "Archivage de « %(name)s »"
+msgstr "Archivering van « %(name)s »"
+
+msgid "Archiver"
+msgstr "Archiveren"
+
+msgid "Archives"
+msgstr "Archief"
+
+msgid "Archivés"
+msgstr "Gearchiveerd"
+
+msgid "Aucun fichier d'origine n'est disponible."
+msgstr "Er is geen bronbestand beschikbaar."
+
+msgid "Aucun fichier expiré à purger."
+msgstr "Geen verlopen bestanden om op te ruimen."
+
+msgid "Aucun fichier expiré. Votre espace de travail est à jour."
+msgstr "Geen verlopen bestanden. Je werkruimte is up-to-date."
+
+msgid "Aucun fichier ne correspond à votre recherche."
+msgstr "Geen enkel bestand komt overeen met uw zoekopdracht."
+
+msgid "Aucun fichier nettoyé n'est disponible."
+msgstr "Er is geen opgeschoond bestand beschikbaar."
+
+msgid "Aucun fichier nettoyé pour le moment."
+msgstr "Nog geen opgeruimd bestand."
+
+msgid "Aucun fichier pour le moment."
+msgstr "Nog geen bestanden."
+
+msgid "Aucun fichier sélectionné"
+msgstr "Geen bestand geselecteerd"
+
+msgid "Aucun fichier téléversé pour le moment."
+msgstr "Nog geen bestand geüpload."
+
+msgid "Aucun graphique n'est disponible pour ce jeu de données : il ne contient pas assez de valeurs numériques ou catégorielles exploitables."
+msgstr "Er is geen grafiek beschikbaar voor deze dataset: hij bevat niet genoeg bruikbare numerieke of categorische waarden."
+
+msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
+msgstr "Nog geen token. Maak er een aan om de API te gebruiken."
+
+msgid "Aucun journal des modifications n'est disponible."
+msgstr "Er is geen wijzigingslogboek beschikbaar."
+
+msgid "Aucun problème détecté"
+msgstr "Geen probleem gedetecteerd"
+
+msgid "Aucun rapport de nettoyage n'est disponible."
+msgstr "Er is geen opschoonrapport beschikbaar."
+
+msgid "Aucun résultat pour cette recherche."
+msgstr "Geen resultaten voor deze zoekopdracht."
+
+msgid "Aucun webhook configuré. Ajoutez une URL pour être notifié automatiquement."
+msgstr "Geen webhook geconfigureerd. Voeg een URL toe om automatisch meldingen te ontvangen."
+
+msgid "Aucune activité enregistrée pour le moment."
+msgstr "Nog geen activiteit geregistreerd."
+
+msgid "Aucune activité enregistrée."
+msgstr "Geen activiteit geregistreerd."
+
+msgid "Aucune anomalie restante."
+msgstr "Geen resterende afwijkingen."
+
+msgid "Aucune anomalie."
+msgstr "Geen afwijkingen."
+
+msgid "Aucune colonne"
+msgstr "Geen kolom"
+
+msgid "Aucune correction"
+msgstr "Geen correctie"
+
+msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
+msgstr "Geen noemenswaardig verschil tussen het originele en het opgeruimde bestand: je gegevens waren al schoon."
+
+msgid "Aucune dimension mesurée pour le moment."
+msgstr "Nog geen dimensie gemeten."
+
+msgid "Aucune donnée"
+msgstr "Geen gegevens"
+
+msgid "Aucune donnée nettoyée disponible."
+msgstr "Geen opgeschoonde gegevens beschikbaar."
+
+msgid "Aucune modification enregistrée."
+msgstr "Geen wijzigingen opgeslagen."
+
+msgid "Aucune règle personnalisée."
+msgstr "Geen aangepaste regel."
+
+msgid "Aucune règle pour le moment. Créez-en une pour la réutiliser sur tous vos fichiers."
+msgstr "Nog geen regels. Maak er een om die voor al uw bestanden te hergebruiken."
+
+msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
+msgstr "Geen uitbijter gedetecteerd in de numerieke kolommen."
+
+msgid "Aucune valeur « Inconnu »."
+msgstr "Geen waarde ‘Onbekend’."
+
+msgid "Audit des emails"
+msgstr "E-mailaudit"
+
+msgid "Automatisation"
+msgstr "Automatisering"
+
+msgid "Autoriser les autres utilisateurs à consulter votre profil."
+msgstr "Andere gebruikers toestaan uw profiel te bekijken."
+
+msgid "Avant"
+msgstr "Voor"
+
+msgid "Avertissement"
+msgstr "Waarschuwing"
+
+msgid "Basculer la navigation"
+msgstr "Navigatie wisselen"
+
+msgid "Basculer le thème"
+msgstr "Thema wisselen"
+
+msgid "Basculer le thème clair / sombre"
+msgstr "Licht / donker thema wisselen"
+
+msgid "Bienvenue %(username)s !"
+msgstr "Welkom %(username)s!"
+
+msgid "Bon retour parmi nous"
+msgstr "Welkom terug"
+
+msgid "Bonjour"
+msgstr "Hallo"
+
+msgid "Borne basse"
+msgstr "Ondergrens"
+
+msgid "Borne haute"
+msgstr "Bovengrens"
+
+msgid "Boîtes à moustaches"
+msgstr "Boxplots"
+
+msgid "Boîtes à moustaches des colonnes numériques"
+msgstr "Boxplots van de numerieke kolommen"
+
+msgid "Branchez DataZen sur vos outils existants."
+msgstr "Koppel DataZen aan je bestaande tools."
+
+msgid "Branchez DataZen à vos outils : Power BI, n8n, scripts Python, tableaux de bord maison."
+msgstr "Koppel DataZen aan je tools: Power BI, n8n, Python-scripts, eigen dashboards."
+
+msgid "CSV (séparateur ;)"
+msgstr "CSV (scheidingsteken ;)"
+
+msgid "Cadrez votre visage puis cliquez sur « Capturer »."
+msgstr "Kader uw gezicht en klik dan op ‘Vastleggen’."
+
+msgid "Calculée sur %(count)s fichier(s) nettoyé(s)."
+msgstr "Berekend over %(count)s opgeruimd(e) bestand(en)."
+
+msgid "Canonicalisation du marqueur « Inconnu » (%(count)s corrigé(s))"
+msgstr "Markering ‘Onbekend’ standaardiseren (%(count)s gecorrigeerd)"
+
+msgid "Capturer"
+msgstr "Vastleggen"
+
+msgid "Ce graphique n'est pas disponible pour ce jeu de données."
+msgstr "Deze grafiek is niet beschikbaar voor deze dataset."
+
+msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
+msgstr "Deze resetlink is al gebruikt of is verlopen."
+
+msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
+msgstr "Deze link is slechts één keer geldig. Als u deze aanvraag niet hebt gedaan, negeer dit bericht dan gewoon: uw wachtwoord blijft ongewijzigd. — DataZen"
+
+msgid "Ce profil n'est pas public."
+msgstr "Dit profiel is niet openbaar."
+
+msgid "Ce que le nettoyage a réellement changé dans votre fichier."
+msgstr "Wat het opschonen echt in je bestand heeft veranderd."
+
+msgid "Cellules manquantes"
+msgstr "Ontbrekende cellen"
+
+msgid "Ces %(count)s fichier(s) dépassent la durée de conservation de %(days)s jours. Ils ne sont pas supprimés automatiquement tant que la purge automatique reste désactivée."
+msgstr "Deze %(count)s bestand(en) overschrijden de bewaartermijn van %(days)s dagen. Ze worden niet automatisch verwijderd zolang automatisch opschonen uitgeschakeld blijft."
+
+msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
+msgstr "Deze tellers voeden de globale zoekopdracht en de snelkoppelingen hieronder."
+
+msgid "Champ"
+msgstr "Veld"
+
+msgid "Champs différents :"
+msgstr "Verschillende velden:"
+
+msgid "Champs identiques :"
+msgstr "Identieke velden:"
+
+msgid "Champs inconnus :"
+msgstr "Onbekende velden:"
+
+msgid "Changer de langue"
+msgstr "Taal wijzigen"
+
+msgid "Changer ma photo de profil"
+msgstr "Mijn profielfoto wijzigen"
+
+msgid "Changer mon mot de passe"
+msgstr "Mijn wachtwoord wijzigen"
+
+msgid "Changer mon mot de passe — DataZen"
+msgstr "Mijn wachtwoord wijzigen — DataZen"
+
+msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
+msgstr "Laad uw gegevens in de indeling <code>.csv</code>, <code>.xlsx</code> of <code>.xls</code>, ongeacht het scheidingsteken."
+
+msgid "Choisir la langue du site"
+msgstr "De taal van de site kiezen"
+
+msgid "Choisir le format"
+msgstr "De indeling kiezen"
+
+msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
+msgstr "Kies een CSV- of Excel-bestand (.csv, .xlsx, .xls)."
+
+msgid "Choisissez un fichier à analyser"
+msgstr "Kies een bestand om te analyseren"
+
+msgid "Choisissez un mot de passe long et unique. Vous resterez connecté après la modification."
+msgstr "Kies een lang en uniek wachtwoord. U blijft ingelogd na de wijziging."
+
+msgid "Choisissez un mot de passe solide : au moins 8 caractères, ni trop courant, ni entièrement numérique."
+msgstr "Kies een sterk wachtwoord: minstens 8 tekens, niet te gewoon en niet volledig numeriek."
+
+msgid "Choisissez une colonne unique (ex. email) pour fusionner les variantes d'un même enregistrement (Alice / alice). Laissez vide pour ne supprimer que les lignes 100 % identiques."
+msgstr "Kies een unieke kolom (bijv. e-mail) om varianten van hetzelfde record samen te voegen (Alice / alice). Laat leeg om alleen 100% identieke rijen te verwijderen."
+
+msgid "Clair"
+msgstr "Licht"
+
+msgid "Cliquer pour choisir une photo sur mon appareil"
+msgstr "Klik om een foto van mijn apparaat te kiezen"
+
+msgid "Cliquer pour trier"
+msgstr "Klik om te sorteren"
+
+msgid "Cliquez sur l'avatar ci-dessus pour choisir une image, ou sur l'icône appareil photo pour en prendre une instantanément. JPEG, PNG, WebP ou GIF — 5 Mo maximum."
+msgstr "Klik op de avatar hierboven om een afbeelding te kiezen, of op het camera-pictogram om er direct een te maken. JPEG, PNG, WebP of GIF — maximaal 5 MB."
+
+msgid "Clé de signature"
+msgstr "Signatuursleutel"
+
+msgid "Clé de signature HMAC (facultative)"
+msgstr "HMAC-signatuursleutel (optioneel)"
+
+msgid "Code de langue (fr, en, es…). Vide = langue de l'application."
+msgstr "Taalcode (fr, en, es…). Leeg = taal van de applicatie."
+
+msgid "Coefficient de Pearson"
+msgstr "Pearson-coëfficiënt"
+
+msgid "Colonne"
+msgstr "Kolom"
+
+msgid "Colonne ciblée"
+msgstr "Doelkolom"
+
+msgid "Colonne clé pour la déduplication"
+msgstr "Sleutelkolom voor ontdubbelen"
+
+msgid "Colonnes"
+msgstr "Kolommen"
+
+msgid "Colonnes améliorées"
+msgstr "Verbeterde kolommen"
+
+msgid "Colonnes analysées"
+msgstr "Geanalyseerde kolommen"
+
+msgid "Colonnes différentes"
+msgstr "Verschillende kolommen"
+
+msgid "Colonnes différentes :"
+msgstr "Verschillende kolommen:"
+
+msgid "Colonnes identiques :"
+msgstr "Identieke kolommen:"
+
+msgid "Colonnes inconnues :"
+msgstr "Onbekende kolommen:"
+
+msgid "Colonnes stables"
+msgstr "Stabiele kolommen"
+
+msgid "Colonnes à vérifier"
+msgstr "Te controleren kolommen"
+
+msgid "Combien de fichiers se trouvent dans chaque tranche de score."
+msgstr "Hoeveel bestanden in elke scorereeks vallen."
+
+msgid "Comparaison"
+msgstr "Vergelijking"
+
+msgid "Comparaison avant / après — %(name)s"
+msgstr "Vergelijking voor / na — %(name)s"
+
+msgid "Complétion du profil"
+msgstr "Profielvoltooiing"
+
+msgid "Complétude"
+msgstr "Volledigheid"
+
+msgid "Complétude par colonne"
+msgstr "Volledigheid per kolom"
+
+msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
+msgstr "Volledigheid · Geldigheid · Uniciteit · Consistentie · Conformiteit"
+
+msgid "Composantes du score (après nettoyage)"
+msgstr "Scorecomponenten (na opschoning)"
+
+msgid "Compte"
+msgstr "Account"
+
+msgid "Compte actif"
+msgstr "Actief account"
+
+msgid "Condensé"
+msgstr "Samenvatting"
+
+msgid "Confiance"
+msgstr "Vertrouwen"
+
+msgid "Confirmer la décision"
+msgstr "Beslissing bevestigen"
+
+msgid "Connectez-vous pour retrouver vos fichiers."
+msgstr "Meld u aan om uw bestanden terug te vinden."
+
+msgid "Connexion"
+msgstr "Aanmelden"
+
+msgid "Connexion — DataZen"
+msgstr "Aanmelden — DataZen"
+
+msgid "Consultation des graphiques"
+msgstr "Grafieken bekijken"
+
+msgid "Consultation du rapport"
+msgstr "Rapport bekijken"
+
+msgid "Continuer / valider une étape"
+msgstr "Doorgaan / een stap bevestigen"
+
+msgid "Contribution des cinq dimensions pondérées du score."
+msgstr "Bijdrage van de vijf gewogen dimensies van de score."
+
+msgid "Contrôle de cohérence"
+msgstr "Consistentiecontrole"
+
+msgid "Conversion des compteurs en entiers (%(count)s converti(s))"
+msgstr "Tellers omzetten naar gehele getallen (%(count)s omgezet)"
+
+msgid "Conversion des montants (%(count)s converti(s))"
+msgstr "Bedragen omzetten (%(count)s omgezet)"
+
+msgid "Convertir les montants"
+msgstr "Bedragen omrekenen"
+
+msgid "Convertir les montants en valeurs numériques"
+msgstr "Bedragen omzetten naar numerieke waarden"
+
+msgid "Copier"
+msgstr "Kopiëren"
+
+msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
+msgstr "Kopieer het nu: voor je veiligheid wordt het nooit meer getoond."
+
+msgid "Corrections"
+msgstr "Correcties"
+
+msgid "Corrections appliquées"
+msgstr "Toegepaste correcties"
+
+msgid "Corrélations de Pearson entre les colonnes numériques."
+msgstr "Pearson-correlaties tussen de numerieke kolommen."
+
+msgid "Création de jeton"
+msgstr "Token aanmaken"
+
+msgid "Création de la règle « %(name)s »"
+msgstr "Aanmaken van de regel « %(name)s »"
+
+msgid "Création de règle"
+msgstr "Regel aanmaken"
+
+msgid "Création du jeton « %(name)s »"
+msgstr "Aanmaken van het token « %(name)s »"
+
+msgid "Créer la règle"
+msgstr "De regel aanmaken"
+
+msgid "Créer le jeton"
+msgstr "Token aanmaken"
+
+msgid "Créer le webhook"
+msgstr "Webhook aanmaken"
+
+msgid "Créer un compte"
+msgstr "Een account aanmaken"
+
+msgid "Créer une règle"
+msgstr "Een regel aanmaken"
+
+msgid "Créez une règle une fois, réutilisez-la sur tous vos fichiers."
+msgstr "Maak één keer een regel en hergebruik die voor al uw bestanden."
+
+msgid "Créez votre compte"
+msgstr "Maak uw account aan"
+
+msgid "Data is consistent: each value is valid or unknown"
+msgstr "Gegevens zijn consistent: elke waarde is geldig of onbekend"
+
+msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
+msgstr "DataZen — Applicatie voor gegevensopschoning (DataClean Pro) · ©"
+
+msgid "DataZen — Nettoyage de données"
+msgstr "DataZen — Gegevensopschoning"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Date d'expiration"
+msgstr "Vervaldatum"
+
+msgid "Date invalide"
+msgstr "Ongeldige datum"
+
+msgid "De l'import brut au rapport de qualité, DataZen couvre toute la chaîne."
+msgstr "Van onbewerkte import tot kwaliteitsrapport: DataZen dekt de hele keten."
+
+msgid "Demander un nouveau lien"
+msgstr "Een nieuwe link aanvragen"
+
+msgid "Dernier appel"
+msgstr "Laatste aanroep"
+
+msgid "Dernier code HTTP"
+msgstr "Laatste HTTP-code"
+
+msgid "Dernier déclenchement"
+msgstr "Laatste activering"
+
+msgid "Dernier usage"
+msgstr "Laatste gebruik"
+
+msgid "Derniers fichiers"
+msgstr "Recente bestanden"
+
+msgid "Dernière connexion"
+msgstr "Laatste aanmelding"
+
+msgid "Dernière utilisation"
+msgstr "Laatste gebruik"
+
+msgid "Dernières règles"
+msgstr "Recente regels"
+
+msgid "Des incohérences ont été détectées entre les statistiques et les données."
+msgstr "Er zijn inconsistenties gedetecteerd tussen de statistieken en de gegevens."
+
+msgid "Dimension"
+msgstr "Dimensie"
+
+msgid "Dimensions de qualité"
+msgstr "Kwaliteitsdimensies"
+
+msgid "Dispersion et valeurs extrêmes des colonnes numériques."
+msgstr "Spreiding en extreme waarden van de numerieke kolommen."
+
+msgid "Distributions des colonnes numériques"
+msgstr "Verdelingen van de numerieke kolommen"
+
+msgid "Distributions numériques"
+msgstr "Numerieke verdelingen"
+
+msgid "Django · Pandas · Bootstrap"
+msgstr "Django · Pandas · Bootstrap"
+
+msgid "Doublon par similarité"
+msgstr "Duplicaat op basis van gelijkenis"
+
+msgid "Doublon potentiel"
+msgstr "Mogelijk duplicaat"
+
+msgid "Doublons"
+msgstr "Duplicaten"
+
+msgid "Doublons exacts"
+msgstr "Exacte duplicaten"
+
+msgid "Doublons exacts :"
+msgstr "Exacte duplicaten:"
+
+msgid "Doublons exacts restants :"
+msgstr "Resterende exacte duplicaten:"
+
+msgid "Doublons par similarité :"
+msgstr "Duplicaten op gelijkenis:"
+
+msgid "Doublons potentiels"
+msgstr "Mogelijke duplicaten"
+
+msgid "Doublons potentiels (⚠️ à vérifier) :"
+msgstr "Mogelijke duplicaten (⚠️ te controleren):"
+
+msgid "Doublons potentiels :"
+msgstr "Mogelijke duplicaten:"
+
+msgid "Doublons potentiels restants :"
+msgstr "Resterende mogelijke duplicaten:"
+
+msgid "Doublons restants (exacts + potentiels)"
+msgstr "Resterende duplicaten (exact + mogelijk)"
+
+msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
+msgstr "Duplicaten, overbodige spaties, verkeerd gevormde e-mails, inconsistente datums… DataZen detecteert de problemen en corrigeert alles automatisch, binnen enkele seconden."
+
+msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
+msgstr "Duplicaten, ontbrekende waarden, spaties, hoofdlettergebruik, e-mails, telefoons, datums en salarissen genormaliseerd."
+
+msgid "Durée de conservation"
+msgstr "Bewaartermijn"
+
+msgid "Durée de conservation (jours)"
+msgstr "Bewaartermijn (dagen)"
+
+msgid "Décision appliquée avec succès."
+msgstr "Beslissing succesvol toegepast."
+
+msgid "Déjà un compte ?"
+msgstr "Hebt u al een account?"
+
+msgid "Désactiver"
+msgstr "Uitschakelen"
+
+msgid "Désactivée"
+msgstr "Uitgeschakeld"
+
+msgid "Détail"
+msgstr "Detail"
+
+msgid "Détail par colonne"
+msgstr "Detail per kolom"
+
+msgid "Détail par semaine"
+msgstr "Detail per week"
+
+msgid "Détails techniques"
+msgstr "Technische details"
+
+msgid "E-mail envoyé — DataZen"
+msgstr "E-mail verzonden — DataZen"
+
+msgid "Effacer"
+msgstr "Wissen"
+
+msgid "Effectif"
+msgstr "Aantal"
+
+msgid "Email invalide"
+msgstr "Ongeldig e-mailadres"
+
+msgid "Email nettoyé"
+msgstr "Opgeschoond e-mailadres"
+
+msgid "Email original"
+msgstr "Origineel e-mailadres"
+
+msgid "Emails :"
+msgstr "E-mails:"
+
+msgid "Emails corrected (change log vs counter)"
+msgstr "Gecorrigeerde e-mails (wijzigingslogboek vs teller)"
+
+msgid "Emails invalides :"
+msgstr "Ongeldige e-mails:"
+
+msgid "Emails invalides restants :"
+msgstr "Resterende ongeldige e-mails:"
+
+msgid "Emails restants :"
+msgstr "Resterende e-mails:"
+
+msgid "Emails: valid + invalid + unknown = total"
+msgstr "E-mails: geldig + ongeldig + onbekend = totaal"
+
+msgid "En attente"
+msgstr "In behandeling"
+
+msgid "En cours de traitement"
+msgstr "Wordt verwerkt"
+
+msgid "En erreur"
+msgstr "Met fout"
+
+msgid "En échec"
+msgstr "Mislukt"
+
+msgid "Enregistrer"
+msgstr "Opslaan"
+
+msgid "Enregistrer le nouveau mot de passe"
+msgstr "Het nieuwe wachtwoord opslaan"
+
+msgid "Enregistrer les modifications"
+msgstr "De wijzigingen opslaan"
+
+msgid "Entrée"
+msgstr "Enter"
+
+msgid "Entrées"
+msgstr "Items"
+
+msgid "Envoyer le lien de réinitialisation"
+msgstr "De resetlink verzenden"
+
+msgid "Erreur"
+msgstr "Fout"
+
+msgid "Erreur de nettoyage"
+msgstr "Opschoonfout"
+
+msgid "Erreurs de format"
+msgstr "Formaatfouten"
+
+msgid "Erreurs restantes"
+msgstr "Resterende fouten"
+
+msgid "Excel (.xlsx)"
+msgstr "Excel (.xlsx)"
+
+msgid "Expiration"
+msgstr "Verval"
+
+msgid "Expiré"
+msgstr "Verlopen"
+
+msgid "Explication du score"
+msgstr "Uitleg van de score"
+
+msgid "Export & traçabilité"
+msgstr "Export & traceerbaarheid"
+
+msgid "Fermer"
+msgstr "Sluiten"
+
+msgid "Fermer la fenêtre active"
+msgstr "Het actieve venster sluiten"
+
+msgid "Fichier"
+msgstr "Bestand"
+
+msgid "Fichier de données"
+msgstr "Gegevensbestand"
+
+msgid "Fichier nettoyé"
+msgstr "Opgeschoond bestand"
+
+msgid "Fichier supprimé"
+msgstr "Bestand verwijderd"
+
+msgid "Fichier téléversé"
+msgstr "Bestand geüpload"
+
+msgid "Fichier téléversé avec succès."
+msgstr "Bestand is geüpload."
+
+msgid "Fichier « %(name)s » archivé."
+msgstr "Bestand « %(name)s » gearchiveerd."
+
+msgid "Fichier « %(name)s » restauré."
+msgstr "Bestand « %(name)s » hersteld."
+
+msgid "Fichier « %(name)s » supprimé."
+msgstr "Bestand ‘%(name)s’ is verwijderd."
+
+msgid "Fichiers"
+msgstr "Bestanden"
+
+msgid "Fichiers archivés"
+msgstr "Gearchiveerde bestanden"
+
+msgid "Fichiers au total"
+msgstr "Bestanden in totaal"
+
+msgid "Fichiers de données"
+msgstr "Gegevensbestanden"
+
+msgid "Fichiers expirés"
+msgstr "Verlopen bestanden"
+
+msgid "Fichiers nettoyés avant le %(cutoff)s considérés comme expirés."
+msgstr "Bestanden die voor %(cutoff)s zijn opgeruimd, gelden als verlopen."
+
+msgid "Fichiers nettoyés plus anciens que cette durée (0 = conservation illimitée)."
+msgstr "Opgeruimde bestanden die ouder zijn dan deze termijn (0 = onbeperkte bewaring)."
+
+msgid "Fichiers récents"
+msgstr "Recente bestanden"
+
+msgid "Fil d'Ariane"
+msgstr "Kruimelpad"
+
+msgid "Filtrer"
+msgstr "Filteren"
+
+msgid "Filtrer les lignes du tableau"
+msgstr "Tabelrijen filteren"
+
+msgid "Filtrer par action"
+msgstr "Filteren op actie"
+
+msgid "Filtrer par statut"
+msgstr "Op status filteren"
+
+msgid "Filtrer un tableau"
+msgstr "Een tabel filteren"
+
+msgid "Fonction"
+msgstr "Functie"
+
+msgid "Format de date"
+msgstr "Datumnotatie"
+
+msgid "Format de la charge utile"
+msgstr "Formaat van de payload"
+
+msgid "Formats acceptés : <code>.csv</code>, <code>.xlsx</code>, <code>.xls</code> — jusqu'à 20 Mo."
+msgstr "Geaccepteerde indelingen: <code>.csv</code>, <code>.xlsx</code>, <code>.xls</code> — tot 20 MB."
+
+msgid "Formats de dates (%(column)s) :"
+msgstr "Datumindelingen (%(column)s):"
+
+msgid "Formats standardized (phones, dates)"
+msgstr "Gestandaardiseerde formaten (telefoons, datums)"
+
+msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
+msgstr "Bespaar tijd: alles wat telt in DataZen zit op een toetsencombinatie."
+
+msgid "Graphiques"
+msgstr "Grafieken"
+
+msgid "Graphiques générés avec matplotlib et seaborn à partir des données nettoyées."
+msgstr "Grafieken gegenereerd met matplotlib en seaborn op basis van de opgeschoonde gegevens."
+
+msgid "Graphiques générés côté serveur avec"
+msgstr "Serverside gegenereerde grafieken met"
+
+msgid "Graphiques statistiques générés avec <strong>matplotlib</strong> et <strong>seaborn</strong> à partir des données nettoyées."
+msgstr "Statistische grafieken gegenereerd met <strong>matplotlib</strong> en <strong>seaborn</strong> op basis van de opgeschoonde gegevens."
+
+msgid "Gratuit, immédiat, et vos fichiers restent privés."
+msgstr "Gratis, direct en uw bestanden blijven privé."
+
+msgid "Gérer les règles…"
+msgstr "Regels beheren…"
+
+msgid "Histogrammes des colonnes numériques détectées."
+msgstr "Histogrammen van de gedetecteerde numerieke kolommen."
+
+msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
+msgstr "Tijdgestempelde geschiedenis van je acties: uploads, opschoningen, exports, API."
+
+msgid "Identité"
+msgstr "Identiteit"
+
+msgid "Ignorer la casse (Alice = alice)"
+msgstr "Hoofdlettergevoeligheid negeren (Alice = alice)"
+
+msgid "Import CSV & Excel"
+msgstr "CSV- & Excel-import"
+
+msgid "Impossible d'appliquer la décision : %(error)s"
+msgstr "Kan de beslissing niet toepassen: %(error)s"
+
+msgid "Impossible de convertir le fichier : %(error)s"
+msgstr "Kan het bestand niet converteren: %(error)s"
+
+msgid "Impossible de générer le PDF : %(error)s"
+msgstr "PDF kan niet worden gegenereerd: %(error)s"
+
+msgid "Impossible de lire ce fichier : %(error)s"
+msgstr "Kan dit bestand niet lezen: %(error)s"
+
+msgid "Impossible de lire le fichier : %(error)s"
+msgstr "Kan het bestand niet lezen: %(error)s"
+
+msgid "Impossible de lire le rapport : %(error)s"
+msgstr "Kan het rapport niet lezen: %(error)s"
+
+msgid "Inactif"
+msgstr "Inactief"
+
+msgid "Inactive"
+msgstr "Inactief"
+
+msgid "Inconnu"
+msgstr "Onbekend"
+
+msgid "Indicateur"
+msgstr "Indicator"
+
+msgid "Indicateurs comparés"
+msgstr "Vergeleken indicatoren"
+
+msgid "Indiquez votre adresse e-mail : nous vous enverrons un lien pour choisir un nouveau mot de passe."
+msgstr "Voer uw e-mailadres in: we sturen u een link om een nieuw wachtwoord te kiezen."
+
+msgid "Information"
+msgstr "Informatie"
+
+msgid "Informations professionnelles"
+msgstr "Beroepsgegevens"
+
+msgid "Inscription — DataZen"
+msgstr "Registratie — DataZen"
+
+msgid "Intégration"
+msgstr "Integratie"
+
+msgid "Invalid emails are not counted as unknown or missing"
+msgstr "Ongeldige e-mails worden niet als onbekend of ontbrekend geteld"
+
+msgid "JJ/MM/AAAA"
+msgstr "JJ/MM/AAAA"
+
+msgid "JSON (.json)"
+msgstr "JSON (.json)"
+
+msgid "Jamais appelé"
+msgstr "Nooit aangeroepen"
+
+msgid "Jauge du score de qualité global (sur 100)."
+msgstr "Meter voor de globale kwaliteitsscore (op 100)."
+
+msgid "Jeton"
+msgstr "Token"
+
+msgid "Jeton créé. Copiez-le maintenant : il ne sera plus affiché."
+msgstr "Token aangemaakt. Kopieer het nu: het wordt niet meer getoond."
+
+msgid "Jeton d'API"
+msgstr "API-token"
+
+msgid "Jeton « %(name)s » révoqué."
+msgstr "Token « %(name)s » ingetrokken."
+
+msgid "Jetons"
+msgstr "Tokens"
+
+msgid "Jetons d'API"
+msgstr "API-tokens"
+
+msgid "Journal d'activité"
+msgstr "Activiteitenlog"
+
+msgid "Journal d'activité — DataZen"
+msgstr "Activiteitenlog — DataZen"
+
+msgid "Journal des modifications"
+msgstr "Wijzigingslogboek"
+
+msgid "Journal des modifications (extrait)"
+msgstr "Wijzigingslogboek (uittreksel)"
+
+msgid "L'historique horodaté de chaque opération."
+msgstr "De tijdgestempelde geschiedenis van elke bewerking."
+
+msgid "La comparaison n'est pas disponible : lancez d'abord un nettoyage sur ce fichier."
+msgstr "De vergelijking is niet beschikbaar: start eerst een opschoning op dit bestand."
+
+msgid "La confirmation ne correspond pas à votre nom d'utilisateur : suppression annulée."
+msgstr "De bevestiging komt niet overeen met uw gebruikersnaam: verwijdering geannuleerd."
+
+msgid "La suppression du compte efface définitivement vos fichiers, vos règles et votre profil. Cette action est irréversible."
+msgstr "Het verwijderen van het account wist definitief uw bestanden, uw regels en uw profiel. Deze actie is onomkeerbaar."
+
+msgid "Laisser vide pour appliquer à toutes les colonnes."
+msgstr "Laat leeg om op alle kolommen toe te passen."
+
+msgid "Laissez vide pour un jeton sans expiration."
+msgstr "Laat leeg voor een token zonder vervaldatum."
+
+msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
+msgstr "Start eerst een opschoning om toegang te krijgen tot de verkennende analyse."
+
+msgid "Lancez d'abord un nettoyage pour générer un rapport PDF."
+msgstr "Start eerst een opschoning om een PDF-rapport te genereren."
+
+msgid "Langue de l'interface"
+msgstr "Taal van de interface"
+
+msgid "Le compte « %(username)s » a été supprimé."
+msgstr "Het account «%(username)s» is verwijderd."
+
+msgid "Le fichier ne doit pas dépasser 20 Mo."
+msgstr "Het bestand mag niet groter zijn dan 20 MB."
+
+msgid "Le journal conserve également %(days)s jours d'historique."
+msgstr "Het log bewaart ook %(days)s dagen geschiedenis."
+
+msgid "Le nettoyage a échoué."
+msgstr "Het opschonen is mislukt."
+
+msgid "Le nom d'hôte du webhook est introuvable."
+msgstr "De hostnaam van de webhook is niet gevonden."
+
+msgid "Le nom d'hôte du webhook pointe vers une adresse interne."
+msgstr "De hostnaam van de webhook verwijst naar een intern adres."
+
+msgid "Le nom d'hôte est absent de l'URL."
+msgstr "De hostnaam ontbreekt in de URL."
+
+msgid "Le port est invalide."
+msgstr "De poort is ongeldig."
+
+msgid "Le thème « Système » suit les réglages de votre appareil."
+msgstr "Het thema ‘Systeem’ volgt de instellingen van uw apparaat."
+
+msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
+msgstr "De verwerking wordt op de achtergrond uitgevoerd. Deze pagina wordt aan het einde automatisch bijgewerkt."
+
+msgid "Les adresses internes sont refusées."
+msgstr "Interne adressen worden geweigerd."
+
+msgid "Les adresses locales sont refusées."
+msgstr "Lokale adressen worden geweigerd."
+
+msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
+msgstr "Duplicaten worden gemarkeerd, maar nooit automatisch verwijderd. Vink dit vakje aan om ze expliciet te verwijderen."
+
+msgid "Les fichiers archivés restent accessibles et téléchargeables."
+msgstr "Gearchiveerde bestanden blijven toegankelijk en downloadbaar."
+
+msgid "Les fichiers expirés seront supprimés automatiquement à votre prochaine visite."
+msgstr "Verlopen bestanden worden bij je volgende bezoek automatisch verwijderd."
+
+msgid "Les fichiers nettoyés sont archivés après 30 jours."
+msgstr "Opgeschoonde bestanden worden na 30 dagen gearchiveerd."
+
+msgid "Les fichiers nettoyés sont archivés puis purgés après cette durée (0 = conservation illimitée)."
+msgstr "Opgeruimde bestanden worden gearchiveerd en daarna na deze termijn verwijderd (0 = onbeperkte bewaring)."
+
+msgid "Les identifiants intégrés à l'URL sont refusés."
+msgstr "Inloggegevens in de URL worden geweigerd."
+
+msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
+msgstr "Beschikbare routes: /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
+
+msgid "Les statistiques affichées correspondent aux données réelles."
+msgstr "De weergegeven statistieken komen overeen met de werkelijke gegevens."
+
+msgid "Lien invalide"
+msgstr "Ongeldige link"
+
+msgid "Ligne"
+msgstr "Rij"
+
+msgid "Lignes"
+msgstr "Rijen"
+
+msgid "Lignes après nettoyage"
+msgstr "Rijen na opschoning"
+
+msgid "Lignes du journal des modifications"
+msgstr "Regels in het wijzigingslog"
+
+msgid "Lignes traitées"
+msgstr "Verwerkte regels"
+
+msgid "Localisation"
+msgstr "Locatie"
+
+msgid "MM/JJ/AAAA"
+msgstr "MM/JJ/AAAA"
+
+msgid "Masquer"
+msgstr "Verbergen"
+
+msgid "Masquer le mot de passe"
+msgstr "Wachtwoord verbergen"
+
+msgid "Matrice de corrélation"
+msgstr "Correlatiematrix"
+
+msgid "Matrice de corrélation (Pearson)"
+msgstr "Correlatiematrix (Pearson)"
+
+msgid "Max"
+msgstr "Max"
+
+msgid "Maîtrisez la durée de vie de vos données."
+msgstr "Houd de levensduur van je gegevens in de hand."
+
+msgid "Membre depuis"
+msgstr "Lid sinds"
+
+msgid "Mes règles"
+msgstr "Mijn regels"
+
+msgid "Mes règles de nettoyage"
+msgstr "Mijn opschoonregels"
+
+msgid "Mesuré avant et après le nettoyage."
+msgstr "Gemeten voor en na het opschonen."
+
+msgid "Mettre à jour le mot de passe"
+msgstr "Het wachtwoord bijwerken"
+
+msgid "Min"
+msgstr "Min"
+
+msgid "Missing values by column"
+msgstr "Ontbrekende waarden per kolom"
+
+msgid "Mode"
+msgstr "Modus"
+
+msgid "Modifier mes informations"
+msgstr "Mijn gegevens bewerken"
+
+msgid "Modifiez votre mot de passe régulièrement et exportez vos données quand vous le souhaitez."
+msgstr "Wijzig uw wachtwoord regelmatig en exporteer uw gegevens wanneer u maar wilt."
+
+msgid "Mon profil"
+msgstr "Mijn profiel"
+
+msgid "Mon profil — DataZen"
+msgstr "Mijn profiel — DataZen"
+
+msgid "Mot de passe"
+msgstr "Wachtwoord"
+
+msgid "Mot de passe modifié"
+msgstr "Wachtwoord gewijzigd"
+
+msgid "Mot de passe modifié — DataZen"
+msgstr "Wachtwoord gewijzigd — DataZen"
+
+msgid "Mot de passe oublié ?"
+msgstr "Wachtwoord vergeten?"
+
+msgid "Mot de passe oublié — DataZen"
+msgstr "Wachtwoord vergeten — DataZen"
+
+msgid "Motif"
+msgstr "Reden"
+
+msgid "Motif attendu"
+msgstr "Verwacht patroon"
+
+msgid "Moyenne"
+msgstr "Gemiddelde"
+
+msgid "Médiane"
+msgstr "Mediaan"
+
+msgid "Méthode"
+msgstr "Methode"
+
+msgid "Nettoyage"
+msgstr "Opschoning"
+
+msgid "Nettoyage du fichier « %(name)s »"
+msgstr "Opschoning van het bestand « %(name)s »"
+
+msgid "Nettoyage intelligent"
+msgstr "Intelligente opschoning"
+
+msgid "Nettoyage intelligent · CSV & Excel"
+msgstr "Intelligente opschoning · CSV & Excel"
+
+msgid "Nettoyage lancé en arrière-plan. La page se met à jour automatiquement."
+msgstr "Opschoning gestart op de achtergrond. De pagina wordt automatisch bijgewerkt."
+
+msgid "Nettoyage lancé sur « %(name)s »"
+msgstr "Opschoning gestart op « %(name)s »"
+
+msgid "Nettoyage terminé"
+msgstr "Opschoning voltooid"
+
+msgid "Nettoyage terminé : « %(name)s »"
+msgstr "Opschoning voltooid: « %(name)s »"
+
+msgid "Nettoyer"
+msgstr "Opschonen"
+
+msgid "Nettoyer un fichier"
+msgstr "Een bestand opschonen"
+
+msgid "Nettoyez, normalisez et fiabilisez vos fichiers CSV et Excel en quelques clics — sans écrire une ligne de code."
+msgstr "Schoon uw CSV- en Excel-bestanden op, normaliseer ze en maak ze betrouwbaar in enkele klikken — zonder één regel code te schrijven."
+
+msgid "Nettoyé"
+msgstr "Opgeschoond"
+
+msgid "Nettoyé le"
+msgstr "Opgeruimd op"
+
+msgid "Nettoyés"
+msgstr "Opgeschoond"
+
+msgid "Niveau"
+msgstr "Niveau"
+
+msgid "No exact duplicates"
+msgstr "Geen exacte duplicaten"
+
+msgid "No missing or unknown values"
+msgstr "Geen ontbrekende of onbekende waarden"
+
+msgid "No potential duplicates"
+msgstr "Geen mogelijke duplicaten"
+
+msgid "Nom"
+msgstr "Naam"
+
+msgid "Nom d'utilisateur"
+msgstr "Gebruikersnaam"
+
+msgid "Nom de la règle"
+msgstr "Naam van de regel"
+
+msgid "Nom de votre entreprise ou équipe"
+msgstr "Naam van uw bedrijf of team"
+
+msgid "Nom du jeton"
+msgstr "Naam van het token"
+
+msgid "Nombre d'appels"
+msgstr "Aantal aanroepen"
+
+msgid "Nombre d'occurrences"
+msgstr "Aantal voorkomens"
+
+msgid "Nombre de nettoyages et score moyen par semaine."
+msgstr "Aantal opschoningen en gemiddelde score per week."
+
+msgid "Nombre de valeurs aberrantes"
+msgstr "Aantal uitschieters"
+
+msgid "Nombre de valeurs aberrantes (méthode IQR) par colonne."
+msgstr "Aantal uitbijters (IQR-methode) per kolom."
+
+msgid "Normalisation de la casse (noms, libellés, villes)"
+msgstr "Hoofdlettergebruik normaliseren (namen, labels, steden)"
+
+msgid "Normalisation des catégories (%(count)s corrigée(s))"
+msgstr "Categorieën normaliseren (%(count)s gecorrigeerd)"
+
+msgid "Normalisation des choix oui/non (%(count)s corrigé(s))"
+msgstr "Ja/nee-keuzes normaliseren (%(count)s gecorrigeerd)"
+
+msgid "Normalisation des codes/références (%(count)s corrigé(s))"
+msgstr "Codes/referenties normaliseren (%(count)s gecorrigeerd)"
+
+msgid "Normalisation des dates (%(count)s corrigée(s))"
+msgstr "Datums normaliseren (%(count)s gecorrigeerd)"
+
+msgid "Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "Telefoonnummers normaliseren (%(count)s gecorrigeerd)"
+
+msgid "Normaliser la casse"
+msgstr "Hoofdlettergebruik normaliseren"
+
+msgid "Normaliser la casse (emails en minuscules, noms en Capitales)"
+msgstr "Hoofdlettergebruik normaliseren (e-mails klein, namen met hoofdletter)"
+
+msgid "Normaliser les dates"
+msgstr "Datums normaliseren"
+
+msgid "Normaliser les dates (AAAA-MM-JJ)"
+msgstr "Datums normaliseren (JJJJ-MM-DD)"
+
+msgid "Normaliser les emails"
+msgstr "E-mails normaliseren"
+
+msgid "Normaliser les téléphones"
+msgstr "Telefoonnummers normaliseren"
+
+msgid "Normaliser les téléphones (06XXXXXXXX)"
+msgstr "Telefoonnummers normaliseren (06XXXXXXXX)"
+
+msgid "Notifications par email"
+msgstr "E-mailmeldingen"
+
+msgid "Nouveau jeton d API"
+msgstr "Nieuw API-token"
+
+msgid "Nouveau mot de passe"
+msgstr "Nieuw wachtwoord"
+
+msgid "Nouveau mot de passe — DataZen"
+msgstr "Nieuw wachtwoord — DataZen"
+
+msgid "Nouvelle photo prête"
+msgstr "Nieuwe foto klaar"
+
+msgid "Nouvelle valeur"
+msgstr "Nieuwe waarde"
+
+msgid "Opération"
+msgstr "Bewerking"
+
+msgid "Opérations de nettoyage"
+msgstr "Opschoonbewerkingen"
+
+msgid "Organisation"
+msgstr "Organisatie"
+
+msgid "Outils"
+msgstr "Tools"
+
+msgid "Outliers"
+msgstr "Uitbijters"
+
+msgid "Ouvrir"
+msgstr "Openen"
+
+msgid "Ouvrir la recherche globale"
+msgstr "Globale zoekopdracht openen"
+
+msgid "Ouvrir le résultat sélectionné"
+msgstr "Het geselecteerde resultaat openen"
+
+msgid "Page"
+msgstr "Pagina"
+
+msgid "Parcourir…"
+msgstr "Bestand kiezen"
+
+msgid "Pas encore de compte ?"
+msgstr "Nog geen account?"
+
+msgid "Pensez à regarder dans vos courriers indésirables. Le lien reste valable quelques heures."
+msgstr "Denk eraan uw spammap te controleren. De link blijft enkele uren geldig."
+
+msgid "Personnalisez votre identité, votre photo et vos préférences."
+msgstr "Personaliseer uw identiteit, uw foto en uw voorkeuren."
+
+msgid "Photo de profil"
+msgstr "Profielfoto"
+
+msgid "Pilotage"
+msgstr "Sturing"
+
+msgid "Plus fréquent"
+msgstr "Meest voorkomend"
+
+msgid "Poids"
+msgstr "Gewicht"
+
+msgid "Politique en vigueur"
+msgstr "Geldend beleid"
+
+msgid "Pondération"
+msgstr "Weging"
+
+msgid "Premier quartile"
+msgstr "Eerste kwartiel"
+
+msgid "Prendre une photo avec la caméra"
+msgstr "Een foto maken met de camera"
+
+msgid "Problème"
+msgstr "Probleem"
+
+msgid "Problèmes après"
+msgstr "Problemen erna"
+
+msgid "Problèmes avant"
+msgstr "Problemen ervoor"
+
+msgid "Problèmes détectés"
+msgstr "Gedetecteerde problemen"
+
+msgid "Problèmes restants"
+msgstr "Resterende problemen"
+
+msgid "Productivité"
+msgstr "Productiviteit"
+
+msgid "Profil"
+msgstr "Profiel"
+
+msgid "Profil de %(name)s — DataZen"
+msgstr "Profiel van %(name)s — DataZen"
+
+msgid "Profil de %(username)s"
+msgstr "Profiel van %(username)s"
+
+msgid "Profil public"
+msgstr "Openbaar profiel"
+
+msgid "Profil visible publiquement"
+msgstr "Profiel openbaar zichtbaar"
+
+msgid "Profils"
+msgstr "Profielen"
+
+msgid "Progression"
+msgstr "Voortgang"
+
+msgid "Propriétaire"
+msgstr "Eigenaar"
+
+msgid "Préfixe"
+msgstr "Voorvoegsel"
+
+msgid "Préférences"
+msgstr "Voorkeuren"
+
+msgid "Prénom"
+msgstr "Voornaam"
+
+msgid "Présentation"
+msgstr "Presentatie"
+
+msgid "Purge automatique"
+msgstr "Automatisch opschonen"
+
+msgid "Purge automatique de %(count)s fichier(s) expiré(s)"
+msgstr "Automatisch opschonen van %(count)s verlopen bestand(en)"
+
+msgid "Purge de %(count)s fichier(s) expiré(s)"
+msgstr "Opschonen van %(count)s verlopen bestand(en)"
+
+msgid "Purger automatiquement"
+msgstr "Automatisch opschonen"
+
+msgid "Purger automatiquement les fichiers expirés"
+msgstr "Verlopen bestanden automatisch opschonen"
+
+msgid "Purger le journal"
+msgstr "Het log opschonen"
+
+msgid "Purger les anciennes entrées du journal ?"
+msgstr "Oude logitems opschonen?"
+
+msgid "Q1"
+msgstr "K1"
+
+msgid "Q3"
+msgstr "K3"
+
+msgid "Qualité moyenne"
+msgstr "Gemiddelde kwaliteit"
+
+msgid "Qualité par colonne"
+msgstr "Kwaliteit per kolom"
+
+msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
+msgstr "Een paar woorden over u, uw team, uw datasets…"
+
+msgid "Raccourcis clavier"
+msgstr "Sneltoetsen"
+
+msgid "Raccourcis clavier — DataZen"
+msgstr "Sneltoetsen — DataZen"
+
+msgid "Raccourcis de navigation"
+msgstr "Navigatiesneltoetsen"
+
+msgid "Raccourcis de nettoyage"
+msgstr "Opschoon-sneltoetsen"
+
+msgid "Raison"
+msgstr "Reden"
+
+msgid "Rapport"
+msgstr "Rapport"
+
+msgid "Rapport PDF de « %(name)s »"
+msgstr "PDF-rapport van « %(name)s »"
+
+msgid "Rapport de nettoyage"
+msgstr "Opschoonrapport"
+
+msgid "Rapport de qualité des données"
+msgstr "Rapport over datakwaliteit"
+
+msgid "Rapport généré automatiquement par DataZen. Les scores sont calculés selon cinq dimensions pondérées : complétude, validité, unicité, cohérence et conformité."
+msgstr "Automatisch gegenereerd rapport van DataZen. De scores worden berekend volgens vijf gewogen dimensies: volledigheid, geldigheid, uniciteit, consistentie en conformiteit."
+
+msgid "Rapport — %(name)s"
+msgstr "Rapport — %(name)s"
+
+msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
+msgstr "Ontvang een HTTP-melding zodra een opschoning eindigt, mislukt of een bestand wordt geüpload."
+
+msgid "Recevoir les notifications par email"
+msgstr "E-mailmeldingen ontvangen"
+
+msgid "Recevoir un message lorsqu'un nettoyage se termine."
+msgstr "Een bericht ontvangen wanneer een opschoning is voltooid."
+
+msgid "Recherche en cours…"
+msgstr "Zoeken…"
+
+msgid "Recherche globale"
+msgstr "Globale zoekopdracht"
+
+msgid "Recherche momentanément indisponible."
+msgstr "Zoeken is tijdelijk niet beschikbaar."
+
+msgid "Rechercher"
+msgstr "Zoeken"
+
+msgid "Rechercher (Ctrl+K)"
+msgstr "Zoeken (Ctrl+K)"
+
+msgid "Rechercher un fichier"
+msgstr "Een bestand zoeken"
+
+msgid "Rechercher un fichier ou une règle (Ctrl+K)"
+msgstr "Zoek een bestand of een regel (Ctrl+K)"
+
+msgid "Rechercher un fichier, une règle, une page…"
+msgstr "Zoek een bestand, een regel, een pagina…"
+
+msgid "Rechercher un fichier…"
+msgstr "Een bestand zoeken…"
+
+msgid "Recommandation"
+msgstr "Aanbeveling"
+
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
+msgstr "Vervangt namen, e-mails en telefoonnummers door deterministische pseudoniemen (dezelfde waarde → hetzelfde pseudoniem). Relaties tussen rijen blijven behouden."
+
+msgid "Remplacer les valeurs manquantes"
+msgstr "Ontbrekende waarden vervangen"
+
+msgid "Remplacez le jeton par le vôtre et lancez la commande."
+msgstr "Vervang het token door het jouwe en voer het commando uit."
+
+msgid "Remplir les valeurs manquantes"
+msgstr "Ontbrekende waarden invullen"
+
+msgid "Remplissage des valeurs manquantes par « %(value)s » (les montants, codes et dates ne reçoivent jamais un texte)"
+msgstr "Ontbrekende waarden vervangen door ‘%(value)s’ (bedragen, codes en datums krijgen nooit tekst)"
+
+msgid "Renseignées"
+msgstr "Ingevuld"
+
+msgid "Renumérotation des identifiants (ancien id conservé)"
+msgstr "ID's opnieuw nummeren (oorspronkelijke ID behouden)"
+
+msgid "Reported %(reported)s vs recalculated %(actual)s"
+msgstr "Gerapporteerd %(reported)s vs herberekend %(actual)s"
+
+msgid "Restauration"
+msgstr "Herstel"
+
+msgid "Restauration de « %(name)s »"
+msgstr "Herstel van « %(name)s »"
+
+msgid "Restaurer"
+msgstr "Herstellen"
+
+msgid "Retour à la connexion"
+msgstr "Terug naar aanmelden"
+
+msgid "Règle"
+msgstr "Regel"
+
+msgid "Règle de nettoyage"
+msgstr "Opschoonregel"
+
+msgid "Règle « %(name)s » %(state)s."
+msgstr "Regel «%(name)s» %(state)s."
+
+msgid "Règle « %(name)s » créée."
+msgstr "Regel «%(name)s» aangemaakt."
+
+msgid "Règle « %(name)s » supprimée."
+msgstr "Regel «%(name)s» verwijderd."
+
+msgid "Règles"
+msgstr "Regels"
+
+msgid "Règles de nettoyage"
+msgstr "Opschoonregels"
+
+msgid "Règles de nettoyage — DataZen"
+msgstr "Opschoonregels — DataZen"
+
+msgid "Règles de validation regex personnalisées"
+msgstr "Aangepaste regex-validatieregels"
+
+msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
+msgstr "Haal het opgeschoonde bestand, het gedetailleerde rapport en het volledige wijzigingslogboek op."
+
+msgid "Réinitialiser"
+msgstr "Resetten"
+
+msgid "Répartition des problèmes"
+msgstr "Verdeling van de problemen"
+
+msgid "Répartition des problèmes restants"
+msgstr "Verdeling van de resterende problemen"
+
+msgid "Résultats"
+msgstr "Resultaten"
+
+msgid "Rétention"
+msgstr "Bewaring"
+
+msgid "Rétention des données"
+msgstr "Gegevensbewaring"
+
+msgid "Rétention des données — DataZen"
+msgstr "Gegevensbewaring — DataZen"
+
+msgid "Révocation de jeton"
+msgstr "Token intrekken"
+
+msgid "Révocation du jeton « %(name)s »"
+msgstr "Intrekken van het token « %(name)s »"
+
+msgid "Révoquer"
+msgstr "Intrekken"
+
+msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
+msgstr "Dit token intrekken? Integraties die het gebruiken, werken niet meer."
+
+msgid "Révoqué"
+msgstr "Ingetrokken"
+
+msgid "S'inscrire"
+msgstr "Registreren"
+
+msgid "Saisissez <strong>%(username)s</strong> pour confirmer"
+msgstr "Typ <strong>%(username)s</strong> om te bevestigen"
+
+msgid "Score"
+msgstr "Score"
+
+msgid "Score après nettoyage"
+msgstr "Score na opschoning"
+
+msgid "Score avant nettoyage"
+msgstr "Score voor opschoning"
+
+msgid "Score de la dimension"
+msgstr "Dimensiescore"
+
+msgid "Score de qualité"
+msgstr "Kwaliteitsscore"
+
+msgid "Score de similarité :"
+msgstr "Gelijkenisscore:"
+
+msgid "Score global"
+msgstr "Totaalscore"
+
+msgid "Score global de qualité"
+msgstr "Algemene kwaliteitsscore"
+
+msgid "Score qualité"
+msgstr "Kwaliteitsscore"
+
+msgid "Score qualité après"
+msgstr "Kwaliteitsscore na"
+
+msgid "Score qualité avant"
+msgstr "Kwaliteitsscore voor"
+
+msgid "Se connecter"
+msgstr "Aanmelden"
+
+msgid "Se déconnecter"
+msgstr "Afmelden"
+
+msgid "Se déplacer dans les résultats"
+msgstr "Door de resultaten navigeren"
+
+msgid "Sert uniquement à la réinitialisation du mot de passe."
+msgstr "Wordt alleen gebruikt voor het opnieuw instellen van het wachtwoord."
+
+msgid "Seuls les schémas http et https sont autorisés."
+msgstr "Alleen de schema's http en https zijn toegestaan."
+
+msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
+msgstr "Als er een account met dit adres bestaat, is er zojuist een e-mail met de resetlink verzonden."
+
+msgid "Site web"
+msgstr "Website"
+
+msgid "Sombre"
+msgstr "Donker"
+
+msgid "Statut"
+msgstr "Status"
+
+msgid "Succès"
+msgstr "Succes"
+
+msgid "Superutilisateur"
+msgstr "Supergebruiker"
+
+msgid "Suppression"
+msgstr "Verwijdering"
+
+msgid "Suppression de la règle « %(name)s »"
+msgstr "Verwijdering van de regel « %(name)s »"
+
+msgid "Suppression de règle"
+msgstr "Regel verwijderen"
+
+msgid "Suppression de « %(name)s »"
+msgstr "Verwijdering van « %(name)s »"
+
+msgid "Suppression des doublons exacts (%(count)s supprimé(s))"
+msgstr "Exacte duplicaten verwijderen (%(count)s verwijderd)"
+
+msgid "Suppression des doublons sur « %(column)s » (%(count)s supprimé(s))"
+msgstr "Duplicaten verwijderen op basis van ‘%(column)s’ (%(count)s verwijderd)"
+
+msgid "Suppression des espaces superflus"
+msgstr "Overbodige spaties verwijderen"
+
+msgid "Supprimer %(name)s"
+msgstr "%(name)s verwijderen"
+
+msgid "Supprimer ce webhook ?"
+msgstr "Deze webhook verwijderen?"
+
+msgid "Supprimer définitivement ce fichier et toutes ses données ?"
+msgstr "Dit bestand en alle bijbehorende gegevens definitief verwijderen?"
+
+msgid "Supprimer définitivement les fichiers expirés ? Cette action est irréversible."
+msgstr "Verlopen bestanden definitief verwijderen? Deze actie is onomkeerbaar."
+
+msgid "Supprimer définitivement les fichiers expirés au lieu de les archiver."
+msgstr "Verlopen bestanden definitief verwijderen in plaats van ze te archiveren."
+
+msgid "Supprimer définitivement « %(name)s » ?"
+msgstr "Bestand « %(name)s » definitief verwijderen?"
+
+msgid "Supprimer les doublons"
+msgstr "Duplicaten verwijderen"
+
+msgid "Supprimer les doublons (confirmation requise)"
+msgstr "Duplicaten verwijderen (bevestiging vereist)"
+
+msgid "Supprimer les espaces superflus"
+msgstr "Overbodige spaties verwijderen"
+
+msgid "Supprimer mon compte"
+msgstr "Mijn account verwijderen"
+
+msgid "Synthèse"
+msgstr "Samenvatting"
+
+msgid "Système"
+msgstr "Systeem"
+
+msgid "Sécurité"
+msgstr "Beveiliging"
+
+msgid "Sélectionner un fichier"
+msgstr "Een bestand selecteren"
+
+msgid "Tableau de bord"
+msgstr "Dashboard"
+
+msgid "Tableau de bord — DataZen"
+msgstr "Dashboard — DataZen"
+
+msgid "Tapez au moins deux caractères pour lancer la recherche."
+msgstr "Typ minstens twee tekens om te zoeken."
+
+msgid "Taux de complétude (%)"
+msgstr "Volledigheidspercentage (%)"
+
+msgid "Taux de remplissage de chaque colonne (les plus incomplètes d'abord)."
+msgstr "Vullingspercentage van elke kolom (de meest onvolledige eerst)."
+
+msgid "Technologies"
+msgstr "Technologieën"
+
+msgid "Tester"
+msgstr "Testen"
+
+msgid "Thème préféré"
+msgstr "Voorkeursthema"
+
+msgid "Top des catégories"
+msgstr "Top van de categorieën"
+
+msgid "Total missing values"
+msgstr "Totaal ontbrekende waarden"
+
+msgid "Tous vos indicateurs de qualité réunis."
+msgstr "Al je kwaliteitsindicatoren bij elkaar."
+
+msgid "Tout est inclus"
+msgstr "Alles inbegrepen"
+
+msgid "Tout voir"
+msgstr "Alles bekijken"
+
+msgid "Toutes les actions"
+msgstr "Alle acties"
+
+msgid "Traçabilité"
+msgstr "Traceerbaarheid"
+
+msgid "Troisième quartile"
+msgstr "Derde kwartiel"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Type de correction"
+msgstr "Type correctie"
+
+msgid "Téléchargement"
+msgstr "Download"
+
+msgid "Téléchargement de « %(name)s »"
+msgstr "Download van « %(name)s »"
+
+msgid "Téléphone invalide"
+msgstr "Ongeldig telefoonnummer"
+
+msgid "Téléphone non standard"
+msgstr "Telefoonnummer met afwijkend formaat"
+
+msgid "Téléphones non standard (%(column)s) :"
+msgstr "Niet-standaard telefoonnummers (%(column)s):"
+
+msgid "Téléversement"
+msgstr "Upload"
+
+msgid "Téléversement de « %(name)s »"
+msgstr "Upload van « %(name)s »"
+
+msgid "Téléverser un fichier"
+msgstr "Een bestand uploaden"
+
+msgid "Téléversez votre fichier"
+msgstr "Upload uw bestand"
+
+msgid "Téléversé"
+msgstr "Geüpload"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "URL de destination"
+msgstr "Doel-URL"
+
+msgid "URL illisible."
+msgstr "URL onleesbaar."
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page."
+msgstr "Een beheerdersaccount kan niet vanaf deze pagina worden verwijderd."
+
+msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
+msgstr "Een beheerdersaccount kan niet via deze pagina worden verwijderd. Gebruik de"
+
+msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
+msgstr "Een dashboard meet de kwaliteit voor / na en verklaart elk verloren punt."
+
+msgid "Une URL de destination est requise."
+msgstr "Een doel-URL is verplicht."
+
+msgid "Une boîte à outils complète"
+msgstr "Een complete gereedschapskist"
+
+msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
+msgstr "Eén regel per regel, in de indeling ‘kolom:patroon’. Voorbeeld: ‘postcode:^\\d{5}$’. Waarden die niet overeenkomen worden gemarkeerd (nooit gewijzigd)."
+
+msgid "Uniques"
+msgstr "Unieke"
+
+msgid "Unknown"
+msgstr "Onbekend"
+
+msgid "Unknown emails included in the unknown-value statistic"
+msgstr "Onbekende e-mails opgenomen in de statistiek van onbekende waarden"
+
+msgid "Unknown values by column"
+msgstr "Onbekende waarden per kolom"
+
+msgid "Utilisateur"
+msgstr "Gebruiker"
+
+msgid "Utilisation de l'API"
+msgstr "API-gebruik"
+
+msgid "Valeur"
+msgstr "Waarde"
+
+msgid "Valeur aberrante"
+msgstr "Uitbijter"
+
+msgid "Valeur de remplacement"
+msgstr "Vervangende waarde"
+
+msgid "Valeur de remplacement (pour le remplissage)."
+msgstr "Vervangende waarde (voor het invullen)."
+
+msgid "Valeur manquante"
+msgstr "Ontbrekende waarde"
+
+msgid "Valeur numérique invalide"
+msgstr "Ongeldige numerieke waarde"
+
+msgid "Valeurs aberrantes"
+msgstr "Uitschieters"
+
+msgid "Valeurs aberrantes par colonne (méthode IQR)"
+msgstr "Uitschieters per kolom (IQR-methode)"
+
+msgid "Valeurs les plus fréquentes"
+msgstr "Meest voorkomende waarden"
+
+msgid "Valeurs les plus fréquentes des colonnes catégorielles."
+msgstr "Meest voorkomende waarden van de categorische kolommen."
+
+msgid "Valeurs manquantes"
+msgstr "Ontbrekende waarden"
+
+msgid "Valeurs manquantes :"
+msgstr "Ontbrekende waarden:"
+
+msgid "Valeurs manquantes restantes"
+msgstr "Resterende ontbrekende waarden"
+
+msgid "Valeurs manquantes restantes :"
+msgstr "Resterende ontbrekende waarden:"
+
+msgid "Valeurs uniques"
+msgstr "Unieke waarden"
+
+msgid "Valeurs « Inconnu »"
+msgstr "Onbekende waarden"
+
+msgid "Valeurs « Inconnu » :"
+msgstr "Waarden ‘Onbekend’:"
+
+msgid "Validation et correction des emails (%(corrected)s corrigé(s), %(invalid)s invalide(s))"
+msgstr "E-mails valideren en corrigeren (%(corrected)s gecorrigeerd, %(invalid)s ongeldig)"
+
+msgid "Valider et corriger les emails (erreurs évidentes seulement)"
+msgstr "E-mailadressen valideren en corrigeren (alleen duidelijke fouten)"
+
+msgid "Validité"
+msgstr "Geldigheid"
+
+msgid "Visualisations statistiques"
+msgstr "Statistische visualisaties"
+
+msgid "Voir l'analyse complète →"
+msgstr "Volledige analyse bekijken →"
+
+msgid "Volume"
+msgstr "Volume"
+
+msgid "Volume des anomalies restantes par catégorie."
+msgstr "Volume van de resterende afwijkingen per categorie."
+
+msgid "Vos données"
+msgstr "Uw gegevens"
+
+msgid "Vos données méritent<br> <span class=\"dz-gradient-text\">d'être impeccables.</span>"
+msgstr "Uw gegevens verdienen het<br> <span class=\"dz-gradient-text\">onberispelijk te zijn.</span>"
+
+msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
+msgstr "Je bestanden blijven bij jou. DataZen toont wat de gekozen bewaartermijn overschrijdt en verwijdert niets zonder jouw akkoord."
+
+msgid "Votre espace de travail"
+msgstr "Je werkruimte"
+
+msgid "Votre mot de passe a bien été enregistré. Vous pouvez maintenant vous connecter avec celui-ci."
+msgstr "Uw wachtwoord is opgeslagen. U kunt zich nu daarmee aanmelden."
+
+msgid "Votre mot de passe a été modifié. Vos autres sessions restent actives."
+msgstr "Uw wachtwoord is gewijzigd. Uw andere sessies blijven actief."
+
+msgid "Votre nom d'utilisateur <strong>@%(username)s</strong> ne peut pas être modifié."
+msgstr "Uw gebruikersnaam <strong>@%(username)s</strong> kan niet worden gewijzigd."
+
+msgid "Votre photo de profil a été supprimée."
+msgstr "Uw profielfoto is verwijderd."
+
+msgid "Votre profil a été mis à jour."
+msgstr "Je profiel is bijgewerkt."
+
+msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
+msgstr "Jij houdt de controle: niets wordt verwijderd zonder jouw actie."
+
+msgid "Vous n'avez pas accès à ce fichier."
+msgstr "U hebt geen toegang tot dit bestand."
+
+msgid "Vous n'avez pas accès à ce jeton."
+msgstr "Je hebt geen toegang tot dit token."
+
+msgid "Vous n'avez pas accès à ce webhook."
+msgstr "Je hebt geen toegang tot deze webhook."
+
+msgid "Vous n'avez pas accès à cette règle."
+msgstr "U hebt geen toegang tot deze regel."
+
+msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
+msgstr "Geconsolideerd overzicht van de kwaliteit van je gegevens, alle bestanden samen."
+
+msgid "Vue d'ensemble"
+msgstr "Overzicht"
+
+msgid "Vérifiez votre boîte mail"
+msgstr "Controleer uw inbox"
+
+msgid "Webhook"
+msgstr "Webhook"
+
+msgid "Webhook « %(name)s » %(state)s."
+msgstr "Webhook « %(name)s » %(state)s."
+
+msgid "Webhook « %(name)s » : test réussi (HTTP %(status)s)."
+msgstr "Webhook « %(name)s »: test geslaagd (HTTP %(status)s)."
+
+msgid "Webhook « %(name)s » : test échoué (HTTP %(status)s). Vérifiez l'URL et que le service accepte les appels entrants."
+msgstr "Webhook « %(name)s »: test mislukt (HTTP %(status)s). Controleer de URL en of de dienst inkomende aanroepen accepteert."
+
+msgid "Webhook « %(name)s » créé."
+msgstr "Webhook « %(name)s » aangemaakt."
+
+msgid "Webhook « %(name)s » supprimé."
+msgstr "Webhook « %(name)s » verwijderd."
+
+msgid "Webhooks"
+msgstr "Webhooks"
+
+msgid "Webhooks — DataZen"
+msgstr "Webhooks — DataZen"
+
+msgid "YYYY-MM-DD"
+msgstr "YYYY-MM-DD"
+
+msgid "[Règle] Anonymisation (%(count)s valeur(s))"
+msgstr "[Regel] Anonimiseren (%(count)s waarden)"
+
+msgid "[Règle] Conversion des montants (%(count)s converti(s))"
+msgstr "[Regel] Bedragen omzetten (%(count)s omgezet)"
+
+msgid "[Règle] Normalisation de la casse"
+msgstr "[Regel] Hoofdlettergebruik normaliseren"
+
+msgid "[Règle] Normalisation des dates (%(count)s corrigée(s))"
+msgstr "[Regel] Datums normaliseren (%(count)s gecorrigeerd)"
+
+msgid "[Règle] Normalisation des emails (%(count)s corrigé(s))"
+msgstr "[Regel] E-mails normaliseren (%(count)s gecorrigeerd)"
+
+msgid "[Règle] Normalisation des téléphones (%(count)s corrigé(s))"
+msgstr "[Regel] Telefoonnummers normaliseren (%(count)s gecorrigeerd)"
+
+msgid "[Règle] Remplissage des valeurs manquantes par « %(value)s »"
+msgstr "[Regel] Ontbrekende waarden vervangen door ‘%(value)s’"
+
+msgid "[Règle] Suppression des doublons (%(count)s supprimé(s))"
+msgstr "[Regel] Duplicaten verwijderen (%(count)s verwijderd)"
+
+msgid "[Règle] Suppression des espaces superflus"
+msgstr "[Regel] Overbodige spaties verwijderen"
+
+msgid "actif"
+msgstr "actief"
+
+msgid "activé"
+msgstr "ingeschakeld"
+
+msgid "activée"
+msgstr "ingeschakeld"
+
+msgid "ajoutée"
+msgstr "toegevoegd"
+
+msgid "améliorée"
+msgstr "verbeterd"
+
+msgid "bonne qualité"
+msgstr "goede kwaliteit"
+
+msgid "catégorie"
+msgstr "categorie"
+
+msgid "cohérence"
+msgstr "consistentie"
+
+msgid "colonne : %(name)s"
+msgstr "kolom: %(name)s"
+
+msgid "complétude"
+msgstr "volledigheid"
+
+msgid "conformité"
+msgstr "conformiteit"
+
+msgid "conservée (non inventée)"
+msgstr "behouden (niet verzonnen)"
+
+msgid "console d'administration"
+msgstr "beheerconsole"
+
+msgid "date"
+msgstr "datum"
+
+msgid "donnée absente"
+msgstr "ontbrekend gegeven"
+
+msgid "désactivé"
+msgstr "uitgeschakeld"
+
+msgid "désactivée"
+msgstr "uitgeschakeld"
+
+msgid "détail"
+msgstr "detail"
+
+msgid "email"
+msgstr "e-mail"
+
+msgid "et"
+msgstr "en"
+
+msgid "ex : 0 ou Inconnu"
+msgstr "bijv. 0 of Onbekend"
+
+msgid "ex : Emails en minuscules"
+msgstr "bv. e-mails in kleine letters"
+
+msgid "ex : Intégration Power BI"
+msgstr "bv. Power BI-integratie"
+
+msgid "ex : Slack — nettoyages"
+msgstr "bv. Slack — opschoningen"
+
+msgid "ex : email (vide = toutes les colonnes)"
+msgstr "bv. e-mail (leeg = alle kolommen)"
+
+msgid "excellente qualité"
+msgstr "uitstekende kwaliteit"
+
+msgid "fermer"
+msgstr "sluiten"
+
+msgid "format invalide"
+msgstr "ongeldige notatie"
+
+msgid "format non reconnu"
+msgstr "onbekende notatie"
+
+msgid "généré le"
+msgstr "gegenereerd op"
+
+msgid "https://exemple.com"
+msgstr "https://exemple.com"
+
+msgid "https://hooks.exemple.com/datazen"
+msgstr "https://hooks.voorbeeld.com/datazen"
+
+msgid "identifiant"
+msgstr "identificatie"
+
+msgid "inactive"
+msgstr "inactief"
+
+msgid "inchangé"
+msgstr "ongewijzigd"
+
+msgid "jours"
+msgstr "dagen"
+
+msgid "lignes"
+msgstr "regels"
+
+msgid "longueur/format incorrect"
+msgstr "lengte/notatie onjuist"
+
+msgid "matplotlib"
+msgstr "matplotlib"
+
+msgid "naviguer"
+msgstr "navigeren"
+
+msgid "non évalué"
+msgstr "niet beoordeeld"
+
+msgid "numérique"
+msgstr "numeriek"
+
+msgid "opération : %(name)s"
+msgstr "bewerking: %(name)s"
+
+msgid "ouvrir"
+msgstr "openen"
+
+msgid "points"
+msgstr "punten"
+
+msgid "pour «"
+msgstr "voor ‘"
+
+msgid "premières lignes."
+msgstr "eerste rijen."
+
+msgid "qualité faible"
+msgstr "zwakke kwaliteit"
+
+msgid "qualité moyenne"
+msgstr "gemiddelde kwaliteit"
+
+msgid "référence"
+msgstr "referentie"
+
+msgid "révoqué"
+msgstr "ingetrokken"
+
+msgid "score"
+msgstr "score"
+
+msgid "score %(before)s → %(after)s"
+msgstr "score %(before)s → %(after)s"
+
+msgid "seaborn"
+msgstr "seaborn"
+
+msgid "stable"
+msgstr "stabiel"
+
+msgid "supprimée"
+msgstr "verwijderd"
+
+msgid "sur"
+msgstr "van"
+
+msgid "texte"
+msgstr "tekst"
+
+msgid "téléphone"
+msgstr "telefoon"
+
+msgid "unicité"
+msgstr "uniciteit"
+
+msgid "valeur(s) extrême(s)"
+msgstr "extreme waarde(n)"
+
+msgid "validité"
+msgstr "geldigheid"
+
+msgid "· ancien_id :"
+msgstr "· oude_id:"
+
+msgid "· statut filtré"
+msgstr "· gefilterde status"
+
+msgid "À compléter :"
+msgstr "Aan te vullen:"
+
+msgid "Écart"
+msgstr "Afwijking"
+
+msgid "Écart-type"
+msgstr "Standaardafwijking"
+
+msgid "Échap"
+msgstr "Esc"
+
+msgid "Échec du nettoyage"
+msgstr "Opschonen mislukt"
+
+msgid "Échec du nettoyage de « %(name)s »"
+msgstr "Opschoning van « %(name)s » mislukt"
+
+msgid "Étape 1"
+msgstr "Stap 1"
+
+msgid "État"
+msgstr "Toestand"
+
+msgid "Évolution hebdomadaire du score de qualité"
+msgstr "Wekelijkse evolutie van de kwaliteitsscore"
+
+msgid "Événement"
+msgstr "Gebeurtenis"
+
+msgid "Événement déclencheur"
+msgstr "Triggergebeurtenis"
+
+msgid "à corriger manuellement"
+msgstr "handmatig te corrigeren"
+
+msgid "à partir des données nettoyées."
+msgstr "op basis van de opgeschoonde gegevens."
+
+msgid "à vérifier"
+msgstr "te controleren"
+
+msgid "à vérifier manuellement"
+msgstr "handmatig te controleren"
+
+msgid "—"
+msgstr "—"
+
+msgid "— Choisir une action —"
+msgstr "— Kies een actie —"
+
+msgid "— Tous les statuts —"
+msgstr "— Alle statussen —"
+
+msgid "— Toutes les colonnes —"
+msgstr "— Alle kolommen —"
+
+msgid "← Retour au fichier"
+msgstr "← Terug naar het bestand"
+
+msgid "⌨️ Raccourcis"
+msgstr "⌨️ Sneltoetsen"
+
+msgid "⌨️ Raccourcis clavier"
+msgstr "⌨️ Sneltoetsen"
+
+msgid "⏳ Fichiers expirés"
+msgstr "⏳ Verlopen bestanden"
+
+msgid "⏳ Nettoyage en cours…"
+msgstr "⏳ Opschonen bezig…"
+
+msgid "⚙️ Règles de nettoyage personnalisées"
+msgstr "⚙️ Aangepaste opschoonregels"
+
+msgid "⚙️ Règles personnalisées"
+msgstr "⚙️ Aangepaste regels"
+
+msgid "⚙️ Régler la durée"
+msgstr "⚙️ De termijn aanpassen"
+
+msgid "⚠️ Points nécessitant une vérification humaine"
+msgstr "⚠️ Punten die menselijke controle vereisen"
+
+msgid "⚠️ Problèmes restants (tous fichiers)"
+msgstr "⚠️ Resterende problemen (alle bestanden)"
+
+msgid "⚠️ Valeurs signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ Waarden alleen gemarkeerd — nooit automatisch gewijzigd."
+
+msgid "⚠️ Zone de danger"
+msgstr "⚠️ Gevarenzone"
+
+msgid "⚠️ À vérifier manuellement (jamais supprimés automatiquement)."
+msgstr "⚠️ Handmatig te controleren (nooit automatisch verwijderd)."
+
+msgid "⚪ Conserver toutes les lignes"
+msgstr "⚪ Alle rijen behouden"
+
+msgid "⚪ Ignorer (examiné, conserver)"
+msgstr "⚪ Negeren (bekeken, behouden)"
+
+msgid "⚪ Valeurs « Inconnu » ("
+msgstr "⚪ Waarden ‘Onbekend’ ("
+
+msgid "✅ Aucun doublon potentiel à vérifier."
+msgstr "✅ Geen mogelijk duplicaat te controleren."
+
+msgid "✅ Aucune vérification manuelle nécessaire"
+msgstr "✅ Geen handmatige controle nodig"
+
+msgid "✅ Résultat du nettoyage"
+msgstr "✅ Resultaat van de opschoning"
+
+msgid "✅ Validation après nettoyage"
+msgstr "✅ Validatie na opschoning"
+
+msgid "✅ Votre profil est complet."
+msgstr "✅ Uw profiel is compleet."
+
+msgid "✏️ Modifier mon profil"
+msgstr "✏️ Mijn profiel bewerken"
+
+msgid "✓ Copié"
+msgstr "✓ Gekopieerd"
+
+msgid "➕ Nouveau jeton"
+msgstr "➕ Nieuw token"
+
+msgid "➕ Nouveau webhook"
+msgstr "➕ Nieuwe webhook"
+
+msgid "➕ Nouvelle règle"
+msgstr "➕ Nieuwe regel"
+
+msgid "➕ Téléverser un fichier"
+msgstr "➕ Een bestand uploaden"
+
+msgid "⬇️ Exporter mes données (JSON)"
+msgstr "⬇️ Mijn gegevens exporteren (JSON)"
+
+msgid "⬇️ Télécharger le fichier nettoyé"
+msgstr "⬇️ Het opgeschoonde bestand downloaden"
+
+msgid "🌍 Navigation"
+msgstr "🌍 Navigatie"
+
+msgid "🌐 HTML (.html)"
+msgstr "🌐 HTML (.html)"
+
+msgid "🌐 Rapport HTML avec graphiques"
+msgstr "🌐 HTML-rapport met grafieken"
+
+msgid "🎯 Répartition par niveau de qualité"
+msgstr "🎯 Verdeling per kwaliteitsniveau"
+
+msgid "🎯 Score qualité"
+msgstr "🎯 Kwaliteitsscore"
+
+msgid "🏆 Meilleurs résultats"
+msgstr "🏆 Beste resultaten"
+
+msgid "👀 Aperçu des données brutes (avant nettoyage)"
+msgstr "👀 Voorbeeld van de onbewerkte gegevens (vóór opschoning)"
+
+msgid "👁️ Consulter le rapport"
+msgstr "👁️ Het rapport bekijken"
+
+msgid "👤 Mon profil"
+msgstr "👤 Mijn profiel"
+
+msgid "📈 Analyse exploratoire"
+msgstr "📈 Exploratieve analyse"
+
+msgid "📈 Statistiques descriptives"
+msgstr "📈 Beschrijvende statistieken"
+
+msgid "📈 Valeurs aberrantes"
+msgstr "📈 Uitbijters"
+
+msgid "📈 Visualisations statistiques"
+msgstr "📈 Statistische visualisaties"
+
+msgid "📈 Évolution du score (12 semaines)"
+msgstr "📈 Score-evolutie (12 weken)"
+
+msgid "📉 Fichiers à traiter en priorité"
+msgstr "📉 Bestanden met prioriteit"
+
+msgid "📉 Répartition des problèmes"
+msgstr "📉 Verdeling van de problemen"
+
+msgid "📊 Activité récente"
+msgstr "📊 Recente activiteit"
+
+msgid "📊 Dashboard Data Quality"
+msgstr "📊 Dashboard Data Quality"
+
+msgid "📊 Dimensions de qualité"
+msgstr "📊 Kwaliteitsdimensies"
+
+msgid "📊 Tableau de bord"
+msgstr "📊 Dashboard"
+
+msgid "📊 Tableau de bord global"
+msgstr "📊 Globaal dashboard"
+
+msgid "📋 Mes règles ("
+msgstr "📋 Mijn regels ("
+
+msgid "📋 Qualité des colonnes"
+msgstr "📋 Kolomkwaliteit"
+
+msgid "📋 Rapport de nettoyage"
+msgstr "📋 Opschoonrapport"
+
+msgid "📋 Télécharger le rapport"
+msgstr "📋 Het rapport downloaden"
+
+msgid "📕 Rapport PDF"
+msgstr "📕 PDF-rapport"
+
+msgid "📝 Journal des modifications"
+msgstr "📝 Wijzigingslogboek"
+
+msgid "📥 Fichier d'origine"
+msgstr "📥 Origineel bestand"
+
+msgid "📥 Markdown (.md)"
+msgstr "📥 Markdown (.md)"
+
+msgid "📥 Télécharger le rapport complet"
+msgstr "📥 Het volledige rapport downloaden"
+
+msgid "📦 Archives"
+msgstr "📦 Archief"
+
+msgid "📷 Prendre une photo"
+msgstr "📷 Een foto maken"
+
+msgid "🔌 API et jetons d'accès"
+msgstr "🔌 API en toegangstokens"
+
+msgid "🔌 Jetons d'API"
+msgstr "🔌 API-tokens"
+
+msgid "🔍 Avant / après"
+msgstr "🔍 Voor / na"
+
+msgid "🔍 Comparaison avant / après"
+msgstr "🔍 Vergelijking voor / na"
+
+msgid "🔍 Doublons"
+msgstr "🔍 Duplicaten"
+
+msgid "🔍 Filtrer"
+msgstr "🔍 Filteren"
+
+msgid "🔍 Filtrer les lignes…"
+msgstr "🔍 Rijen filteren…"
+
+msgid "🔍 Problèmes détectés"
+msgstr "🔍 Gedetecteerde problemen"
+
+msgid "🔍 Revue manuelle des doublons potentiels"
+msgstr "🔍 Handmatige controle van mogelijke duplicaten"
+
+msgid "🔍 Règles regex personnalisées"
+msgstr "🔍 Aangepaste regex-regels"
+
+msgid "🔎 Explication du score"
+msgstr "🔎 Uitleg van de score"
+
+msgid "🔑 Mes jetons"
+msgstr "🔑 Mijn tokens"
+
+msgid "🔑 Votre nouveau jeton"
+msgstr "🔑 Je nieuwe token"
+
+msgid "🔒 Changer mon mot de passe"
+msgstr "🔒 Mijn wachtwoord wijzigen"
+
+msgid "🔒 Sécurité et données"
+msgstr "🔒 Beveiliging en gegevens"
+
+msgid "🔔 Mes webhooks"
+msgstr "🔔 Mijn webhooks"
+
+msgid "🔔 Webhooks"
+msgstr "🔔 Webhooks"
+
+msgid "🔗 Voir mon profil public"
+msgstr "🔗 Mijn openbare profiel bekijken"
+
+msgid "🔢 Colonnes analysées numériquement"
+msgstr "🔢 Numeriek geanalyseerde kolommen"
+
+msgid "🔬 Profilage avancé"
+msgstr "🔬 Geavanceerde profilering"
+
+msgid "🔵 Conserver la 2e ligne (supprimer les autres)"
+msgstr "🔵 De 2e rij behouden (de andere verwijderen)"
+
+msgid "🕒 Dernières actions"
+msgstr "🕒 Laatste acties"
+
+msgid "🕓 Activité"
+msgstr "🕓 Activiteit"
+
+msgid "🕓 Dernières activités"
+msgstr "🕓 Laatste activiteiten"
+
+msgid "🕓 Journal d'activité"
+msgstr "🕓 Activiteitenlog"
+
+msgid "🗃️ Fichiers récents"
+msgstr "🗃️ Recente bestanden"
+
+msgid "🗄️ Rétention"
+msgstr "🗄️ Bewaring"
+
+msgid "🗄️ Rétention des données"
+msgstr "🗄️ Gegevensbewaring"
+
+msgid "🗑️ Purger maintenant"
+msgstr "🗑️ Nu opschonen"
+
+msgid "🗑️ Supprimer"
+msgstr "🗑️ Verwijderen"
+
+msgid "🗑️ Supprimer ma photo de profil"
+msgstr "🗑️ Mijn profielfoto verwijderen"
+
+msgid "🚀 Nouveautés de l'espace pro"
+msgstr "🚀 Nieuw in de pro-ruimte"
+
+msgid "🚀 Premier appel"
+msgstr "🚀 Eerste aanroep"
+
+msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
+msgstr "🟢 De 1e rij behouden (de andere verwijderen)"
+
+msgid "🟣 Fusionner toutes les lignes"
+msgstr "🟣 Alle rijen samenvoegen"
+
+msgid "🧭 Dimensions les plus fragiles"
+msgstr "🧭 Fragielste dimensies"
+
+msgid "🧹 Journal d'activité"
+msgstr "🧹 Activiteitenlog"
+
+msgid "🧹 Nettoyage"
+msgstr "🧹 Opschoning"
+
+msgid "🧹 Options de nettoyage"
+msgstr "🧹 Opschoonopties"
+
+msgid "🧹 Opérations de nettoyage"
+msgstr "🧹 Opschoonbewerkingen"
+
+msgid "🧽 Purger les anciennes entrées"
+msgstr "🧽 Oude items opschonen"
+
+msgid "🧾 Journal des modifications"
+msgstr "🧾 Wijzigingslogboek"
+
+msgid "🧾 Télécharger le journal des modifications"
+msgstr "🧾 Het wijzigingslogboek downloaden"
+
+msgctxt "séparateur"
+msgid "ou"
+msgstr "of"

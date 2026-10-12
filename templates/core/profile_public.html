@@ -1,0 +1,98 @@
+{% extends "core/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% blocktranslate trimmed with name=profile.display_name %}Profil de {{ name }} — DataZen{% endblocktranslate %}{% endblock %}
+
+{% block content %}
+<div class="container dz-page">
+    <nav aria-label="{% translate "Fil d'Ariane" %}">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{% blocktranslate trimmed with username=profile_user.username %}Profil de {{ username }}{% endblocktranslate %}</li>
+        </ol>
+    </nav>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card dz-card-accent">
+                <div class="card-body text-center">
+                    <div class="dz-avatar-preview mx-auto mb-2">
+                        {% if profile.avatar %}
+                            <img src="{{ profile.avatar.url }}" alt="Photo de profil de {{ profile_user.username }}">
+                        {% else %}
+                            <img src="{% static 'img/avatar-default.svg' %}" alt=""
+                                 class="dz-avatar-default">
+                        {% endif %}
+                    </div>
+
+                    <h1 class="h4 mb-1">{{ profile.display_name }}</h1>
+                    <p class="text-muted small mb-2">@{{ profile_user.username }}</p>
+
+                    {% if profile.job_title or profile.organisation %}
+                        <p class="small mb-2">
+                            {% if profile.job_title %}{{ profile.job_title }}{% endif %}
+                            {% if profile.job_title and profile.organisation %} · {% endif %}
+                            {% if profile.organisation %}{{ profile.organisation }}{% endif %}
+                        </p>
+                    {% endif %}
+
+                    <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
+                        {% if profile_user.is_superuser %}
+                            <span class="badge text-bg-danger">{% translate "Superutilisateur" %}</span>
+                        {% elif profile_user.is_staff %}
+                            <span class="badge text-bg-warning">{% translate "Administrateur" %}</span>
+                        {% else %}
+                            <span class="badge text-bg-secondary">{% translate "Utilisateur" %}</span>
+                        {% endif %}
+                        <span class="badge text-bg-info">{% translate "Profil public" %}</span>
+                    </div>
+
+                    {% if profile.bio %}
+                        <p class="small text-muted mb-3 dz-break">{{ profile.bio }}</p>
+                    {% endif %}
+
+                    <dl class="row small text-start mb-0 dz-profile-meta">
+                        {% if profile.location %}
+                            <dt class="col-6 text-muted fw-normal">{% translate "Localisation" %}</dt>
+                            <dd class="col-6 text-end mb-1">{{ profile.location }}</dd>
+                        {% endif %}
+                        {% if profile.website %}
+                            <dt class="col-6 text-muted fw-normal">{% translate "Site web" %}</dt>
+                            <dd class="col-6 text-end mb-1 dz-break">
+                                <a href="{{ profile.website }}" target="_blank" rel="noopener noreferrer">
+                                    {{ profile.website|truncatechars:32 }}
+                                </a>
+                            </dd>
+                        {% endif %}
+                        <dt class="col-6 text-muted fw-normal">{% translate "Membre depuis" %}</dt>
+                        <dd class="col-6 text-end mb-0">{{ profile_user.date_joined|date:"d/m/Y" }}</dd>
+                    </dl>
+
+                    <hr class="dz-divider dz-divider-tight">
+
+                    <div class="dz-profile-stats">
+                        <div class="dz-profile-stat">
+                            <span class="dz-profile-stat-value">{{ stats.files }}</span>
+                            <span class="dz-profile-stat-label">{% translate "Fichiers" %}</span>
+                        </div>
+                        <div class="dz-profile-stat">
+                            <span class="dz-profile-stat-value">{{ stats.cleaned }}</span>
+                            <span class="dz-profile-stat-label">{% translate "Nettoyés" %}</span>
+                        </div>
+                        <div class="dz-profile-stat">
+                            <span class="dz-profile-stat-value">{{ stats.rules }}</span>
+                            <span class="dz-profile-stat-label">{% translate "Règles" %}</span>
+                        </div>
+                    </div>
+
+                    {% if request.user == profile_user %}
+                        <a class="btn btn-sm btn-outline-primary mt-3" href="{% url 'core:profile' %}">
+                            {% translate "✏️ Modifier mon profil" %}
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
