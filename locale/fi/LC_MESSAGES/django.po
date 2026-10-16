@@ -16,11 +16,20 @@ msgstr "%(actual)s korjaus(ta) lokissa vs %(reported)s raportoitua"
 msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
 msgstr "%(actual)s tuntematonta arvoa sähköpostisarakkeissa vs %(reported)s raportoitua"
 
+msgid "%(count)s anomalie(s) structurelle(s) détectée(s) sur les colonnes."
+msgstr "Sarakkeista löytyi %(count)s rakenteellista poikkeamaa."
+
 msgid "%(count)s colonnes"
 msgstr "%(count)s saraketta"
 
+msgid "%(count)s doublon(s) exact(s) restant(s)"
+msgstr "%(count)s täsmällistä kaksoiskappaletta jäljellä"
+
 msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
 msgstr "%(count)s mahdollista kaksoiskappaletta vaatii tarkistuksen."
+
+msgid "%(count)s doublon(s) potentiel(s) à vérifier (pénalité réduite)"
+msgstr "%(count)s mahdollista kaksoiskappaletta vaatii manuaalisen tarkistuksen (lievennetty rangaistus)"
 
 msgid "%(count)s entrée(s) d'activité supprimée(s)."
 msgstr "%(count)s aktiviteettilokin merkintää poistettiin."
@@ -28,35 +37,38 @@ msgstr "%(count)s aktiviteettilokin merkintää poistettiin."
 msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
 msgstr "%(count)s virhettä ei voitu korjata automaattisesti."
 
-msgid "%(count)s exact duplicate(s) remaining"
-msgstr "%(count)s täsmällistä kaksoiskappaletta jäljellä"
-
-msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
-msgstr "%(count)s epäjohdonmukaista arvoa jäljellä (ei kelvollisia eikä tuntemattomia)"
+msgid "%(count)s fichier(s) ignoré(s) : lot limité à %(limit)s."
+msgstr "%(count)s tiedosto(a) ohitettu: erä rajoitettu %(limit)s."
 
 msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
 msgstr "%(count)s virheellistä sähköpostia (ei tyhjiä eikä tuntemattomia)"
 
-msgid "%(count)s invalid value(s) among filled data"
-msgstr "%(count)s virheellistä arvoa täytetyissä tiedoissa"
-
 msgid "%(count)s lignes"
 msgstr "%(count)s riviä"
 
-msgid "%(count)s missing value(s)"
-msgstr "%(count)s puuttuvaa arvoa"
-
-msgid "%(count)s non-standard value(s)"
-msgstr "%(count)s epästandardia arvoa"
-
-msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
-msgstr "%(count)s mahdollista kaksoiskappaletta vaatii manuaalisen tarkistuksen (lievennetty rangaistus)"
-
-msgid "%(count)s unknown value(s) (data unavailable)"
-msgstr "%(count)s tuntematonta arvoa (tiedot puuttuvat)"
+msgid "%(count)s nettoyage(s) lancé(s) en arrière-plan."
+msgstr "%(count)s siivousta aloitettu taustalla."
 
 msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
 msgstr "%(count)s poikkeavaa arvoa havaittu numeerisissa sarakkeissa."
+
+msgid "%(count)s valeur(s) d'identifiant dupliquée(s)."
+msgstr "%(count)s päällekkäistä tunnistearvoa."
+
+msgid "%(count)s valeur(s) incohérente(s) restante(s) (ni valide ni inconnue)"
+msgstr "%(count)s epäjohdonmukaista arvoa jäljellä (ei kelvollisia eikä tuntemattomia)"
+
+msgid "%(count)s valeur(s) inconnue(s) (donnée indisponible)"
+msgstr "%(count)s tuntematonta arvoa (tiedot puuttuvat)"
+
+msgid "%(count)s valeur(s) invalide(s) parmi les données renseignées"
+msgstr "%(count)s virheellistä arvoa täytetyissä tiedoissa"
+
+msgid "%(count)s valeur(s) manquante(s)"
+msgstr "%(count)s puuttuvaa arvoa"
+
+msgid "%(count)s valeur(s) non standard"
+msgstr "%(count)s epästandardia arvoa"
 
 msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
 msgstr "%(count)s arvoa on tällä hetkellä ”Tuntematon”."
@@ -69,28 +81,44 @@ msgstr[1] "Löytyi %(counter)s mahdollista kaksoiskappaletta. Näitä rivejä <s
 msgid "%(counter)s fichier affiché"
 msgid_plural "%(counter)s fichiers affichés"
 msgstr[0] "%(counter)s tiedosto näytetty"
+msgstr[1] "%(counter)s tiedosto näytetty"
 
 msgid "%(counter)s inconnu"
 msgid_plural "%(counter)s inconnus"
 msgstr[0] "%(counter)s tuntematon"
+msgstr[1] "%(counter)s tuntematon"
 
 msgid "%(counter)s invalide,"
 msgid_plural "%(counter)s invalides,"
 msgstr[0] "%(counter)s virheellinen,"
+msgstr[1] "%(counter)s virheellinen,"
 
 msgid "%(counter)s ligne concernée :"
 msgid_plural "%(counter)s lignes concernées :"
 msgstr[0] "%(counter)s kohdistettu rivi:"
+msgstr[1] "%(counter)s kohdistettu rivi:"
 
 msgid "%(counter)s valide,"
 msgid_plural "%(counter)s valides,"
 msgstr[0] "%(counter)s kelvollinen,"
+msgstr[1] "%(counter)s kelvollinen,"
+
+msgid "%(numeric)s valeur(s) numérique(s) sur %(total)s renseignée(s) : type hétérogène."
+msgstr "%(numeric)s numeerista arvoa %(total)s täytetystä: sekatyyppi."
 
 msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
 msgstr "%(purged)s tiedostoa poistettu, %(archived)s arkistoitu."
 
+msgid "%(runs)s exécution"
+msgid_plural "%(runs)s exécutions"
+msgstr[0] "%(runs)s suoritus"
+msgstr[1] "%(runs)s suoritus"
+
 msgid "%(score)s / 100  (%(weight)s %(percent)s)"
 msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(total)s valeur(s) aberrante(s) détectée(s) (méthode IQR). Colonnes les plus concernées : %(detail)s."
+msgstr "%(total)s poikkeavaa arvoa löytyi (IQR-menetelmä). Eniten vaikutetut sarakkeet: %(detail)s."
 
 msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
 msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s odotettua"
@@ -101,10 +129,15 @@ msgstr "%(value)s %(percent)s"
 msgid "(%(counter)s modification)"
 msgid_plural "(%(counter)s modifications)"
 msgstr[0] "(%(counter)s muutos)"
+msgstr[1] "(%(counter)s muutos)"
 
 msgid "(%(counter)s non-conformité)"
 msgid_plural "(%(counter)s non-conformités)"
 msgstr[0] "(%(counter)s poikkeama)"
+msgstr[1] "(%(counter)s poikkeama)"
+
+msgid "(%(shown)s sur %(total)s)"
+msgstr "(%(shown)s / %(total)s)"
 
 msgid "(colonnes : %(columns)s)"
 msgstr "(sarakkeet: %(columns)s)"
@@ -176,7 +209,7 @@ msgid "Active"
 msgstr "Aktiivinen"
 
 msgid "Activer"
-msgstr "Ota käyttöön"
+msgstr "Aktivoi"
 
 msgid "Activer le thème clair"
 msgstr "Ota vaalea teema käyttöön"
@@ -199,6 +232,9 @@ msgstr "Ylläpitäjä"
 msgid "Administration"
 msgstr "Ylläpito"
 
+msgid "Adresse e-mail"
+msgstr "Sähköpostiosoite"
+
 msgid "Adresse email"
 msgstr "Sähköpostiosoite"
 
@@ -219,9 +255,6 @@ msgstr "Näytä poikkeamien tiedot"
 
 msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
 msgstr "Lisätään X-DataZen-Signature-otsakkeeseen (HMAC-SHA256)."
-
-msgid "All filled values are valid"
-msgstr "Kaikki täytetyt arvot ovat kelvollisia"
 
 msgid "Aller au contenu principal"
 msgstr "Siirry pääsisältöön"
@@ -244,8 +277,20 @@ msgstr "Aiempi arvo"
 msgid "Annuler"
 msgstr "Peruuta"
 
+msgid "Anomalie"
+msgstr "Poikkeama"
+
 msgid "Anomalies restantes (à traiter manuellement)"
 msgstr "Jäljellä olevat poikkeamat (käsiteltävä manuaalisesti)"
+
+msgid "Anomalies structurelles"
+msgstr "Rakenteelliset poikkeamat"
+
+msgid "Anomalies structurelles par type"
+msgstr "Rakenteelliset poikkeamat tyypeittäin"
+
+msgid "Anonymisation"
+msgstr "Anonymisointi"
 
 msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
 msgstr "Arkaluonteisten tietojen anonymisointi (pseudonymisoitu %(count)s arvoa)"
@@ -259,8 +304,26 @@ msgstr "Anonymisoi arkaluonteiset tiedot (nimet, sähköpostit, puhelinnumerot)"
 msgid "Antananarivo, Madagascar"
 msgstr "Antananarivo, Madagascar"
 
+msgid "Aperçu"
+msgstr "Esikatselu"
+
+msgid "Aperçu calculé : aucune modification n'a été enregistrée. Confirmez pour appliquer le nettoyage."
+msgstr "Esikatselu laskettu: muutoksia ei tallennettu. Vahvista, niin siivous otetaan käyttöön."
+
+msgid "Aperçu de nettoyage sur « %(name)s »"
+msgstr "Kohteen ”%(name)s” siivouksen esikatselu"
+
+msgid "Aperçu des données"
+msgstr "Tietojen esikatselu"
+
 msgid "Aperçu du fichier nettoyé"
 msgstr "Puhdistetun tiedoston esikatselu"
+
+msgid "Aperçu limité à %(shown)s lignes sur %(total)s."
+msgstr "Esikatselu rajoittuu %(shown)s riviin %(total)s rivistä."
+
+msgid "Aplatissement"
+msgstr "Huipukkuus"
 
 msgid "Appel API"
 msgstr "API-kutsu"
@@ -268,11 +331,20 @@ msgstr "API-kutsu"
 msgid "Appel API : %(path)s"
 msgstr "API-kutsu: %(path)s"
 
+msgid "Appelez-la depuis un planificateur système (cron, Planificateur de tâches Windows) toutes les cinq minutes."
+msgstr "Kutsu sitä järjestelmäajastimesta (cron, Windowsin tehtävien ajoitus) viiden minuutin välein."
+
 msgid "Appels"
 msgstr "Kutsut"
 
 msgid "Application"
 msgstr "Sovellus"
+
+msgid "Appliquer"
+msgstr "Käytä"
+
+msgid "Appliquez les mêmes opérations à plusieurs jeux de données en une seule fois. Les fichiers sont traités en série, un à la fois."
+msgstr "Käytä samoja toimintoja useaan aineistoon kerralla. Tiedostot käsitellään sarjassa, yksi kerrallaan."
 
 msgid "Après"
 msgstr "Jälkeen"
@@ -292,6 +364,21 @@ msgstr "Arkisto"
 msgid "Archivés"
 msgstr "Arkistoitu"
 
+msgid "Asymétrie"
+msgstr "Vinous"
+
+msgid "Asymétrie et aplatissement (moments centrés) des colonnes numériques."
+msgstr "Numeeristen sarakkeiden vinous ja huipukkuus (keskusmomentit)."
+
+msgid "Aucun compte ne correspond à cette recherche."
+msgstr "Mikään tili ei vastaa tätä hakua."
+
+msgid "Aucun doublon exact"
+msgstr "Ei täsmällisiä kaksoiskappaleita"
+
+msgid "Aucun doublon potentiel"
+msgstr "Ei mahdollisia kaksoiskappaleita"
+
 msgid "Aucun fichier d'origine n'est disponible."
 msgstr "Alkuperäistä tiedostoa ei ole saatavilla."
 
@@ -305,7 +392,7 @@ msgid "Aucun fichier ne correspond à votre recherche."
 msgstr "Hakusi ei vastaa yhtään tiedostoa."
 
 msgid "Aucun fichier nettoyé n'est disponible."
-msgstr "Puhdistettua tiedostoa ei ole saatavilla."
+msgstr "Siivottua tiedostoa ei ole saatavilla."
 
 msgid "Aucun fichier nettoyé pour le moment."
 msgstr "Ei vielä siivottuja tiedostoja."
@@ -324,6 +411,12 @@ msgstr "Tälle aineistolle ei ole käytettävissä kuvaajaa: siinä ei ole riitt
 
 msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
 msgstr "Ei vielä tokeneita. Luo sellainen käyttääksesi API:a."
+
+msgid "Aucun jeu de données disponible pour le moment."
+msgstr "Aineistoa ei ole juuri nyt saatavilla."
+
+msgid "Aucun jeu de données pour le moment."
+msgstr "Aineistoa ei juuri nyt ole."
 
 msgid "Aucun journal des modifications n'est disponible."
 msgstr "Muutoslokia ei ole saatavilla."
@@ -349,6 +442,9 @@ msgstr "Aktiviteettia ei ole kirjattu."
 msgid "Aucune anomalie restante."
 msgstr "Jäljellä olevia poikkeamia ei ole."
 
+msgid "Aucune anomalie structurelle détectée."
+msgstr "Rakenteellista poikkeamaa ei havaittu."
+
 msgid "Aucune anomalie."
 msgstr "Ei poikkeamia."
 
@@ -357,6 +453,9 @@ msgstr "Ei sarakkeita"
 
 msgid "Aucune correction"
 msgstr "Ei korjauksia"
+
+msgid "Aucune correction de valeur ne serait nécessaire."
+msgstr "Arvojen korjausta ei tarvittaisi."
 
 msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
 msgstr "Alkuperäisen ja siivotun tiedoston välillä ei ole merkittävää eroa: tietosi olivat jo puhtaat."
@@ -373,6 +472,18 @@ msgstr "Puhdistettuja tietoja ei ole saatavilla."
 msgid "Aucune modification enregistrée."
 msgstr "Ei tallennettuja muutoksia."
 
+msgid "Aucune opération enregistrée pour cette version."
+msgstr "Tälle versiolle ei ole tallennettu toimintoa."
+
+msgid "Aucune opération enregistrée."
+msgstr "Toimintoa ei ole tallennettu."
+
+msgid "Aucune opération."
+msgstr "Ei toimenpiteitä."
+
+msgid "Aucune planification : programmez un nettoyage récurrent pour ne plus y penser."
+msgstr "Ei aikatauluja: aseta toistuva siivous, niin sinun ei tarvitse enää muistaa sitä."
+
 msgid "Aucune règle personnalisée."
 msgstr "Ei mukautettua sääntöä."
 
@@ -382,8 +493,17 @@ msgstr "Ei sääntöjä vielä. Luo sääntö ja käytä sitä uudelleen kaikiss
 msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
 msgstr "Numeerisista sarakkeista ei löytynyt poikkeavia arvoja."
 
+msgid "Aucune valeur manquante ou inconnue"
+msgstr "Ei puuttuvia tai tuntemattomia arvoja"
+
+msgid "Aucune valeur renseignée sur %(rows)s ligne(s)."
+msgstr "Ei yhtään täytettyä arvoa %(rows)s rivillä."
+
 msgid "Aucune valeur « Inconnu »."
 msgstr "Ei ”Tuntematon”-arvoja."
+
+msgid "Aucune version enregistrée : lancez un nettoyage pour en créer une."
+msgstr "Versioita ei ole vielä tallennettu: luo sellainen suorittamalla siivous."
 
 msgid "Audit des emails"
 msgstr "Sähköpostien tarkastus"
@@ -451,8 +571,20 @@ msgstr "Tuntematon-merkin yhdenmukaistaminen (korjattu %(count)s)"
 msgid "Capturer"
 msgstr "Kaappaa"
 
+msgid "Casse"
+msgstr "Kirjainkoko"
+
+msgid "Catégorie"
+msgstr "Luokka"
+
 msgid "Ce graphique n'est pas disponible pour ce jeu de données."
 msgstr "Tämä kuvaaja ei ole saatavilla tälle tietojoukolle."
+
+msgid "Ce jeu de données n'est partagé avec personne pour le moment."
+msgstr "Tätä aineistoa ei ole vielä jaettu kenellekään."
+
+msgid "Ce lien de partage est invalide ou a expiré."
+msgstr "Tämä jakolinkki on virheellinen tai vanhentunut."
 
 msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
 msgstr "Tämä palautuslinkki on jo käytetty tai se on vanhentunut."
@@ -460,11 +592,20 @@ msgstr "Tämä palautuslinkki on jo käytetty tai se on vanhentunut."
 msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
 msgstr "Tämä linkki on voimassa vain kerran. Jos et tehnyt pyyntöä, jätä tämä viesti huomiotta: salasanasi pysyy ennallaan. — DataZen"
 
+msgid "Ce lien ne permet pas le téléchargement."
+msgstr "Tämä linkki ei salli lataamista."
+
+msgid "Ce partage ne permet pas le téléchargement."
+msgstr "Tämä jako ei salli lataamista."
+
 msgid "Ce profil n'est pas public."
 msgstr "Tämä profiili ei ole julkinen."
 
 msgid "Ce que le nettoyage a réellement changé dans votre fichier."
 msgstr "Mitä siivous todella muutti tiedostossasi."
+
+msgid "Ce que permet chaque rôle"
+msgstr "Mitä kukin rooli sallii"
 
 msgid "Cellules manquantes"
 msgstr "Puuttuvat solut"
@@ -474,6 +615,12 @@ msgstr "Nämä %(count)s tiedostoa ylittävät %(days)s päivän säilytysajan. 
 
 msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
 msgstr "Nämä laskurit ruokkivat yleishakua ja alla olevia pikakuvakkeita."
+
+msgid "Ces deux versions sont identiques sur les indicateurs suivis."
+msgstr "Nämä kaksi versiota ovat identtiset seuratuissa mittareissa."
+
+msgid "Cette page est réservée aux administrateurs."
+msgstr "Tämä sivu on varattu ylläpitäjille."
 
 msgid "Champ"
 msgstr "Kenttä"
@@ -499,6 +646,12 @@ msgstr "Vaihda salasanani"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Vaihda salasanani — DataZen"
 
+msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
+msgstr "Jokaisella tilillä on rooli: katselija, muokkaaja tai ylläpitäjä. Tarkistus tehdään palvelimella, ei vain käyttöliittymässä."
+
+msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
+msgstr "Jokainen onnistunut siivous kiinnittää version: voit ladata sen, vertailla sitä ja palauttaa sen."
+
 msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
 msgstr "Lataa tietosi muodossa <code>.csv</code>, <code>.xlsx</code> tai <code>.xls</code> erottimesta riippumatta."
 
@@ -507,6 +660,12 @@ msgstr "Valitse sivuston kieli"
 
 msgid "Choisir le format"
 msgstr "Valitse muoto"
+
+msgid "Choisissez deux versions pour mesurer ce qui a réellement changé entre elles."
+msgstr "Valitse kaksi versiota mitataksesi, mikä niiden välillä todella muuttui."
+
+msgid "Choisissez un destinataire ou cochez « Créer un lien public »."
+msgstr "Valitse vastaanottaja tai valitse ”Luo julkinen linkki”."
 
 msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
 msgstr "Valitse CSV- tai Excel-tiedosto (.csv, .xlsx, .xls)."
@@ -547,6 +706,9 @@ msgstr "Kielikoodi (fr, en, es…). Tyhjä = sovelluksen kieli."
 msgid "Coefficient de Pearson"
 msgstr "Pearsonin kerroin"
 
+msgid "Collaboration"
+msgstr "Yhteistyö"
+
 msgid "Colonne"
 msgstr "Sarake"
 
@@ -555,6 +717,15 @@ msgstr "Kohdesarake"
 
 msgid "Colonne clé pour la déduplication"
 msgstr "Yksilöivä sarake kaksoiskappaleiden poistoon"
+
+msgid "Colonne constante"
+msgstr "Vakiosarake"
+
+msgid "Colonne quasi constante"
+msgstr "Lähes vakiosarake"
+
+msgid "Colonne vide"
+msgstr "Tyhjä sarake"
 
 msgid "Colonnes"
 msgstr "Sarakkeet"
@@ -580,17 +751,29 @@ msgstr "Tuntemattomat sarakkeet:"
 msgid "Colonnes stables"
 msgstr "Vakaat sarakkeet"
 
+msgid "Colonnes vides, constantes, quasi constantes ou à type hétérogène."
+msgstr "Tyhjät, vakiot, lähes vakiot tai sekatyyppiset sarakkeet."
+
 msgid "Colonnes à vérifier"
 msgstr "Tarkistettavat sarakkeet"
 
 msgid "Combien de fichiers se trouvent dans chaque tranche de score."
 msgstr "Kuinka monta tiedostoa kussakin pistealueessa on."
 
+msgid "Comment les échéances sont-elles exécutées ?"
+msgstr "Miten eräpäivät suoritetaan?"
+
 msgid "Comparaison"
 msgstr "Vertailu"
 
 msgid "Comparaison avant / après — %(name)s"
 msgstr "Vertailu ennen / jälkeen — %(name)s"
+
+msgid "Comparaison de versions — %(name)s"
+msgstr "Versioiden vertailu — %(name)s"
+
+msgid "Comparer"
+msgstr "Vertaa"
 
 msgid "Complétion du profil"
 msgstr "Profiilin täydellisyys"
@@ -613,6 +796,9 @@ msgstr "Tili"
 msgid "Compte actif"
 msgstr "Aktiivinen tili"
 
+msgid "Comptes ("
+msgstr "Tilit ("
+
 msgid "Condensé"
 msgstr "Yhteenveto"
 
@@ -621,6 +807,9 @@ msgstr "Luottamus"
 
 msgid "Confirmer la décision"
 msgstr "Vahvista päätös"
+
+msgid "Confirmer le nettoyage"
+msgstr "Vahvista siivous"
 
 msgid "Connectez-vous pour retrouver vos fichiers."
 msgstr "Kirjaudu sisään päästäksesi takaisin tiedostoihisi."
@@ -631,11 +820,20 @@ msgstr "Kirjaudu sisään"
 msgid "Connexion — DataZen"
 msgstr "Kirjaudu sisään — DataZen"
 
+msgid "Consultation"
+msgstr "Katselu"
+
 msgid "Consultation des graphiques"
 msgstr "Näytä kaaviot"
 
 msgid "Consultation du rapport"
 msgstr "Näytä raportti"
+
+msgid "Consultation et téléchargement"
+msgstr "Katselu ja lataus"
+
+msgid "Consulte et télécharge les jeux de données partagés. Ne modifie rien."
+msgstr "Katselee ja lataa jaettuja aineistoja. Ei muuta mitään."
 
 msgid "Continuer / valider une étape"
 msgstr "Jatka / vahvista vaihe"
@@ -691,11 +889,17 @@ msgstr "Luo sääntö"
 msgid "Créer le jeton"
 msgstr "Luo token"
 
+msgid "Créer le partage"
+msgstr "Luo jako"
+
 msgid "Créer le webhook"
 msgstr "Luo webhook"
 
 msgid "Créer un compte"
 msgstr "Luo tili"
+
+msgid "Créer un lien public"
+msgstr "Luo julkinen linkki"
 
 msgid "Créer une règle"
 msgstr "Luo sääntö"
@@ -706,8 +910,14 @@ msgstr "Luo sääntö kerran ja käytä sitä uudelleen kaikissa tiedostoissasi.
 msgid "Créez votre compte"
 msgstr "Luo tilisi"
 
-msgid "Data is consistent: each value is valid or unknown"
-msgstr "Tiedot ovat johdonmukaisia: jokainen arvo on kelvollinen tai tuntematon"
+msgid "Créé par"
+msgstr "Luonut"
+
+msgid "Créée par"
+msgstr "Luonut"
+
+msgid "DataZen ne fait tourner aucun démon en arrière-plan : une commande de gestion reprend les échéances dues et relance le nettoyage par le même chemin de code que l'interface."
+msgstr "DataZen ei aja taustapalvelua: hallintakomento poimii erääntyneet aikataulut ja käynnistää siivouksen samaa koodipolkua kuin käyttöliittymä."
 
 msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
 msgstr "DataZen — Tietojen puhdistussovellus (DataClean Pro) · ©"
@@ -739,14 +949,26 @@ msgstr "Viimeisin HTTP-koodi"
 msgid "Dernier déclenchement"
 msgstr "Viimeisin laukaisu"
 
+msgid "Dernier statut"
+msgstr "Viimeisin tila"
+
 msgid "Dernier usage"
 msgstr "Viimeisin käyttö"
 
 msgid "Derniers fichiers"
 msgstr "Viimeisimmät tiedostot"
 
+msgid "Dernière : succès"
+msgstr "Viimeisin: onnistui"
+
+msgid "Dernière : échec"
+msgstr "Viimeisin: epäonnistui"
+
 msgid "Dernière connexion"
 msgstr "Viimeisin kirjautuminen"
+
+msgid "Dernière exécution"
+msgstr "Viimeisin suoritus"
 
 msgid "Dernière utilisation"
 msgstr "Viimeisin käyttökerta"
@@ -757,6 +979,9 @@ msgstr "Viimeisimmät säännöt"
 msgid "Des incohérences ont été détectées entre les statistiques et les données."
 msgstr "Tilastojen ja tietojen välillä havaittiin ristiriitaisuuksia."
 
+msgid "Destinataire"
+msgstr "Vastaanottaja"
+
 msgid "Dimension"
 msgstr "Ulottuvuus"
 
@@ -766,6 +991,12 @@ msgstr "Laadun ulottuvuudet"
 msgid "Dispersion et valeurs extrêmes des colonnes numériques."
 msgstr "Numeeristen sarakkeiden hajonta ja ääriarvot."
 
+msgid "Distribution la plus asymétrique : « %(colonne)s » (asymétrie %(valeur)s) — moyenne et médiane s'écartent sensiblement, une transformation ou un traitement par quantiles est à envisager."
+msgstr "Voimakkaimmin vino jakauma: ”%(colonne)s” (vinous %(valeur)s) — keskiarvo ja mediaani poikkeavat selvästi; harkitse muunnosta tai kvantiilikäsittelyä."
+
+msgid "Distribution la plus concentrée/pointue : « %(colonne)s » (aplatissement %(valeur)s) — forte densité autour de la moyenne avec des valeurs extrêmes marquées."
+msgstr "Huipukkain jakauma: ”%(colonne)s” (huipukkuus %(valeur)s) — suuri tiheys keskiarvon ympärillä ja selvät ääriarvot."
+
 msgid "Distributions des colonnes numériques"
 msgstr "Numeeristen sarakkeiden jakaumat"
 
@@ -774,6 +1005,12 @@ msgstr "Numeeriset jakaumat"
 
 msgid "Django · Pandas · Bootstrap"
 msgstr "Django · Pandas · Bootstrap"
+
+msgid "Données cohérentes : chaque valeur est valide ou inconnue"
+msgstr "Tiedot ovat johdonmukaisia: jokainen arvo on kelvollinen tai tuntematon"
+
+msgid "Doublon"
+msgstr "Kaksoiskappale"
 
 msgid "Doublon par similarité"
 msgstr "Samankaltaisuuden perusteella löydetty kaksoiskappale"
@@ -817,6 +1054,12 @@ msgstr "Kaksoiskappaleet, ylimääräiset välilyönnit, virheelliset sähköpos
 msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
 msgstr "Kaksoiskappaleet, puuttuvat arvot, välilyönnit, kirjainkoko, sähköpostit, puhelimet, päivämäärät ja palkat normalisoitu."
 
+msgid "Droit"
+msgstr "Käyttöoikeus"
+
+msgid "Droit accordé"
+msgstr "Myönnetty käyttöoikeus"
+
 msgid "Durée de conservation"
 msgstr "Säilytysaika"
 
@@ -856,8 +1099,17 @@ msgstr "Tyhjennä"
 msgid "Effectif"
 msgstr "Määrä"
 
+msgid "Email"
+msgstr "Sähköposti"
+
+msgid "Email fictif"
+msgstr "Näennäissähköposti"
+
 msgid "Email invalide"
-msgstr "Virheellinen sähköpostiosoite"
+msgstr "Virheellinen sähköposti"
+
+msgid "Email manquant"
+msgstr "Puuttuva sähköposti"
 
 msgid "Email nettoyé"
 msgstr "Puhdistettu sähköposti"
@@ -928,8 +1180,14 @@ msgstr "Jäljellä olevat virheet"
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
 
+msgid "Exemples de corrections"
+msgstr "Esimerkkejä korjauksista"
+
 msgid "Expiration"
 msgstr "Vanheneminen"
+
+msgid "Expire le"
+msgstr "Vanhenee"
 
 msgid "Expiré"
 msgstr "Vanhentunut"
@@ -939,6 +1197,12 @@ msgstr "Pisteiden selitys"
 
 msgid "Export & traçabilité"
 msgstr "Vienti & jäljitettävyys"
+
+msgid "Exécuter"
+msgstr "Suorita"
+
+msgid "Exécutions"
+msgstr "Suoritukset"
 
 msgid "Fermer"
 msgstr "Sulje"
@@ -997,6 +1261,9 @@ msgstr "Tätä aikaa vanhemmat siivotut tiedostot (0 = rajoittamaton säilytys).
 msgid "Fichiers récents"
 msgstr "Viimeisimmät tiedostot"
 
+msgid "Fichiers à nettoyer"
+msgstr "Siivottavat tiedostot"
+
 msgid "Fil d'Ariane"
 msgstr "Murupolku"
 
@@ -1030,8 +1297,17 @@ msgstr "Hyväksytyt muodot: <code>.csv</code>, <code>.xlsx</code>, <code>.xls</c
 msgid "Formats de dates (%(column)s) :"
 msgstr "Päivämäärämuodot (%(column)s):"
 
-msgid "Formats standardized (phones, dates)"
+msgid "Formats standardisés (téléphones, dates)"
 msgstr "Standardoidut muodot (puhelimet, päivämäärät)"
+
+msgid "Forme des distributions"
+msgstr "Jakaumien muoto"
+
+msgid "Forme des distributions (asymétrie et aplatissement)"
+msgstr "Jakaumien muoto (vinous ja huipukkuus)"
+
+msgid "Fréquence"
+msgstr "Tiheys"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Säästä aikaa: kaikki olennainen DataZenissa on näppäinyhdistelmän takana."
@@ -1051,14 +1327,23 @@ msgstr "Tilastolliset kuvaajat luotu kirjastoilla <strong>matplotlib</strong> ja
 msgid "Gratuit, immédiat, et vos fichiers restent privés."
 msgstr "Ilmainen, välitön, ja tiedostosi pysyvät yksityisinä."
 
+msgid "Gère les rôles et voit l'ensemble des fichiers de la plateforme."
+msgstr "Hallinnoi rooleja ja näkee alustan kaikki tiedostot."
+
 msgid "Gérer les règles…"
 msgstr "Hallinnoi sääntöjä…"
+
+msgid "Hebdomadaire"
+msgstr "Viikoittain"
 
 msgid "Histogrammes des colonnes numériques détectées."
 msgstr "Havaittujen numeeristen sarakkeiden histogrammit."
 
 msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
 msgstr "Aikaleimattu historia toiminnoistasi: lataukset, siivoukset, viennit, API."
+
+msgid "Identifiant non unique"
+msgstr "Ei-yksilöllinen tunniste"
 
 msgid "Identité"
 msgstr "Identiteetti"
@@ -1072,6 +1357,9 @@ msgstr "CSV- & Excel-tuonti"
 msgid "Impossible d'appliquer la décision : %(error)s"
 msgstr "Päätöstä ei voitu soveltaa: %(error)s"
 
+msgid "Impossible de comparer ces versions : %(error)s"
+msgstr "Näitä versioita ei voi vertailla: %(error)s"
+
 msgid "Impossible de convertir le fichier : %(error)s"
 msgstr "Tiedostoa ei voitu muuntaa: %(error)s"
 
@@ -1079,13 +1367,16 @@ msgid "Impossible de générer le PDF : %(error)s"
 msgstr "PDF:n luonti ei onnistunut: %(error)s"
 
 msgid "Impossible de lire ce fichier : %(error)s"
-msgstr "Tätä tiedostoa ei voitu lukea: %(error)s"
+msgstr "Tätä tiedostoa ei voi lukea: %(error)s"
 
 msgid "Impossible de lire le fichier : %(error)s"
 msgstr "Tiedostoa ei voitu lukea: %(error)s"
 
 msgid "Impossible de lire le rapport : %(error)s"
 msgstr "Raporttia ei voitu lukea: %(error)s"
+
+msgid "Impossible de simuler le nettoyage : le fichier est illisible."
+msgstr "Siivousta ei voi simuloida: tiedostoa ei voi lukea."
 
 msgid "Inactif"
 msgstr "Ei aktiivinen"
@@ -1098,6 +1389,9 @@ msgstr "Tuntematon"
 
 msgid "Indicateur"
 msgstr "Mittari"
+
+msgid "Indicateurs"
+msgstr "Mittarit"
 
 msgid "Indicateurs comparés"
 msgstr "Vertaillut mittarit"
@@ -1141,6 +1435,9 @@ msgstr "Token luotu. Kopioi se nyt: sitä ei näytetä enää."
 msgid "Jeton d'API"
 msgstr "API-token"
 
+msgid "Jeton du lien"
+msgstr "Linkin tunniste"
+
 msgid "Jeton « %(name)s » révoqué."
 msgstr "Token « %(name)s » peruutettu."
 
@@ -1149,6 +1446,12 @@ msgstr "Tokenit"
 
 msgid "Jetons d'API"
 msgstr "API-tokenit"
+
+msgid "Jeu de données"
+msgstr "Aineisto"
+
+msgid "Jeu de données partagé en lecture seule via un lien DataZen."
+msgstr "Aineisto jaettu vain luku -tilassa DataZen-linkin kautta."
 
 msgid "Journal d'activité"
 msgstr "Aktiviteettiloki"
@@ -1177,8 +1480,17 @@ msgstr "Tilin poistaminen poistaa pysyvästi tiedostosi, sääntösi ja profiili
 msgid "Laisser vide pour appliquer à toutes les colonnes."
 msgstr "Jätä tyhjäksi, jos haluat soveltaa kaikkiin sarakkeisiin."
 
+msgid "Laissez vide pour démarrer à la prochaine échéance."
+msgstr "Jätä tyhjäksi aloittaaksesi seuraavasta eräpäivästä."
+
 msgid "Laissez vide pour un jeton sans expiration."
 msgstr "Jätä tyhjäksi, jos haluat tokenin ilman vanhenemista."
+
+msgid "Laissez vide pour un partage sans expiration."
+msgstr "Jätä tyhjäksi, jos jako ei vanhene."
+
+msgid "Lancer le nettoyage des fichiers sélectionnés"
+msgstr "Aloita valittujen tiedostojen siivous"
 
 msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
 msgstr "Käynnistä ensin puhdistus, niin pääset tutkivaan analyysiin."
@@ -1191,6 +1503,9 @@ msgstr "Käyttöliittymän kieli"
 
 msgid "Le compte « %(username)s » a été supprimé."
 msgstr "Tili ”%(username)s” on poistettu."
+
+msgid "Le fichier de cette version n'est plus disponible."
+msgstr "Tämän version tiedosto ei ole enää saatavilla."
 
 msgid "Le fichier ne doit pas dépasser 20 Mo."
 msgstr "Tiedosto ei saa ylittää 20 Mt."
@@ -1210,6 +1525,9 @@ msgstr "Webhookin isäntänimi osoittaa sisäiseen osoitteeseen."
 msgid "Le nom d'hôte est absent de l'URL."
 msgstr "URL-osoitteesta puuttuu isäntänimi."
 
+msgid "Le partage est toujours en lecture seule : le destinataire consulte et, si vous l'autorisez, télécharge. Il ne modifie jamais vos données."
+msgstr "Jako on aina vain luku -tilassa: vastaanottaja katselee ja lataa, jos sallit. Hän ei koskaan muuta tietojasi."
+
 msgid "Le port est invalide."
 msgstr "Portti on virheellinen."
 
@@ -1218,6 +1536,12 @@ msgstr "”Järjestelmä”-teema noudattaa laitteesi asetuksia."
 
 msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
 msgstr "Käsittely tapahtuu taustalla. Tämä sivu päivittyy automaattisesti, kun se on valmis."
+
+msgid "Lecteur"
+msgstr "Katselija"
+
+msgid "Lecteur : consultation et téléchargement. Éditeur : peut aussi nettoyer et supprimer ses fichiers. Administrateur : gère les rôles et voit tous les fichiers."
+msgstr "Katselija: katselu ja lataus. Muokkaaja: voi myös siivota ja poistaa omia tiedostojaan. Ylläpitäjä: hallinnoi rooleja ja näkee kaikki tiedostot."
 
 msgid "Les adresses internes sont refusées."
 msgstr "Sisäiset osoitteet hylätään."
@@ -1243,14 +1567,23 @@ msgstr "Siivotut tiedostot arkistoidaan ja poistetaan tämän ajan jälkeen (0 =
 msgid "Les identifiants intégrés à l'URL sont refusés."
 msgstr "URL-osoitteeseen upotetut tunnistetiedot hylätään."
 
+msgid "Les options choisies ne changeraient rien à ce jeu de données."
+msgstr "Valitut asetukset eivät muuttaisi tätä aineistoa."
+
 msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 msgstr "Käytettävissä olevat reitit: /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 
 msgid "Les statistiques affichées correspondent aux données réelles."
 msgstr "Näytetyt tilastot vastaavat todellisia tietoja."
 
+msgid "Lien de partage public"
+msgstr "Julkinen jakolinkki"
+
 msgid "Lien invalide"
 msgstr "Virheellinen linkki"
+
+msgid "Lien public"
+msgstr "Julkinen linkki"
 
 msgid "Ligne"
 msgstr "Rivi"
@@ -1293,6 +1626,9 @@ msgstr "Hallitse tietojesi elinkaarta."
 
 msgid "Membre depuis"
 msgstr "Jäsen alkaen"
+
+msgid "Mensuel"
+msgstr "Kuukausittain"
 
 msgid "Mes règles"
 msgstr "Omat säännöt"
@@ -1375,6 +1711,18 @@ msgstr "Puhdistus käynnistettiin taustalla. Sivu päivittyy automaattisesti."
 msgid "Nettoyage lancé sur « %(name)s »"
 msgstr "Kohteen « %(name)s » siivous aloitettu"
 
+msgid "Nettoyage par lots"
+msgstr "Eräsiivous"
+
+msgid "Nettoyage par lots : %(count)s fichier(s) lancé(s)"
+msgstr "Eräsiivous: %(count)s tiedostoa aloitettu"
+
+msgid "Nettoyage par lots — DataZen"
+msgstr "Eräsiivous — DataZen"
+
+msgid "Nettoyage planifié de « %(name)s » lancé."
+msgstr "Kohteen ”%(name)s” ajastettu siivous aloitettu."
+
 msgid "Nettoyage terminé"
 msgstr "Siivous valmis"
 
@@ -1402,20 +1750,14 @@ msgstr "Puhdistetut"
 msgid "Niveau"
 msgstr "Taso"
 
-msgid "No exact duplicates"
-msgstr "Ei täsmällisiä kaksoiskappaleita"
-
-msgid "No missing or unknown values"
-msgstr "Ei puuttuvia tai tuntemattomia arvoja"
-
-msgid "No potential duplicates"
-msgstr "Ei mahdollisia kaksoiskappaleita"
-
 msgid "Nom"
 msgstr "Nimi"
 
 msgid "Nom d'utilisateur"
 msgstr "Käyttäjänimi"
+
+msgid "Nom de la colonne unique (ex. email). Laissez vide pour ne supprimer que les lignes 100 % identiques. Une colonne absente d'un fichier est ignorée pour ce fichier."
+msgstr "Yksilöivän sarakkeen nimi (esim. email). Jätä tyhjäksi, jos haluat poistaa vain 100% identtiset rivit. Tiedostosta puuttuva sarake ohitetaan kyseisen tiedoston osalta."
 
 msgid "Nom de la règle"
 msgstr "Säännön nimi"
@@ -1431,6 +1773,9 @@ msgstr "Kutsujen määrä"
 
 msgid "Nombre d'occurrences"
 msgstr "Esiintymien määrä"
+
+msgid "Nombre de colonnes concernées"
+msgstr "Vaikutettujen sarakkeiden määrä"
 
 msgid "Nombre de nettoyages et score moyen par semaine."
 msgstr "Siivousten määrä ja keskipisteet viikossa."
@@ -1498,11 +1843,29 @@ msgstr "Uusi kuva valmis"
 msgid "Nouvelle valeur"
 msgstr "Uusi arvo"
 
+msgid "Numérique"
+msgstr "Numeerinen"
+
+msgid "Numéro de version"
+msgstr "Versionumero"
+
+msgid "Options de nettoyage"
+msgstr "Siivousasetukset"
+
 msgid "Opération"
 msgstr "Toiminto"
 
+msgid "Opérations appliquées"
+msgstr "Sovelletut toimenpiteet"
+
 msgid "Opérations de nettoyage"
 msgstr "Siivoustoiminnot"
+
+msgid "Opérations de v%(n)s"
+msgstr "Version v%(n)s toiminnot"
+
+msgid "Opérations qui seraient appliquées"
+msgstr "Toiminnot, jotka otettaisiin käyttöön"
 
 msgid "Organisation"
 msgstr "Organisaatio"
@@ -1528,6 +1891,27 @@ msgstr "Sivu"
 msgid "Parcourir…"
 msgstr "Valitse tiedosto"
 
+msgid "Partage"
+msgstr "Jako"
+
+msgid "Partage créé."
+msgstr "Jako luotu."
+
+msgid "Partage de « %(name)s » avec %(target)s"
+msgstr "Kohteen ”%(name)s” jako vastaanottajalle %(target)s"
+
+msgid "Partage révoqué."
+msgstr "Jako peruutettu."
+
+msgid "Partage — %(name)s"
+msgstr "Jako — %(name)s"
+
+msgid "Partages"
+msgstr "Jaot"
+
+msgid "Partagé le"
+msgstr "Jaettu"
+
 msgid "Pas encore de compte ?"
 msgstr "Eikö sinulla ole vielä tiliä?"
 
@@ -1542,6 +1926,27 @@ msgstr "Profiilikuva"
 
 msgid "Pilotage"
 msgstr "Ohjaus"
+
+msgid "Planification"
+msgstr "Aikataulu"
+
+msgid "Planification %(state)s."
+msgstr "Aikataulu %(state)s."
+
+msgid "Planification créée pour « %(name)s »"
+msgstr "Aikataulu luotu kohteelle ”%(name)s”"
+
+msgid "Planification créée."
+msgstr "Aikataulu luotu."
+
+msgid "Planification supprimée."
+msgstr "Aikataulu poistettu."
+
+msgid "Planifications"
+msgstr "Aikataulut"
+
+msgid "Planifications — DataZen"
+msgstr "Aikataulut — DataZen"
 
 msgid "Plus fréquent"
 msgstr "Yleisin"
@@ -1558,11 +1963,17 @@ msgstr "Painotus"
 msgid "Premier quartile"
 msgstr "Ensimmäinen kvartiili"
 
+msgid "Première exécution"
+msgstr "Ensimmäinen suoritus"
+
 msgid "Prendre une photo avec la caméra"
 msgstr "Ota kuva kameralla"
 
 msgid "Problème"
 msgstr "Ongelma"
+
+msgid "Problèmes"
+msgstr "Ongelmat"
 
 msgid "Problèmes après"
 msgstr "Ongelmat jälkeen"
@@ -1575,6 +1986,9 @@ msgstr "Havaitut ongelmat"
 
 msgid "Problèmes restants"
 msgstr "Jäljellä olevat ongelmat"
+
+msgid "Prochaine exécution"
+msgstr "Seuraava suoritus"
 
 msgid "Productivité"
 msgstr "Tuottavuus"
@@ -1594,8 +2008,17 @@ msgstr "Julkinen profiili"
 msgid "Profil visible publiquement"
 msgstr "Profiili julkisesti näkyvissä"
 
+msgid "Profilage statistique"
+msgstr "Tilastollinen profilointi"
+
 msgid "Profils"
 msgstr "Profiilit"
+
+msgid "Programmer"
+msgstr "Ajasta"
+
+msgid "Programmez un nettoyage récurrent : les mêmes options s'appliquent à chaque échéance, sans intervention de votre part."
+msgstr "Ajasta toistuva siivous: samat asetukset pätevät joka eräpäivänä ilman sinun toimenpiteitäsi."
 
 msgid "Progression"
 msgstr "Edistyminen"
@@ -1642,6 +2065,9 @@ msgstr "Q1"
 msgid "Q3"
 msgstr "Q3"
 
+msgid "Qualité : v%(before)s → v%(after)s"
+msgstr "Laatu: v%(before)s → v%(after)s"
+
 msgid "Qualité moyenne"
 msgstr "Keskilaatu"
 
@@ -1650,6 +2076,9 @@ msgstr "Laatu sarakkeittain"
 
 msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
 msgstr "Muutama sana sinusta, tiimistäsi ja tietojoukoistasi…"
+
+msgid "Quotidien"
+msgstr "Päivittäin"
 
 msgid "Raccourcis clavier"
 msgstr "Pikanäppäimet"
@@ -1703,10 +2132,16 @@ msgid "Recherche momentanément indisponible."
 msgstr "Haku ei ole tilapäisesti käytettävissä."
 
 msgid "Rechercher"
-msgstr "Hae"
+msgstr "Etsi"
 
 msgid "Rechercher (Ctrl+K)"
 msgstr "Hae (Ctrl+K)"
+
+msgid "Rechercher un compte"
+msgstr "Etsi tiliä"
+
+msgid "Rechercher un compte…"
+msgstr "Etsi tiliä…"
 
 msgid "Rechercher un fichier"
 msgstr "Etsi tiedostoa"
@@ -1750,11 +2185,20 @@ msgstr "Raportoitu %(reported)s vs uudelleenlaskettu %(actual)s"
 msgid "Restauration"
 msgstr "Palautus"
 
+msgid "Restauration de la version %(number)s de « %(name)s »"
+msgstr "Palautetaan kohteen ”%(name)s” versiota %(number)s"
+
 msgid "Restauration de « %(name)s »"
 msgstr "Kohteen « %(name)s » palautus"
 
+msgid "Restauration impossible : %(error)s"
+msgstr "Palautus ei onnistu: %(error)s"
+
 msgid "Restaurer"
 msgstr "Palauta"
+
+msgid "Restaurer cette version comme version courante ?"
+msgstr "Palautetaanko tämä versio nykyiseksi versioksi?"
 
 msgid "Retour à la connexion"
 msgstr "Takaisin kirjautumiseen"
@@ -1777,6 +2221,9 @@ msgstr "Sääntö ”%(name)s” poistettu."
 msgid "Règles"
 msgstr "Säännöt"
 
+msgid "Règles appliquées"
+msgstr "Sovelletut säännöt"
+
 msgid "Règles de nettoyage"
 msgstr "Puhdistussäännöt"
 
@@ -1797,6 +2244,9 @@ msgstr "Ongelmien jakauma"
 
 msgid "Répartition des problèmes restants"
 msgstr "Jäljellä olevien ongelmien jakauma"
+
+msgid "Résultat de la simulation : rien n'a été écrit. Confirmez le nettoyage pour appliquer réellement ces changements."
+msgstr "Simuloinnin tulos: mitään ei kirjoitettu. Vahvista siivous, niin nämä muutokset otetaan todella käyttöön."
 
 msgid "Résultats"
 msgstr "Tulokset"
@@ -1822,8 +2272,32 @@ msgstr "Peruuta"
 msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
 msgstr "Peruutetaanko tämä token? Sitä käyttävät integraatiot lakkaavat toimimasta."
 
+msgid "Révoquer ce partage ?"
+msgstr "Peruutetaanko tämä jako?"
+
 msgid "Révoqué"
 msgstr "Peruutettu"
+
+msgid "Rôle"
+msgstr "Rooli"
+
+msgid "Rôle de « %(name)s » : %(before)s → %(after)s"
+msgstr "Kohteen ”%(name)s” rooli: %(before)s → %(after)s"
+
+msgid "Rôle de « %(name)s » mis à jour."
+msgstr "Kohteen ”%(name)s” rooli päivitetty."
+
+msgid "Rôle du compte"
+msgstr "Tilin rooli"
+
+msgid "Rôle inconnu."
+msgstr "Tuntematon rooli."
+
+msgid "Rôles et permissions"
+msgstr "Roolit ja käyttöoikeudet"
+
+msgid "Rôles et permissions — DataZen"
+msgstr "Roolit ja käyttöoikeudet — DataZen"
 
 msgid "S'inscrire"
 msgstr "Rekisteröidy"
@@ -1834,8 +2308,14 @@ msgstr "Kirjoita <strong>%(username)s</strong> vahvistaaksesi"
 msgid "Score"
 msgstr "Pisteet"
 
+msgid "Score après"
+msgstr "Pisteet jälkeen"
+
 msgid "Score après nettoyage"
 msgstr "Pisteet siivouksen jälkeen"
+
+msgid "Score avant"
+msgstr "Pisteet ennen"
 
 msgid "Score avant nettoyage"
 msgstr "Pisteet ennen siivousta"
@@ -1864,6 +2344,9 @@ msgstr "Laatupisteet jälkeen"
 msgid "Score qualité avant"
 msgstr "Laatupisteet ennen"
 
+msgid "Scores mesurés lors de chaque nettoyage."
+msgstr "Pisteet, jotka mitataan jokaisessa siivouksessa."
+
 msgid "Se connecter"
 msgstr "Kirjaudu sisään"
 
@@ -1876,11 +2359,20 @@ msgstr "Siirry tuloksissa"
 msgid "Sert uniquement à la réinitialisation du mot de passe."
 msgstr "Käytetään vain salasanan palauttamiseen."
 
+msgid "Seul le propriétaire peut gérer les partages."
+msgstr "Vain omistaja voi hallita jakoja."
+
+msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
+msgstr "Vain ensimmäiset korjaukset näytetään; varsinainen siivous ottaa käyttöön kaikki."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "Vain http- ja https-skeemat ovat sallittuja."
 
 msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
 msgstr "Jos tällä osoitteella on tili, sähköposti, joka sisältää palautuslinkin, on juuri lähetetty."
+
+msgid "Simulation — aucune modification enregistrée"
+msgstr "Simulointi — muutoksia ei tallennettu"
 
 msgid "Site web"
 msgstr "Verkkosivusto"
@@ -1924,6 +2416,9 @@ msgstr "Poista %(name)s"
 msgid "Supprimer ce webhook ?"
 msgstr "Poistetaanko tämä webhook?"
 
+msgid "Supprimer cette planification ?"
+msgstr "Poistetaanko tämä aikataulu?"
+
 msgid "Supprimer définitivement ce fichier et toutes ses données ?"
 msgstr "Poistetaanko tämä tiedosto ja kaikki sen tiedot pysyvästi?"
 
@@ -1948,6 +2443,12 @@ msgstr "Poista ylimääräiset välilyönnit"
 msgid "Supprimer mon compte"
 msgstr "Poista tilini"
 
+msgid "Suspendre"
+msgstr "Keskeytä"
+
+msgid "Suspendue"
+msgstr "Keskeytetty"
+
 msgid "Synthèse"
 msgstr "Yhteenveto"
 
@@ -1959,6 +2460,18 @@ msgstr "Tietoturva"
 
 msgid "Sélectionner un fichier"
 msgstr "Valitse tiedosto"
+
+msgid "Sélectionnez au moins un fichier."
+msgstr "Valitse vähintään yksi tiedosto."
+
+msgid "Sélectionnez deux versions différentes pour afficher la comparaison."
+msgstr "Valitse kaksi eri versiota näyttääksesi vertailun."
+
+msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
+msgstr "Valitse enintään %(limit)s tiedostoa: sitä useammat rajataan pois, jotta palvelin ei ylikuormitu."
+
+msgid "Sévérité"
+msgstr "Vakavuus"
 
 msgid "Tableau de bord"
 msgstr "Koontinäyttö"
@@ -1999,8 +2512,17 @@ msgstr "Kaikki sisältyy"
 msgid "Tout voir"
 msgstr "Näytä kaikki"
 
+msgid "Toute personne possédant ce lien peut consulter le fichier. Révoquez le partage pour l'invalider immédiatement."
+msgstr "Kuka tahansa tällä linkillä voi katsella tiedostoa. Peruuta jako mitätöidäksesi sen heti."
+
+msgid "Toute personne possédant le lien peut consulter le jeu de données, sans compte. Le lien est révocable et peut expirer."
+msgstr "Kuka tahansa linkin haltija voi katsella aineistoa ilman tiliä. Linkki voidaan peruuttaa ja se voi vanhentua."
+
 msgid "Toutes les actions"
 msgstr "Kaikki toiminnot"
+
+msgid "Toutes les valeurs renseignées sont valides"
+msgstr "Kaikki täytetyt arvot ovat kelvollisia"
 
 msgid "Traçabilité"
 msgstr "Jäljitettävyys"
@@ -2014,11 +2536,17 @@ msgstr "Tyyppi"
 msgid "Type de correction"
 msgstr "Korjauksen tyyppi"
 
+msgid "Type hétérogène"
+msgstr "Sekatyyppi"
+
 msgid "Téléchargement"
 msgstr "Lataus"
 
 msgid "Téléchargement de « %(name)s »"
 msgstr "Kohteen « %(name)s » lataus"
+
+msgid "Téléphone"
+msgstr "Puhelin"
 
 msgid "Téléphone invalide"
 msgstr "Virheellinen puhelinnumero"
@@ -2028,6 +2556,9 @@ msgstr "Puhelinnumero ei ole vakiomuodossa"
 
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Epästandardit puhelinnumerot (%(column)s):"
+
+msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
+msgstr "Lataa, siivoaa, ajastaa ja poistaa omia tiedostojaan."
 
 msgid "Téléversement"
 msgstr "Lähetys"
@@ -2058,6 +2589,9 @@ msgstr "Ylläpitäjätiliä ei voi poistaa tältä sivulta."
 
 msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
 msgstr "Ylläpitäjätiliä ei voi poistaa tältä sivulta. Käytä"
+
+msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
+msgstr "Ote tiedostosta: ensimmäiset rivit riittävät tietojen arviointiin."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "Kojelauta mittaa laatua ennen / jälkeen ja selittää jokaisen menetetyn pisteen."
@@ -2101,11 +2635,20 @@ msgstr "Korvaava arvo"
 msgid "Valeur de remplacement (pour le remplissage)."
 msgstr "Korvaava arvo (täyttöä varten)."
 
+msgid "Valeur du moment centré"
+msgstr "Keskusmomentin arvo"
+
+msgid "Valeur inconnue"
+msgstr "Tuntematon arvo"
+
 msgid "Valeur manquante"
 msgstr "Puuttuva arvo"
 
 msgid "Valeur numérique invalide"
 msgstr "Virheellinen lukuarvo"
+
+msgid "Valeur unique « %(value)s » sur %(count)s ligne(s)."
+msgstr "Yksi ainoa arvo ”%(value)s” %(count)s rivillä."
 
 msgid "Valeurs aberrantes"
 msgstr "Poikkeavat arvot"
@@ -2149,6 +2692,36 @@ msgstr "Tarkista ja korjaa sähköpostit (vain selvät virheet)"
 msgid "Validité"
 msgstr "Kelpoisuus"
 
+msgid "Variance"
+msgstr "Varianssi"
+
+msgid "Version"
+msgstr "Versio"
+
+msgid "Version %(number)s restaurée."
+msgstr "Versio %(number)s palautettu."
+
+msgid "Version comparée"
+msgstr "Vertailtu versio"
+
+msgid "Version courante"
+msgstr "Nykyinen versio"
+
+msgid "Version de référence"
+msgstr "Viiteversio"
+
+msgid "Versions"
+msgstr "Versiot"
+
+msgid "Versions enregistrées ("
+msgstr "Tallennetut versiot ("
+
+msgid "Versions — %(name)s"
+msgstr "Versiot — %(name)s"
+
+msgid "Vide pour créer un lien public."
+msgstr "Tyhjä luo julkisen linkin."
+
 msgid "Visualisations statistiques"
 msgstr "Tilastolliset visualisoinnit"
 
@@ -2170,6 +2743,9 @@ msgstr "Tietosi ansaitsevat<br> <span class=\"dz-gradient-text\">olla virheettö
 msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
 msgstr "Tiedostosi pysyvät sinulla. DataZen näyttää, mikä ylittää valitun säilytysajan, eikä poista mitään ilman suostumustasi."
 
+msgid "Vos jeux de données"
+msgstr "Aineistosi"
+
 msgid "Votre espace de travail"
 msgstr "Työtila"
 
@@ -2188,6 +2764,18 @@ msgstr "Profiilikuvasi on poistettu."
 msgid "Votre profil a été mis à jour."
 msgstr "Profiilisi on päivitetty."
 
+msgid "Votre rôle ne permet pas de créer une planification."
+msgstr "Roolisi ei salli aikataulun luomista."
+
+msgid "Votre rôle ne permet pas de lancer un nettoyage. Contactez un administrateur."
+msgstr "Roolisi ei salli siivouksen aloittamista. Ota yhteyttä ylläpitäjään."
+
+msgid "Votre rôle ne permet pas de modifier les données. Contactez un administrateur."
+msgstr "Roolisi ei salli tietojen muuttamista. Ota yhteyttä ylläpitäjään."
+
+msgid "Vous"
+msgstr "Sinä"
+
 msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
 msgstr "Sinulla on ohjat: mitään ei poisteta ilman toimintaasi."
 
@@ -2202,6 +2790,9 @@ msgstr "Sinulla ei ole pääsyä tähän webhookiin."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "Sinulla ei ole pääsyä tähän sääntöön."
+
+msgid "Vous ne pouvez pas modifier votre propre rôle."
+msgstr "Et voi muuttaa omaa rooliasi."
 
 msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
 msgstr "Yhdistetty näkymä tietojesi laatuun, kaikki tiedostot mukaan lukien."
@@ -2344,6 +2935,9 @@ msgstr "esim. email (tyhjä = kaikki sarakkeet)"
 msgid "excellente qualité"
 msgstr "erinomainen laatu"
 
+msgid "faible"
+msgstr "matala"
+
 msgid "fermer"
 msgstr "sulje"
 
@@ -2355,6 +2949,9 @@ msgstr "tunnistamaton muoto"
 
 msgid "généré le"
 msgstr "luotu"
+
+msgid "haute"
+msgstr "korkea"
 
 msgid "https://exemple.com"
 msgstr "https://exemple.com"
@@ -2374,6 +2971,9 @@ msgstr "muuttumaton"
 msgid "jours"
 msgstr "päivää"
 
+msgid "lien public"
+msgstr "julkinen linkki"
+
 msgid "lignes"
 msgstr "riviä"
 
@@ -2382,6 +2982,9 @@ msgstr "virheellinen pituus/muoto"
 
 msgid "matplotlib"
 msgstr "matplotlib"
+
+msgid "moyenne"
+msgstr "keskitaso"
 
 msgid "naviguer"
 msgstr "siirry"
@@ -2437,6 +3040,9 @@ msgstr "poistettu"
 msgid "sur"
 msgstr "/"
 
+msgid "suspendue"
+msgstr "keskeytetty"
+
 msgid "texte"
 msgstr "teksti"
 
@@ -2446,11 +3052,17 @@ msgstr "puhelin"
 msgid "unicité"
 msgstr "yksilöllisyys"
 
+msgid "v%(n)s"
+msgstr "v%(n)s"
+
 msgid "valeur(s) extrême(s)"
 msgstr "ääriarvo(t)"
 
 msgid "validité"
 msgstr "kelpoisuus"
+
+msgid "« %(value)s » représente %(percent)s %% des valeurs renseignées."
+msgstr "”%(value)s” muodostaa %(percent)s %% täytetyistä arvoista."
 
 msgid "· ancien_id :"
 msgstr "· vanha_id:"
@@ -2475,6 +3087,12 @@ msgstr "Siivous epäonnistui"
 
 msgid "Échec du nettoyage de « %(name)s »"
 msgstr "Kohteen « %(name)s » siivous epäonnistui"
+
+msgid "Échec du nettoyage planifié : %(error)s"
+msgstr "Ajastettu siivous epäonnistui: %(error)s"
+
+msgid "Éditeur"
+msgstr "Muokkaaja"
 
 msgid "Étape 1"
 msgstr "Vaihe 1"
@@ -2518,17 +3136,32 @@ msgstr "— Kaikki sarakkeet —"
 msgid "← Retour au fichier"
 msgstr "← Takaisin tiedostoon"
 
+msgid "← Retour à l'historique"
+msgstr "← Takaisin historiaan"
+
 msgid "⌨️ Raccourcis"
 msgstr "⌨️ Pikakuvakkeet"
 
 msgid "⌨️ Raccourcis clavier"
 msgstr "⌨️ Pikanäppäimet"
 
+msgid "⏱️ Nettoyages planifiés"
+msgstr "⏱️ Ajastetut siivoukset"
+
+msgid "⏱️ Planifications"
+msgstr "⏱️ Aikataulut"
+
 msgid "⏳ Fichiers expirés"
 msgstr "⏳ Vanhentuneet tiedostot"
 
 msgid "⏳ Nettoyage en cours…"
 msgstr "⏳ Puhdistus käynnissä…"
+
+msgid "♻️ Restaurer"
+msgstr "♻️ Palauta"
+
+msgid "⚙️ Opérations communes"
+msgstr "⚙️ Yhteiset toiminnot"
 
 msgid "⚙️ Règles de nettoyage personnalisées"
 msgstr "⚙️ Mukautetut puhdistussäännöt"
@@ -2538,6 +3171,9 @@ msgstr "⚙️ Mukautetut säännöt"
 
 msgid "⚙️ Régler la durée"
 msgstr "⚙️ Säädä aikaa"
+
+msgid "⚠️ Anomalies signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ Poikkeamat vain raportoidaan — niitä ei koskaan muuteta automaattisesti."
 
 msgid "⚠️ Points nécessitant une vérification humaine"
 msgstr "⚠️ Kohdat, jotka vaativat manuaalisen tarkistuksen"
@@ -2587,8 +3223,14 @@ msgstr "✓ Kopioitu"
 msgid "➕ Nouveau jeton"
 msgstr "➕ Uusi token"
 
+msgid "➕ Nouveau partage"
+msgstr "➕ Uusi jako"
+
 msgid "➕ Nouveau webhook"
 msgstr "➕ Uusi webhook"
+
+msgid "➕ Nouvelle planification"
+msgstr "➕ Uusi aikataulu"
 
 msgid "➕ Nouvelle règle"
 msgstr "➕ Uusi sääntö"
@@ -2598,6 +3240,9 @@ msgstr "➕ Lähetä tiedosto"
 
 msgid "⬇️ Exporter mes données (JSON)"
 msgstr "⬇️ Vie tietoni (JSON)"
+
+msgid "⬇️ Télécharger"
+msgstr "⬇️ Lataa"
 
 msgid "⬇️ Télécharger le fichier nettoyé"
 msgstr "⬇️ Lataa puhdistettu tiedosto"
@@ -2628,6 +3273,9 @@ msgstr "👁️ Katso raportti"
 
 msgid "👤 Mon profil"
 msgstr "👤 Profiilini"
+
+msgid "📄 Fichiers à nettoyer"
+msgstr "📄 Siivottavat tiedostot"
 
 msgid "📈 Analyse exploratoire"
 msgstr "📈 Tutkiva analyysi"
@@ -2665,8 +3313,14 @@ msgstr "📊 Koontinäyttö"
 msgid "📊 Tableau de bord global"
 msgstr "📊 Yleinen koontinäyttö"
 
+msgid "📋 Mes planifications ("
+msgstr "📋 Aikatauluni ("
+
 msgid "📋 Mes règles ("
 msgstr "📋 Omat säännöt ("
+
+msgid "📋 Partages actifs ("
+msgstr "📋 Aktiiviset jaot ("
 
 msgid "📋 Qualité des colonnes"
 msgstr "📋 Sarakkeiden laatu"
@@ -2704,11 +3358,26 @@ msgstr "🔌 API ja käyttötokenit"
 msgid "🔌 Jetons d'API"
 msgstr "🔌 API-tokenit"
 
+msgid "🔍 Aperçu (simulation)"
+msgstr "🔍 Esikatselu (simulointi)"
+
+msgid "🔍 Aperçu avant / après (simulation)"
+msgstr "🔍 Ennen / jälkeen -esikatselu (simulointi)"
+
 msgid "🔍 Avant / après"
 msgstr "🔍 Ennen / jälkeen"
 
 msgid "🔍 Comparaison avant / après"
 msgstr "🔍 Vertailu ennen / jälkeen"
+
+msgid "🔍 Comparer"
+msgstr "🔍 Vertaa"
+
+msgid "🔍 Comparer des versions"
+msgstr "🔍 Vertaa versioita"
+
+msgid "🔍 Comparer deux versions"
+msgstr "🔍 Vertaa kahta versiota"
 
 msgid "🔍 Doublons"
 msgstr "🔍 Kaksoiskappaleet"
@@ -2734,6 +3403,9 @@ msgstr "🔎 Pisteiden selitys"
 msgid "🔑 Mes jetons"
 msgstr "🔑 Omat tokenit"
 
+msgid "🔑 Votre lien de partage public"
+msgstr "🔑 Julkinen jakolinkkisi"
+
 msgid "🔑 Votre nouveau jeton"
 msgstr "🔑 Uusi tokenisi"
 
@@ -2748,6 +3420,9 @@ msgstr "🔔 Omat webhookit"
 
 msgid "🔔 Webhooks"
 msgstr "🔔 Webhookit"
+
+msgid "🔗 Partager ce jeu de données"
+msgstr "🔗 Jaa tämä aineisto"
 
 msgid "🔗 Voir mon profil public"
 msgstr "🔗 Näytä julkinen profiilini"
@@ -2770,8 +3445,17 @@ msgstr "🕓 Aktiviteetti"
 msgid "🕓 Dernières activités"
 msgstr "🕓 Viimeisimmät aktiviteetit"
 
+msgid "🕓 Historique des versions"
+msgstr "🕓 Versiohistoria"
+
 msgid "🕓 Journal d'activité"
 msgstr "🕓 Aktiviteettiloki"
+
+msgid "🕓 Versions"
+msgstr "🕓 Versiot"
+
+msgid "🗂️ Nettoyage par lots"
+msgstr "🗂️ Eräsiivous"
 
 msgid "🗃️ Fichiers récents"
 msgstr "🗃️ Viimeisimmät tiedostot"
@@ -2797,11 +3481,17 @@ msgstr "🚀 Pro-tilan uutuudet"
 msgid "🚀 Premier appel"
 msgstr "🚀 Ensimmäinen kutsu"
 
+msgid "🛡️ Rôles et permissions"
+msgstr "🛡️ Roolit ja käyttöoikeudet"
+
 msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
 msgstr "🟢 Säilytä rivi 1 (poista muut)"
 
 msgid "🟣 Fusionner toutes les lignes"
 msgstr "🟣 Yhdistä kaikki rivit"
+
+msgid "🧩 Anomalies structurelles"
+msgstr "🧩 Rakenteelliset poikkeamat"
 
 msgid "🧭 Dimensions les plus fragiles"
 msgstr "🧭 Hauraimmat ulottuvuudet"

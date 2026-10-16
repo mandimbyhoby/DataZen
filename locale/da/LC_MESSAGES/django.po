@@ -16,11 +16,20 @@ msgstr "%(actual)s rettelse(r) i loggen mod %(reported)s rapporterede"
 msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
 msgstr "%(actual)s ukendte værdi(er) i e-mailkolonner mod %(reported)s rapporterede"
 
+msgid "%(count)s anomalie(s) structurelle(s) détectée(s) sur les colonnes."
+msgstr "%(count)s strukturelle afvigelse(r) fundet i kolonnerne."
+
 msgid "%(count)s colonnes"
 msgstr "%(count)s kolonner"
 
+msgid "%(count)s doublon(s) exact(s) restant(s)"
+msgstr "%(count)s eksakte dubletter tilbage"
+
 msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
 msgstr "%(count)s mulige dubletter kræver gennemgang."
+
+msgid "%(count)s doublon(s) potentiel(s) à vérifier (pénalité réduite)"
+msgstr "%(count)s mulige dubletter kræver manuel gennemgang (nedsat straf)"
 
 msgid "%(count)s entrée(s) d'activité supprimée(s)."
 msgstr "%(count)s aktivitetslogsposter blev slettet."
@@ -28,35 +37,38 @@ msgstr "%(count)s aktivitetslogsposter blev slettet."
 msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
 msgstr "%(count)s fejl kunne ikke rettes automatisk."
 
-msgid "%(count)s exact duplicate(s) remaining"
-msgstr "%(count)s eksakte dubletter tilbage"
-
-msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
-msgstr "%(count)s inkonsistente værdier tilbage (hverken gyldige eller ukendte)"
+msgid "%(count)s fichier(s) ignoré(s) : lot limité à %(limit)s."
+msgstr "%(count)s fil(er) ignoreret: batch begrænset til %(limit)s."
 
 msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
 msgstr "%(count)s ugyldige e-mails findes (ikke-tomme og ikke ukendte)"
 
-msgid "%(count)s invalid value(s) among filled data"
-msgstr "%(count)s ugyldige værdier blandt udfyldte data"
-
 msgid "%(count)s lignes"
 msgstr "%(count)s rækker"
 
-msgid "%(count)s missing value(s)"
-msgstr "%(count)s manglende værdier"
-
-msgid "%(count)s non-standard value(s)"
-msgstr "%(count)s ikke-standardiserede værdier"
-
-msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
-msgstr "%(count)s mulige dubletter kræver manuel gennemgang (nedsat straf)"
-
-msgid "%(count)s unknown value(s) (data unavailable)"
-msgstr "%(count)s ukendte værdier (data utilgængelige)"
+msgid "%(count)s nettoyage(s) lancé(s) en arrière-plan."
+msgstr "%(count)s rensning(er) startet i baggrunden."
 
 msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
 msgstr "%(count)s afvigende værdi(er) fundet i numeriske kolonner."
+
+msgid "%(count)s valeur(s) d'identifiant dupliquée(s)."
+msgstr "%(count)s dublerede identifikatorværdier."
+
+msgid "%(count)s valeur(s) incohérente(s) restante(s) (ni valide ni inconnue)"
+msgstr "%(count)s inkonsistente værdier tilbage (hverken gyldige eller ukendte)"
+
+msgid "%(count)s valeur(s) inconnue(s) (donnée indisponible)"
+msgstr "%(count)s ukendte værdier (data utilgængelige)"
+
+msgid "%(count)s valeur(s) invalide(s) parmi les données renseignées"
+msgstr "%(count)s ugyldige værdier blandt udfyldte data"
+
+msgid "%(count)s valeur(s) manquante(s)"
+msgstr "%(count)s manglende værdier"
+
+msgid "%(count)s valeur(s) non standard"
+msgstr "%(count)s ikke-standardiserede værdier"
 
 msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
 msgstr "%(count)s værdi(er) er i øjeblikket “Ukendt”."
@@ -69,28 +81,44 @@ msgstr[1] "%(counter)s mulige dubletter blev fundet. Disse rækker slettes <stro
 msgid "%(counter)s fichier affiché"
 msgid_plural "%(counter)s fichiers affichés"
 msgstr[0] "%(counter)s fil vist"
+msgstr[1] "%(counter)s fil vist"
 
 msgid "%(counter)s inconnu"
 msgid_plural "%(counter)s inconnus"
 msgstr[0] "%(counter)s ukendt"
+msgstr[1] "%(counter)s ukendt"
 
 msgid "%(counter)s invalide,"
 msgid_plural "%(counter)s invalides,"
 msgstr[0] "%(counter)s ugyldig,"
+msgstr[1] "%(counter)s ugyldig,"
 
 msgid "%(counter)s ligne concernée :"
 msgid_plural "%(counter)s lignes concernées :"
 msgstr[0] "%(counter)s berørt række:"
+msgstr[1] "%(counter)s berørt række:"
 
 msgid "%(counter)s valide,"
 msgid_plural "%(counter)s valides,"
 msgstr[0] "%(counter)s gyldig,"
+msgstr[1] "%(counter)s gyldig,"
+
+msgid "%(numeric)s valeur(s) numérique(s) sur %(total)s renseignée(s) : type hétérogène."
+msgstr "%(numeric)s numeriske værdier ud af %(total)s udfyldte: blandet type."
 
 msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
 msgstr "%(purged)s fil(er) slettet, %(archived)s arkiveret."
 
+msgid "%(runs)s exécution"
+msgid_plural "%(runs)s exécutions"
+msgstr[0] "%(runs)s kørsel"
+msgstr[1] "%(runs)s kørsel"
+
 msgid "%(score)s / 100  (%(weight)s %(percent)s)"
 msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(total)s valeur(s) aberrante(s) détectée(s) (méthode IQR). Colonnes les plus concernées : %(detail)s."
+msgstr "%(total)s afvigende værdi(er) fundet (IQR-metode). Mest berørte kolonner: %(detail)s."
 
 msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
 msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s mod %(expected)s forventede"
@@ -101,10 +129,15 @@ msgstr "%(value)s %(percent)s"
 msgid "(%(counter)s modification)"
 msgid_plural "(%(counter)s modifications)"
 msgstr[0] "(%(counter)s ændring)"
+msgstr[1] "(%(counter)s ændring)"
 
 msgid "(%(counter)s non-conformité)"
 msgid_plural "(%(counter)s non-conformités)"
 msgstr[0] "(%(counter)s afvigelse)"
+msgstr[1] "(%(counter)s afvigelse)"
+
+msgid "(%(shown)s sur %(total)s)"
+msgstr "(%(shown)s af %(total)s)"
 
 msgid "(colonnes : %(columns)s)"
 msgstr "(kolonner: %(columns)s)"
@@ -155,7 +188,7 @@ msgid "Abonnements"
 msgstr "Abonnementer"
 
 msgid "Accueil"
-msgstr "Forside"
+msgstr "Hjem"
 
 msgid "Actif"
 msgstr "Aktiv"
@@ -199,6 +232,9 @@ msgstr "Administrator"
 msgid "Administration"
 msgstr "Administration"
 
+msgid "Adresse e-mail"
+msgstr "E-mailadresse"
+
 msgid "Adresse email"
 msgstr "E-mailadresse"
 
@@ -219,9 +255,6 @@ msgstr "Vis detaljer om afvigelser"
 
 msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
 msgstr "Føjes til headeren X-DataZen-Signature (HMAC-SHA256)."
-
-msgid "All filled values are valid"
-msgstr "Alle udfyldte værdier er gyldige"
 
 msgid "Aller au contenu principal"
 msgstr "Gå til hovedindhold"
@@ -244,8 +277,20 @@ msgstr "Tidligere værdi"
 msgid "Annuler"
 msgstr "Annullér"
 
+msgid "Anomalie"
+msgstr "Anomali"
+
 msgid "Anomalies restantes (à traiter manuellement)"
 msgstr "Resterende afvigelser (skal håndteres manuelt)"
+
+msgid "Anomalies structurelles"
+msgstr "Strukturelle afvigelser"
+
+msgid "Anomalies structurelles par type"
+msgstr "Strukturelle afvigelser efter type"
+
+msgid "Anonymisation"
+msgstr "Anonymisering"
 
 msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
 msgstr "Anonymisering af følsomme data (%(count)s værdier pseudonymiseret)"
@@ -259,8 +304,26 @@ msgstr "Anonymisér følsomme data (navne, e-mails, telefonnumre)"
 msgid "Antananarivo, Madagascar"
 msgstr "Antananarivo, Madagascar"
 
+msgid "Aperçu"
+msgstr "Forhåndsvisning"
+
+msgid "Aperçu calculé : aucune modification n'a été enregistrée. Confirmez pour appliquer le nettoyage."
+msgstr "Forhåndsvisning beregnet: ingen ændring blev gemt. Bekræft for at anvende rensningen."
+
+msgid "Aperçu de nettoyage sur « %(name)s »"
+msgstr "Renseforhåndsvisning af “%(name)s”"
+
+msgid "Aperçu des données"
+msgstr "Forhåndsvisning af data"
+
 msgid "Aperçu du fichier nettoyé"
 msgstr "Forhåndsvisning af den rensede fil"
+
+msgid "Aperçu limité à %(shown)s lignes sur %(total)s."
+msgstr "Forhåndsvisning begrænset til %(shown)s af %(total)s rækker."
+
+msgid "Aplatissement"
+msgstr "Kurtose"
 
 msgid "Appel API"
 msgstr "API-kald"
@@ -268,11 +331,20 @@ msgstr "API-kald"
 msgid "Appel API : %(path)s"
 msgstr "API-kald: %(path)s"
 
+msgid "Appelez-la depuis un planificateur système (cron, Planificateur de tâches Windows) toutes les cinq minutes."
+msgstr "Kald den fra en systemplanlægger (cron, Windows Opgavestyring) hvert femte minut."
+
 msgid "Appels"
 msgstr "Kald"
 
 msgid "Application"
 msgstr "Applikation"
+
+msgid "Appliquer"
+msgstr "Anvend"
+
+msgid "Appliquez les mêmes opérations à plusieurs jeux de données en une seule fois. Les fichiers sont traités en série, un à la fois."
+msgstr "Anvend de samme handlinger på flere datasæt på én gang. Filerne behandles i rækkefølge, én ad gangen."
 
 msgid "Après"
 msgstr "Efter"
@@ -292,6 +364,21 @@ msgstr "Arkiv"
 msgid "Archivés"
 msgstr "Arkiveret"
 
+msgid "Asymétrie"
+msgstr "Skævhed"
+
+msgid "Asymétrie et aplatissement (moments centrés) des colonnes numériques."
+msgstr "Skævhed og kurtose (centrale momenter) for de numeriske kolonner."
+
+msgid "Aucun compte ne correspond à cette recherche."
+msgstr "Ingen konto matcher denne søgning."
+
+msgid "Aucun doublon exact"
+msgstr "Ingen eksakte dubletter"
+
+msgid "Aucun doublon potentiel"
+msgstr "Ingen mulige dubletter"
+
 msgid "Aucun fichier d'origine n'est disponible."
 msgstr "Ingen originalfil er tilgængelig."
 
@@ -305,7 +392,7 @@ msgid "Aucun fichier ne correspond à votre recherche."
 msgstr "Ingen filer matcher din søgning."
 
 msgid "Aucun fichier nettoyé n'est disponible."
-msgstr "Ingen renset fil er tilgængelig."
+msgstr "Der er ingen renset fil tilgængelig."
 
 msgid "Aucun fichier nettoyé pour le moment."
 msgstr "Ingen rensede filer endnu."
@@ -324,6 +411,12 @@ msgstr "Ingen graf er tilgængelig for dette datasæt: det indeholder ikke nok b
 
 msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
 msgstr "Ingen tokens endnu. Opret en for at bruge API'et."
+
+msgid "Aucun jeu de données disponible pour le moment."
+msgstr "Der er ingen datasæt tilgængelige i øjeblikket."
+
+msgid "Aucun jeu de données pour le moment."
+msgstr "Der er ingen datasæt i øjeblikket."
 
 msgid "Aucun journal des modifications n'est disponible."
 msgstr "Ingen ændringslog er tilgængelig."
@@ -349,6 +442,9 @@ msgstr "Ingen aktivitet registreret."
 msgid "Aucune anomalie restante."
 msgstr "Ingen resterende afvigelser."
 
+msgid "Aucune anomalie structurelle détectée."
+msgstr "Ingen strukturel afvigelse fundet."
+
 msgid "Aucune anomalie."
 msgstr "Ingen afvigelser."
 
@@ -357,6 +453,9 @@ msgstr "Ingen kolonner"
 
 msgid "Aucune correction"
 msgstr "Ingen rettelser"
+
+msgid "Aucune correction de valeur ne serait nécessaire."
+msgstr "Ingen værdikorrektion ville være nødvendig."
 
 msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
 msgstr "Ingen mærkbar forskel mellem den oprindelige fil og den rensede fil: dine data var allerede rene."
@@ -373,6 +472,18 @@ msgstr "Ingen rensede data tilgængelige."
 msgid "Aucune modification enregistrée."
 msgstr "Ingen ændringer gemt."
 
+msgid "Aucune opération enregistrée pour cette version."
+msgstr "Ingen handling registreret for denne version."
+
+msgid "Aucune opération enregistrée."
+msgstr "Ingen handling registreret."
+
+msgid "Aucune opération."
+msgstr "Ingen handling."
+
+msgid "Aucune planification : programmez un nettoyage récurrent pour ne plus y penser."
+msgstr "Ingen planer endnu: opsæt en tilbagevendende rensning, og slip for at tænke på det."
+
 msgid "Aucune règle personnalisée."
 msgstr "Ingen brugerdefineret regel."
 
@@ -382,8 +493,17 @@ msgstr "Ingen regler endnu. Opret en for at genbruge den på alle dine filer."
 msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
 msgstr "Ingen afvigende værdier fundet i de numeriske kolonner."
 
+msgid "Aucune valeur manquante ou inconnue"
+msgstr "Ingen manglende eller ukendte værdier"
+
+msgid "Aucune valeur renseignée sur %(rows)s ligne(s)."
+msgstr "Ingen værdi udfyldt i %(rows)s række(r)."
+
 msgid "Aucune valeur « Inconnu »."
 msgstr "Ingen “Ukendt”-værdi."
+
+msgid "Aucune version enregistrée : lancez un nettoyage pour en créer une."
+msgstr "Ingen version registreret endnu: kør en rensning for at oprette en."
 
 msgid "Audit des emails"
 msgstr "E-mailrevision"
@@ -451,8 +571,20 @@ msgstr "Standardisering af markøren ”Ukendt” (%(count)s rettet)"
 msgid "Capturer"
 msgstr "Tag billede"
 
+msgid "Casse"
+msgstr "Store/små bogstaver"
+
+msgid "Catégorie"
+msgstr "Kategori"
+
 msgid "Ce graphique n'est pas disponible pour ce jeu de données."
 msgstr "Denne graf er ikke tilgængelig for dette datasæt."
+
+msgid "Ce jeu de données n'est partagé avec personne pour le moment."
+msgstr "Dette datasæt er endnu ikke delt med nogen."
+
+msgid "Ce lien de partage est invalide ou a expiré."
+msgstr "Dette delingslink er ugyldigt eller er udløbet."
 
 msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
 msgstr "Dette nulstillingslink er allerede blevet brugt eller er udløbet."
@@ -460,11 +592,20 @@ msgstr "Dette nulstillingslink er allerede blevet brugt eller er udløbet."
 msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
 msgstr "Dette link er kun gyldigt én gang. Hvis du ikke står bag anmodningen, kan du blot ignorere denne meddelelse: din adgangskode forbliver uændret. — DataZen"
 
+msgid "Ce lien ne permet pas le téléchargement."
+msgstr "Dette link tillader ikke download."
+
+msgid "Ce partage ne permet pas le téléchargement."
+msgstr "Denne deling tillader ikke download."
+
 msgid "Ce profil n'est pas public."
 msgstr "Denne profil er ikke offentlig."
 
 msgid "Ce que le nettoyage a réellement changé dans votre fichier."
 msgstr "Hvad rensningen faktisk ændrede i din fil."
+
+msgid "Ce que permet chaque rôle"
+msgstr "Hvad hver rolle tillader"
 
 msgid "Cellules manquantes"
 msgstr "Manglende celler"
@@ -474,6 +615,12 @@ msgstr "Disse %(count)s fil(er) overskrider opbevaringsperioden på %(days)s dag
 
 msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
 msgstr "Disse tællere driver den globale søgning og genvejene nedenfor."
+
+msgid "Ces deux versions sont identiques sur les indicateurs suivis."
+msgstr "Disse to versioner er identiske på de fulgte indikatorer."
+
+msgid "Cette page est réservée aux administrateurs."
+msgstr "Denne side er forbeholdt administratorer."
 
 msgid "Champ"
 msgstr "Felt"
@@ -499,6 +646,12 @@ msgstr "Skift min adgangskode"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Skift min adgangskode — DataZen"
 
+msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
+msgstr "Hver konto har en rolle: læser, redaktør eller administrator. Kontrollen sker på serveren, ikke kun i brugerfladen."
+
+msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
+msgstr "Hver vellykket rensning fastfryser en version: du kan hente, sammenligne og rulle tilbage."
+
 msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
 msgstr "Indlæs dine data i formatet <code>.csv</code>, <code>.xlsx</code> eller <code>.xls</code>, uanset separator."
 
@@ -507,6 +660,12 @@ msgstr "Vælg webstedets sprog"
 
 msgid "Choisir le format"
 msgstr "Vælg format"
+
+msgid "Choisissez deux versions pour mesurer ce qui a réellement changé entre elles."
+msgstr "Vælg to versioner for at måle, hvad der faktisk ændrede sig mellem dem."
+
+msgid "Choisissez un destinataire ou cochez « Créer un lien public »."
+msgstr "Vælg en modtager, eller markér “Opret et offentligt link”."
 
 msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
 msgstr "Vælg en CSV- eller Excel-fil (.csv, .xlsx, .xls)."
@@ -547,6 +706,9 @@ msgstr "Sprogkode (fr, en, es…). Tom = applikationens sprog."
 msgid "Coefficient de Pearson"
 msgstr "Pearson-koefficient"
 
+msgid "Collaboration"
+msgstr "Samarbejde"
+
 msgid "Colonne"
 msgstr "Kolonne"
 
@@ -555,6 +717,15 @@ msgstr "Målkolonne"
 
 msgid "Colonne clé pour la déduplication"
 msgstr "Nøglekolonne til deduplikering"
+
+msgid "Colonne constante"
+msgstr "Konstant kolonne"
+
+msgid "Colonne quasi constante"
+msgstr "Næsten konstant kolonne"
+
+msgid "Colonne vide"
+msgstr "Tom kolonne"
 
 msgid "Colonnes"
 msgstr "Kolonner"
@@ -580,17 +751,29 @@ msgstr "Ukendte kolonner:"
 msgid "Colonnes stables"
 msgstr "Stabile kolonner"
 
+msgid "Colonnes vides, constantes, quasi constantes ou à type hétérogène."
+msgstr "Tomme, konstante, næsten konstante eller blandede kolonner."
+
 msgid "Colonnes à vérifier"
 msgstr "Kolonner at gennemgå"
 
 msgid "Combien de fichiers se trouvent dans chaque tranche de score."
 msgstr "Hvor mange filer der ligger i hvert scoreinterval."
 
+msgid "Comment les échéances sont-elles exécutées ?"
+msgstr "Hvordan udføres forfaldsdatoer?"
+
 msgid "Comparaison"
 msgstr "Sammenligning"
 
 msgid "Comparaison avant / après — %(name)s"
 msgstr "Sammenligning før / efter — %(name)s"
+
+msgid "Comparaison de versions — %(name)s"
+msgstr "Versionssammenligning — %(name)s"
+
+msgid "Comparer"
+msgstr "Sammenlign"
 
 msgid "Complétion du profil"
 msgstr "Profilfuldstændighed"
@@ -613,6 +796,9 @@ msgstr "Konto"
 msgid "Compte actif"
 msgstr "Aktiv konto"
 
+msgid "Comptes ("
+msgstr "Konti ("
+
 msgid "Condensé"
 msgstr "Resumé"
 
@@ -621,6 +807,9 @@ msgstr "Tillid"
 
 msgid "Confirmer la décision"
 msgstr "Bekræft beslutning"
+
+msgid "Confirmer le nettoyage"
+msgstr "Bekræft rensning"
 
 msgid "Connectez-vous pour retrouver vos fichiers."
 msgstr "Log ind for at komme tilbage til dine filer."
@@ -631,11 +820,20 @@ msgstr "Log ind"
 msgid "Connexion — DataZen"
 msgstr "Log ind — DataZen"
 
+msgid "Consultation"
+msgstr "Visning"
+
 msgid "Consultation des graphiques"
 msgstr "Se diagrammer"
 
 msgid "Consultation du rapport"
 msgstr "Se rapport"
+
+msgid "Consultation et téléchargement"
+msgstr "Visning og download"
+
+msgid "Consulte et télécharge les jeux de données partagés. Ne modifie rien."
+msgstr "Ser og henter delte datasæt. Ændrer intet."
 
 msgid "Continuer / valider une étape"
 msgstr "Fortsæt / bekræft et trin"
@@ -691,11 +889,17 @@ msgstr "Opret reglen"
 msgid "Créer le jeton"
 msgstr "Opret token"
 
+msgid "Créer le partage"
+msgstr "Opret delingen"
+
 msgid "Créer le webhook"
 msgstr "Opret webhook"
 
 msgid "Créer un compte"
 msgstr "Opret en konto"
+
+msgid "Créer un lien public"
+msgstr "Opret et offentligt link"
 
 msgid "Créer une règle"
 msgstr "Opret en regel"
@@ -706,8 +910,14 @@ msgstr "Opret en regel én gang, og genbrug den på alle dine filer."
 msgid "Créez votre compte"
 msgstr "Opret din konto"
 
-msgid "Data is consistent: each value is valid or unknown"
-msgstr "Data er konsistente: hver værdi er gyldig eller ukendt"
+msgid "Créé par"
+msgstr "Oprettet af"
+
+msgid "Créée par"
+msgstr "Oprettet af"
+
+msgid "DataZen ne fait tourner aucun démon en arrière-plan : une commande de gestion reprend les échéances dues et relance le nettoyage par le même chemin de code que l'interface."
+msgstr "DataZen kører ingen baggrundsdaemon: en administrationskommando samler forfaldne planer op og genstarter rensningen ad samme kodesti som brugerfladen."
 
 msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
 msgstr "DataZen — Program til datarensning (DataClean Pro) · ©"
@@ -739,14 +949,26 @@ msgstr "Seneste HTTP-kode"
 msgid "Dernier déclenchement"
 msgstr "Seneste udløsning"
 
+msgid "Dernier statut"
+msgstr "Seneste status"
+
 msgid "Dernier usage"
 msgstr "Seneste brug"
 
 msgid "Derniers fichiers"
 msgstr "Seneste filer"
 
+msgid "Dernière : succès"
+msgstr "Seneste: succes"
+
+msgid "Dernière : échec"
+msgstr "Seneste: fejl"
+
 msgid "Dernière connexion"
 msgstr "Seneste login"
+
+msgid "Dernière exécution"
+msgstr "Seneste kørsel"
 
 msgid "Dernière utilisation"
 msgstr "Seneste anvendelse"
@@ -757,6 +979,9 @@ msgstr "Seneste regler"
 msgid "Des incohérences ont été détectées entre les statistiques et les données."
 msgstr "Der er fundet uoverensstemmelser mellem statistikken og dataene."
 
+msgid "Destinataire"
+msgstr "Modtager"
+
 msgid "Dimension"
 msgstr "Dimension"
 
@@ -766,6 +991,12 @@ msgstr "Kvalitetsdimensioner"
 msgid "Dispersion et valeurs extrêmes des colonnes numériques."
 msgstr "Spredning og ekstremværdier i numeriske kolonner."
 
+msgid "Distribution la plus asymétrique : « %(colonne)s » (asymétrie %(valeur)s) — moyenne et médiane s'écartent sensiblement, une transformation ou un traitement par quantiles est à envisager."
+msgstr "Mest skæve fordeling: “%(colonne)s” (skævhed %(valeur)s) — gennemsnit og median afviger mærkbart; overvej en transformation eller kvantilbehandling."
+
+msgid "Distribution la plus concentrée/pointue : « %(colonne)s » (aplatissement %(valeur)s) — forte densité autour de la moyenne avec des valeurs extrêmes marquées."
+msgstr "Mest spidse fordeling: “%(colonne)s” (kurtose %(valeur)s) — høj tæthed omkring gennemsnittet med markante ekstremværdier."
+
 msgid "Distributions des colonnes numériques"
 msgstr "Fordelinger for numeriske kolonner"
 
@@ -774,6 +1005,12 @@ msgstr "Numeriske fordelinger"
 
 msgid "Django · Pandas · Bootstrap"
 msgstr "Django · Pandas · Bootstrap"
+
+msgid "Données cohérentes : chaque valeur est valide ou inconnue"
+msgstr "Data er konsistente: hver værdi er gyldig eller ukendt"
+
+msgid "Doublon"
+msgstr "Dublet"
 
 msgid "Doublon par similarité"
 msgstr "Dublet efter lighed"
@@ -817,6 +1054,12 @@ msgstr "Dubletter, overflødige mellemrum, fejlbehæftede e-mails, inkonsistente
 msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
 msgstr "Dubletter, manglende værdier, mellemrum, store/små bogstaver, e-mails, telefonnumre, datoer og lønninger normaliseret."
 
+msgid "Droit"
+msgstr "Tilladelse"
+
+msgid "Droit accordé"
+msgstr "Givet tilladelse"
+
 msgid "Durée de conservation"
 msgstr "Opbevaringsperiode"
 
@@ -856,8 +1099,17 @@ msgstr "Ryd"
 msgid "Effectif"
 msgstr "Antal"
 
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Email fictif"
+msgstr "Fiktiv e-mail"
+
 msgid "Email invalide"
-msgstr "Ugyldig e-mailadresse"
+msgstr "Ugyldig e-mail"
+
+msgid "Email manquant"
+msgstr "Manglende e-mail"
 
 msgid "Email nettoyé"
 msgstr "Renset e-mail"
@@ -928,8 +1180,14 @@ msgstr "Resterende fejl"
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
 
+msgid "Exemples de corrections"
+msgstr "Eksempler på rettelser"
+
 msgid "Expiration"
 msgstr "Udløb"
+
+msgid "Expire le"
+msgstr "Udløber"
 
 msgid "Expiré"
 msgstr "Udløbet"
@@ -939,6 +1197,12 @@ msgstr "Forklaring af score"
 
 msgid "Export & traçabilité"
 msgstr "Eksport & sporbarhed"
+
+msgid "Exécuter"
+msgstr "Kør"
+
+msgid "Exécutions"
+msgstr "Kørsler"
 
 msgid "Fermer"
 msgstr "Luk"
@@ -997,8 +1261,11 @@ msgstr "Rensede filer ældre end denne periode (0 = ubegrænset opbevaring)."
 msgid "Fichiers récents"
 msgstr "Seneste filer"
 
+msgid "Fichiers à nettoyer"
+msgstr "Filer der skal renses"
+
 msgid "Fil d'Ariane"
-msgstr "Brødkrumme"
+msgstr "Brødkrummesti"
 
 msgid "Filtrer"
 msgstr "Filtrer"
@@ -1030,8 +1297,17 @@ msgstr "Accepterede formater: <code>.csv</code>, <code>.xlsx</code>, <code>.xls<
 msgid "Formats de dates (%(column)s) :"
 msgstr "Datoformater (%(column)s):"
 
-msgid "Formats standardized (phones, dates)"
+msgid "Formats standardisés (téléphones, dates)"
 msgstr "Standardiserede formater (telefonnumre, datoer)"
+
+msgid "Forme des distributions"
+msgstr "Fordelingernes form"
+
+msgid "Forme des distributions (asymétrie et aplatissement)"
+msgstr "Fordelingernes form (skævhed og kurtose)"
+
+msgid "Fréquence"
+msgstr "Frekvens"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Spar tid: alt, hvad der betyder noget i DataZen, ligger på en tastekombination."
@@ -1051,14 +1327,23 @@ msgstr "Statistiske grafer genereret med <strong>matplotlib</strong> og <strong>
 msgid "Gratuit, immédiat, et vos fichiers restent privés."
 msgstr "Gratis, øjeblikkeligt, og dine filer forbliver private."
 
+msgid "Gère les rôles et voit l'ensemble des fichiers de la plateforme."
+msgstr "Administrerer roller og ser alle filer på platformen."
+
 msgid "Gérer les règles…"
 msgstr "Administrér regler…"
+
+msgid "Hebdomadaire"
+msgstr "Ugentligt"
 
 msgid "Histogrammes des colonnes numériques détectées."
 msgstr "Histogrammer over fundne numeriske kolonner."
 
 msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
 msgstr "Tidsstemplet historik over dine handlinger: uploads, oprydninger, eksporter, API."
+
+msgid "Identifiant non unique"
+msgstr "Ikke-unik identifikator"
 
 msgid "Identité"
 msgstr "Identitet"
@@ -1072,6 +1357,9 @@ msgstr "Import af CSV & Excel"
 msgid "Impossible d'appliquer la décision : %(error)s"
 msgstr "Beslutningen kunne ikke anvendes: %(error)s"
 
+msgid "Impossible de comparer ces versions : %(error)s"
+msgstr "Disse versioner kan ikke sammenlignes: %(error)s"
+
 msgid "Impossible de convertir le fichier : %(error)s"
 msgstr "Filen kunne ikke konverteres: %(error)s"
 
@@ -1079,13 +1367,16 @@ msgid "Impossible de générer le PDF : %(error)s"
 msgstr "Kunne ikke generere PDF: %(error)s"
 
 msgid "Impossible de lire ce fichier : %(error)s"
-msgstr "Denne fil kunne ikke læses: %(error)s"
+msgstr "Kan ikke læse denne fil: %(error)s"
 
 msgid "Impossible de lire le fichier : %(error)s"
 msgstr "Filen kunne ikke læses: %(error)s"
 
 msgid "Impossible de lire le rapport : %(error)s"
 msgstr "Rapporten kunne ikke læses: %(error)s"
+
+msgid "Impossible de simuler le nettoyage : le fichier est illisible."
+msgstr "Kan ikke simulere rensningen: filen kan ikke læses."
 
 msgid "Inactif"
 msgstr "Inaktiv"
@@ -1098,6 +1389,9 @@ msgstr "Ukendt"
 
 msgid "Indicateur"
 msgstr "Indikator"
+
+msgid "Indicateurs"
+msgstr "Indikatorer"
 
 msgid "Indicateurs comparés"
 msgstr "Sammenlignede indikatorer"
@@ -1141,6 +1435,9 @@ msgstr "Token oprettet. Kopiér nu: den vises ikke igen."
 msgid "Jeton d'API"
 msgstr "API-token"
 
+msgid "Jeton du lien"
+msgstr "Linktoken"
+
 msgid "Jeton « %(name)s » révoqué."
 msgstr "Token « %(name)s » tilbagekaldt."
 
@@ -1149,6 +1446,12 @@ msgstr "Tokens"
 
 msgid "Jetons d'API"
 msgstr "API-tokens"
+
+msgid "Jeu de données"
+msgstr "Datasæt"
+
+msgid "Jeu de données partagé en lecture seule via un lien DataZen."
+msgstr "Datasæt delt skrivebeskyttet via et DataZen-link."
 
 msgid "Journal d'activité"
 msgstr "Aktivitetslog"
@@ -1177,8 +1480,17 @@ msgstr "Sletning af kontoen sletter permanent dine filer, dine regler og din pro
 msgid "Laisser vide pour appliquer à toutes les colonnes."
 msgstr "Lad feltet stå tomt for at anvende på alle kolonner."
 
+msgid "Laissez vide pour démarrer à la prochaine échéance."
+msgstr "Lad stå tomt for at starte ved næste forfaldsdato."
+
 msgid "Laissez vide pour un jeton sans expiration."
 msgstr "Lad stå tomt for et token uden udløb."
+
+msgid "Laissez vide pour un partage sans expiration."
+msgstr "Lad stå tomt for en deling uden udløb."
+
+msgid "Lancer le nettoyage des fichiers sélectionnés"
+msgstr "Start rensning af de valgte filer"
 
 msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
 msgstr "Start først en rensning for at få adgang til den eksplorative analyse."
@@ -1191,6 +1503,9 @@ msgstr "Grænsefladens sprog"
 
 msgid "Le compte « %(username)s » a été supprimé."
 msgstr "Kontoen “%(username)s” er blevet slettet."
+
+msgid "Le fichier de cette version n'est plus disponible."
+msgstr "Filen til denne version er ikke længere tilgængelig."
 
 msgid "Le fichier ne doit pas dépasser 20 Mo."
 msgstr "Filen må ikke overstige 20 MB."
@@ -1210,6 +1525,9 @@ msgstr "Webhookens værtsnavn peger på en intern adresse."
 msgid "Le nom d'hôte est absent de l'URL."
 msgstr "Værtsnavnet mangler i URL'en."
 
+msgid "Le partage est toujours en lecture seule : le destinataire consulte et, si vous l'autorisez, télécharge. Il ne modifie jamais vos données."
+msgstr "Deling er altid skrivebeskyttet: modtageren ser og henter, hvis du tillader det. Vedkommende ændrer aldrig dine data."
+
 msgid "Le port est invalide."
 msgstr "Porten er ugyldig."
 
@@ -1218,6 +1536,12 @@ msgstr "Temaet “System” følger din enheds indstillinger."
 
 msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
 msgstr "Behandlingen kører i baggrunden. Denne side opdateres automatisk, når den er færdig."
+
+msgid "Lecteur"
+msgstr "Læser"
+
+msgid "Lecteur : consultation et téléchargement. Éditeur : peut aussi nettoyer et supprimer ses fichiers. Administrateur : gère les rôles et voit tous les fichiers."
+msgstr "Læser: se og hente. Redaktør: kan også rense og slette egne filer. Administrator: administrerer roller og ser alle filer."
 
 msgid "Les adresses internes sont refusées."
 msgstr "Interne adresser afvises."
@@ -1243,14 +1567,23 @@ msgstr "Rensede filer arkiveres og slettes derefter efter denne periode (0 = ube
 msgid "Les identifiants intégrés à l'URL sont refusés."
 msgstr "Legitimationsoplysninger indlejret i URL'en afvises."
 
+msgid "Les options choisies ne changeraient rien à ce jeu de données."
+msgstr "De valgte indstillinger ville ikke ændre dette datasæt."
+
 msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 msgstr "Tilgængelige ruter: /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 
 msgid "Les statistiques affichées correspondent aux données réelles."
 msgstr "Den viste statistik svarer til de faktiske data."
 
+msgid "Lien de partage public"
+msgstr "Offentligt delingslink"
+
 msgid "Lien invalide"
 msgstr "Ugyldigt link"
+
+msgid "Lien public"
+msgstr "Offentligt link"
 
 msgid "Ligne"
 msgstr "Række"
@@ -1293,6 +1626,9 @@ msgstr "Tag styringen over dine datas livscyklus."
 
 msgid "Membre depuis"
 msgstr "Medlem siden"
+
+msgid "Mensuel"
+msgstr "Månedligt"
 
 msgid "Mes règles"
 msgstr "Mine regler"
@@ -1375,6 +1711,18 @@ msgstr "Rensning startet i baggrunden. Siden opdateres automatisk."
 msgid "Nettoyage lancé sur « %(name)s »"
 msgstr "Oprydning startet på « %(name)s »"
 
+msgid "Nettoyage par lots"
+msgstr "Batchrensning"
+
+msgid "Nettoyage par lots : %(count)s fichier(s) lancé(s)"
+msgstr "Batchrensning: %(count)s fil(er) startet"
+
+msgid "Nettoyage par lots — DataZen"
+msgstr "Batchrensning — DataZen"
+
+msgid "Nettoyage planifié de « %(name)s » lancé."
+msgstr "Planlagt rensning af “%(name)s” startet."
+
 msgid "Nettoyage terminé"
 msgstr "Oprydning fuldført"
 
@@ -1402,20 +1750,14 @@ msgstr "Rensede"
 msgid "Niveau"
 msgstr "Niveau"
 
-msgid "No exact duplicates"
-msgstr "Ingen eksakte dubletter"
-
-msgid "No missing or unknown values"
-msgstr "Ingen manglende eller ukendte værdier"
-
-msgid "No potential duplicates"
-msgstr "Ingen mulige dubletter"
-
 msgid "Nom"
 msgstr "Navn"
 
 msgid "Nom d'utilisateur"
 msgstr "Brugernavn"
+
+msgid "Nom de la colonne unique (ex. email). Laissez vide pour ne supprimer que les lignes 100 % identiques. Une colonne absente d'un fichier est ignorée pour ce fichier."
+msgstr "Navnet på den unikke kolonne (f.eks. email). Lad stå tomt for kun at fjerne 100% identiske rækker. En kolonne, der mangler i en fil, ignoreres for den fil."
 
 msgid "Nom de la règle"
 msgstr "Regelnavn"
@@ -1431,6 +1773,9 @@ msgstr "Antal kald"
 
 msgid "Nombre d'occurrences"
 msgstr "Antal forekomster"
+
+msgid "Nombre de colonnes concernées"
+msgstr "Antal berørte kolonner"
 
 msgid "Nombre de nettoyages et score moyen par semaine."
 msgstr "Antal oprydninger og gennemsnitlig score pr. uge."
@@ -1498,11 +1843,29 @@ msgstr "Nyt billede klar"
 msgid "Nouvelle valeur"
 msgstr "Ny værdi"
 
+msgid "Numérique"
+msgstr "Numerisk"
+
+msgid "Numéro de version"
+msgstr "Versionsnummer"
+
+msgid "Options de nettoyage"
+msgstr "Rensningsindstillinger"
+
 msgid "Opération"
 msgstr "Handling"
 
+msgid "Opérations appliquées"
+msgstr "Anvendte handlinger"
+
 msgid "Opérations de nettoyage"
 msgstr "Oprydningshandlinger"
+
+msgid "Opérations de v%(n)s"
+msgstr "Handlinger i v%(n)s"
+
+msgid "Opérations qui seraient appliquées"
+msgstr "Handlinger, der ville blive anvendt"
 
 msgid "Organisation"
 msgstr "Organisation"
@@ -1528,6 +1891,27 @@ msgstr "Side"
 msgid "Parcourir…"
 msgstr "Vælg fil"
 
+msgid "Partage"
+msgstr "Deling"
+
+msgid "Partage créé."
+msgstr "Deling oprettet."
+
+msgid "Partage de « %(name)s » avec %(target)s"
+msgstr "Deling af “%(name)s” med %(target)s"
+
+msgid "Partage révoqué."
+msgstr "Deling tilbagekaldt."
+
+msgid "Partage — %(name)s"
+msgstr "Deling — %(name)s"
+
+msgid "Partages"
+msgstr "Delinger"
+
+msgid "Partagé le"
+msgstr "Delt den"
+
 msgid "Pas encore de compte ?"
 msgstr "Har du endnu ikke en konto?"
 
@@ -1542,6 +1926,27 @@ msgstr "Profilbillede"
 
 msgid "Pilotage"
 msgstr "Styring"
+
+msgid "Planification"
+msgstr "Plan"
+
+msgid "Planification %(state)s."
+msgstr "Plan %(state)s."
+
+msgid "Planification créée pour « %(name)s »"
+msgstr "Plan oprettet for “%(name)s”"
+
+msgid "Planification créée."
+msgstr "Plan oprettet."
+
+msgid "Planification supprimée."
+msgstr "Plan slettet."
+
+msgid "Planifications"
+msgstr "Planer"
+
+msgid "Planifications — DataZen"
+msgstr "Planer — DataZen"
 
 msgid "Plus fréquent"
 msgstr "Mest hyppige"
@@ -1558,11 +1963,17 @@ msgstr "Vægtning"
 msgid "Premier quartile"
 msgstr "Første kvartil"
 
+msgid "Première exécution"
+msgstr "Første kørsel"
+
 msgid "Prendre une photo avec la caméra"
 msgstr "Tag et billede med kameraet"
 
 msgid "Problème"
 msgstr "Problem"
+
+msgid "Problèmes"
+msgstr "Problemer"
 
 msgid "Problèmes après"
 msgstr "Problemer efter"
@@ -1575,6 +1986,9 @@ msgstr "Fundne problemer"
 
 msgid "Problèmes restants"
 msgstr "Resterende problemer"
+
+msgid "Prochaine exécution"
+msgstr "Næste kørsel"
 
 msgid "Productivité"
 msgstr "Produktivitet"
@@ -1594,8 +2008,17 @@ msgstr "Offentlig profil"
 msgid "Profil visible publiquement"
 msgstr "Profil synlig offentligt"
 
+msgid "Profilage statistique"
+msgstr "Statistisk profilering"
+
 msgid "Profils"
 msgstr "Profiler"
+
+msgid "Programmer"
+msgstr "Planlæg"
+
+msgid "Programmez un nettoyage récurrent : les mêmes options s'appliquent à chaque échéance, sans intervention de votre part."
+msgstr "Planlæg en tilbagevendende rensning: de samme valgmuligheder gælder ved hver forfaldsdato, uden din indblanding."
 
 msgid "Progression"
 msgstr "Fremgang"
@@ -1642,6 +2065,9 @@ msgstr "Q1"
 msgid "Q3"
 msgstr "Q3"
 
+msgid "Qualité : v%(before)s → v%(after)s"
+msgstr "Kvalitet: v%(before)s → v%(after)s"
+
 msgid "Qualité moyenne"
 msgstr "Gennemsnitlig kvalitet"
 
@@ -1650,6 +2076,9 @@ msgstr "Kvalitet pr. kolonne"
 
 msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
 msgstr "Et par ord om dig, dit team, dine datasæt…"
+
+msgid "Quotidien"
+msgstr "Dagligt"
 
 msgid "Raccourcis clavier"
 msgstr "Tastaturgenveje"
@@ -1708,6 +2137,12 @@ msgstr "Søg"
 msgid "Rechercher (Ctrl+K)"
 msgstr "Søg (Ctrl+K)"
 
+msgid "Rechercher un compte"
+msgstr "Søg en konto"
+
+msgid "Rechercher un compte…"
+msgstr "Søg en konto…"
+
 msgid "Rechercher un fichier"
 msgstr "Søg efter en fil"
 
@@ -1750,11 +2185,20 @@ msgstr "Rapporteret %(reported)s mod genberegnet %(actual)s"
 msgid "Restauration"
 msgstr "Gendannelse"
 
+msgid "Restauration de la version %(number)s de « %(name)s »"
+msgstr "Gendanner version %(number)s af “%(name)s”"
+
 msgid "Restauration de « %(name)s »"
 msgstr "Gendannelse af « %(name)s »"
 
+msgid "Restauration impossible : %(error)s"
+msgstr "Gendannelse mislykkedes: %(error)s"
+
 msgid "Restaurer"
 msgstr "Gendan"
+
+msgid "Restaurer cette version comme version courante ?"
+msgstr "Gendan denne version som den aktuelle?"
 
 msgid "Retour à la connexion"
 msgstr "Tilbage til login"
@@ -1777,6 +2221,9 @@ msgstr "Reglen “%(name)s” blev slettet."
 msgid "Règles"
 msgstr "Regler"
 
+msgid "Règles appliquées"
+msgstr "Anvendte regler"
+
 msgid "Règles de nettoyage"
 msgstr "Rensningsregler"
 
@@ -1797,6 +2244,9 @@ msgstr "Fordeling af problemer"
 
 msgid "Répartition des problèmes restants"
 msgstr "Fordeling af resterende problemer"
+
+msgid "Résultat de la simulation : rien n'a été écrit. Confirmez le nettoyage pour appliquer réellement ces changements."
+msgstr "Simuleringsresultat: der blev ikke skrevet noget. Bekræft rensningen for faktisk at anvende disse ændringer."
 
 msgid "Résultats"
 msgstr "Resultater"
@@ -1822,8 +2272,32 @@ msgstr "Tilbagekald"
 msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
 msgstr "Tilbagekald dette token? Integrationer, der bruger det, holder op med at virke."
 
+msgid "Révoquer ce partage ?"
+msgstr "Tilbagekald denne deling?"
+
 msgid "Révoqué"
 msgstr "Tilbagekaldt"
+
+msgid "Rôle"
+msgstr "Rolle"
+
+msgid "Rôle de « %(name)s » : %(before)s → %(after)s"
+msgstr "Rolle for “%(name)s”: %(before)s → %(after)s"
+
+msgid "Rôle de « %(name)s » mis à jour."
+msgstr "Rollen for “%(name)s” er opdateret."
+
+msgid "Rôle du compte"
+msgstr "Kontoens rolle"
+
+msgid "Rôle inconnu."
+msgstr "Ukendt rolle."
+
+msgid "Rôles et permissions"
+msgstr "Roller og tilladelser"
+
+msgid "Rôles et permissions — DataZen"
+msgstr "Roller og tilladelser — DataZen"
 
 msgid "S'inscrire"
 msgstr "Tilmeld dig"
@@ -1834,8 +2308,14 @@ msgstr "Indtast <strong>%(username)s</strong> for at bekræfte"
 msgid "Score"
 msgstr "Score"
 
+msgid "Score après"
+msgstr "Score efter"
+
 msgid "Score après nettoyage"
 msgstr "Score efter oprydning"
+
+msgid "Score avant"
+msgstr "Score før"
 
 msgid "Score avant nettoyage"
 msgstr "Score før oprydning"
@@ -1864,6 +2344,9 @@ msgstr "Kvalitetsscore efter"
 msgid "Score qualité avant"
 msgstr "Kvalitetsscore før"
 
+msgid "Scores mesurés lors de chaque nettoyage."
+msgstr "Scorer målt ved hver rensning."
+
 msgid "Se connecter"
 msgstr "Log ind"
 
@@ -1876,11 +2359,20 @@ msgstr "Naviger i resultaterne"
 msgid "Sert uniquement à la réinitialisation du mot de passe."
 msgstr "Bruges kun til nulstilling af adgangskoden."
 
+msgid "Seul le propriétaire peut gérer les partages."
+msgstr "Kun ejeren kan administrere delinger."
+
+msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
+msgstr "Kun de første rettelser vises; den rigtige rensning anvender dem alle."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "Kun skemaerne http og https er tilladt."
 
 msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
 msgstr "Hvis der findes en konto med denne adresse, er der netop sendt en e-mail med nulstillingslinket."
+
+msgid "Simulation — aucune modification enregistrée"
+msgstr "Simulering — ingen ændring gemt"
 
 msgid "Site web"
 msgstr "Websted"
@@ -1924,6 +2416,9 @@ msgstr "Slet %(name)s"
 msgid "Supprimer ce webhook ?"
 msgstr "Slet denne webhook?"
 
+msgid "Supprimer cette planification ?"
+msgstr "Slet denne plan?"
+
 msgid "Supprimer définitivement ce fichier et toutes ses données ?"
 msgstr "Slet denne fil og alle dens data permanent?"
 
@@ -1948,6 +2443,12 @@ msgstr "Fjern overflødige mellemrum"
 msgid "Supprimer mon compte"
 msgstr "Slet min konto"
 
+msgid "Suspendre"
+msgstr "Sæt på pause"
+
+msgid "Suspendue"
+msgstr "Sat på pause"
+
 msgid "Synthèse"
 msgstr "Resumé"
 
@@ -1959,6 +2460,18 @@ msgstr "Sikkerhed"
 
 msgid "Sélectionner un fichier"
 msgstr "Vælg en fil"
+
+msgid "Sélectionnez au moins un fichier."
+msgstr "Vælg mindst én fil."
+
+msgid "Sélectionnez deux versions différentes pour afficher la comparaison."
+msgstr "Vælg to forskellige versioner for at vise sammenligningen."
+
+msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
+msgstr "Vælg op til %(limit)s filer: derover afkortes batchen for ikke at overbelaste serveren."
+
+msgid "Sévérité"
+msgstr "Alvorlighedsgrad"
 
 msgid "Tableau de bord"
 msgstr "Dashboard"
@@ -1999,8 +2512,17 @@ msgstr "Alt er inkluderet"
 msgid "Tout voir"
 msgstr "Se alt"
 
+msgid "Toute personne possédant ce lien peut consulter le fichier. Révoquez le partage pour l'invalider immédiatement."
+msgstr "Alle med dette link kan se filen. Tilbagekald delingen for at ugyldiggøre den med det samme."
+
+msgid "Toute personne possédant le lien peut consulter le jeu de données, sans compte. Le lien est révocable et peut expirer."
+msgstr "Alle med linket kan se datasættet uden en konto. Linket kan tilbagekaldes og kan udløbe."
+
 msgid "Toutes les actions"
 msgstr "Alle handlinger"
+
+msgid "Toutes les valeurs renseignées sont valides"
+msgstr "Alle udfyldte værdier er gyldige"
 
 msgid "Traçabilité"
 msgstr "Sporbarhed"
@@ -2014,11 +2536,17 @@ msgstr "Type"
 msgid "Type de correction"
 msgstr "Rettelsestype"
 
+msgid "Type hétérogène"
+msgstr "Blandet type"
+
 msgid "Téléchargement"
 msgstr "Download"
 
 msgid "Téléchargement de « %(name)s »"
 msgstr "Download af « %(name)s »"
+
+msgid "Téléphone"
+msgstr "Telefon"
 
 msgid "Téléphone invalide"
 msgstr "Ugyldigt telefonnummer"
@@ -2028,6 +2556,9 @@ msgstr "Telefonnummer i ikke-standardformat"
 
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Ikke-standardiserede telefonnumre (%(column)s):"
+
+msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
+msgstr "Uploader, renser, planlægger og sletter egne filer."
 
 msgid "Téléversement"
 msgstr "Upload"
@@ -2058,6 +2589,9 @@ msgstr "En administratorkonto kan ikke slettes fra denne side."
 
 msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
 msgstr "En administratorkonto kan ikke slettes fra denne side. Brug"
+
+msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
+msgstr "Et uddrag af filen: de første rækker er nok til at vurdere dataene."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "Et dashboard måler kvaliteten før / efter og forklarer hvert tabt point."
@@ -2101,11 +2635,20 @@ msgstr "Erstatningsværdi"
 msgid "Valeur de remplacement (pour le remplissage)."
 msgstr "Erstatningsværdi (til udfyldning)."
 
+msgid "Valeur du moment centré"
+msgstr "Centralmomentets værdi"
+
+msgid "Valeur inconnue"
+msgstr "Ukendt værdi"
+
 msgid "Valeur manquante"
 msgstr "Manglende værdi"
 
 msgid "Valeur numérique invalide"
 msgstr "Ugyldig numerisk værdi"
+
+msgid "Valeur unique « %(value)s » sur %(count)s ligne(s)."
+msgstr "Enkelt værdi “%(value)s” over %(count)s række(r)."
 
 msgid "Valeurs aberrantes"
 msgstr "Afvigende værdier"
@@ -2149,6 +2692,36 @@ msgstr "Validér og ret e-mailadresser (kun åbenlyse fejl)"
 msgid "Validité"
 msgstr "Gyldighed"
 
+msgid "Variance"
+msgstr "Varians"
+
+msgid "Version"
+msgstr "Version"
+
+msgid "Version %(number)s restaurée."
+msgstr "Version %(number)s gendannet."
+
+msgid "Version comparée"
+msgstr "Sammenlignet version"
+
+msgid "Version courante"
+msgstr "Aktuel version"
+
+msgid "Version de référence"
+msgstr "Referenceversion"
+
+msgid "Versions"
+msgstr "Versioner"
+
+msgid "Versions enregistrées ("
+msgstr "Registrerede versioner ("
+
+msgid "Versions — %(name)s"
+msgstr "Versioner — %(name)s"
+
+msgid "Vide pour créer un lien public."
+msgstr "Tomt for at oprette et offentligt link."
+
 msgid "Visualisations statistiques"
 msgstr "Statistiske visualiseringer"
 
@@ -2170,6 +2743,9 @@ msgstr "Dine data fortjener<br> <span class=\"dz-gradient-text\">at være fejlfr
 msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
 msgstr "Dine filer bliver hos dig. DataZen viser, hvad der overskrider den valgte opbevaringsperiode, og sletter intet uden din accept."
 
+msgid "Vos jeux de données"
+msgstr "Dine datasæt"
+
 msgid "Votre espace de travail"
 msgstr "Dit arbejdsområde"
 
@@ -2188,6 +2764,18 @@ msgstr "Dit profilbillede er blevet slettet."
 msgid "Votre profil a été mis à jour."
 msgstr "Din profil er blevet opdateret."
 
+msgid "Votre rôle ne permet pas de créer une planification."
+msgstr "Din rolle tillader ikke at oprette en plan."
+
+msgid "Votre rôle ne permet pas de lancer un nettoyage. Contactez un administrateur."
+msgstr "Din rolle tillader ikke at starte en rensning. Kontakt en administrator."
+
+msgid "Votre rôle ne permet pas de modifier les données. Contactez un administrateur."
+msgstr "Din rolle tillader ikke at ændre data. Kontakt en administrator."
+
+msgid "Vous"
+msgstr "Dig"
+
 msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
 msgstr "Du har kontrollen: intet slettes uden din handling."
 
@@ -2202,6 +2790,9 @@ msgstr "Du har ikke adgang til denne webhook."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "Du har ikke adgang til denne regel."
+
+msgid "Vous ne pouvez pas modifier votre propre rôle."
+msgstr "Du kan ikke ændre din egen rolle."
 
 msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
 msgstr "Samlet visning af kvaliteten af dine data, alle filer inkluderet."
@@ -2344,6 +2935,9 @@ msgstr "f.eks. email (tom = alle kolonner)"
 msgid "excellente qualité"
 msgstr "fremragende kvalitet"
 
+msgid "faible"
+msgstr "lav"
+
 msgid "fermer"
 msgstr "luk"
 
@@ -2355,6 +2949,9 @@ msgstr "ukendt format"
 
 msgid "généré le"
 msgstr "genereret"
+
+msgid "haute"
+msgstr "høj"
 
 msgid "https://exemple.com"
 msgstr "https://exemple.com"
@@ -2374,6 +2971,9 @@ msgstr "uændret"
 msgid "jours"
 msgstr "dage"
 
+msgid "lien public"
+msgstr "offentligt link"
+
 msgid "lignes"
 msgstr "linjer"
 
@@ -2382,6 +2982,9 @@ msgstr "forkert længde/format"
 
 msgid "matplotlib"
 msgstr "matplotlib"
+
+msgid "moyenne"
+msgstr "middel"
 
 msgid "naviguer"
 msgstr "naviger"
@@ -2437,6 +3040,9 @@ msgstr "fjernet"
 msgid "sur"
 msgstr "af"
 
+msgid "suspendue"
+msgstr "sat på pause"
+
 msgid "texte"
 msgstr "tekst"
 
@@ -2446,11 +3052,17 @@ msgstr "telefon"
 msgid "unicité"
 msgstr "unikhed"
 
+msgid "v%(n)s"
+msgstr "v%(n)s"
+
 msgid "valeur(s) extrême(s)"
 msgstr "ekstrem værdi(er)"
 
 msgid "validité"
 msgstr "gyldighed"
+
+msgid "« %(value)s » représente %(percent)s %% des valeurs renseignées."
+msgstr "“%(value)s” udgør %(percent)s %% af de udfyldte værdier."
 
 msgid "· ancien_id :"
 msgstr "· gammelt_id:"
@@ -2476,11 +3088,17 @@ msgstr "Oprydning mislykkedes"
 msgid "Échec du nettoyage de « %(name)s »"
 msgstr "Oprydning af « %(name)s » mislykkedes"
 
+msgid "Échec du nettoyage planifié : %(error)s"
+msgstr "Planlagt rensning mislykkedes: %(error)s"
+
+msgid "Éditeur"
+msgstr "Redaktør"
+
 msgid "Étape 1"
 msgstr "Trin 1"
 
 msgid "État"
-msgstr "Tilstand"
+msgstr "Status"
 
 msgid "Évolution hebdomadaire du score de qualité"
 msgstr "Ugentlig udvikling i kvalitetsscoren"
@@ -2518,17 +3136,32 @@ msgstr "— Alle kolonner —"
 msgid "← Retour au fichier"
 msgstr "← Tilbage til filen"
 
+msgid "← Retour à l'historique"
+msgstr "← Tilbage til historikken"
+
 msgid "⌨️ Raccourcis"
 msgstr "⌨️ Genveje"
 
 msgid "⌨️ Raccourcis clavier"
 msgstr "⌨️ Tastaturgenveje"
 
+msgid "⏱️ Nettoyages planifiés"
+msgstr "⏱️ Planlagte rensninger"
+
+msgid "⏱️ Planifications"
+msgstr "⏱️ Planer"
+
 msgid "⏳ Fichiers expirés"
 msgstr "⏳ Udløbne filer"
 
 msgid "⏳ Nettoyage en cours…"
 msgstr "⏳ Rensning i gang…"
+
+msgid "♻️ Restaurer"
+msgstr "♻️ Gendan"
+
+msgid "⚙️ Opérations communes"
+msgstr "⚙️ Fælles handlinger"
 
 msgid "⚙️ Règles de nettoyage personnalisées"
 msgstr "⚙️ Brugerdefinerede rensningsregler"
@@ -2538,6 +3171,9 @@ msgstr "⚙️ Brugerdefinerede regler"
 
 msgid "⚙️ Régler la durée"
 msgstr "⚙️ Juster perioden"
+
+msgid "⚠️ Anomalies signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ Afvigelser rapporteres kun — ændres aldrig automatisk."
 
 msgid "⚠️ Points nécessitant une vérification humaine"
 msgstr "⚠️ Punkter, der kræver manuel gennemgang"
@@ -2587,8 +3223,14 @@ msgstr "✓ Kopieret"
 msgid "➕ Nouveau jeton"
 msgstr "➕ Ny token"
 
+msgid "➕ Nouveau partage"
+msgstr "➕ Ny deling"
+
 msgid "➕ Nouveau webhook"
 msgstr "➕ Ny webhook"
+
+msgid "➕ Nouvelle planification"
+msgstr "➕ Ny plan"
 
 msgid "➕ Nouvelle règle"
 msgstr "➕ Ny regel"
@@ -2598,6 +3240,9 @@ msgstr "➕ Upload en fil"
 
 msgid "⬇️ Exporter mes données (JSON)"
 msgstr "⬇️ Eksportér mine data (JSON)"
+
+msgid "⬇️ Télécharger"
+msgstr "⬇️ Hent"
 
 msgid "⬇️ Télécharger le fichier nettoyé"
 msgstr "⬇️ Download den rensede fil"
@@ -2628,6 +3273,9 @@ msgstr "👁️ Se rapporten"
 
 msgid "👤 Mon profil"
 msgstr "👤 Min profil"
+
+msgid "📄 Fichiers à nettoyer"
+msgstr "📄 Filer der skal renses"
 
 msgid "📈 Analyse exploratoire"
 msgstr "📈 Eksplorativ analyse"
@@ -2665,8 +3313,14 @@ msgstr "📊 Dashboard"
 msgid "📊 Tableau de bord global"
 msgstr "📊 Globalt dashboard"
 
+msgid "📋 Mes planifications ("
+msgstr "📋 Mine planer ("
+
 msgid "📋 Mes règles ("
 msgstr "📋 Mine regler ("
+
+msgid "📋 Partages actifs ("
+msgstr "📋 Aktive delinger ("
 
 msgid "📋 Qualité des colonnes"
 msgstr "📋 Kolonnekvalitet"
@@ -2704,11 +3358,26 @@ msgstr "🔌 API og adgangstokens"
 msgid "🔌 Jetons d'API"
 msgstr "🔌 API-tokens"
 
+msgid "🔍 Aperçu (simulation)"
+msgstr "🔍 Forhåndsvisning (simulering)"
+
+msgid "🔍 Aperçu avant / après (simulation)"
+msgstr "🔍 Før / efter-forhåndsvisning (simulering)"
+
 msgid "🔍 Avant / après"
 msgstr "🔍 Før / efter"
 
 msgid "🔍 Comparaison avant / après"
 msgstr "🔍 Sammenligning før / efter"
+
+msgid "🔍 Comparer"
+msgstr "🔍 Sammenlign"
+
+msgid "🔍 Comparer des versions"
+msgstr "🔍 Sammenlign versioner"
+
+msgid "🔍 Comparer deux versions"
+msgstr "🔍 Sammenlign to versioner"
 
 msgid "🔍 Doublons"
 msgstr "🔍 Dubletter"
@@ -2734,6 +3403,9 @@ msgstr "🔎 Forklaring af scoren"
 msgid "🔑 Mes jetons"
 msgstr "🔑 Mine tokens"
 
+msgid "🔑 Votre lien de partage public"
+msgstr "🔑 Dit offentlige delingslink"
+
 msgid "🔑 Votre nouveau jeton"
 msgstr "🔑 Din nye token"
 
@@ -2748,6 +3420,9 @@ msgstr "🔔 Mine webhooks"
 
 msgid "🔔 Webhooks"
 msgstr "🔔 Webhooks"
+
+msgid "🔗 Partager ce jeu de données"
+msgstr "🔗 Del dette datasæt"
 
 msgid "🔗 Voir mon profil public"
 msgstr "🔗 Se min offentlige profil"
@@ -2770,8 +3445,17 @@ msgstr "🕓 Aktivitet"
 msgid "🕓 Dernières activités"
 msgstr "🕓 Seneste aktiviteter"
 
+msgid "🕓 Historique des versions"
+msgstr "🕓 Versionshistorik"
+
 msgid "🕓 Journal d'activité"
 msgstr "🕓 Aktivitetslog"
+
+msgid "🕓 Versions"
+msgstr "🕓 Versioner"
+
+msgid "🗂️ Nettoyage par lots"
+msgstr "🗂️ Batchrensning"
 
 msgid "🗃️ Fichiers récents"
 msgstr "🗃️ Seneste filer"
@@ -2797,11 +3481,17 @@ msgstr "🚀 Nyt i pro-området"
 msgid "🚀 Premier appel"
 msgstr "🚀 Første kald"
 
+msgid "🛡️ Rôles et permissions"
+msgstr "🛡️ Roller og tilladelser"
+
 msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
 msgstr "🟢 Behold række 1 (slet de øvrige)"
 
 msgid "🟣 Fusionner toutes les lignes"
 msgstr "🟣 Flet alle rækker"
+
+msgid "🧩 Anomalies structurelles"
+msgstr "🧩 Strukturelle afvigelser"
 
 msgid "🧭 Dimensions les plus fragiles"
 msgstr "🧭 Svageste dimensioner"

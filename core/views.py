@@ -36,6 +36,7 @@ from .models import ActivityLog, ApiToken, CleaningRule, DataFile, Profile, Webh
 from .services import activity as activity_service
 from .services import api as api_service
 from .services import overview as overview_service
+from .services import permissions as permissions_service
 from .services import retention as retention_service
 from .services.async_runner import start_cleaning
 from .services.charts import (
@@ -49,11 +50,13 @@ from .services.charts import (
 from .services.cleaning import restore_semantic_types
 from .services.comparison import load_comparison
 from .services.markdown import markdown_to_html
+from .services.operations import render_operations
 from .services.pdf import build_pdf
 from .services.pipeline import (
     append_change_log,
     build_cleaned_context,
     overwrite_cleaned_file,
+    preview_cleaning,
     read_change_log,
     run_cleaning,
     stats as _stats,
@@ -185,13 +188,14 @@ def apply_retention(user):
 def _visible_files(user):
     """Renvoie les fichiers visibles par l'utilisateur connecté.
 
-    Un superutilisateur voit tous les fichiers ; un compte ordinaire ne voit
-    que les siens. L'application exige un compte : aucun fichier n'est
-    accessible sans être connecté.
+    Trois sources se cumulent : la propriété, le partage nominatif et, pour
+    un administrateur, l'ensemble du catalogue. L'application exige un
+    compte : aucun fichier n'est accessible sans être connecté.
     """
-    if user.is_superuser:
+    if user.is_superuser or permissions_service.is_admin(user):
         return DataFile.objects.all()
-    return DataFile.objects.filter(owner=user)
+    shared_ids = permissions_service.shared_dataset_ids(user)
+    return DataFile.objects.filter(Q(owner=user) | Q(pk__in=shared_ids)).distinct()
 
 
 def _get_visible_file(request, pk):
@@ -204,10 +208,36 @@ def _get_visible_file(request, pk):
 
 
 def _can_access(user, data_file):
-    """Indique si l'utilisateur connecté peut accéder au fichier."""
-    if user.is_superuser:
+    """Indique si l'utilisateur connecté peut consulter le fichier."""
+    return permissions_service.can_view(user, data_file)
+
+
+def _require_edit(request, data_file=None):
+    """Vérifie que le compte peut transformer les données.
+
+    Un lecteur consulte et télécharge ; il ne nettoie ni ne supprime. Le
+    contrôle est repris ici plutôt que dans le gabarit seul, car une page HTML
+    ne protège rien : la requête doit être refusée côté serveur.
+    """
+    if permissions_service.can_edit(request.user):
         return True
-    return data_file.owner_id == user.pk
+    messages.error(
+        request,
+        _("Votre rôle ne permet pas de modifier les données. Contactez un administrateur."),
+    )
+    return False
+
+
+def _require_download(request, data_file):
+    """Vérifie que le compte peut exporter les fichiers du jeu de données.
+
+    Un partage en consultation seule autorise l'affichage mais pas l'export :
+    le contrôle est repris ici plutôt que dans le gabarit, qui ne protège rien.
+    """
+    if permissions_service.can_download(request.user, data_file):
+        return True
+    messages.error(request, _("Ce partage ne permet pas le téléchargement."))
+    return False
 
 
 def dataset_detail(request, pk):
@@ -255,8 +285,39 @@ def dataset_detail(request, pk):
             pass
 
     if request.method == "POST" and form.is_valid():
+        if not _require_edit(request, data_file):
+            return redirect("core:dataset_detail", pk=data_file.pk)
         options = dict(form.cleaned_data)
         rules = _selected_rules(request)
+
+        # Aperçu avant/après : on calcule exactement le même nettoyage que
+        # ci-dessous, mais sans rien écrire. L'utilisateur décide ensuite de
+        # confirmer (« action=clean », le cas par défaut) ou de réajuster ses
+        # options.
+        if request.POST.get("action") == "preview":
+            context["preview"] = _build_preview(data_file, options, rules)
+            if context["preview"] is None:
+                messages.error(
+                    request,
+                    _("Impossible de simuler le nettoyage : le fichier est illisible."),
+                )
+            else:
+                activity_service.record(
+                    request.user,
+                    ActivityLog.Action.CLEAN,
+                    _("Aperçu de nettoyage sur « %(name)s »")
+                    % {"name": data_file.original_name},
+                    data_file=data_file,
+                )
+                messages.info(
+                    request,
+                    _(
+                        "Aperçu calculé : aucune modification n'a été enregistrée. "
+                        "Confirmez pour appliquer le nettoyage."
+                    ),
+                )
+            return render(request, "core/dataset_detail.html", context)
+
         # Traitement asynchrone : le nettoyage s'exécute en arrière-plan et la
         # page affiche une barre de progression (polling JSON).
         start_cleaning(
@@ -282,6 +343,26 @@ def dataset_detail(request, pk):
         return redirect("core:dataset_detail", pk=data_file.pk)
 
     return render(request, "core/dataset_detail.html", context)
+
+
+def _build_preview(data_file, options, rules):
+    """Prépare l'aperçu avant/après affiché sur la page de détail.
+
+    Le service renvoie déjà la comparaison complète ; on ne fait ici que
+    traduire les libellés des opérations **au moment de l'affichage** (jamais au
+    moment du calcul), pour que l'aperçu suive la langue active comme le reste
+    de la page et ne reproduise pas le bug des libellés figés.
+    """
+    preview = preview_cleaning(data_file, options, rules)
+    if preview is None:
+        return None
+    preview["rendered_operations"] = render_operations(preview["operations"])
+    # Repère « score » désigné par son unité (le seul indicateur en %) plutôt
+    # que par son libellé traduit, qui serait cassant d'une langue à l'autre.
+    preview["score_indicator"] = next(
+        (row for row in preview["indicators"] if row.get("unit") == "%"), None
+    )
+    return preview
 
 
 def _cleaned_context(data_file, request):
@@ -449,6 +530,9 @@ def download_cleaned(request, pk):
     if data_file is None:
         return redirect("core:index")
 
+    if not _require_download(request, data_file):
+        return redirect("core:dataset_detail", pk=pk)
+
     if not data_file.cleaned_file:
         messages.error(request, _("Aucun fichier nettoyé n'est disponible."))
         return redirect("core:dataset_detail", pk=pk)
@@ -515,6 +599,9 @@ def download_original(request, pk):
     data_file = _get_visible_file(request, pk)
     if data_file is None:
         return redirect("core:index")
+
+    if not _require_download(request, data_file):
+        return redirect("core:dataset_detail", pk=pk)
 
     if not data_file.file:
         messages.error(request, _("Aucun fichier d'origine n'est disponible."))
@@ -585,6 +672,8 @@ def delete_dataset(request, pk):
 
     if request.method != "POST":
         return redirect("core:dataset_detail", pk=pk)
+    if not _require_edit(request, data_file):
+        return redirect("core:dataset_detail", pk=pk)
 
     name = data_file.original_name
     for field in (
@@ -615,6 +704,9 @@ def download_report(request, pk):
     data_file = _get_visible_file(request, pk)
     if data_file is None:
         return redirect("core:index")
+
+    if not _require_download(request, data_file):
+        return redirect("core:dataset_detail", pk=pk)
 
     if not data_file.report_file:
         messages.error(request, _("Aucun rapport de nettoyage n'est disponible."))
@@ -672,6 +764,9 @@ def download_report_html(request, pk):
     data_file = _get_visible_file(request, pk)
     if data_file is None:
         return redirect("core:index")
+
+    if not _require_download(request, data_file):
+        return redirect("core:dataset_detail", pk=pk)
 
     if not data_file.report_file:
         messages.error(request, _("Aucun rapport de nettoyage n'est disponible."))
@@ -781,6 +876,9 @@ def download_change_log(request, pk):
     if data_file is None:
         return redirect("core:index")
 
+    if not _require_download(request, data_file):
+        return redirect("core:dataset_detail", pk=pk)
+
     if not data_file.change_log_file:
         messages.error(
             request, _("Aucun journal des modifications n'est disponible.")
@@ -806,6 +904,9 @@ def download_json(request, pk):
     data_file = _get_visible_file(request, pk)
     if data_file is None:
         return redirect("core:index")
+
+    if not _require_download(request, data_file):
+        return redirect("core:dataset_detail", pk=pk)
 
     if not data_file.cleaned_file:
         messages.error(request, _("Aucun fichier nettoyé n'est disponible."))
@@ -1174,6 +1275,8 @@ def profile_public(request, username):
 def rules_list(request):
     """Liste et création des règles de nettoyage personnalisées."""
     if request.method == "POST":
+        if not _require_edit(request):
+            return redirect("core:rules_list")
         form = CleaningRuleForm(request.POST)
         if form.is_valid():
             rule = form.save(commit=False)

@@ -17,6 +17,7 @@ from difflib import SequenceMatcher
 
 import pandas as pd
 from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy
 
 from .cleaning import (
     _DATE_FORMATS,
@@ -33,6 +34,7 @@ from .cleaning import (
     is_placeholder_email,
     is_unknown,
 )
+from .operations import render_score_explanations, score_explanation_entry
 
 # Format d'adresse email raisonnable (local@domaine.ext).
 EMAIL_RE = re.compile(r"^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$")
@@ -174,6 +176,136 @@ def detect_unknown(df):
         if count:
             result[col] = count
     return result
+
+
+def detect_structural_anomalies(df):
+    """Détecte les anomalies **structurelles** d'un jeu de données.
+
+    Complète la détection ligne à ligne (formats, doublons) par un diagnostic
+    de la *forme* de chaque colonne, là où se cachent les problèmes qui
+    faussent silencieusement les analyses :
+
+    - ``constante`` : une seule valeur distincte renseignée — la colonne
+      n'apporte aucune information discriminante.
+    - ``vide`` : aucune valeur renseignée (ni valeur, ni « Inconnu »).
+    - ``identifiant_non_unique`` : une colonne d'identifiant contient des
+      doublons — la clé supposée n'en est donc pas une.
+    - ``quasi_constante`` : une valeur représente au moins 95 % des valeurs
+      renseignées au-delà d'un échantillon minimal — variance quasi nulle.
+    - ``type_mixte`` : la colonne mélange des valeurs numériques et
+      non numériques (au moins 20 % de chaque), signe d'une saisie
+      hétérogène ou d'une unité mélangée.
+
+    Les valeurs manquantes et « Inconnu » sont exclues de l'analyse. La
+    fonction est **non destructive** et ne lève jamais.
+
+    Renvoie une liste de dictionnaires ``{colonne, type, severite, detail}``
+    triée par sévérité décroissante puis par nom de colonne.
+    """
+    anomalies = []
+    n_rows = len(df)
+
+    for col in df.columns:
+        values = [v for v in df[col] if (not pd.isna(v)) and (not is_unknown(v))]
+        n_filled = len(values)
+
+        if n_filled == 0:
+            anomalies.append(
+                {
+                    "colonne": str(col),
+                    "type": "vide",
+                    "severite": "haute",
+                    "detail": _("Aucune valeur renseignée sur %(rows)s ligne(s).")
+                    % {"rows": n_rows},
+                }
+            )
+            continue
+
+        distinct = {str(v).strip() for v in values}
+
+        if len(distinct) == 1:
+            anomalies.append(
+                {
+                    "colonne": str(col),
+                    "type": "constante",
+                    "severite": "moyenne",
+                    "detail": _("Valeur unique « %(value)s » sur %(count)s ligne(s).")
+                    % {"value": next(iter(distinct))[:60], "count": n_filled},
+                }
+            )
+            continue
+
+        if _is_identifier(col):
+            duplicates = n_filled - len(distinct)
+            if duplicates > 0:
+                anomalies.append(
+                    {
+                        "colonne": str(col),
+                        "type": "identifiant_non_unique",
+                        "severite": "haute",
+                        "detail": _(
+                            "%(count)s valeur(s) d'identifiant dupliquée(s)."
+                        )
+                        % {"count": duplicates},
+                    }
+                )
+
+        # Quasi-constance : une modalité écrase toutes les autres.
+        top_value, top_count = Counter(str(v).strip() for v in values).most_common(1)[0]
+        if n_filled >= 10 and top_count / n_filled >= 0.95:
+            anomalies.append(
+                {
+                    "colonne": str(col),
+                    "type": "quasi_constante",
+                    "severite": "faible",
+                    "detail": _(
+                        "« %(value)s » représente %(percent)s %% des valeurs renseignées."
+                    )
+                    % {
+                        "value": top_value[:60],
+                        "percent": round(100 * top_count / n_filled, 1),
+                    },
+                }
+            )
+
+        # Type mixte : numériques et non numériques cohabitent.
+        numeric = sum(1 for v in values if is_numeric_value(v))
+        if numeric and numeric != n_filled:
+            numeric_ratio = numeric / n_filled
+            if 0.2 <= numeric_ratio <= 0.8:
+                anomalies.append(
+                    {
+                        "colonne": str(col),
+                        "type": "type_mixte",
+                        "severite": "moyenne",
+                        "detail": _(
+                            "%(numeric)s valeur(s) numérique(s) sur %(total)s "
+                            "renseignée(s) : type hétérogène."
+                        )
+                        % {"numeric": numeric, "total": n_filled},
+                    }
+                )
+
+    order = {"haute": 0, "moyenne": 1, "faible": 2}
+    anomalies.sort(key=lambda a: (order.get(a["severite"], 3), a["colonne"]))
+    return anomalies
+
+
+# Libellés lisibles des types d'anomalies structurelles. Source unique :
+# le dashboard et les graphiques s'y réfèrent pour rester cohérents.
+STRUCTURAL_ANOMALY_LABELS = {
+    "vide": gettext_lazy("Colonne vide"),
+    "constante": gettext_lazy("Colonne constante"),
+    "identifiant_non_unique": gettext_lazy("Identifiant non unique"),
+    "quasi_constante": gettext_lazy("Colonne quasi constante"),
+    "type_mixte": gettext_lazy("Type hétérogène"),
+}
+
+
+def structural_anomaly_label(code):
+    """Libellé traduit d'un type d'anomalie structurelle."""
+    label = STRUCTURAL_ANOMALY_LABELS.get(code)
+    return label if label is not None else str(code)
 
 
 def _potential_key_columns(df):
@@ -628,8 +760,9 @@ def profile_dataframe(df):
         utiles à un data analyst : pour chaque colonne, renvoie le type détecté,
         le nombre de valeurs renseignées, le taux de complétude, le nombre de
         valeurs uniques, la valeur la plus fréquente (mode), et — pour les
-        colonnes numériques — min, max, moyenne, médiane, écart-type, quartiles
-        (Q1/Q3) et nombre de valeurs aberrantes (méthode IQR).
+        colonnes numériques — min, max, moyenne, médiane, écart-type, variance,
+        asymétrie, aplatissement, quartiles (Q1/Q3) et nombre de valeurs
+        aberrantes (méthode IQR).
 
         Les valeurs « Inconnu » et manquantes sont exclues des calculs. La
         fonction est **non destructive** : elle ne modifie jamais le DataFrame.
@@ -681,6 +814,9 @@ def profile_dataframe(df):
                 "moyenne": "—",
                 "mediane": "—",
                 "ecart_type": "—",
+                "variance": "—",
+                "asymetrie": "—",
+                "aplatissement": "—",
                 "q1": "—",
                 "q3": "—",
                 "outliers": outliers_by_col.get(str(col), 0),
@@ -702,11 +838,23 @@ def profile_dataframe(df):
                     n = len(nums_sorted)
                     mean = sum(nums_sorted) / n
                     variance = sum((x - mean) ** 2 for x in nums_sorted) / n
+                    standard_deviation = variance ** 0.5
+                    centered = [x - mean for x in nums_sorted]
+                    if standard_deviation:
+                        skewness = sum(x ** 3 for x in centered) / (n * standard_deviation ** 3)
+                        kurtosis = sum(x ** 4 for x in centered) / (n * standard_deviation ** 4) - 3
+                    else:
+                        skewness = 0.0
+                        kurtosis = 0.0
+
                     entry["min"] = f"{nums_sorted[0]:g}"
                     entry["max"] = f"{nums_sorted[-1]:g}"
                     entry["moyenne"] = f"{mean:.2f}"
                     entry["mediane"] = f"{nums_sorted[n // 2]:g}" if n % 2 else f"{(nums_sorted[n // 2 - 1] + nums_sorted[n // 2]) / 2:g}"
-                    entry["ecart_type"] = f"{variance ** 0.5:.2f}"
+                    entry["ecart_type"] = f"{standard_deviation:.2f}"
+                    entry["variance"] = f"{variance:.2f}"
+                    entry["asymetrie"] = f"{skewness:.2f}"
+                    entry["aplatissement"] = f"{kurtosis:.2f}"
                     entry["q1"] = f"{nums_sorted[int(n * 0.25)]:g}"
                     entry["q3"] = f"{nums_sorted[int(n * 0.75)]:g}"
 
@@ -753,6 +901,7 @@ def build_detection(df):
         "categories": detect_category_issues(df),
         "salaries": salaries,
         "outliers": detect_outliers(df),
+        "structural": detect_structural_anomalies(df),
     }
 
 
@@ -770,45 +919,51 @@ QUALITY_WEIGHTS = {
 
 
 def _build_explanations(detection, metrics):
-    """Build translated explanations for the quality score."""
+    """Décrit les éléments qui font varier le score de qualité.
+
+    Chaque explication est mémorisée sous forme de ``(type, code, paramètres)``
+    et non de texte traduit : la traduction est résolue à l'affichage, afin que
+    la liste suive la langue active de l'interface même si le score a été
+    calculé dans une autre langue.
+    """
     explanations = []
 
     missing = metrics["missing_cells"]
     unknown = metrics["unknown_cells"]
     if unknown > 0:
-        explanations.append({"type": "warn", "text": _("%(count)s unknown value(s) (data unavailable)") % {"count": unknown}})
+        explanations.append(score_explanation_entry("warn", "unknown_values", count=unknown))
     if missing > 0:
-        explanations.append({"type": "warn", "text": _("%(count)s missing value(s)") % {"count": missing}})
+        explanations.append(score_explanation_entry("warn", "missing_values", count=missing))
     if missing == 0 and unknown == 0:
-        explanations.append({"type": "ok", "text": _("No missing or unknown values")})
+        explanations.append(score_explanation_entry("ok", "no_missing_or_unknown"))
 
     invalid = metrics["invalid_cells"]
     if invalid > 0:
-        explanations.append({"type": "warn", "text": _("%(count)s invalid value(s) among filled data") % {"count": invalid}})
+        explanations.append(score_explanation_entry("warn", "invalid_values", count=invalid))
     else:
-        explanations.append({"type": "ok", "text": _("All filled values are valid")})
+        explanations.append(score_explanation_entry("ok", "all_valid"))
 
     exact = metrics["exact_duplicates"]
     potential = metrics["potential_duplicates"]
     if exact > 0:
-        explanations.append({"type": "warn", "text": _("%(count)s exact duplicate(s) remaining") % {"count": exact}})
+        explanations.append(score_explanation_entry("warn", "exact_duplicates", count=exact))
     else:
-        explanations.append({"type": "ok", "text": _("No exact duplicates")})
+        explanations.append(score_explanation_entry("ok", "no_exact_duplicates"))
     if potential > 0:
-        explanations.append({"type": "warn", "text": _("%(count)s potential duplicate(s) need manual review (reduced penalty)") % {"count": potential}})
+        explanations.append(score_explanation_entry("warn", "potential_duplicates", count=potential))
     else:
-        explanations.append({"type": "ok", "text": _("No potential duplicates")})
+        explanations.append(score_explanation_entry("ok", "no_potential_duplicates"))
 
     if invalid > 0:
-        explanations.append({"type": "warn", "text": _("%(count)s inconsistent value(s) remaining (neither valid nor unknown)") % {"count": invalid}})
+        explanations.append(score_explanation_entry("warn", "inconsistent_values", count=invalid))
     else:
-        explanations.append({"type": "ok", "text": _("Data is consistent: each value is valid or unknown")})
+        explanations.append(score_explanation_entry("ok", "consistent"))
 
     nonstd = metrics["non_standard_cells"]
     if nonstd > 0:
-        explanations.append({"type": "warn", "text": _("%(count)s non-standard value(s)") % {"count": nonstd}})
+        explanations.append(score_explanation_entry("warn", "non_standard_values", count=nonstd))
     else:
-        explanations.append({"type": "ok", "text": _("Formats standardized (phones, dates)")})
+        explanations.append(score_explanation_entry("ok", "formats_standardized"))
 
     return explanations
 

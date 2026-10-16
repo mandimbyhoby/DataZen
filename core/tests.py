@@ -5,7 +5,7 @@ from datetime import timedelta
 from pathlib import Path
 from unittest import mock
 
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AnonymousUser, User
 from django.core import mail
 from django.core.exceptions import ValidationError
 from django.core.files.uploadedfile import SimpleUploadedFile
@@ -16,10 +16,24 @@ from django.utils.translation import pgettext
 
 from . import views
 from .errors import user_error
-from .forms import CleaningOptionsForm, WebhookForm
-from .models import ActivityLog, ApiToken, CleaningRule, DataFile, Profile, Webhook
+from .forms import BatchCleaningForm, CleaningOptionsForm, ShareForm, WebhookForm
+from .models import (
+    ActivityLog,
+    ApiToken,
+    CleaningRule,
+    CleaningSchedule,
+    DataFile,
+    DatasetShare,
+    DatasetVersion,
+    Profile,
+    Webhook,
+)
 from .services import activity as activity_service
 from .services import api as api_service
+from .services import batch as batch_service
+from .services import permissions as permissions_service
+from .services import schedules as schedule_service
+from .services import versions as version_service
 from .services.api import (
     WebhookUrlError,
     hash_token,
@@ -30,9 +44,16 @@ from .services import overview as overview_service
 from .services import retention as retention_service
 from .services import search as search_service
 from .services.dashboard import build_dashboard
-from .services.pipeline import run_cleaning
+from .services.operations import (
+    CORRECTION_TYPE_MESSAGES,
+    correction_type_label,
+    render_correction_types,
+    render_operations,
+    render_score_explanations,
+)
+from .services.pipeline import preview_cleaning, run_cleaning
 from .services.reader import read_dataframe
-from .services.validation import build_detection
+from .services.validation import build_detection, verify_consistency
 
 CSV_CONTENT = (
     "id;nom;email;telephone;ville\n"
@@ -40,6 +61,17 @@ CSV_CONTENT = (
     "2;Bob;bob@example.com;0612345679;Lyon\n"
     "3;alice;alice@example.com;0612345678;Paris\n"
     "4;;inconnu;;\n"
+)
+
+# Colonne vide, colonne constante, colonne à type hétérogène + deux colonnes numériques.
+MIXED_CSV_CONTENT = (
+    "vide;constante;mixte;age;salaire\n"
+    + "".join(
+        f";x;{value};{10 + index * 10};{2000 + index * 100}\n"
+        for index, value in enumerate(
+            ["1", "2", "3", "a", "b", "c", "4", "5", "6", "d", "e", "f"]
+        )
+    )
 )
 
 
@@ -1073,7 +1105,8 @@ class CleaningRuleTests(TestCase):
             {"trim_whitespace": True},
             rules=[{"operation": "normalize_emails", "column": "email", "value": ""}],
         )
-        self.assertTrue(any("[Règle]" in op for op in operations))
+        self.assertIn("rule_normalize_emails", [code for code, _ in operations])
+        self.assertTrue(any("[Règle]" in op for op in render_operations(operations)))
         self.assertTrue(data_file.cleaned_file)
 
 
@@ -1170,10 +1203,351 @@ class PipelineTests(TestCase):
                 {"normalize_case": True, "anonymize": True},
                 rules=[{"operation": "trim_whitespace"}],
             )
-        self.assertIn("Category normalization (", operations[1])
-        self.assertTrue(any("Anonymize sensitive data" in op for op in operations))
-        self.assertIn("[Rule] Remove extra whitespace", operations[-1])
-        self.assertFalse(any("Normalisation" in op or "Règle" in op for op in operations))
+            rendered = render_operations(operations)
+        self.assertIn("Category normalization (", rendered[1])
+        self.assertTrue(any("Anonymize sensitive data" in op for op in rendered))
+        self.assertIn("[Rule] Remove extra whitespace", rendered[-1])
+        self.assertFalse(any("Normalisation" in op or "Règle" in op for op in rendered))
+
+    def test_operations_follow_the_language_active_at_display_time(self):
+        """La liste reste traduisible après coup : elle suit la langue affichée.
+
+        Le nettoyage est lancé en français, puis la même liste est rendue en
+        anglais et en allemand : c'est le bug d'origine (texte figé dans la
+        langue du nettoyage) qui est vérifié ici.
+        """
+        data_file = DataFile.objects.create(
+            file=make_upload(), original_name="clients.csv"
+        )
+        with translation.override("fr"):
+            operations, _ = run_cleaning(
+                data_file,
+                {"normalize_case": True, "anonymize": True},
+                rules=[{"operation": "trim_whitespace"}],
+            )
+            french = render_operations(operations)
+        self.assertTrue(any("Normalisation" in op for op in french))
+
+        with translation.override("en"):
+            english = render_operations(operations)
+        with translation.override("de"):
+            german = render_operations(operations)
+
+        self.assertIn("Category normalization (", english[1])
+        self.assertTrue(any("Anonymize sensitive data" in op for op in english))
+        self.assertIn("[Rule] Remove extra whitespace", english[-1])
+        self.assertFalse(any("Normalisation" in op or "Règle" in op for op in english))
+        self.assertTrue(any("Kategorien vereinheitlichen" in op for op in german))
+        self.assertFalse(any("Normalisation" in op for op in german))
+
+    def test_operations_are_stored_as_codes_not_translated_text(self):
+        """Le pipeline mémorise des codes : aucune traduction n'est figée."""
+        data_file = DataFile.objects.create(
+            file=make_upload(), original_name="clients.csv"
+        )
+        operations, _ = run_cleaning(data_file, {"trim_whitespace": True})
+        self.assertTrue(operations)
+        for entry in operations:
+            self.assertIsInstance(entry, tuple)
+            code, params = entry
+            self.assertIsInstance(code, str)
+            self.assertIsInstance(params, dict)
+
+    def test_render_operations_keeps_legacy_strings(self):
+        """Les sessions enregistrées avant les codes restent affichables."""
+        legacy = ["Normalisation de la casse (noms, libellés, villes)"]
+        self.assertEqual(render_operations(legacy), legacy)
+        self.assertEqual(render_operations(None), [])
+        self.assertEqual(render_operations([("code_inconnu", {})]), ["code_inconnu"])
+
+    def test_render_operations_recovers_legacy_text_in_another_language(self):
+        """Un libellé figé autrefois est retrouvé puis rendu dans la langue active.
+
+        Les sessions enregistrées avant l'introduction des codes contiennent du
+        texte déjà traduit. Il doit être reconnu pour suivre la langue de
+        l'interface au lieu de rester figé dans la langue du nettoyage.
+        """
+        legacy = [
+            "Normalisation de la casse (noms, libellés, villes)",
+            "Normalisation des téléphones (0 corrigé(s))",
+            "Suppression des doublons sur « Email » (2 supprimé(s))",
+        ]
+        with translation.override("zh-hans"):
+            rendered = render_operations(legacy)
+
+        self.assertEqual(
+            rendered,
+            [
+                "统一大小写（姓名、标签、城市）",
+                "规范电话号码（已修正 0 项）",
+                "按“Email”列删除重复项（已删除 2 项）",
+            ],
+        )
+
+    def test_render_operations_leaves_unknown_text_untouched(self):
+        """Un texte irrécupérable n'est ni inventé ni perdu."""
+        with translation.override("en"):
+            rendered = render_operations(["Ancienne opération brute"])
+        self.assertEqual(rendered, ["Ancienne opération brute"])
+
+    def test_correction_type_labels_are_translated(self):
+        """Les codes du journal ne sont jamais affichés bruts."""
+        codes = ["doublon", "casse", "catégorie", "anonymisation", "email"]
+        with translation.override("fr"):
+            french = render_correction_types(codes)
+        with translation.override("en"):
+            english = render_correction_types(codes)
+
+        self.assertEqual(
+            french, ["Doublon", "Casse", "Catégorie", "Anonymisation", "Courriel"]
+        )
+        self.assertEqual(
+            english, ["Duplicate", "Case", "Category", "Anonymization", "Email"]
+        )
+        self.assertEqual(render_correction_types(["code_inconnu"]), ["code_inconnu"])
+        self.assertEqual(render_correction_types(None), [])
+
+    def test_correction_type_labels_cover_the_change_log_vocabulary(self):
+        """Chaque code produit par le moteur possède un libellé traduit."""
+        expected = {
+            "doublon": "Duplicate",
+            "casse": "Case",
+            "catégorie": "Category",
+            "anonymisation": "Anonymization",
+            "inconnu": "Unknown value",
+            "téléphone": "Phone",
+            "anomalie": "Anomaly",
+            "date": "Date",
+            "email": "Email",
+            "Email invalide": "Invalid email",
+            "Email placeholder": "Placeholder email",
+            "Email manquant": "Missing email",
+            "numérique": "Numeric",
+        }
+        self.assertEqual(set(CORRECTION_TYPE_MESSAGES), set(expected))
+        with translation.override("en"):
+            for code, label in expected.items():
+                self.assertEqual(correction_type_label(code), label)
+
+    def test_detail_page_operations_follow_the_interface_language(self):
+        """Bout en bout : nettoyage en français, page affichée en anglais.
+
+        Les opérations sont mémorisées en session sous forme de codes ; la page
+        doit donc les afficher dans la langue active de l'interface, même si le
+        nettoyage a été lancé dans une autre langue.
+        """
+        user = User.objects.create_user(username="ops-lang")
+        self.client.force_login(user)
+        data_file = DataFile.objects.create(
+            file=make_upload(), original_name="clients.csv", owner=user
+        )
+        with translation.override("fr"):
+            operations, _ = run_cleaning(
+                data_file, {"normalize_case": True, "trim_whitespace": True}
+            )
+        session = self.client.session
+        session[f"operations_{data_file.pk}"] = operations
+        session["django_language"] = "en"
+        session.save()
+
+        response = self.client.get(reverse("core:dataset_detail", args=[data_file.pk]))
+
+        self.assertEqual(response.status_code, 200)
+        rendered = response.context["operations"]
+        self.assertTrue(any("Case normalization" in op for op in rendered))
+        self.assertTrue(any("Remove extra whitespace" in op for op in rendered))
+        self.assertFalse(any("Normalisation" in op for op in rendered))
+        self.assertContains(response, "Case normalization")
+
+    def test_detail_page_operations_accept_legacy_session_strings(self):
+        """Une session ancienne (chaînes déjà traduites) reste affichable."""
+        user = User.objects.create_user(username="ops-legacy")
+        self.client.force_login(user)
+        data_file = DataFile.objects.create(
+            file=make_upload(), original_name="clients.csv", owner=user
+        )
+        run_cleaning(data_file, {"trim_whitespace": True})
+        session = self.client.session
+        session[f"operations_{data_file.pk}"] = ["Ancienne opération brute"]
+        session.save()
+
+        response = self.client.get(reverse("core:dataset_detail", args=[data_file.pk]))
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.context["operations"], ["Ancienne opération brute"])
+        self.assertContains(response, "Ancienne opération brute")
+
+    def test_score_explanations_are_stored_as_codes_not_translated_text(self):
+        """Le score mémorise des codes : aucune traduction n'est figée."""
+        data_file = DataFile.objects.create(
+            file=make_upload(), original_name="clients.csv"
+        )
+        run_cleaning(data_file, {"trim_whitespace": True})
+        report = Path(data_file.report_file.path).read_text(encoding="utf-8")
+
+        self.assertIn("### 🔎 Explication du score", report)
+        for entry in self._score_explanations():
+            self.assertIsInstance(entry, dict)
+            self.assertIn("code", entry)
+            self.assertNotIn("text", entry)
+
+    def _score_explanations(self):
+        """Explications brutes du score, telles que produites par le moteur."""
+        import pandas as pd
+
+        from .services.validation import build_detection, compute_quality_score
+
+        frame = pd.DataFrame(
+            {
+                "client_id": [1, 2, 2, 4],
+                "email": ["a@b.fr", "mauvais", "mauvais", None],
+                "ville": ["Paris", "paris ", "PARIS", "Lyon"],
+            }
+        )
+        return compute_quality_score(frame, build_detection(frame))["explanations"]
+
+    def test_score_explanations_follow_the_language_active_at_display_time(self):
+        """Les explications restent traduisibles : elles suivent la langue affichée.
+
+        Le même jeu d'explications est rendu en français, en anglais et en
+        allemand : c'est le bug d'origine (texte figé dans la langue du calcul)
+        qui est vérifié ici.
+        """
+        explanations = self._score_explanations()
+
+        with translation.override("fr"):
+            french = [item["text"] for item in self._rendered(explanations)]
+        with translation.override("en"):
+            english = [item["text"] for item in self._rendered(explanations)]
+        with translation.override("de"):
+            german = [item["text"] for item in self._rendered(explanations)]
+
+        self.assertTrue(any("valeur(s) manquante(s)" in text for text in french))
+        self.assertTrue(any("missing value(s)" in text for text in english))
+        self.assertTrue(any("fehlende(r) Wert(e)" in text for text in german))
+
+        for text in english + german:
+            self.assertNotIn("valeur(s)", text)
+            self.assertNotIn("Aucun ", text)
+
+    @staticmethod
+    def _rendered(explanations):
+        from .services.operations import render_score_explanations
+
+        return render_score_explanations(explanations)
+
+    def test_score_explanations_are_rendered_in_french_by_default(self):
+        """Le français est la langue source : il ne doit jamais rester en anglais."""
+        with translation.override("fr"):
+            rendered = self._rendered(self._score_explanations())
+
+        self.assertTrue(rendered)
+        joined = " ".join(item["text"] for item in rendered)
+        for english in (
+            "value(s)",
+            "duplicate(s)",
+            "No exact",
+            "No potential",
+            "No missing",
+            "All filled",
+            "standardized",
+            "Data is ",
+        ):
+            self.assertNotIn(english, joined, f"anglais résiduel : {english}")
+        self.assertTrue(any("Aucun doublon" in item["text"] for item in rendered))
+
+    def test_render_score_explanations_keeps_legacy_entries(self):
+        """Les scores calculés avant les codes restent affichables."""
+        from .services.operations import render_score_explanations
+
+        legacy = [{"type": "ok", "text": "Explication déjà rendue"}]
+        self.assertEqual(render_score_explanations(legacy), legacy)
+        self.assertEqual(render_score_explanations(None), [])
+        self.assertEqual(render_score_explanations(["texte brut"]), [])
+        self.assertEqual(render_score_explanations([{"code": "inconnu"}]), [])
+
+    def test_render_score_explanations_recovers_legacy_text(self):
+        """Une explication figée autrefois est retrouvée puis retraduite.
+
+        Les scores calculés avant l'introduction des codes contiennent du texte
+        déjà traduit (anglais pour les plus anciens, français ensuite). Il doit
+        être reconnu pour suivre la langue affichée.
+        """
+        from .services.operations import render_score_explanations
+
+        legacy = [
+            {"type": "warn", "text": "1 unknown value(s) (data unavailable)"},
+            {"type": "warn", "text": "1 valeur(s) manquante(s)"},
+            {"type": "warn", "text": "3 valeur(s) non standard"},
+        ]
+        with translation.override("zh-hans"):
+            rendered = render_score_explanations(legacy)
+
+        self.assertEqual(
+            [item["text"] for item in rendered],
+            [
+                "1 个未知值（数据不可用）",
+                "1 个缺失值",
+                "3 个非标准值",
+            ],
+        )
+        self.assertEqual([item["type"] for item in rendered], ["warn", "warn", "warn"])
+
+    def test_every_score_explanation_code_has_a_translation(self):
+        """Chaque code produit par le moteur possède un message traduit."""
+        from .services.operations import SCORE_EXPLANATION_MESSAGES
+
+        expected = {
+            "unknown_values",
+            "missing_values",
+            "no_missing_or_unknown",
+            "invalid_values",
+            "all_valid",
+            "exact_duplicates",
+            "no_exact_duplicates",
+            "potential_duplicates",
+            "no_potential_duplicates",
+            "inconsistent_values",
+            "consistent",
+            "non_standard_values",
+            "formats_standardized",
+        }
+        self.assertEqual(set(SCORE_EXPLANATION_MESSAGES), expected)
+        with translation.override("en"):
+            for code, message in SCORE_EXPLANATION_MESSAGES.items():
+                translated = str(message)
+                self.assertTrue(translated, code)
+                self.assertNotIn("valeur(s) ", translated)
+
+    def test_detail_page_score_explanations_follow_the_interface_language(self):
+        """Bout en bout : nettoyage en français, page affichée en anglais.
+
+        Les explications sont mémorisées en session sous forme de codes ; la
+        page doit donc les afficher dans la langue active de l'interface, même
+        si le nettoyage a été lancé dans une autre langue.
+        """
+        user = User.objects.create_user(username="score-lang")
+        self.client.force_login(user)
+        data_file = DataFile.objects.create(
+            file=make_upload(), original_name="clients.csv", owner=user
+        )
+        with translation.override("fr"):
+            run_cleaning(data_file, {"trim_whitespace": True})
+
+        session = self.client.session
+        session["django_language"] = "en"
+        session.save()
+
+        response = self.client.get(reverse("core:dataset_detail", args=[data_file.pk]))
+
+        self.assertEqual(response.status_code, 200)
+        texts = [
+            item["text"]
+            for item in response.context["quality_after"]["explanations"]
+        ]
+        self.assertTrue(texts)
+        self.assertFalse(any("valeur(s)" in text for text in texts))
+        self.assertContains(response, "No exact duplicates")
 
     def test_dedupe_on_key_column(self):
         """La colonne clé choisie dans le formulaire est bien utilisée."""
@@ -1188,7 +1562,8 @@ class PipelineTests(TestCase):
                 "dedupe_ignore_case": True,
             },
         )
-        self.assertTrue(any("« email »" in op for op in operations))
+        self.assertIn("remove_duplicates_column", [code for code, _ in operations])
+        self.assertTrue(any("« email »" in op for op in render_operations(operations)))
         cleaned = read_dataframe(data_file.cleaned_file.path)
         self.assertEqual(len(cleaned), 3)
 
@@ -1212,6 +1587,106 @@ class PipelineTests(TestCase):
         self.assertEqual(progress_values[-1], 100)
         self.assertTrue(Path(data_file.cleaned_file.path).exists())
         self.assertTrue(Path(data_file.report_file.path).exists())
+
+    def test_report_includes_the_statistical_profiling_section(self):
+        """Le rapport Markdown expose le profilage statistique par colonne."""
+        data_file = DataFile.objects.create(
+            file=make_upload(), original_name="clients.csv"
+        )
+        run_cleaning(data_file, {"trim_whitespace": True})
+        report = Path(data_file.report_file.path).read_text(encoding="utf-8")
+
+        self.assertIn("## 🔬 Profilage statistique", report)
+        for header in (
+            "| Colonne |",
+            "| Variance |",
+            "| Asymétrie |",
+            "| Aplatissement |",
+            "| Valeurs aberrantes |",
+        ):
+            self.assertIn(header, report)
+
+    def test_report_profiling_section_is_translated(self):
+        """La section de profilage suit la langue active."""
+        import pandas as pd
+
+        from .services.report import build_report
+        from .services.validation import profile_dataframe
+
+        frame = pd.DataFrame({"age": [10, 20, 30, 40, 50]})
+        with translation.override("en"):
+            report = build_report(
+                "clients.csv",
+                [],
+                {"rows": 5, "columns": 1, "duplicates": 0, "missing": 0},
+                {"rows": 5, "columns": 1, "duplicates": 0, "missing": 0},
+                profile=profile_dataframe(frame),
+            )
+
+        self.assertIn("## 🔬 Statistical profiling", report)
+        self.assertIn("| Skewness |", report)
+        self.assertIn("| Kurtosis |", report)
+        self.assertNotIn("Profilage statistique", report)
+
+    def test_report_profiling_section_is_omitted_without_profile(self):
+        """Sans profilage fourni, la section n'apparaît pas."""
+        from .services.report import build_report
+
+        report = build_report(
+            "clients.csv",
+            [],
+            {"rows": 5, "columns": 1, "duplicates": 0, "missing": 0},
+            {"rows": 5, "columns": 1, "duplicates": 0, "missing": 0},
+        )
+
+        self.assertNotIn("Profilage statistique", report)
+
+    def test_report_profiling_section_reads_the_distributions(self):
+        """Les colonnes les plus asymétriques et les outliers sont commentés."""
+        import pandas as pd
+
+        from .services.report import build_report
+        from .services.validation import profile_dataframe
+
+        frame = pd.DataFrame(
+            {
+                "age": [10, 20, 30, 40, 50, 60, 70, 80, 90, 1000],
+                "salaire": [2000, 2100, 2200, 2300, 2400, 2500, 2600, 2700, 2800, 2900],
+            }
+        )
+        report = build_report(
+            "clients.csv",
+            [],
+            {"rows": 10, "columns": 2, "duplicates": 0, "missing": 0},
+            {"rows": 10, "columns": 2, "duplicates": 0, "missing": 0},
+            profile=profile_dataframe(frame),
+        )
+
+        self.assertIn("Distribution la plus asymétrique : « age »", report)
+        self.assertIn("Distribution la plus concentrée/pointue : « age »", report)
+        self.assertIn("1 valeur(s) aberrante(s) détectée(s)", report)
+        self.assertIn("« age » (1)", report)
+
+    def test_report_profiling_section_skips_non_numeric_columns(self):
+        """Sans colonne numérique, seul le tableau est produit."""
+        import pandas as pd
+
+        from .services.report import build_report
+        from .services.validation import profile_dataframe
+
+        frame = pd.DataFrame({"ville": ["Paris", "Lyon", "Nice"]})
+        report = build_report(
+            "clients.csv",
+            [],
+            {"rows": 3, "columns": 1, "duplicates": 0, "missing": 0},
+            {"rows": 3, "columns": 1, "duplicates": 0, "missing": 0},
+            profile=profile_dataframe(frame),
+        )
+
+        self.assertIn("## 🔬 Profilage statistique", report)
+        self.assertIn("| ville |", report)
+        self.assertNotIn("Distribution la plus asymétrique", report)
+        self.assertNotIn("valeur(s) aberrante(s) détectée(s)", report)
 
 
 class ValidationIssueDetailTests(TestCase):
@@ -1263,6 +1738,26 @@ class ValidationIssueDetailTests(TestCase):
         self.assertEqual(dashboard["dimensions"][0]["name"], "completeness")
         self.assertIn(dashboard["columns_quality"][0]["type"], {"email", "numerical"})
 
+    def test_profile_dataframe_includes_rich_numeric_statistics(self):
+        import pandas as pd
+
+        df = pd.DataFrame({"age": [10, 20, 30, 40, 50]})
+        dashboard = build_dashboard(df, detection=build_detection(df))
+        profile = dashboard["profile"][0]
+
+        self.assertEqual(profile["colonne"], "age")
+        self.assertEqual(profile["type"], "numérique")
+        self.assertEqual(profile["min"], "10")
+        self.assertEqual(profile["max"], "50")
+        self.assertEqual(profile["moyenne"], "30.00")
+        self.assertEqual(profile["mediane"], "30")
+        self.assertNotIn(profile["ecart_type"], {"—", ""})
+        self.assertNotIn(profile["variance"], {"—", ""})
+        self.assertNotIn(profile["asymetrie"], {"—", ""})
+        self.assertNotIn(profile["aplatissement"], {"—", ""})
+        self.assertEqual(profile["q1"], "20")
+        self.assertEqual(profile["q3"], "40")
+
     def test_issue_detail_table_is_rendered_without_changing_data(self):
         import pandas as pd
 
@@ -1303,6 +1798,229 @@ class ValidationIssueDetailTests(TestCase):
         self.assertIn("<th scope=\"col\">Row</th>", html)
         self.assertIn(">Invalid email</td>", html)
         self.assertIn("1 error(s) could not be corrected automatically.", html)
+
+
+class StructuralAnomalyTests(TestCase):
+    """Détection des anomalies structurelles (forme des colonnes).
+
+    Complète la détection ligne à ligne : une colonne vide, constante ou à
+    type hétérogène fausse silencieusement les analyses sans produire la
+    moindre erreur de format.
+    """
+
+    @staticmethod
+    def sample_df():
+        import pandas as pd
+
+        return pd.DataFrame(
+            {
+                "vide": [None] * 12,
+                "constante": ["x"] * 12,
+                "mixte": ["1", "2", "3", "a", "b", "c", "4", "5", "6", "d", "e", "f"],
+                "num": list(range(12)),
+            }
+        )
+
+    def test_detects_every_structural_anomaly_type(self):
+        """Chaque famille d'anomalie structurelle est détectée."""
+        from .services.validation import detect_structural_anomalies
+
+        anomalies = detect_structural_anomalies(self.sample_df())
+        found = {(a["colonne"], a["type"]) for a in anomalies}
+
+        self.assertIn(("vide", "vide"), found)
+        self.assertIn(("constante", "constante"), found)
+        self.assertIn(("mixte", "type_mixte"), found)
+        self.assertNotIn(("num", "constante"), found)
+
+    def test_anomalies_are_sorted_by_severity_then_column(self):
+        """Le tri place les sévérités hautes en tête, puis l'ordre alphabétique."""
+        from .services.validation import detect_structural_anomalies
+
+        anomalies = detect_structural_anomalies(self.sample_df())
+        order = {"haute": 0, "moyenne": 1, "faible": 2}
+        keys = [(order[a["severite"]], a["colonne"]) for a in anomalies]
+
+        self.assertEqual(keys, sorted(keys))
+        self.assertEqual(anomalies[0]["severite"], "haute")
+
+    def test_quasi_constant_and_duplicate_identifier_are_detected(self):
+        """Une modalité écrasante et un identifiant dupliqué sont signalés."""
+        import pandas as pd
+
+        from .services.validation import detect_structural_anomalies
+
+        df = pd.DataFrame(
+            {
+                "statut": ["actif"] * 19 + ["inactif"],
+                "client_id": [1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+            }
+        )
+        found = {(a["colonne"], a["type"]) for a in detect_structural_anomalies(df)}
+
+        self.assertIn(("statut", "quasi_constante"), found)
+        self.assertIn(("client_id", "identifiant_non_unique"), found)
+
+    def test_missing_and_unknown_values_are_ignored(self):
+        """Les valeurs manquantes et « Inconnu » ne créent pas de faux positifs."""
+        import pandas as pd
+
+        from .services.validation import detect_structural_anomalies
+
+        df = pd.DataFrame({"a": ["Inconnu"] * 5, "b": [None, None, None, None, None]})
+        anomalies = detect_structural_anomalies(df)
+
+        # Les deux colonnes sont vides de contenu réel : une seule anomalie
+        # « vide » chacune, jamais « constante ».
+        self.assertEqual({a["type"] for a in anomalies}, {"vide"})
+
+    def test_detection_never_raises(self):
+        """Un DataFrame vide ou sans ligne ne lève jamais."""
+        import pandas as pd
+
+        from .services.validation import detect_structural_anomalies
+
+        self.assertEqual(detect_structural_anomalies(pd.DataFrame()), [])
+        self.assertEqual(
+            {a["type"] for a in detect_structural_anomalies(pd.DataFrame({"a": [], "b": []}))},
+            {"vide"},
+        )
+
+    def test_detection_is_registered_in_build_detection(self):
+        """``build_detection`` expose la clé ``structural``."""
+        detection = build_detection(self.sample_df())
+
+        self.assertIn("structural", detection)
+        self.assertEqual(len(detection["structural"]), 3)
+
+    def test_dashboard_exposes_translated_structural_rows(self):
+        """Le tableau de bord fournit des lignes prêtes à afficher."""
+        dashboard = build_dashboard(self.sample_df())
+
+        self.assertEqual(dashboard["structural_count"], 3)
+        self.assertEqual(len(dashboard["structural_anomalies"]), 3)
+
+        rows = {row["colonne"]: row for row in dashboard["structural_anomalies"]}
+        self.assertEqual(rows["vide"]["type"], "Colonne vide")
+        self.assertEqual(rows["vide"]["severite"], "haute")
+        self.assertEqual(rows["vide"]["classe"], "danger")
+        self.assertEqual(rows["constante"]["type"], "Colonne constante")
+        self.assertEqual(rows["mixte"]["type"], "Type hétérogène")
+        self.assertEqual(rows["mixte"]["severite"], "moyenne")
+        self.assertEqual(rows["mixte"]["classe"], "warning")
+
+    def test_dashboard_structural_rows_follow_the_active_language(self):
+        """Les libellés structurels suivent la langue active."""
+        with translation.override("en"):
+            dashboard = build_dashboard(self.sample_df())
+
+        rows = {row["colonne"]: row for row in dashboard["structural_anomalies"]}
+        self.assertEqual(rows["vide"]["type"], "Empty column")
+        self.assertEqual(rows["vide"]["severite"], "high")
+        self.assertEqual(rows["mixte"]["type"], "Mixed type")
+        self.assertEqual(rows["mixte"]["severite"], "medium")
+
+    def test_anomaly_type_labels_are_translated_in_every_language(self):
+        """Chaque langue du site traduit les types d'anomalies structurelles."""
+        from django.conf import settings
+
+        from .services.validation import STRUCTURAL_ANOMALY_LABELS
+
+        sources = {
+            "vide": "Colonne vide",
+            "constante": "Colonne constante",
+            "identifiant_non_unique": "Identifiant non unique",
+            "quasi_constante": "Colonne quasi constante",
+            "type_mixte": "Type hétérogène",
+        }
+        self.assertEqual(set(STRUCTURAL_ANOMALY_LABELS), set(sources))
+
+        for language in settings.SITE_LANGUAGES:
+            code = language["code"]
+            if code == "fr":
+                continue
+            with translation.override(code):
+                for key, source in sources.items():
+                    translated = str(STRUCTURAL_ANOMALY_LABELS[key])
+                    self.assertTrue(translated.strip(), f"{code} : « {key} » vide")
+                    self.assertNotEqual(
+                        translated,
+                        source,
+                        f"{code} : « {source} » n'est pas traduit",
+                    )
+
+    def test_unknown_anomaly_code_falls_back_to_the_code(self):
+        """Un code inconnu n'échoue pas : il est renvoyé tel quel."""
+        from .services.validation import structural_anomaly_label
+
+        self.assertEqual(str(structural_anomaly_label("inconnu")), "inconnu")
+
+    def test_dashboard_reports_structural_anomalies_in_to_verify(self):
+        """Les anomalies structurelles alimentent la liste « à vérifier »."""
+        dashboard = build_dashboard(self.sample_df())
+
+        item = next(
+            item
+            for item in dashboard["to_verify"]
+            if "structurelle" in item["text"]
+        )
+        self.assertEqual(len(item["items"]), 3)
+        self.assertEqual(
+            {entry["column"] for entry in item["items"]},
+            {"vide", "constante", "mixte"},
+        )
+
+    def test_dashboard_problems_include_structural_anomalies(self):
+        """La répartition des problèmes compte les anomalies structurelles."""
+        dashboard = build_dashboard(self.sample_df())
+
+        entry = next(
+            p for p in dashboard["problems"] if p["label"] == "Anomalies structurelles"
+        )
+        self.assertEqual(entry["value"], 3)
+        self.assertGreater(entry["width"], 0)
+
+    def test_structural_section_is_rendered_on_the_detail_page(self):
+        """La page du dataset affiche le tableau des anomalies structurelles."""
+        user = User.objects.create_user(username="structural")
+        self.client.force_login(user)
+        data_file = DataFile.objects.create(
+            file=make_upload("mixte.csv", MIXED_CSV_CONTENT),
+            original_name="mixte.csv",
+            owner=user,
+        )
+        run_cleaning(data_file, {"trim_whitespace": True})
+
+        response = self.client.get(
+            reverse("core:dataset_detail", args=[data_file.pk])
+        )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.context["dashboard"]["structural_count"], 3)
+        self.assertContains(response, "Anomalies structurelles")
+        self.assertContains(response, "Sévérité")
+        self.assertContains(response, "Colonne vide")
+        self.assertContains(response, "Type hétérogène")
+        self.assertContains(
+            response,
+            "Anomalies signalées uniquement — jamais modifiées automatiquement.",
+        )
+
+    def test_structural_section_shows_an_empty_state(self):
+        """Sans anomalie, la page affiche un état vide explicite."""
+        user = User.objects.create_user(username="structural2")
+        self.client.force_login(user)
+        data_file = DataFile.objects.create(
+            file=make_upload(), original_name="clients.csv", owner=user
+        )
+        run_cleaning(data_file, {"trim_whitespace": True})
+
+        response = self.client.get(
+            reverse("core:dataset_detail", args=[data_file.pk])
+        )
+
+        self.assertEqual(response.context["dashboard"]["structural_count"], 0)
+        self.assertContains(response, "Aucune anomalie structurelle détectée.")
 
 
 class ChartTests(TestCase):
@@ -1358,8 +2076,105 @@ class ChartTests(TestCase):
             "correlation",
             "categories",
             "outliers",
+            "moments",
         ):
             self.assertIn(expected, slugs)
+
+    def test_structural_chart_requires_structural_anomalies(self):
+        """Le graphique structurel n'apparaît qu'en présence d'anomalies."""
+        import pandas as pd
+
+        from .services.charts import available_charts
+        from .services.dashboard import build_dashboard
+
+        clean = self.sample_df()
+        self.assertNotIn("structural", available_charts(clean, build_dashboard(clean)))
+
+        df = pd.DataFrame(
+            {
+                "vide": [None] * 12,
+                "constante": ["x"] * 12,
+                "mixte": ["1", "2", "3", "a", "b", "c", "4", "5", "6", "d", "e", "f"],
+                "num": list(range(12)),
+            }
+        )
+        slugs = available_charts(df, build_dashboard(df))
+        self.assertIn("structural", slugs)
+        self.assertIn("moments", slugs)
+
+    def test_new_charts_render_valid_png(self):
+        """Les graphiques « moments » et « structurel » produisent un PNG."""
+        import pandas as pd
+
+        from .services.charts import chart_png
+        from .services.dashboard import build_dashboard
+
+        df = pd.DataFrame(
+            {
+                "vide": [None] * 12,
+                "constante": ["x"] * 12,
+                "mixte": ["1", "2", "3", "a", "b", "c", "4", "5", "6", "d", "e", "f"],
+                "num": list(range(12)),
+            }
+        )
+        dashboard = build_dashboard(df)
+        for slug in ("moments", "structural"):
+            with self.subTest(slug=slug):
+                png = chart_png(df, dashboard, slug)
+                self.assertIsNotNone(png)
+                self.assertTrue(png.startswith(b"\x89PNG"))
+                self.assertGreater(len(png), 1000)
+
+    def test_moments_chart_reuses_the_profiling_statistics(self):
+        """Le graphique des moments reprend les valeurs du profilage."""
+        from .services.charts import chart_data
+        from .services.dashboard import build_dashboard
+        from .services.validation import profile_dataframe
+
+        df = self.sample_df()
+        payload = chart_data(df, build_dashboard(df))
+        moments = next(c for c in payload["charts"] if c["slug"] == "moments")
+
+        self.assertEqual(moments["kind"], "moments")
+        self.assertEqual(moments["data"]["labels"]["skewness"], "Asymétrie")
+        self.assertEqual(moments["data"]["labels"]["kurtosis"], "Aplatissement")
+
+        expected = {
+            row["colonne"]: row
+            for row in profile_dataframe(df)
+            if row["type"] == "numérique"
+        }
+        self.assertTrue(moments["data"]["items"])
+        for item in moments["data"]["items"]:
+            row = expected[item["label"]]
+            self.assertAlmostEqual(item["skewness"], float(row["asymetrie"]), places=2)
+            self.assertAlmostEqual(
+                item["kurtosis"], float(row["aplatissement"]), places=2
+            )
+
+    def test_structural_chart_groups_anomalies_by_translated_type(self):
+        """Le graphique structurel compte les anomalies par type traduit."""
+        import pandas as pd
+
+        from .services.charts import chart_data
+        from .services.dashboard import build_dashboard
+
+        df = pd.DataFrame(
+            {
+                "vide": [None] * 12,
+                "constante": ["x"] * 12,
+                "mixte": ["1", "2", "3", "a", "b", "c", "4", "5", "6", "d", "e", "f"],
+                "num": list(range(12)),
+            }
+        )
+        payload = chart_data(df, build_dashboard(df))
+        structural = next(c for c in payload["charts"] if c["slug"] == "structural")
+
+        self.assertEqual(structural["kind"], "hbar")
+        labels = {item["label"]: item["value"] for item in structural["data"]["items"]}
+        self.assertEqual(labels["Colonne vide"], 1)
+        self.assertEqual(labels["Colonne constante"], 1)
+        self.assertEqual(labels["Type hétérogène"], 1)
 
     def test_empty_dataframe_does_not_crash(self):
         """Un DataFrame vide ne produit que la jauge de score."""
@@ -1466,7 +2281,8 @@ class ChartTests(TestCase):
         self.assertContains(response, "dz-kpi-dashboard")
         self.assertContains(response, "Doublons exacts")
         self.assertContains(response, "Valeurs aberrantes")
-        self.assertEqual(len(response.context["dashboard"]["indicators"]), 6)
+        self.assertContains(response, "Anomalies structurelles")
+        self.assertEqual(len(response.context["dashboard"]["indicators"]), 7)
         self.assertIn("charts", response.context)
         self.assertTrue(response.context["charts"])
         self.assertEqual(
@@ -1567,6 +2383,13 @@ class ChartTests(TestCase):
                         "Premier quartile",
                         "Troisième quartile",
                         "valeur(s) extrême(s)",
+            "Forme des distributions",
+            "Asymétrie et aplatissement (moments centrés) des colonnes numériques.",
+            "Valeur du moment centré",
+            "Anomalies structurelles",
+            "Anomalies structurelles par type",
+            "Nombre de colonnes concernées",
+            "Colonnes vides, constantes, quasi constantes ou à type hétérogène.",
                     )
         for language in settings.SITE_LANGUAGES:
             code = language["code"]
@@ -1733,6 +2556,36 @@ class ChartTests(TestCase):
             self.assertEqual(kinds["boxplots"], "boxplots")
             self.assertEqual(kinds["correlation"], "heatmap")
             self.assertEqual(kinds["categories"], "categories")
+
+        def test_chart_data_endpoint_exposes_the_new_charts(self):
+            """L'endpoint JSON sert aussi les graphiques « moments » et structurel."""
+            data_file = DataFile.objects.create(
+                file=make_upload("mixte.csv", MIXED_CSV_CONTENT),
+                original_name="mixte.csv",
+                owner=self.user,
+            )
+            run_cleaning(data_file, {"trim_whitespace": True})
+
+            response = self.client.get(
+                reverse("core:dataset_chart_data", args=[data_file.pk])
+            )
+            self.assertEqual(response.status_code, 200)
+
+            payload = response.json()
+            kinds = {chart["slug"]: chart["kind"] for chart in payload["charts"]}
+            self.assertEqual(kinds["moments"], "moments")
+            self.assertEqual(kinds["structural"], "hbar")
+
+            moments = next(c for c in payload["charts"] if c["slug"] == "moments")
+            self.assertEqual(moments["data"]["labels"]["skewness"], "Asymétrie")
+            self.assertEqual(moments["data"]["labels"]["kurtosis"], "Aplatissement")
+            self.assertTrue(moments["data"]["items"])
+
+            structural = next(c for c in payload["charts"] if c["slug"] == "structural")
+            labels = {i["label"]: i["value"] for i in structural["data"]["items"]}
+            self.assertEqual(labels["Colonne vide"], 1)
+            self.assertEqual(labels["Colonne constante"], 1)
+            self.assertEqual(labels["Type hétérogène"], 1)
 
         def test_chart_data_endpoint_is_translated(self):
             """Les titres et libellés du JSON suivent la langue active."""
@@ -2074,6 +2927,242 @@ class ComparisonTests(TestCase):
         )
 
         self.assertRedirects(response, reverse("core:index"))
+
+
+class PreviewCleaningTests(TestCase):
+    """L'aperçu doit simuler le nettoyage sans jamais rien écrire.
+
+    Le cœur du contrat : l'aperçu et le nettoyage réel traversent le même code
+    (``_execute_cleaning``), donc les chiffres annoncés ne peuvent pas diverger
+    de ce qui sera réellement appliqué. Ces tests verrouillent les deux moitiés
+    de cette promesse : « rien n'est écrit » et « les chiffres sont les mêmes ».
+    """
+
+    OPTIONS = {
+        "trim_whitespace": True,
+        "normalize_case": True,
+        "normalize_emails": True,
+        "remove_duplicates": True,
+        "dedupe_column": "email",
+        # Sans cette option, la déduplication est sensible à la casse et
+        # « alice@example.com » / « Alice@Example.COM » ne sont pas fusionnés.
+        "dedupe_ignore_case": True,
+    }
+
+    def setUp(self):
+        self.user = User.objects.create_user("previewuser", password="MotDePasse!2024")
+        self.client.force_login(self.user)
+        self.data_file = DataFile.objects.create(
+            owner=self.user, file=make_upload(), original_name="clients.csv"
+        )
+
+    def _snapshot(self):
+        """Capture l'état persisté que l'aperçu ne doit pas modifier."""
+        self.data_file.refresh_from_db()
+        return {
+            "status": self.data_file.status,
+            "progress": self.data_file.progress,
+            "cleaned_file": self.data_file.cleaned_file.name,
+            "report_file": self.data_file.report_file.name,
+            "change_log_file": self.data_file.change_log_file.name,
+            "quality_before": self.data_file.quality_before,
+            "quality_after": self.data_file.quality_after,
+            "rows_count": self.data_file.rows_count,
+            "columns_count": self.data_file.columns_count,
+            "issues_count": self.data_file.issues_count,
+            "changes_count": self.data_file.changes_count,
+            "metrics": self.data_file.metrics,
+            "cleaned_at": self.data_file.cleaned_at,
+        }
+
+    def test_preview_changes_nothing_on_disk_or_in_database(self):
+        """Simuler ne doit écrire ni fichier, ni colonne, ni horodatage."""
+        before = self._snapshot()
+
+        preview = preview_cleaning(self.data_file, self.OPTIONS)
+
+        self.assertIsNotNone(preview)
+        self.assertEqual(self._snapshot(), before)
+
+    def test_preview_reports_real_before_and_after_values(self):
+        """L'aperçu montre les vraies corrections, pas une comparaison devinée."""
+        preview = preview_cleaning(self.data_file, self.OPTIONS)
+
+        self.assertEqual(preview["rows_before"], 4)
+        self.assertEqual(preview["rows_after"], 3)
+        self.assertTrue(preview["has_changes"])
+
+        # Le libellé du score est repérable par son unité, jamais par son texte.
+        scores = [row for row in preview["indicators"] if row["unit"] == "%"]
+        self.assertEqual(len(scores), 1)
+        self.assertEqual(scores[0]["before"], preview["before"]["score"])
+        self.assertEqual(scores[0]["after"], preview["after"]["score"])
+
+        entries = preview["change_log"]["rows"]
+        self.assertEqual(preview["change_log"]["total"], len(entries))
+        self.assertFalse(preview["change_log"]["truncated"])
+        # Les vraies valeurs, avant → après, relevées par le nettoyeur lui-même.
+        self.assertTrue(
+            any(e["before"] == "  alice " and e["after"] == "Alice" for e in entries)
+        )
+        self.assertTrue(
+            any(
+                e["before"] == "Alice@Example.COM" and e["after"] == "alice@example.com"
+                for e in entries
+            )
+        )
+        self.assertTrue(
+            any(
+                e["column"] == "(ligne entière)" and e["kind"] == "doublon"
+                for e in entries
+            ),
+            "La ligne supprimée par déduplication doit apparaître dans le journal.",
+        )
+
+    def test_preview_numbers_match_an_actual_run(self):
+        """Les chiffres annoncés sont exactement ceux du nettoyage réel.
+
+        C'est la garantie structurelle du refactor : les deux chemins partagent
+        ``_execute_cleaning``, donc l'aperçu ne peut pas mentir.
+        """
+        preview = preview_cleaning(self.data_file, self.OPTIONS)
+
+        run_cleaning(self.data_file, self.OPTIONS)
+        self.data_file.refresh_from_db()
+
+        self.assertEqual(self.data_file.status, DataFile.Status.CLEANED)
+        self.assertEqual(self.data_file.rows_count, preview["rows_after"])
+        self.assertEqual(self.data_file.quality_before, preview["before"]["score"])
+        self.assertEqual(self.data_file.quality_after, preview["after"]["score"])
+        self.assertEqual(self.data_file.changes_count, preview["change_log"]["total"])
+
+    def test_preview_is_identical_when_repeated(self):
+        """Simuler deux fois donne le même résultat : rien ne s'accumule."""
+        first = preview_cleaning(self.data_file, self.OPTIONS)
+        second = preview_cleaning(self.data_file, self.OPTIONS)
+
+        self.assertEqual(first["before"], second["before"])
+        self.assertEqual(first["after"], second["after"])
+        self.assertEqual(
+            first["change_log"]["rows"], second["change_log"]["rows"]
+        )
+
+    def test_preview_returns_none_for_unreadable_file(self):
+        """Un fichier illisible ne lève pas : la vue affichera un message."""
+        before = self._snapshot()
+        Path(self.data_file.file.path).unlink()
+
+        self.assertIsNone(preview_cleaning(self.data_file, self.OPTIONS))
+        self.assertEqual(self._snapshot(), before)
+
+    def test_preview_action_never_starts_cleaning(self):
+        """La route d'aperçu doit rester synchrone et sans effet de bord."""
+        calls = []
+
+        with mock.patch.object(
+            views, "start_cleaning", lambda *a, **k: calls.append((a, k))
+        ):
+            response = self.client.post(
+                reverse("core:dataset_detail", args=[self.data_file.pk]),
+                {**self.OPTIONS, "action": "preview", "dedupe_column": "email"},
+            )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(calls, [])
+        self.assertContains(response, 'id="preview-card"')
+        self.assertIn("preview", response.context)
+        self.data_file.refresh_from_db()
+        self.assertEqual(self.data_file.status, DataFile.Status.UPLOADED)
+
+    def test_preview_action_renders_operations_and_list(self):
+        """Les opérations simulées sont traduites au rendu, jamais stockées.
+
+        L'aperçu renvoie des codes stables (``normalize_case``…) et non du texte
+        figé : le même résultat peut donc être réaffiché dans n'importe quelle
+        langue, ce qui est exactement la garantie anti-« traduction gelée ».
+        """
+        response = self.client.post(
+            reverse("core:dataset_detail", args=[self.data_file.pk]),
+            {**self.OPTIONS, "action": "preview", "dedupe_column": "email"},
+        )
+
+        self.assertEqual(response.status_code, 200)
+        preview = response.context["preview"]
+        self.assertTrue(preview["rendered_operations"])
+        self.assertTrue(
+            any("Normalisation de la casse" in op for op in preview["rendered_operations"])
+        )
+
+        # Les codes bruts ne contiennent aucun texte traduit…
+        codes = [code for code, _ in preview["operations"]]
+        self.assertIn("normalize_case", codes)
+        self.assertFalse(
+            any("Normalis" in code or "Case" in code for code in codes),
+            "Les codes d'opération doivent rester neutres (jamais traduits).",
+        )
+
+        # …et se rendent donc dans n'importe quelle langue, après coup.
+        with translation.override("en"):
+            rendered_en = render_operations(preview["operations"])
+        self.assertTrue(any("Case normalization" in op for op in rendered_en))
+        self.assertFalse(any("Normalisation" in op for op in rendered_en))
+
+    def test_post_without_action_still_starts_cleaning(self):
+        """Le bouton « Nettoyer » garde le comportement d'origine."""
+        calls = []
+
+        with mock.patch.object(
+            views, "start_cleaning", lambda *a, **k: calls.append((a, k))
+        ):
+            response = self.client.post(
+                reverse("core:dataset_detail", args=[self.data_file.pk]),
+                {**self.OPTIONS, "dedupe_column": "email"},
+            )
+
+        self.assertEqual(len(calls), 1)
+        self.assertRedirects(
+            response, reverse("core:dataset_detail", args=[self.data_file.pk])
+        )
+
+    def test_confirm_button_cleans_the_previewed_options(self):
+        """Le bouton de confirmation relance le même endpoint en mode réel."""
+        calls = []
+
+        with mock.patch.object(
+            views, "start_cleaning", lambda *a, **k: calls.append((a, k))
+        ):
+            response = self.client.post(
+                reverse("core:dataset_detail", args=[self.data_file.pk]),
+                {**self.OPTIONS, "action": "clean", "dedupe_column": "email"},
+            )
+
+        self.assertEqual(len(calls), 1)
+        self.assertRedirects(
+            response, reverse("core:dataset_detail", args=[self.data_file.pk])
+        )
+
+    def test_preview_is_denied_for_anonymous_users(self):
+        """L'aperçu suit les mêmes règles d'accès que le nettoyage."""
+        self.client.logout()
+
+        response = self.client.post(
+            reverse("core:dataset_detail", args=[self.data_file.pk]),
+            {**self.OPTIONS, "action": "preview", "dedupe_column": "email"},
+        )
+
+        self.assertEqual(response.status_code, 302)
+        self.data_file.refresh_from_db()
+        self.assertEqual(self.data_file.status, DataFile.Status.UPLOADED)
+
+    def test_preview_card_is_absent_on_plain_get(self):
+        """Un simple chargement de page n'affiche pas de faux aperçu."""
+        response = self.client.get(
+            reverse("core:dataset_detail", args=[self.data_file.pk])
+        )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertNotContains(response, 'id="preview-card"')
+        self.assertNotIn("preview", response.context)
 
 
 class PdfReportTests(TestCase):
@@ -3159,6 +4248,153 @@ class KeyNameTranslationTests(TestCase):
                 self.assertEqual(_("Échap"), escape)
 
 
+class FrenchSourceTranslationTests(TestCase):
+    """Les messages écrits en anglais s'affichent en français.
+
+    Le français est la langue source de DataZen : son catalogue reste vide et
+    ``gettext`` renvoie le msgid tel quel. Une partie du code (contrôle de
+    cohérence, tableau de bord, exports) déclare pourtant ses messages en
+    anglais, si bien que ces libellés restaient anglais dans une interface
+    française. ``tools/translations/french_source.py`` comble ce trou.
+    """
+
+    def sample_frame(self):
+        import pandas as pd
+
+        return pd.DataFrame(
+            {
+                "email": ["a@example.com", "b@example.com", "inconnu"],
+                "commentaire": ["ok", None, "ok"],
+            }
+        )
+
+    def test_consistency_checks_follow_the_active_language(self):
+        frame = self.sample_frame()
+        detection = build_detection(frame)
+
+        with translation.override("fr"):
+            checks_fr = verify_consistency(frame, detection=detection)["checks"]
+        with translation.override("en"):
+            checks_en = verify_consistency(frame, detection=detection)["checks"]
+
+        labels_fr = [check["label"] for check in checks_fr]
+        labels_en = [check["label"] for check in checks_en]
+
+        self.assertIn("Total des valeurs manquantes", labels_fr)
+        self.assertIn("Valeurs manquantes par colonne", labels_fr)
+        self.assertIn("Valeurs inconnues par colonne", labels_fr)
+        self.assertIn("Emails : valides + invalides + inconnus = total", labels_fr)
+        self.assertIn("Total missing values", labels_en)
+        self.assertIn("Missing values by column", labels_en)
+
+        self.assertFalse(
+            any("missing values" in label for label in labels_fr),
+            "Le contrôle de cohérence reste partiellement en anglais.",
+        )
+
+    def test_consistency_details_are_translated(self):
+        frame = self.sample_frame()
+        detection = build_detection(frame)
+
+        with translation.override("fr"):
+            details = [
+                check["detail"]
+                for check in verify_consistency(frame, detection=detection)["checks"]
+            ]
+
+        self.assertTrue(any(detail.startswith("Annoncé ") for detail in details))
+        self.assertFalse(any("Reported" in detail for detail in details))
+
+    def test_score_explanations_follow_the_active_language(self):
+        entries = [
+            {"type": "warn", "code": "missing_values", "params": {"count": 3}},
+            {"type": "ok", "code": "no_exact_duplicates", "params": {}},
+        ]
+
+        with translation.override("fr"):
+            fr = [item["text"] for item in render_score_explanations(entries)]
+        with translation.override("en"):
+            en = [item["text"] for item in render_score_explanations(entries)]
+
+        self.assertEqual(fr[0], "3 valeur(s) manquante(s)")
+        self.assertEqual(fr[1], "Aucun doublon exact")
+        self.assertEqual(en[0], "3 missing value(s)")
+        self.assertEqual(en[1], "No exact duplicates")
+
+    def test_correction_types_follow_the_active_language(self):
+        codes = ["doublon", "casse", "email"]
+
+        with translation.override("fr"):
+            fr = render_correction_types(codes)
+        with translation.override("en"):
+            en = render_correction_types(codes)
+
+        self.assertEqual(fr, ["Doublon", "Casse", "Courriel"])
+        self.assertEqual(en, ["Duplicate", "Case", "Email"])
+
+    def test_french_catalog_only_holds_english_sources(self):
+        from tools.translations import CATALOGS
+        from tools.translations.french_source import FRENCH_SOURCE_TRANSLATIONS
+
+        self.assertEqual(set(FRENCH_SOURCE_TRANSLATIONS), {"fr"})
+
+        for msgid, msgstr in FRENCH_SOURCE_TRANSLATIONS["fr"].items():
+            self.assertNotEqual(
+                msgid,
+                msgstr,
+                f"« {msgid} » est identique dans les deux langues : inutile ici.",
+            )
+            self.assertEqual(CATALOGS["fr"][msgid], msgstr)
+
+    def test_other_languages_keep_their_own_wording(self):
+        from django.utils.translation import gettext as _
+
+        with translation.override("de"):
+            self.assertEqual(_("Total missing values"), "Fehlende Werte insgesamt")
+        with translation.override("es"):
+            self.assertNotEqual(_("Total missing values"), "Total missing values")
+
+    def test_plural_forms_never_fall_back_to_the_source_language(self):
+        """Chaque langue fournit toutes les formes plurielles déclarées.
+
+        Les catalogues ne déclarent souvent que le singulier d'un msgid
+        pluriel. Sans complétion, ``msgstr[0]`` seul est écrit dans le ``.mo``
+        et ``gettext`` retombe sur le msgid — donc sur le français — dès que
+        la langue demande une autre forme.
+        """
+        from django.conf import settings
+
+        msgid = "%(counter)s valide,"
+        plural = "%(counter)s valides,"
+
+        for code, _name in settings.LANGUAGES:
+            if code == "fr":
+                continue
+            with translation.override(code):
+                for count in (1, 2, 5, 21, 100):
+                    rendered = translation.ngettext(msgid, plural, count)
+                    self.assertNotIn(
+                        "valide",
+                        rendered,
+                        f"« {code} » retombe sur le français pour n={count}.",
+                    )
+
+    def test_plural_forms_are_written_for_every_declared_form(self):
+        from tools.i18n_build import plural_count, plural_value
+
+        self.assertEqual(plural_count("en"), 2)
+        self.assertEqual(plural_count("ru"), 3)
+        self.assertEqual(plural_count("ar"), 6)
+        self.assertEqual(plural_count("ja"), 1)
+
+        self.assertEqual(plural_value("seul", "en"), ["seul", "seul"])
+        self.assertEqual(plural_value(("un", "plusieurs"), "en"), ["un", "plusieurs"])
+        self.assertEqual(plural_value(("un", "plusieurs"), "ja"), ["un"])
+        self.assertEqual(
+            plural_value("seul", "ru"), ["seul", "seul", "seul"]
+        )
+
+
 class NavbarDesignTests(TestCase):
     """La barre de navigation adopte un verre teinté « premium ».
 
@@ -3711,3 +4947,744 @@ class SecurityHardeningTests(TestCase):
         self.assertEqual(response["WWW-Authenticate"], "Bearer")
         token.refresh_from_db()
         self.assertEqual(token.call_count, 0)
+
+
+# ---------------------------------------------------------------------------
+# Collaboration : rôles, partage, versions, planification, lots
+# ---------------------------------------------------------------------------
+
+
+class RolePermissionTests(TestCase):
+    """Le rôle décide de ce que le compte peut faire, côté serveur."""
+
+    def setUp(self):
+        self.admin = User.objects.create_user("roleadmin", password=PRO_USER_PASSWORD)
+        self.admin.profile.role = Profile.Role.ADMIN
+        self.admin.profile.save()
+        self.editor = User.objects.create_user("roleeditor", password=PRO_USER_PASSWORD)
+        self.viewer = User.objects.create_user("roleviewer", password=PRO_USER_PASSWORD)
+        self.viewer.profile.role = Profile.Role.VIEWER
+        self.viewer.profile.save()
+        self.data_file = make_cleaned_file(self.editor)
+        # Un second nettoyage sans option laisse le fichier « propre » : les
+        # tests de refus peuvent alors prouver qu'aucune écriture n'a eu lieu.
+        run_cleaning(self.data_file, {})
+        self.data_file.refresh_from_db()
+
+    def test_default_role_is_editor(self):
+        self.assertEqual(self.editor.profile.role, Profile.Role.EDITOR)
+
+    def test_role_helpers_agree_with_the_stored_role(self):
+        self.assertTrue(permissions_service.is_admin(self.admin))
+        self.assertFalse(permissions_service.is_admin(self.editor))
+        self.assertTrue(permissions_service.can_edit(self.editor))
+        self.assertFalse(permissions_service.can_edit(self.viewer))
+
+    def test_a_superuser_is_always_an_admin(self):
+        root = User.objects.create_superuser("roleroot", password=PRO_USER_PASSWORD)
+        self.assertTrue(permissions_service.is_admin(root))
+        self.assertTrue(permissions_service.can_edit(root))
+
+    def test_an_anonymous_visitor_has_no_role(self):
+        self.assertIsNone(permissions_service.role_of(AnonymousUser()))
+
+    def test_a_viewer_cannot_clean_a_dataset(self):
+        self.client.force_login(self.viewer)
+        before = self.data_file.changes_count
+        versions_before = self.data_file.versions.count()
+        response = self.client.post(
+            reverse("core:dataset_detail", args=[self.data_file.pk]),
+            {"trim_whitespace": "on", "action": "clean"},
+        )
+        self.assertEqual(response.status_code, 302)
+        self.data_file.refresh_from_db()
+        self.assertEqual(self.data_file.changes_count, before)
+        self.assertEqual(self.data_file.versions.count(), versions_before)
+
+    def test_a_viewer_cannot_preview_a_cleaning(self):
+        self.client.force_login(self.viewer)
+        response = self.client.post(
+            reverse("core:dataset_detail", args=[self.data_file.pk]),
+            {"trim_whitespace": "on", "action": "preview"},
+        )
+        self.assertEqual(response.status_code, 302)
+
+    def test_a_viewer_cannot_delete_a_dataset(self):
+        self.client.force_login(self.viewer)
+        response = self.client.post(
+            reverse("core:delete_dataset", args=[self.data_file.pk])
+        )
+        self.assertEqual(response.status_code, 302)
+        self.assertTrue(DataFile.objects.filter(pk=self.data_file.pk).exists())
+
+    def test_a_viewer_cannot_create_a_cleaning_rule(self):
+        self.client.force_login(self.viewer)
+        self.client.post(
+            reverse("core:rules_list"),
+            {
+                "name": "Interdite",
+                "operation": CleaningRule.Operation.TRIM_WHITESPACE,
+                "column": "nom",
+                "is_active": "on",
+            },
+        )
+        self.assertFalse(CleaningRule.objects.filter(name="Interdite").exists())
+
+    def test_a_viewer_cannot_open_the_roles_page(self):
+        self.client.force_login(self.viewer)
+        response = self.client.get(reverse("core:roles"))
+        self.assertEqual(response.status_code, 302)
+
+    def test_an_editor_cannot_open_the_roles_page(self):
+        self.client.force_login(self.editor)
+        response = self.client.get(reverse("core:roles"))
+        self.assertEqual(response.status_code, 302)
+
+    def test_an_admin_opens_the_roles_page(self):
+        self.client.force_login(self.admin)
+        response = self.client.get(reverse("core:roles"))
+        self.assertEqual(response.status_code, 200)
+
+    def test_an_admin_changes_a_role(self):
+        self.client.force_login(self.admin)
+        response = self.client.post(
+            reverse("core:roles"),
+            {"user_id": self.viewer.pk, "role": Profile.Role.EDITOR},
+        )
+        self.assertEqual(response.status_code, 302)
+        self.viewer.refresh_from_db()
+        self.assertEqual(self.viewer.profile.role, Profile.Role.EDITOR)
+
+    def test_an_unknown_role_is_refused(self):
+        self.client.force_login(self.admin)
+        self.client.post(
+            reverse("core:roles"), {"user_id": self.viewer.pk, "role": "root"}
+        )
+        self.viewer.refresh_from_db()
+        self.assertEqual(self.viewer.profile.role, Profile.Role.VIEWER)
+
+    def test_an_admin_cannot_change_its_own_role(self):
+        self.client.force_login(self.admin)
+        self.client.post(
+            reverse("core:roles"),
+            {"user_id": self.admin.pk, "role": Profile.Role.VIEWER},
+        )
+        self.admin.refresh_from_db()
+        self.assertEqual(self.admin.profile.role, Profile.Role.ADMIN)
+
+    def test_the_roles_page_counts_the_files_of_each_account(self):
+        self.client.force_login(self.admin)
+        response = self.client.get(reverse("core:roles"))
+        rows = {row["user"].pk: row["files_count"] for row in response.context["users"]}
+        self.assertEqual(rows[self.editor.pk], 1)
+        self.assertEqual(rows[self.viewer.pk], 0)
+
+    def test_an_admin_sees_every_dataset(self):
+        self.client.force_login(self.admin)
+        response = self.client.get(reverse("core:dataset_detail", args=[self.data_file.pk]))
+        self.assertEqual(response.status_code, 200)
+
+    def test_a_viewer_does_not_see_a_foreign_dataset(self):
+        self.client.force_login(self.viewer)
+        response = self.client.get(reverse("core:dataset_detail", args=[self.data_file.pk]))
+        self.assertEqual(response.status_code, 302)
+
+
+class DatasetShareTests(TestCase):
+    """Le partage ouvre un accès en lecture, nominatif ou par lien public."""
+
+    def setUp(self):
+        self.owner = User.objects.create_user("shareowner", password=PRO_USER_PASSWORD)
+        self.guest = User.objects.create_user("shareguest", password=PRO_USER_PASSWORD)
+        self.data_file = make_cleaned_file(self.owner)
+
+    def _share(self, **kwargs):
+        defaults = {
+            "data_file": self.data_file,
+            "created_by": self.owner,
+            "token": permissions_service.new_share_token(),
+        }
+        defaults.update(kwargs)
+        return DatasetShare.objects.create(**defaults)
+
+    def test_the_owner_opens_the_share_page(self):
+        self.client.force_login(self.owner)
+        response = self.client.get(reverse("core:share_dataset", args=[self.data_file.pk]))
+        self.assertEqual(response.status_code, 200)
+
+    def test_a_recipient_cannot_manage_the_shares(self):
+        self._share(shared_with=self.guest, permission=DatasetShare.Permission.VIEW)
+        self.client.force_login(self.guest)
+        response = self.client.get(reverse("core:share_dataset", args=[self.data_file.pk]))
+        self.assertEqual(response.status_code, 302)
+
+    def test_a_named_share_grants_read_access(self):
+        self._share(shared_with=self.guest, permission=DatasetShare.Permission.VIEW)
+        self.client.force_login(self.guest)
+        response = self.client.get(reverse("core:dataset_detail", args=[self.data_file.pk]))
+        self.assertEqual(response.status_code, 200)
+
+    def test_a_view_share_does_not_allow_downloading(self):
+        self._share(shared_with=self.guest, permission=DatasetShare.Permission.VIEW)
+        self.client.force_login(self.guest)
+        for name in (
+            "core:download_cleaned",
+            "core:download_original",
+            "core:download_report",
+            "core:download_report_html",
+            "core:download_changelog",
+            "core:download_json",
+        ):
+            with self.subTest(view=name):
+                response = self.client.get(reverse(name, args=[self.data_file.pk]))
+                self.assertEqual(response.status_code, 302)
+
+    def test_a_download_share_allows_downloading(self):
+        self._share(shared_with=self.guest, permission=DatasetShare.Permission.DOWNLOAD)
+        self.client.force_login(self.guest)
+        for name in (
+            "core:download_cleaned",
+            "core:download_original",
+            "core:download_report",
+            "core:download_report_html",
+            "core:download_changelog",
+            "core:download_json",
+        ):
+            with self.subTest(view=name):
+                response = self.client.get(reverse(name, args=[self.data_file.pk]))
+                self.assertEqual(response.status_code, 200)
+
+    def test_a_view_share_still_allows_reading_the_report(self):
+        self._share(shared_with=self.guest, permission=DatasetShare.Permission.VIEW)
+        self.client.force_login(self.guest)
+        response = self.client.get(reverse("core:view_report", args=[self.data_file.pk]))
+        self.assertEqual(response.status_code, 200)
+
+    def test_revoking_a_share_removes_the_access(self):
+        share = self._share(
+            shared_with=self.guest, permission=DatasetShare.Permission.VIEW
+        )
+        self.client.force_login(self.owner)
+        response = self.client.post(
+            reverse("core:share_revoke", args=[self.data_file.pk, share.pk])
+        )
+        self.assertEqual(response.status_code, 302)
+        self.assertFalse(DatasetShare.objects.filter(pk=share.pk).exists())
+        self.client.force_login(self.guest)
+        response = self.client.get(reverse("core:dataset_detail", args=[self.data_file.pk]))
+        self.assertEqual(response.status_code, 302)
+
+    def test_an_expired_share_no_longer_grants_access(self):
+        self._share(
+            shared_with=self.guest,
+            permission=DatasetShare.Permission.VIEW,
+            expires_at=timezone.now() - timedelta(hours=1),
+        )
+        self.client.force_login(self.guest)
+        response = self.client.get(reverse("core:dataset_detail", args=[self.data_file.pk]))
+        self.assertEqual(response.status_code, 302)
+
+    def test_a_public_link_is_readable_without_an_account(self):
+        share = self._share(
+            shared_with=None, permission=DatasetShare.Permission.DOWNLOAD
+        )
+        response = self.client.get(reverse("core:shared_dataset", args=[share.token]))
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(response.context["shared_view"])
+        self.assertIn("preview_rows", response.context)
+
+    def test_a_public_link_downloads_the_cleaned_file(self):
+        share = self._share(
+            shared_with=None, permission=DatasetShare.Permission.DOWNLOAD
+        )
+        response = self.client.get(
+            reverse("core:shared_dataset_download", args=[share.token])
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("attachment", response["Content-Disposition"])
+
+    def test_a_public_link_without_download_right_redirects(self):
+        share = self._share(shared_with=None, permission=DatasetShare.Permission.VIEW)
+        response = self.client.get(
+            reverse("core:shared_dataset_download", args=[share.token])
+        )
+        self.assertEqual(response.status_code, 302)
+
+    def test_an_unknown_token_is_refused(self):
+        response = self.client.get(reverse("core:shared_dataset", args=["inconnu"]))
+        self.assertEqual(response.status_code, 302)
+
+    def test_an_expired_public_link_is_refused(self):
+        share = self._share(
+            shared_with=None,
+            permission=DatasetShare.Permission.DOWNLOAD,
+            expires_at=timezone.now() - timedelta(minutes=1),
+        )
+        response = self.client.get(reverse("core:shared_dataset", args=[share.token]))
+        self.assertEqual(response.status_code, 302)
+
+    def test_a_revoked_public_link_is_refused(self):
+        share = self._share(
+            shared_with=None,
+            permission=DatasetShare.Permission.DOWNLOAD,
+            is_active=False,
+        )
+        response = self.client.get(reverse("core:shared_dataset", args=[share.token]))
+        self.assertEqual(response.status_code, 302)
+
+    def test_the_share_form_refuses_sharing_with_oneself(self):
+        form = ShareForm(
+            data={"shared_with": self.owner.pk, "permission": "view"},
+            data_file=self.data_file,
+        )
+        self.assertFalse(form.is_valid())
+        self.assertIn("shared_with", form.errors)
+
+    def test_the_share_form_refuses_a_duplicate_recipient(self):
+        self._share(shared_with=self.guest, permission=DatasetShare.Permission.VIEW)
+        form = ShareForm(
+            data={"shared_with": self.guest.pk, "permission": "view"},
+            data_file=self.data_file,
+        )
+        self.assertFalse(form.is_valid())
+        self.assertIn("shared_with", form.errors)
+
+    def test_the_share_form_accepts_a_public_link(self):
+        form = ShareForm(
+            data={"public_link": "on", "permission": "download"},
+            data_file=self.data_file,
+        )
+        self.assertTrue(form.is_valid(), form.errors)
+        self.assertIsNone(form.cleaned_data["shared_with"])
+
+    def test_two_share_tokens_never_collide(self):
+        tokens = {permissions_service.new_share_token() for _ in range(50)}
+        self.assertEqual(len(tokens), 50)
+
+
+class DatasetVersionTests(TestCase):
+    """Chaque nettoyage archivé devient une version comparable et restaurable."""
+
+    def setUp(self):
+        self.user = User.objects.create_user("veruser", password=PRO_USER_PASSWORD)
+        self.data_file = make_cleaned_file(self.user)
+
+    def test_a_cleaning_run_records_a_version(self):
+        versions = list(self.data_file.versions.values_list("number", flat=True))
+        self.assertEqual(versions, [1])
+
+    def test_the_version_keeps_the_quality_scores(self):
+        version = self.data_file.versions.get(number=1)
+        self.assertEqual(version.quality_after, self.data_file.quality_after)
+        self.assertEqual(version.rows_count, self.data_file.rows_count)
+
+    def test_the_version_stores_operation_codes_not_translated_text(self):
+        version = self.data_file.versions.get(number=1)
+        codes = [entry[0] for entry in version.operations]
+        self.assertIn("trim_whitespace", codes)
+
+    def test_a_second_run_increments_the_number(self):
+        run_cleaning(self.data_file, {"normalize_case": True})
+        self.data_file.refresh_from_db()
+        self.assertEqual(
+            list(self.data_file.versions.values_list("number", flat=True)), [2, 1]
+        )
+
+    def test_next_number_follows_the_highest_version(self):
+        self.assertEqual(version_service.next_number(self.data_file), 2)
+        run_cleaning(self.data_file, {"normalize_case": True})
+        self.data_file.refresh_from_db()
+        self.assertEqual(version_service.next_number(self.data_file), 3)
+
+    def test_a_preview_does_not_record_a_version(self):
+        preview_cleaning(self.data_file, {"normalize_case": True})
+        self.assertEqual(self.data_file.versions.count(), 1)
+
+    def test_the_versions_page_lists_the_history(self):
+        self.client.force_login(self.user)
+        response = self.client.get(
+            reverse("core:dataset_versions", args=[self.data_file.pk])
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.context["entries"]), 1)
+
+    def test_the_versions_page_renders_translated_operations(self):
+        self.client.force_login(self.user)
+        response = self.client.get(
+            reverse("core:dataset_versions", args=[self.data_file.pk])
+        )
+        labels = [entry["operations"] for entry in response.context["entries"]]
+        self.assertTrue(labels[0])
+
+    def test_comparing_two_versions_reports_the_delta(self):
+        run_cleaning(self.data_file, {"normalize_case": True})
+        self.data_file.refresh_from_db()
+        before = self.data_file.versions.get(number=1)
+        after = self.data_file.versions.get(number=2)
+        comparison = version_service.compare_versions(before, after)
+        self.assertIn("indicators", comparison)
+        self.assertIn("delta", comparison)
+
+    def test_the_compare_page_accepts_two_versions(self):
+        run_cleaning(self.data_file, {"normalize_case": True})
+        self.client.force_login(self.user)
+        response = self.client.get(
+            reverse("core:version_compare", args=[self.data_file.pk]),
+            {"before": 1, "after": 2},
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.context["before"].number, 1)
+        self.assertEqual(response.context["after"].number, 2)
+
+    def test_the_compare_page_falls_back_on_unknown_numbers(self):
+        self.client.force_login(self.user)
+        response = self.client.get(
+            reverse("core:version_compare", args=[self.data_file.pk]),
+            {"before": 99, "after": "abc"},
+        )
+        self.assertEqual(response.status_code, 200)
+
+    def test_the_compare_page_redirects_without_any_version(self):
+        empty = DataFile.objects.create(
+            file=make_upload(), original_name="vide.csv", owner=self.user
+        )
+        self.client.force_login(self.user)
+        response = self.client.get(reverse("core:version_compare", args=[empty.pk]))
+        self.assertEqual(response.status_code, 302)
+
+    def test_downloading_a_version_returns_its_file(self):
+        self.client.force_login(self.user)
+        response = self.client.get(
+            reverse("core:version_download", args=[self.data_file.pk, 1])
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("attachment", response["Content-Disposition"])
+
+    def test_restoring_a_version_rewrites_the_current_file(self):
+        version = self.data_file.versions.get(number=1)
+        # Un second passage avec une option supplémentaire produit un fichier
+        # différent : la restauration doit ramener exactement celui de la v1.
+        run_cleaning(self.data_file, {"normalize_case": True})
+        self.data_file.refresh_from_db()
+        self.assertNotEqual(
+            Path(self.data_file.cleaned_file.path).read_bytes(),
+            Path(version.cleaned_file.path).read_bytes(),
+        )
+        self.client.force_login(self.user)
+        response = self.client.post(
+            reverse("core:version_restore", args=[self.data_file.pk, 1])
+        )
+        self.assertEqual(response.status_code, 302)
+        self.data_file.refresh_from_db()
+        self.assertEqual(
+            Path(self.data_file.cleaned_file.path).read_bytes(),
+            Path(version.cleaned_file.path).read_bytes(),
+        )
+        self.assertEqual(self.data_file.changes_count, version.changes_count)
+
+    def test_a_viewer_cannot_restore_a_version(self):
+        viewer = User.objects.create_user("verviewer", password=PRO_USER_PASSWORD)
+        viewer.profile.role = Profile.Role.VIEWER
+        viewer.profile.save()
+        DatasetShare.objects.create(
+            data_file=self.data_file,
+            shared_with=viewer,
+            permission=DatasetShare.Permission.DOWNLOAD,
+            token=permissions_service.new_share_token(),
+            created_by=self.user,
+        )
+        self.client.force_login(viewer)
+        response = self.client.post(
+            reverse("core:version_restore", args=[self.data_file.pk, 1])
+        )
+        self.assertEqual(response.status_code, 302)
+
+    def test_a_view_only_share_cannot_download_a_version(self):
+        guest = User.objects.create_user("verguest", password=PRO_USER_PASSWORD)
+        DatasetShare.objects.create(
+            data_file=self.data_file,
+            shared_with=guest,
+            permission=DatasetShare.Permission.VIEW,
+            token=permissions_service.new_share_token(),
+            created_by=self.user,
+        )
+        self.client.force_login(guest)
+        response = self.client.get(
+            reverse("core:version_download", args=[self.data_file.pk, 1])
+        )
+        self.assertEqual(response.status_code, 302)
+
+    def test_a_failed_cleaning_does_not_record_a_version(self):
+        broken = DataFile.objects.create(
+            file=make_upload(), original_name="casse.csv", owner=self.user
+        )
+        with mock.patch(
+            "core.services.pipeline.read_dataframe", side_effect=ValueError("illisible")
+        ):
+            with self.assertRaises(ValueError):
+                run_cleaning(broken, {"trim_whitespace": True})
+        self.assertEqual(broken.versions.count(), 0)
+
+    def test_version_numbers_are_unique_per_dataset(self):
+        with self.assertRaises(Exception):
+            DatasetVersion.objects.create(
+                data_file=self.data_file,
+                number=1,
+                created_by=self.user,
+            )
+
+
+class CleaningScheduleTests(TestCase):
+    """Les nettoyages récurrents sont pilotés par une commande, pas un démon."""
+
+    def setUp(self):
+        self.user = User.objects.create_user("scheduser", password=PRO_USER_PASSWORD)
+        self.data_file = make_cleaned_file(self.user)
+
+    def _create(self, **kwargs):
+        defaults = {
+            "data_file": self.data_file,
+            "owner": self.user,
+            "frequency": CleaningSchedule.Frequency.DAILY,
+            "options": {"trim_whitespace": True},
+            "rule_ids": [],
+            "next_run_at": timezone.now(),
+        }
+        defaults.update(kwargs)
+        return CleaningSchedule.objects.create(**defaults)
+
+    def test_the_schedules_page_renders(self):
+        self.client.force_login(self.user)
+        response = self.client.get(reverse("core:schedules"))
+        self.assertEqual(response.status_code, 200)
+
+    def test_creating_a_schedule_from_the_page(self):
+        self.client.force_login(self.user)
+        before = timezone.now()
+        response = self.client.post(
+            reverse("core:schedules"),
+            {"data_file": self.data_file.pk, "frequency": "daily", "trim_whitespace": "on"},
+        )
+        self.assertEqual(response.status_code, 302)
+        schedule = CleaningSchedule.objects.get()
+        self.assertTrue(schedule.options["trim_whitespace"])
+        self.assertGreaterEqual(schedule.next_run_at, before)
+
+    def test_a_viewer_cannot_create_a_schedule(self):
+        viewer = User.objects.create_user("schedviewer", password=PRO_USER_PASSWORD)
+        viewer.profile.role = Profile.Role.VIEWER
+        viewer.profile.save()
+        self.client.force_login(viewer)
+        self.client.post(
+            reverse("core:schedules"),
+            {"data_file": self.data_file.pk, "frequency": "daily"},
+        )
+        self.assertEqual(CleaningSchedule.objects.count(), 0)
+
+    def test_the_next_run_is_computed_from_the_frequency(self):
+        schedule = self._create(frequency=CleaningSchedule.Frequency.WEEKLY)
+        start = timezone.now()
+        following = schedule.compute_next_run(start)
+        self.assertGreaterEqual(following - start, timedelta(days=6))
+
+    def test_toggling_a_schedule_suspends_it(self):
+        schedule = self._create()
+        self.client.force_login(self.user)
+        response = self.client.post(
+            reverse("core:schedule_toggle", args=[schedule.pk])
+        )
+        self.assertEqual(response.status_code, 302)
+        schedule.refresh_from_db()
+        self.assertFalse(schedule.is_active)
+
+    def test_reactivating_a_late_schedule_moves_the_next_run_forward(self):
+        schedule = self._create(next_run_at=timezone.now() - timedelta(days=3))
+        schedule.is_active = False
+        schedule.save(update_fields=["is_active"])
+        self.client.force_login(self.user)
+        self.client.post(reverse("core:schedule_toggle", args=[schedule.pk]))
+        schedule.refresh_from_db()
+        self.assertTrue(schedule.is_active)
+        self.assertGreater(schedule.next_run_at, timezone.now())
+
+    def test_deleting_a_schedule(self):
+        schedule = self._create()
+        self.client.force_login(self.user)
+        response = self.client.post(
+            reverse("core:schedule_delete", args=[schedule.pk])
+        )
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(CleaningSchedule.objects.count(), 0)
+
+    def test_another_account_cannot_touch_the_schedule(self):
+        schedule = self._create()
+        intruder = User.objects.create_user("schedintruder", password=PRO_USER_PASSWORD)
+        self.client.force_login(intruder)
+        response = self.client.post(
+            reverse("core:schedule_delete", args=[schedule.pk])
+        )
+        self.assertEqual(response.status_code, 404)
+        self.assertEqual(CleaningSchedule.objects.count(), 1)
+
+    def test_running_a_schedule_now_starts_a_cleaning(self):
+        schedule = self._create()
+        self.client.force_login(self.user)
+        response = self.client.post(reverse("core:schedule_run", args=[schedule.pk]))
+        self.assertEqual(response.status_code, 302)
+        schedule.refresh_from_db()
+        self.assertEqual(schedule.run_count, 1)
+        self.assertEqual(schedule.last_status, "started")
+        self.assertIsNotNone(schedule.last_run_at)
+
+    def test_due_schedules_only_returns_the_late_ones(self):
+        late = self._create(next_run_at=timezone.now() - timedelta(hours=1))
+        self._create(next_run_at=timezone.now() + timedelta(days=1))
+        due = list(schedule_service.due_schedules())
+        self.assertEqual([entry.pk for entry in due], [late.pk])
+
+    def test_a_suspended_schedule_is_never_due(self):
+        self._create(
+            next_run_at=timezone.now() - timedelta(hours=1), is_active=False
+        )
+        self.assertEqual(list(schedule_service.due_schedules()), [])
+
+    def test_running_the_due_schedules_advances_the_next_run(self):
+        schedule = self._create(next_run_at=timezone.now() - timedelta(hours=1))
+        self.assertEqual(schedule_service.run_due_schedules(), 1)
+        schedule.refresh_from_db()
+        self.assertGreater(schedule.next_run_at, timezone.now())
+        self.assertEqual(schedule.run_count, 1)
+
+    def test_the_management_command_reports_nothing_to_do(self):
+        from io import StringIO
+
+        from django.core.management import call_command
+
+        out = StringIO()
+        call_command("run_schedules", "--dry-run", stdout=out)
+        self.assertIn("Aucune", out.getvalue())
+
+    def test_the_management_command_runs_a_due_schedule(self):
+        from io import StringIO
+
+        from django.core.management import call_command
+
+        schedule = self._create(next_run_at=timezone.now() - timedelta(hours=1))
+        out = StringIO()
+        call_command("run_schedules", stdout=out)
+        schedule.refresh_from_db()
+        self.assertEqual(schedule.run_count, 1)
+
+    def test_the_management_command_dry_run_changes_nothing(self):
+        from io import StringIO
+
+        from django.core.management import call_command
+
+        schedule = self._create(next_run_at=timezone.now() - timedelta(hours=1))
+        call_command("run_schedules", "--dry-run", stdout=StringIO())
+        schedule.refresh_from_db()
+        self.assertEqual(schedule.run_count, 0)
+
+    def test_the_schedule_keeps_the_saved_rules(self):
+        rule = CleaningRule.objects.create(
+            owner=self.user,
+            name="Regle",
+            operation=CleaningRule.Operation.TRIM_WHITESPACE,
+            column="nom",
+        )
+        self.client.force_login(self.user)
+        self.client.post(
+            reverse("core:schedules"),
+            {
+                "data_file": self.data_file.pk,
+                "frequency": "daily",
+                "trim_whitespace": "on",
+                "rules": [rule.pk],
+            },
+        )
+        schedule = CleaningSchedule.objects.get()
+        self.assertEqual(schedule.rule_ids, [rule.pk])
+
+
+class BatchCleaningTests(TestCase):
+    """Le lot réutilise le pipeline unitaire, en série et sous plafond."""
+
+    def setUp(self):
+        self.user = User.objects.create_user("batchuser", password=PRO_USER_PASSWORD)
+        self.files = [
+            DataFile.objects.create(
+                file=make_upload(f"lot{i}.csv"), original_name=f"lot{i}.csv", owner=self.user
+            )
+            for i in range(3)
+        ]
+
+    def test_the_batch_page_renders(self):
+        self.client.force_login(self.user)
+        response = self.client.get(reverse("core:batch_cleaning"))
+        self.assertEqual(response.status_code, 200)
+
+    def test_a_viewer_cannot_start_a_batch(self):
+        viewer = User.objects.create_user("batchviewer", password=PRO_USER_PASSWORD)
+        viewer.profile.role = Profile.Role.VIEWER
+        viewer.profile.save()
+        self.client.force_login(viewer)
+        response = self.client.post(
+            reverse("core:batch_cleaning"),
+            {"files": [self.files[0].pk], "trim_whitespace": "on"},
+        )
+        self.assertEqual(response.status_code, 302)
+        self.files[0].refresh_from_db()
+        self.assertEqual(self.files[0].status, DataFile.Status.UPLOADED)
+
+    def test_the_batch_starts_every_selected_file(self):
+        result = batch_service.start_batch(
+            self.files, {"trim_whitespace": True}, session_key="k", language="fr"
+        )
+        self.assertEqual(result["started"], 3)
+        self.assertEqual(result["skipped"], [])
+
+    def test_the_batch_refuses_more_than_the_cap(self):
+        many = [
+            DataFile.objects.create(
+                file=make_upload(f"gros{i}.csv"), original_name=f"gros{i}.csv", owner=self.user
+            )
+            for i in range(batch_service.MAX_BATCH_SIZE + 5)
+        ]
+        result = batch_service.start_batch(
+            many, {"trim_whitespace": True}, session_key="k", language="fr"
+        )
+        self.assertEqual(result["started"], batch_service.MAX_BATCH_SIZE)
+        self.assertEqual(len(result["skipped"]), 5)
+
+    def test_a_failing_file_does_not_stop_the_batch(self):
+        with mock.patch(
+            "core.services.batch.start_cleaning",
+            side_effect=[None, RuntimeError("boum"), None],
+        ):
+            result = batch_service.start_batch(
+                self.files, {"trim_whitespace": True}, session_key="k", language="fr"
+            )
+        self.assertEqual(result["started"], 2)
+        self.assertEqual(len(result["skipped"]), 1)
+
+    def test_the_batch_form_only_offers_visible_files(self):
+        other = User.objects.create_user("batchother", password=PRO_USER_PASSWORD)
+        foreign = DataFile.objects.create(
+            file=make_upload("etranger.csv"), original_name="etranger.csv", owner=other
+        )
+        form = BatchCleaningForm(files=DataFile.objects.filter(owner=self.user))
+        offered = set(form.fields["files"].queryset.values_list("pk", flat=True))
+        self.assertNotIn(foreign.pk, offered)
+        self.assertEqual(offered, {entry.pk for entry in self.files})
+
+    def test_the_batch_form_requires_at_least_one_file(self):
+        form = BatchCleaningForm(
+            data={"trim_whitespace": "on"}, files=DataFile.objects.filter(owner=self.user)
+        )
+        self.assertFalse(form.is_valid())
+        self.assertIn("files", form.errors)
+
+    def test_the_batch_options_match_the_single_file_form(self):
+        form = BatchCleaningForm(files=DataFile.objects.filter(owner=self.user))
+        single = CleaningOptionsForm(columns=["nom"])
+        self.assertEqual(set(form.fields), set(single.fields) | {"files"})

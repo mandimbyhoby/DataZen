@@ -16,11 +16,20 @@ msgstr "ログ内の修正 %(actual)s 件（申告値 %(reported)s 件）"
 msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
 msgstr "メール列の不明値 %(actual)s 件（申告値 %(reported)s 件）"
 
+msgid "%(count)s anomalie(s) structurelle(s) détectée(s) sur les colonnes."
+msgstr "列に %(count)s 件の構造的異常が検出されました。"
+
 msgid "%(count)s colonnes"
 msgstr "%(count)s 列"
 
+msgid "%(count)s doublon(s) exact(s) restant(s)"
+msgstr "完全な重複が %(count)s 件残っています"
+
 msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
 msgstr "%(count)s 件の潜在的な重複を確認する必要があります。"
+
+msgid "%(count)s doublon(s) potentiel(s) à vérifier (pénalité réduite)"
+msgstr "%(count)s 件の潜在的な重複は手動確認が必要です（ペナルティ軽減）"
 
 msgid "%(count)s entrée(s) d'activité supprimée(s)."
 msgstr "活動ログのエントリを %(count)s 件削除しました。"
@@ -28,35 +37,38 @@ msgstr "活動ログのエントリを %(count)s 件削除しました。"
 msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
 msgstr "%(count)s 件のエラーを自動修正できませんでした。"
 
-msgid "%(count)s exact duplicate(s) remaining"
-msgstr "完全な重複が %(count)s 件残っています"
-
-msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
-msgstr "一貫性のない値が %(count)s 件残っています（有効でも不明でもない）"
+msgid "%(count)s fichier(s) ignoré(s) : lot limité à %(limit)s."
+msgstr "%(count)s 件のファイルを無視しました: バッチは %(limit)s 件までです。"
 
 msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
 msgstr "無効なメールアドレスが %(count)s 件あります（空でも不明でもない）"
 
-msgid "%(count)s invalid value(s) among filled data"
-msgstr "入力済みデータに無効な値が %(count)s 件"
-
 msgid "%(count)s lignes"
 msgstr "%(count)s 行"
 
-msgid "%(count)s missing value(s)"
-msgstr "欠損値 %(count)s 件"
-
-msgid "%(count)s non-standard value(s)"
-msgstr "標準外の値 %(count)s 件"
-
-msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
-msgstr "%(count)s 件の潜在的な重複は手動確認が必要です（ペナルティ軽減）"
-
-msgid "%(count)s unknown value(s) (data unavailable)"
-msgstr "不明な値 %(count)s 件（データなし）"
+msgid "%(count)s nettoyage(s) lancé(s) en arrière-plan."
+msgstr "%(count)s 件のクリーニングをバックグラウンドで開始しました。"
 
 msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
 msgstr "数値列で外れ値が %(count)s 件検出されました。"
+
+msgid "%(count)s valeur(s) d'identifiant dupliquée(s)."
+msgstr "重複した識別子の値が %(count)s 件あります。"
+
+msgid "%(count)s valeur(s) incohérente(s) restante(s) (ni valide ni inconnue)"
+msgstr "一貫性のない値が %(count)s 件残っています（有効でも不明でもない）"
+
+msgid "%(count)s valeur(s) inconnue(s) (donnée indisponible)"
+msgstr "不明な値 %(count)s 件（データなし）"
+
+msgid "%(count)s valeur(s) invalide(s) parmi les données renseignées"
+msgstr "入力済みデータに無効な値が %(count)s 件"
+
+msgid "%(count)s valeur(s) manquante(s)"
+msgstr "欠損値 %(count)s 件"
+
+msgid "%(count)s valeur(s) non standard"
+msgstr "標準外の値 %(count)s 件"
 
 msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
 msgstr "%(count)s 件の値が現在「不明」です。"
@@ -85,11 +97,21 @@ msgid "%(counter)s valide,"
 msgid_plural "%(counter)s valides,"
 msgstr[0] "%(counter)s 件が有効、"
 
+msgid "%(numeric)s valeur(s) numérique(s) sur %(total)s renseignée(s) : type hétérogène."
+msgstr "入力済み %(total)s 件のうち %(numeric)s 件が数値です：型が混在しています。"
+
 msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
 msgstr "%(purged)s 件のファイルを削除し、%(archived)s 件をアーカイブしました。"
 
+msgid "%(runs)s exécution"
+msgid_plural "%(runs)s exécutions"
+msgstr[0] "%(runs)s 回実行"
+
 msgid "%(score)s / 100  (%(weight)s %(percent)s)"
 msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(total)s valeur(s) aberrante(s) détectée(s) (méthode IQR). Colonnes les plus concernées : %(detail)s."
+msgstr "外れ値が %(total)s 件検出されました（IQR 法）。最も影響の大きい列：%(detail)s。"
 
 msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
 msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s（期待値 %(expected)s）"
@@ -104,6 +126,9 @@ msgstr[0] "（%(counter)s 件の変更）"
 msgid "(%(counter)s non-conformité)"
 msgid_plural "(%(counter)s non-conformités)"
 msgstr[0] "（%(counter)s 件の不適合）"
+
+msgid "(%(shown)s sur %(total)s)"
+msgstr "(%(shown)s / %(total)s)"
 
 msgid "(colonnes : %(columns)s)"
 msgstr "（列: %(columns)s）"
@@ -198,6 +223,9 @@ msgstr "管理者"
 msgid "Administration"
 msgstr "管理"
 
+msgid "Adresse e-mail"
+msgstr "メールアドレス"
+
 msgid "Adresse email"
 msgstr "メールアドレス"
 
@@ -218,9 +246,6 @@ msgstr "異常の詳細を表示"
 
 msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
 msgstr "X-DataZen-Signature ヘッダーに追加されます（HMAC-SHA256）。"
-
-msgid "All filled values are valid"
-msgstr "入力済みの値はすべて有効です"
 
 msgid "Aller au contenu principal"
 msgstr "メインコンテンツへスキップ"
@@ -243,8 +268,20 @@ msgstr "変更前の値"
 msgid "Annuler"
 msgstr "キャンセル"
 
+msgid "Anomalie"
+msgstr "異常"
+
 msgid "Anomalies restantes (à traiter manuellement)"
 msgstr "残っている異常（手動対応が必要）"
+
+msgid "Anomalies structurelles"
+msgstr "構造的異常"
+
+msgid "Anomalies structurelles par type"
+msgstr "種類別の構造的異常"
+
+msgid "Anonymisation"
+msgstr "匿名化"
 
 msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
 msgstr "機密データの匿名化（%(count)s 件を仮名化）"
@@ -258,8 +295,26 @@ msgstr "機密データを匿名化（氏名、メールアドレス、電話番
 msgid "Antananarivo, Madagascar"
 msgstr "Antananarivo, Madagascar"
 
+msgid "Aperçu"
+msgstr "プレビュー"
+
+msgid "Aperçu calculé : aucune modification n'a été enregistrée. Confirmez pour appliquer le nettoyage."
+msgstr "プレビューを計算しました。変更は保存されていません。確定するとクレンジングが適用されます。"
+
+msgid "Aperçu de nettoyage sur « %(name)s »"
+msgstr "「%(name)s」のクレンジングプレビュー"
+
+msgid "Aperçu des données"
+msgstr "データプレビュー"
+
 msgid "Aperçu du fichier nettoyé"
 msgstr "クレンジング済みファイルのプレビュー"
+
+msgid "Aperçu limité à %(shown)s lignes sur %(total)s."
+msgstr "プレビューは %(total)s 行のうち %(shown)s 行に限られます。"
+
+msgid "Aplatissement"
+msgstr "尖度"
 
 msgid "Appel API"
 msgstr "API 呼び出し"
@@ -267,11 +322,20 @@ msgstr "API 呼び出し"
 msgid "Appel API : %(path)s"
 msgstr "API 呼び出し: %(path)s"
 
+msgid "Appelez-la depuis un planificateur système (cron, Planificateur de tâches Windows) toutes les cinq minutes."
+msgstr "システムスケジューラ（cron、Windows タスクスケジューラ）から 5 分ごとに呼び出してください。"
+
 msgid "Appels"
 msgstr "呼び出し回数"
 
 msgid "Application"
 msgstr "アプリケーション"
+
+msgid "Appliquer"
+msgstr "適用"
+
+msgid "Appliquez les mêmes opérations à plusieurs jeux de données en une seule fois. Les fichiers sont traités en série, un à la fois."
+msgstr "同じ操作を複数のデータセットに一度に適用します。ファイルは 1 つずつ順番に処理されます。"
 
 msgid "Après"
 msgstr "後"
@@ -291,6 +355,21 @@ msgstr "?????"
 msgid "Archivés"
 msgstr "アーカイブ済み"
 
+msgid "Asymétrie"
+msgstr "歪度"
+
+msgid "Asymétrie et aplatissement (moments centrés) des colonnes numériques."
+msgstr "数値列の歪度と尖度（中心モーメント）。"
+
+msgid "Aucun compte ne correspond à cette recherche."
+msgstr "この検索に一致するアカウントはありません。"
+
+msgid "Aucun doublon exact"
+msgstr "完全な重複はありません"
+
+msgid "Aucun doublon potentiel"
+msgstr "潜在的な重複はありません"
+
 msgid "Aucun fichier d'origine n'est disponible."
 msgstr "元のファイルは利用できません。"
 
@@ -304,7 +383,7 @@ msgid "Aucun fichier ne correspond à votre recherche."
 msgstr "検索に一致するファイルはありません。"
 
 msgid "Aucun fichier nettoyé n'est disponible."
-msgstr "クレンジング済みファイルは利用できません。"
+msgstr "クリーニング済みファイルがありません。"
 
 msgid "Aucun fichier nettoyé pour le moment."
 msgstr "まだクリーニング済みのファイルはありません。"
@@ -323,6 +402,12 @@ msgstr "このデータセットで利用できるグラフはありません。
 
 msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
 msgstr "トークンがまだありません。API を使うには作成してください。"
+
+msgid "Aucun jeu de données disponible pour le moment."
+msgstr "現在利用できるデータセットはありません。"
+
+msgid "Aucun jeu de données pour le moment."
+msgstr "現在データセットはありません。"
 
 msgid "Aucun journal des modifications n'est disponible."
 msgstr "変更履歴は利用できません。"
@@ -348,6 +433,9 @@ msgstr "記録されたアクティビティはありません。"
 msgid "Aucune anomalie restante."
 msgstr "残っている異常はありません。"
 
+msgid "Aucune anomalie structurelle détectée."
+msgstr "構造的異常は検出されませんでした。"
+
 msgid "Aucune anomalie."
 msgstr "異常はありません。"
 
@@ -356,6 +444,9 @@ msgstr "列なし"
 
 msgid "Aucune correction"
 msgstr "修正なし"
+
+msgid "Aucune correction de valeur ne serait nécessaire."
+msgstr "値の修正は不要です。"
 
 msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
 msgstr "元のファイルとクリーニング後のファイルに目立った違いはありません。データはすでにきれいでした。"
@@ -372,6 +463,18 @@ msgstr "クレンジング済みデータはありません。"
 msgid "Aucune modification enregistrée."
 msgstr "保存された変更はありません。"
 
+msgid "Aucune opération enregistrée pour cette version."
+msgstr "このバージョンには操作が記録されていません。"
+
+msgid "Aucune opération enregistrée."
+msgstr "操作が記録されていません。"
+
+msgid "Aucune opération."
+msgstr "操作はありません。"
+
+msgid "Aucune planification : programmez un nettoyage récurrent pour ne plus y penser."
+msgstr "スケジュールはまだありません: 定期的なクリーニングを設定すれば、もう気にする必要はありません。"
+
 msgid "Aucune règle personnalisée."
 msgstr "カスタムルールはありません。"
 
@@ -381,8 +484,17 @@ msgstr "ルールはまだありません。1 つ作成すれば、すべての�
 msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
 msgstr "数値列に外れ値は検出されませんでした。"
 
+msgid "Aucune valeur manquante ou inconnue"
+msgstr "欠損値または不明な値はありません"
+
+msgid "Aucune valeur renseignée sur %(rows)s ligne(s)."
+msgstr "%(rows)s 行に値が入力されていません。"
+
 msgid "Aucune valeur « Inconnu »."
 msgstr "「不明」の値はありません。"
+
+msgid "Aucune version enregistrée : lancez un nettoyage pour en créer une."
+msgstr "まだバージョンがありません: クリーニングを実行して作成してください。"
 
 msgid "Audit des emails"
 msgstr "メールの監査"
@@ -450,8 +562,20 @@ msgstr "「不明」マーカーの統一（%(count)s 件修正）"
 msgid "Capturer"
 msgstr "撮影"
 
+msgid "Casse"
+msgstr "大文字・小文字"
+
+msgid "Catégorie"
+msgstr "カテゴリ"
+
 msgid "Ce graphique n'est pas disponible pour ce jeu de données."
 msgstr "このグラフはこのデータセットでは利用できません。"
+
+msgid "Ce jeu de données n'est partagé avec personne pour le moment."
+msgstr "このデータセットはまだ誰とも共有されていません。"
+
+msgid "Ce lien de partage est invalide ou a expiré."
+msgstr "この共有リンクは無効か、有効期限が切れています。"
 
 msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
 msgstr "この再設定リンクはすでに使用されているか、有効期限が切れています。"
@@ -459,11 +583,20 @@ msgstr "この再設定リンクはすでに使用されているか、有効期
 msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
 msgstr "このリンクは 1 回だけ有効です。このリクエストに心当たりがない場合は、このメッセージを無視してください。パスワードは変更されません。 — DataZen"
 
+msgid "Ce lien ne permet pas le téléchargement."
+msgstr "このリンクではダウンロードできません。"
+
+msgid "Ce partage ne permet pas le téléchargement."
+msgstr "この共有ではダウンロードできません。"
+
 msgid "Ce profil n'est pas public."
 msgstr "このプロフィールは公開されていません。"
 
 msgid "Ce que le nettoyage a réellement changé dans votre fichier."
 msgstr "クリーニングが実際にファイルをどう変えたか。"
+
+msgid "Ce que permet chaque rôle"
+msgstr "各ロールでできること"
 
 msgid "Cellules manquantes"
 msgstr "欠損セル"
@@ -473,6 +606,12 @@ msgstr "この %(count)s 件のファイルは保持期間 %(days)s 日を超え
 
 msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
 msgstr "これらのカウンターがグローバル検索と以下のショートカットを支えます。"
+
+msgid "Ces deux versions sont identiques sur les indicateurs suivis."
+msgstr "この 2 つのバージョンは追跡指標において同一です。"
+
+msgid "Cette page est réservée aux administrateurs."
+msgstr "このページは管理者専用です。"
 
 msgid "Champ"
 msgstr "フィールド"
@@ -498,6 +637,12 @@ msgstr "パスワードを変更"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "パスワードの変更 — DataZen"
 
+msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
+msgstr "すべてのアカウントにはロールがあります: 閲覧者、編集者、管理者。制御はサーバー側で行われ、画面だけではありません。"
+
+msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
+msgstr "クリーニングが成功するたびにバージョンが固定されます: ダウンロード、比較、ロールバックができます。"
+
 msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
 msgstr "<code>.csv</code>、<code>.xlsx</code>、<code>.xls</code> 形式のデータを、区切り文字を問わず読み込めます。"
 
@@ -506,6 +651,12 @@ msgstr "サイトの言語を選択"
 
 msgid "Choisir le format"
 msgstr "形式を選択"
+
+msgid "Choisissez deux versions pour mesurer ce qui a réellement changé entre elles."
+msgstr "2 つのバージョンを選んで、実際に何が変わったかを測定します。"
+
+msgid "Choisissez un destinataire ou cochez « Créer un lien public »."
+msgstr "受信者を選ぶか「公開リンクを作成」にチェックを入れてください。"
 
 msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
 msgstr "CSV または Excel ファイル（.csv、.xlsx、.xls）を選択してください。"
@@ -546,6 +697,9 @@ msgstr "言語コード（fr、en、es…）。空欄 = アプリの言語。"
 msgid "Coefficient de Pearson"
 msgstr "ピアソン係数"
 
+msgid "Collaboration"
+msgstr "コラボレーション"
+
 msgid "Colonne"
 msgstr "列"
 
@@ -554,6 +708,15 @@ msgstr "対象の列"
 
 msgid "Colonne clé pour la déduplication"
 msgstr "重複除去のキー列"
+
+msgid "Colonne constante"
+msgstr "定数列"
+
+msgid "Colonne quasi constante"
+msgstr "ほぼ定数の列"
+
+msgid "Colonne vide"
+msgstr "空の列"
 
 msgid "Colonnes"
 msgstr "列"
@@ -579,17 +742,29 @@ msgstr "不明な列:"
 msgid "Colonnes stables"
 msgstr "安定している列"
 
+msgid "Colonnes vides, constantes, quasi constantes ou à type hétérogène."
+msgstr "空の列、定数列、ほぼ定数列、または型が混在する列。"
+
 msgid "Colonnes à vérifier"
 msgstr "確認が必要な列"
 
 msgid "Combien de fichiers se trouvent dans chaque tranche de score."
 msgstr "各スコア帯に何件のファイルがあるか。"
 
+msgid "Comment les échéances sont-elles exécutées ?"
+msgstr "期限はどのように実行されますか？"
+
 msgid "Comparaison"
 msgstr "比較"
 
 msgid "Comparaison avant / après — %(name)s"
 msgstr "クリーニング前後の比較 — %(name)s"
+
+msgid "Comparaison de versions — %(name)s"
+msgstr "バージョン比較 — %(name)s"
+
+msgid "Comparer"
+msgstr "比較"
 
 msgid "Complétion du profil"
 msgstr "プロフィールの完成度"
@@ -612,6 +787,9 @@ msgstr "アカウント"
 msgid "Compte actif"
 msgstr "アカウント有効"
 
+msgid "Comptes ("
+msgstr "アカウント ("
+
 msgid "Condensé"
 msgstr "要約"
 
@@ -620,6 +798,9 @@ msgstr "信頼"
 
 msgid "Confirmer la décision"
 msgstr "判断を確定"
+
+msgid "Confirmer le nettoyage"
+msgstr "クレンジングを確定"
 
 msgid "Connectez-vous pour retrouver vos fichiers."
 msgstr "ログインしてファイルを確認しましょう。"
@@ -630,11 +811,20 @@ msgstr "ログイン"
 msgid "Connexion — DataZen"
 msgstr "ログイン — DataZen"
 
+msgid "Consultation"
+msgstr "閲覧"
+
 msgid "Consultation des graphiques"
 msgstr "グラフを見る"
 
 msgid "Consultation du rapport"
 msgstr "レポートを見る"
+
+msgid "Consultation et téléchargement"
+msgstr "閲覧とダウンロード"
+
+msgid "Consulte et télécharge les jeux de données partagés. Ne modifie rien."
+msgstr "共有されたデータセットを閲覧・ダウンロードします。何も変更しません。"
 
 msgid "Continuer / valider une étape"
 msgstr "続行 / ステップを確定"
@@ -690,11 +880,17 @@ msgstr "ルールを作成"
 msgid "Créer le jeton"
 msgstr "トークンを作成"
 
+msgid "Créer le partage"
+msgstr "共有を作成"
+
 msgid "Créer le webhook"
 msgstr "Webhook を作成"
 
 msgid "Créer un compte"
 msgstr "アカウントを作成"
+
+msgid "Créer un lien public"
+msgstr "公開リンクを作成"
 
 msgid "Créer une règle"
 msgstr "ルールを作成"
@@ -705,8 +901,14 @@ msgstr "ルールを一度作成すれば、すべてのファイルで再利用
 msgid "Créez votre compte"
 msgstr "アカウントを作成"
 
-msgid "Data is consistent: each value is valid or unknown"
-msgstr "データは一貫しています: 各値は有効または不明です"
+msgid "Créé par"
+msgstr "作成者"
+
+msgid "Créée par"
+msgstr "作成者"
+
+msgid "DataZen ne fait tourner aucun démon en arrière-plan : une commande de gestion reprend les échéances dues et relance le nettoyage par le même chemin de code que l'interface."
+msgstr "DataZen はバックグラウンドデーモンを動かしません: 管理コマンドが期限到来分を拾い、画面と同じコード経路でクリーニングを再開します。"
 
 msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
 msgstr "DataZen — データクレンジングアプリ（DataClean Pro）· ©"
@@ -738,14 +940,26 @@ msgstr "最終 HTTP コード"
 msgid "Dernier déclenchement"
 msgstr "最終実行"
 
+msgid "Dernier statut"
+msgstr "最終ステータス"
+
 msgid "Dernier usage"
 msgstr "最終使用"
 
 msgid "Derniers fichiers"
 msgstr "最近のファイル"
 
+msgid "Dernière : succès"
+msgstr "前回: 成功"
+
+msgid "Dernière : échec"
+msgstr "前回: 失敗"
+
 msgid "Dernière connexion"
 msgstr "最終ログイン"
+
+msgid "Dernière exécution"
+msgstr "最終実行"
 
 msgid "Dernière utilisation"
 msgstr "最終利用"
@@ -756,6 +970,9 @@ msgstr "最近のルール"
 msgid "Des incohérences ont été détectées entre les statistiques et les données."
 msgstr "統計とデータの間に不整合が検出されました。"
 
+msgid "Destinataire"
+msgstr "受信者"
+
 msgid "Dimension"
 msgstr "指標"
 
@@ -765,6 +982,12 @@ msgstr "品質指標"
 msgid "Dispersion et valeurs extrêmes des colonnes numériques."
 msgstr "数値列のばらつきと外れ値。"
 
+msgid "Distribution la plus asymétrique : « %(colonne)s » (asymétrie %(valeur)s) — moyenne et médiane s'écartent sensiblement, une transformation ou un traitement par quantiles est à envisager."
+msgstr "最も歪んだ分布：「%(colonne)s」（歪度 %(valeur)s）— 平均値と中央値が大きく離れています。変換や分位点処理を検討してください。"
+
+msgid "Distribution la plus concentrée/pointue : « %(colonne)s » (aplatissement %(valeur)s) — forte densité autour de la moyenne avec des valeurs extrêmes marquées."
+msgstr "最も尖った分布：「%(colonne)s」（尖度 %(valeur)s）— 平均値付近に密度が集中し、極端な値が目立ちます。"
+
 msgid "Distributions des colonnes numériques"
 msgstr "数値列の分布"
 
@@ -773,6 +996,12 @@ msgstr "数値分布"
 
 msgid "Django · Pandas · Bootstrap"
 msgstr "Django · Pandas · Bootstrap"
+
+msgid "Données cohérentes : chaque valeur est valide ou inconnue"
+msgstr "データは一貫しています: 各値は有効または不明です"
+
+msgid "Doublon"
+msgstr "重複"
 
 msgid "Doublon par similarité"
 msgstr "類似による重複"
@@ -816,6 +1045,12 @@ msgstr "重複、余分な空白、形式が不正なメールアドレス、不
 msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
 msgstr "重複、欠損値、空白、大文字小文字、メールアドレス、電話番号、日付、給与を正規化します。"
 
+msgid "Droit"
+msgstr "権限"
+
+msgid "Droit accordé"
+msgstr "付与された権限"
+
 msgid "Durée de conservation"
 msgstr "保持期間"
 
@@ -855,8 +1090,17 @@ msgstr "クリア"
 msgid "Effectif"
 msgstr "件数"
 
+msgid "Email"
+msgstr "メール"
+
+msgid "Email fictif"
+msgstr "プレースホルダーメール"
+
 msgid "Email invalide"
-msgstr "無効なメールアドレス"
+msgstr "無効なメール"
+
+msgid "Email manquant"
+msgstr "メール欠損"
 
 msgid "Email nettoyé"
 msgstr "クレンジング後のメール"
@@ -927,8 +1171,14 @@ msgstr "残存エラー"
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
 
+msgid "Exemples de corrections"
+msgstr "修正例"
+
 msgid "Expiration"
-msgstr "期限切れ"
+msgstr "有効期限"
+
+msgid "Expire le"
+msgstr "有効期限日"
 
 msgid "Expiré"
 msgstr "期限切れ"
@@ -938,6 +1188,12 @@ msgstr "スコアの説明"
 
 msgid "Export & traçabilité"
 msgstr "エクスポートと追跡"
+
+msgid "Exécuter"
+msgstr "実行"
+
+msgid "Exécutions"
+msgstr "実行回数"
 
 msgid "Fermer"
 msgstr "閉じる"
@@ -996,6 +1252,9 @@ msgstr "この期間より古いクリーニング済みファイル（0 = 無�
 msgid "Fichiers récents"
 msgstr "最近のファイル"
 
+msgid "Fichiers à nettoyer"
+msgstr "クリーニングするファイル"
+
 msgid "Fil d'Ariane"
 msgstr "パンくずリスト"
 
@@ -1029,8 +1288,17 @@ msgstr "対応形式: <code>.csv</code>、<code>.xlsx</code>、<code>.xls</code>
 msgid "Formats de dates (%(column)s) :"
 msgstr "日付形式（%(column)s）:"
 
-msgid "Formats standardized (phones, dates)"
+msgid "Formats standardisés (téléphones, dates)"
 msgstr "標準化された形式（電話番号、日付）"
+
+msgid "Forme des distributions"
+msgstr "分布の形状"
+
+msgid "Forme des distributions (asymétrie et aplatissement)"
+msgstr "分布の形状（歪度と尖度）"
+
+msgid "Fréquence"
+msgstr "頻度"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "時間を節約: DataZen の重要な機能はすべてキー操作で使えます。"
@@ -1050,14 +1318,23 @@ msgstr "クレンジング済みデータから <strong>matplotlib</strong> と 
 msgid "Gratuit, immédiat, et vos fichiers restent privés."
 msgstr "無料で即時、しかもファイルは非公開のままです。"
 
+msgid "Gère les rôles et voit l'ensemble des fichiers de la plateforme."
+msgstr "ロールを管理し、プラットフォーム上のすべてのファイルを閲覧できます。"
+
 msgid "Gérer les règles…"
 msgstr "ルールを管理…"
+
+msgid "Hebdomadaire"
+msgstr "毎週"
 
 msgid "Histogrammes des colonnes numériques détectées."
 msgstr "検出された数値列のヒストグラム。"
 
 msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
 msgstr "アップロード、クリーニング、エクスポート、API など、操作の時刻付き履歴。"
+
+msgid "Identifiant non unique"
+msgstr "一意でない識別子"
 
 msgid "Identité"
 msgstr "本人情報"
@@ -1070,6 +1347,9 @@ msgstr "CSV と Excel の取り込み"
 
 msgid "Impossible d'appliquer la décision : %(error)s"
 msgstr "判断を適用できません: %(error)s"
+
+msgid "Impossible de comparer ces versions : %(error)s"
+msgstr "これらのバージョンを比較できません: %(error)s"
 
 msgid "Impossible de convertir le fichier : %(error)s"
 msgstr "ファイルを変換できません: %(error)s"
@@ -1086,6 +1366,9 @@ msgstr "ファイルを読み取れません: %(error)s"
 msgid "Impossible de lire le rapport : %(error)s"
 msgstr "レポートを読み取れません: %(error)s"
 
+msgid "Impossible de simuler le nettoyage : le fichier est illisible."
+msgstr "クレンジングをシミュレートできません: ファイルを読み取れません。"
+
 msgid "Inactif"
 msgstr "非アクティブ"
 
@@ -1096,6 +1379,9 @@ msgid "Inconnu"
 msgstr "不明"
 
 msgid "Indicateur"
+msgstr "指標"
+
+msgid "Indicateurs"
 msgstr "指標"
 
 msgid "Indicateurs comparés"
@@ -1140,6 +1426,9 @@ msgstr "トークンを作成しました。今すぐコピーしてください
 msgid "Jeton d'API"
 msgstr "API トークン"
 
+msgid "Jeton du lien"
+msgstr "リンクトークン"
+
 msgid "Jeton « %(name)s » révoqué."
 msgstr "トークン「%(name)s」を無効化しました。"
 
@@ -1148,6 +1437,12 @@ msgstr "トークン"
 
 msgid "Jetons d'API"
 msgstr "API トークン"
+
+msgid "Jeu de données"
+msgstr "データセット"
+
+msgid "Jeu de données partagé en lecture seule via un lien DataZen."
+msgstr "DataZen のリンクで読み取り専用として共有されたデータセット。"
 
 msgid "Journal d'activité"
 msgstr "アクティビティログ"
@@ -1176,8 +1471,17 @@ msgstr "アカウントを削除すると、ファイル、ルール、プロフ
 msgid "Laisser vide pour appliquer à toutes les colonnes."
 msgstr "すべての列に適用する場合は空欄にします。"
 
+msgid "Laissez vide pour démarrer à la prochaine échéance."
+msgstr "空欄にすると次の期限から開始します。"
+
 msgid "Laissez vide pour un jeton sans expiration."
 msgstr "有効期限なしのトークンにする場合は空欄にします。"
+
+msgid "Laissez vide pour un partage sans expiration."
+msgstr "空欄にすると有効期限なしで共有します。"
+
+msgid "Lancer le nettoyage des fichiers sélectionnés"
+msgstr "選択したファイルのクリーニングを開始"
 
 msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
 msgstr "まずクレンジングを実行すると探索的データ分析を利用できます。"
@@ -1190,6 +1494,9 @@ msgstr "インターフェースの言語"
 
 msgid "Le compte « %(username)s » a été supprimé."
 msgstr "アカウント「%(username)s」を削除しました。"
+
+msgid "Le fichier de cette version n'est plus disponible."
+msgstr "このバージョンのファイルはもう利用できません。"
 
 msgid "Le fichier ne doit pas dépasser 20 Mo."
 msgstr "ファイルは 20 MB を超えないようにしてください。"
@@ -1209,6 +1516,9 @@ msgstr "Webhook のホスト名が内部アドレスを指しています。"
 msgid "Le nom d'hôte est absent de l'URL."
 msgstr "URL にホスト名がありません。"
 
+msgid "Le partage est toujours en lecture seule : le destinataire consulte et, si vous l'autorisez, télécharge. Il ne modifie jamais vos données."
+msgstr "共有は常に読み取り専用です: 受信者は閲覧し、許可すればダウンロードします。データを変更することはありません。"
+
 msgid "Le port est invalide."
 msgstr "ポートが無効です。"
 
@@ -1217,6 +1527,12 @@ msgstr "「システム」テーマは端末の設定に従います。"
 
 msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
 msgstr "処理はバックグラウンドで実行されます。完了するとこのページは自動的に更新されます。"
+
+msgid "Lecteur"
+msgstr "閲覧者"
+
+msgid "Lecteur : consultation et téléchargement. Éditeur : peut aussi nettoyer et supprimer ses fichiers. Administrateur : gère les rôles et voit tous les fichiers."
+msgstr "閲覧者: 閲覧とダウンロード。編集者: 自分のファイルをクリーニング・削除できます。管理者: ロールを管理し、すべてのファイルを閲覧できます。"
 
 msgid "Les adresses internes sont refusées."
 msgstr "内部アドレスは拒否されます。"
@@ -1242,14 +1558,23 @@ msgstr "クリーニング済みファイルはアーカイブされ、この期
 msgid "Les identifiants intégrés à l'URL sont refusés."
 msgstr "URL に埋め込まれた認証情報は拒否されます。"
 
+msgid "Les options choisies ne changeraient rien à ce jeu de données."
+msgstr "選択したオプションではこのデータセットは変化しません。"
+
 msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 msgstr "利用可能なルート: /api/、/api/datasets/、/api/datasets/<id>/、/api/stats/。"
 
 msgid "Les statistiques affichées correspondent aux données réelles."
 msgstr "表示されている統計は実際のデータと一致しています。"
 
+msgid "Lien de partage public"
+msgstr "公開共有リンク"
+
 msgid "Lien invalide"
 msgstr "無効なリンク"
+
+msgid "Lien public"
+msgstr "公開リンク"
 
 msgid "Ligne"
 msgstr "行"
@@ -1292,6 +1617,9 @@ msgstr "データのライフサイクルを管理しましょう。"
 
 msgid "Membre depuis"
 msgstr "登録日"
+
+msgid "Mensuel"
+msgstr "毎月"
 
 msgid "Mes règles"
 msgstr "マイ ルール"
@@ -1374,6 +1702,18 @@ msgstr "クレンジングをバックグラウンドで開始しました。ペ
 msgid "Nettoyage lancé sur « %(name)s »"
 msgstr "「%(name)s」のクリーニングを開始しました"
 
+msgid "Nettoyage par lots"
+msgstr "一括クリーニング"
+
+msgid "Nettoyage par lots : %(count)s fichier(s) lancé(s)"
+msgstr "一括クリーニング: %(count)s 件のファイルを開始しました"
+
+msgid "Nettoyage par lots — DataZen"
+msgstr "一括クリーニング — DataZen"
+
+msgid "Nettoyage planifié de « %(name)s » lancé."
+msgstr "「%(name)s」の定期クリーニングを開始しました。"
+
 msgid "Nettoyage terminé"
 msgstr "クリーニング完了"
 
@@ -1401,20 +1741,14 @@ msgstr "クレンジング済み"
 msgid "Niveau"
 msgstr "レベル"
 
-msgid "No exact duplicates"
-msgstr "完全な重複はありません"
-
-msgid "No missing or unknown values"
-msgstr "欠損値または不明な値はありません"
-
-msgid "No potential duplicates"
-msgstr "潜在的な重複はありません"
-
 msgid "Nom"
 msgstr "名前"
 
 msgid "Nom d'utilisateur"
 msgstr "ユーザー名"
+
+msgid "Nom de la colonne unique (ex. email). Laissez vide pour ne supprimer que les lignes 100 % identiques. Une colonne absente d'un fichier est ignorée pour ce fichier."
+msgstr "一意な列の名前（例: email）。空欄にすると 100% 完全に同一の行だけを削除します。ファイルに存在しない列はそのファイルでは無視されます。"
 
 msgid "Nom de la règle"
 msgstr "ルール名"
@@ -1430,6 +1764,9 @@ msgstr "呼び出し回数"
 
 msgid "Nombre d'occurrences"
 msgstr "出現回数"
+
+msgid "Nombre de colonnes concernées"
+msgstr "該当する列の数"
 
 msgid "Nombre de nettoyages et score moyen par semaine."
 msgstr "週ごとのクリーニング回数と平均スコア。"
@@ -1497,11 +1834,29 @@ msgstr "新しい写真の準備ができました"
 msgid "Nouvelle valeur"
 msgstr "新しい値"
 
+msgid "Numérique"
+msgstr "数値"
+
+msgid "Numéro de version"
+msgstr "バージョン番号"
+
+msgid "Options de nettoyage"
+msgstr "クリーニングオプション"
+
 msgid "Opération"
 msgstr "操作"
 
+msgid "Opérations appliquées"
+msgstr "適用された操作"
+
 msgid "Opérations de nettoyage"
 msgstr "クリーニング操作"
+
+msgid "Opérations de v%(n)s"
+msgstr "v%(n)s の操作"
+
+msgid "Opérations qui seraient appliquées"
+msgstr "適用される操作"
 
 msgid "Organisation"
 msgstr "組織"
@@ -1527,6 +1882,27 @@ msgstr "ページ"
 msgid "Parcourir…"
 msgstr "ファイルを選択"
 
+msgid "Partage"
+msgstr "共有"
+
+msgid "Partage créé."
+msgstr "共有を作成しました。"
+
+msgid "Partage de « %(name)s » avec %(target)s"
+msgstr "「%(name)s」を %(target)s と共有"
+
+msgid "Partage révoqué."
+msgstr "共有を取り消しました。"
+
+msgid "Partage — %(name)s"
+msgstr "共有 — %(name)s"
+
+msgid "Partages"
+msgstr "共有"
+
+msgid "Partagé le"
+msgstr "共有日"
+
 msgid "Pas encore de compte ?"
 msgstr "まだアカウントをお持ちでないですか？"
 
@@ -1541,6 +1917,27 @@ msgstr "プロフィール写真"
 
 msgid "Pilotage"
 msgstr "パイロット"
+
+msgid "Planification"
+msgstr "スケジュール"
+
+msgid "Planification %(state)s."
+msgstr "スケジュールを%(state)sしました。"
+
+msgid "Planification créée pour « %(name)s »"
+msgstr "「%(name)s」のスケジュールを作成しました"
+
+msgid "Planification créée."
+msgstr "スケジュールを作成しました。"
+
+msgid "Planification supprimée."
+msgstr "スケジュールを削除しました。"
+
+msgid "Planifications"
+msgstr "スケジュール"
+
+msgid "Planifications — DataZen"
+msgstr "スケジュール — DataZen"
 
 msgid "Plus fréquent"
 msgstr "最頻値"
@@ -1557,10 +1954,16 @@ msgstr "重み"
 msgid "Premier quartile"
 msgstr "第1四分位数"
 
+msgid "Première exécution"
+msgstr "初回実行"
+
 msgid "Prendre une photo avec la caméra"
 msgstr "カメラで写真を撮る"
 
 msgid "Problème"
+msgstr "問題"
+
+msgid "Problèmes"
 msgstr "問題"
 
 msgid "Problèmes après"
@@ -1574,6 +1977,9 @@ msgstr "検出された問題"
 
 msgid "Problèmes restants"
 msgstr "残っている問題"
+
+msgid "Prochaine exécution"
+msgstr "次回実行"
 
 msgid "Productivité"
 msgstr "生産性"
@@ -1593,8 +1999,17 @@ msgstr "公開プロフィール"
 msgid "Profil visible publiquement"
 msgstr "プロフィールを公開"
 
+msgid "Profilage statistique"
+msgstr "統計プロファイリング"
+
 msgid "Profils"
 msgstr "プロフィール"
+
+msgid "Programmer"
+msgstr "スケジュール"
+
+msgid "Programmez un nettoyage récurrent : les mêmes options s'appliquent à chaque échéance, sans intervention de votre part."
+msgstr "定期的なクリーニングを設定します: 同じオプションが毎回の期限に適用され、操作は不要です。"
 
 msgid "Progression"
 msgstr "進捗"
@@ -1641,6 +2056,9 @@ msgstr "Q1"
 msgid "Q3"
 msgstr "Q3"
 
+msgid "Qualité : v%(before)s → v%(after)s"
+msgstr "品質: v%(before)s → v%(after)s"
+
 msgid "Qualité moyenne"
 msgstr "平均品質"
 
@@ -1649,6 +2067,9 @@ msgstr "列ごとの品質"
 
 msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
 msgstr "あなた自身、チーム、データセットについて簡単に…"
+
+msgid "Quotidien"
+msgstr "毎日"
 
 msgid "Raccourcis clavier"
 msgstr "キーボードショートカット"
@@ -1707,6 +2128,12 @@ msgstr "検索"
 msgid "Rechercher (Ctrl+K)"
 msgstr "検索（Ctrl+K）"
 
+msgid "Rechercher un compte"
+msgstr "アカウントを検索"
+
+msgid "Rechercher un compte…"
+msgstr "アカウントを検索…"
+
 msgid "Rechercher un fichier"
 msgstr "ファイルを検索"
 
@@ -1749,11 +2176,20 @@ msgstr "申告値 %(reported)s に対し再計算値 %(actual)s"
 msgid "Restauration"
 msgstr "復元"
 
+msgid "Restauration de la version %(number)s de « %(name)s »"
+msgstr "「%(name)s」のバージョン %(number)s を復元しています"
+
 msgid "Restauration de « %(name)s »"
 msgstr "「%(name)s」の復元"
 
+msgid "Restauration impossible : %(error)s"
+msgstr "復元できません: %(error)s"
+
 msgid "Restaurer"
 msgstr "復元"
+
+msgid "Restaurer cette version comme version courante ?"
+msgstr "このバージョンを現在のバージョンとして復元しますか？"
 
 msgid "Retour à la connexion"
 msgstr "ログインに戻る"
@@ -1776,6 +2212,9 @@ msgstr "ルール「%(name)s」を削除しました。"
 msgid "Règles"
 msgstr "ルール"
 
+msgid "Règles appliquées"
+msgstr "適用されたルール"
+
 msgid "Règles de nettoyage"
 msgstr "クレンジングルール"
 
@@ -1797,6 +2236,9 @@ msgstr "問題の内訳"
 msgid "Répartition des problèmes restants"
 msgstr "残存問題の分布"
 
+msgid "Résultat de la simulation : rien n'a été écrit. Confirmez le nettoyage pour appliquer réellement ces changements."
+msgstr "シミュレーション結果: 何も書き込まれていません。確定するとこれらの変更が実際に適用されます。"
+
 msgid "Résultats"
 msgstr "結果"
 
@@ -1816,13 +2258,37 @@ msgid "Révocation du jeton « %(name)s »"
 msgstr "トークン「%(name)s」の無効化"
 
 msgid "Révoquer"
-msgstr "無効化"
+msgstr "取り消す"
 
 msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
 msgstr "このトークンを無効化しますか？使用中の連携が動かなくなります。"
 
+msgid "Révoquer ce partage ?"
+msgstr "この共有を取り消しますか？"
+
 msgid "Révoqué"
-msgstr "無効化済み"
+msgstr "取り消し済み"
+
+msgid "Rôle"
+msgstr "ロール"
+
+msgid "Rôle de « %(name)s » : %(before)s → %(after)s"
+msgstr "「%(name)s」のロール: %(before)s → %(after)s"
+
+msgid "Rôle de « %(name)s » mis à jour."
+msgstr "「%(name)s」のロールを更新しました。"
+
+msgid "Rôle du compte"
+msgstr "アカウントのロール"
+
+msgid "Rôle inconnu."
+msgstr "不明なロールです。"
+
+msgid "Rôles et permissions"
+msgstr "ロールと権限"
+
+msgid "Rôles et permissions — DataZen"
+msgstr "ロールと権限 — DataZen"
 
 msgid "S'inscrire"
 msgstr "新規登録"
@@ -1833,8 +2299,14 @@ msgstr "確認のため <strong>%(username)s</strong> を入力してくださ�
 msgid "Score"
 msgstr "スコア"
 
+msgid "Score après"
+msgstr "後のスコア"
+
 msgid "Score après nettoyage"
 msgstr "クリーニング後のスコア"
+
+msgid "Score avant"
+msgstr "前のスコア"
 
 msgid "Score avant nettoyage"
 msgstr "クリーニング前のスコア"
@@ -1863,6 +2335,9 @@ msgstr "クレンジング後の品質スコア"
 msgid "Score qualité avant"
 msgstr "クレンジング前の品質スコア"
 
+msgid "Scores mesurés lors de chaque nettoyage."
+msgstr "クリーニングごとに測定されるスコア。"
+
 msgid "Se connecter"
 msgstr "ログイン"
 
@@ -1875,11 +2350,20 @@ msgstr "結果内を移動"
 msgid "Sert uniquement à la réinitialisation du mot de passe."
 msgstr "パスワードの再設定にのみ使用されます。"
 
+msgid "Seul le propriétaire peut gérer les partages."
+msgstr "共有を管理できるのは所有者だけです。"
+
+msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
+msgstr "最初のいくつかの修正のみを表示しています。実際のクレンジングではすべて適用されます。"
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "使用できるのは http と https スキームのみです。"
 
 msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
 msgstr "このアドレスのアカウントが存在する場合、再設定リンクを含むメールを送信しました。"
+
+msgid "Simulation — aucune modification enregistrée"
+msgstr "シミュレーション — 変更は保存されていません"
 
 msgid "Site web"
 msgstr "ウェブサイト"
@@ -1923,6 +2407,9 @@ msgstr "%(name)sを削除"
 msgid "Supprimer ce webhook ?"
 msgstr "この Webhook を削除しますか？"
 
+msgid "Supprimer cette planification ?"
+msgstr "このスケジュールを削除しますか？"
+
 msgid "Supprimer définitivement ce fichier et toutes ses données ?"
 msgstr "このファイルとすべてのデータを完全に削除しますか？"
 
@@ -1947,6 +2434,12 @@ msgstr "余分な空白を削除"
 msgid "Supprimer mon compte"
 msgstr "アカウントを削除"
 
+msgid "Suspendre"
+msgstr "一時停止"
+
+msgid "Suspendue"
+msgstr "一時停止中"
+
 msgid "Synthèse"
 msgstr "総括"
 
@@ -1958,6 +2451,18 @@ msgstr "セキュリティ"
 
 msgid "Sélectionner un fichier"
 msgstr "ファイルを選択"
+
+msgid "Sélectionnez au moins un fichier."
+msgstr "ファイルを 1 つ以上選択してください。"
+
+msgid "Sélectionnez deux versions différentes pour afficher la comparaison."
+msgstr "比較を表示するには異なる 2 つのバージョンを選択してください。"
+
+msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
+msgstr "最大 %(limit)s 件のファイルを選択できます: それを超えるとサーバー負荷を避けるためバッチが切り詰められます。"
+
+msgid "Sévérité"
+msgstr "重大度"
 
 msgid "Tableau de bord"
 msgstr "ダッシュボード"
@@ -1998,8 +2503,17 @@ msgstr "すべて込み"
 msgid "Tout voir"
 msgstr "すべて見る"
 
+msgid "Toute personne possédant ce lien peut consulter le fichier. Révoquez le partage pour l'invalider immédiatement."
+msgstr "このリンクを持つ人は誰でもファイルを閲覧できます。共有を取り消すと即座に無効になります。"
+
+msgid "Toute personne possédant le lien peut consulter le jeu de données, sans compte. Le lien est révocable et peut expirer."
+msgstr "リンクを持つ人はアカウントなしでデータセットを閲覧できます。リンクは取り消し可能で、期限切れになることもあります。"
+
 msgid "Toutes les actions"
 msgstr "すべての操作"
+
+msgid "Toutes les valeurs renseignées sont valides"
+msgstr "入力済みの値はすべて有効です"
 
 msgid "Traçabilité"
 msgstr "追跡性"
@@ -2013,11 +2527,17 @@ msgstr "種類"
 msgid "Type de correction"
 msgstr "修正の種類"
 
+msgid "Type hétérogène"
+msgstr "混在型"
+
 msgid "Téléchargement"
 msgstr "ダウンロード"
 
 msgid "Téléchargement de « %(name)s »"
 msgstr "「%(name)s」のダウンロード"
+
+msgid "Téléphone"
+msgstr "電話"
 
 msgid "Téléphone invalide"
 msgstr "無効な電話番号"
@@ -2027,6 +2547,9 @@ msgstr "標準形式ではない電話番号"
 
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "標準外の電話番号（%(column)s）:"
+
+msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
+msgstr "自分のファイルをアップロード、クリーニング、スケジュール、削除します。"
 
 msgid "Téléversement"
 msgstr "アップロード"
@@ -2057,6 +2580,9 @@ msgstr "管理者アカウントはこのページから削除できません。
 
 msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
 msgstr "管理者アカウントはこのページから削除できません。次を使用してください:"
+
+msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
+msgstr "ファイルの抜粋: 最初の数行でデータを判断できます。"
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "ダッシュボードがクレンジング前後の品質を測定し、失われたポイントを一つずつ説明します。"
@@ -2100,11 +2626,20 @@ msgstr "置換値"
 msgid "Valeur de remplacement (pour le remplissage)."
 msgstr "置換値（補完用）。"
 
+msgid "Valeur du moment centré"
+msgstr "中心モーメントの値"
+
+msgid "Valeur inconnue"
+msgstr "不明な値"
+
 msgid "Valeur manquante"
 msgstr "欠損値"
 
 msgid "Valeur numérique invalide"
 msgstr "無効な数値"
+
+msgid "Valeur unique « %(value)s » sur %(count)s ligne(s)."
+msgstr "%(count)s 行すべてで単一の値「%(value)s」。"
 
 msgid "Valeurs aberrantes"
 msgstr "外れ値"
@@ -2148,6 +2683,36 @@ msgstr "メールアドレスを検証・修正（明らかな誤りのみ）"
 msgid "Validité"
 msgstr "有効性"
 
+msgid "Variance"
+msgstr "分散"
+
+msgid "Version"
+msgstr "バージョン"
+
+msgid "Version %(number)s restaurée."
+msgstr "バージョン %(number)s を復元しました。"
+
+msgid "Version comparée"
+msgstr "比較対象のバージョン"
+
+msgid "Version courante"
+msgstr "現在のバージョン"
+
+msgid "Version de référence"
+msgstr "基準バージョン"
+
+msgid "Versions"
+msgstr "バージョン"
+
+msgid "Versions enregistrées ("
+msgstr "記録されたバージョン ("
+
+msgid "Versions — %(name)s"
+msgstr "バージョン — %(name)s"
+
+msgid "Vide pour créer un lien public."
+msgstr "空欄にすると公開リンクを作成します。"
+
 msgid "Visualisations statistiques"
 msgstr "統計的可視化"
 
@@ -2169,6 +2734,9 @@ msgstr "あなたのデータは<br> <span class=\"dz-gradient-text\">完璧で�
 msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
 msgstr "ファイルはあなたの手元に残ります。DataZen は選択した保持期間を超えたものを示すだけで、同意なく削除しません。"
 
+msgid "Vos jeux de données"
+msgstr "あなたのデータセット"
+
 msgid "Votre espace de travail"
 msgstr "ワークスペース"
 
@@ -2187,6 +2755,18 @@ msgstr "プロフィール写真を削除しました。"
 msgid "Votre profil a été mis à jour."
 msgstr "プロフィールが更新されました。"
 
+msgid "Votre rôle ne permet pas de créer une planification."
+msgstr "あなたのロールではスケジュールを作成できません。"
+
+msgid "Votre rôle ne permet pas de lancer un nettoyage. Contactez un administrateur."
+msgstr "あなたのロールではクリーニングを開始できません。管理者に連絡してください。"
+
+msgid "Votre rôle ne permet pas de modifier les données. Contactez un administrateur."
+msgstr "あなたのロールではデータを変更できません。管理者に連絡してください。"
+
+msgid "Vous"
+msgstr "あなた"
+
 msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
 msgstr "主導権はあなたにあります。あなたの操作なしに何も削除されません。"
 
@@ -2201,6 +2781,9 @@ msgstr "この Webhook へのアクセス権がありません。"
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "このルールへのアクセス権がありません。"
+
+msgid "Vous ne pouvez pas modifier votre propre rôle."
+msgstr "自分のロールは変更できません。"
 
 msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
 msgstr "すべてのファイルをまとめたデータ品質の集約ビュー。"
@@ -2343,6 +2926,9 @@ msgstr "例: email（空欄 = すべての列）"
 msgid "excellente qualité"
 msgstr "非常に良い品質"
 
+msgid "faible"
+msgstr "低"
+
 msgid "fermer"
 msgstr "閉じる"
 
@@ -2354,6 +2940,9 @@ msgstr "認識されない形式"
 
 msgid "généré le"
 msgstr "生成日"
+
+msgid "haute"
+msgstr "高"
 
 msgid "https://exemple.com"
 msgstr "https://exemple.com"
@@ -2373,6 +2962,9 @@ msgstr "変更なし"
 msgid "jours"
 msgstr "日"
 
+msgid "lien public"
+msgstr "公開リンク"
+
 msgid "lignes"
 msgstr "行"
 
@@ -2381,6 +2973,9 @@ msgstr "長さ/形式が不正"
 
 msgid "matplotlib"
 msgstr "matplotlib"
+
+msgid "moyenne"
+msgstr "中"
 
 msgid "naviguer"
 msgstr "移動"
@@ -2436,6 +3031,9 @@ msgstr "削除済み"
 msgid "sur"
 msgstr "/"
 
+msgid "suspendue"
+msgstr "一時停止中"
+
 msgid "texte"
 msgstr "テキスト"
 
@@ -2445,11 +3043,17 @@ msgstr "電話番号"
 msgid "unicité"
 msgstr "一意性"
 
+msgid "v%(n)s"
+msgstr "v%(n)s"
+
 msgid "valeur(s) extrême(s)"
 msgstr "極値"
 
 msgid "validité"
 msgstr "妥当性"
+
+msgid "« %(value)s » représente %(percent)s %% des valeurs renseignées."
+msgstr "「%(value)s」は入力済みの値の %(percent)s %% を占めます。"
 
 msgid "· ancien_id :"
 msgstr "· ancien_id:"
@@ -2474,6 +3078,12 @@ msgstr "クリーニングに失敗しました"
 
 msgid "Échec du nettoyage de « %(name)s »"
 msgstr "「%(name)s」のクリーニングに失敗しました"
+
+msgid "Échec du nettoyage planifié : %(error)s"
+msgstr "定期クリーニングに失敗しました: %(error)s"
+
+msgid "Éditeur"
+msgstr "編集者"
 
 msgid "Étape 1"
 msgstr "ステップ 1"
@@ -2517,17 +3127,32 @@ msgstr "— すべての列 —"
 msgid "← Retour au fichier"
 msgstr "← ファイルに戻る"
 
+msgid "← Retour à l'historique"
+msgstr "← 履歴に戻る"
+
 msgid "⌨️ Raccourcis"
 msgstr "⌨️ ショートカット"
 
 msgid "⌨️ Raccourcis clavier"
 msgstr "⌨️ キーボードショートカット"
 
+msgid "⏱️ Nettoyages planifiés"
+msgstr "⏱️ 定期クリーニング"
+
+msgid "⏱️ Planifications"
+msgstr "⏱️ スケジュール"
+
 msgid "⏳ Fichiers expirés"
 msgstr "⏳ 期限切れファイル"
 
 msgid "⏳ Nettoyage en cours…"
 msgstr "⏳ クレンジング中…"
+
+msgid "♻️ Restaurer"
+msgstr "♻️ 復元"
+
+msgid "⚙️ Opérations communes"
+msgstr "⚙️ 共通の操作"
 
 msgid "⚙️ Règles de nettoyage personnalisées"
 msgstr "⚙️ カスタムクレンジングルール"
@@ -2537,6 +3162,9 @@ msgstr "⚙️ カスタムルール"
 
 msgid "⚙️ Régler la durée"
 msgstr "⚙️ 期間を調整"
+
+msgid "⚠️ Anomalies signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ 異常は報告のみで、自動的に変更されることはありません。"
 
 msgid "⚠️ Points nécessitant une vérification humaine"
 msgstr "⚠️ 人による確認が必要な項目"
@@ -2586,8 +3214,14 @@ msgstr "✓ コピーしました"
 msgid "➕ Nouveau jeton"
 msgstr "➕ 新しいトークン"
 
+msgid "➕ Nouveau partage"
+msgstr "➕ 新しい共有"
+
 msgid "➕ Nouveau webhook"
 msgstr "➕ 新しい Webhook"
+
+msgid "➕ Nouvelle planification"
+msgstr "➕ 新しいスケジュール"
 
 msgid "➕ Nouvelle règle"
 msgstr "➕ 新しいルール"
@@ -2597,6 +3231,9 @@ msgstr "➕ ファイルをアップロード"
 
 msgid "⬇️ Exporter mes données (JSON)"
 msgstr "⬇️ データをエクスポート（JSON）"
+
+msgid "⬇️ Télécharger"
+msgstr "⬇️ ダウンロード"
 
 msgid "⬇️ Télécharger le fichier nettoyé"
 msgstr "⬇️ クレンジング済みファイルをダウンロード"
@@ -2627,6 +3264,9 @@ msgstr "👁️ レポートを見る"
 
 msgid "👤 Mon profil"
 msgstr "👤 マイプロフィール"
+
+msgid "📄 Fichiers à nettoyer"
+msgstr "📄 クリーニングするファイル"
 
 msgid "📈 Analyse exploratoire"
 msgstr "📈 探索的データ分析"
@@ -2664,8 +3304,14 @@ msgstr "📊 ダッシュボード"
 msgid "📊 Tableau de bord global"
 msgstr "📊 グローバルダッシュボード"
 
+msgid "📋 Mes planifications ("
+msgstr "📋 自分のスケジュール ("
+
 msgid "📋 Mes règles ("
 msgstr "📋 マイ ルール（"
+
+msgid "📋 Partages actifs ("
+msgstr "📋 有効な共有 ("
 
 msgid "📋 Qualité des colonnes"
 msgstr "📋 列の品質"
@@ -2703,11 +3349,26 @@ msgstr "🔌 API とアクセストークン"
 msgid "🔌 Jetons d'API"
 msgstr "🔌 API トークン"
 
+msgid "🔍 Aperçu (simulation)"
+msgstr "🔍 プレビュー（シミュレーション）"
+
+msgid "🔍 Aperçu avant / après (simulation)"
+msgstr "🔍 前後比較プレビュー（シミュレーション）"
+
 msgid "🔍 Avant / après"
 msgstr "🔍 前 / 後"
 
 msgid "🔍 Comparaison avant / après"
 msgstr "🔍 前後比較"
+
+msgid "🔍 Comparer"
+msgstr "🔍 比較"
+
+msgid "🔍 Comparer des versions"
+msgstr "🔍 バージョンを比較"
+
+msgid "🔍 Comparer deux versions"
+msgstr "🔍 2 つのバージョンを比較"
 
 msgid "🔍 Doublons"
 msgstr "🔍 重複"
@@ -2733,6 +3394,9 @@ msgstr "🔎 スコアの説明"
 msgid "🔑 Mes jetons"
 msgstr "🔑 自分のトークン"
 
+msgid "🔑 Votre lien de partage public"
+msgstr "🔑 あなたの公開共有リンク"
+
 msgid "🔑 Votre nouveau jeton"
 msgstr "🔑 新しいトークン"
 
@@ -2747,6 +3411,9 @@ msgstr "🔔 自分の Webhook"
 
 msgid "🔔 Webhooks"
 msgstr "🔔 Webhook"
+
+msgid "🔗 Partager ce jeu de données"
+msgstr "🔗 このデータセットを共有"
 
 msgid "🔗 Voir mon profil public"
 msgstr "🔗 公開プロフィールを見る"
@@ -2769,8 +3436,17 @@ msgstr "🕓 アクティビティ"
 msgid "🕓 Dernières activités"
 msgstr "🕓 最近のアクティビティ"
 
+msgid "🕓 Historique des versions"
+msgstr "🕓 バージョン履歴"
+
 msgid "🕓 Journal d'activité"
 msgstr "🕓 アクティビティログ"
+
+msgid "🕓 Versions"
+msgstr "🕓 バージョン"
+
+msgid "🗂️ Nettoyage par lots"
+msgstr "🗂️ 一括クリーニング"
 
 msgid "🗃️ Fichiers récents"
 msgstr "🗃️ 最近のファイル"
@@ -2796,11 +3472,17 @@ msgstr "🚀 プロ機能の新着"
 msgid "🚀 Premier appel"
 msgstr "🚀 最初の呼び出し"
 
+msgid "🛡️ Rôles et permissions"
+msgstr "🛡️ ロールと権限"
+
 msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
 msgstr "🟢 1 行目を保持（他を削除）"
 
 msgid "🟣 Fusionner toutes les lignes"
 msgstr "🟣 すべての行を統合"
+
+msgid "🧩 Anomalies structurelles"
+msgstr "🧩 構造的異常"
 
 msgid "🧭 Dimensions les plus fragiles"
 msgstr "🧭 最も弱い軸"

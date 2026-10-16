@@ -16,11 +16,20 @@ msgstr "%(actual)s koreksi dalam log vs %(reported)s yang dilaporkan"
 msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
 msgstr "%(actual)s nilai tidak diketahui di kolom email vs %(reported)s yang dilaporkan"
 
+msgid "%(count)s anomalie(s) structurelle(s) détectée(s) sur les colonnes."
+msgstr "Terdeteksi %(count)s anomali struktural pada kolom."
+
 msgid "%(count)s colonnes"
 msgstr "%(count)s kolom"
 
+msgid "%(count)s doublon(s) exact(s) restant(s)"
+msgstr "%(count)s duplikat persis tersisa"
+
 msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
 msgstr "%(count)s duplikat potensial perlu diperiksa."
+
+msgid "%(count)s doublon(s) potentiel(s) à vérifier (pénalité réduite)"
+msgstr "%(count)s duplikat potensial perlu tinjauan manual (penalti dikurangi)"
 
 msgid "%(count)s entrée(s) d'activité supprimée(s)."
 msgstr "%(count)s entri log aktivitas dihapus."
@@ -28,35 +37,38 @@ msgstr "%(count)s entri log aktivitas dihapus."
 msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
 msgstr "%(count)s kesalahan tidak dapat diperbaiki secara otomatis."
 
-msgid "%(count)s exact duplicate(s) remaining"
-msgstr "%(count)s duplikat persis tersisa"
-
-msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
-msgstr "%(count)s nilai tidak konsisten tersisa (bukan valid maupun tidak diketahui)"
+msgid "%(count)s fichier(s) ignoré(s) : lot limité à %(limit)s."
+msgstr "%(count)s berkas diabaikan: batch dibatasi %(limit)s."
 
 msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
 msgstr "%(count)s email tidak valid ada (tidak kosong dan bukan tidak diketahui)"
 
-msgid "%(count)s invalid value(s) among filled data"
-msgstr "%(count)s nilai tidak valid pada data yang terisi"
-
 msgid "%(count)s lignes"
 msgstr "%(count)s baris"
 
-msgid "%(count)s missing value(s)"
-msgstr "%(count)s nilai hilang"
-
-msgid "%(count)s non-standard value(s)"
-msgstr "%(count)s nilai tidak standar"
-
-msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
-msgstr "%(count)s duplikat potensial perlu tinjauan manual (penalti dikurangi)"
-
-msgid "%(count)s unknown value(s) (data unavailable)"
-msgstr "%(count)s nilai tidak diketahui (data tidak tersedia)"
+msgid "%(count)s nettoyage(s) lancé(s) en arrière-plan."
+msgstr "%(count)s pembersihan dimulai di latar belakang."
 
 msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
 msgstr "%(count)s nilai pencilan terdeteksi pada kolom numerik."
+
+msgid "%(count)s valeur(s) d'identifiant dupliquée(s)."
+msgstr "%(count)s nilai pengenal yang duplikat."
+
+msgid "%(count)s valeur(s) incohérente(s) restante(s) (ni valide ni inconnue)"
+msgstr "%(count)s nilai tidak konsisten tersisa (bukan valid maupun tidak diketahui)"
+
+msgid "%(count)s valeur(s) inconnue(s) (donnée indisponible)"
+msgstr "%(count)s nilai tidak diketahui (data tidak tersedia)"
+
+msgid "%(count)s valeur(s) invalide(s) parmi les données renseignées"
+msgstr "%(count)s nilai tidak valid pada data yang terisi"
+
+msgid "%(count)s valeur(s) manquante(s)"
+msgstr "%(count)s nilai hilang"
+
+msgid "%(count)s valeur(s) non standard"
+msgstr "%(count)s nilai tidak standar"
 
 msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
 msgstr "%(count)s nilai saat ini « Tidak diketahui »."
@@ -85,11 +97,21 @@ msgid "%(counter)s valide,"
 msgid_plural "%(counter)s valides,"
 msgstr[0] "%(counter)s valid,"
 
+msgid "%(numeric)s valeur(s) numérique(s) sur %(total)s renseignée(s) : type hétérogène."
+msgstr "%(numeric)s nilai numerik dari %(total)s yang terisi: tipe campuran."
+
 msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
 msgstr "%(purged)s berkas dihapus, %(archived)s diarsipkan."
 
+msgid "%(runs)s exécution"
+msgid_plural "%(runs)s exécutions"
+msgstr[0] "%(runs)s kali jalan"
+
 msgid "%(score)s / 100  (%(weight)s %(percent)s)"
 msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(total)s valeur(s) aberrante(s) détectée(s) (méthode IQR). Colonnes les plus concernées : %(detail)s."
+msgstr "Terdeteksi %(total)s nilai pencilan (metode IQR). Kolom yang paling terdampak: %(detail)s."
 
 msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
 msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s yang diharapkan"
@@ -104,6 +126,9 @@ msgstr[0] "(%(counter)s perubahan)"
 msgid "(%(counter)s non-conformité)"
 msgid_plural "(%(counter)s non-conformités)"
 msgstr[0] "(%(counter)s ketidaksesuaian)"
+
+msgid "(%(shown)s sur %(total)s)"
+msgstr "(%(shown)s dari %(total)s)"
 
 msgid "(colonnes : %(columns)s)"
 msgstr "(kolom: %(columns)s)"
@@ -198,6 +223,9 @@ msgstr "Administrator"
 msgid "Administration"
 msgstr "Administrasi"
 
+msgid "Adresse e-mail"
+msgstr "Alamat email"
+
 msgid "Adresse email"
 msgstr "Alamat email"
 
@@ -218,9 +246,6 @@ msgstr "Tampilkan detail anomali"
 
 msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
 msgstr "Ditambahkan ke header X-DataZen-Signature (HMAC-SHA256)."
-
-msgid "All filled values are valid"
-msgstr "Semua nilai yang terisi valid"
 
 msgid "Aller au contenu principal"
 msgstr "Lewati ke konten utama"
@@ -243,8 +268,20 @@ msgstr "Nilai lama"
 msgid "Annuler"
 msgstr "Batal"
 
+msgid "Anomalie"
+msgstr "Anomali"
+
 msgid "Anomalies restantes (à traiter manuellement)"
 msgstr "Anomali tersisa (perlu ditangani manual)"
+
+msgid "Anomalies structurelles"
+msgstr "Anomali struktural"
+
+msgid "Anomalies structurelles par type"
+msgstr "Anomali struktural menurut jenis"
+
+msgid "Anonymisation"
+msgstr "Anonimisasi"
 
 msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
 msgstr "Anonimkan data sensitif (%(count)s nilai disamarkan)"
@@ -258,8 +295,26 @@ msgstr "Anonimkan data sensitif (nama, email, nomor telepon)"
 msgid "Antananarivo, Madagascar"
 msgstr "Antananarivo, Madagascar"
 
+msgid "Aperçu"
+msgstr "Pratinjau"
+
+msgid "Aperçu calculé : aucune modification n'a été enregistrée. Confirmez pour appliquer le nettoyage."
+msgstr "Pratinjau dihitung: tidak ada perubahan yang disimpan. Konfirmasi untuk menerapkan pembersihan."
+
+msgid "Aperçu de nettoyage sur « %(name)s »"
+msgstr "Pratinjau pembersihan “%(name)s”"
+
+msgid "Aperçu des données"
+msgstr "Pratinjau data"
+
 msgid "Aperçu du fichier nettoyé"
 msgstr "Pratinjau file yang dibersihkan"
+
+msgid "Aperçu limité à %(shown)s lignes sur %(total)s."
+msgstr "Pratinjau dibatasi pada %(shown)s dari %(total)s baris."
+
+msgid "Aplatissement"
+msgstr "Kurtosis"
 
 msgid "Appel API"
 msgstr "Panggilan API"
@@ -267,11 +322,20 @@ msgstr "Panggilan API"
 msgid "Appel API : %(path)s"
 msgstr "Panggilan API: %(path)s"
 
+msgid "Appelez-la depuis un planificateur système (cron, Planificateur de tâches Windows) toutes les cinq minutes."
+msgstr "Panggil dari penjadwal sistem (cron, Penjadwal Tugas Windows) setiap lima menit."
+
 msgid "Appels"
 msgstr "Panggilan"
 
 msgid "Application"
 msgstr "Aplikasi"
+
+msgid "Appliquer"
+msgstr "Terapkan"
+
+msgid "Appliquez les mêmes opérations à plusieurs jeux de données en une seule fois. Les fichiers sont traités en série, un à la fois."
+msgstr "Terapkan operasi yang sama ke beberapa kumpulan data sekaligus. Berkas diproses berurutan, satu per satu."
 
 msgid "Après"
 msgstr "Sesudah"
@@ -291,6 +355,21 @@ msgstr "Arsip"
 msgid "Archivés"
 msgstr "Diarsipkan"
 
+msgid "Asymétrie"
+msgstr "Kemiringan"
+
+msgid "Asymétrie et aplatissement (moments centrés) des colonnes numériques."
+msgstr "Kemiringan dan kurtosis (momen pusat) kolom numerik."
+
+msgid "Aucun compte ne correspond à cette recherche."
+msgstr "Tidak ada akun yang cocok dengan pencarian ini."
+
+msgid "Aucun doublon exact"
+msgstr "Tidak ada duplikat persis"
+
+msgid "Aucun doublon potentiel"
+msgstr "Tidak ada duplikat potensial"
+
 msgid "Aucun fichier d'origine n'est disponible."
 msgstr "Tidak ada file asli yang tersedia."
 
@@ -304,7 +383,7 @@ msgid "Aucun fichier ne correspond à votre recherche."
 msgstr "Tidak ada file yang cocok dengan pencarian Anda."
 
 msgid "Aucun fichier nettoyé n'est disponible."
-msgstr "Tidak ada file bersih yang tersedia."
+msgstr "Tidak ada berkas bersih yang tersedia."
 
 msgid "Aucun fichier nettoyé pour le moment."
 msgstr "Belum ada berkas yang dibersihkan."
@@ -323,6 +402,12 @@ msgstr "Tidak ada grafik yang tersedia untuk kumpulan data ini: tidak cukup nila
 
 msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
 msgstr "Belum ada token. Buat satu untuk menggunakan API."
+
+msgid "Aucun jeu de données disponible pour le moment."
+msgstr "Tidak ada kumpulan data yang tersedia saat ini."
+
+msgid "Aucun jeu de données pour le moment."
+msgstr "Tidak ada kumpulan data saat ini."
 
 msgid "Aucun journal des modifications n'est disponible."
 msgstr "Tidak ada log perubahan yang tersedia."
@@ -348,6 +433,9 @@ msgstr "Tidak ada aktivitas yang tercatat."
 msgid "Aucune anomalie restante."
 msgstr "Tidak ada anomali tersisa."
 
+msgid "Aucune anomalie structurelle détectée."
+msgstr "Tidak ada anomali struktural yang terdeteksi."
+
 msgid "Aucune anomalie."
 msgstr "Tidak ada anomali."
 
@@ -356,6 +444,9 @@ msgstr "Tidak ada kolom"
 
 msgid "Aucune correction"
 msgstr "Tidak ada perbaikan"
+
+msgid "Aucune correction de valeur ne serait nécessaire."
+msgstr "Tidak diperlukan koreksi nilai."
 
 msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
 msgstr "Tidak ada perbedaan mencolok antara berkas asli dan berkas yang dibersihkan: data Anda sudah bersih."
@@ -372,6 +463,18 @@ msgstr "Tidak ada data bersih yang tersedia."
 msgid "Aucune modification enregistrée."
 msgstr "Tidak ada perubahan yang disimpan."
 
+msgid "Aucune opération enregistrée pour cette version."
+msgstr "Tidak ada operasi yang tercatat untuk versi ini."
+
+msgid "Aucune opération enregistrée."
+msgstr "Tidak ada operasi yang tercatat."
+
+msgid "Aucune opération."
+msgstr "Tidak ada operasi."
+
+msgid "Aucune planification : programmez un nettoyage récurrent pour ne plus y penser."
+msgstr "Belum ada jadwal: atur pembersihan berulang dan tak perlu memikirkannya lagi."
+
 msgid "Aucune règle personnalisée."
 msgstr "Tidak ada aturan khusus."
 
@@ -381,8 +484,17 @@ msgstr "Belum ada aturan. Buat satu untuk digunakan kembali di semua file Anda."
 msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
 msgstr "Tidak ada nilai pencilan yang terdeteksi pada kolom numerik."
 
+msgid "Aucune valeur manquante ou inconnue"
+msgstr "Tidak ada nilai hilang atau tidak diketahui"
+
+msgid "Aucune valeur renseignée sur %(rows)s ligne(s)."
+msgstr "Tidak ada nilai yang terisi pada %(rows)s baris."
+
 msgid "Aucune valeur « Inconnu »."
 msgstr "Tidak ada nilai « Tidak diketahui »."
+
+msgid "Aucune version enregistrée : lancez un nettoyage pour en créer une."
+msgstr "Belum ada versi yang tercatat: jalankan pembersihan untuk membuatnya."
 
 msgid "Audit des emails"
 msgstr "Audit email"
@@ -450,8 +562,20 @@ msgstr "Standarisasi penanda ‘Tidak diketahui’ (%(count)s diperbaiki)"
 msgid "Capturer"
 msgstr "Ambil"
 
+msgid "Casse"
+msgstr "Huruf besar/kecil"
+
+msgid "Catégorie"
+msgstr "Kategori"
+
 msgid "Ce graphique n'est pas disponible pour ce jeu de données."
 msgstr "Grafik ini tidak tersedia untuk kumpulan data ini."
+
+msgid "Ce jeu de données n'est partagé avec personne pour le moment."
+msgstr "Kumpulan data ini belum dibagikan kepada siapa pun."
+
+msgid "Ce lien de partage est invalide ou a expiré."
+msgstr "Tautan berbagi ini tidak valid atau sudah kedaluwarsa."
 
 msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
 msgstr "Tautan reset ini sudah digunakan atau kedaluwarsa."
@@ -459,11 +583,20 @@ msgstr "Tautan reset ini sudah digunakan atau kedaluwarsa."
 msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
 msgstr "Tautan ini hanya berlaku sekali. Jika Anda tidak meminta ini, abaikan saja pesan ini: kata sandi Anda tidak berubah. — DataZen"
 
+msgid "Ce lien ne permet pas le téléchargement."
+msgstr "Tautan ini tidak mengizinkan pengunduhan."
+
+msgid "Ce partage ne permet pas le téléchargement."
+msgstr "Berbagi ini tidak mengizinkan pengunduhan."
+
 msgid "Ce profil n'est pas public."
 msgstr "Profil ini tidak publik."
 
 msgid "Ce que le nettoyage a réellement changé dans votre fichier."
 msgstr "Apa yang benar-benar diubah pembersihan pada berkas Anda."
+
+msgid "Ce que permet chaque rôle"
+msgstr "Apa yang diizinkan setiap peran"
 
 msgid "Cellules manquantes"
 msgstr "Sel hilang"
@@ -473,6 +606,12 @@ msgstr "%(count)s berkas ini melewati masa retensi %(days)s hari. Berkas tidak d
 
 msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
 msgstr "Penghitung ini memasok pencarian global dan pintasan di bawah."
+
+msgid "Ces deux versions sont identiques sur les indicateurs suivis."
+msgstr "Kedua versi ini identik pada indikator yang dipantau."
+
+msgid "Cette page est réservée aux administrateurs."
+msgstr "Halaman ini khusus untuk administrator."
 
 msgid "Champ"
 msgstr "Bidang"
@@ -498,6 +637,12 @@ msgstr "Ganti kata sandi saya"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Ganti kata sandi saya — DataZen"
 
+msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
+msgstr "Setiap akun memiliki peran: penampil, penyunting, atau administrator. Pemeriksaan dilakukan di sisi server, bukan hanya di antarmuka."
+
+msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
+msgstr "Setiap pembersihan yang berhasil membekukan sebuah versi: Anda dapat mengunduh, membandingkan, dan mengembalikannya."
+
 msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
 msgstr "Muat data Anda dalam format <code>.csv</code>, <code>.xlsx</code>, atau <code>.xls</code>, apa pun pemisahnya."
 
@@ -506,6 +651,12 @@ msgstr "Pilih bahasa situs"
 
 msgid "Choisir le format"
 msgstr "Pilih format"
+
+msgid "Choisissez deux versions pour mesurer ce qui a réellement changé entre elles."
+msgstr "Pilih dua versi untuk mengukur apa yang sebenarnya berubah di antaranya."
+
+msgid "Choisissez un destinataire ou cochez « Créer un lien public »."
+msgstr "Pilih penerima atau centang “Buat tautan publik”."
 
 msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
 msgstr "Pilih file CSV atau Excel (.csv, .xlsx, .xls)."
@@ -546,6 +697,9 @@ msgstr "Kode bahasa (fr, en, es…). Kosong = bahasa aplikasi."
 msgid "Coefficient de Pearson"
 msgstr "Koefisien Pearson"
 
+msgid "Collaboration"
+msgstr "Kolaborasi"
+
 msgid "Colonne"
 msgstr "Kolom"
 
@@ -554,6 +708,15 @@ msgstr "Kolom target"
 
 msgid "Colonne clé pour la déduplication"
 msgstr "Kolom kunci untuk deduplikasi"
+
+msgid "Colonne constante"
+msgstr "Kolom konstan"
+
+msgid "Colonne quasi constante"
+msgstr "Kolom hampir konstan"
+
+msgid "Colonne vide"
+msgstr "Kolom kosong"
 
 msgid "Colonnes"
 msgstr "Kolom"
@@ -579,17 +742,29 @@ msgstr "Kolom tidak diketahui:"
 msgid "Colonnes stables"
 msgstr "Kolom stabil"
 
+msgid "Colonnes vides, constantes, quasi constantes ou à type hétérogène."
+msgstr "Kolom kosong, konstan, hampir konstan, atau bertipe campuran."
+
 msgid "Colonnes à vérifier"
 msgstr "Kolom yang perlu diperiksa"
 
 msgid "Combien de fichiers se trouvent dans chaque tranche de score."
 msgstr "Berapa banyak berkas di setiap rentang skor."
 
+msgid "Comment les échéances sont-elles exécutées ?"
+msgstr "Bagaimana tanggal jatuh tempo dijalankan?"
+
 msgid "Comparaison"
 msgstr "Perbandingan"
 
 msgid "Comparaison avant / après — %(name)s"
 msgstr "Perbandingan sebelum / sesudah — %(name)s"
+
+msgid "Comparaison de versions — %(name)s"
+msgstr "Perbandingan versi — %(name)s"
+
+msgid "Comparer"
+msgstr "Bandingkan"
 
 msgid "Complétion du profil"
 msgstr "Kelengkapan profil"
@@ -612,6 +787,9 @@ msgstr "Akun"
 msgid "Compte actif"
 msgstr "Akun aktif"
 
+msgid "Comptes ("
+msgstr "Akun ("
+
 msgid "Condensé"
 msgstr "Ringkasan"
 
@@ -620,6 +798,9 @@ msgstr "Kepercayaan"
 
 msgid "Confirmer la décision"
 msgstr "Konfirmasi keputusan"
+
+msgid "Confirmer le nettoyage"
+msgstr "Konfirmasi pembersihan"
 
 msgid "Connectez-vous pour retrouver vos fichiers."
 msgstr "Masuk untuk mengakses file Anda kembali."
@@ -630,11 +811,20 @@ msgstr "Masuk"
 msgid "Connexion — DataZen"
 msgstr "Masuk — DataZen"
 
+msgid "Consultation"
+msgstr "Peninjauan"
+
 msgid "Consultation des graphiques"
 msgstr "Melihat grafik"
 
 msgid "Consultation du rapport"
 msgstr "Melihat laporan"
+
+msgid "Consultation et téléchargement"
+msgstr "Peninjauan dan pengunduhan"
+
+msgid "Consulte et télécharge les jeux de données partagés. Ne modifie rien."
+msgstr "Melihat dan mengunduh kumpulan data yang dibagikan. Tidak mengubah apa pun."
 
 msgid "Continuer / valider une étape"
 msgstr "Lanjutkan / konfirmasi langkah"
@@ -690,11 +880,17 @@ msgstr "Buat aturan"
 msgid "Créer le jeton"
 msgstr "Buat token"
 
+msgid "Créer le partage"
+msgstr "Buat berbagi"
+
 msgid "Créer le webhook"
 msgstr "Buat webhook"
 
 msgid "Créer un compte"
 msgstr "Buat akun"
+
+msgid "Créer un lien public"
+msgstr "Buat tautan publik"
 
 msgid "Créer une règle"
 msgstr "Buat aturan"
@@ -705,8 +901,14 @@ msgstr "Buat aturan sekali, gunakan kembali di semua file Anda."
 msgid "Créez votre compte"
 msgstr "Buat akun Anda"
 
-msgid "Data is consistent: each value is valid or unknown"
-msgstr "Data konsisten: setiap nilai valid atau tidak diketahui"
+msgid "Créé par"
+msgstr "Dibuat oleh"
+
+msgid "Créée par"
+msgstr "Dibuat oleh"
+
+msgid "DataZen ne fait tourner aucun démon en arrière-plan : une commande de gestion reprend les échéances dues et relance le nettoyage par le même chemin de code que l'interface."
+msgstr "DataZen tidak menjalankan daemon latar belakang: perintah manajemen mengambil jadwal yang jatuh tempo dan memulai ulang pembersihan melalui jalur kode yang sama dengan antarmuka."
 
 msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
 msgstr "DataZen — Aplikasi pembersihan data (DataClean Pro) · ©"
@@ -738,14 +940,26 @@ msgstr "Kode HTTP terakhir"
 msgid "Dernier déclenchement"
 msgstr "Pemicuan terakhir"
 
+msgid "Dernier statut"
+msgstr "Status terakhir"
+
 msgid "Dernier usage"
 msgstr "Penggunaan terakhir"
 
 msgid "Derniers fichiers"
 msgstr "File terbaru"
 
+msgid "Dernière : succès"
+msgstr "Terakhir: berhasil"
+
+msgid "Dernière : échec"
+msgstr "Terakhir: gagal"
+
 msgid "Dernière connexion"
 msgstr "Terakhir masuk"
+
+msgid "Dernière exécution"
+msgstr "Jalan terakhir"
 
 msgid "Dernière utilisation"
 msgstr "Penggunaan terakhir"
@@ -756,6 +970,9 @@ msgstr "Aturan terbaru"
 msgid "Des incohérences ont été détectées entre les statistiques et les données."
 msgstr "Terdeteksi ketidakkonsistenan antara statistik dan data."
 
+msgid "Destinataire"
+msgstr "Penerima"
+
 msgid "Dimension"
 msgstr "Dimensi"
 
@@ -765,6 +982,12 @@ msgstr "Dimensi kualitas"
 msgid "Dispersion et valeurs extrêmes des colonnes numériques."
 msgstr "Sebaran dan nilai ekstrem kolom numerik."
 
+msgid "Distribution la plus asymétrique : « %(colonne)s » (asymétrie %(valeur)s) — moyenne et médiane s'écartent sensiblement, une transformation ou un traitement par quantiles est à envisager."
+msgstr "Distribusi paling miring: “%(colonne)s” (kemiringan %(valeur)s) — rata-rata dan median berbeda cukup jauh; pertimbangkan transformasi atau perlakuan kuantil."
+
+msgid "Distribution la plus concentrée/pointue : « %(colonne)s » (aplatissement %(valeur)s) — forte densité autour de la moyenne avec des valeurs extrêmes marquées."
+msgstr "Distribusi paling runcing: “%(colonne)s” (kurtosis %(valeur)s) — kepadatan tinggi di sekitar rata-rata dengan nilai ekstrem yang mencolok."
+
 msgid "Distributions des colonnes numériques"
 msgstr "Distribusi kolom numerik"
 
@@ -773,6 +996,12 @@ msgstr "Distribusi numerik"
 
 msgid "Django · Pandas · Bootstrap"
 msgstr "Django · Pandas · Bootstrap"
+
+msgid "Données cohérentes : chaque valeur est valide ou inconnue"
+msgstr "Data konsisten: setiap nilai valid atau tidak diketahui"
+
+msgid "Doublon"
+msgstr "Duplikat"
 
 msgid "Doublon par similarité"
 msgstr "Duplikat karena kemiripan"
@@ -816,6 +1045,12 @@ msgstr "Duplikat, spasi berlebih, email salah format, tanggal tidak konsisten…
 msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
 msgstr "Duplikat, nilai hilang, spasi, huruf besar-kecil, email, telepon, tanggal, dan gaji dinormalisasi."
 
+msgid "Droit"
+msgstr "Izin"
+
+msgid "Droit accordé"
+msgstr "Izin yang diberikan"
+
 msgid "Durée de conservation"
 msgstr "Masa retensi"
 
@@ -855,8 +1090,17 @@ msgstr "Hapus"
 msgid "Effectif"
 msgstr "Jumlah"
 
+msgid "Email"
+msgstr "Email"
+
+msgid "Email fictif"
+msgstr "Email fiktif"
+
 msgid "Email invalide"
 msgstr "Email tidak valid"
+
+msgid "Email manquant"
+msgstr "Email hilang"
 
 msgid "Email nettoyé"
 msgstr "Email bersih"
@@ -927,8 +1171,14 @@ msgstr "Kesalahan tersisa"
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
 
+msgid "Exemples de corrections"
+msgstr "Contoh koreksi"
+
 msgid "Expiration"
 msgstr "Kedaluwarsa"
+
+msgid "Expire le"
+msgstr "Kedaluwarsa pada"
 
 msgid "Expiré"
 msgstr "Kedaluwarsa"
@@ -938,6 +1188,12 @@ msgstr "Penjelasan skor"
 
 msgid "Export & traçabilité"
 msgstr "Ekspor & ketertelusuran"
+
+msgid "Exécuter"
+msgstr "Jalankan"
+
+msgid "Exécutions"
+msgstr "Jumlah jalan"
 
 msgid "Fermer"
 msgstr "Tutup"
@@ -973,7 +1229,7 @@ msgid "Fichier « %(name)s » supprimé."
 msgstr "File ‘%(name)s’ telah dihapus."
 
 msgid "Fichiers"
-msgstr "File"
+msgstr "Berkas"
 
 msgid "Fichiers archivés"
 msgstr "Berkas diarsipkan"
@@ -996,8 +1252,11 @@ msgstr "Berkas yang dibersihkan lebih lama dari masa ini (0 = retensi tanpa bata
 msgid "Fichiers récents"
 msgstr "File terbaru"
 
+msgid "Fichiers à nettoyer"
+msgstr "Berkas yang akan dibersihkan"
+
 msgid "Fil d'Ariane"
-msgstr "Breadcrumb"
+msgstr "Jejak navigasi"
 
 msgid "Filtrer"
 msgstr "Saring"
@@ -1029,8 +1288,17 @@ msgstr "Format yang didukung: <code>.csv</code>, <code>.xlsx</code>, <code>.xls<
 msgid "Formats de dates (%(column)s) :"
 msgstr "Format tanggal (%(column)s):"
 
-msgid "Formats standardized (phones, dates)"
+msgid "Formats standardisés (téléphones, dates)"
 msgstr "Format dinormalisasi (telepon, tanggal)"
+
+msgid "Forme des distributions"
+msgstr "Bentuk distribusi"
+
+msgid "Forme des distributions (asymétrie et aplatissement)"
+msgstr "Bentuk distribusi (kemiringan dan kurtosis)"
+
+msgid "Fréquence"
+msgstr "Frekuensi"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Hemat waktu: semua yang penting di DataZen ada di sebuah kombinasi tombol."
@@ -1050,14 +1318,23 @@ msgstr "Grafik statistik dibuat dengan <strong>matplotlib</strong> dan <strong>s
 msgid "Gratuit, immédiat, et vos fichiers restent privés."
 msgstr "Gratis, instan, dan file Anda tetap privat."
 
+msgid "Gère les rôles et voit l'ensemble des fichiers de la plateforme."
+msgstr "Mengelola peran dan melihat semua berkas di platform."
+
 msgid "Gérer les règles…"
 msgstr "Kelola aturan…"
+
+msgid "Hebdomadaire"
+msgstr "Mingguan"
 
 msgid "Histogrammes des colonnes numériques détectées."
 msgstr "Histogram kolom numerik yang terdeteksi."
 
 msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
 msgstr "Riwayat bertanda waktu dari tindakan Anda: unggahan, pembersihan, ekspor, API."
+
+msgid "Identifiant non unique"
+msgstr "Pengenal tidak unik"
 
 msgid "Identité"
 msgstr "Identitas"
@@ -1071,6 +1348,9 @@ msgstr "Impor CSV & Excel"
 msgid "Impossible d'appliquer la décision : %(error)s"
 msgstr "Tidak dapat menerapkan keputusan: %(error)s"
 
+msgid "Impossible de comparer ces versions : %(error)s"
+msgstr "Tidak dapat membandingkan versi ini: %(error)s"
+
 msgid "Impossible de convertir le fichier : %(error)s"
 msgstr "Tidak dapat mengonversi file: %(error)s"
 
@@ -1078,13 +1358,16 @@ msgid "Impossible de générer le PDF : %(error)s"
 msgstr "Tidak dapat membuat PDF: %(error)s"
 
 msgid "Impossible de lire ce fichier : %(error)s"
-msgstr "Tidak dapat membaca file ini: %(error)s"
+msgstr "Tidak dapat membaca berkas ini: %(error)s"
 
 msgid "Impossible de lire le fichier : %(error)s"
 msgstr "Tidak dapat membaca file: %(error)s"
 
 msgid "Impossible de lire le rapport : %(error)s"
 msgstr "Tidak dapat membaca laporan: %(error)s"
+
+msgid "Impossible de simuler le nettoyage : le fichier est illisible."
+msgstr "Tidak dapat menyimulasikan pembersihan: berkas tidak dapat dibaca."
 
 msgid "Inactif"
 msgstr "Tidak aktif"
@@ -1096,6 +1379,9 @@ msgid "Inconnu"
 msgstr "Tidak diketahui"
 
 msgid "Indicateur"
+msgstr "Indikator"
+
+msgid "Indicateurs"
 msgstr "Indikator"
 
 msgid "Indicateurs comparés"
@@ -1140,6 +1426,9 @@ msgstr "Token dibuat. Salin sekarang: tidak akan ditampilkan lagi."
 msgid "Jeton d'API"
 msgstr "Token API"
 
+msgid "Jeton du lien"
+msgstr "Token tautan"
+
 msgid "Jeton « %(name)s » révoqué."
 msgstr "Token « %(name)s » dicabut."
 
@@ -1148,6 +1437,12 @@ msgstr "Token"
 
 msgid "Jetons d'API"
 msgstr "Token API"
+
+msgid "Jeu de données"
+msgstr "Kumpulan data"
+
+msgid "Jeu de données partagé en lecture seule via un lien DataZen."
+msgstr "Kumpulan data dibagikan hanya-baca melalui tautan DataZen."
 
 msgid "Journal d'activité"
 msgstr "Log aktivitas"
@@ -1176,8 +1471,17 @@ msgstr "Menghapus akun akan menghapus file, aturan, dan profil Anda secara perma
 msgid "Laisser vide pour appliquer à toutes les colonnes."
 msgstr "Biarkan kosong untuk menerapkan ke semua kolom."
 
+msgid "Laissez vide pour démarrer à la prochaine échéance."
+msgstr "Biarkan kosong untuk mulai pada jatuh tempo berikutnya."
+
 msgid "Laissez vide pour un jeton sans expiration."
 msgstr "Biarkan kosong untuk token tanpa kedaluwarsa."
+
+msgid "Laissez vide pour un partage sans expiration."
+msgstr "Biarkan kosong untuk berbagi tanpa kedaluwarsa."
+
+msgid "Lancer le nettoyage des fichiers sélectionnés"
+msgstr "Mulai pembersihan berkas yang dipilih"
 
 msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
 msgstr "Jalankan pembersihan terlebih dahulu untuk mengakses analisis eksploratif."
@@ -1190,6 +1494,9 @@ msgstr "Bahasa antarmuka"
 
 msgid "Le compte « %(username)s » a été supprimé."
 msgstr "Akun « %(username)s » telah dihapus."
+
+msgid "Le fichier de cette version n'est plus disponible."
+msgstr "Berkas versi ini tidak lagi tersedia."
 
 msgid "Le fichier ne doit pas dépasser 20 Mo."
 msgstr "File tidak boleh melebihi 20 MB."
@@ -1209,6 +1516,9 @@ msgstr "Nama host webhook mengarah ke alamat internal."
 msgid "Le nom d'hôte est absent de l'URL."
 msgstr "Nama host tidak ada di URL."
 
+msgid "Le partage est toujours en lecture seule : le destinataire consulte et, si vous l'autorisez, télécharge. Il ne modifie jamais vos données."
+msgstr "Berbagi selalu hanya-baca: penerima meninjau dan, jika Anda izinkan, mengunduh. Mereka tidak pernah mengubah data Anda."
+
 msgid "Le port est invalide."
 msgstr "Port tidak valid."
 
@@ -1217,6 +1527,12 @@ msgstr "Tema « Sistem » mengikuti pengaturan perangkat Anda."
 
 msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
 msgstr "Pemrosesan berjalan di latar belakang. Halaman ini diperbarui otomatis setelah selesai."
+
+msgid "Lecteur"
+msgstr "Penampil"
+
+msgid "Lecteur : consultation et téléchargement. Éditeur : peut aussi nettoyer et supprimer ses fichiers. Administrateur : gère les rôles et voit tous les fichiers."
+msgstr "Penampil: melihat dan mengunduh. Penyunting: juga dapat membersihkan dan menghapus berkasnya sendiri. Administrator: mengelola peran dan melihat semua berkas."
 
 msgid "Les adresses internes sont refusées."
 msgstr "Alamat internal ditolak."
@@ -1242,14 +1558,23 @@ msgstr "Berkas yang dibersihkan diarsipkan lalu dihapus setelah masa ini (0 = re
 msgid "Les identifiants intégrés à l'URL sont refusés."
 msgstr "Kredensial yang disematkan di URL ditolak."
 
+msgid "Les options choisies ne changeraient rien à ce jeu de données."
+msgstr "Opsi yang dipilih tidak akan mengubah kumpulan data ini."
+
 msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 msgstr "Rute yang tersedia: /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 
 msgid "Les statistiques affichées correspondent aux données réelles."
 msgstr "Statistik yang ditampilkan sesuai dengan data sebenarnya."
 
+msgid "Lien de partage public"
+msgstr "Tautan berbagi publik"
+
 msgid "Lien invalide"
 msgstr "Tautan tidak valid"
+
+msgid "Lien public"
+msgstr "Tautan publik"
 
 msgid "Ligne"
 msgstr "Baris"
@@ -1292,6 +1617,9 @@ msgstr "Kendalikan siklus hidup data Anda."
 
 msgid "Membre depuis"
 msgstr "Anggota sejak"
+
+msgid "Mensuel"
+msgstr "Bulanan"
 
 msgid "Mes règles"
 msgstr "Aturan saya"
@@ -1374,6 +1702,18 @@ msgstr "Pembersihan dimulai di latar belakang. Halaman diperbarui otomatis."
 msgid "Nettoyage lancé sur « %(name)s »"
 msgstr "Pembersihan dimulai pada « %(name)s »"
 
+msgid "Nettoyage par lots"
+msgstr "Pembersihan batch"
+
+msgid "Nettoyage par lots : %(count)s fichier(s) lancé(s)"
+msgstr "Pembersihan batch: %(count)s berkas dimulai"
+
+msgid "Nettoyage par lots — DataZen"
+msgstr "Pembersihan batch — DataZen"
+
+msgid "Nettoyage planifié de « %(name)s » lancé."
+msgstr "Pembersihan terjadwal “%(name)s” dimulai."
+
 msgid "Nettoyage terminé"
 msgstr "Pembersihan selesai"
 
@@ -1401,20 +1741,14 @@ msgstr "Dibersihkan"
 msgid "Niveau"
 msgstr "Tingkat"
 
-msgid "No exact duplicates"
-msgstr "Tidak ada duplikat persis"
-
-msgid "No missing or unknown values"
-msgstr "Tidak ada nilai hilang atau tidak diketahui"
-
-msgid "No potential duplicates"
-msgstr "Tidak ada duplikat potensial"
-
 msgid "Nom"
 msgstr "Nama"
 
 msgid "Nom d'utilisateur"
 msgstr "Nama pengguna"
+
+msgid "Nom de la colonne unique (ex. email). Laissez vide pour ne supprimer que les lignes 100 % identiques. Une colonne absente d'un fichier est ignorée pour ce fichier."
+msgstr "Nama kolom unik (mis. email). Biarkan kosong untuk hanya menghapus baris yang identik 100%. Kolom yang tidak ada pada suatu berkas diabaikan untuk berkas tersebut."
 
 msgid "Nom de la règle"
 msgstr "Nama aturan"
@@ -1430,6 +1764,9 @@ msgstr "Jumlah panggilan"
 
 msgid "Nombre d'occurrences"
 msgstr "Jumlah kemunculan"
+
+msgid "Nombre de colonnes concernées"
+msgstr "Jumlah kolom yang terdampak"
 
 msgid "Nombre de nettoyages et score moyen par semaine."
 msgstr "Jumlah pembersihan dan skor rata-rata per minggu."
@@ -1497,11 +1834,29 @@ msgstr "Foto baru siap"
 msgid "Nouvelle valeur"
 msgstr "Nilai baru"
 
+msgid "Numérique"
+msgstr "Numerik"
+
+msgid "Numéro de version"
+msgstr "Nomor versi"
+
+msgid "Options de nettoyage"
+msgstr "Opsi pembersihan"
+
 msgid "Opération"
 msgstr "Operasi"
 
+msgid "Opérations appliquées"
+msgstr "Operasi yang diterapkan"
+
 msgid "Opérations de nettoyage"
 msgstr "Operasi pembersihan"
+
+msgid "Opérations de v%(n)s"
+msgstr "Operasi v%(n)s"
+
+msgid "Opérations qui seraient appliquées"
+msgstr "Operasi yang akan diterapkan"
 
 msgid "Organisation"
 msgstr "Organisasi"
@@ -1527,6 +1882,27 @@ msgstr "Halaman"
 msgid "Parcourir…"
 msgstr "Telusuri…"
 
+msgid "Partage"
+msgstr "Berbagi"
+
+msgid "Partage créé."
+msgstr "Berbagi dibuat."
+
+msgid "Partage de « %(name)s » avec %(target)s"
+msgstr "Berbagi “%(name)s” dengan %(target)s"
+
+msgid "Partage révoqué."
+msgstr "Berbagi dicabut."
+
+msgid "Partage — %(name)s"
+msgstr "Berbagi — %(name)s"
+
+msgid "Partages"
+msgstr "Berbagi"
+
+msgid "Partagé le"
+msgstr "Dibagikan pada"
+
 msgid "Pas encore de compte ?"
 msgstr "Belum punya akun?"
 
@@ -1541,6 +1917,27 @@ msgstr "Foto profil"
 
 msgid "Pilotage"
 msgstr "Pengawasan"
+
+msgid "Planification"
+msgstr "Jadwal"
+
+msgid "Planification %(state)s."
+msgstr "Jadwal %(state)s."
+
+msgid "Planification créée pour « %(name)s »"
+msgstr "Jadwal dibuat untuk “%(name)s”"
+
+msgid "Planification créée."
+msgstr "Jadwal dibuat."
+
+msgid "Planification supprimée."
+msgstr "Jadwal dihapus."
+
+msgid "Planifications"
+msgstr "Jadwal"
+
+msgid "Planifications — DataZen"
+msgstr "Jadwal — DataZen"
 
 msgid "Plus fréquent"
 msgstr "Paling sering"
@@ -1557,10 +1954,16 @@ msgstr "Bobot"
 msgid "Premier quartile"
 msgstr "Kuartil pertama"
 
+msgid "Première exécution"
+msgstr "Jalan pertama"
+
 msgid "Prendre une photo avec la caméra"
 msgstr "Ambil foto dengan kamera"
 
 msgid "Problème"
+msgstr "Masalah"
+
+msgid "Problèmes"
 msgstr "Masalah"
 
 msgid "Problèmes après"
@@ -1574,6 +1977,9 @@ msgstr "Masalah yang terdeteksi"
 
 msgid "Problèmes restants"
 msgstr "Masalah tersisa"
+
+msgid "Prochaine exécution"
+msgstr "Jalan berikutnya"
 
 msgid "Productivité"
 msgstr "Produktivitas"
@@ -1593,8 +1999,17 @@ msgstr "Profil publik"
 msgid "Profil visible publiquement"
 msgstr "Profil terlihat publik"
 
+msgid "Profilage statistique"
+msgstr "Pemrofilan statistik"
+
 msgid "Profils"
 msgstr "Profil"
+
+msgid "Programmer"
+msgstr "Jadwalkan"
+
+msgid "Programmez un nettoyage récurrent : les mêmes options s'appliquent à chaque échéance, sans intervention de votre part."
+msgstr "Jadwalkan pembersihan berulang: opsi yang sama berlaku pada setiap jatuh tempo, tanpa campur tangan Anda."
 
 msgid "Progression"
 msgstr "Kemajuan"
@@ -1641,6 +2056,9 @@ msgstr "Q1"
 msgid "Q3"
 msgstr "Q3"
 
+msgid "Qualité : v%(before)s → v%(after)s"
+msgstr "Kualitas: v%(before)s → v%(after)s"
+
 msgid "Qualité moyenne"
 msgstr "Kualitas rata-rata"
 
@@ -1649,6 +2067,9 @@ msgstr "Kualitas per kolom"
 
 msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
 msgstr "Beberapa kata tentang Anda, tim Anda, kumpulan data Anda…"
+
+msgid "Quotidien"
+msgstr "Harian"
 
 msgid "Raccourcis clavier"
 msgstr "Pintasan"
@@ -1707,6 +2128,12 @@ msgstr "Cari"
 msgid "Rechercher (Ctrl+K)"
 msgstr "Cari (Ctrl+K)"
 
+msgid "Rechercher un compte"
+msgstr "Cari akun"
+
+msgid "Rechercher un compte…"
+msgstr "Cari akun…"
+
 msgid "Rechercher un fichier"
 msgstr "Cari file"
 
@@ -1749,11 +2176,20 @@ msgstr "Dilaporkan %(reported)s vs dihitung ulang %(actual)s"
 msgid "Restauration"
 msgstr "Pemulihan"
 
+msgid "Restauration de la version %(number)s de « %(name)s »"
+msgstr "Memulihkan versi %(number)s dari “%(name)s”"
+
 msgid "Restauration de « %(name)s »"
 msgstr "Pemulihan « %(name)s »"
 
+msgid "Restauration impossible : %(error)s"
+msgstr "Pemulihan gagal: %(error)s"
+
 msgid "Restaurer"
 msgstr "Pulihkan"
+
+msgid "Restaurer cette version comme version courante ?"
+msgstr "Pulihkan versi ini sebagai versi saat ini?"
 
 msgid "Retour à la connexion"
 msgstr "Kembali ke halaman masuk"
@@ -1776,6 +2212,9 @@ msgstr "Aturan « %(name)s » dihapus."
 msgid "Règles"
 msgstr "Aturan"
 
+msgid "Règles appliquées"
+msgstr "Aturan yang diterapkan"
+
 msgid "Règles de nettoyage"
 msgstr "Aturan pembersihan"
 
@@ -1796,6 +2235,9 @@ msgstr "Sebaran masalah"
 
 msgid "Répartition des problèmes restants"
 msgstr "Distribusi masalah yang tersisa"
+
+msgid "Résultat de la simulation : rien n'a été écrit. Confirmez le nettoyage pour appliquer réellement ces changements."
+msgstr "Hasil simulasi: tidak ada yang ditulis. Konfirmasi pembersihan untuk benar-benar menerapkan perubahan ini."
 
 msgid "Résultats"
 msgstr "Hasil"
@@ -1821,8 +2263,32 @@ msgstr "Cabut"
 msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
 msgstr "Cabut token ini? Integrasi yang memakainya akan berhenti bekerja."
 
+msgid "Révoquer ce partage ?"
+msgstr "Cabut berbagi ini?"
+
 msgid "Révoqué"
 msgstr "Dicabut"
+
+msgid "Rôle"
+msgstr "Peran"
+
+msgid "Rôle de « %(name)s » : %(before)s → %(after)s"
+msgstr "Peran “%(name)s”: %(before)s → %(after)s"
+
+msgid "Rôle de « %(name)s » mis à jour."
+msgstr "Peran “%(name)s” diperbarui."
+
+msgid "Rôle du compte"
+msgstr "Peran akun"
+
+msgid "Rôle inconnu."
+msgstr "Peran tidak dikenal."
+
+msgid "Rôles et permissions"
+msgstr "Peran dan izin"
+
+msgid "Rôles et permissions — DataZen"
+msgstr "Peran dan izin — DataZen"
 
 msgid "S'inscrire"
 msgstr "Daftar"
@@ -1833,8 +2299,14 @@ msgstr "Ketik <strong>%(username)s</strong> untuk mengonfirmasi"
 msgid "Score"
 msgstr "Skor"
 
+msgid "Score après"
+msgstr "Skor sesudah"
+
 msgid "Score après nettoyage"
 msgstr "Skor setelah pembersihan"
+
+msgid "Score avant"
+msgstr "Skor sebelum"
 
 msgid "Score avant nettoyage"
 msgstr "Skor sebelum pembersihan"
@@ -1863,6 +2335,9 @@ msgstr "Skor kualitas setelah"
 msgid "Score qualité avant"
 msgstr "Skor kualitas sebelum"
 
+msgid "Scores mesurés lors de chaque nettoyage."
+msgstr "Skor yang diukur pada setiap pembersihan."
+
 msgid "Se connecter"
 msgstr "Masuk"
 
@@ -1875,11 +2350,20 @@ msgstr "Berpindah dalam hasil"
 msgid "Sert uniquement à la réinitialisation du mot de passe."
 msgstr "Hanya digunakan untuk reset kata sandi."
 
+msgid "Seul le propriétaire peut gérer les partages."
+msgstr "Hanya pemilik yang dapat mengelola berbagi."
+
+msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
+msgstr "Hanya koreksi pertama yang ditampilkan; pembersihan sebenarnya akan menerapkan semuanya."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "Hanya skema http dan https yang diizinkan."
 
 msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
 msgstr "Jika ada akun dengan alamat ini, email berisi tautan reset baru saja dikirim."
+
+msgid "Simulation — aucune modification enregistrée"
+msgstr "Simulasi — tidak ada perubahan yang disimpan"
 
 msgid "Site web"
 msgstr "Situs web"
@@ -1894,7 +2378,7 @@ msgid "Succès"
 msgstr "Berhasil"
 
 msgid "Superutilisateur"
-msgstr "Superuser"
+msgstr "Pengguna super"
 
 msgid "Suppression"
 msgstr "Penghapusan"
@@ -1923,6 +2407,9 @@ msgstr "Hapus %(name)s"
 msgid "Supprimer ce webhook ?"
 msgstr "Hapus webhook ini?"
 
+msgid "Supprimer cette planification ?"
+msgstr "Hapus jadwal ini?"
+
 msgid "Supprimer définitivement ce fichier et toutes ses données ?"
 msgstr "Hapus file ini dan semua datanya secara permanen?"
 
@@ -1947,6 +2434,12 @@ msgstr "Hapus spasi berlebih"
 msgid "Supprimer mon compte"
 msgstr "Hapus akun saya"
 
+msgid "Suspendre"
+msgstr "Tangguhkan"
+
+msgid "Suspendue"
+msgstr "Ditangguhkan"
+
 msgid "Synthèse"
 msgstr "Sintesis"
 
@@ -1958,6 +2451,18 @@ msgstr "Keamanan"
 
 msgid "Sélectionner un fichier"
 msgstr "Pilih berkas"
+
+msgid "Sélectionnez au moins un fichier."
+msgstr "Pilih setidaknya satu berkas."
+
+msgid "Sélectionnez deux versions différentes pour afficher la comparaison."
+msgstr "Pilih dua versi berbeda untuk menampilkan perbandingan."
+
+msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
+msgstr "Pilih hingga %(limit)s berkas: lebih dari itu, batch dipotong agar server tidak kelebihan beban."
+
+msgid "Sévérité"
+msgstr "Tingkat keparahan"
 
 msgid "Tableau de bord"
 msgstr "Dasbor"
@@ -1998,8 +2503,17 @@ msgstr "Semuanya disertakan"
 msgid "Tout voir"
 msgstr "Lihat semua"
 
+msgid "Toute personne possédant ce lien peut consulter le fichier. Révoquez le partage pour l'invalider immédiatement."
+msgstr "Siapa pun yang memiliki tautan ini dapat meninjau berkas. Cabut berbagi untuk membatalkannya segera."
+
+msgid "Toute personne possédant le lien peut consulter le jeu de données, sans compte. Le lien est révocable et peut expirer."
+msgstr "Siapa pun yang memiliki tautan dapat meninjau kumpulan data tanpa akun. Tautan dapat dicabut dan dapat kedaluwarsa."
+
 msgid "Toutes les actions"
 msgstr "Semua tindakan"
+
+msgid "Toutes les valeurs renseignées sont valides"
+msgstr "Semua nilai yang terisi valid"
 
 msgid "Traçabilité"
 msgstr "Ketertelusuran"
@@ -2013,11 +2527,17 @@ msgstr "Jenis"
 msgid "Type de correction"
 msgstr "Jenis perbaikan"
 
+msgid "Type hétérogène"
+msgstr "Tipe campuran"
+
 msgid "Téléchargement"
 msgstr "Unduhan"
 
 msgid "Téléchargement de « %(name)s »"
 msgstr "Unduhan « %(name)s »"
+
+msgid "Téléphone"
+msgstr "Telepon"
 
 msgid "Téléphone invalide"
 msgstr "Telepon tidak valid"
@@ -2027,6 +2547,9 @@ msgstr "Telepon tidak standar"
 
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Telepon tidak standar (%(column)s):"
+
+msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
+msgstr "Mengunggah, membersihkan, menjadwalkan, dan menghapus berkasnya sendiri."
 
 msgid "Téléversement"
 msgstr "Unggahan"
@@ -2057,6 +2580,9 @@ msgstr "Akun administrator tidak dapat dihapus dari halaman ini."
 
 msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
 msgstr "Akun administrator tidak dapat dihapus dari halaman ini. Gunakan"
+
+msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
+msgstr "Kutipan berkas: baris pertama cukup untuk menilai data."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "Dasbor mengukur kualitas sebelum / sesudah dan menjelaskan setiap poin yang hilang."
@@ -2100,11 +2626,20 @@ msgstr "Nilai pengganti"
 msgid "Valeur de remplacement (pour le remplissage)."
 msgstr "Nilai pengganti (untuk pengisian)."
 
+msgid "Valeur du moment centré"
+msgstr "Nilai momen pusat"
+
+msgid "Valeur inconnue"
+msgstr "Nilai tidak dikenal"
+
 msgid "Valeur manquante"
 msgstr "Nilai hilang"
 
 msgid "Valeur numérique invalide"
 msgstr "Nilai numerik tidak valid"
+
+msgid "Valeur unique « %(value)s » sur %(count)s ligne(s)."
+msgstr "Nilai tunggal “%(value)s” pada %(count)s baris."
 
 msgid "Valeurs aberrantes"
 msgstr "Nilai pencilan"
@@ -2148,6 +2683,36 @@ msgstr "Validasi dan perbaiki email (hanya kesalahan yang jelas)"
 msgid "Validité"
 msgstr "Validitas"
 
+msgid "Variance"
+msgstr "Varians"
+
+msgid "Version"
+msgstr "Versi"
+
+msgid "Version %(number)s restaurée."
+msgstr "Versi %(number)s dipulihkan."
+
+msgid "Version comparée"
+msgstr "Versi yang dibandingkan"
+
+msgid "Version courante"
+msgstr "Versi saat ini"
+
+msgid "Version de référence"
+msgstr "Versi referensi"
+
+msgid "Versions"
+msgstr "Versi"
+
+msgid "Versions enregistrées ("
+msgstr "Versi tercatat ("
+
+msgid "Versions — %(name)s"
+msgstr "Versi — %(name)s"
+
+msgid "Vide pour créer un lien public."
+msgstr "Kosongkan untuk membuat tautan publik."
+
 msgid "Visualisations statistiques"
 msgstr "Visualisasi statistik"
 
@@ -2169,6 +2734,9 @@ msgstr "Data Anda layak<br> <span class=\"dz-gradient-text\">menjadi sempurna.</
 msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
 msgstr "Berkas Anda tetap milik Anda. DataZen menunjukkan apa yang melewati masa retensi yang dipilih dan tidak menghapus apa pun tanpa persetujuan Anda."
 
+msgid "Vos jeux de données"
+msgstr "Kumpulan data Anda"
+
 msgid "Votre espace de travail"
 msgstr "Ruang kerja Anda"
 
@@ -2187,6 +2755,18 @@ msgstr "Foto profil Anda telah dihapus."
 msgid "Votre profil a été mis à jour."
 msgstr "Profil Anda telah diperbarui."
 
+msgid "Votre rôle ne permet pas de créer une planification."
+msgstr "Peran Anda tidak mengizinkan membuat jadwal."
+
+msgid "Votre rôle ne permet pas de lancer un nettoyage. Contactez un administrateur."
+msgstr "Peran Anda tidak mengizinkan memulai pembersihan. Hubungi administrator."
+
+msgid "Votre rôle ne permet pas de modifier les données. Contactez un administrateur."
+msgstr "Peran Anda tidak mengizinkan mengubah data. Hubungi administrator."
+
+msgid "Vous"
+msgstr "Anda"
+
 msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
 msgstr "Anda tetap memegang kendali: tidak ada yang dihapus tanpa tindakan Anda."
 
@@ -2201,6 +2781,9 @@ msgstr "Anda tidak memiliki akses ke webhook ini."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "Anda tidak memiliki akses ke aturan ini."
+
+msgid "Vous ne pouvez pas modifier votre propre rôle."
+msgstr "Anda tidak dapat mengubah peran Anda sendiri."
 
 msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
 msgstr "Tampilan gabungan kualitas data Anda, mencakup semua berkas."
@@ -2343,6 +2926,9 @@ msgstr "mis.: email (kosong = semua kolom)"
 msgid "excellente qualité"
 msgstr "kualitas sangat baik"
 
+msgid "faible"
+msgstr "rendah"
+
 msgid "fermer"
 msgstr "tutup"
 
@@ -2354,6 +2940,9 @@ msgstr "format tidak dikenali"
 
 msgid "généré le"
 msgstr "dibuat pada"
+
+msgid "haute"
+msgstr "tinggi"
 
 msgid "https://exemple.com"
 msgstr "https://exemple.com"
@@ -2373,6 +2962,9 @@ msgstr "tidak berubah"
 msgid "jours"
 msgstr "hari"
 
+msgid "lien public"
+msgstr "tautan publik"
+
 msgid "lignes"
 msgstr "baris"
 
@@ -2381,6 +2973,9 @@ msgstr "panjang/format salah"
 
 msgid "matplotlib"
 msgstr "matplotlib"
+
+msgid "moyenne"
+msgstr "sedang"
 
 msgid "naviguer"
 msgstr "navigasi"
@@ -2436,6 +3031,9 @@ msgstr "dihapus"
 msgid "sur"
 msgstr "pada"
 
+msgid "suspendue"
+msgstr "ditangguhkan"
+
 msgid "texte"
 msgstr "teks"
 
@@ -2445,11 +3043,17 @@ msgstr "telepon"
 msgid "unicité"
 msgstr "keunikan"
 
+msgid "v%(n)s"
+msgstr "v%(n)s"
+
 msgid "valeur(s) extrême(s)"
 msgstr "nilai ekstrem"
 
 msgid "validité"
 msgstr "validitas"
+
+msgid "« %(value)s » représente %(percent)s %% des valeurs renseignées."
+msgstr "“%(value)s” mencakup %(percent)s %% dari nilai yang terisi."
 
 msgid "· ancien_id :"
 msgstr "· ancien_id:"
@@ -2474,6 +3078,12 @@ msgstr "Pembersihan gagal"
 
 msgid "Échec du nettoyage de « %(name)s »"
 msgstr "Pembersihan « %(name)s » gagal"
+
+msgid "Échec du nettoyage planifié : %(error)s"
+msgstr "Pembersihan terjadwal gagal: %(error)s"
+
+msgid "Éditeur"
+msgstr "Penyunting"
 
 msgid "Étape 1"
 msgstr "Langkah 1"
@@ -2517,17 +3127,32 @@ msgstr "— Semua kolom —"
 msgid "← Retour au fichier"
 msgstr "← Kembali ke file"
 
+msgid "← Retour à l'historique"
+msgstr "← Kembali ke riwayat"
+
 msgid "⌨️ Raccourcis"
 msgstr "⌨️ Pintasan"
 
 msgid "⌨️ Raccourcis clavier"
 msgstr "⌨️ Pintasan papan tik"
 
+msgid "⏱️ Nettoyages planifiés"
+msgstr "⏱️ Pembersihan terjadwal"
+
+msgid "⏱️ Planifications"
+msgstr "⏱️ Jadwal"
+
 msgid "⏳ Fichiers expirés"
 msgstr "⏳ Berkas kedaluwarsa"
 
 msgid "⏳ Nettoyage en cours…"
 msgstr "⏳ Pembersihan sedang berjalan…"
+
+msgid "♻️ Restaurer"
+msgstr "♻️ Pulihkan"
+
+msgid "⚙️ Opérations communes"
+msgstr "⚙️ Operasi umum"
 
 msgid "⚙️ Règles de nettoyage personnalisées"
 msgstr "⚙️ Aturan pembersihan khusus"
@@ -2537,6 +3162,9 @@ msgstr "⚙️ Aturan khusus"
 
 msgid "⚙️ Régler la durée"
 msgstr "⚙️ Atur masa"
+
+msgid "⚠️ Anomalies signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ Anomali hanya dilaporkan — tidak pernah diubah secara otomatis."
 
 msgid "⚠️ Points nécessitant une vérification humaine"
 msgstr "⚠️ Poin yang memerlukan pemeriksaan manusia"
@@ -2586,8 +3214,14 @@ msgstr "✓ Disalin"
 msgid "➕ Nouveau jeton"
 msgstr "➕ Token baru"
 
+msgid "➕ Nouveau partage"
+msgstr "➕ Berbagi baru"
+
 msgid "➕ Nouveau webhook"
 msgstr "➕ Webhook baru"
+
+msgid "➕ Nouvelle planification"
+msgstr "➕ Jadwal baru"
 
 msgid "➕ Nouvelle règle"
 msgstr "➕ Aturan baru"
@@ -2597,6 +3231,9 @@ msgstr "➕ Unggah berkas"
 
 msgid "⬇️ Exporter mes données (JSON)"
 msgstr "⬇️ Ekspor data saya (JSON)"
+
+msgid "⬇️ Télécharger"
+msgstr "⬇️ Unduh"
 
 msgid "⬇️ Télécharger le fichier nettoyé"
 msgstr "⬇️ Unduh file bersih"
@@ -2627,6 +3264,9 @@ msgstr "👁️ Lihat laporan"
 
 msgid "👤 Mon profil"
 msgstr "👤 Profil saya"
+
+msgid "📄 Fichiers à nettoyer"
+msgstr "📄 Berkas yang akan dibersihkan"
 
 msgid "📈 Analyse exploratoire"
 msgstr "📈 Analisis eksploratif"
@@ -2664,8 +3304,14 @@ msgstr "📊 Dasbor"
 msgid "📊 Tableau de bord global"
 msgstr "📊 Dasbor global"
 
+msgid "📋 Mes planifications ("
+msgstr "📋 Jadwal saya ("
+
 msgid "📋 Mes règles ("
 msgstr "📋 Aturan saya ("
+
+msgid "📋 Partages actifs ("
+msgstr "📋 Berbagi aktif ("
 
 msgid "📋 Qualité des colonnes"
 msgstr "📋 Kualitas kolom"
@@ -2703,11 +3349,26 @@ msgstr "🔌 API dan token akses"
 msgid "🔌 Jetons d'API"
 msgstr "🔌 Token API"
 
+msgid "🔍 Aperçu (simulation)"
+msgstr "🔍 Pratinjau (simulasi)"
+
+msgid "🔍 Aperçu avant / après (simulation)"
+msgstr "🔍 Pratinjau sebelum / sesudah (simulasi)"
+
 msgid "🔍 Avant / après"
 msgstr "🔍 Sebelum / sesudah"
 
 msgid "🔍 Comparaison avant / après"
 msgstr "🔍 Perbandingan sebelum / sesudah"
+
+msgid "🔍 Comparer"
+msgstr "🔍 Bandingkan"
+
+msgid "🔍 Comparer des versions"
+msgstr "🔍 Bandingkan versi"
+
+msgid "🔍 Comparer deux versions"
+msgstr "🔍 Bandingkan dua versi"
 
 msgid "🔍 Doublons"
 msgstr "🔍 Duplikat"
@@ -2733,6 +3394,9 @@ msgstr "🔎 Penjelasan skor"
 msgid "🔑 Mes jetons"
 msgstr "🔑 Token saya"
 
+msgid "🔑 Votre lien de partage public"
+msgstr "🔑 Tautan berbagi publik Anda"
+
 msgid "🔑 Votre nouveau jeton"
 msgstr "🔑 Token baru Anda"
 
@@ -2747,6 +3411,9 @@ msgstr "🔔 Webhook saya"
 
 msgid "🔔 Webhooks"
 msgstr "🔔 Webhook"
+
+msgid "🔗 Partager ce jeu de données"
+msgstr "🔗 Bagikan kumpulan data ini"
 
 msgid "🔗 Voir mon profil public"
 msgstr "🔗 Lihat profil publik saya"
@@ -2769,8 +3436,17 @@ msgstr "🕓 Aktivitas"
 msgid "🕓 Dernières activités"
 msgstr "🕓 Aktivitas terakhir"
 
+msgid "🕓 Historique des versions"
+msgstr "🕓 Riwayat versi"
+
 msgid "🕓 Journal d'activité"
 msgstr "🕓 Log aktivitas"
+
+msgid "🕓 Versions"
+msgstr "🕓 Versi"
+
+msgid "🗂️ Nettoyage par lots"
+msgstr "🗂️ Pembersihan batch"
 
 msgid "🗃️ Fichiers récents"
 msgstr "🗃️ File terbaru"
@@ -2796,11 +3472,17 @@ msgstr "🚀 Hal baru ruang pro"
 msgid "🚀 Premier appel"
 msgstr "🚀 Panggilan pertama"
 
+msgid "🛡️ Rôles et permissions"
+msgstr "🛡️ Peran dan izin"
+
 msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
 msgstr "🟢 Pertahankan baris ke-1 (hapus yang lain)"
 
 msgid "🟣 Fusionner toutes les lignes"
 msgstr "🟣 Gabungkan semua baris"
+
+msgid "🧩 Anomalies structurelles"
+msgstr "🧩 Anomali struktural"
 
 msgid "🧭 Dimensions les plus fragiles"
 msgstr "🧭 Dimensi paling rapuh"

@@ -24,11 +24,18 @@ from .dataset_messages import DATASET_MESSAGE_TRANSLATIONS
 from .duplicate_review import DUPLICATE_REVIEW_TRANSLATIONS
 from .chart_labels import CHART_LABEL_TRANSLATIONS
 from .key_names import KEY_NAME_TRANSLATIONS
+from .preview_cleaning import PREVIEW_TRANSLATIONS
 from .pro_features import PRO_FEATURE_TRANSLATIONS
 from .rule_states import RULE_STATE_TRANSLATIONS
 from .search_labels import SEARCH_LABEL_TRANSLATIONS
 from .separators import SEPARATOR_TRANSLATIONS
 from .ui_strings import UI_STRING_TRANSLATIONS
+from .collab_roles import COLLAB_ROLE_TRANSLATIONS
+from .collab_sharing import COLLAB_SHARE_TRANSLATIONS
+from .collab_versions import COLLAB_VERSION_TRANSLATIONS
+from .collab_schedules import COLLAB_SCHEDULE_TRANSLATIONS
+from .collab_batch import COLLAB_BATCH_TRANSLATIONS
+from .french_source import FRENCH_SOURCE_TRANSLATIONS
 
 _MODULES = [
     "en",
@@ -100,11 +107,18 @@ for _overrides in (
     DUPLICATE_REVIEW_TRANSLATIONS,
     CHART_LABEL_TRANSLATIONS,
     KEY_NAME_TRANSLATIONS,
+    PREVIEW_TRANSLATIONS,
     PRO_FEATURE_TRANSLATIONS,
     RULE_STATE_TRANSLATIONS,
     SEARCH_LABEL_TRANSLATIONS,
     SEPARATOR_TRANSLATIONS,
     UI_STRING_TRANSLATIONS,
+    COLLAB_ROLE_TRANSLATIONS,
+    COLLAB_SHARE_TRANSLATIONS,
+    COLLAB_VERSION_TRANSLATIONS,
+    COLLAB_SCHEDULE_TRANSLATIONS,
+    COLLAB_BATCH_TRANSLATIONS,
+    FRENCH_SOURCE_TRANSLATIONS,
 ):
     for _code, _translations in _overrides.items():
         CATALOGS.setdefault(_code, {}).update(_translations)

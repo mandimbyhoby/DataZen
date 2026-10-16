@@ -16,11 +16,20 @@ msgstr "%(actual)s исправление(й) в журнале против %(r
 msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
 msgstr "%(actual)s неизвестных значений в столбцах email против %(reported)s заявленных"
 
+msgid "%(count)s anomalie(s) structurelle(s) détectée(s) sur les colonnes."
+msgstr "Обнаружено структурных аномалий: %(count)s (в столбцах)."
+
 msgid "%(count)s colonnes"
 msgstr "%(count)s столбцов"
 
+msgid "%(count)s doublon(s) exact(s) restant(s)"
+msgstr "%(count)s точных дубликатов осталось"
+
 msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
 msgstr "%(count)s потенциальных дубликатов требуют проверки."
+
+msgid "%(count)s doublon(s) potentiel(s) à vérifier (pénalité réduite)"
+msgstr "%(count)s потенциальных дубликатов требуют ручной проверки (пониженный штраф)"
 
 msgid "%(count)s entrée(s) d'activité supprimée(s)."
 msgstr "Удалено записей журнала активности: %(count)s."
@@ -28,35 +37,38 @@ msgstr "Удалено записей журнала активности: %(cou
 msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
 msgstr "Не удалось автоматически исправить ошибок: %(count)s."
 
-msgid "%(count)s exact duplicate(s) remaining"
-msgstr "%(count)s точных дубликатов осталось"
-
-msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
-msgstr "%(count)s несогласованных значений осталось (ни допустимых, ни неизвестных)"
+msgid "%(count)s fichier(s) ignoré(s) : lot limité à %(limit)s."
+msgstr "%(count)s файл(ов) пропущено: пакет ограничен %(limit)s."
 
 msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
 msgstr "%(count)s некорректных адресов email (непустых и не неизвестных)"
 
-msgid "%(count)s invalid value(s) among filled data"
-msgstr "%(count)s недопустимых значений среди заполненных данных"
-
 msgid "%(count)s lignes"
 msgstr "%(count)s строк"
 
-msgid "%(count)s missing value(s)"
-msgstr "%(count)s пропущенных значений"
-
-msgid "%(count)s non-standard value(s)"
-msgstr "%(count)s нестандартных значений"
-
-msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
-msgstr "%(count)s потенциальных дубликатов требуют ручной проверки (пониженный штраф)"
-
-msgid "%(count)s unknown value(s) (data unavailable)"
-msgstr "%(count)s неизвестных значений (данные недоступны)"
+msgid "%(count)s nettoyage(s) lancé(s) en arrière-plan."
+msgstr "Запущено %(count)s очисток в фоновом режиме."
 
 msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
 msgstr "%(count)s выбросов обнаружено в числовых столбцах."
+
+msgid "%(count)s valeur(s) d'identifiant dupliquée(s)."
+msgstr "Дублирующихся значений идентификатора: %(count)s."
+
+msgid "%(count)s valeur(s) incohérente(s) restante(s) (ni valide ni inconnue)"
+msgstr "%(count)s несогласованных значений осталось (ни допустимых, ни неизвестных)"
+
+msgid "%(count)s valeur(s) inconnue(s) (donnée indisponible)"
+msgstr "%(count)s неизвестных значений (данные недоступны)"
+
+msgid "%(count)s valeur(s) invalide(s) parmi les données renseignées"
+msgstr "%(count)s недопустимых значений среди заполненных данных"
+
+msgid "%(count)s valeur(s) manquante(s)"
+msgstr "%(count)s пропущенных значений"
+
+msgid "%(count)s valeur(s) non standard"
+msgstr "%(count)s нестандартных значений"
 
 msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
 msgstr "%(count)s значений сейчас «Неизвестно»."
@@ -70,28 +82,50 @@ msgstr[2] "Обнаружено потенциальных дубликатов:
 msgid "%(counter)s fichier affiché"
 msgid_plural "%(counter)s fichiers affichés"
 msgstr[0] "%(counter)s файл показан"
+msgstr[1] "%(counter)s файл показан"
+msgstr[2] "%(counter)s файл показан"
 
 msgid "%(counter)s inconnu"
 msgid_plural "%(counter)s inconnus"
 msgstr[0] "%(counter)s неизвестно"
+msgstr[1] "%(counter)s неизвестно"
+msgstr[2] "%(counter)s неизвестно"
 
 msgid "%(counter)s invalide,"
 msgid_plural "%(counter)s invalides,"
 msgstr[0] "%(counter)s недопустимо,"
+msgstr[1] "%(counter)s недопустимо,"
+msgstr[2] "%(counter)s недопустимо,"
 
 msgid "%(counter)s ligne concernée :"
 msgid_plural "%(counter)s lignes concernées :"
 msgstr[0] "затронуто строк: %(counter)s:"
+msgstr[1] "затронуто строк: %(counter)s:"
+msgstr[2] "затронуто строк: %(counter)s:"
 
 msgid "%(counter)s valide,"
 msgid_plural "%(counter)s valides,"
 msgstr[0] "%(counter)s допустимо,"
+msgstr[1] "%(counter)s допустимо,"
+msgstr[2] "%(counter)s допустимо,"
+
+msgid "%(numeric)s valeur(s) numérique(s) sur %(total)s renseignée(s) : type hétérogène."
+msgstr "Числовых значений: %(numeric)s из %(total)s заполненных — смешанный тип."
 
 msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
 msgstr "Удалено файлов: %(purged)s, архивировано: %(archived)s."
 
+msgid "%(runs)s exécution"
+msgid_plural "%(runs)s exécutions"
+msgstr[0] "%(runs)s запуск"
+msgstr[1] "%(runs)s запуск"
+msgstr[2] "%(runs)s запуск"
+
 msgid "%(score)s / 100  (%(weight)s %(percent)s)"
 msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(total)s valeur(s) aberrante(s) détectée(s) (méthode IQR). Colonnes les plus concernées : %(detail)s."
+msgstr "Обнаружено выбросов: %(total)s (метод IQR). Наиболее затронутые столбцы: %(detail)s."
 
 msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
 msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s против %(expected)s ожидаемых"
@@ -102,10 +136,17 @@ msgstr "%(value)s %(percent)s"
 msgid "(%(counter)s modification)"
 msgid_plural "(%(counter)s modifications)"
 msgstr[0] "(%(counter)s изменение)"
+msgstr[1] "(%(counter)s изменение)"
+msgstr[2] "(%(counter)s изменение)"
 
 msgid "(%(counter)s non-conformité)"
 msgid_plural "(%(counter)s non-conformités)"
 msgstr[0] "(%(counter)s несоответствие)"
+msgstr[1] "(%(counter)s несоответствие)"
+msgstr[2] "(%(counter)s несоответствие)"
+
+msgid "(%(shown)s sur %(total)s)"
+msgstr "(%(shown)s из %(total)s)"
 
 msgid "(colonnes : %(columns)s)"
 msgstr "(столбцы: %(columns)s)"
@@ -159,7 +200,7 @@ msgid "Accueil"
 msgstr "Главная"
 
 msgid "Actif"
-msgstr "Активен"
+msgstr "Активно"
 
 msgid "Actifs"
 msgstr "Активные"
@@ -200,6 +241,9 @@ msgstr "Администратор"
 msgid "Administration"
 msgstr "Администрирование"
 
+msgid "Adresse e-mail"
+msgstr "Адрес электронной почты"
+
 msgid "Adresse email"
 msgstr "Адрес электронной почты"
 
@@ -220,9 +264,6 @@ msgstr "Показать подробности аномалий"
 
 msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
 msgstr "Добавлено в заголовок X-DataZen-Signature (HMAC-SHA256)."
-
-msgid "All filled values are valid"
-msgstr "Все заполненные значения допустимы"
 
 msgid "Aller au contenu principal"
 msgstr "Перейти к основному содержимому"
@@ -245,8 +286,20 @@ msgstr "Прежнее значение"
 msgid "Annuler"
 msgstr "Отмена"
 
+msgid "Anomalie"
+msgstr "Аномалия"
+
 msgid "Anomalies restantes (à traiter manuellement)"
 msgstr "Оставшиеся аномалии (для ручной обработки)"
+
+msgid "Anomalies structurelles"
+msgstr "Структурные аномалии"
+
+msgid "Anomalies structurelles par type"
+msgstr "Структурные аномалии по типам"
+
+msgid "Anonymisation"
+msgstr "Анонимизация"
 
 msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
 msgstr "Анонимизация конфиденциальных данных (псевдонимизировано значений: %(count)s)"
@@ -260,8 +313,26 @@ msgstr "Анонимизировать конфиденциальные данн
 msgid "Antananarivo, Madagascar"
 msgstr "Antananarivo, Madagascar"
 
+msgid "Aperçu"
+msgstr "Предпросмотр"
+
+msgid "Aperçu calculé : aucune modification n'a été enregistrée. Confirmez pour appliquer le nettoyage."
+msgstr "Предпросмотр рассчитан: изменения не сохранены. Подтвердите, чтобы применить очистку."
+
+msgid "Aperçu de nettoyage sur « %(name)s »"
+msgstr "Предпросмотр очистки «%(name)s»"
+
+msgid "Aperçu des données"
+msgstr "Предпросмотр данных"
+
 msgid "Aperçu du fichier nettoyé"
 msgstr "Предпросмотр очищенного файла"
+
+msgid "Aperçu limité à %(shown)s lignes sur %(total)s."
+msgstr "Предпросмотр ограничен %(shown)s из %(total)s строк."
+
+msgid "Aplatissement"
+msgstr "Эксцесс"
 
 msgid "Appel API"
 msgstr "Вызов API"
@@ -269,11 +340,20 @@ msgstr "Вызов API"
 msgid "Appel API : %(path)s"
 msgstr "Вызов API: %(path)s"
 
+msgid "Appelez-la depuis un planificateur système (cron, Planificateur de tâches Windows) toutes les cinq minutes."
+msgstr "Вызывайте её из системного планировщика (cron, Планировщик заданий Windows) каждые пять минут."
+
 msgid "Appels"
 msgstr "Вызовы"
 
 msgid "Application"
 msgstr "Приложение"
+
+msgid "Appliquer"
+msgstr "Применить"
+
+msgid "Appliquez les mêmes opérations à plusieurs jeux de données en une seule fois. Les fichiers sont traités en série, un à la fois."
+msgstr "Примените одни и те же операции сразу к нескольким наборам данных. Файлы обрабатываются последовательно, по одному."
 
 msgid "Après"
 msgstr "После"
@@ -292,6 +372,21 @@ msgstr "?????"
 
 msgid "Archivés"
 msgstr "Архивированные"
+
+msgid "Asymétrie"
+msgstr "Асимметрия"
+
+msgid "Asymétrie et aplatissement (moments centrés) des colonnes numériques."
+msgstr "Асимметрия и эксцесс (центральные моменты) числовых столбцов."
+
+msgid "Aucun compte ne correspond à cette recherche."
+msgstr "Ни одна учётная запись не соответствует этому запросу."
+
+msgid "Aucun doublon exact"
+msgstr "Точных дубликатов нет"
+
+msgid "Aucun doublon potentiel"
+msgstr "Потенциальных дубликатов нет"
 
 msgid "Aucun fichier d'origine n'est disponible."
 msgstr "Исходный файл недоступен."
@@ -326,6 +421,12 @@ msgstr "Для этого набора данных нет доступных г
 msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
 msgstr "Пока нет токенов. Создайте токен, чтобы использовать API."
 
+msgid "Aucun jeu de données disponible pour le moment."
+msgstr "Набор данных пока недоступен."
+
+msgid "Aucun jeu de données pour le moment."
+msgstr "Набор данных пока отсутствует."
+
 msgid "Aucun journal des modifications n'est disponible."
 msgstr "Журнал изменений недоступен."
 
@@ -350,6 +451,9 @@ msgstr "Активность не зафиксирована."
 msgid "Aucune anomalie restante."
 msgstr "Оставшихся аномалий нет."
 
+msgid "Aucune anomalie structurelle détectée."
+msgstr "Структурных аномалий не обнаружено."
+
 msgid "Aucune anomalie."
 msgstr "Аномалий нет."
 
@@ -358,6 +462,9 @@ msgstr "Нет столбцов"
 
 msgid "Aucune correction"
 msgstr "Нет исправлений"
+
+msgid "Aucune correction de valeur ne serait nécessaire."
+msgstr "Исправление значений не потребуется."
 
 msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
 msgstr "Заметных различий между исходным и очищенным файлом нет: данные изначально были чистыми."
@@ -374,6 +481,18 @@ msgstr "Очищенные данные недоступны."
 msgid "Aucune modification enregistrée."
 msgstr "Изменения не сохранены."
 
+msgid "Aucune opération enregistrée pour cette version."
+msgstr "Для этой версии операции не записаны."
+
+msgid "Aucune opération enregistrée."
+msgstr "Операции не записаны."
+
+msgid "Aucune opération."
+msgstr "Операции отсутствуют."
+
+msgid "Aucune planification : programmez un nettoyage récurrent pour ne plus y penser."
+msgstr "Расписаний пока нет: настройте регулярную очистку и забудьте о ней."
+
 msgid "Aucune règle personnalisée."
 msgstr "Нет пользовательских правил."
 
@@ -383,8 +502,17 @@ msgstr "Правил пока нет. Создайте правило и исп�
 msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
 msgstr "В числовых столбцах выбросы не обнаружены."
 
+msgid "Aucune valeur manquante ou inconnue"
+msgstr "Пропущенных или неизвестных значений нет"
+
+msgid "Aucune valeur renseignée sur %(rows)s ligne(s)."
+msgstr "Ни одно значение не заполнено в %(rows)s строке(ах)."
+
 msgid "Aucune valeur « Inconnu »."
 msgstr "Значений «Неизвестно» нет."
+
+msgid "Aucune version enregistrée : lancez un nettoyage pour en créer une."
+msgstr "Версии пока не записаны: запустите очистку, чтобы создать её."
 
 msgid "Audit des emails"
 msgstr "Аудит адресов email"
@@ -452,8 +580,20 @@ msgstr "Унификация маркера «Неизвестно» (испра
 msgid "Capturer"
 msgstr "Снять"
 
+msgid "Casse"
+msgstr "Регистр"
+
+msgid "Catégorie"
+msgstr "Категория"
+
 msgid "Ce graphique n'est pas disponible pour ce jeu de données."
 msgstr "Этот график недоступен для данного набора данных."
+
+msgid "Ce jeu de données n'est partagé avec personne pour le moment."
+msgstr "Этот набор данных пока никому не передан."
+
+msgid "Ce lien de partage est invalide ou a expiré."
+msgstr "Эта ссылка для общего доступа недействительна или истекла."
 
 msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
 msgstr "Эта ссылка для сброса уже была использована или устарела."
@@ -461,11 +601,20 @@ msgstr "Эта ссылка для сброса уже была использо
 msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
 msgstr "Эта ссылка действительна только один раз. Если вы не отправляли этот запрос, просто проигнорируйте письмо: ваш пароль останется прежним. — DataZen"
 
+msgid "Ce lien ne permet pas le téléchargement."
+msgstr "Эта ссылка не разрешает скачивание."
+
+msgid "Ce partage ne permet pas le téléchargement."
+msgstr "Этот общий доступ не разрешает скачивание."
+
 msgid "Ce profil n'est pas public."
 msgstr "Этот профиль не является публичным."
 
 msgid "Ce que le nettoyage a réellement changé dans votre fichier."
 msgstr "Что очистка действительно изменила в вашем файле."
+
+msgid "Ce que permet chaque rôle"
+msgstr "Что позволяет каждая роль"
 
 msgid "Cellules manquantes"
 msgstr "Пропущенные ячейки"
@@ -475,6 +624,12 @@ msgstr "Эти файлы (%(count)s) превышают срок хранени
 
 msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
 msgstr "Эти счётчики питают глобальный поиск и приведённые ниже сочетания клавиш."
+
+msgid "Ces deux versions sont identiques sur les indicateurs suivis."
+msgstr "Эти две версии идентичны по отслеживаемым показателям."
+
+msgid "Cette page est réservée aux administrateurs."
+msgstr "Эта страница доступна только администраторам."
 
 msgid "Champ"
 msgstr "Поле"
@@ -500,6 +655,12 @@ msgstr "Изменить мой пароль"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Изменение моего пароля — DataZen"
 
+msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
+msgstr "У каждой учётной записи есть роль: читатель, редактор или администратор. Проверка выполняется на сервере, а не только в интерфейсе."
+
+msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
+msgstr "Каждая успешная очистка фиксирует версию: её можно скачать, сравнить и откатить."
+
 msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
 msgstr "Загружайте данные в формате <code>.csv</code>, <code>.xlsx</code> или <code>.xls</code>, с любым разделителем."
 
@@ -508,6 +669,12 @@ msgstr "Выбрать язык сайта"
 
 msgid "Choisir le format"
 msgstr "Выбрать формат"
+
+msgid "Choisissez deux versions pour mesurer ce qui a réellement changé entre elles."
+msgstr "Выберите две версии, чтобы измерить, что действительно изменилось."
+
+msgid "Choisissez un destinataire ou cochez « Créer un lien public »."
+msgstr "Выберите получателя или отметьте «Создать публичную ссылку»."
 
 msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
 msgstr "Выберите файл CSV или Excel (.csv, .xlsx, .xls)."
@@ -548,6 +715,9 @@ msgstr "Код языка (fr, en, es…). Пусто = язык приложе�
 msgid "Coefficient de Pearson"
 msgstr "Коэффициент Пирсона"
 
+msgid "Collaboration"
+msgstr "Совместная работа"
+
 msgid "Colonne"
 msgstr "Столбец"
 
@@ -556,6 +726,15 @@ msgstr "Целевой столбец"
 
 msgid "Colonne clé pour la déduplication"
 msgstr "Ключевой столбец для удаления дубликатов"
+
+msgid "Colonne constante"
+msgstr "Постоянный столбец"
+
+msgid "Colonne quasi constante"
+msgstr "Почти постоянный столбец"
+
+msgid "Colonne vide"
+msgstr "Пустой столбец"
 
 msgid "Colonnes"
 msgstr "Столбцы"
@@ -581,17 +760,29 @@ msgstr "Неизвестные столбцы:"
 msgid "Colonnes stables"
 msgstr "Стабильные столбцы"
 
+msgid "Colonnes vides, constantes, quasi constantes ou à type hétérogène."
+msgstr "Пустые, константные, почти константные столбцы или столбцы со смешанным типом."
+
 msgid "Colonnes à vérifier"
 msgstr "Столбцы к проверке"
 
 msgid "Combien de fichiers se trouvent dans chaque tranche de score."
 msgstr "Сколько файлов в каждом диапазоне оценки."
 
+msgid "Comment les échéances sont-elles exécutées ?"
+msgstr "Как выполняются сроки?"
+
 msgid "Comparaison"
 msgstr "Сравнение"
 
 msgid "Comparaison avant / après — %(name)s"
 msgstr "Сравнение до / после — %(name)s"
+
+msgid "Comparaison de versions — %(name)s"
+msgstr "Сравнение версий — %(name)s"
+
+msgid "Comparer"
+msgstr "Сравнить"
 
 msgid "Complétion du profil"
 msgstr "Заполненность профиля"
@@ -614,6 +805,9 @@ msgstr "Учётная запись"
 msgid "Compte actif"
 msgstr "Учётная запись активна"
 
+msgid "Comptes ("
+msgstr "Учётные записи ("
+
 msgid "Condensé"
 msgstr "Сводка"
 
@@ -622,6 +816,9 @@ msgstr "Доверие"
 
 msgid "Confirmer la décision"
 msgstr "Подтвердить решение"
+
+msgid "Confirmer le nettoyage"
+msgstr "Подтвердить очистку"
 
 msgid "Connectez-vous pour retrouver vos fichiers."
 msgstr "Войдите, чтобы вернуться к своим файлам."
@@ -632,11 +829,20 @@ msgstr "Вход"
 msgid "Connexion — DataZen"
 msgstr "Вход — DataZen"
 
+msgid "Consultation"
+msgstr "Просмотр"
+
 msgid "Consultation des graphiques"
 msgstr "Просмотр графиков"
 
 msgid "Consultation du rapport"
 msgstr "Просмотр отчёта"
+
+msgid "Consultation et téléchargement"
+msgstr "Просмотр и скачивание"
+
+msgid "Consulte et télécharge les jeux de données partagés. Ne modifie rien."
+msgstr "Просматривает и скачивает общие наборы данных. Ничего не изменяет."
 
 msgid "Continuer / valider une étape"
 msgstr "Продолжить / подтвердить шаг"
@@ -692,11 +898,17 @@ msgstr "Создать правило"
 msgid "Créer le jeton"
 msgstr "Создать токен"
 
+msgid "Créer le partage"
+msgstr "Создать общий доступ"
+
 msgid "Créer le webhook"
 msgstr "Создать webhook"
 
 msgid "Créer un compte"
 msgstr "Создать учётную запись"
+
+msgid "Créer un lien public"
+msgstr "Создать публичную ссылку"
 
 msgid "Créer une règle"
 msgstr "Создать правило"
@@ -707,8 +919,14 @@ msgstr "Создайте правило один раз и используйт�
 msgid "Créez votre compte"
 msgstr "Создайте учётную запись"
 
-msgid "Data is consistent: each value is valid or unknown"
-msgstr "Данные согласованы: каждое значение допустимо или неизвестно"
+msgid "Créé par"
+msgstr "Создано"
+
+msgid "Créée par"
+msgstr "Создано"
+
+msgid "DataZen ne fait tourner aucun démon en arrière-plan : une commande de gestion reprend les échéances dues et relance le nettoyage par le même chemin de code que l'interface."
+msgstr "DataZen не запускает фоновый демон: команда управления подхватывает наступившие расписания и перезапускает очистку по тому же пути кода, что и интерфейс."
 
 msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
 msgstr "DataZen — приложение для очистки данных (DataClean Pro) · ©"
@@ -740,14 +958,26 @@ msgstr "Последний код HTTP"
 msgid "Dernier déclenchement"
 msgstr "Последний запуск"
 
+msgid "Dernier statut"
+msgstr "Последнее состояние"
+
 msgid "Dernier usage"
 msgstr "Последнее использование"
 
 msgid "Derniers fichiers"
 msgstr "Последние файлы"
 
+msgid "Dernière : succès"
+msgstr "Последний: успех"
+
+msgid "Dernière : échec"
+msgstr "Последний: сбой"
+
 msgid "Dernière connexion"
 msgstr "Последний вход"
+
+msgid "Dernière exécution"
+msgstr "Последний запуск"
 
 msgid "Dernière utilisation"
 msgstr "Последнее использование"
@@ -758,6 +988,9 @@ msgstr "Последние правила"
 msgid "Des incohérences ont été détectées entre les statistiques et les données."
 msgstr "Обнаружены расхождения между статистикой и данными."
 
+msgid "Destinataire"
+msgstr "Получатель"
+
 msgid "Dimension"
 msgstr "Измерение"
 
@@ -767,6 +1000,12 @@ msgstr "Измерения качества"
 msgid "Dispersion et valeurs extrêmes des colonnes numériques."
 msgstr "Разброс и экстремальные значения числовых столбцов."
 
+msgid "Distribution la plus asymétrique : « %(colonne)s » (asymétrie %(valeur)s) — moyenne et médiane s'écartent sensiblement, une transformation ou un traitement par quantiles est à envisager."
+msgstr "Наиболее асимметричное распределение: «%(colonne)s» (асимметрия %(valeur)s) — среднее и медиана заметно расходятся; рассмотрите преобразование или обработку по квантилям."
+
+msgid "Distribution la plus concentrée/pointue : « %(colonne)s » (aplatissement %(valeur)s) — forte densité autour de la moyenne avec des valeurs extrêmes marquées."
+msgstr "Наиболее островершинное распределение: «%(colonne)s» (эксцесс %(valeur)s) — высокая плотность вокруг среднего при выраженных экстремальных значениях."
+
 msgid "Distributions des colonnes numériques"
 msgstr "Распределения числовых столбцов"
 
@@ -775,6 +1014,12 @@ msgstr "Числовые распределения"
 
 msgid "Django · Pandas · Bootstrap"
 msgstr "Django · Pandas · Bootstrap"
+
+msgid "Données cohérentes : chaque valeur est valide ou inconnue"
+msgstr "Данные согласованы: каждое значение допустимо или неизвестно"
+
+msgid "Doublon"
+msgstr "Дубликат"
 
 msgid "Doublon par similarité"
 msgstr "Дубликат по сходству"
@@ -818,6 +1063,12 @@ msgstr "Дубликаты, лишние пробелы, некорректны�
 msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
 msgstr "Дубликаты, пропущенные значения, пробелы, регистр, адреса электронной почты, телефоны, даты и зарплаты — всё приведено к единому виду."
 
+msgid "Droit"
+msgstr "Право"
+
+msgid "Droit accordé"
+msgstr "Предоставленное право"
+
 msgid "Durée de conservation"
 msgstr "Срок хранения"
 
@@ -857,8 +1108,17 @@ msgstr "Очистить"
 msgid "Effectif"
 msgstr "Количество"
 
+msgid "Email"
+msgstr "Эл. почта"
+
+msgid "Email fictif"
+msgstr "Фиктивная эл. почта"
+
 msgid "Email invalide"
-msgstr "Недействительный адрес электронной почты"
+msgstr "Некорректная эл. почта"
+
+msgid "Email manquant"
+msgstr "Отсутствует эл. почта"
 
 msgid "Email nettoyé"
 msgstr "Очищенный email"
@@ -929,17 +1189,29 @@ msgstr "Оставшиеся ошибки"
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
 
+msgid "Exemples de corrections"
+msgstr "Примеры исправлений"
+
 msgid "Expiration"
-msgstr "Истечение"
+msgstr "Срок действия"
+
+msgid "Expire le"
+msgstr "Истекает"
 
 msgid "Expiré"
-msgstr "Просрочен"
+msgstr "Истёк"
 
 msgid "Explication du score"
 msgstr "Пояснение оценки"
 
 msgid "Export & traçabilité"
 msgstr "Экспорт и прослеживаемость"
+
+msgid "Exécuter"
+msgstr "Запустить"
+
+msgid "Exécutions"
+msgstr "Запуски"
 
 msgid "Fermer"
 msgstr "Закрыть"
@@ -998,8 +1270,11 @@ msgstr "Очищенные файлы старше этого срока (0 = б
 msgid "Fichiers récents"
 msgstr "Недавние файлы"
 
+msgid "Fichiers à nettoyer"
+msgstr "Файлы для очистки"
+
 msgid "Fil d'Ariane"
-msgstr "Хлебные крошки"
+msgstr "Навигационная цепочка"
 
 msgid "Filtrer"
 msgstr "Фильтровать"
@@ -1031,8 +1306,17 @@ msgstr "Поддерживаемые форматы: <code>.csv</code>, <code>.x
 msgid "Formats de dates (%(column)s) :"
 msgstr "Форматы дат (%(column)s):"
 
-msgid "Formats standardized (phones, dates)"
+msgid "Formats standardisés (téléphones, dates)"
 msgstr "Стандартизированные форматы (телефоны, даты)"
+
+msgid "Forme des distributions"
+msgstr "Форма распределений"
+
+msgid "Forme des distributions (asymétrie et aplatissement)"
+msgstr "Форма распределений (асимметрия и эксцесс)"
+
+msgid "Fréquence"
+msgstr "Периодичность"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Экономьте время: всё важное в DataZen доступно по сочетанию клавиш."
@@ -1052,14 +1336,23 @@ msgstr "Статистические графики, построенные с �
 msgid "Gratuit, immédiat, et vos fichiers restent privés."
 msgstr "Бесплатно, сразу, и ваши файлы остаются конфиденциальными."
 
+msgid "Gère les rôles et voit l'ensemble des fichiers de la plateforme."
+msgstr "Управляет ролями и видит все файлы платформы."
+
 msgid "Gérer les règles…"
 msgstr "Управление правилами…"
+
+msgid "Hebdomadaire"
+msgstr "Еженедельно"
 
 msgid "Histogrammes des colonnes numériques détectées."
 msgstr "Гистограммы обнаруженных числовых столбцов."
 
 msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
 msgstr "История ваших действий с отметками времени: загрузки, очистки, экспорт, API."
+
+msgid "Identifiant non unique"
+msgstr "Неуникальный идентификатор"
 
 msgid "Identité"
 msgstr "Личные данные"
@@ -1072,6 +1365,9 @@ msgstr "Импорт CSV и Excel"
 
 msgid "Impossible d'appliquer la décision : %(error)s"
 msgstr "Не удалось применить решение: %(error)s"
+
+msgid "Impossible de comparer ces versions : %(error)s"
+msgstr "Не удалось сравнить эти версии: %(error)s"
 
 msgid "Impossible de convertir le fichier : %(error)s"
 msgstr "Не удалось преобразовать файл: %(error)s"
@@ -1088,6 +1384,9 @@ msgstr "Не удалось прочитать файл: %(error)s"
 msgid "Impossible de lire le rapport : %(error)s"
 msgstr "Не удалось прочитать отчёт: %(error)s"
 
+msgid "Impossible de simuler le nettoyage : le fichier est illisible."
+msgstr "Не удалось смоделировать очистку: файл недоступен для чтения."
+
 msgid "Inactif"
 msgstr "Неактивен"
 
@@ -1099,6 +1398,9 @@ msgstr "Неизвестно"
 
 msgid "Indicateur"
 msgstr "Показатель"
+
+msgid "Indicateurs"
+msgstr "Показатели"
 
 msgid "Indicateurs comparés"
 msgstr "Сравниваемые показатели"
@@ -1142,6 +1444,9 @@ msgstr "Токен создан. Скопируйте сейчас: он бол�
 msgid "Jeton d'API"
 msgstr "Токен API"
 
+msgid "Jeton du lien"
+msgstr "Токен ссылки"
+
 msgid "Jeton « %(name)s » révoqué."
 msgstr "Токен « %(name)s » отозван."
 
@@ -1150,6 +1455,12 @@ msgstr "Токены"
 
 msgid "Jetons d'API"
 msgstr "Токены API"
+
+msgid "Jeu de données"
+msgstr "Набор данных"
+
+msgid "Jeu de données partagé en lecture seule via un lien DataZen."
+msgstr "Набор данных, открытый только для чтения по ссылке DataZen."
 
 msgid "Journal d'activité"
 msgstr "Журнал активности"
@@ -1178,8 +1489,17 @@ msgstr "Удаление учётной записи безвозвратно с
 msgid "Laisser vide pour appliquer à toutes les colonnes."
 msgstr "Оставьте пустым, чтобы применить ко всем столбцам."
 
+msgid "Laissez vide pour démarrer à la prochaine échéance."
+msgstr "Оставьте пустым, чтобы начать со следующего срока."
+
 msgid "Laissez vide pour un jeton sans expiration."
 msgstr "Оставьте пустым для токена без срока действия."
+
+msgid "Laissez vide pour un partage sans expiration."
+msgstr "Оставьте пустым для бессрочного доступа."
+
+msgid "Lancer le nettoyage des fichiers sélectionnés"
+msgstr "Запустить очистку выбранных файлов"
 
 msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
 msgstr "Сначала запустите очистку, чтобы открыть разведочный анализ."
@@ -1192,6 +1512,9 @@ msgstr "Язык интерфейса"
 
 msgid "Le compte « %(username)s » a été supprimé."
 msgstr "Учётная запись «%(username)s» удалена."
+
+msgid "Le fichier de cette version n'est plus disponible."
+msgstr "Файл этой версии больше недоступен."
 
 msgid "Le fichier ne doit pas dépasser 20 Mo."
 msgstr "Размер файла не должен превышать 20 МБ."
@@ -1211,6 +1534,9 @@ msgstr "Имя хоста вебхука указывает на внутрен�
 msgid "Le nom d'hôte est absent de l'URL."
 msgstr "В URL отсутствует имя хоста."
 
+msgid "Le partage est toujours en lecture seule : le destinataire consulte et, si vous l'autorisez, télécharge. Il ne modifie jamais vos données."
+msgstr "Общий доступ всегда только для чтения: получатель просматривает и, если вы разрешите, скачивает. Он никогда не изменяет ваши данные."
+
 msgid "Le port est invalide."
 msgstr "Недопустимый порт."
 
@@ -1219,6 +1545,12 @@ msgstr "Тема «Системная» следует настройкам ва
 
 msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
 msgstr "Обработка выполняется в фоновом режиме. По завершении эта страница обновится автоматически."
+
+msgid "Lecteur"
+msgstr "Читатель"
+
+msgid "Lecteur : consultation et téléchargement. Éditeur : peut aussi nettoyer et supprimer ses fichiers. Administrateur : gère les rôles et voit tous les fichiers."
+msgstr "Читатель: просмотр и скачивание. Редактор: также может очищать и удалять свои файлы. Администратор: управляет ролями и видит все файлы."
 
 msgid "Les adresses internes sont refusées."
 msgstr "Внутренние адреса отклоняются."
@@ -1244,14 +1576,23 @@ msgstr "Очищенные файлы архивируются, а затем у
 msgid "Les identifiants intégrés à l'URL sont refusés."
 msgstr "Учётные данные, встроенные в URL, отклоняются."
 
+msgid "Les options choisies ne changeraient rien à ce jeu de données."
+msgstr "Выбранные параметры не изменят этот набор данных."
+
 msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 msgstr "Доступные маршруты: /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 
 msgid "Les statistiques affichées correspondent aux données réelles."
 msgstr "Отображаемая статистика соответствует реальным данным."
 
+msgid "Lien de partage public"
+msgstr "Публичная ссылка для общего доступа"
+
 msgid "Lien invalide"
 msgstr "Недействительная ссылка"
+
+msgid "Lien public"
+msgstr "Публичная ссылка"
 
 msgid "Ligne"
 msgstr "Строка"
@@ -1294,6 +1635,9 @@ msgstr "Управляйте жизненным циклом своих данн
 
 msgid "Membre depuis"
 msgstr "На сайте с"
+
+msgid "Mensuel"
+msgstr "Ежемесячно"
 
 msgid "Mes règles"
 msgstr "Мои правила"
@@ -1376,6 +1720,18 @@ msgstr "Очистка запущена в фоновом режиме. Стра
 msgid "Nettoyage lancé sur « %(name)s »"
 msgstr "Очистка « %(name)s » запущена"
 
+msgid "Nettoyage par lots"
+msgstr "Пакетная очистка"
+
+msgid "Nettoyage par lots : %(count)s fichier(s) lancé(s)"
+msgstr "Пакетная очистка: запущено %(count)s файл(ов)"
+
+msgid "Nettoyage par lots — DataZen"
+msgstr "Пакетная очистка — DataZen"
+
+msgid "Nettoyage planifié de « %(name)s » lancé."
+msgstr "Запущена плановая очистка «%(name)s»."
+
 msgid "Nettoyage terminé"
 msgstr "Очистка завершена"
 
@@ -1403,20 +1759,14 @@ msgstr "Очищено"
 msgid "Niveau"
 msgstr "Уровень"
 
-msgid "No exact duplicates"
-msgstr "Точных дубликатов нет"
-
-msgid "No missing or unknown values"
-msgstr "Пропущенных или неизвестных значений нет"
-
-msgid "No potential duplicates"
-msgstr "Потенциальных дубликатов нет"
-
 msgid "Nom"
 msgstr "Имя"
 
 msgid "Nom d'utilisateur"
 msgstr "Имя пользователя"
+
+msgid "Nom de la colonne unique (ex. email). Laissez vide pour ne supprimer que les lignes 100 % identiques. Une colonne absente d'un fichier est ignorée pour ce fichier."
+msgstr "Имя уникального столбца (например, email). Оставьте пустым, чтобы удалять только полностью идентичные строки. Отсутствующий в файле столбец для этого файла игнорируется."
 
 msgid "Nom de la règle"
 msgstr "Название правила"
@@ -1432,6 +1782,9 @@ msgstr "Количество вызовов"
 
 msgid "Nombre d'occurrences"
 msgstr "Количество вхождений"
+
+msgid "Nombre de colonnes concernées"
+msgstr "Количество затронутых столбцов"
 
 msgid "Nombre de nettoyages et score moyen par semaine."
 msgstr "Число очисток и средняя оценка по неделям."
@@ -1499,11 +1852,29 @@ msgstr "Новое фото готово"
 msgid "Nouvelle valeur"
 msgstr "Новое значение"
 
+msgid "Numérique"
+msgstr "Числовой"
+
+msgid "Numéro de version"
+msgstr "Номер версии"
+
+msgid "Options de nettoyage"
+msgstr "Параметры очистки"
+
 msgid "Opération"
 msgstr "Операция"
 
+msgid "Opérations appliquées"
+msgstr "Применённые операции"
+
 msgid "Opérations de nettoyage"
 msgstr "Операции очистки"
+
+msgid "Opérations de v%(n)s"
+msgstr "Операции v%(n)s"
+
+msgid "Opérations qui seraient appliquées"
+msgstr "Операции, которые будут применены"
 
 msgid "Organisation"
 msgstr "Организация"
@@ -1529,6 +1900,27 @@ msgstr "Страница"
 msgid "Parcourir…"
 msgstr "Выбрать файл"
 
+msgid "Partage"
+msgstr "Общий доступ"
+
+msgid "Partage créé."
+msgstr "Общий доступ создан."
+
+msgid "Partage de « %(name)s » avec %(target)s"
+msgstr "Доступ к «%(name)s» для %(target)s"
+
+msgid "Partage révoqué."
+msgstr "Общий доступ отозван."
+
+msgid "Partage — %(name)s"
+msgstr "Общий доступ — %(name)s"
+
+msgid "Partages"
+msgstr "Общие доступы"
+
+msgid "Partagé le"
+msgstr "Открыт"
+
 msgid "Pas encore de compte ?"
 msgstr "Ещё нет учётной записи?"
 
@@ -1543,6 +1935,27 @@ msgstr "Фото профиля"
 
 msgid "Pilotage"
 msgstr "Управление"
+
+msgid "Planification"
+msgstr "Расписание"
+
+msgid "Planification %(state)s."
+msgstr "Расписание %(state)s."
+
+msgid "Planification créée pour « %(name)s »"
+msgstr "Расписание создано для «%(name)s»"
+
+msgid "Planification créée."
+msgstr "Расписание создано."
+
+msgid "Planification supprimée."
+msgstr "Расписание удалено."
+
+msgid "Planifications"
+msgstr "Расписания"
+
+msgid "Planifications — DataZen"
+msgstr "Расписания — DataZen"
 
 msgid "Plus fréquent"
 msgstr "Наиболее частое"
@@ -1559,11 +1972,17 @@ msgstr "Вес"
 msgid "Premier quartile"
 msgstr "Первый квартиль"
 
+msgid "Première exécution"
+msgstr "Первый запуск"
+
 msgid "Prendre une photo avec la caméra"
 msgstr "Сделать снимок камерой"
 
 msgid "Problème"
 msgstr "Проблема"
+
+msgid "Problèmes"
+msgstr "Проблемы"
 
 msgid "Problèmes après"
 msgstr "Проблемы после"
@@ -1576,6 +1995,9 @@ msgstr "Обнаруженные проблемы"
 
 msgid "Problèmes restants"
 msgstr "Оставшиеся проблемы"
+
+msgid "Prochaine exécution"
+msgstr "Следующий запуск"
 
 msgid "Productivité"
 msgstr "Продуктивность"
@@ -1595,8 +2017,17 @@ msgstr "Публичный профиль"
 msgid "Profil visible publiquement"
 msgstr "Профиль виден публично"
 
+msgid "Profilage statistique"
+msgstr "Статистическое профилирование"
+
 msgid "Profils"
 msgstr "Профили"
+
+msgid "Programmer"
+msgstr "Запланировать"
+
+msgid "Programmez un nettoyage récurrent : les mêmes options s'appliquent à chaque échéance, sans intervention de votre part."
+msgstr "Настройте регулярную очистку: одни и те же параметры применяются при каждом сроке без вашего участия."
 
 msgid "Progression"
 msgstr "Прогресс"
@@ -1643,6 +2074,9 @@ msgstr "Q1"
 msgid "Q3"
 msgstr "Q3"
 
+msgid "Qualité : v%(before)s → v%(after)s"
+msgstr "Качество: v%(before)s → v%(after)s"
+
 msgid "Qualité moyenne"
 msgstr "Среднее качество"
 
@@ -1651,6 +2085,9 @@ msgstr "Качество по столбцам"
 
 msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
 msgstr "Несколько слов о вас, вашей команде, ваших наборах данных…"
+
+msgid "Quotidien"
+msgstr "Ежедневно"
 
 msgid "Raccourcis clavier"
 msgstr "Горячие клавиши"
@@ -1704,10 +2141,16 @@ msgid "Recherche momentanément indisponible."
 msgstr "Поиск временно недоступен."
 
 msgid "Rechercher"
-msgstr "Искать"
+msgstr "Поиск"
 
 msgid "Rechercher (Ctrl+K)"
 msgstr "Поиск (Ctrl+K)"
+
+msgid "Rechercher un compte"
+msgstr "Найти учётную запись"
+
+msgid "Rechercher un compte…"
+msgstr "Найти учётную запись…"
 
 msgid "Rechercher un fichier"
 msgstr "Найти файл"
@@ -1751,11 +2194,20 @@ msgstr "Заявлено %(reported)s против пересчитанных %(
 msgid "Restauration"
 msgstr "Восстановление"
 
+msgid "Restauration de la version %(number)s de « %(name)s »"
+msgstr "Восстановление версии %(number)s «%(name)s»"
+
 msgid "Restauration de « %(name)s »"
 msgstr "Восстановление « %(name)s »"
 
+msgid "Restauration impossible : %(error)s"
+msgstr "Восстановление невозможно: %(error)s"
+
 msgid "Restaurer"
 msgstr "Восстановить"
+
+msgid "Restaurer cette version comme version courante ?"
+msgstr "Восстановить эту версию как текущую?"
 
 msgid "Retour à la connexion"
 msgstr "Вернуться ко входу"
@@ -1778,6 +2230,9 @@ msgstr "Правило «%(name)s» удалено."
 msgid "Règles"
 msgstr "Правила"
 
+msgid "Règles appliquées"
+msgstr "Применённые правила"
+
 msgid "Règles de nettoyage"
 msgstr "Правила очистки"
 
@@ -1798,6 +2253,9 @@ msgstr "Распределение проблем"
 
 msgid "Répartition des problèmes restants"
 msgstr "Распределение оставшихся проблем"
+
+msgid "Résultat de la simulation : rien n'a été écrit. Confirmez le nettoyage pour appliquer réellement ces changements."
+msgstr "Результат моделирования: ничего не записано. Подтвердите очистку, чтобы действительно применить эти изменения."
 
 msgid "Résultats"
 msgstr "Результаты"
@@ -1823,8 +2281,32 @@ msgstr "Отозвать"
 msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
 msgstr "Отозвать этот токен? Интеграции, которые его используют, перестанут работать."
 
+msgid "Révoquer ce partage ?"
+msgstr "Отозвать этот доступ?"
+
 msgid "Révoqué"
 msgstr "Отозван"
+
+msgid "Rôle"
+msgstr "Роль"
+
+msgid "Rôle de « %(name)s » : %(before)s → %(after)s"
+msgstr "Роль «%(name)s»: %(before)s → %(after)s"
+
+msgid "Rôle de « %(name)s » mis à jour."
+msgstr "Роль «%(name)s» обновлена."
+
+msgid "Rôle du compte"
+msgstr "Роль учётной записи"
+
+msgid "Rôle inconnu."
+msgstr "Неизвестная роль."
+
+msgid "Rôles et permissions"
+msgstr "Роли и разрешения"
+
+msgid "Rôles et permissions — DataZen"
+msgstr "Роли и разрешения — DataZen"
 
 msgid "S'inscrire"
 msgstr "Зарегистрироваться"
@@ -1835,8 +2317,14 @@ msgstr "Введите <strong>%(username)s</strong> для подтвержде
 msgid "Score"
 msgstr "Оценка"
 
+msgid "Score après"
+msgstr "Оценка после"
+
 msgid "Score après nettoyage"
 msgstr "Оценка после очистки"
+
+msgid "Score avant"
+msgstr "Оценка до"
 
 msgid "Score avant nettoyage"
 msgstr "Оценка до очистки"
@@ -1865,6 +2353,9 @@ msgstr "Оценка качества после"
 msgid "Score qualité avant"
 msgstr "Оценка качества до"
 
+msgid "Scores mesurés lors de chaque nettoyage."
+msgstr "Оценки, измеряемые при каждой очистке."
+
 msgid "Se connecter"
 msgstr "Войти"
 
@@ -1877,11 +2368,20 @@ msgstr "Перемещаться по результатам"
 msgid "Sert uniquement à la réinitialisation du mot de passe."
 msgstr "Используется только для сброса пароля."
 
+msgid "Seul le propriétaire peut gérer les partages."
+msgstr "Только владелец может управлять общими доступами."
+
+msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
+msgstr "Показаны только первые исправления; реальная очистка применит их все."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "Разрешены только схемы http и https."
 
 msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
 msgstr "Если учётная запись с таким адресом существует, письмо со ссылкой для сброса только что отправлено."
+
+msgid "Simulation — aucune modification enregistrée"
+msgstr "Моделирование — изменения не сохранены"
 
 msgid "Site web"
 msgstr "Веб-сайт"
@@ -1925,6 +2425,9 @@ msgstr "Удалить %(name)s"
 msgid "Supprimer ce webhook ?"
 msgstr "Удалить этот webhook?"
 
+msgid "Supprimer cette planification ?"
+msgstr "Удалить это расписание?"
+
 msgid "Supprimer définitivement ce fichier et toutes ses données ?"
 msgstr "Удалить этот файл и все его данные безвозвратно?"
 
@@ -1949,6 +2452,12 @@ msgstr "Удалить лишние пробелы"
 msgid "Supprimer mon compte"
 msgstr "Удалить мою учётную запись"
 
+msgid "Suspendre"
+msgstr "Приостановить"
+
+msgid "Suspendue"
+msgstr "Приостановлен"
+
 msgid "Synthèse"
 msgstr "Сводка"
 
@@ -1960,6 +2469,18 @@ msgstr "Безопасность"
 
 msgid "Sélectionner un fichier"
 msgstr "Выбрать файл"
+
+msgid "Sélectionnez au moins un fichier."
+msgstr "Выберите хотя бы один файл."
+
+msgid "Sélectionnez deux versions différentes pour afficher la comparaison."
+msgstr "Выберите две разные версии, чтобы показать сравнение."
+
+msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
+msgstr "Выберите до %(limit)s файлов: сверх этого пакет усекается, чтобы не перегружать сервер."
+
+msgid "Sévérité"
+msgstr "Серьёзность"
 
 msgid "Tableau de bord"
 msgstr "Дашборд"
@@ -2000,8 +2521,17 @@ msgstr "Всё включено"
 msgid "Tout voir"
 msgstr "Смотреть всё"
 
+msgid "Toute personne possédant ce lien peut consulter le fichier. Révoquez le partage pour l'invalider immédiatement."
+msgstr "Любой, у кого есть эта ссылка, может просмотреть файл. Отзовите доступ, чтобы немедленно его аннулировать."
+
+msgid "Toute personne possédant le lien peut consulter le jeu de données, sans compte. Le lien est révocable et peut expirer."
+msgstr "Любой, у кого есть ссылка, может просмотреть набор данных без учётной записи. Ссылку можно отозвать, и она может истечь."
+
 msgid "Toutes les actions"
 msgstr "Все действия"
+
+msgid "Toutes les valeurs renseignées sont valides"
+msgstr "Все заполненные значения допустимы"
 
 msgid "Traçabilité"
 msgstr "Прослеживаемость"
@@ -2015,11 +2545,17 @@ msgstr "Тип"
 msgid "Type de correction"
 msgstr "Тип исправления"
 
+msgid "Type hétérogène"
+msgstr "Смешанный тип"
+
 msgid "Téléchargement"
 msgstr "Скачивание"
 
 msgid "Téléchargement de « %(name)s »"
 msgstr "Скачивание « %(name)s »"
+
+msgid "Téléphone"
+msgstr "Телефон"
 
 msgid "Téléphone invalide"
 msgstr "Некорректный телефон"
@@ -2029,6 +2565,9 @@ msgstr "Номер телефона в нестандартном формате
 
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Нестандартные номера телефонов (%(column)s):"
+
+msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
+msgstr "Загружает, очищает, планирует и удаляет свои файлы."
 
 msgid "Téléversement"
 msgstr "Загрузка"
@@ -2059,6 +2598,9 @@ msgstr "Учётную запись администратора нельзя у
 
 msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
 msgstr "Учётную запись администратора нельзя удалить с этой страницы. Используйте"
+
+msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
+msgstr "Фрагмент файла: первых строк достаточно, чтобы оценить данные."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "Панель управления измеряет качество до / после и объясняет каждый потерянный балл."
@@ -2102,11 +2644,20 @@ msgstr "Значение для замены"
 msgid "Valeur de remplacement (pour le remplissage)."
 msgstr "Значение для замены (для заполнения)."
 
+msgid "Valeur du moment centré"
+msgstr "Значение центрального момента"
+
+msgid "Valeur inconnue"
+msgstr "Неизвестное значение"
+
 msgid "Valeur manquante"
 msgstr "Пропущенное значение"
 
 msgid "Valeur numérique invalide"
 msgstr "Недопустимое числовое значение"
+
+msgid "Valeur unique « %(value)s » sur %(count)s ligne(s)."
+msgstr "Единственное значение «%(value)s» в %(count)s строке(ах)."
 
 msgid "Valeurs aberrantes"
 msgstr "Выбросы"
@@ -2150,6 +2701,36 @@ msgstr "Проверить и исправить адреса электронн
 msgid "Validité"
 msgstr "Достоверность"
 
+msgid "Variance"
+msgstr "Дисперсия"
+
+msgid "Version"
+msgstr "Версия"
+
+msgid "Version %(number)s restaurée."
+msgstr "Версия %(number)s восстановлена."
+
+msgid "Version comparée"
+msgstr "Сравниваемая версия"
+
+msgid "Version courante"
+msgstr "Текущая версия"
+
+msgid "Version de référence"
+msgstr "Опорная версия"
+
+msgid "Versions"
+msgstr "Версии"
+
+msgid "Versions enregistrées ("
+msgstr "Записанные версии ("
+
+msgid "Versions — %(name)s"
+msgstr "Версии — %(name)s"
+
+msgid "Vide pour créer un lien public."
+msgstr "Пусто — создать публичную ссылку."
+
 msgid "Visualisations statistiques"
 msgstr "Статистические визуализации"
 
@@ -2171,6 +2752,9 @@ msgstr "Ваши данные заслуживают<br> <span class=\"dz-gradie
 msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
 msgstr "Ваши файлы остаются у вас. DataZen показывает, что превышает выбранный срок хранения, и ничего не удаляет без вашего согласия."
 
+msgid "Vos jeux de données"
+msgstr "Ваши наборы данных"
+
 msgid "Votre espace de travail"
 msgstr "Ваше рабочее пространство"
 
@@ -2189,6 +2773,18 @@ msgstr "Ваше фото профиля удалено."
 msgid "Votre profil a été mis à jour."
 msgstr "Ваш профиль обновлён."
 
+msgid "Votre rôle ne permet pas de créer une planification."
+msgstr "Ваша роль не позволяет создавать расписание."
+
+msgid "Votre rôle ne permet pas de lancer un nettoyage. Contactez un administrateur."
+msgstr "Ваша роль не позволяет запускать очистку. Обратитесь к администратору."
+
+msgid "Votre rôle ne permet pas de modifier les données. Contactez un administrateur."
+msgstr "Ваша роль не позволяет изменять данные. Обратитесь к администратору."
+
+msgid "Vous"
+msgstr "Вы"
+
 msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
 msgstr "Всё под вашим контролем: ничего не удаляется без вашего действия."
 
@@ -2203,6 +2799,9 @@ msgstr "У вас нет доступа к этому webhook."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "У вас нет доступа к этому правилу."
+
+msgid "Vous ne pouvez pas modifier votre propre rôle."
+msgstr "Вы не можете изменить свою собственную роль."
 
 msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
 msgstr "Сводный обзор качества ваших данных по всем файлам."
@@ -2345,6 +2944,9 @@ msgstr "напр.: email (пусто = все столбцы)"
 msgid "excellente qualité"
 msgstr "отличное качество"
 
+msgid "faible"
+msgstr "низкая"
+
 msgid "fermer"
 msgstr "закрыть"
 
@@ -2356,6 +2958,9 @@ msgstr "формат не распознан"
 
 msgid "généré le"
 msgstr "создан"
+
+msgid "haute"
+msgstr "высокая"
 
 msgid "https://exemple.com"
 msgstr "https://exemple.com"
@@ -2375,6 +2980,9 @@ msgstr "без изменений"
 msgid "jours"
 msgstr "дней"
 
+msgid "lien public"
+msgstr "публичная ссылка"
+
 msgid "lignes"
 msgstr "строк"
 
@@ -2383,6 +2991,9 @@ msgstr "неверная длина/формат"
 
 msgid "matplotlib"
 msgstr "matplotlib"
+
+msgid "moyenne"
+msgstr "средняя"
 
 msgid "naviguer"
 msgstr "навигация"
@@ -2438,6 +3049,9 @@ msgstr "удалено"
 msgid "sur"
 msgstr "из"
 
+msgid "suspendue"
+msgstr "приостановлено"
+
 msgid "texte"
 msgstr "текст"
 
@@ -2447,11 +3061,17 @@ msgstr "телефон"
 msgid "unicité"
 msgstr "уникальность"
 
+msgid "v%(n)s"
+msgstr "v%(n)s"
+
 msgid "valeur(s) extrême(s)"
 msgstr "экстремальное значение (значения)"
 
 msgid "validité"
 msgstr "достоверность"
+
+msgid "« %(value)s » représente %(percent)s %% des valeurs renseignées."
+msgstr "«%(value)s» составляет %(percent)s %% заполненных значений."
 
 msgid "· ancien_id :"
 msgstr "· ancien_id:"
@@ -2476,6 +3096,12 @@ msgstr "Сбой очистки"
 
 msgid "Échec du nettoyage de « %(name)s »"
 msgstr "Сбой очистки « %(name)s »"
+
+msgid "Échec du nettoyage planifié : %(error)s"
+msgstr "Сбой плановой очистки: %(error)s"
+
+msgid "Éditeur"
+msgstr "Редактор"
 
 msgid "Étape 1"
 msgstr "Шаг 1"
@@ -2519,17 +3145,32 @@ msgstr "— Все столбцы —"
 msgid "← Retour au fichier"
 msgstr "← Вернуться к файлу"
 
+msgid "← Retour à l'historique"
+msgstr "← Назад к истории"
+
 msgid "⌨️ Raccourcis"
 msgstr "⌨️ Сочетания"
 
 msgid "⌨️ Raccourcis clavier"
 msgstr "⌨️ Горячие клавиши"
 
+msgid "⏱️ Nettoyages planifiés"
+msgstr "⏱️ Плановые очистки"
+
+msgid "⏱️ Planifications"
+msgstr "⏱️ Расписания"
+
 msgid "⏳ Fichiers expirés"
 msgstr "⏳ Просроченные файлы"
 
 msgid "⏳ Nettoyage en cours…"
 msgstr "⏳ Идёт очистка…"
+
+msgid "♻️ Restaurer"
+msgstr "♻️ Восстановить"
+
+msgid "⚙️ Opérations communes"
+msgstr "⚙️ Общие операции"
 
 msgid "⚙️ Règles de nettoyage personnalisées"
 msgstr "⚙️ Пользовательские правила очистки"
@@ -2539,6 +3180,9 @@ msgstr "⚙️ Пользовательские правила"
 
 msgid "⚙️ Régler la durée"
 msgstr "⚙️ Настроить срок"
+
+msgid "⚠️ Anomalies signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ Аномалии только отмечаются — никогда не изменяются автоматически."
 
 msgid "⚠️ Points nécessitant une vérification humaine"
 msgstr "⚠️ Пункты, требующие проверки человеком"
@@ -2588,8 +3232,14 @@ msgstr "✓ Скопировано"
 msgid "➕ Nouveau jeton"
 msgstr "➕ Новый токен"
 
+msgid "➕ Nouveau partage"
+msgstr "➕ Новый доступ"
+
 msgid "➕ Nouveau webhook"
 msgstr "➕ Новый webhook"
+
+msgid "➕ Nouvelle planification"
+msgstr "➕ Новое расписание"
 
 msgid "➕ Nouvelle règle"
 msgstr "➕ Новое правило"
@@ -2599,6 +3249,9 @@ msgstr "➕ Загрузить файл"
 
 msgid "⬇️ Exporter mes données (JSON)"
 msgstr "⬇️ Экспортировать мои данные (JSON)"
+
+msgid "⬇️ Télécharger"
+msgstr "⬇️ Скачать"
 
 msgid "⬇️ Télécharger le fichier nettoyé"
 msgstr "⬇️ Скачать очищенный файл"
@@ -2629,6 +3282,9 @@ msgstr "👁️ Посмотреть отчёт"
 
 msgid "👤 Mon profil"
 msgstr "👤 Мой профиль"
+
+msgid "📄 Fichiers à nettoyer"
+msgstr "📄 Файлы для очистки"
 
 msgid "📈 Analyse exploratoire"
 msgstr "📈 Разведочный анализ"
@@ -2666,8 +3322,14 @@ msgstr "📊 Дашборд"
 msgid "📊 Tableau de bord global"
 msgstr "📊 Сводный дашборд"
 
+msgid "📋 Mes planifications ("
+msgstr "📋 Мои расписания ("
+
 msgid "📋 Mes règles ("
 msgstr "📋 Мои правила ("
+
+msgid "📋 Partages actifs ("
+msgstr "📋 Активные доступы ("
 
 msgid "📋 Qualité des colonnes"
 msgstr "📋 Качество столбцов"
@@ -2705,11 +3367,26 @@ msgstr "🔌 API и токены доступа"
 msgid "🔌 Jetons d'API"
 msgstr "🔌 Токены API"
 
+msgid "🔍 Aperçu (simulation)"
+msgstr "🔍 Предпросмотр (моделирование)"
+
+msgid "🔍 Aperçu avant / après (simulation)"
+msgstr "🔍 Предпросмотр до / после (моделирование)"
+
 msgid "🔍 Avant / après"
 msgstr "🔍 До / после"
 
 msgid "🔍 Comparaison avant / après"
 msgstr "🔍 Сравнение до / после"
+
+msgid "🔍 Comparer"
+msgstr "🔍 Сравнить"
+
+msgid "🔍 Comparer des versions"
+msgstr "🔍 Сравнить версии"
+
+msgid "🔍 Comparer deux versions"
+msgstr "🔍 Сравнить две версии"
 
 msgid "🔍 Doublons"
 msgstr "🔍 Дубликаты"
@@ -2735,6 +3412,9 @@ msgstr "🔎 Пояснение оценки"
 msgid "🔑 Mes jetons"
 msgstr "🔑 Мои токены"
 
+msgid "🔑 Votre lien de partage public"
+msgstr "🔑 Ваша публичная ссылка для общего доступа"
+
 msgid "🔑 Votre nouveau jeton"
 msgstr "🔑 Ваш новый токен"
 
@@ -2749,6 +3429,9 @@ msgstr "🔔 Мои webhooks"
 
 msgid "🔔 Webhooks"
 msgstr "🔔 Webhooks"
+
+msgid "🔗 Partager ce jeu de données"
+msgstr "🔗 Поделиться этим набором данных"
 
 msgid "🔗 Voir mon profil public"
 msgstr "🔗 Посмотреть мой публичный профиль"
@@ -2771,8 +3454,17 @@ msgstr "🕓 Активность"
 msgid "🕓 Dernières activités"
 msgstr "🕓 Последние активности"
 
+msgid "🕓 Historique des versions"
+msgstr "🕓 История версий"
+
 msgid "🕓 Journal d'activité"
 msgstr "🕓 Журнал активности"
+
+msgid "🕓 Versions"
+msgstr "🕓 Версии"
+
+msgid "🗂️ Nettoyage par lots"
+msgstr "🗂️ Пакетная очистка"
 
 msgid "🗃️ Fichiers récents"
 msgstr "🗃️ Недавние файлы"
@@ -2798,11 +3490,17 @@ msgstr "🚀 Новинки pro-пространства"
 msgid "🚀 Premier appel"
 msgstr "🚀 Первый вызов"
 
+msgid "🛡️ Rôles et permissions"
+msgstr "🛡️ Роли и разрешения"
+
 msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
 msgstr "🟢 Сохранить 1-ю строку (удалить остальные)"
 
 msgid "🟣 Fusionner toutes les lignes"
 msgstr "🟣 Объединить все строки"
+
+msgid "🧩 Anomalies structurelles"
+msgstr "🧩 Структурные аномалии"
 
 msgid "🧭 Dimensions les plus fragiles"
 msgstr "🧭 Самые хрупкие измерения"

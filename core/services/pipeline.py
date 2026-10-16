@@ -11,10 +11,10 @@ Aucune logique de nettoyage n'est dupliquée : le pipeline s'appuie
 exclusivement sur :class:`~core.services.cleaning.DataCleaner` et sur les
 services existants (validation, rapport, export).
 """
+import logging
 import uuid
 from pathlib import Path
 
-from django.utils.translation import gettext
 
 import pandas as pd
 from django.conf import settings
@@ -22,7 +22,9 @@ from django.utils import timezone
 
 from ..models import DataFile
 from .cleaning import DataCleaner, restore_semantic_types
+from .comparison import build_comparison
 from .exporter import export_dataframe
+from .operations import operation_entry, render_operations, render_score_explanations
 from .reader import read_dataframe
 from .report import build_report
 from .validation import (
@@ -31,8 +33,11 @@ from .validation import (
     count_missing_cells,
     detect_regex_violations,
     parse_regex_rules,
+    profile_dataframe,
     verify_consistency,
 )
+
+logger = logging.getLogger(__name__)
 
 # Colonnes strictes du journal de modification (ne jamais en ajouter).
 CHANGE_LOG_COLUMNS = [
@@ -204,6 +209,93 @@ def run_cleaning(data_file, options, rules=None, progress=None):
 
     Renvoie ``(operations, regex_rules)`` pour la session.
     """
+    outcome = _execute_cleaning(data_file, options, rules, progress, persist=True)
+    return outcome["operations"], outcome["regex_rules"]
+
+
+def preview_cleaning(data_file, options, rules=None):
+    """Simule le nettoyage **sans rien écrire** et renvoie le résultat complet.
+
+    Sert à l'aperçu avant/après : l'utilisateur voit le score, les colonnes
+    touchées et les lignes qui seraient modifiées avant de valider. Le fichier
+    d'origine, le fichier nettoyé, le journal, le rapport et les indicateurs du
+    dataset restent intacts.
+
+    Renvoie ``None`` si le fichier source est illisible, sinon un dictionnaire
+    ``{"comparison", "operations", "changes", "change_log", "email_audit",
+    "quality_before", "quality_after", "rows_before", "rows_after"}``.
+    """
+    try:
+        outcome = _execute_cleaning(data_file, options, rules, None, persist=False)
+    except Exception:
+        logger.exception("Aperçu de nettoyage impossible pour %s", data_file.pk)
+        return None
+
+    comparison = build_comparison(outcome["original_df"], outcome["cleaned_df"])
+    comparison["change_log"] = _sample_change_log(outcome["change_log_df"])
+    comparison["operations"] = outcome["operations"]
+    comparison["changes"] = outcome["changes"]
+    comparison["email_audit"] = outcome["email_audit"]
+    comparison["quality_before"] = outcome["quality_before"]
+    comparison["quality_after"] = outcome["quality_after"]
+    comparison["rows_before"] = int(len(outcome["original_df"]))
+    comparison["rows_after"] = int(len(outcome["cleaned_df"]))
+    if not comparison.get("has_changes") and not comparison["change_log"]:
+        comparison["has_changes"] = False
+    return comparison
+
+
+PREVIEW_CHANGE_LIMIT = 50
+
+
+def _sample_change_log(change_log_df, limit=PREVIEW_CHANGE_LIMIT):
+    """Extrait un échantillon lisible du journal des corrections.
+
+    Le journal fournit de vrais couples « ancienne valeur → nouvelle valeur »
+    avec leur ligne, contrairement à une comparaison positionnelle qui serait
+    fausse dès que la déduplication réindexe le tableau.
+    """
+    if change_log_df is None or change_log_df.empty:
+        return {"rows": [], "total": 0, "truncated": False}
+
+    total = int(len(change_log_df))
+    sample = change_log_df.head(limit)
+    rows = [
+        {
+            "line": _as_text(row.get("ligne")),
+            "column": _as_text(row.get("colonne")),
+            "before": _as_text(row.get("ancienne_valeur")),
+            "after": _as_text(row.get("nouvelle_valeur")),
+            "kind": _as_text(row.get("type_correction")),
+            "reason": _as_text(row.get("raison")),
+        }
+        for row in sample.to_dict("records")
+    ]
+    return {"rows": rows, "total": total, "truncated": total > limit}
+
+
+def _as_text(value):
+    """Rend une cellule de journal affichable (les NaN deviennent vides)."""
+    if value is None:
+        return ""
+    try:
+        if pd.isna(value):
+            return ""
+    except (TypeError, ValueError):
+        return str(value)
+    if isinstance(value, float) and value.is_integer():
+        return str(int(value))
+    return str(value)
+
+
+def _execute_cleaning(data_file, options, rules, progress, persist):
+    """Cœur du pipeline, partagé par le nettoyage réel et par l'aperçu.
+
+    ``persist=True`` écrit le fichier nettoyé, le journal, le rapport et les
+    indicateurs sur le :class:`~core.models.DataFile`. ``persist=False`` renvoie
+    le résultat juste avant ces écritures : l'aperçu et le nettoyage réel
+    traversent donc exactement le même code, dans le même ordre.
+    """
     def report_progress(percent, message=""):
         if progress:
             progress(percent, message)
@@ -226,91 +318,72 @@ def run_cleaning(data_file, options, rules=None, progress=None):
         removed = cleaner.changes.get("duplicates_removed", 0)
         if subset:
             operations.append(
-                gettext("Suppression des doublons sur « %(column)s » (%(count)s supprimé(s))")
-                % {"column": subset, "count": removed}
+                operation_entry("remove_duplicates_column", column=subset, count=removed)
             )
         else:
-            operations.append(
-                gettext("Suppression des doublons exacts (%(count)s supprimé(s))")
-                % {"count": removed}
-            )
+            operations.append(operation_entry("remove_duplicates_exact", count=removed))
     if options.get("normalize_case"):
         cleaner.normalize_text()
-        operations.append(gettext("Normalisation de la casse (noms, libellés, villes)"))
+        operations.append(operation_entry("normalize_case"))
         cleaner.normalize_categories()
         operations.append(
-            gettext("Normalisation des catégories (%(count)s corrigée(s))")
-            % {"count": cleaner.changes.get("categories", 0)}
+            operation_entry("normalize_categories", count=cleaner.changes.get("categories", 0))
         )
         cleaner.normalize_codes()
         operations.append(
-            gettext("Normalisation des codes/références (%(count)s corrigé(s))")
-            % {"count": cleaner.changes.get("codes", 0)}
+            operation_entry("normalize_codes", count=cleaner.changes.get("codes", 0))
         )
         cleaner.normalize_booleans()
         operations.append(
-            gettext("Normalisation des choix oui/non (%(count)s corrigé(s))")
-            % {"count": cleaner.changes.get("booleans", 0)}
+            operation_entry("normalize_booleans", count=cleaner.changes.get("booleans", 0))
         )
     if options.get("normalize_emails"):
         cleaner.normalize_emails()
         operations.append(
-            gettext("Validation et correction des emails (%(corrected)s corrigé(s), %(invalid)s invalide(s))")
-            % {
-                "corrected": cleaner.changes.get("emails_corriges", 0),
-                "invalid": cleaner.changes.get("emails_invalides", 0),
-            }
+            operation_entry(
+                "normalize_emails",
+                corrected=cleaner.changes.get("emails_corriges", 0),
+                invalid=cleaner.changes.get("emails_invalides", 0),
+            )
         )
     if options.get("normalize_phones"):
         cleaner.normalize_phones()
         operations.append(
-            gettext("Normalisation des téléphones (%(count)s corrigé(s))")
-            % {"count": cleaner.changes.get("phones", 0)}
+            operation_entry("normalize_phones", count=cleaner.changes.get("phones", 0))
         )
     if options.get("normalize_dates"):
         cleaner.normalize_dates()
         operations.append(
-            gettext("Normalisation des dates (%(count)s corrigée(s))")
-            % {"count": cleaner.changes.get("dates", 0)}
+            operation_entry("normalize_dates", count=cleaner.changes.get("dates", 0))
         )
     if options.get("normalize_salaries"):
         cleaner.normalize_salaries()
         operations.append(
-            gettext("Conversion des montants (%(count)s converti(s))")
-            % {"count": cleaner.changes.get("salaries", 0)}
+            operation_entry("normalize_salaries", count=cleaner.changes.get("salaries", 0))
         )
     if options.get("trim_whitespace"):
         cleaner.trim_whitespace()
-        operations.append(gettext("Suppression des espaces superflus"))
+        operations.append(operation_entry("trim_whitespace"))
 
     cleaner.normalize_unknown()
     operations.append(
-        gettext("Canonicalisation du marqueur « Inconnu » (%(count)s corrigé(s))")
-        % {"count": cleaner.changes.get("unknown", 0)}
+        operation_entry("normalize_unknown", count=cleaner.changes.get("unknown", 0))
     )
     cleaner.normalize_integers()
     operations.append(
-        gettext("Conversion des compteurs en entiers (%(count)s converti(s))")
-        % {"count": cleaner.changes.get("integers", 0)}
+        operation_entry("normalize_integers", count=cleaner.changes.get("integers", 0))
     )
     if options.get("anonymize"):
         cleaner.anonymize()
         operations.append(
-            gettext("Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))")
-            % {"count": cleaner.changes.get("anonymized", 0)}
+            operation_entry("anonymize", count=cleaner.changes.get("anonymized", 0))
         )
     cleaner.renumber_identifiers()
-    operations.append(gettext("Renumérotation des identifiants (ancien id conservé)"))
+    operations.append(operation_entry("renumber_identifiers"))
     if options.get("fill_missing"):
         value = options.get("fill_missing_value", "")
         cleaner.fill_missing(value)
-        operations.append(
-            gettext(
-                "Remplissage des valeurs manquantes par « %(value)s » "
-                "(les montants, codes et dates ne reçoivent jamais un texte)"
-            )
-            % {"value": value}
-        )
+        operations.append(operation_entry("fill_missing", value=value))
 
     # Règles de nettoyage personnalisées (réutilisables).
     operations.extend(cleaner.apply_rules(rules))
@@ -326,6 +399,23 @@ def run_cleaning(data_file, options, rules=None, progress=None):
     regex_violations = detect_regex_violations(cleaned_df, regex_rules)
 
     change_log_df = cleaner.change_log_df
+
+    if not persist:
+        # Aperçu : on s'arrête juste avant la première écriture disque ou base.
+        return {
+            "original_df": df,
+            "cleaned_df": cleaned_df,
+            "operations": operations,
+            "regex_rules": regex_rules,
+            "changes": cleaner.changes,
+            "change_log_df": change_log_df,
+            "email_audit": cleaner.email_audit,
+            "quality_before": quality_before,
+            "quality_after": quality_after,
+            "before": before,
+            "after": after,
+        }
+
     consistency = verify_consistency(
         cleaned_df,
         detection=validation,
@@ -361,13 +451,38 @@ def run_cleaning(data_file, options, rules=None, progress=None):
         change_log=change_log_df,
         email_audit=cleaner.email_audit,
         consistency=consistency,
+        profile=profile_dataframe(cleaned_df),
     )
     report_rel = save_report_file(data_file, report_text)
     data_file.report_file.name = report_rel
     data_file.save(update_fields=["report_file", "change_log_file", "updated_at"])
 
+    # Historique : chaque nettoyage réussi fige une version restaurable.
+    # L'import est local pour éviter une dépendance circulaire au chargement.
+    from .versions import record_version
+
+    record_version(
+        data_file,
+        cleaned_df,
+        change_log_df=change_log_df,
+        operations=operations,
+        created_by=data_file.owner,
+    )
+
     report_progress(100, "Terminé")
-    return operations, regex_rules
+    return {
+        "original_df": df,
+        "cleaned_df": cleaned_df,
+        "operations": operations,
+        "regex_rules": regex_rules,
+        "changes": cleaner.changes,
+        "change_log_df": change_log_df,
+        "email_audit": cleaner.email_audit,
+        "quality_before": quality_before,
+        "quality_after": quality_after,
+        "before": before,
+        "after": after,
+    }
 
 
 def build_cleaned_context(data_file, operations=None, regex_rules=None, theme="light"):
@@ -384,6 +499,11 @@ def build_cleaned_context(data_file, operations=None, regex_rules=None, theme="l
 
     validation = build_detection(cleaned_df)
     quality_after = compute_quality_score(cleaned_df, validation)
+    # Les explications sont mémorisées sous forme de codes : on les traduit ici,
+    # à l'affichage, pour qu'elles suivent la langue active de l'interface.
+    quality_after["explanations"] = render_score_explanations(
+        quality_after.get("explanations")
+    )
 
     # Rétro-remplissage des indicateurs figés pour les fichiers nettoyés avant
     # l'introduction du tableau de bord global (une seule écriture, puis le
@@ -416,7 +536,7 @@ def build_cleaned_context(data_file, operations=None, regex_rules=None, theme="l
         change_log_df=change_log_df,
         changes=changes_from_log(change_log_df),
     )
-    operations = operations or []
+    operations = render_operations(operations)
     regex_rules = regex_rules or []
     regex_violations = detect_regex_violations(cleaned_df, regex_rules)
     dashboard = build_dashboard(

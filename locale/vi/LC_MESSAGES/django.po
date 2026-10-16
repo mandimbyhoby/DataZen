@@ -16,11 +16,20 @@ msgstr "%(actual)s bản sửa trong nhật ký so với %(reported)s được b
 msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
 msgstr "%(actual)s giá trị không xác định trong cột email so với %(reported)s được báo cáo"
 
+msgid "%(count)s anomalie(s) structurelle(s) détectée(s) sur les colonnes."
+msgstr "Phát hiện %(count)s bất thường cấu trúc trong các cột."
+
 msgid "%(count)s colonnes"
 msgstr "%(count)s cột"
 
+msgid "%(count)s doublon(s) exact(s) restant(s)"
+msgstr "%(count)s bản ghi trùng lặp chính xác còn lại"
+
 msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
 msgstr "%(count)s bản ghi trùng lặp tiềm ẩn cần kiểm tra."
+
+msgid "%(count)s doublon(s) potentiel(s) à vérifier (pénalité réduite)"
+msgstr "%(count)s bản ghi trùng lặp tiềm ẩn cần xem xét thủ công (giảm mức phạt)"
 
 msgid "%(count)s entrée(s) d'activité supprimée(s)."
 msgstr "%(count)s mục nhật ký hoạt động đã bị xóa."
@@ -28,35 +37,38 @@ msgstr "%(count)s mục nhật ký hoạt động đã bị xóa."
 msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
 msgstr "%(count)s lỗi không thể sửa tự động."
 
-msgid "%(count)s exact duplicate(s) remaining"
-msgstr "%(count)s bản ghi trùng lặp chính xác còn lại"
-
-msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
-msgstr "%(count)s giá trị không nhất quán còn lại (không hợp lệ cũng không không xác định)"
+msgid "%(count)s fichier(s) ignoré(s) : lot limité à %(limit)s."
+msgstr "Đã bỏ qua %(count)s tệp: lô giới hạn ở %(limit)s."
 
 msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
 msgstr "%(count)s email không hợp lệ (không trống và không không xác định)"
 
-msgid "%(count)s invalid value(s) among filled data"
-msgstr "%(count)s giá trị không hợp lệ trong dữ liệu đã điền"
-
 msgid "%(count)s lignes"
 msgstr "%(count)s dòng"
 
-msgid "%(count)s missing value(s)"
-msgstr "%(count)s giá trị bị thiếu"
-
-msgid "%(count)s non-standard value(s)"
-msgstr "%(count)s giá trị không chuẩn"
-
-msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
-msgstr "%(count)s bản ghi trùng lặp tiềm ẩn cần xem xét thủ công (giảm mức phạt)"
-
-msgid "%(count)s unknown value(s) (data unavailable)"
-msgstr "%(count)s giá trị không xác định (không có dữ liệu)"
+msgid "%(count)s nettoyage(s) lancé(s) en arrière-plan."
+msgstr "Đã bắt đầu %(count)s lần làm sạch trong nền."
 
 msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
 msgstr "%(count)s giá trị ngoại lai được phát hiện trên các cột số."
+
+msgid "%(count)s valeur(s) d'identifiant dupliquée(s)."
+msgstr "%(count)s giá trị định danh bị trùng lặp."
+
+msgid "%(count)s valeur(s) incohérente(s) restante(s) (ni valide ni inconnue)"
+msgstr "%(count)s giá trị không nhất quán còn lại (không hợp lệ cũng không không xác định)"
+
+msgid "%(count)s valeur(s) inconnue(s) (donnée indisponible)"
+msgstr "%(count)s giá trị không xác định (không có dữ liệu)"
+
+msgid "%(count)s valeur(s) invalide(s) parmi les données renseignées"
+msgstr "%(count)s giá trị không hợp lệ trong dữ liệu đã điền"
+
+msgid "%(count)s valeur(s) manquante(s)"
+msgstr "%(count)s giá trị bị thiếu"
+
+msgid "%(count)s valeur(s) non standard"
+msgstr "%(count)s giá trị không chuẩn"
 
 msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
 msgstr "%(count)s giá trị hiện đang là « Không xác định »."
@@ -85,11 +97,21 @@ msgid "%(counter)s valide,"
 msgid_plural "%(counter)s valides,"
 msgstr[0] "%(counter)s hợp lệ,"
 
+msgid "%(numeric)s valeur(s) numérique(s) sur %(total)s renseignée(s) : type hétérogène."
+msgstr "%(numeric)s giá trị số trên %(total)s giá trị đã điền: kiểu hỗn hợp."
+
 msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
 msgstr "%(purged)s tệp đã xóa, %(archived)s đã lưu trữ."
 
+msgid "%(runs)s exécution"
+msgid_plural "%(runs)s exécutions"
+msgstr[0] "%(runs)s lần chạy"
+
 msgid "%(score)s / 100  (%(weight)s %(percent)s)"
 msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(total)s valeur(s) aberrante(s) détectée(s) (méthode IQR). Colonnes les plus concernées : %(detail)s."
+msgstr "Phát hiện %(total)s giá trị ngoại lai (phương pháp IQR). Các cột bị ảnh hưởng nhiều nhất: %(detail)s."
 
 msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
 msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s so với %(expected)s mong đợi"
@@ -104,6 +126,9 @@ msgstr[0] "(%(counter)s thay đổi)"
 msgid "(%(counter)s non-conformité)"
 msgid_plural "(%(counter)s non-conformités)"
 msgstr[0] "(%(counter)s không tuân thủ)"
+
+msgid "(%(shown)s sur %(total)s)"
+msgstr "(%(shown)s trên %(total)s)"
 
 msgid "(colonnes : %(columns)s)"
 msgstr "(cột: %(columns)s)"
@@ -157,7 +182,7 @@ msgid "Accueil"
 msgstr "Trang chủ"
 
 msgid "Actif"
-msgstr "Đang hoạt động"
+msgstr "Đang bật"
 
 msgid "Actifs"
 msgstr "Đang hoạt động"
@@ -172,7 +197,7 @@ msgid "Actions"
 msgstr "Hành động"
 
 msgid "Active"
-msgstr "Đang hoạt động"
+msgstr "Đang bật"
 
 msgid "Activer"
 msgstr "Bật"
@@ -198,6 +223,9 @@ msgstr "Quản trị viên"
 msgid "Administration"
 msgstr "Quản trị"
 
+msgid "Adresse e-mail"
+msgstr "Địa chỉ email"
+
 msgid "Adresse email"
 msgstr "Địa chỉ email"
 
@@ -218,9 +246,6 @@ msgstr "Xem chi tiết các bất thường"
 
 msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
 msgstr "Được thêm vào tiêu đề X-DataZen-Signature (HMAC-SHA256)."
-
-msgid "All filled values are valid"
-msgstr "Tất cả giá trị đã điền đều hợp lệ"
 
 msgid "Aller au contenu principal"
 msgstr "Chuyển đến nội dung chính"
@@ -243,8 +268,20 @@ msgstr "Giá trị cũ"
 msgid "Annuler"
 msgstr "Hủy"
 
+msgid "Anomalie"
+msgstr "Bất thường"
+
 msgid "Anomalies restantes (à traiter manuellement)"
 msgstr "Bất thường còn lại (cần xử lý thủ công)"
+
+msgid "Anomalies structurelles"
+msgstr "Bất thường cấu trúc"
+
+msgid "Anomalies structurelles par type"
+msgstr "Bất thường cấu trúc theo loại"
+
+msgid "Anonymisation"
+msgstr "Ẩn danh"
 
 msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
 msgstr "Ẩn danh dữ liệu nhạy cảm (đã giả danh %(count)s giá trị)"
@@ -258,8 +295,26 @@ msgstr "Ẩn danh dữ liệu nhạy cảm (tên, email, số điện thoại)"
 msgid "Antananarivo, Madagascar"
 msgstr "Antananarivo, Madagascar"
 
+msgid "Aperçu"
+msgstr "Xem trước"
+
+msgid "Aperçu calculé : aucune modification n'a été enregistrée. Confirmez pour appliquer le nettoyage."
+msgstr "Đã tính bản xem trước: không có thay đổi nào được lưu. Xác nhận để áp dụng việc làm sạch."
+
+msgid "Aperçu de nettoyage sur « %(name)s »"
+msgstr "Xem trước làm sạch cho “%(name)s”"
+
+msgid "Aperçu des données"
+msgstr "Xem trước dữ liệu"
+
 msgid "Aperçu du fichier nettoyé"
 msgstr "Xem trước tệp đã làm sạch"
+
+msgid "Aperçu limité à %(shown)s lignes sur %(total)s."
+msgstr "Xem trước giới hạn ở %(shown)s trong %(total)s dòng."
+
+msgid "Aplatissement"
+msgstr "Độ nhọn"
 
 msgid "Appel API"
 msgstr "Gọi API"
@@ -267,11 +322,20 @@ msgstr "Gọi API"
 msgid "Appel API : %(path)s"
 msgstr "Gọi API: %(path)s"
 
+msgid "Appelez-la depuis un planificateur système (cron, Planificateur de tâches Windows) toutes les cinq minutes."
+msgstr "Gọi nó từ bộ lập lịch hệ thống (cron, Trình lập lịch tác vụ Windows) mỗi năm phút."
+
 msgid "Appels"
 msgstr "Cuộc gọi"
 
 msgid "Application"
 msgstr "Ứng dụng"
+
+msgid "Appliquer"
+msgstr "Áp dụng"
+
+msgid "Appliquez les mêmes opérations à plusieurs jeux de données en une seule fois. Les fichiers sont traités en série, un à la fois."
+msgstr "Áp dụng cùng các thao tác cho nhiều bộ dữ liệu trong một lần. Các tệp được xử lý tuần tự, từng tệp một."
 
 msgid "Après"
 msgstr "Sau"
@@ -290,6 +354,21 @@ msgstr "Kho lưu trữ"
 
 msgid "Archivés"
 msgstr "Đã lưu trữ"
+
+msgid "Asymétrie"
+msgstr "Độ lệch"
+
+msgid "Asymétrie et aplatissement (moments centrés) des colonnes numériques."
+msgstr "Độ lệch và độ nhọn (mô men trung tâm) của các cột số."
+
+msgid "Aucun compte ne correspond à cette recherche."
+msgstr "Không có tài khoản nào khớp với tìm kiếm này."
+
+msgid "Aucun doublon exact"
+msgstr "Không có trùng lặp chính xác"
+
+msgid "Aucun doublon potentiel"
+msgstr "Không có trùng lặp tiềm ẩn"
 
 msgid "Aucun fichier d'origine n'est disponible."
 msgstr "Không có tệp gốc nào."
@@ -324,6 +403,12 @@ msgstr "Không có biểu đồ nào cho bộ dữ liệu này: nó không có �
 msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
 msgstr "Chưa có token nào. Hãy tạo một token để sử dụng API."
 
+msgid "Aucun jeu de données disponible pour le moment."
+msgstr "Hiện không có bộ dữ liệu nào."
+
+msgid "Aucun jeu de données pour le moment."
+msgstr "Hiện chưa có bộ dữ liệu."
+
 msgid "Aucun journal des modifications n'est disponible."
 msgstr "Không có nhật ký thay đổi nào."
 
@@ -348,6 +433,9 @@ msgstr "Không có hoạt động nào được ghi nhận."
 msgid "Aucune anomalie restante."
 msgstr "Không còn bất thường nào."
 
+msgid "Aucune anomalie structurelle détectée."
+msgstr "Không phát hiện bất thường cấu trúc nào."
+
 msgid "Aucune anomalie."
 msgstr "Không có bất thường."
 
@@ -356,6 +444,9 @@ msgstr "Không có cột"
 
 msgid "Aucune correction"
 msgstr "Không có sửa chữa"
+
+msgid "Aucune correction de valeur ne serait nécessaire."
+msgstr "Không cần chỉnh sửa giá trị nào."
 
 msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
 msgstr "Không có khác biệt đáng kể giữa tệp gốc và tệp đã làm sạch: dữ liệu của bạn vốn đã sạch."
@@ -372,6 +463,18 @@ msgstr "Không có dữ liệu đã làm sạch nào."
 msgid "Aucune modification enregistrée."
 msgstr "Không có thay đổi nào được lưu."
 
+msgid "Aucune opération enregistrée pour cette version."
+msgstr "Không có thao tác nào được ghi cho phiên bản này."
+
+msgid "Aucune opération enregistrée."
+msgstr "Không có thao tác nào được ghi."
+
+msgid "Aucune opération."
+msgstr "Không có thao tác nào."
+
+msgid "Aucune planification : programmez un nettoyage récurrent pour ne plus y penser."
+msgstr "Chưa có lịch: hãy đặt làm sạch định kỳ và không phải bận tâm nữa."
+
 msgid "Aucune règle personnalisée."
 msgstr "Không có quy tắc tùy chỉnh nào."
 
@@ -381,8 +484,17 @@ msgstr "Chưa có quy tắc nào. Hãy tạo một quy tắc để dùng lại c
 msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
 msgstr "Không phát hiện giá trị ngoại lai trên các cột số."
 
+msgid "Aucune valeur manquante ou inconnue"
+msgstr "Không có giá trị thiếu hoặc không xác định"
+
+msgid "Aucune valeur renseignée sur %(rows)s ligne(s)."
+msgstr "Không có giá trị nào được điền trong %(rows)s dòng."
+
 msgid "Aucune valeur « Inconnu »."
 msgstr "Không có giá trị « Không xác định »."
+
+msgid "Aucune version enregistrée : lancez un nettoyage pour en créer une."
+msgstr "Chưa có phiên bản nào được ghi: hãy chạy làm sạch để tạo một phiên bản."
 
 msgid "Audit des emails"
 msgstr "Kiểm tra email"
@@ -450,8 +562,20 @@ msgstr "Chuẩn hóa dấu ‘Không xác định’ (đã sửa %(count)s)"
 msgid "Capturer"
 msgstr "Chụp"
 
+msgid "Casse"
+msgstr "Chữ hoa/thường"
+
+msgid "Catégorie"
+msgstr "Danh mục"
+
 msgid "Ce graphique n'est pas disponible pour ce jeu de données."
 msgstr "Biểu đồ này không khả dụng cho bộ dữ liệu này."
+
+msgid "Ce jeu de données n'est partagé avec personne pour le moment."
+msgstr "Bộ dữ liệu này chưa được chia sẻ với ai."
+
+msgid "Ce lien de partage est invalide ou a expiré."
+msgstr "Liên kết chia sẻ này không hợp lệ hoặc đã hết hạn."
 
 msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
 msgstr "Liên kết đặt lại này đã được sử dụng hoặc đã hết hạn."
@@ -459,11 +583,20 @@ msgstr "Liên kết đặt lại này đã được sử dụng hoặc đã hế
 msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
 msgstr "Liên kết này chỉ có hiệu lực một lần. Nếu bạn không phải là người yêu cầu, hãy bỏ qua thông báo này: mật khẩu của bạn vẫn không thay đổi. — DataZen"
 
+msgid "Ce lien ne permet pas le téléchargement."
+msgstr "Liên kết này không cho phép tải xuống."
+
+msgid "Ce partage ne permet pas le téléchargement."
+msgstr "Chia sẻ này không cho phép tải xuống."
+
 msgid "Ce profil n'est pas public."
 msgstr "Hồ sơ này không công khai."
 
 msgid "Ce que le nettoyage a réellement changé dans votre fichier."
 msgstr "Những gì việc làm sạch thực sự đã thay đổi trong tệp của bạn."
+
+msgid "Ce que permet chaque rôle"
+msgstr "Mỗi vai trò cho phép gì"
 
 msgid "Cellules manquantes"
 msgstr "Ô bị thiếu"
@@ -473,6 +606,12 @@ msgstr "%(count)s tệp này vượt quá thời hạn bảo quản %(days)s ng�
 
 msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
 msgstr "Các bộ đếm này cung cấp dữ liệu cho tìm kiếm toàn cầu và các phím tắt bên dưới."
+
+msgid "Ces deux versions sont identiques sur les indicateurs suivis."
+msgstr "Hai phiên bản này giống nhau ở các chỉ số được theo dõi."
+
+msgid "Cette page est réservée aux administrateurs."
+msgstr "Trang này dành riêng cho quản trị viên."
 
 msgid "Champ"
 msgstr "Trường"
@@ -498,6 +637,12 @@ msgstr "Đổi mật khẩu"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Đổi mật khẩu — DataZen"
 
+msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
+msgstr "Mỗi tài khoản có một vai trò: người xem, người chỉnh sửa hoặc quản trị viên. Việc kiểm soát được thực hiện ở máy chủ, không chỉ trên giao diện."
+
+msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
+msgstr "Mỗi lần làm sạch thành công sẽ cố định một phiên bản: bạn có thể tải xuống, so sánh và quay lại."
+
 msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
 msgstr "Tải dữ liệu của bạn ở định dạng <code>.csv</code>, <code>.xlsx</code> hoặc <code>.xls</code>, bất kể dấu phân cách."
 
@@ -506,6 +651,12 @@ msgstr "Chọn ngôn ngữ trang web"
 
 msgid "Choisir le format"
 msgstr "Chọn định dạng"
+
+msgid "Choisissez deux versions pour mesurer ce qui a réellement changé entre elles."
+msgstr "Chọn hai phiên bản để đo điều thực sự thay đổi giữa chúng."
+
+msgid "Choisissez un destinataire ou cochez « Créer un lien public »."
+msgstr "Chọn người nhận hoặc đánh dấu “Tạo liên kết công khai”."
 
 msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
 msgstr "Chọn tệp CSV hoặc Excel (.csv, .xlsx, .xls)."
@@ -546,6 +697,9 @@ msgstr "Mã ngôn ngữ (fr, en, es…). Để trống = ngôn ngữ của ứng
 msgid "Coefficient de Pearson"
 msgstr "Hệ số Pearson"
 
+msgid "Collaboration"
+msgstr "Cộng tác"
+
 msgid "Colonne"
 msgstr "Cột"
 
@@ -554,6 +708,15 @@ msgstr "Cột mục tiêu"
 
 msgid "Colonne clé pour la déduplication"
 msgstr "Cột khóa để loại bỏ trùng lặp"
+
+msgid "Colonne constante"
+msgstr "Cột hằng số"
+
+msgid "Colonne quasi constante"
+msgstr "Cột gần như hằng số"
+
+msgid "Colonne vide"
+msgstr "Cột trống"
 
 msgid "Colonnes"
 msgstr "Các cột"
@@ -579,17 +742,29 @@ msgstr "Các cột không xác định:"
 msgid "Colonnes stables"
 msgstr "Cột ổn định"
 
+msgid "Colonnes vides, constantes, quasi constantes ou à type hétérogène."
+msgstr "Cột trống, hằng số, gần như hằng số hoặc kiểu hỗn hợp."
+
 msgid "Colonnes à vérifier"
 msgstr "Cột cần kiểm tra"
 
 msgid "Combien de fichiers se trouvent dans chaque tranche de score."
 msgstr "Có bao nhiêu tệp trong mỗi khoảng điểm."
 
+msgid "Comment les échéances sont-elles exécutées ?"
+msgstr "Các mốc đến hạn được thực thi thế nào?"
+
 msgid "Comparaison"
 msgstr "So sánh"
 
 msgid "Comparaison avant / après — %(name)s"
 msgstr "So sánh trước / sau — %(name)s"
+
+msgid "Comparaison de versions — %(name)s"
+msgstr "So sánh phiên bản — %(name)s"
+
+msgid "Comparer"
+msgstr "So sánh"
 
 msgid "Complétion du profil"
 msgstr "Hoàn thiện hồ sơ"
@@ -612,6 +787,9 @@ msgstr "Tài khoản"
 msgid "Compte actif"
 msgstr "Tài khoản đang hoạt động"
 
+msgid "Comptes ("
+msgstr "Tài khoản ("
+
 msgid "Condensé"
 msgstr "Tóm tắt"
 
@@ -620,6 +798,9 @@ msgstr "Độ tin cậy"
 
 msgid "Confirmer la décision"
 msgstr "Xác nhận quyết định"
+
+msgid "Confirmer le nettoyage"
+msgstr "Xác nhận làm sạch"
 
 msgid "Connectez-vous pour retrouver vos fichiers."
 msgstr "Đăng nhập để truy cập lại các tệp của bạn."
@@ -630,11 +811,20 @@ msgstr "Đăng nhập"
 msgid "Connexion — DataZen"
 msgstr "Đăng nhập — DataZen"
 
+msgid "Consultation"
+msgstr "Xem"
+
 msgid "Consultation des graphiques"
 msgstr "Xem biểu đồ"
 
 msgid "Consultation du rapport"
 msgstr "Xem báo cáo"
+
+msgid "Consultation et téléchargement"
+msgstr "Xem và tải xuống"
+
+msgid "Consulte et télécharge les jeux de données partagés. Ne modifie rien."
+msgstr "Xem và tải các bộ dữ liệu được chia sẻ. Không thay đổi gì."
 
 msgid "Continuer / valider une étape"
 msgstr "Tiếp tục / xác nhận một bước"
@@ -690,11 +880,17 @@ msgstr "Tạo quy tắc"
 msgid "Créer le jeton"
 msgstr "Tạo token"
 
+msgid "Créer le partage"
+msgstr "Tạo chia sẻ"
+
 msgid "Créer le webhook"
 msgstr "Tạo webhook"
 
 msgid "Créer un compte"
 msgstr "Tạo tài khoản"
+
+msgid "Créer un lien public"
+msgstr "Tạo liên kết công khai"
 
 msgid "Créer une règle"
 msgstr "Tạo quy tắc"
@@ -705,8 +901,14 @@ msgstr "Tạo quy tắc một lần, dùng lại cho mọi tệp của bạn."
 msgid "Créez votre compte"
 msgstr "Tạo tài khoản của bạn"
 
-msgid "Data is consistent: each value is valid or unknown"
-msgstr "Dữ liệu nhất quán: mỗi giá trị đều hợp lệ hoặc không xác định"
+msgid "Créé par"
+msgstr "Tạo bởi"
+
+msgid "Créée par"
+msgstr "Tạo bởi"
+
+msgid "DataZen ne fait tourner aucun démon en arrière-plan : une commande de gestion reprend les échéances dues et relance le nettoyage par le même chemin de code que l'interface."
+msgstr "DataZen không chạy tiến trình nền nào: một lệnh quản trị sẽ lấy các lịch đến hạn và khởi động lại việc làm sạch qua cùng đường mã như giao diện."
 
 msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
 msgstr "DataZen — Ứng dụng làm sạch dữ liệu (DataClean Pro) · ©"
@@ -738,14 +940,26 @@ msgstr "Mã HTTP cuối"
 msgid "Dernier déclenchement"
 msgstr "Kích hoạt cuối"
 
+msgid "Dernier statut"
+msgstr "Trạng thái cuối"
+
 msgid "Dernier usage"
 msgstr "Lần dùng cuối"
 
 msgid "Derniers fichiers"
 msgstr "Tệp gần đây"
 
+msgid "Dernière : succès"
+msgstr "Lần cuối: thành công"
+
+msgid "Dernière : échec"
+msgstr "Lần cuối: thất bại"
+
 msgid "Dernière connexion"
 msgstr "Đăng nhập lần cuối"
+
+msgid "Dernière exécution"
+msgstr "Lần chạy cuối"
 
 msgid "Dernière utilisation"
 msgstr "Lần sử dụng cuối"
@@ -756,6 +970,9 @@ msgstr "Quy tắc gần đây"
 msgid "Des incohérences ont été détectées entre les statistiques et les données."
 msgstr "Đã phát hiện sự không nhất quán giữa thống kê và dữ liệu."
 
+msgid "Destinataire"
+msgstr "Người nhận"
+
 msgid "Dimension"
 msgstr "Chiều"
 
@@ -765,6 +982,12 @@ msgstr "Các chiều chất lượng"
 msgid "Dispersion et valeurs extrêmes des colonnes numériques."
 msgstr "Độ phân tán và giá trị cực trị của các cột số."
 
+msgid "Distribution la plus asymétrique : « %(colonne)s » (asymétrie %(valeur)s) — moyenne et médiane s'écartent sensiblement, une transformation ou un traitement par quantiles est à envisager."
+msgstr "Phân phối lệch nhất: “%(colonne)s” (độ lệch %(valeur)s) — trung bình và trung vị khác biệt rõ rệt; nên cân nhắc biến đổi hoặc xử lý theo phân vị."
+
+msgid "Distribution la plus concentrée/pointue : « %(colonne)s » (aplatissement %(valeur)s) — forte densité autour de la moyenne avec des valeurs extrêmes marquées."
+msgstr "Phân phối nhọn nhất: “%(colonne)s” (độ nhọn %(valeur)s) — mật độ cao quanh trung bình với các giá trị cực trị rõ rệt."
+
 msgid "Distributions des colonnes numériques"
 msgstr "Phân bố của các cột số"
 
@@ -773,6 +996,12 @@ msgstr "Phân phối số"
 
 msgid "Django · Pandas · Bootstrap"
 msgstr "Django · Pandas · Bootstrap"
+
+msgid "Données cohérentes : chaque valeur est valide ou inconnue"
+msgstr "Dữ liệu nhất quán: mỗi giá trị đều hợp lệ hoặc không xác định"
+
+msgid "Doublon"
+msgstr "Trùng lặp"
 
 msgid "Doublon par similarité"
 msgstr "Trùng lặp theo độ tương đồng"
@@ -816,6 +1045,12 @@ msgstr "Trùng lặp, khoảng trắng thừa, email sai định dạng, ngày k
 msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
 msgstr "Trùng lặp, giá trị thiếu, khoảng trắng, chữ hoa/thường, email, số điện thoại, ngày và mức lương được chuẩn hóa."
 
+msgid "Droit"
+msgstr "Quyền"
+
+msgid "Droit accordé"
+msgstr "Quyền đã cấp"
+
 msgid "Durée de conservation"
 msgstr "Thời hạn bảo quản"
 
@@ -855,8 +1090,17 @@ msgstr "Xóa"
 msgid "Effectif"
 msgstr "Số lượng"
 
+msgid "Email"
+msgstr "Email"
+
+msgid "Email fictif"
+msgstr "Email giả"
+
 msgid "Email invalide"
 msgstr "Email không hợp lệ"
+
+msgid "Email manquant"
+msgstr "Email thiếu"
 
 msgid "Email nettoyé"
 msgstr "Email đã làm sạch"
@@ -927,8 +1171,14 @@ msgstr "Lỗi còn lại"
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
 
+msgid "Exemples de corrections"
+msgstr "Ví dụ về chỉnh sửa"
+
 msgid "Expiration"
 msgstr "Hết hạn"
+
+msgid "Expire le"
+msgstr "Hết hạn vào"
 
 msgid "Expiré"
 msgstr "Đã hết hạn"
@@ -938,6 +1188,12 @@ msgstr "Giải thích điểm số"
 
 msgid "Export & traçabilité"
 msgstr "Xuất & truy vết"
+
+msgid "Exécuter"
+msgstr "Chạy"
+
+msgid "Exécutions"
+msgstr "Số lần chạy"
 
 msgid "Fermer"
 msgstr "Đóng"
@@ -996,6 +1252,9 @@ msgstr "Tệp được làm sạch lâu hơn thời hạn này (0 = bảo quản
 msgid "Fichiers récents"
 msgstr "Tệp gần đây"
 
+msgid "Fichiers à nettoyer"
+msgstr "Tệp cần làm sạch"
+
 msgid "Fil d'Ariane"
 msgstr "Đường dẫn điều hướng"
 
@@ -1029,8 +1288,17 @@ msgstr "Định dạng được chấp nhận: <code>.csv</code>, <code>.xlsx</c
 msgid "Formats de dates (%(column)s) :"
 msgstr "Định dạng ngày (%(column)s):"
 
-msgid "Formats standardized (phones, dates)"
+msgid "Formats standardisés (téléphones, dates)"
 msgstr "Định dạng đã chuẩn hóa (điện thoại, ngày)"
+
+msgid "Forme des distributions"
+msgstr "Hình dạng phân phối"
+
+msgid "Forme des distributions (asymétrie et aplatissement)"
+msgstr "Hình dạng phân phối (độ lệch và độ nhọn)"
+
+msgid "Fréquence"
+msgstr "Tần suất"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Tiết kiệm thời gian: mọi thứ quan trọng trong DataZen đều nằm ở một tổ hợp phím."
@@ -1050,14 +1318,23 @@ msgstr "Biểu đồ thống kê được tạo bằng <strong>matplotlib</stron
 msgid "Gratuit, immédiat, et vos fichiers restent privés."
 msgstr "Miễn phí, tức thì và các tệp của bạn vẫn riêng tư."
 
+msgid "Gère les rôles et voit l'ensemble des fichiers de la plateforme."
+msgstr "Quản lý vai trò và xem mọi tệp trên nền tảng."
+
 msgid "Gérer les règles…"
 msgstr "Quản lý quy tắc…"
+
+msgid "Hebdomadaire"
+msgstr "Hàng tuần"
 
 msgid "Histogrammes des colonnes numériques détectées."
 msgstr "Biểu đồ tần suất của các cột số được phát hiện."
 
 msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
 msgstr "Lịch sử có dấu thời gian về các hành động của bạn: tải lên, làm sạch, xuất, API."
+
+msgid "Identifiant non unique"
+msgstr "Định danh không duy nhất"
 
 msgid "Identité"
 msgstr "Danh tính"
@@ -1070,6 +1347,9 @@ msgstr "Nhập CSV & Excel"
 
 msgid "Impossible d'appliquer la décision : %(error)s"
 msgstr "Không thể áp dụng quyết định: %(error)s"
+
+msgid "Impossible de comparer ces versions : %(error)s"
+msgstr "Không thể so sánh các phiên bản này: %(error)s"
 
 msgid "Impossible de convertir le fichier : %(error)s"
 msgstr "Không thể chuyển đổi tệp: %(error)s"
@@ -1086,6 +1366,9 @@ msgstr "Không thể đọc tệp: %(error)s"
 msgid "Impossible de lire le rapport : %(error)s"
 msgstr "Không thể đọc báo cáo: %(error)s"
 
+msgid "Impossible de simuler le nettoyage : le fichier est illisible."
+msgstr "Không thể mô phỏng việc làm sạch: không đọc được tệp."
+
 msgid "Inactif"
 msgstr "Không hoạt động"
 
@@ -1096,6 +1379,9 @@ msgid "Inconnu"
 msgstr "Không xác định"
 
 msgid "Indicateur"
+msgstr "Chỉ số"
+
+msgid "Indicateurs"
 msgstr "Chỉ số"
 
 msgid "Indicateurs comparés"
@@ -1140,6 +1426,9 @@ msgstr "Đã tạo token. Hãy sao chép ngay: nó sẽ không được hiển t
 msgid "Jeton d'API"
 msgstr "Token API"
 
+msgid "Jeton du lien"
+msgstr "Mã liên kết"
+
 msgid "Jeton « %(name)s » révoqué."
 msgstr "Đã thu hồi token « %(name)s »."
 
@@ -1148,6 +1437,12 @@ msgstr "Token"
 
 msgid "Jetons d'API"
 msgstr "Token API"
+
+msgid "Jeu de données"
+msgstr "Bộ dữ liệu"
+
+msgid "Jeu de données partagé en lecture seule via un lien DataZen."
+msgstr "Bộ dữ liệu được chia sẻ chỉ đọc qua liên kết DataZen."
 
 msgid "Journal d'activité"
 msgstr "Nhật ký hoạt động"
@@ -1176,8 +1471,17 @@ msgstr "Xóa tài khoản sẽ xóa vĩnh viễn các tệp, quy tắc và hồ 
 msgid "Laisser vide pour appliquer à toutes les colonnes."
 msgstr "Để trống để áp dụng cho tất cả các cột."
 
+msgid "Laissez vide pour démarrer à la prochaine échéance."
+msgstr "Để trống để bắt đầu ở mốc đến hạn kế tiếp."
+
 msgid "Laissez vide pour un jeton sans expiration."
 msgstr "Để trống nếu muốn token không hết hạn."
+
+msgid "Laissez vide pour un partage sans expiration."
+msgstr "Để trống để chia sẻ không hết hạn."
+
+msgid "Lancer le nettoyage des fichiers sélectionnés"
+msgstr "Bắt đầu làm sạch các tệp đã chọn"
 
 msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
 msgstr "Hãy chạy làm sạch trước để truy cập phân tích khám phá."
@@ -1190,6 +1494,9 @@ msgstr "Ngôn ngữ giao diện"
 
 msgid "Le compte « %(username)s » a été supprimé."
 msgstr "Tài khoản « %(username)s » đã bị xóa."
+
+msgid "Le fichier de cette version n'est plus disponible."
+msgstr "Tệp của phiên bản này không còn khả dụng."
 
 msgid "Le fichier ne doit pas dépasser 20 Mo."
 msgstr "Tệp không được vượt quá 20 MB."
@@ -1209,6 +1516,9 @@ msgstr "Tên máy chủ của webhook trỏ đến một địa chỉ nội bộ
 msgid "Le nom d'hôte est absent de l'URL."
 msgstr "Thiếu tên máy chủ trong URL."
 
+msgid "Le partage est toujours en lecture seule : le destinataire consulte et, si vous l'autorisez, télécharge. Il ne modifie jamais vos données."
+msgstr "Chia sẻ luôn chỉ đọc: người nhận xem và, nếu bạn cho phép, tải xuống. Họ không bao giờ sửa dữ liệu của bạn."
+
 msgid "Le port est invalide."
 msgstr "Cổng không hợp lệ."
 
@@ -1217,6 +1527,12 @@ msgstr "Giao diện « Hệ thống » tuân theo cài đặt thiết bị của
 
 msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
 msgstr "Quá trình xử lý chạy ở chế độ nền. Trang này sẽ tự động cập nhật khi hoàn tất."
+
+msgid "Lecteur"
+msgstr "Người xem"
+
+msgid "Lecteur : consultation et téléchargement. Éditeur : peut aussi nettoyer et supprimer ses fichiers. Administrateur : gère les rôles et voit tous les fichiers."
+msgstr "Người xem: xem và tải xuống. Người chỉnh sửa: cũng có thể làm sạch và xóa tệp của mình. Quản trị viên: quản lý vai trò và xem mọi tệp."
 
 msgid "Les adresses internes sont refusées."
 msgstr "Địa chỉ nội bộ bị từ chối."
@@ -1242,14 +1558,23 @@ msgstr "Tệp đã làm sạch được lưu trữ rồi xóa sau thời hạn n
 msgid "Les identifiants intégrés à l'URL sont refusés."
 msgstr "Thông tin đăng nhập nhúng trong URL bị từ chối."
 
+msgid "Les options choisies ne changeraient rien à ce jeu de données."
+msgstr "Các tùy chọn đã chọn sẽ không thay đổi bộ dữ liệu này."
+
 msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 msgstr "Các tuyến khả dụng: /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 
 msgid "Les statistiques affichées correspondent aux données réelles."
 msgstr "Thống kê hiển thị khớp với dữ liệu thực tế."
 
+msgid "Lien de partage public"
+msgstr "Liên kết chia sẻ công khai"
+
 msgid "Lien invalide"
 msgstr "Liên kết không hợp lệ"
+
+msgid "Lien public"
+msgstr "Liên kết công khai"
 
 msgid "Ligne"
 msgstr "Dòng"
@@ -1292,6 +1617,9 @@ msgstr "Làm chủ vòng đời dữ liệu của bạn."
 
 msgid "Membre depuis"
 msgstr "Thành viên từ"
+
+msgid "Mensuel"
+msgstr "Hàng tháng"
 
 msgid "Mes règles"
 msgstr "Quy tắc của tôi"
@@ -1374,6 +1702,18 @@ msgstr "Đã bắt đầu làm sạch ở chế độ nền. Trang sẽ tự đ�
 msgid "Nettoyage lancé sur « %(name)s »"
 msgstr "Đã bắt đầu làm sạch « %(name)s »"
 
+msgid "Nettoyage par lots"
+msgstr "Làm sạch theo lô"
+
+msgid "Nettoyage par lots : %(count)s fichier(s) lancé(s)"
+msgstr "Làm sạch theo lô: đã bắt đầu %(count)s tệp"
+
+msgid "Nettoyage par lots — DataZen"
+msgstr "Làm sạch theo lô — DataZen"
+
+msgid "Nettoyage planifié de « %(name)s » lancé."
+msgstr "Đã bắt đầu làm sạch theo lịch cho “%(name)s”."
+
 msgid "Nettoyage terminé"
 msgstr "Làm sạch hoàn tất"
 
@@ -1401,20 +1741,14 @@ msgstr "Đã làm sạch"
 msgid "Niveau"
 msgstr "Mức"
 
-msgid "No exact duplicates"
-msgstr "Không có trùng lặp chính xác"
-
-msgid "No missing or unknown values"
-msgstr "Không có giá trị thiếu hoặc không xác định"
-
-msgid "No potential duplicates"
-msgstr "Không có trùng lặp tiềm ẩn"
-
 msgid "Nom"
 msgstr "Tên"
 
 msgid "Nom d'utilisateur"
 msgstr "Tên người dùng"
+
+msgid "Nom de la colonne unique (ex. email). Laissez vide pour ne supprimer que les lignes 100 % identiques. Une colonne absente d'un fichier est ignorée pour ce fichier."
+msgstr "Tên cột duy nhất (ví dụ email). Để trống nếu chỉ muốn xóa các hàng giống nhau 100%. Cột không có trong một tệp sẽ bị bỏ qua đối với tệp đó."
 
 msgid "Nom de la règle"
 msgstr "Tên quy tắc"
@@ -1430,6 +1764,9 @@ msgstr "Số cuộc gọi"
 
 msgid "Nombre d'occurrences"
 msgstr "Số lần xuất hiện"
+
+msgid "Nombre de colonnes concernées"
+msgstr "Số cột bị ảnh hưởng"
 
 msgid "Nombre de nettoyages et score moyen par semaine."
 msgstr "Số lần làm sạch và điểm trung bình mỗi tuần."
@@ -1497,11 +1834,29 @@ msgstr "Ảnh mới đã sẵn sàng"
 msgid "Nouvelle valeur"
 msgstr "Giá trị mới"
 
+msgid "Numérique"
+msgstr "Số"
+
+msgid "Numéro de version"
+msgstr "Số phiên bản"
+
+msgid "Options de nettoyage"
+msgstr "Tùy chọn làm sạch"
+
 msgid "Opération"
 msgstr "Thao tác"
 
+msgid "Opérations appliquées"
+msgstr "Thao tác đã áp dụng"
+
 msgid "Opérations de nettoyage"
 msgstr "Thao tác làm sạch"
+
+msgid "Opérations de v%(n)s"
+msgstr "Thao tác của v%(n)s"
+
+msgid "Opérations qui seraient appliquées"
+msgstr "Các thao tác sẽ được áp dụng"
 
 msgid "Organisation"
 msgstr "Tổ chức"
@@ -1527,6 +1882,27 @@ msgstr "Trang"
 msgid "Parcourir…"
 msgstr "Duyệt…"
 
+msgid "Partage"
+msgstr "Chia sẻ"
+
+msgid "Partage créé."
+msgstr "Đã tạo chia sẻ."
+
+msgid "Partage de « %(name)s » avec %(target)s"
+msgstr "Chia sẻ “%(name)s” với %(target)s"
+
+msgid "Partage révoqué."
+msgstr "Đã thu hồi chia sẻ."
+
+msgid "Partage — %(name)s"
+msgstr "Chia sẻ — %(name)s"
+
+msgid "Partages"
+msgstr "Chia sẻ"
+
+msgid "Partagé le"
+msgstr "Chia sẻ ngày"
+
 msgid "Pas encore de compte ?"
 msgstr "Chưa có tài khoản?"
 
@@ -1541,6 +1917,27 @@ msgstr "Ảnh hồ sơ"
 
 msgid "Pilotage"
 msgstr "Giám sát"
+
+msgid "Planification"
+msgstr "Lịch"
+
+msgid "Planification %(state)s."
+msgstr "Lịch đã %(state)s."
+
+msgid "Planification créée pour « %(name)s »"
+msgstr "Đã tạo lịch cho “%(name)s”"
+
+msgid "Planification créée."
+msgstr "Đã tạo lịch."
+
+msgid "Planification supprimée."
+msgstr "Đã xóa lịch."
+
+msgid "Planifications"
+msgstr "Lịch"
+
+msgid "Planifications — DataZen"
+msgstr "Lịch — DataZen"
 
 msgid "Plus fréquent"
 msgstr "Phổ biến nhất"
@@ -1557,10 +1954,16 @@ msgstr "Trọng số"
 msgid "Premier quartile"
 msgstr "Tứ phân vị thứ nhất"
 
+msgid "Première exécution"
+msgstr "Lần chạy đầu"
+
 msgid "Prendre une photo avec la caméra"
 msgstr "Chụp ảnh bằng camera"
 
 msgid "Problème"
+msgstr "Vấn đề"
+
+msgid "Problèmes"
 msgstr "Vấn đề"
 
 msgid "Problèmes après"
@@ -1574,6 +1977,9 @@ msgstr "Vấn đề được phát hiện"
 
 msgid "Problèmes restants"
 msgstr "Vấn đề còn lại"
+
+msgid "Prochaine exécution"
+msgstr "Lần chạy kế tiếp"
 
 msgid "Productivité"
 msgstr "Năng suất"
@@ -1593,8 +1999,17 @@ msgstr "Hồ sơ công khai"
 msgid "Profil visible publiquement"
 msgstr "Hồ sơ hiển thị công khai"
 
+msgid "Profilage statistique"
+msgstr "Phân tích hồ sơ thống kê"
+
 msgid "Profils"
 msgstr "Hồ sơ"
+
+msgid "Programmer"
+msgstr "Lập lịch"
+
+msgid "Programmez un nettoyage récurrent : les mêmes options s'appliquent à chaque échéance, sans intervention de votre part."
+msgstr "Lập lịch làm sạch định kỳ: cùng các tùy chọn áp dụng ở mỗi mốc đến hạn, không cần bạn can thiệp."
 
 msgid "Progression"
 msgstr "Tiến độ"
@@ -1641,6 +2056,9 @@ msgstr "Q1"
 msgid "Q3"
 msgstr "Q3"
 
+msgid "Qualité : v%(before)s → v%(after)s"
+msgstr "Chất lượng: v%(before)s → v%(after)s"
+
 msgid "Qualité moyenne"
 msgstr "Chất lượng trung bình"
 
@@ -1649,6 +2067,9 @@ msgstr "Chất lượng theo cột"
 
 msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
 msgstr "Đôi lời về bạn, nhóm của bạn, bộ dữ liệu của bạn…"
+
+msgid "Quotidien"
+msgstr "Hàng ngày"
 
 msgid "Raccourcis clavier"
 msgstr "Phím tắt"
@@ -1707,6 +2128,12 @@ msgstr "Tìm kiếm"
 msgid "Rechercher (Ctrl+K)"
 msgstr "Tìm kiếm (Ctrl+K)"
 
+msgid "Rechercher un compte"
+msgstr "Tìm tài khoản"
+
+msgid "Rechercher un compte…"
+msgstr "Tìm tài khoản…"
+
 msgid "Rechercher un fichier"
 msgstr "Tìm kiếm tệp"
 
@@ -1749,11 +2176,20 @@ msgstr "Báo cáo %(reported)s so với tính lại %(actual)s"
 msgid "Restauration"
 msgstr "Khôi phục"
 
+msgid "Restauration de la version %(number)s de « %(name)s »"
+msgstr "Đang khôi phục phiên bản %(number)s của “%(name)s”"
+
 msgid "Restauration de « %(name)s »"
 msgstr "Khôi phục « %(name)s »"
 
+msgid "Restauration impossible : %(error)s"
+msgstr "Không thể khôi phục: %(error)s"
+
 msgid "Restaurer"
 msgstr "Khôi phục"
+
+msgid "Restaurer cette version comme version courante ?"
+msgstr "Khôi phục phiên bản này làm phiên bản hiện tại?"
 
 msgid "Retour à la connexion"
 msgstr "Quay lại đăng nhập"
@@ -1776,6 +2212,9 @@ msgstr "Đã xóa quy tắc « %(name)s »."
 msgid "Règles"
 msgstr "Quy tắc"
 
+msgid "Règles appliquées"
+msgstr "Quy tắc đã áp dụng"
+
 msgid "Règles de nettoyage"
 msgstr "Quy tắc làm sạch"
 
@@ -1796,6 +2235,9 @@ msgstr "Phân bố vấn đề"
 
 msgid "Répartition des problèmes restants"
 msgstr "Phân bố các vấn đề còn lại"
+
+msgid "Résultat de la simulation : rien n'a été écrit. Confirmez le nettoyage pour appliquer réellement ces changements."
+msgstr "Kết quả mô phỏng: không có gì được ghi. Xác nhận làm sạch để thực sự áp dụng những thay đổi này."
 
 msgid "Résultats"
 msgstr "Kết quả"
@@ -1821,8 +2263,32 @@ msgstr "Thu hồi"
 msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
 msgstr "Thu hồi token này? Các tích hợp sử dụng nó sẽ ngừng hoạt động."
 
+msgid "Révoquer ce partage ?"
+msgstr "Thu hồi chia sẻ này?"
+
 msgid "Révoqué"
 msgstr "Đã thu hồi"
+
+msgid "Rôle"
+msgstr "Vai trò"
+
+msgid "Rôle de « %(name)s » : %(before)s → %(after)s"
+msgstr "Vai trò của “%(name)s”: %(before)s → %(after)s"
+
+msgid "Rôle de « %(name)s » mis à jour."
+msgstr "Đã cập nhật vai trò của “%(name)s”."
+
+msgid "Rôle du compte"
+msgstr "Vai trò tài khoản"
+
+msgid "Rôle inconnu."
+msgstr "Vai trò không xác định."
+
+msgid "Rôles et permissions"
+msgstr "Vai trò và quyền"
+
+msgid "Rôles et permissions — DataZen"
+msgstr "Vai trò và quyền — DataZen"
 
 msgid "S'inscrire"
 msgstr "Đăng ký"
@@ -1833,8 +2299,14 @@ msgstr "Nhập <strong>%(username)s</strong> để xác nhận"
 msgid "Score"
 msgstr "Điểm"
 
+msgid "Score après"
+msgstr "Điểm sau"
+
 msgid "Score après nettoyage"
 msgstr "Điểm sau khi làm sạch"
+
+msgid "Score avant"
+msgstr "Điểm trước"
 
 msgid "Score avant nettoyage"
 msgstr "Điểm trước khi làm sạch"
@@ -1863,6 +2335,9 @@ msgstr "Điểm chất lượng sau"
 msgid "Score qualité avant"
 msgstr "Điểm chất lượng trước"
 
+msgid "Scores mesurés lors de chaque nettoyage."
+msgstr "Điểm được đo ở mỗi lần làm sạch."
+
 msgid "Se connecter"
 msgstr "Đăng nhập"
 
@@ -1875,11 +2350,20 @@ msgstr "Di chuyển trong kết quả"
 msgid "Sert uniquement à la réinitialisation du mot de passe."
 msgstr "Chỉ dùng để đặt lại mật khẩu."
 
+msgid "Seul le propriétaire peut gérer les partages."
+msgstr "Chỉ chủ sở hữu mới quản lý được chia sẻ."
+
+msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
+msgstr "Chỉ hiển thị những chỉnh sửa đầu tiên; việc làm sạch thực tế sẽ áp dụng tất cả."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "Chỉ cho phép lược đồ http và https."
 
 msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
 msgstr "Nếu tồn tại tài khoản với địa chỉ này, một email chứa liên kết đặt lại vừa được gửi đi."
+
+msgid "Simulation — aucune modification enregistrée"
+msgstr "Mô phỏng — không lưu thay đổi nào"
 
 msgid "Site web"
 msgstr "Trang web"
@@ -1923,6 +2407,9 @@ msgstr "Xóa %(name)s"
 msgid "Supprimer ce webhook ?"
 msgstr "Xóa webhook này?"
 
+msgid "Supprimer cette planification ?"
+msgstr "Xóa lịch này?"
+
 msgid "Supprimer définitivement ce fichier et toutes ses données ?"
 msgstr "Xóa vĩnh viễn tệp này và toàn bộ dữ liệu của nó?"
 
@@ -1947,6 +2434,12 @@ msgstr "Xóa khoảng trắng thừa"
 msgid "Supprimer mon compte"
 msgstr "Xóa tài khoản của tôi"
 
+msgid "Suspendre"
+msgstr "Tạm dừng"
+
+msgid "Suspendue"
+msgstr "Đã tạm dừng"
+
 msgid "Synthèse"
 msgstr "Tổng hợp"
 
@@ -1958,6 +2451,18 @@ msgstr "Bảo mật"
 
 msgid "Sélectionner un fichier"
 msgstr "Chọn một tệp"
+
+msgid "Sélectionnez au moins un fichier."
+msgstr "Chọn ít nhất một tệp."
+
+msgid "Sélectionnez deux versions différentes pour afficher la comparaison."
+msgstr "Chọn hai phiên bản khác nhau để hiển thị so sánh."
+
+msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
+msgstr "Chọn tối đa %(limit)s tệp: vượt quá sẽ bị cắt bớt để không làm quá tải máy chủ."
+
+msgid "Sévérité"
+msgstr "Mức độ nghiêm trọng"
 
 msgid "Tableau de bord"
 msgstr "Bảng điều khiển"
@@ -1998,8 +2503,17 @@ msgstr "Bao gồm tất cả"
 msgid "Tout voir"
 msgstr "Xem tất cả"
 
+msgid "Toute personne possédant ce lien peut consulter le fichier. Révoquez le partage pour l'invalider immédiatement."
+msgstr "Bất kỳ ai có liên kết này đều có thể xem tệp. Thu hồi chia sẻ để vô hiệu hóa ngay."
+
+msgid "Toute personne possédant le lien peut consulter le jeu de données, sans compte. Le lien est révocable et peut expirer."
+msgstr "Bất kỳ ai có liên kết đều có thể xem bộ dữ liệu mà không cần tài khoản. Liên kết có thể bị thu hồi và có thể hết hạn."
+
 msgid "Toutes les actions"
 msgstr "Tất cả hành động"
+
+msgid "Toutes les valeurs renseignées sont valides"
+msgstr "Tất cả giá trị đã điền đều hợp lệ"
 
 msgid "Traçabilité"
 msgstr "Khả năng truy vết"
@@ -2013,11 +2527,17 @@ msgstr "Loại"
 msgid "Type de correction"
 msgstr "Loại sửa chữa"
 
+msgid "Type hétérogène"
+msgstr "Kiểu hỗn hợp"
+
 msgid "Téléchargement"
 msgstr "Tải xuống"
 
 msgid "Téléchargement de « %(name)s »"
 msgstr "Tải xuống « %(name)s »"
+
+msgid "Téléphone"
+msgstr "Điện thoại"
 
 msgid "Téléphone invalide"
 msgstr "Số điện thoại không hợp lệ"
@@ -2027,6 +2547,9 @@ msgstr "Số điện thoại không chuẩn"
 
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Số điện thoại không chuẩn (%(column)s):"
+
+msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
+msgstr "Tải lên, làm sạch, lên lịch và xóa tệp của mình."
 
 msgid "Téléversement"
 msgstr "Tải lên"
@@ -2057,6 +2580,9 @@ msgstr "Không thể xóa tài khoản quản trị viên từ trang này."
 
 msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
 msgstr "Không thể xóa tài khoản quản trị viên từ trang này. Hãy dùng"
+
+msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
+msgstr "Một trích đoạn của tệp: những dòng đầu đủ để đánh giá dữ liệu."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "Bảng điều khiển đo chất lượng trước / sau và giải thích từng điểm bị mất."
@@ -2100,11 +2626,20 @@ msgstr "Giá trị thay thế"
 msgid "Valeur de remplacement (pour le remplissage)."
 msgstr "Giá trị thay thế (để điền)."
 
+msgid "Valeur du moment centré"
+msgstr "Giá trị mô men trung tâm"
+
+msgid "Valeur inconnue"
+msgstr "Giá trị không rõ"
+
 msgid "Valeur manquante"
 msgstr "Giá trị bị thiếu"
 
 msgid "Valeur numérique invalide"
 msgstr "Giá trị số không hợp lệ"
+
+msgid "Valeur unique « %(value)s » sur %(count)s ligne(s)."
+msgstr "Giá trị duy nhất “%(value)s” trên %(count)s dòng."
 
 msgid "Valeurs aberrantes"
 msgstr "Giá trị ngoại lai"
@@ -2148,6 +2683,36 @@ msgstr "Xác thực và sửa email (chỉ lỗi rõ ràng)"
 msgid "Validité"
 msgstr "Tính hợp lệ"
 
+msgid "Variance"
+msgstr "Phương sai"
+
+msgid "Version"
+msgstr "Phiên bản"
+
+msgid "Version %(number)s restaurée."
+msgstr "Đã khôi phục phiên bản %(number)s."
+
+msgid "Version comparée"
+msgstr "Phiên bản được so sánh"
+
+msgid "Version courante"
+msgstr "Phiên bản hiện tại"
+
+msgid "Version de référence"
+msgstr "Phiên bản tham chiếu"
+
+msgid "Versions"
+msgstr "Phiên bản"
+
+msgid "Versions enregistrées ("
+msgstr "Phiên bản đã ghi ("
+
+msgid "Versions — %(name)s"
+msgstr "Phiên bản — %(name)s"
+
+msgid "Vide pour créer un lien public."
+msgstr "Để trống để tạo liên kết công khai."
+
 msgid "Visualisations statistiques"
 msgstr "Trực quan hóa thống kê"
 
@@ -2169,6 +2734,9 @@ msgstr "Dữ liệu của bạn xứng đáng<br> <span class=\"dz-gradient-text
 msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
 msgstr "Tệp của bạn vẫn thuộc về bạn. DataZen cho bạn biết những gì vượt quá thời hạn bảo quản đã chọn và không xóa gì nếu không có sự đồng ý của bạn."
 
+msgid "Vos jeux de données"
+msgstr "Bộ dữ liệu của bạn"
+
 msgid "Votre espace de travail"
 msgstr "Không gian làm việc của bạn"
 
@@ -2187,6 +2755,18 @@ msgstr "Ảnh hồ sơ của bạn đã bị xóa."
 msgid "Votre profil a été mis à jour."
 msgstr "Hồ sơ của bạn đã được cập nhật."
 
+msgid "Votre rôle ne permet pas de créer une planification."
+msgstr "Vai trò của bạn không cho phép tạo lịch."
+
+msgid "Votre rôle ne permet pas de lancer un nettoyage. Contactez un administrateur."
+msgstr "Vai trò của bạn không cho phép bắt đầu làm sạch. Hãy liên hệ quản trị viên."
+
+msgid "Votre rôle ne permet pas de modifier les données. Contactez un administrateur."
+msgstr "Vai trò của bạn không cho phép sửa dữ liệu. Hãy liên hệ quản trị viên."
+
+msgid "Vous"
+msgstr "Bạn"
+
 msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
 msgstr "Bạn nắm quyền kiểm soát: không có gì bị xóa nếu không có hành động của bạn."
 
@@ -2201,6 +2781,9 @@ msgstr "Bạn không có quyền truy cập webhook này."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "Bạn không có quyền truy cập quy tắc này."
+
+msgid "Vous ne pouvez pas modifier votre propre rôle."
+msgstr "Bạn không thể thay đổi vai trò của chính mình."
 
 msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
 msgstr "Chế độ xem hợp nhất về chất lượng dữ liệu của bạn, gồm tất cả các tệp."
@@ -2343,6 +2926,9 @@ msgstr "vd: email (trống = tất cả các cột)"
 msgid "excellente qualité"
 msgstr "chất lượng xuất sắc"
 
+msgid "faible"
+msgstr "thấp"
+
 msgid "fermer"
 msgstr "đóng"
 
@@ -2354,6 +2940,9 @@ msgstr "định dạng không được nhận diện"
 
 msgid "généré le"
 msgstr "tạo ngày"
+
+msgid "haute"
+msgstr "cao"
 
 msgid "https://exemple.com"
 msgstr "https://exemple.com"
@@ -2373,6 +2962,9 @@ msgstr "không đổi"
 msgid "jours"
 msgstr "ngày"
 
+msgid "lien public"
+msgstr "liên kết công khai"
+
 msgid "lignes"
 msgstr "dòng"
 
@@ -2381,6 +2973,9 @@ msgstr "độ dài/định dạng không đúng"
 
 msgid "matplotlib"
 msgstr "matplotlib"
+
+msgid "moyenne"
+msgstr "trung bình"
 
 msgid "naviguer"
 msgstr "điều hướng"
@@ -2436,6 +3031,9 @@ msgstr "đã xóa"
 msgid "sur"
 msgstr "trên"
 
+msgid "suspendue"
+msgstr "đã tạm dừng"
+
 msgid "texte"
 msgstr "văn bản"
 
@@ -2445,11 +3043,17 @@ msgstr "điện thoại"
 msgid "unicité"
 msgstr "tính duy nhất"
 
+msgid "v%(n)s"
+msgstr "v%(n)s"
+
 msgid "valeur(s) extrême(s)"
 msgstr "giá trị cực trị"
 
 msgid "validité"
 msgstr "tính hợp lệ"
+
+msgid "« %(value)s » représente %(percent)s %% des valeurs renseignées."
+msgstr "“%(value)s” chiếm %(percent)s %% các giá trị đã điền."
 
 msgid "· ancien_id :"
 msgstr "· ancien_id:"
@@ -2474,6 +3078,12 @@ msgstr "Làm sạch thất bại"
 
 msgid "Échec du nettoyage de « %(name)s »"
 msgstr "Làm sạch « %(name)s » thất bại"
+
+msgid "Échec du nettoyage planifié : %(error)s"
+msgstr "Làm sạch theo lịch thất bại: %(error)s"
+
+msgid "Éditeur"
+msgstr "Người chỉnh sửa"
 
 msgid "Étape 1"
 msgstr "Bước 1"
@@ -2517,17 +3127,32 @@ msgstr "— Tất cả các cột —"
 msgid "← Retour au fichier"
 msgstr "← Quay lại tệp"
 
+msgid "← Retour à l'historique"
+msgstr "← Quay lại lịch sử"
+
 msgid "⌨️ Raccourcis"
 msgstr "⌨️ Phím tắt"
 
 msgid "⌨️ Raccourcis clavier"
 msgstr "⌨️ Phím tắt bàn phím"
 
+msgid "⏱️ Nettoyages planifiés"
+msgstr "⏱️ Làm sạch theo lịch"
+
+msgid "⏱️ Planifications"
+msgstr "⏱️ Lịch"
+
 msgid "⏳ Fichiers expirés"
 msgstr "⏳ Tệp hết hạn"
 
 msgid "⏳ Nettoyage en cours…"
 msgstr "⏳ Đang làm sạch…"
+
+msgid "♻️ Restaurer"
+msgstr "♻️ Khôi phục"
+
+msgid "⚙️ Opérations communes"
+msgstr "⚙️ Thao tác chung"
 
 msgid "⚙️ Règles de nettoyage personnalisées"
 msgstr "⚙️ Quy tắc làm sạch tùy chỉnh"
@@ -2537,6 +3162,9 @@ msgstr "⚙️ Quy tắc tùy chỉnh"
 
 msgid "⚙️ Régler la durée"
 msgstr "⚙️ Điều chỉnh thời hạn"
+
+msgid "⚠️ Anomalies signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ Bất thường chỉ được báo cáo — không bao giờ tự động sửa đổi."
 
 msgid "⚠️ Points nécessitant une vérification humaine"
 msgstr "⚠️ Điểm cần kiểm tra thủ công"
@@ -2586,8 +3214,14 @@ msgstr "✓ Đã sao chép"
 msgid "➕ Nouveau jeton"
 msgstr "➕ Token mới"
 
+msgid "➕ Nouveau partage"
+msgstr "➕ Chia sẻ mới"
+
 msgid "➕ Nouveau webhook"
 msgstr "➕ Webhook mới"
+
+msgid "➕ Nouvelle planification"
+msgstr "➕ Lịch mới"
 
 msgid "➕ Nouvelle règle"
 msgstr "➕ Quy tắc mới"
@@ -2597,6 +3231,9 @@ msgstr "➕ Tải lên một tệp"
 
 msgid "⬇️ Exporter mes données (JSON)"
 msgstr "⬇️ Xuất dữ liệu của tôi (JSON)"
+
+msgid "⬇️ Télécharger"
+msgstr "⬇️ Tải xuống"
 
 msgid "⬇️ Télécharger le fichier nettoyé"
 msgstr "⬇️ Tải xuống tệp đã làm sạch"
@@ -2627,6 +3264,9 @@ msgstr "👁️ Xem báo cáo"
 
 msgid "👤 Mon profil"
 msgstr "👤 Hồ sơ của tôi"
+
+msgid "📄 Fichiers à nettoyer"
+msgstr "📄 Tệp cần làm sạch"
 
 msgid "📈 Analyse exploratoire"
 msgstr "📈 Phân tích khám phá"
@@ -2664,8 +3304,14 @@ msgstr "📊 Bảng điều khiển"
 msgid "📊 Tableau de bord global"
 msgstr "📊 Bảng điều khiển tổng thể"
 
+msgid "📋 Mes planifications ("
+msgstr "📋 Lịch của tôi ("
+
 msgid "📋 Mes règles ("
 msgstr "📋 Quy tắc của tôi ("
+
+msgid "📋 Partages actifs ("
+msgstr "📋 Chia sẻ đang hoạt động ("
 
 msgid "📋 Qualité des colonnes"
 msgstr "📋 Chất lượng các cột"
@@ -2703,11 +3349,26 @@ msgstr "🔌 API và token truy cập"
 msgid "🔌 Jetons d'API"
 msgstr "🔌 Token API"
 
+msgid "🔍 Aperçu (simulation)"
+msgstr "🔍 Xem trước (mô phỏng)"
+
+msgid "🔍 Aperçu avant / après (simulation)"
+msgstr "🔍 Xem trước trước / sau (mô phỏng)"
+
 msgid "🔍 Avant / après"
 msgstr "🔍 Trước / sau"
 
 msgid "🔍 Comparaison avant / après"
 msgstr "🔍 So sánh trước / sau"
+
+msgid "🔍 Comparer"
+msgstr "🔍 So sánh"
+
+msgid "🔍 Comparer des versions"
+msgstr "🔍 So sánh phiên bản"
+
+msgid "🔍 Comparer deux versions"
+msgstr "🔍 So sánh hai phiên bản"
 
 msgid "🔍 Doublons"
 msgstr "🔍 Trùng lặp"
@@ -2733,6 +3394,9 @@ msgstr "🔎 Giải thích điểm số"
 msgid "🔑 Mes jetons"
 msgstr "🔑 Token của tôi"
 
+msgid "🔑 Votre lien de partage public"
+msgstr "🔑 Liên kết chia sẻ công khai của bạn"
+
 msgid "🔑 Votre nouveau jeton"
 msgstr "🔑 Token mới của bạn"
 
@@ -2747,6 +3411,9 @@ msgstr "🔔 Webhook của tôi"
 
 msgid "🔔 Webhooks"
 msgstr "🔔 Webhook"
+
+msgid "🔗 Partager ce jeu de données"
+msgstr "🔗 Chia sẻ bộ dữ liệu này"
 
 msgid "🔗 Voir mon profil public"
 msgstr "🔗 Xem hồ sơ công khai của tôi"
@@ -2769,8 +3436,17 @@ msgstr "🕓 Hoạt động"
 msgid "🕓 Dernières activités"
 msgstr "🕓 Hoạt động gần đây"
 
+msgid "🕓 Historique des versions"
+msgstr "🕓 Lịch sử phiên bản"
+
 msgid "🕓 Journal d'activité"
 msgstr "🕓 Nhật ký hoạt động"
+
+msgid "🕓 Versions"
+msgstr "🕓 Phiên bản"
+
+msgid "🗂️ Nettoyage par lots"
+msgstr "🗂️ Làm sạch theo lô"
 
 msgid "🗃️ Fichiers récents"
 msgstr "🗃️ Tệp gần đây"
@@ -2796,11 +3472,17 @@ msgstr "🚀 Tính năng mới của không gian pro"
 msgid "🚀 Premier appel"
 msgstr "🚀 Lần gọi đầu tiên"
 
+msgid "🛡️ Rôles et permissions"
+msgstr "🛡️ Vai trò và quyền"
+
 msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
 msgstr "🟢 Giữ dòng thứ 1 (xóa các dòng khác)"
 
 msgid "🟣 Fusionner toutes les lignes"
 msgstr "🟣 Gộp tất cả các dòng"
+
+msgid "🧩 Anomalies structurelles"
+msgstr "🧩 Bất thường cấu trúc"
 
 msgid "🧭 Dimensions les plus fragiles"
 msgstr "🧭 Các chiều mong manh nhất"

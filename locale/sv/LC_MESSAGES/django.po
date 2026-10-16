@@ -16,11 +16,20 @@ msgstr "%(actual)s rättelse(r) i loggen mot %(reported)s rapporterade"
 msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
 msgstr "%(actual)s okänt/okända värde(n) i e-postkolumner mot %(reported)s rapporterade"
 
+msgid "%(count)s anomalie(s) structurelle(s) détectée(s) sur les colonnes."
+msgstr "%(count)s strukturella avvikelse(r) upptäcktes i kolumnerna."
+
 msgid "%(count)s colonnes"
 msgstr "%(count)s kolumner"
 
+msgid "%(count)s doublon(s) exact(s) restant(s)"
+msgstr "%(count)s exakta dubbletter kvar"
+
 msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
 msgstr "%(count)s potentiella dubbletter kräver granskning."
+
+msgid "%(count)s doublon(s) potentiel(s) à vérifier (pénalité réduite)"
+msgstr "%(count)s potentiella dubbletter behöver manuell granskning (minskad straffpoäng)"
 
 msgid "%(count)s entrée(s) d'activité supprimée(s)."
 msgstr "%(count)s poster i aktivitetsloggen togs bort."
@@ -28,35 +37,38 @@ msgstr "%(count)s poster i aktivitetsloggen togs bort."
 msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
 msgstr "%(count)s fel kunde inte korrigeras automatiskt."
 
-msgid "%(count)s exact duplicate(s) remaining"
-msgstr "%(count)s exakta dubbletter kvar"
-
-msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
-msgstr "%(count)s inkonsekventa värden kvar (varken giltiga eller okända)"
+msgid "%(count)s fichier(s) ignoré(s) : lot limité à %(limit)s."
+msgstr "%(count)s fil(er) ignorerade: batchen är begränsad till %(limit)s."
 
 msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
 msgstr "%(count)s ogiltiga e-postadresser finns (icke-tomma och inte okända)"
 
-msgid "%(count)s invalid value(s) among filled data"
-msgstr "%(count)s ogiltiga värden bland ifyllda data"
-
 msgid "%(count)s lignes"
 msgstr "%(count)s rader"
 
-msgid "%(count)s missing value(s)"
-msgstr "%(count)s saknade värden"
-
-msgid "%(count)s non-standard value(s)"
-msgstr "%(count)s icke-standardiserade värden"
-
-msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
-msgstr "%(count)s potentiella dubbletter behöver manuell granskning (minskad straffpoäng)"
-
-msgid "%(count)s unknown value(s) (data unavailable)"
-msgstr "%(count)s okända värden (data saknas)"
+msgid "%(count)s nettoyage(s) lancé(s) en arrière-plan."
+msgstr "%(count)s rensning(ar) startade i bakgrunden."
 
 msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
 msgstr "%(count)s avvikande värde(n) upptäcktes i numeriska kolumner."
+
+msgid "%(count)s valeur(s) d'identifiant dupliquée(s)."
+msgstr "%(count)s dubblerade identifierarvärden."
+
+msgid "%(count)s valeur(s) incohérente(s) restante(s) (ni valide ni inconnue)"
+msgstr "%(count)s inkonsekventa värden kvar (varken giltiga eller okända)"
+
+msgid "%(count)s valeur(s) inconnue(s) (donnée indisponible)"
+msgstr "%(count)s okända värden (data saknas)"
+
+msgid "%(count)s valeur(s) invalide(s) parmi les données renseignées"
+msgstr "%(count)s ogiltiga värden bland ifyllda data"
+
+msgid "%(count)s valeur(s) manquante(s)"
+msgstr "%(count)s saknade värden"
+
+msgid "%(count)s valeur(s) non standard"
+msgstr "%(count)s icke-standardiserade värden"
 
 msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
 msgstr "%(count)s värde(n) är för närvarande ”Okänt”."
@@ -69,28 +81,44 @@ msgstr[1] "%(counter)s möjliga dubbletter upptäcktes. Dessa rader tas <strong>
 msgid "%(counter)s fichier affiché"
 msgid_plural "%(counter)s fichiers affichés"
 msgstr[0] "%(counter)s fil visas"
+msgstr[1] "%(counter)s fil visas"
 
 msgid "%(counter)s inconnu"
 msgid_plural "%(counter)s inconnus"
 msgstr[0] "%(counter)s okänt"
+msgstr[1] "%(counter)s okänt"
 
 msgid "%(counter)s invalide,"
 msgid_plural "%(counter)s invalides,"
 msgstr[0] "%(counter)s ogiltig,"
+msgstr[1] "%(counter)s ogiltig,"
 
 msgid "%(counter)s ligne concernée :"
 msgid_plural "%(counter)s lignes concernées :"
 msgstr[0] "%(counter)s berörd rad:"
+msgstr[1] "%(counter)s berörd rad:"
 
 msgid "%(counter)s valide,"
 msgid_plural "%(counter)s valides,"
 msgstr[0] "%(counter)s giltig,"
+msgstr[1] "%(counter)s giltig,"
+
+msgid "%(numeric)s valeur(s) numérique(s) sur %(total)s renseignée(s) : type hétérogène."
+msgstr "%(numeric)s numeriska värden av %(total)s ifyllda: blandad typ."
 
 msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
 msgstr "%(purged)s fil(er) borttagna, %(archived)s arkiverade."
 
+msgid "%(runs)s exécution"
+msgid_plural "%(runs)s exécutions"
+msgstr[0] "%(runs)s körning"
+msgstr[1] "%(runs)s körning"
+
 msgid "%(score)s / 100  (%(weight)s %(percent)s)"
 msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(total)s valeur(s) aberrante(s) détectée(s) (méthode IQR). Colonnes les plus concernées : %(detail)s."
+msgstr "%(total)s avvikande värde(n) upptäcktes (IQR-metod). Mest berörda kolumner: %(detail)s."
 
 msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
 msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s mot %(expected)s förväntade"
@@ -101,10 +129,15 @@ msgstr "%(value)s %(percent)s"
 msgid "(%(counter)s modification)"
 msgid_plural "(%(counter)s modifications)"
 msgstr[0] "(%(counter)s ändring)"
+msgstr[1] "(%(counter)s ändring)"
 
 msgid "(%(counter)s non-conformité)"
 msgid_plural "(%(counter)s non-conformités)"
 msgstr[0] "(%(counter)s avvikelse)"
+msgstr[1] "(%(counter)s avvikelse)"
+
+msgid "(%(shown)s sur %(total)s)"
+msgstr "(%(shown)s av %(total)s)"
 
 msgid "(colonnes : %(columns)s)"
 msgstr "(kolumner: %(columns)s)"
@@ -199,6 +232,9 @@ msgstr "Administratör"
 msgid "Administration"
 msgstr "Administration"
 
+msgid "Adresse e-mail"
+msgstr "E-postadress"
+
 msgid "Adresse email"
 msgstr "E-postadress"
 
@@ -219,9 +255,6 @@ msgstr "Visa avvikelsedetaljer"
 
 msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
 msgstr "Läggs till i headern X-DataZen-Signature (HMAC-SHA256)."
-
-msgid "All filled values are valid"
-msgstr "Alla ifyllda värden är giltiga"
 
 msgid "Aller au contenu principal"
 msgstr "Gå till huvudinnehåll"
@@ -244,8 +277,20 @@ msgstr "Tidigare värde"
 msgid "Annuler"
 msgstr "Avbryt"
 
+msgid "Anomalie"
+msgstr "Anomali"
+
 msgid "Anomalies restantes (à traiter manuellement)"
 msgstr "Återstående avvikelser (att hantera manuellt)"
+
+msgid "Anomalies structurelles"
+msgstr "Strukturella avvikelser"
+
+msgid "Anomalies structurelles par type"
+msgstr "Strukturella avvikelser per typ"
+
+msgid "Anonymisation"
+msgstr "Anonymisering"
 
 msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
 msgstr "Anonymisering av känsliga uppgifter (%(count)s värden pseudonymiserade)"
@@ -259,8 +304,26 @@ msgstr "Anonymisera känsliga uppgifter (namn, e-post, telefonnummer)"
 msgid "Antananarivo, Madagascar"
 msgstr "Antananarivo, Madagascar"
 
+msgid "Aperçu"
+msgstr "Förhandsgranskning"
+
+msgid "Aperçu calculé : aucune modification n'a été enregistrée. Confirmez pour appliquer le nettoyage."
+msgstr "Förhandsgranskning beräknad: ingen ändring har sparats. Bekräfta för att tillämpa rensningen."
+
+msgid "Aperçu de nettoyage sur « %(name)s »"
+msgstr "Rensningsförhandsgranskning av ”%(name)s”"
+
+msgid "Aperçu des données"
+msgstr "Förhandsgranskning av data"
+
 msgid "Aperçu du fichier nettoyé"
 msgstr "Förhandsgranskning av den rensade filen"
+
+msgid "Aperçu limité à %(shown)s lignes sur %(total)s."
+msgstr "Förhandsgranskningen är begränsad till %(shown)s av %(total)s rader."
+
+msgid "Aplatissement"
+msgstr "Kurtosis"
 
 msgid "Appel API"
 msgstr "API-anrop"
@@ -268,11 +331,20 @@ msgstr "API-anrop"
 msgid "Appel API : %(path)s"
 msgstr "API-anrop: %(path)s"
 
+msgid "Appelez-la depuis un planificateur système (cron, Planificateur de tâches Windows) toutes les cinq minutes."
+msgstr "Anropa den från en systemschemaläggare (cron, Windows Aktivitetshanteraren) var femte minut."
+
 msgid "Appels"
 msgstr "Anrop"
 
 msgid "Application"
 msgstr "Applikation"
+
+msgid "Appliquer"
+msgstr "Verkställ"
+
+msgid "Appliquez les mêmes opérations à plusieurs jeux de données en une seule fois. Les fichiers sont traités en série, un à la fois."
+msgstr "Tillämpa samma åtgärder på flera datamängder på en gång. Filerna bearbetas i serie, en i taget."
 
 msgid "Après"
 msgstr "Efter"
@@ -291,6 +363,21 @@ msgstr "Arkiv"
 
 msgid "Archivés"
 msgstr "Arkiverade"
+
+msgid "Asymétrie"
+msgstr "Snedhet"
+
+msgid "Asymétrie et aplatissement (moments centrés) des colonnes numériques."
+msgstr "Skevhet och kurtosis (centralmoment) för de numeriska kolumnerna."
+
+msgid "Aucun compte ne correspond à cette recherche."
+msgstr "Inget konto matchar den här sökningen."
+
+msgid "Aucun doublon exact"
+msgstr "Inga exakta dubbletter"
+
+msgid "Aucun doublon potentiel"
+msgstr "Inga potentiella dubbletter"
 
 msgid "Aucun fichier d'origine n'est disponible."
 msgstr "Ingen originalfil är tillgänglig."
@@ -325,6 +412,12 @@ msgstr "Ingen graf är tillgänglig för denna datauppsättning: den innehåller
 msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
 msgstr "Inga token ännu. Skapa en för att använda API:et."
 
+msgid "Aucun jeu de données disponible pour le moment."
+msgstr "Ingen datamängd är tillgänglig just nu."
+
+msgid "Aucun jeu de données pour le moment."
+msgstr "Ingen datamängd just nu."
+
 msgid "Aucun journal des modifications n'est disponible."
 msgstr "Ingen ändringslogg är tillgänglig."
 
@@ -349,6 +442,9 @@ msgstr "Ingen aktivitet registrerad."
 msgid "Aucune anomalie restante."
 msgstr "Inga återstående avvikelser."
 
+msgid "Aucune anomalie structurelle détectée."
+msgstr "Ingen strukturell avvikelse upptäcktes."
+
 msgid "Aucune anomalie."
 msgstr "Inga avvikelser."
 
@@ -357,6 +453,9 @@ msgstr "Inga kolumner"
 
 msgid "Aucune correction"
 msgstr "Inga korrigeringar"
+
+msgid "Aucune correction de valeur ne serait nécessaire."
+msgstr "Ingen värdekorrigering skulle behövas."
 
 msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
 msgstr "Ingen märkbar skillnad mellan originalfilen och den rensade filen: dina data var redan rena."
@@ -373,6 +472,18 @@ msgstr "Inga rensade data tillgängliga."
 msgid "Aucune modification enregistrée."
 msgstr "Inga ändringar sparade."
 
+msgid "Aucune opération enregistrée pour cette version."
+msgstr "Ingen åtgärd registrerad för den här versionen."
+
+msgid "Aucune opération enregistrée."
+msgstr "Ingen åtgärd registrerad."
+
+msgid "Aucune opération."
+msgstr "Ingen åtgärd."
+
+msgid "Aucune planification : programmez un nettoyage récurrent pour ne plus y penser."
+msgstr "Inga scheman än: ställ in en återkommande rensning och slipp tänka på det."
+
 msgid "Aucune règle personnalisée."
 msgstr "Ingen anpassad regel."
 
@@ -382,8 +493,17 @@ msgstr "Inga regler ännu. Skapa en för att återanvända den på alla dina fil
 msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
 msgstr "Inga avvikande värden hittades i de numeriska kolumnerna."
 
+msgid "Aucune valeur manquante ou inconnue"
+msgstr "Inga saknade eller okända värden"
+
+msgid "Aucune valeur renseignée sur %(rows)s ligne(s)."
+msgstr "Inget värde ifyllt i %(rows)s rad(er)."
+
 msgid "Aucune valeur « Inconnu »."
 msgstr "Inget ”Okänt”-värde."
+
+msgid "Aucune version enregistrée : lancez un nettoyage pour en créer une."
+msgstr "Ingen version registrerad än: kör en rensning för att skapa en."
 
 msgid "Audit des emails"
 msgstr "E-postgranskning"
@@ -451,8 +571,20 @@ msgstr "Standardisering av markören ”Okänt” (%(count)s korrigerade)"
 msgid "Capturer"
 msgstr "Fånga"
 
+msgid "Casse"
+msgstr "Skiftläge"
+
+msgid "Catégorie"
+msgstr "Kategori"
+
 msgid "Ce graphique n'est pas disponible pour ce jeu de données."
 msgstr "Detta diagram är inte tillgängligt för denna datauppsättning."
+
+msgid "Ce jeu de données n'est partagé avec personne pour le moment."
+msgstr "Den här datamängden är ännu inte delad med någon."
+
+msgid "Ce lien de partage est invalide ou a expiré."
+msgstr "Den här delningslänken är ogiltig eller har gått ut."
 
 msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
 msgstr "Denna återställningslänk har redan använts eller har gått ut."
@@ -460,11 +592,20 @@ msgstr "Denna återställningslänk har redan använts eller har gått ut."
 msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
 msgstr "Denna länk är giltig endast en gång. Om du inte ligger bakom begäran kan du bara ignorera meddelandet: ditt lösenord förblir oförändrat. — DataZen"
 
+msgid "Ce lien ne permet pas le téléchargement."
+msgstr "Den här länken tillåter inte nedladdning."
+
+msgid "Ce partage ne permet pas le téléchargement."
+msgstr "Den här delningen tillåter inte nedladdning."
+
 msgid "Ce profil n'est pas public."
 msgstr "Denna profil är inte offentlig."
 
 msgid "Ce que le nettoyage a réellement changé dans votre fichier."
 msgstr "Vad rensningen faktiskt ändrade i din fil."
+
+msgid "Ce que permet chaque rôle"
+msgstr "Vad varje roll tillåter"
 
 msgid "Cellules manquantes"
 msgstr "Saknade celler"
@@ -474,6 +615,12 @@ msgstr "Dessa %(count)s fil(er) överskrider bevarandetiden på %(days)s dagar. 
 
 msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
 msgstr "Dessa räknare matar den globala sökningen och genvägarna nedan."
+
+msgid "Ces deux versions sont identiques sur les indicateurs suivis."
+msgstr "De här två versionerna är identiska på de följda indikatorerna."
+
+msgid "Cette page est réservée aux administrateurs."
+msgstr "Den här sidan är reserverad för administratörer."
 
 msgid "Champ"
 msgstr "Fält"
@@ -499,6 +646,12 @@ msgstr "Byt lösenord"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Byt lösenord — DataZen"
 
+msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
+msgstr "Varje konto har en roll: läsare, redigerare eller administratör. Kontrollen sker på servern, inte bara i gränssnittet."
+
+msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
+msgstr "Varje lyckad rensning fryser en version: du kan hämta, jämföra och rulla tillbaka den."
+
 msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
 msgstr "Ladda dina data i formatet <code>.csv</code>, <code>.xlsx</code> eller <code>.xls</code>, oavsett avgränsare."
 
@@ -507,6 +660,12 @@ msgstr "Välj webbplatsens språk"
 
 msgid "Choisir le format"
 msgstr "Välj format"
+
+msgid "Choisissez deux versions pour mesurer ce qui a réellement changé entre elles."
+msgstr "Välj två versioner för att mäta vad som faktiskt ändrades mellan dem."
+
+msgid "Choisissez un destinataire ou cochez « Créer un lien public »."
+msgstr "Välj en mottagare eller markera ”Skapa en offentlig länk”."
 
 msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
 msgstr "Välj en CSV- eller Excel-fil (.csv, .xlsx, .xls)."
@@ -547,6 +706,9 @@ msgstr "Språkkod (fr, en, es…). Tomt = applikationens språk."
 msgid "Coefficient de Pearson"
 msgstr "Pearsonkoefficient"
 
+msgid "Collaboration"
+msgstr "Samarbete"
+
 msgid "Colonne"
 msgstr "Kolumn"
 
@@ -555,6 +717,15 @@ msgstr "Målkolumn"
 
 msgid "Colonne clé pour la déduplication"
 msgstr "Nyckelkolumn för deduplicering"
+
+msgid "Colonne constante"
+msgstr "Konstant kolumn"
+
+msgid "Colonne quasi constante"
+msgstr "Nästan konstant kolumn"
+
+msgid "Colonne vide"
+msgstr "Tom kolumn"
 
 msgid "Colonnes"
 msgstr "Kolumner"
@@ -580,17 +751,29 @@ msgstr "Okända kolumner:"
 msgid "Colonnes stables"
 msgstr "Stabila kolumner"
 
+msgid "Colonnes vides, constantes, quasi constantes ou à type hétérogène."
+msgstr "Tomma, konstanta, nästan konstanta eller blandtypade kolumner."
+
 msgid "Colonnes à vérifier"
 msgstr "Kolumner att granska"
 
 msgid "Combien de fichiers se trouvent dans chaque tranche de score."
 msgstr "Hur många filer som ligger i varje poängintervall."
 
+msgid "Comment les échéances sont-elles exécutées ?"
+msgstr "Hur körs förfallodatum?"
+
 msgid "Comparaison"
 msgstr "Jämförelse"
 
 msgid "Comparaison avant / après — %(name)s"
 msgstr "Jämförelse före / efter — %(name)s"
+
+msgid "Comparaison de versions — %(name)s"
+msgstr "Versionsjämförelse — %(name)s"
+
+msgid "Comparer"
+msgstr "Jämför"
 
 msgid "Complétion du profil"
 msgstr "Profilens fullständighet"
@@ -613,6 +796,9 @@ msgstr "Konto"
 msgid "Compte actif"
 msgstr "Aktivt konto"
 
+msgid "Comptes ("
+msgstr "Konton ("
+
 msgid "Condensé"
 msgstr "Sammanfattning"
 
@@ -621,6 +807,9 @@ msgstr "Förtroende"
 
 msgid "Confirmer la décision"
 msgstr "Bekräfta beslut"
+
+msgid "Confirmer le nettoyage"
+msgstr "Bekräfta rensning"
 
 msgid "Connectez-vous pour retrouver vos fichiers."
 msgstr "Logga in för att komma tillbaka till dina filer."
@@ -631,11 +820,20 @@ msgstr "Logga in"
 msgid "Connexion — DataZen"
 msgstr "Logga in — DataZen"
 
+msgid "Consultation"
+msgstr "Visning"
+
 msgid "Consultation des graphiques"
 msgstr "Visa diagram"
 
 msgid "Consultation du rapport"
 msgstr "Visa rapport"
+
+msgid "Consultation et téléchargement"
+msgstr "Visning och nedladdning"
+
+msgid "Consulte et télécharge les jeux de données partagés. Ne modifie rien."
+msgstr "Visar och hämtar delade datamängder. Ändrar ingenting."
 
 msgid "Continuer / valider une étape"
 msgstr "Fortsätt / bekräfta ett steg"
@@ -691,11 +889,17 @@ msgstr "Skapa regeln"
 msgid "Créer le jeton"
 msgstr "Skapa token"
 
+msgid "Créer le partage"
+msgstr "Skapa delningen"
+
 msgid "Créer le webhook"
 msgstr "Skapa webhook"
 
 msgid "Créer un compte"
 msgstr "Skapa ett konto"
+
+msgid "Créer un lien public"
+msgstr "Skapa en offentlig länk"
 
 msgid "Créer une règle"
 msgstr "Skapa en regel"
@@ -706,8 +910,14 @@ msgstr "Skapa en regel en gång och återanvänd den på alla dina filer."
 msgid "Créez votre compte"
 msgstr "Skapa ditt konto"
 
-msgid "Data is consistent: each value is valid or unknown"
-msgstr "Data är konsekventa: varje värde är giltigt eller okänt"
+msgid "Créé par"
+msgstr "Skapad av"
+
+msgid "Créée par"
+msgstr "Skapad av"
+
+msgid "DataZen ne fait tourner aucun démon en arrière-plan : une commande de gestion reprend les échéances dues et relance le nettoyage par le même chemin de code que l'interface."
+msgstr "DataZen kör ingen bakgrundsdaemon: ett hanteringskommando plockar upp förfallna scheman och startar om rensningen via samma kodväg som gränssnittet."
 
 msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
 msgstr "DataZen — Applikation för datarensning (DataClean Pro) · ©"
@@ -739,14 +949,26 @@ msgstr "Senaste HTTP-kod"
 msgid "Dernier déclenchement"
 msgstr "Senaste utlösning"
 
+msgid "Dernier statut"
+msgstr "Senaste status"
+
 msgid "Dernier usage"
 msgstr "Senaste användning"
 
 msgid "Derniers fichiers"
 msgstr "Senaste filer"
 
+msgid "Dernière : succès"
+msgstr "Senaste: lyckad"
+
+msgid "Dernière : échec"
+msgstr "Senaste: misslyckad"
+
 msgid "Dernière connexion"
 msgstr "Senaste inloggning"
+
+msgid "Dernière exécution"
+msgstr "Senaste körning"
 
 msgid "Dernière utilisation"
 msgstr "Senaste användning"
@@ -757,6 +979,9 @@ msgstr "Senaste regler"
 msgid "Des incohérences ont été détectées entre les statistiques et les données."
 msgstr "Inkonsekvenser har upptäckts mellan statistiken och data."
 
+msgid "Destinataire"
+msgstr "Mottagare"
+
 msgid "Dimension"
 msgstr "Dimension"
 
@@ -766,6 +991,12 @@ msgstr "Kvalitetsdimensioner"
 msgid "Dispersion et valeurs extrêmes des colonnes numériques."
 msgstr "Spridning och extremvärden i numeriska kolumner."
 
+msgid "Distribution la plus asymétrique : « %(colonne)s » (asymétrie %(valeur)s) — moyenne et médiane s'écartent sensiblement, une transformation ou un traitement par quantiles est à envisager."
+msgstr "Mest skeva fördelning: ”%(colonne)s” (skevhet %(valeur)s) — medelvärde och median skiljer sig märkbart; överväg en transformering eller kvantilbehandling."
+
+msgid "Distribution la plus concentrée/pointue : « %(colonne)s » (aplatissement %(valeur)s) — forte densité autour de la moyenne avec des valeurs extrêmes marquées."
+msgstr "Mest spetsig fördelning: ”%(colonne)s” (kurtosis %(valeur)s) — hög täthet kring medelvärdet med tydliga extremvärden."
+
 msgid "Distributions des colonnes numériques"
 msgstr "Fördelningar för numeriska kolumner"
 
@@ -774,6 +1005,12 @@ msgstr "Numeriska fördelningar"
 
 msgid "Django · Pandas · Bootstrap"
 msgstr "Django · Pandas · Bootstrap"
+
+msgid "Données cohérentes : chaque valeur est valide ou inconnue"
+msgstr "Data är konsekventa: varje värde är giltigt eller okänt"
+
+msgid "Doublon"
+msgstr "Dubblett"
 
 msgid "Doublon par similarité"
 msgstr "Dubblett efter likhet"
@@ -817,6 +1054,12 @@ msgstr "Dubbletter, överflödiga blanksteg, felaktiga e-postadresser, inkonsekv
 msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
 msgstr "Dubbletter, saknade värden, blanksteg, versaler/gemener, e-post, telefonnummer, datum och löner normaliserade."
 
+msgid "Droit"
+msgstr "Behörighet"
+
+msgid "Droit accordé"
+msgstr "Beviljad behörighet"
+
 msgid "Durée de conservation"
 msgstr "Bevarandetid"
 
@@ -856,8 +1099,17 @@ msgstr "Rensa"
 msgid "Effectif"
 msgstr "Antal"
 
+msgid "Email"
+msgstr "E-post"
+
+msgid "Email fictif"
+msgstr "Fiktiv e-post"
+
 msgid "Email invalide"
-msgstr "Ogiltig e-postadress"
+msgstr "Ogiltig e-post"
+
+msgid "Email manquant"
+msgstr "Saknad e-post"
 
 msgid "Email nettoyé"
 msgstr "Rensad e-post"
@@ -928,8 +1180,14 @@ msgstr "Återstående fel"
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
 
+msgid "Exemples de corrections"
+msgstr "Exempel på korrigeringar"
+
 msgid "Expiration"
 msgstr "Utgång"
+
+msgid "Expire le"
+msgstr "Går ut"
 
 msgid "Expiré"
 msgstr "Utgången"
@@ -939,6 +1197,12 @@ msgstr "Förklaring av poäng"
 
 msgid "Export & traçabilité"
 msgstr "Export & spårbarhet"
+
+msgid "Exécuter"
+msgstr "Kör"
+
+msgid "Exécutions"
+msgstr "Körningar"
 
 msgid "Fermer"
 msgstr "Stäng"
@@ -997,6 +1261,9 @@ msgstr "Rensade filer äldre än denna tid (0 = obegränsat bevarande)."
 msgid "Fichiers récents"
 msgstr "Senaste filer"
 
+msgid "Fichiers à nettoyer"
+msgstr "Filer att rensa"
+
 msgid "Fil d'Ariane"
 msgstr "Brödsmulor"
 
@@ -1030,8 +1297,17 @@ msgstr "Godkända format: <code>.csv</code>, <code>.xlsx</code>, <code>.xls</cod
 msgid "Formats de dates (%(column)s) :"
 msgstr "Datumformat (%(column)s):"
 
-msgid "Formats standardized (phones, dates)"
+msgid "Formats standardisés (téléphones, dates)"
 msgstr "Standardiserade format (telefonnummer, datum)"
+
+msgid "Forme des distributions"
+msgstr "Fördelningarnas form"
+
+msgid "Forme des distributions (asymétrie et aplatissement)"
+msgstr "Fördelningarnas form (skevhet och kurtosis)"
+
+msgid "Fréquence"
+msgstr "Frekvens"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Spara tid: allt som betyder något i DataZen ligger på en tangentkombination."
@@ -1051,14 +1327,23 @@ msgstr "Statistiska diagram genererade med <strong>matplotlib</strong> och <stro
 msgid "Gratuit, immédiat, et vos fichiers restent privés."
 msgstr "Gratis, omedelbart och dina filer förblir privata."
 
+msgid "Gère les rôles et voit l'ensemble des fichiers de la plateforme."
+msgstr "Hanterar roller och ser alla filer på plattformen."
+
 msgid "Gérer les règles…"
 msgstr "Hantera regler…"
+
+msgid "Hebdomadaire"
+msgstr "Veckovis"
 
 msgid "Histogrammes des colonnes numériques détectées."
 msgstr "Histogram över upptäckta numeriska kolumner."
 
 msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
 msgstr "Tidsstämplad historik över dina åtgärder: uppladdningar, rensningar, exporter, API."
+
+msgid "Identifiant non unique"
+msgstr "Icke-unik identifierare"
 
 msgid "Identité"
 msgstr "Identitet"
@@ -1072,6 +1357,9 @@ msgstr "Import av CSV & Excel"
 msgid "Impossible d'appliquer la décision : %(error)s"
 msgstr "Det gick inte att tillämpa beslutet: %(error)s"
 
+msgid "Impossible de comparer ces versions : %(error)s"
+msgstr "Det går inte att jämföra dessa versioner: %(error)s"
+
 msgid "Impossible de convertir le fichier : %(error)s"
 msgstr "Det gick inte att konvertera filen: %(error)s"
 
@@ -1079,13 +1367,16 @@ msgid "Impossible de générer le PDF : %(error)s"
 msgstr "Kunde inte skapa PDF: %(error)s"
 
 msgid "Impossible de lire ce fichier : %(error)s"
-msgstr "Det gick inte att läsa denna fil: %(error)s"
+msgstr "Det går inte att läsa filen: %(error)s"
 
 msgid "Impossible de lire le fichier : %(error)s"
 msgstr "Det gick inte att läsa filen: %(error)s"
 
 msgid "Impossible de lire le rapport : %(error)s"
 msgstr "Det gick inte att läsa rapporten: %(error)s"
+
+msgid "Impossible de simuler le nettoyage : le fichier est illisible."
+msgstr "Det går inte att simulera rensningen: filen kan inte läsas."
 
 msgid "Inactif"
 msgstr "Inaktiv"
@@ -1098,6 +1389,9 @@ msgstr "Okänt"
 
 msgid "Indicateur"
 msgstr "Indikator"
+
+msgid "Indicateurs"
+msgstr "Indikatorer"
 
 msgid "Indicateurs comparés"
 msgstr "Jämförda indikatorer"
@@ -1141,6 +1435,9 @@ msgstr "Token skapad. Kopiera nu: den visas inte igen."
 msgid "Jeton d'API"
 msgstr "API-token"
 
+msgid "Jeton du lien"
+msgstr "Länktoken"
+
 msgid "Jeton « %(name)s » révoqué."
 msgstr "Token « %(name)s » återkallad."
 
@@ -1149,6 +1446,12 @@ msgstr "Token"
 
 msgid "Jetons d'API"
 msgstr "API-token"
+
+msgid "Jeu de données"
+msgstr "Datamängd"
+
+msgid "Jeu de données partagé en lecture seule via un lien DataZen."
+msgstr "Datamängd delad skrivskyddat via en DataZen-länk."
 
 msgid "Journal d'activité"
 msgstr "Aktivitetslogg"
@@ -1177,8 +1480,17 @@ msgstr "Om du tar bort kontot raderas dina filer, dina regler och din profil per
 msgid "Laisser vide pour appliquer à toutes les colonnes."
 msgstr "Lämna tomt för att tillämpa på alla kolumner."
 
+msgid "Laissez vide pour démarrer à la prochaine échéance."
+msgstr "Lämna tomt för att starta vid nästa förfallodatum."
+
 msgid "Laissez vide pour un jeton sans expiration."
 msgstr "Lämna tomt för en token utan utgång."
+
+msgid "Laissez vide pour un partage sans expiration."
+msgstr "Lämna tomt för en delning utan utgång."
+
+msgid "Lancer le nettoyage des fichiers sélectionnés"
+msgstr "Starta rensning av de valda filerna"
 
 msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
 msgstr "Kör först en rensning för att komma åt den explorativa analysen."
@@ -1191,6 +1503,9 @@ msgstr "Gränssnittets språk"
 
 msgid "Le compte « %(username)s » a été supprimé."
 msgstr "Kontot ”%(username)s” har tagits bort."
+
+msgid "Le fichier de cette version n'est plus disponible."
+msgstr "Filen för den här versionen är inte längre tillgänglig."
 
 msgid "Le fichier ne doit pas dépasser 20 Mo."
 msgstr "Filen får inte överstiga 20 MB."
@@ -1210,6 +1525,9 @@ msgstr "Webhookens värdnamn pekar på en intern adress."
 msgid "Le nom d'hôte est absent de l'URL."
 msgstr "Värdnamnet saknas i URL:en."
 
+msgid "Le partage est toujours en lecture seule : le destinataire consulte et, si vous l'autorisez, télécharge. Il ne modifie jamais vos données."
+msgstr "Delning är alltid skrivskyddad: mottagaren visar och, om du tillåter det, hämtar. Hen ändrar aldrig dina data."
+
 msgid "Le port est invalide."
 msgstr "Porten är ogiltig."
 
@@ -1218,6 +1536,12 @@ msgstr "Temat ”System” följer enhetens inställningar."
 
 msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
 msgstr "Bearbetningen körs i bakgrunden. Den här sidan uppdateras automatiskt när den är klar."
+
+msgid "Lecteur"
+msgstr "Läsare"
+
+msgid "Lecteur : consultation et téléchargement. Éditeur : peut aussi nettoyer et supprimer ses fichiers. Administrateur : gère les rôles et voit tous les fichiers."
+msgstr "Läsare: visa och hämta. Redigerare: kan även rensa och ta bort egna filer. Administratör: hanterar roller och ser alla filer."
 
 msgid "Les adresses internes sont refusées."
 msgstr "Interna adresser avvisas."
@@ -1243,14 +1567,23 @@ msgstr "Rensade filer arkiveras och tas sedan bort efter denna tid (0 = obegrän
 msgid "Les identifiants intégrés à l'URL sont refusés."
 msgstr "Inloggningsuppgifter inbäddade i URL:en avvisas."
 
+msgid "Les options choisies ne changeraient rien à ce jeu de données."
+msgstr "De valda alternativen skulle inte ändra denna datauppsättning."
+
 msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 msgstr "Tillgängliga rutter: /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 
 msgid "Les statistiques affichées correspondent aux données réelles."
 msgstr "Statistiken som visas motsvarar de faktiska data."
 
+msgid "Lien de partage public"
+msgstr "Offentlig delningslänk"
+
 msgid "Lien invalide"
 msgstr "Ogiltig länk"
+
+msgid "Lien public"
+msgstr "Offentlig länk"
 
 msgid "Ligne"
 msgstr "Rad"
@@ -1293,6 +1626,9 @@ msgstr "Ta kontroll över dina datas livscykel."
 
 msgid "Membre depuis"
 msgstr "Medlem sedan"
+
+msgid "Mensuel"
+msgstr "Månadsvis"
 
 msgid "Mes règles"
 msgstr "Mina regler"
@@ -1375,6 +1711,18 @@ msgstr "Rensning startad i bakgrunden. Sidan uppdateras automatiskt."
 msgid "Nettoyage lancé sur « %(name)s »"
 msgstr "Rensning startad för « %(name)s »"
 
+msgid "Nettoyage par lots"
+msgstr "Batchrensning"
+
+msgid "Nettoyage par lots : %(count)s fichier(s) lancé(s)"
+msgstr "Batchrensning: %(count)s fil(er) startade"
+
+msgid "Nettoyage par lots — DataZen"
+msgstr "Batchrensning — DataZen"
+
+msgid "Nettoyage planifié de « %(name)s » lancé."
+msgstr "Schemalagd rensning av ”%(name)s” startad."
+
 msgid "Nettoyage terminé"
 msgstr "Rensning klar"
 
@@ -1402,20 +1750,14 @@ msgstr "Rensade"
 msgid "Niveau"
 msgstr "Nivå"
 
-msgid "No exact duplicates"
-msgstr "Inga exakta dubbletter"
-
-msgid "No missing or unknown values"
-msgstr "Inga saknade eller okända värden"
-
-msgid "No potential duplicates"
-msgstr "Inga potentiella dubbletter"
-
 msgid "Nom"
 msgstr "Namn"
 
 msgid "Nom d'utilisateur"
 msgstr "Användarnamn"
+
+msgid "Nom de la colonne unique (ex. email). Laissez vide pour ne supprimer que les lignes 100 % identiques. Une colonne absente d'un fichier est ignorée pour ce fichier."
+msgstr "Namnet på den unika kolumnen (t.ex. email). Lämna tomt för att bara ta bort 100% identiska rader. En kolumn som saknas i en fil ignoreras för den filen."
 
 msgid "Nom de la règle"
 msgstr "Regelnamn"
@@ -1431,6 +1773,9 @@ msgstr "Antal anrop"
 
 msgid "Nombre d'occurrences"
 msgstr "Antal förekomster"
+
+msgid "Nombre de colonnes concernées"
+msgstr "Antal berörda kolumner"
 
 msgid "Nombre de nettoyages et score moyen par semaine."
 msgstr "Antal rensningar och medelpoäng per vecka."
@@ -1498,11 +1843,29 @@ msgstr "Ny bild klar"
 msgid "Nouvelle valeur"
 msgstr "Nytt värde"
 
+msgid "Numérique"
+msgstr "Numerisk"
+
+msgid "Numéro de version"
+msgstr "Versionsnummer"
+
+msgid "Options de nettoyage"
+msgstr "Rensningsalternativ"
+
 msgid "Opération"
 msgstr "Åtgärd"
 
+msgid "Opérations appliquées"
+msgstr "Tillämpade åtgärder"
+
 msgid "Opérations de nettoyage"
 msgstr "Rensningsåtgärder"
+
+msgid "Opérations de v%(n)s"
+msgstr "Åtgärder i v%(n)s"
+
+msgid "Opérations qui seraient appliquées"
+msgstr "Åtgärder som skulle tillämpas"
 
 msgid "Organisation"
 msgstr "Organisation"
@@ -1528,6 +1891,27 @@ msgstr "Sida"
 msgid "Parcourir…"
 msgstr "Välj fil"
 
+msgid "Partage"
+msgstr "Delning"
+
+msgid "Partage créé."
+msgstr "Delning skapad."
+
+msgid "Partage de « %(name)s » avec %(target)s"
+msgstr "Delning av ”%(name)s” med %(target)s"
+
+msgid "Partage révoqué."
+msgstr "Delning återkallad."
+
+msgid "Partage — %(name)s"
+msgstr "Delning — %(name)s"
+
+msgid "Partages"
+msgstr "Delningar"
+
+msgid "Partagé le"
+msgstr "Delad den"
+
 msgid "Pas encore de compte ?"
 msgstr "Har du inget konto än?"
 
@@ -1542,6 +1926,27 @@ msgstr "Profilbild"
 
 msgid "Pilotage"
 msgstr "Styrning"
+
+msgid "Planification"
+msgstr "Schema"
+
+msgid "Planification %(state)s."
+msgstr "Schema %(state)s."
+
+msgid "Planification créée pour « %(name)s »"
+msgstr "Schema skapat för ”%(name)s”"
+
+msgid "Planification créée."
+msgstr "Schema skapat."
+
+msgid "Planification supprimée."
+msgstr "Schema borttaget."
+
+msgid "Planifications"
+msgstr "Scheman"
+
+msgid "Planifications — DataZen"
+msgstr "Scheman — DataZen"
 
 msgid "Plus fréquent"
 msgstr "Vanligast"
@@ -1558,10 +1963,16 @@ msgstr "Viktning"
 msgid "Premier quartile"
 msgstr "Första kvartilen"
 
+msgid "Première exécution"
+msgstr "Första körningen"
+
 msgid "Prendre une photo avec la caméra"
 msgstr "Ta en bild med kameran"
 
 msgid "Problème"
+msgstr "Problem"
+
+msgid "Problèmes"
 msgstr "Problem"
 
 msgid "Problèmes après"
@@ -1575,6 +1986,9 @@ msgstr "Upptäckta problem"
 
 msgid "Problèmes restants"
 msgstr "Återstående problem"
+
+msgid "Prochaine exécution"
+msgstr "Nästa körning"
 
 msgid "Productivité"
 msgstr "Produktivitet"
@@ -1594,8 +2008,17 @@ msgstr "Offentlig profil"
 msgid "Profil visible publiquement"
 msgstr "Profil synlig offentligt"
 
+msgid "Profilage statistique"
+msgstr "Statistisk profilering"
+
 msgid "Profils"
 msgstr "Profiler"
+
+msgid "Programmer"
+msgstr "Schemalägg"
+
+msgid "Programmez un nettoyage récurrent : les mêmes options s'appliquent à chaque échéance, sans intervention de votre part."
+msgstr "Schemalägg en återkommande rensning: samma alternativ gäller vid varje förfallodatum, utan din inblandning."
 
 msgid "Progression"
 msgstr "Framsteg"
@@ -1642,6 +2065,9 @@ msgstr "Q1"
 msgid "Q3"
 msgstr "Q3"
 
+msgid "Qualité : v%(before)s → v%(after)s"
+msgstr "Kvalitet: v%(before)s → v%(after)s"
+
 msgid "Qualité moyenne"
 msgstr "Medelkvalitet"
 
@@ -1650,6 +2076,9 @@ msgstr "Kvalitet per kolumn"
 
 msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
 msgstr "Några ord om dig, ditt team, dina datauppsättningar…"
+
+msgid "Quotidien"
+msgstr "Dagligen"
 
 msgid "Raccourcis clavier"
 msgstr "Tangentbordsgenvägar"
@@ -1708,6 +2137,12 @@ msgstr "Sök"
 msgid "Rechercher (Ctrl+K)"
 msgstr "Sök (Ctrl+K)"
 
+msgid "Rechercher un compte"
+msgstr "Sök ett konto"
+
+msgid "Rechercher un compte…"
+msgstr "Sök ett konto…"
+
 msgid "Rechercher un fichier"
 msgstr "Sök en fil"
 
@@ -1750,11 +2185,20 @@ msgstr "Rapporterat %(reported)s mot omräknat %(actual)s"
 msgid "Restauration"
 msgstr "Återställning"
 
+msgid "Restauration de la version %(number)s de « %(name)s »"
+msgstr "Återställer version %(number)s av ”%(name)s”"
+
 msgid "Restauration de « %(name)s »"
 msgstr "Återställning av « %(name)s »"
 
+msgid "Restauration impossible : %(error)s"
+msgstr "Återställning misslyckades: %(error)s"
+
 msgid "Restaurer"
 msgstr "Återställ"
+
+msgid "Restaurer cette version comme version courante ?"
+msgstr "Återställa den här versionen som aktuell version?"
 
 msgid "Retour à la connexion"
 msgstr "Tillbaka till inloggningen"
@@ -1777,6 +2221,9 @@ msgstr "Regeln ”%(name)s” togs bort."
 msgid "Règles"
 msgstr "Regler"
 
+msgid "Règles appliquées"
+msgstr "Tillämpade regler"
+
 msgid "Règles de nettoyage"
 msgstr "Rensningsregler"
 
@@ -1797,6 +2244,9 @@ msgstr "Fördelning av problem"
 
 msgid "Répartition des problèmes restants"
 msgstr "Fördelning av kvarvarande problem"
+
+msgid "Résultat de la simulation : rien n'a été écrit. Confirmez le nettoyage pour appliquer réellement ces changements."
+msgstr "Simuleringsresultat: inget skrevs. Bekräfta rensningen för att faktiskt tillämpa dessa ändringar."
 
 msgid "Résultats"
 msgstr "Resultat"
@@ -1822,8 +2272,32 @@ msgstr "Återkalla"
 msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
 msgstr "Återkalla denna token? Integrationer som använder den slutar fungera."
 
+msgid "Révoquer ce partage ?"
+msgstr "Återkalla den här delningen?"
+
 msgid "Révoqué"
 msgstr "Återkallad"
+
+msgid "Rôle"
+msgstr "Roll"
+
+msgid "Rôle de « %(name)s » : %(before)s → %(after)s"
+msgstr "Roll för ”%(name)s”: %(before)s → %(after)s"
+
+msgid "Rôle de « %(name)s » mis à jour."
+msgstr "Rollen för ”%(name)s” uppdaterad."
+
+msgid "Rôle du compte"
+msgstr "Kontots roll"
+
+msgid "Rôle inconnu."
+msgstr "Okänd roll."
+
+msgid "Rôles et permissions"
+msgstr "Roller och behörigheter"
+
+msgid "Rôles et permissions — DataZen"
+msgstr "Roller och behörigheter — DataZen"
 
 msgid "S'inscrire"
 msgstr "Registrera dig"
@@ -1834,8 +2308,14 @@ msgstr "Ange <strong>%(username)s</strong> för att bekräfta"
 msgid "Score"
 msgstr "Poäng"
 
+msgid "Score après"
+msgstr "Poäng efter"
+
 msgid "Score après nettoyage"
 msgstr "Poäng efter rensning"
+
+msgid "Score avant"
+msgstr "Poäng före"
 
 msgid "Score avant nettoyage"
 msgstr "Poäng före rensning"
@@ -1864,6 +2344,9 @@ msgstr "Kvalitetspoäng efter"
 msgid "Score qualité avant"
 msgstr "Kvalitetspoäng före"
 
+msgid "Scores mesurés lors de chaque nettoyage."
+msgstr "Poäng som mäts vid varje rensning."
+
 msgid "Se connecter"
 msgstr "Logga in"
 
@@ -1876,11 +2359,20 @@ msgstr "Navigera bland resultaten"
 msgid "Sert uniquement à la réinitialisation du mot de passe."
 msgstr "Används endast för återställning av lösenordet."
 
+msgid "Seul le propriétaire peut gérer les partages."
+msgstr "Bara ägaren kan hantera delningar."
+
+msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
+msgstr "Endast de första korrigeringarna visas; den verkliga rensningen tillämpar dem alla."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "Endast schemana http och https tillåts."
 
 msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
 msgstr "Om ett konto finns med den här adressen har ett e-postmeddelande med återställningslänken just skickats."
+
+msgid "Simulation — aucune modification enregistrée"
+msgstr "Simulering — ingen ändring sparad"
 
 msgid "Site web"
 msgstr "Webbplats"
@@ -1924,6 +2416,9 @@ msgstr "Ta bort %(name)s"
 msgid "Supprimer ce webhook ?"
 msgstr "Ta bort denna webhook?"
 
+msgid "Supprimer cette planification ?"
+msgstr "Ta bort det här schemat?"
+
 msgid "Supprimer définitivement ce fichier et toutes ses données ?"
 msgstr "Ta bort denna fil och alla dess data permanent?"
 
@@ -1948,6 +2443,12 @@ msgstr "Ta bort överflödiga blanksteg"
 msgid "Supprimer mon compte"
 msgstr "Ta bort mitt konto"
 
+msgid "Suspendre"
+msgstr "Pausa"
+
+msgid "Suspendue"
+msgstr "Pausad"
+
 msgid "Synthèse"
 msgstr "Sammanfattning"
 
@@ -1959,6 +2460,18 @@ msgstr "Säkerhet"
 
 msgid "Sélectionner un fichier"
 msgstr "Välj en fil"
+
+msgid "Sélectionnez au moins un fichier."
+msgstr "Välj minst en fil."
+
+msgid "Sélectionnez deux versions différentes pour afficher la comparaison."
+msgstr "Välj två olika versioner för att visa jämförelsen."
+
+msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
+msgstr "Välj upp till %(limit)s filer: därutöver trunkeras batchen för att inte överbelasta servern."
+
+msgid "Sévérité"
+msgstr "Allvarlighetsgrad"
 
 msgid "Tableau de bord"
 msgstr "Dashboard"
@@ -1999,8 +2512,17 @@ msgstr "Allt ingår"
 msgid "Tout voir"
 msgstr "Visa allt"
 
+msgid "Toute personne possédant ce lien peut consulter le fichier. Révoquez le partage pour l'invalider immédiatement."
+msgstr "Alla med den här länken kan visa filen. Återkalla delningen för att ogiltigförklara den direkt."
+
+msgid "Toute personne possédant le lien peut consulter le jeu de données, sans compte. Le lien est révocable et peut expirer."
+msgstr "Alla med länken kan visa datamängden utan konto. Länken kan återkallas och kan gå ut."
+
 msgid "Toutes les actions"
 msgstr "Alla åtgärder"
+
+msgid "Toutes les valeurs renseignées sont valides"
+msgstr "Alla ifyllda värden är giltiga"
 
 msgid "Traçabilité"
 msgstr "Spårbarhet"
@@ -2014,11 +2536,17 @@ msgstr "Typ"
 msgid "Type de correction"
 msgstr "Korrigeringstyp"
 
+msgid "Type hétérogène"
+msgstr "Blandad typ"
+
 msgid "Téléchargement"
 msgstr "Nedladdning"
 
 msgid "Téléchargement de « %(name)s »"
 msgstr "Nedladdning av « %(name)s »"
+
+msgid "Téléphone"
+msgstr "Telefon"
 
 msgid "Téléphone invalide"
 msgstr "Ogiltigt telefonnummer"
@@ -2028,6 +2556,9 @@ msgstr "Telefonnummer med avvikande format"
 
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Icke-standardiserade telefonnummer (%(column)s):"
+
+msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
+msgstr "Laddar upp, rensar, schemalägger och tar bort egna filer."
 
 msgid "Téléversement"
 msgstr "Uppladdning"
@@ -2058,6 +2589,9 @@ msgstr "Ett administratörskonto kan inte tas bort från denna sida."
 
 msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
 msgstr "Ett administratörskonto kan inte tas bort från den här sidan. Använd"
+
+msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
+msgstr "Ett utdrag ur filen: de första raderna räcker för att bedöma data."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "En instrumentpanel mäter kvaliteten före / efter och förklarar varje förlorad poäng."
@@ -2101,11 +2635,20 @@ msgstr "Ersättningsvärde"
 msgid "Valeur de remplacement (pour le remplissage)."
 msgstr "Ersättningsvärde (för ifyllning)."
 
+msgid "Valeur du moment centré"
+msgstr "Centralmomentets värde"
+
+msgid "Valeur inconnue"
+msgstr "Okänt värde"
+
 msgid "Valeur manquante"
 msgstr "Saknat värde"
 
 msgid "Valeur numérique invalide"
 msgstr "Ogiltigt numeriskt värde"
+
+msgid "Valeur unique « %(value)s » sur %(count)s ligne(s)."
+msgstr "Enda värde ”%(value)s” över %(count)s rad(er)."
 
 msgid "Valeurs aberrantes"
 msgstr "Avvikande värden"
@@ -2149,6 +2692,36 @@ msgstr "Validera och korrigera e-postadresser (endast uppenbara fel)"
 msgid "Validité"
 msgstr "Giltighet"
 
+msgid "Variance"
+msgstr "Varians"
+
+msgid "Version"
+msgstr "Version"
+
+msgid "Version %(number)s restaurée."
+msgstr "Version %(number)s återställd."
+
+msgid "Version comparée"
+msgstr "Jämförd version"
+
+msgid "Version courante"
+msgstr "Aktuell version"
+
+msgid "Version de référence"
+msgstr "Referensversion"
+
+msgid "Versions"
+msgstr "Versioner"
+
+msgid "Versions enregistrées ("
+msgstr "Registrerade versioner ("
+
+msgid "Versions — %(name)s"
+msgstr "Versioner — %(name)s"
+
+msgid "Vide pour créer un lien public."
+msgstr "Tomt för att skapa en offentlig länk."
+
 msgid "Visualisations statistiques"
 msgstr "Statistiska visualiseringar"
 
@@ -2170,6 +2743,9 @@ msgstr "Dina data förtjänar<br> <span class=\"dz-gradient-text\">att vara felf
 msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
 msgstr "Dina filer stannar hos dig. DataZen visar vad som överskrider den valda bevarandetiden och tar inte bort något utan ditt medgivande."
 
+msgid "Vos jeux de données"
+msgstr "Dina datamängder"
+
 msgid "Votre espace de travail"
 msgstr "Din arbetsyta"
 
@@ -2188,6 +2764,18 @@ msgstr "Din profilbild har tagits bort."
 msgid "Votre profil a été mis à jour."
 msgstr "Din profil har uppdaterats."
 
+msgid "Votre rôle ne permet pas de créer une planification."
+msgstr "Din roll tillåter inte att skapa ett schema."
+
+msgid "Votre rôle ne permet pas de lancer un nettoyage. Contactez un administrateur."
+msgstr "Din roll tillåter inte att starta en rensning. Kontakta en administratör."
+
+msgid "Votre rôle ne permet pas de modifier les données. Contactez un administrateur."
+msgstr "Din roll tillåter inte att ändra data. Kontakta en administratör."
+
+msgid "Vous"
+msgstr "Du"
+
 msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
 msgstr "Du behåller kontrollen: inget tas bort utan din åtgärd."
 
@@ -2202,6 +2790,9 @@ msgstr "Du har inte åtkomst till denna webhook."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "Du har inte åtkomst till denna regel."
+
+msgid "Vous ne pouvez pas modifier votre propre rôle."
+msgstr "Du kan inte ändra din egen roll."
 
 msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
 msgstr "Samlad vy över kvaliteten på dina data, alla filer inräknade."
@@ -2344,6 +2935,9 @@ msgstr "t.ex. email (tomt = alla kolumner)"
 msgid "excellente qualité"
 msgstr "utmärkt kvalitet"
 
+msgid "faible"
+msgstr "låg"
+
 msgid "fermer"
 msgstr "stäng"
 
@@ -2355,6 +2949,9 @@ msgstr "okänt format"
 
 msgid "généré le"
 msgstr "skapad"
+
+msgid "haute"
+msgstr "hög"
 
 msgid "https://exemple.com"
 msgstr "https://exemple.com"
@@ -2374,6 +2971,9 @@ msgstr "oförändrad"
 msgid "jours"
 msgstr "dagar"
 
+msgid "lien public"
+msgstr "offentlig länk"
+
 msgid "lignes"
 msgstr "rader"
 
@@ -2382,6 +2982,9 @@ msgstr "felaktig längd/format"
 
 msgid "matplotlib"
 msgstr "matplotlib"
+
+msgid "moyenne"
+msgstr "medel"
 
 msgid "naviguer"
 msgstr "navigera"
@@ -2437,6 +3040,9 @@ msgstr "borttagen"
 msgid "sur"
 msgstr "av"
 
+msgid "suspendue"
+msgstr "pausat"
+
 msgid "texte"
 msgstr "text"
 
@@ -2446,11 +3052,17 @@ msgstr "telefon"
 msgid "unicité"
 msgstr "unikhet"
 
+msgid "v%(n)s"
+msgstr "v%(n)s"
+
 msgid "valeur(s) extrême(s)"
 msgstr "extremvärde(n)"
 
 msgid "validité"
 msgstr "giltighet"
+
+msgid "« %(value)s » représente %(percent)s %% des valeurs renseignées."
+msgstr "”%(value)s” utgör %(percent)s %% av de ifyllda värdena."
 
 msgid "· ancien_id :"
 msgstr "· gammalt_id:"
@@ -2476,11 +3088,17 @@ msgstr "Rensning misslyckades"
 msgid "Échec du nettoyage de « %(name)s »"
 msgstr "Rensning av « %(name)s » misslyckades"
 
+msgid "Échec du nettoyage planifié : %(error)s"
+msgstr "Schemalagd rensning misslyckades: %(error)s"
+
+msgid "Éditeur"
+msgstr "Redigerare"
+
 msgid "Étape 1"
 msgstr "Steg 1"
 
 msgid "État"
-msgstr "Tillstånd"
+msgstr "Status"
 
 msgid "Évolution hebdomadaire du score de qualité"
 msgstr "Veckovis utveckling av kvalitetspoängen"
@@ -2518,17 +3136,32 @@ msgstr "— Alla kolumner —"
 msgid "← Retour au fichier"
 msgstr "← Tillbaka till filen"
 
+msgid "← Retour à l'historique"
+msgstr "← Tillbaka till historiken"
+
 msgid "⌨️ Raccourcis"
 msgstr "⌨️ Genvägar"
 
 msgid "⌨️ Raccourcis clavier"
 msgstr "⌨️ Tangentbordsgenvägar"
 
+msgid "⏱️ Nettoyages planifiés"
+msgstr "⏱️ Schemalagda rensningar"
+
+msgid "⏱️ Planifications"
+msgstr "⏱️ Scheman"
+
 msgid "⏳ Fichiers expirés"
 msgstr "⏳ Utgångna filer"
 
 msgid "⏳ Nettoyage en cours…"
 msgstr "⏳ Rensning pågår…"
+
+msgid "♻️ Restaurer"
+msgstr "♻️ Återställ"
+
+msgid "⚙️ Opérations communes"
+msgstr "⚙️ Gemensamma åtgärder"
 
 msgid "⚙️ Règles de nettoyage personnalisées"
 msgstr "⚙️ Anpassade rensningsregler"
@@ -2538,6 +3171,9 @@ msgstr "⚙️ Anpassade regler"
 
 msgid "⚙️ Régler la durée"
 msgstr "⚙️ Justera tiden"
+
+msgid "⚠️ Anomalies signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ Avvikelser rapporteras endast — ändras aldrig automatiskt."
 
 msgid "⚠️ Points nécessitant une vérification humaine"
 msgstr "⚠️ Punkter som kräver manuell granskning"
@@ -2587,8 +3223,14 @@ msgstr "✓ Kopierat"
 msgid "➕ Nouveau jeton"
 msgstr "➕ Ny token"
 
+msgid "➕ Nouveau partage"
+msgstr "➕ Ny delning"
+
 msgid "➕ Nouveau webhook"
 msgstr "➕ Ny webhook"
+
+msgid "➕ Nouvelle planification"
+msgstr "➕ Nytt schema"
 
 msgid "➕ Nouvelle règle"
 msgstr "➕ Ny regel"
@@ -2598,6 +3240,9 @@ msgstr "➕ Ladda upp en fil"
 
 msgid "⬇️ Exporter mes données (JSON)"
 msgstr "⬇️ Exportera mina data (JSON)"
+
+msgid "⬇️ Télécharger"
+msgstr "⬇️ Hämta"
 
 msgid "⬇️ Télécharger le fichier nettoyé"
 msgstr "⬇️ Ladda ner den rensade filen"
@@ -2628,6 +3273,9 @@ msgstr "👁️ Visa rapporten"
 
 msgid "👤 Mon profil"
 msgstr "👤 Min profil"
+
+msgid "📄 Fichiers à nettoyer"
+msgstr "📄 Filer att rensa"
 
 msgid "📈 Analyse exploratoire"
 msgstr "📈 Utforskande analys"
@@ -2665,8 +3313,14 @@ msgstr "📊 Dashboard"
 msgid "📊 Tableau de bord global"
 msgstr "📊 Global dashboard"
 
+msgid "📋 Mes planifications ("
+msgstr "📋 Mina scheman ("
+
 msgid "📋 Mes règles ("
 msgstr "📋 Mina regler ("
+
+msgid "📋 Partages actifs ("
+msgstr "📋 Aktiva delningar ("
 
 msgid "📋 Qualité des colonnes"
 msgstr "📋 Kolumnkvalitet"
@@ -2704,11 +3358,26 @@ msgstr "🔌 API och åtkomsttoken"
 msgid "🔌 Jetons d'API"
 msgstr "🔌 API-token"
 
+msgid "🔍 Aperçu (simulation)"
+msgstr "🔍 Förhandsgranskning (simulering)"
+
+msgid "🔍 Aperçu avant / après (simulation)"
+msgstr "🔍 Förhandsgranskning före / efter (simulering)"
+
 msgid "🔍 Avant / après"
 msgstr "🔍 Före / efter"
 
 msgid "🔍 Comparaison avant / après"
 msgstr "🔍 Jämförelse före / efter"
+
+msgid "🔍 Comparer"
+msgstr "🔍 Jämför"
+
+msgid "🔍 Comparer des versions"
+msgstr "🔍 Jämför versioner"
+
+msgid "🔍 Comparer deux versions"
+msgstr "🔍 Jämför två versioner"
 
 msgid "🔍 Doublons"
 msgstr "🔍 Dubbletter"
@@ -2734,6 +3403,9 @@ msgstr "🔎 Förklaring av poängen"
 msgid "🔑 Mes jetons"
 msgstr "🔑 Mina token"
 
+msgid "🔑 Votre lien de partage public"
+msgstr "🔑 Din offentliga delningslänk"
+
 msgid "🔑 Votre nouveau jeton"
 msgstr "🔑 Din nya token"
 
@@ -2748,6 +3420,9 @@ msgstr "🔔 Mina webhooks"
 
 msgid "🔔 Webhooks"
 msgstr "🔔 Webhooks"
+
+msgid "🔗 Partager ce jeu de données"
+msgstr "🔗 Dela den här datamängden"
 
 msgid "🔗 Voir mon profil public"
 msgstr "🔗 Visa min offentliga profil"
@@ -2770,8 +3445,17 @@ msgstr "🕓 Aktivitet"
 msgid "🕓 Dernières activités"
 msgstr "🕓 Senaste aktiviteter"
 
+msgid "🕓 Historique des versions"
+msgstr "🕓 Versionshistorik"
+
 msgid "🕓 Journal d'activité"
 msgstr "🕓 Aktivitetslogg"
+
+msgid "🕓 Versions"
+msgstr "🕓 Versioner"
+
+msgid "🗂️ Nettoyage par lots"
+msgstr "🗂️ Batchrensning"
 
 msgid "🗃️ Fichiers récents"
 msgstr "🗃️ Senaste filer"
@@ -2797,11 +3481,17 @@ msgstr "🚀 Nytt i pro-ytan"
 msgid "🚀 Premier appel"
 msgstr "🚀 Första anropet"
 
+msgid "🛡️ Rôles et permissions"
+msgstr "🛡️ Roller och behörigheter"
+
 msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
 msgstr "🟢 Behåll rad 1 (ta bort de andra)"
 
 msgid "🟣 Fusionner toutes les lignes"
 msgstr "🟣 Slå samman alla rader"
+
+msgid "🧩 Anomalies structurelles"
+msgstr "🧩 Strukturella avvikelser"
 
 msgid "🧭 Dimensions les plus fragiles"
 msgstr "🧭 Svagaste dimensionerna"

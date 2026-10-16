@@ -38,6 +38,7 @@ from .services import search as search_service
 from .services.charts import build_charts
 from .services.comparison import load_comparison
 from .services.dashboard import build_dashboard
+from .services.operations import render_correction_types
 from .services.pdf import build_pdf
 from .services.pipeline import read_change_log
 from .services.reader import read_dataframe
@@ -136,10 +137,9 @@ def download_pdf_report(request, pk):
         if change_log is not None and not change_log.empty:
             column = "type_correction"
             if column in change_log.columns:
-                operations = [
-                    str(value)
-                    for value in change_log[column].dropna().unique().tolist()
-                ]
+                operations = render_correction_types(
+                    change_log[column].dropna().unique().tolist()
+                )
     except Exception:  # noqa: BLE001 — le journal est un bonus, pas un prérequis
         operations = []
 

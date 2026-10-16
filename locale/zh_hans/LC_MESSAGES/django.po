@@ -16,11 +16,20 @@ msgstr "日志中有 %(actual)s 处修正，但报告为 %(reported)s 处"
 msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
 msgstr "邮箱列中有 %(actual)s 个未知值，但报告为 %(reported)s 个"
 
+msgid "%(count)s anomalie(s) structurelle(s) détectée(s) sur les colonnes."
+msgstr "在列中检测到 %(count)s 个结构异常。"
+
 msgid "%(count)s colonnes"
 msgstr "%(count)s 列"
 
+msgid "%(count)s doublon(s) exact(s) restant(s)"
+msgstr "剩余 %(count)s 个完全重复项"
+
 msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
 msgstr "有 %(count)s 个潜在重复项需要核查。"
+
+msgid "%(count)s doublon(s) potentiel(s) à vérifier (pénalité réduite)"
+msgstr "%(count)s 个潜在重复项需人工复核（减轻扣分）"
 
 msgid "%(count)s entrée(s) d'activité supprimée(s)."
 msgstr "已删除 %(count)s 条活动记录。"
@@ -28,35 +37,38 @@ msgstr "已删除 %(count)s 条活动记录。"
 msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
 msgstr "%(count)s 个错误无法自动修正。"
 
-msgid "%(count)s exact duplicate(s) remaining"
-msgstr "剩余 %(count)s 个完全重复项"
-
-msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
-msgstr "剩余 %(count)s 个不一致的值（既非有效也非未知）"
+msgid "%(count)s fichier(s) ignoré(s) : lot limité à %(limit)s."
+msgstr "已忽略 %(count)s 个文件：批次上限为 %(limit)s。"
 
 msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
 msgstr "存在 %(count)s 个无效邮箱（非空且非未知）"
 
-msgid "%(count)s invalid value(s) among filled data"
-msgstr "已填写数据中有 %(count)s 个无效值"
-
 msgid "%(count)s lignes"
 msgstr "%(count)s 行"
 
-msgid "%(count)s missing value(s)"
-msgstr "%(count)s 个缺失值"
-
-msgid "%(count)s non-standard value(s)"
-msgstr "%(count)s 个非标准值"
-
-msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
-msgstr "%(count)s 个潜在重复项需人工复核（减轻扣分）"
-
-msgid "%(count)s unknown value(s) (data unavailable)"
-msgstr "%(count)s 个未知值（数据不可用）"
+msgid "%(count)s nettoyage(s) lancé(s) en arrière-plan."
+msgstr "已在后台启动 %(count)s 项清洗。"
 
 msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
 msgstr "在数值列中检测到 %(count)s 个异常值。"
+
+msgid "%(count)s valeur(s) d'identifiant dupliquée(s)."
+msgstr "%(count)s 个重复的标识符值。"
+
+msgid "%(count)s valeur(s) incohérente(s) restante(s) (ni valide ni inconnue)"
+msgstr "剩余 %(count)s 个不一致的值（既非有效也非未知）"
+
+msgid "%(count)s valeur(s) inconnue(s) (donnée indisponible)"
+msgstr "%(count)s 个未知值（数据不可用）"
+
+msgid "%(count)s valeur(s) invalide(s) parmi les données renseignées"
+msgstr "已填写数据中有 %(count)s 个无效值"
+
+msgid "%(count)s valeur(s) manquante(s)"
+msgstr "%(count)s 个缺失值"
+
+msgid "%(count)s valeur(s) non standard"
+msgstr "%(count)s 个非标准值"
 
 msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
 msgstr "目前有 %(count)s 个值为「未知」。"
@@ -85,11 +97,21 @@ msgid "%(counter)s valide,"
 msgid_plural "%(counter)s valides,"
 msgstr[0] "%(counter)s 个有效，"
 
+msgid "%(numeric)s valeur(s) numérique(s) sur %(total)s renseignée(s) : type hétérogène."
+msgstr "已填写的 %(total)s 个值中有 %(numeric)s 个数值：类型混杂。"
+
 msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
 msgstr "已删除 %(purged)s 个文件，归档 %(archived)s 个文件。"
 
+msgid "%(runs)s exécution"
+msgid_plural "%(runs)s exécutions"
+msgstr[0] "%(runs)s 次运行"
+
 msgid "%(score)s / 100  (%(weight)s %(percent)s)"
 msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(total)s valeur(s) aberrante(s) détectée(s) (méthode IQR). Colonnes les plus concernées : %(detail)s."
+msgstr "检测到 %(total)s 个异常值（IQR 方法）。受影响最大的列：%(detail)s。"
 
 msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
 msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s，预期为 %(expected)s"
@@ -104,6 +126,9 @@ msgstr[0] "（%(counter)s 处修改）"
 msgid "(%(counter)s non-conformité)"
 msgid_plural "(%(counter)s non-conformités)"
 msgstr[0] "（%(counter)s 处不符合规范）"
+
+msgid "(%(shown)s sur %(total)s)"
+msgstr "（%(shown)s / %(total)s）"
 
 msgid "(colonnes : %(columns)s)"
 msgstr "（列：%(columns)s）"
@@ -157,7 +182,7 @@ msgid "Accueil"
 msgstr "首页"
 
 msgid "Actif"
-msgstr "活跃"
+msgstr "启用"
 
 msgid "Actifs"
 msgstr "活跃项"
@@ -172,7 +197,7 @@ msgid "Actions"
 msgstr "操作"
 
 msgid "Active"
-msgstr "已启用"
+msgstr "启用"
 
 msgid "Activer"
 msgstr "启用"
@@ -198,6 +223,9 @@ msgstr "管理员"
 msgid "Administration"
 msgstr "管理"
 
+msgid "Adresse e-mail"
+msgstr "电子邮箱"
+
 msgid "Adresse email"
 msgstr "邮箱地址"
 
@@ -218,9 +246,6 @@ msgstr "显示异常详情"
 
 msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
 msgstr "已加入请求头 X-DataZen-Signature（HMAC-SHA256）。"
-
-msgid "All filled values are valid"
-msgstr "所有已填写的值均有效"
 
 msgid "Aller au contenu principal"
 msgstr "跳转到主要内容"
@@ -243,8 +268,20 @@ msgstr "原值"
 msgid "Annuler"
 msgstr "取消"
 
+msgid "Anomalie"
+msgstr "异常"
+
 msgid "Anomalies restantes (à traiter manuellement)"
 msgstr "剩余异常（需人工处理）"
+
+msgid "Anomalies structurelles"
+msgstr "结构异常"
+
+msgid "Anomalies structurelles par type"
+msgstr "按类型划分的结构异常"
+
+msgid "Anonymisation"
+msgstr "匿名化"
 
 msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
 msgstr "匿名化敏感数据（已替换 %(count)s 项）"
@@ -258,8 +295,26 @@ msgstr "匿名化敏感数据（姓名、电子邮件、电话号码）"
 msgid "Antananarivo, Madagascar"
 msgstr "Antananarivo, Madagascar"
 
+msgid "Aperçu"
+msgstr "预览"
+
+msgid "Aperçu calculé : aucune modification n'a été enregistrée. Confirmez pour appliquer le nettoyage."
+msgstr "预览已计算：未保存任何更改。确认后即可应用清洗。"
+
+msgid "Aperçu de nettoyage sur « %(name)s »"
+msgstr "「%(name)s」的清洗预览"
+
+msgid "Aperçu des données"
+msgstr "数据预览"
+
 msgid "Aperçu du fichier nettoyé"
 msgstr "已清洗文件预览"
+
+msgid "Aperçu limité à %(shown)s lignes sur %(total)s."
+msgstr "预览仅显示 %(total)s 行中的 %(shown)s 行。"
+
+msgid "Aplatissement"
+msgstr "峰度"
 
 msgid "Appel API"
 msgstr "API 调用"
@@ -267,11 +322,20 @@ msgstr "API 调用"
 msgid "Appel API : %(path)s"
 msgstr "API 调用：%(path)s"
 
+msgid "Appelez-la depuis un planificateur système (cron, Planificateur de tâches Windows) toutes les cinq minutes."
+msgstr "每五分钟从系统计划程序（cron、Windows 任务计划程序）调用一次。"
+
 msgid "Appels"
 msgstr "调用次数"
 
 msgid "Application"
 msgstr "应用"
+
+msgid "Appliquer"
+msgstr "应用"
+
+msgid "Appliquez les mêmes opérations à plusieurs jeux de données en une seule fois. Les fichiers sont traités en série, un à la fois."
+msgstr "一次性对多个数据集应用相同的操作。文件按顺序逐个处理。"
 
 msgid "Après"
 msgstr "之后"
@@ -290,6 +354,21 @@ msgstr "??"
 
 msgid "Archivés"
 msgstr "已归档"
+
+msgid "Asymétrie"
+msgstr "偏度"
+
+msgid "Asymétrie et aplatissement (moments centrés) des colonnes numériques."
+msgstr "数值列的偏度与峰度（中心矩）。"
+
+msgid "Aucun compte ne correspond à cette recherche."
+msgstr "没有账户与此搜索匹配。"
+
+msgid "Aucun doublon exact"
+msgstr "无完全重复项"
+
+msgid "Aucun doublon potentiel"
+msgstr "无潜在重复项"
 
 msgid "Aucun fichier d'origine n'est disponible."
 msgstr "没有可用的原始文件。"
@@ -324,6 +403,12 @@ msgstr "此数据集暂无可用图表：其中可用的数值型或分类型取
 msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
 msgstr "暂无令牌。创建一个即可使用 API。"
 
+msgid "Aucun jeu de données disponible pour le moment."
+msgstr "目前没有可用的数据集。"
+
+msgid "Aucun jeu de données pour le moment."
+msgstr "目前没有数据集。"
+
 msgid "Aucun journal des modifications n'est disponible."
 msgstr "没有可用的修改日志。"
 
@@ -348,6 +433,9 @@ msgstr "暂无活动记录。"
 msgid "Aucune anomalie restante."
 msgstr "无剩余异常。"
 
+msgid "Aucune anomalie structurelle détectée."
+msgstr "未检测到结构异常。"
+
 msgid "Aucune anomalie."
 msgstr "无异常。"
 
@@ -356,6 +444,9 @@ msgstr "无列"
 
 msgid "Aucune correction"
 msgstr "无修正"
+
+msgid "Aucune correction de valeur ne serait nécessaire."
+msgstr "无需进行任何数值修正。"
 
 msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
 msgstr "原始文件与清理后的文件没有明显差异：你的数据本来就很干净。"
@@ -372,6 +463,18 @@ msgstr "没有可用的已清洗数据。"
 msgid "Aucune modification enregistrée."
 msgstr "未保存任何修改。"
 
+msgid "Aucune opération enregistrée pour cette version."
+msgstr "此版本没有记录任何操作。"
+
+msgid "Aucune opération enregistrée."
+msgstr "没有记录任何操作。"
+
+msgid "Aucune opération."
+msgstr "无操作。"
+
+msgid "Aucune planification : programmez un nettoyage récurrent pour ne plus y penser."
+msgstr "尚无计划：设置定期清洗，从此无需再操心。"
+
 msgid "Aucune règle personnalisée."
 msgstr "没有自定义规则。"
 
@@ -381,8 +484,17 @@ msgstr "暂无规则。创建一条规则即可在所有文件中复用。"
 msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
 msgstr "数值列中未检测到异常值。"
 
+msgid "Aucune valeur manquante ou inconnue"
+msgstr "无缺失或未知值"
+
+msgid "Aucune valeur renseignée sur %(rows)s ligne(s)."
+msgstr "%(rows)s 行中均未填写任何值。"
+
 msgid "Aucune valeur « Inconnu »."
 msgstr "没有“未知”值。"
+
+msgid "Aucune version enregistrée : lancez un nettoyage pour en créer une."
+msgstr "尚未记录任何版本：运行一次清洗即可创建。"
 
 msgid "Audit des emails"
 msgstr "邮箱审计"
@@ -450,8 +562,20 @@ msgstr "统一“未知”标记（已修正 %(count)s 项）"
 msgid "Capturer"
 msgstr "拍摄"
 
+msgid "Casse"
+msgstr "大小写"
+
+msgid "Catégorie"
+msgstr "类别"
+
 msgid "Ce graphique n'est pas disponible pour ce jeu de données."
 msgstr "此图表不适用于该数据集。"
+
+msgid "Ce jeu de données n'est partagé avec personne pour le moment."
+msgstr "此数据集尚未与任何人共享。"
+
+msgid "Ce lien de partage est invalide ou a expiré."
+msgstr "此共享链接无效或已过期。"
 
 msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
 msgstr "此重置链接已被使用或已过期。"
@@ -459,11 +583,20 @@ msgstr "此重置链接已被使用或已过期。"
 msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
 msgstr "此链接仅可使用一次。如果并非您本人发起该请求，请忽略此邮件：您的密码保持不变。 — DataZen"
 
+msgid "Ce lien ne permet pas le téléchargement."
+msgstr "此链接不允许下载。"
+
+msgid "Ce partage ne permet pas le téléchargement."
+msgstr "此共享不允许下载。"
+
 msgid "Ce profil n'est pas public."
 msgstr "此资料不公开。"
 
 msgid "Ce que le nettoyage a réellement changé dans votre fichier."
 msgstr "清理究竟改变了你文件中的什么。"
+
+msgid "Ce que permet chaque rôle"
+msgstr "各角色的权限"
 
 msgid "Cellules manquantes"
 msgstr "缺失单元格"
@@ -473,6 +606,12 @@ msgstr "这 %(count)s 个文件已超过 %(days)s 天的保留时长。只要自
 
 msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
 msgstr "这些计数用于全局搜索和下方快捷键。"
+
+msgid "Ces deux versions sont identiques sur les indicateurs suivis."
+msgstr "这两个版本在跟踪的指标上完全相同。"
+
+msgid "Cette page est réservée aux administrateurs."
+msgstr "此页面仅限管理员访问。"
 
 msgid "Champ"
 msgstr "字段"
@@ -498,6 +637,12 @@ msgstr "修改我的密码"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "修改我的密码 — DataZen"
 
+msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
+msgstr "每个账户都有一个角色：查看者、编辑者或管理员。权限校验在服务端执行，而不仅仅在界面中。"
+
+msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
+msgstr "每次成功清洗都会固化一个版本：您可以下载、比较并回滚。"
+
 msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
 msgstr "加载 <code>.csv</code>、<code>.xlsx</code> 或 <code>.xls</code> 格式的数据，无论使用何种分隔符。"
 
@@ -506,6 +651,12 @@ msgstr "选择网站语言"
 
 msgid "Choisir le format"
 msgstr "选择格式"
+
+msgid "Choisissez deux versions pour mesurer ce qui a réellement changé entre elles."
+msgstr "选择两个版本，衡量它们之间实际发生的变化。"
+
+msgid "Choisissez un destinataire ou cochez « Créer un lien public »."
+msgstr "请选择接收者或勾选“创建公开链接”。"
 
 msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
 msgstr "请选择 CSV 或 Excel 文件（.csv、.xlsx、.xls）。"
@@ -546,6 +697,9 @@ msgstr "语言代码（fr、en、es…）。留空 = 应用语言。"
 msgid "Coefficient de Pearson"
 msgstr "皮尔逊系数"
 
+msgid "Collaboration"
+msgstr "协作"
+
 msgid "Colonne"
 msgstr "列"
 
@@ -554,6 +708,15 @@ msgstr "目标列"
 
 msgid "Colonne clé pour la déduplication"
 msgstr "去重键列"
+
+msgid "Colonne constante"
+msgstr "常量列"
+
+msgid "Colonne quasi constante"
+msgstr "近似常量列"
+
+msgid "Colonne vide"
+msgstr "空列"
 
 msgid "Colonnes"
 msgstr "列"
@@ -579,17 +742,29 @@ msgstr "未知的列："
 msgid "Colonnes stables"
 msgstr "稳定的列"
 
+msgid "Colonnes vides, constantes, quasi constantes ou à type hétérogène."
+msgstr "空列、常量列、近常量列或类型混杂的列。"
+
 msgid "Colonnes à vérifier"
 msgstr "待检查的列"
 
 msgid "Combien de fichiers se trouvent dans chaque tranche de score."
 msgstr "每个分数区间包含多少文件。"
 
+msgid "Comment les échéances sont-elles exécutées ?"
+msgstr "到期时间如何执行？"
+
 msgid "Comparaison"
 msgstr "对比"
 
 msgid "Comparaison avant / après — %(name)s"
 msgstr "清理前后对比 — %(name)s"
+
+msgid "Comparaison de versions — %(name)s"
+msgstr "版本比较 — %(name)s"
+
+msgid "Comparer"
+msgstr "比较"
 
 msgid "Complétion du profil"
 msgstr "资料完整度"
@@ -612,6 +787,9 @@ msgstr "账户"
 msgid "Compte actif"
 msgstr "账户已激活"
 
+msgid "Comptes ("
+msgstr "账户（"
+
 msgid "Condensé"
 msgstr "摘要"
 
@@ -620,6 +798,9 @@ msgstr "信心"
 
 msgid "Confirmer la décision"
 msgstr "确认决定"
+
+msgid "Confirmer le nettoyage"
+msgstr "确认清洗"
 
 msgid "Connectez-vous pour retrouver vos fichiers."
 msgstr "登录以查看您的文件。"
@@ -630,11 +811,20 @@ msgstr "登录"
 msgid "Connexion — DataZen"
 msgstr "登录 — DataZen"
 
+msgid "Consultation"
+msgstr "查看"
+
 msgid "Consultation des graphiques"
 msgstr "查看图表"
 
 msgid "Consultation du rapport"
 msgstr "查看报告"
+
+msgid "Consultation et téléchargement"
+msgstr "查看和下载"
+
+msgid "Consulte et télécharge les jeux de données partagés. Ne modifie rien."
+msgstr "查看并下载共享数据集。不做任何修改。"
 
 msgid "Continuer / valider une étape"
 msgstr "继续 / 确认一步"
@@ -690,11 +880,17 @@ msgstr "创建规则"
 msgid "Créer le jeton"
 msgstr "创建令牌"
 
+msgid "Créer le partage"
+msgstr "创建共享"
+
 msgid "Créer le webhook"
 msgstr "创建 Webhook"
 
 msgid "Créer un compte"
 msgstr "创建账户"
+
+msgid "Créer un lien public"
+msgstr "创建公开链接"
 
 msgid "Créer une règle"
 msgstr "创建规则"
@@ -705,8 +901,14 @@ msgstr "只需创建一次规则，即可在所有文件中复用。"
 msgid "Créez votre compte"
 msgstr "创建您的账户"
 
-msgid "Data is consistent: each value is valid or unknown"
-msgstr "数据一致：每个值都是有效或未知"
+msgid "Créé par"
+msgstr "创建者"
+
+msgid "Créée par"
+msgstr "创建者"
+
+msgid "DataZen ne fait tourner aucun démon en arrière-plan : une commande de gestion reprend les échéances dues et relance le nettoyage par le même chemin de code que l'interface."
+msgstr "DataZen 不运行任何后台守护进程：管理命令会拾取到期的计划，并通过与界面相同的代码路径重新启动清洗。"
 
 msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
 msgstr "DataZen — 数据清洗应用（DataClean Pro）· ©"
@@ -738,14 +940,26 @@ msgstr "最近 HTTP 状态码"
 msgid "Dernier déclenchement"
 msgstr "最近触发"
 
+msgid "Dernier statut"
+msgstr "最后状态"
+
 msgid "Dernier usage"
 msgstr "最近使用"
 
 msgid "Derniers fichiers"
 msgstr "最近的文件"
 
+msgid "Dernière : succès"
+msgstr "上次：成功"
+
+msgid "Dernière : échec"
+msgstr "上次：失败"
+
 msgid "Dernière connexion"
 msgstr "上次登录"
+
+msgid "Dernière exécution"
+msgstr "上次运行"
 
 msgid "Dernière utilisation"
 msgstr "最后使用时间"
@@ -756,6 +970,9 @@ msgstr "最近的规则"
 msgid "Des incohérences ont été détectées entre les statistiques et les données."
 msgstr "检测到统计数据与数据之间存在不一致。"
 
+msgid "Destinataire"
+msgstr "接收者"
+
 msgid "Dimension"
 msgstr "维度"
 
@@ -765,6 +982,12 @@ msgstr "质量维度"
 msgid "Dispersion et valeurs extrêmes des colonnes numériques."
 msgstr "数值列的离散程度与极值。"
 
+msgid "Distribution la plus asymétrique : « %(colonne)s » (asymétrie %(valeur)s) — moyenne et médiane s'écartent sensiblement, une transformation ou un traitement par quantiles est à envisager."
+msgstr "偏度最大的分布：“%(colonne)s”（偏度 %(valeur)s）——均值与中位数差异明显，建议考虑变换或分位数处理。"
+
+msgid "Distribution la plus concentrée/pointue : « %(colonne)s » (aplatissement %(valeur)s) — forte densité autour de la moyenne avec des valeurs extrêmes marquées."
+msgstr "峰度最大的分布：“%(colonne)s”（峰度 %(valeur)s）——均值附近密度高，且存在明显的极端值。"
+
 msgid "Distributions des colonnes numériques"
 msgstr "数值列分布"
 
@@ -773,6 +996,12 @@ msgstr "数值分布"
 
 msgid "Django · Pandas · Bootstrap"
 msgstr "Django · Pandas · Bootstrap"
+
+msgid "Données cohérentes : chaque valeur est valide ou inconnue"
+msgstr "数据一致：每个值都是有效或未知"
+
+msgid "Doublon"
+msgstr "重复"
 
 msgid "Doublon par similarité"
 msgstr "相似重复项"
@@ -816,6 +1045,12 @@ msgstr "重复项、多余空格、格式错误的邮箱、不一致的日期…
 msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
 msgstr "重复项、缺失值、空格、大小写、邮箱、电话、日期和薪资均已规范化。"
 
+msgid "Droit"
+msgstr "权限"
+
+msgid "Droit accordé"
+msgstr "已授予权限"
+
 msgid "Durée de conservation"
 msgstr "保留时长"
 
@@ -855,8 +1090,17 @@ msgstr "清除"
 msgid "Effectif"
 msgstr "数量"
 
+msgid "Email"
+msgstr "邮箱"
+
+msgid "Email fictif"
+msgstr "占位邮箱"
+
 msgid "Email invalide"
-msgstr "无效电子邮件"
+msgstr "无效邮箱"
+
+msgid "Email manquant"
+msgstr "缺失邮箱"
 
 msgid "Email nettoyé"
 msgstr "清洗后邮箱"
@@ -927,8 +1171,14 @@ msgstr "剩余错误"
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
 
+msgid "Exemples de corrections"
+msgstr "修正示例"
+
 msgid "Expiration"
-msgstr "过期"
+msgstr "到期"
+
+msgid "Expire le"
+msgstr "到期日"
 
 msgid "Expiré"
 msgstr "已过期"
@@ -938,6 +1188,12 @@ msgstr "得分说明"
 
 msgid "Export & traçabilité"
 msgstr "导出与追溯"
+
+msgid "Exécuter"
+msgstr "运行"
+
+msgid "Exécutions"
+msgstr "运行次数"
 
 msgid "Fermer"
 msgstr "关闭"
@@ -996,6 +1252,9 @@ msgstr "早于该时长清理的文件（0 = 无限保留）。"
 msgid "Fichiers récents"
 msgstr "最近的文件"
 
+msgid "Fichiers à nettoyer"
+msgstr "待清洗文件"
+
 msgid "Fil d'Ariane"
 msgstr "面包屑导航"
 
@@ -1029,8 +1288,17 @@ msgstr "支持的格式：<code>.csv</code>、<code>.xlsx</code>、<code>.xls</c
 msgid "Formats de dates (%(column)s) :"
 msgstr "日期格式（%(column)s）："
 
-msgid "Formats standardized (phones, dates)"
+msgid "Formats standardisés (téléphones, dates)"
 msgstr "已标准化的格式（电话、日期）"
+
+msgid "Forme des distributions"
+msgstr "分布形态"
+
+msgid "Forme des distributions (asymétrie et aplatissement)"
+msgstr "分布形态（偏度与峰度）"
+
+msgid "Fréquence"
+msgstr "频率"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "节省时间：DataZen 里所有重要的功能都有快捷键。"
@@ -1050,14 +1318,23 @@ msgstr "基于清洗后的数据，使用 <strong>matplotlib</strong> 和 <stron
 msgid "Gratuit, immédiat, et vos fichiers restent privés."
 msgstr "免费、即时，且您的文件保持私密。"
 
+msgid "Gère les rôles et voit l'ensemble des fichiers de la plateforme."
+msgstr "管理角色并查看平台上的所有文件。"
+
 msgid "Gérer les règles…"
 msgstr "管理规则…"
+
+msgid "Hebdomadaire"
+msgstr "每周"
 
 msgid "Histogrammes des colonnes numériques détectées."
 msgstr "已检测的数值列直方图。"
 
 msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
 msgstr "带时间戳的操作历史：上传、清理、导出、API。"
+
+msgid "Identifiant non unique"
+msgstr "非唯一标识符"
 
 msgid "Identité"
 msgstr "身份信息"
@@ -1070,6 +1347,9 @@ msgstr "CSV 与 Excel 导入"
 
 msgid "Impossible d'appliquer la décision : %(error)s"
 msgstr "无法应用决策：%(error)s"
+
+msgid "Impossible de comparer ces versions : %(error)s"
+msgstr "无法比较这些版本：%(error)s"
 
 msgid "Impossible de convertir le fichier : %(error)s"
 msgstr "无法转换文件：%(error)s"
@@ -1086,6 +1366,9 @@ msgstr "无法读取文件：%(error)s"
 msgid "Impossible de lire le rapport : %(error)s"
 msgstr "无法读取报告：%(error)s"
 
+msgid "Impossible de simuler le nettoyage : le fichier est illisible."
+msgstr "无法模拟清洗：文件不可读。"
+
 msgid "Inactif"
 msgstr "未启用"
 
@@ -1096,6 +1379,9 @@ msgid "Inconnu"
 msgstr "未知"
 
 msgid "Indicateur"
+msgstr "指标"
+
+msgid "Indicateurs"
 msgstr "指标"
 
 msgid "Indicateurs comparés"
@@ -1140,6 +1426,9 @@ msgstr "令牌已创建。请立即复制：它不会再显示。"
 msgid "Jeton d'API"
 msgstr "API 令牌"
 
+msgid "Jeton du lien"
+msgstr "链接令牌"
+
 msgid "Jeton « %(name)s » révoqué."
 msgstr "令牌“%(name)s”已撤销。"
 
@@ -1148,6 +1437,12 @@ msgstr "令牌"
 
 msgid "Jetons d'API"
 msgstr "API 令牌"
+
+msgid "Jeu de données"
+msgstr "数据集"
+
+msgid "Jeu de données partagé en lecture seule via un lien DataZen."
+msgstr "通过 DataZen 链接以只读方式共享的数据集。"
 
 msgid "Journal d'activité"
 msgstr "活动日志"
@@ -1176,8 +1471,17 @@ msgstr "删除账户将永久清除您的文件、规则和个人资料。此操
 msgid "Laisser vide pour appliquer à toutes les colonnes."
 msgstr "留空则应用于所有列。"
 
+msgid "Laissez vide pour démarrer à la prochaine échéance."
+msgstr "留空表示在下一个到期时间开始。"
+
 msgid "Laissez vide pour un jeton sans expiration."
 msgstr "留空表示令牌永不过期。"
+
+msgid "Laissez vide pour un partage sans expiration."
+msgstr "留空表示共享不过期。"
+
+msgid "Lancer le nettoyage des fichiers sélectionnés"
+msgstr "开始清洗所选文件"
 
 msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
 msgstr "请先运行清洗以使用探索性分析。"
@@ -1190,6 +1494,9 @@ msgstr "界面语言"
 
 msgid "Le compte « %(username)s » a été supprimé."
 msgstr "账户「%(username)s」已被删除。"
+
+msgid "Le fichier de cette version n'est plus disponible."
+msgstr "此版本的文件已不可用。"
 
 msgid "Le fichier ne doit pas dépasser 20 Mo."
 msgstr "文件不得超过 20 MB。"
@@ -1209,6 +1516,9 @@ msgstr "Webhook 的主机名指向内部地址。"
 msgid "Le nom d'hôte est absent de l'URL."
 msgstr "URL 中缺少主机名。"
 
+msgid "Le partage est toujours en lecture seule : le destinataire consulte et, si vous l'autorisez, télécharge. Il ne modifie jamais vos données."
+msgstr "共享始终为只读：接收者可以查看，并在您允许时下载。他们绝不会修改您的数据。"
+
 msgid "Le port est invalide."
 msgstr "端口无效。"
 
@@ -1217,6 +1527,12 @@ msgstr "“系统”主题会跟随您的设备设置。"
 
 msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
 msgstr "处理在后台运行。完成后此页面会自动更新。"
+
+msgid "Lecteur"
+msgstr "查看者"
+
+msgid "Lecteur : consultation et téléchargement. Éditeur : peut aussi nettoyer et supprimer ses fichiers. Administrateur : gère les rôles et voit tous les fichiers."
+msgstr "查看者：查看和下载。编辑者：还可清洗和删除自己的文件。管理员：管理角色并查看所有文件。"
 
 msgid "Les adresses internes sont refusées."
 msgstr "拒绝内部地址。"
@@ -1242,14 +1558,23 @@ msgstr "清理过的文件会先归档，超过该时长后被清理（0 = 无�
 msgid "Les identifiants intégrés à l'URL sont refusés."
 msgstr "拒绝 URL 中嵌入的凭据。"
 
+msgid "Les options choisies ne changeraient rien à ce jeu de données."
+msgstr "所选选项不会改变此数据集。"
+
 msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 msgstr "可用路由：/api/、/api/datasets/、/api/datasets/<id>/、/api/stats/。"
 
 msgid "Les statistiques affichées correspondent aux données réelles."
 msgstr "显示的统计数据与实际数据一致。"
 
+msgid "Lien de partage public"
+msgstr "公开共享链接"
+
 msgid "Lien invalide"
 msgstr "无效链接"
+
+msgid "Lien public"
+msgstr "公开链接"
 
 msgid "Ligne"
 msgstr "行"
@@ -1292,6 +1617,9 @@ msgstr "掌控你数据的生命周期。"
 
 msgid "Membre depuis"
 msgstr "注册时间"
+
+msgid "Mensuel"
+msgstr "每月"
 
 msgid "Mes règles"
 msgstr "我的规则"
@@ -1374,6 +1702,18 @@ msgstr "清洗已在后台启动。页面会自动更新。"
 msgid "Nettoyage lancé sur « %(name)s »"
 msgstr "已启动对“%(name)s”的清理"
 
+msgid "Nettoyage par lots"
+msgstr "批量清洗"
+
+msgid "Nettoyage par lots : %(count)s fichier(s) lancé(s)"
+msgstr "批量清洗：已启动 %(count)s 个文件"
+
+msgid "Nettoyage par lots — DataZen"
+msgstr "批量清洗 — DataZen"
+
+msgid "Nettoyage planifié de « %(name)s » lancé."
+msgstr "已启动“%(name)s”的计划清洗。"
+
 msgid "Nettoyage terminé"
 msgstr "清理完成"
 
@@ -1401,20 +1741,14 @@ msgstr "已清洗"
 msgid "Niveau"
 msgstr "级别"
 
-msgid "No exact duplicates"
-msgstr "无完全重复项"
-
-msgid "No missing or unknown values"
-msgstr "无缺失或未知值"
-
-msgid "No potential duplicates"
-msgstr "无潜在重复项"
-
 msgid "Nom"
 msgstr "名称"
 
 msgid "Nom d'utilisateur"
 msgstr "用户名"
+
+msgid "Nom de la colonne unique (ex. email). Laissez vide pour ne supprimer que les lignes 100 % identiques. Une colonne absente d'un fichier est ignorée pour ce fichier."
+msgstr "唯一列的名称（例如 email）。留空则仅删除 100% 完全相同的行。文件中缺少该列时，对该文件忽略此设置。"
 
 msgid "Nom de la règle"
 msgstr "规则名称"
@@ -1430,6 +1764,9 @@ msgstr "调用次数"
 
 msgid "Nombre d'occurrences"
 msgstr "出现次数"
+
+msgid "Nombre de colonnes concernées"
+msgstr "受影响的列数"
 
 msgid "Nombre de nettoyages et score moyen par semaine."
 msgstr "每周的清理次数与平均得分。"
@@ -1497,11 +1834,29 @@ msgstr "新照片已就绪"
 msgid "Nouvelle valeur"
 msgstr "新值"
 
+msgid "Numérique"
+msgstr "数值"
+
+msgid "Numéro de version"
+msgstr "版本号"
+
+msgid "Options de nettoyage"
+msgstr "清洗选项"
+
 msgid "Opération"
 msgstr "操作"
 
+msgid "Opérations appliquées"
+msgstr "已应用的操作"
+
 msgid "Opérations de nettoyage"
 msgstr "清理操作"
+
+msgid "Opérations de v%(n)s"
+msgstr "v%(n)s 的操作"
+
+msgid "Opérations qui seraient appliquées"
+msgstr "将要执行的操作"
 
 msgid "Organisation"
 msgstr "组织"
@@ -1527,6 +1882,27 @@ msgstr "页面"
 msgid "Parcourir…"
 msgstr "选择文件"
 
+msgid "Partage"
+msgstr "共享"
+
+msgid "Partage créé."
+msgstr "共享已创建。"
+
+msgid "Partage de « %(name)s » avec %(target)s"
+msgstr "将“%(name)s”共享给 %(target)s"
+
+msgid "Partage révoqué."
+msgstr "共享已撤销。"
+
+msgid "Partage — %(name)s"
+msgstr "共享 — %(name)s"
+
+msgid "Partages"
+msgstr "共享"
+
+msgid "Partagé le"
+msgstr "共享于"
+
 msgid "Pas encore de compte ?"
 msgstr "还没有账户？"
 
@@ -1541,6 +1917,27 @@ msgstr "头像"
 
 msgid "Pilotage"
 msgstr "总览"
+
+msgid "Planification"
+msgstr "计划"
+
+msgid "Planification %(state)s."
+msgstr "计划已%(state)s。"
+
+msgid "Planification créée pour « %(name)s »"
+msgstr "已为“%(name)s”创建计划"
+
+msgid "Planification créée."
+msgstr "计划已创建。"
+
+msgid "Planification supprimée."
+msgstr "计划已删除。"
+
+msgid "Planifications"
+msgstr "计划"
+
+msgid "Planifications — DataZen"
+msgstr "计划 — DataZen"
 
 msgid "Plus fréquent"
 msgstr "出现最多"
@@ -1557,10 +1954,16 @@ msgstr "权重"
 msgid "Premier quartile"
 msgstr "第一四分位数"
 
+msgid "Première exécution"
+msgstr "首次运行"
+
 msgid "Prendre une photo avec la caméra"
 msgstr "使用摄像头拍照"
 
 msgid "Problème"
+msgstr "问题"
+
+msgid "Problèmes"
 msgstr "问题"
 
 msgid "Problèmes après"
@@ -1574,6 +1977,9 @@ msgstr "检测到的问题"
 
 msgid "Problèmes restants"
 msgstr "剩余问题"
+
+msgid "Prochaine exécution"
+msgstr "下次运行"
 
 msgid "Productivité"
 msgstr "效率"
@@ -1593,8 +1999,17 @@ msgstr "公开资料"
 msgid "Profil visible publiquement"
 msgstr "公开显示个人资料"
 
+msgid "Profilage statistique"
+msgstr "统计画像"
+
 msgid "Profils"
 msgstr "个人资料"
+
+msgid "Programmer"
+msgstr "计划"
+
+msgid "Programmez un nettoyage récurrent : les mêmes options s'appliquent à chaque échéance, sans intervention de votre part."
+msgstr "设置定期清洗：每次到期都会应用相同的选项，无需您干预。"
 
 msgid "Progression"
 msgstr "进展"
@@ -1641,6 +2056,9 @@ msgstr "Q1"
 msgid "Q3"
 msgstr "Q3"
 
+msgid "Qualité : v%(before)s → v%(after)s"
+msgstr "质量：v%(before)s → v%(after)s"
+
 msgid "Qualité moyenne"
 msgstr "平均质量"
 
@@ -1649,6 +2067,9 @@ msgstr "按列质量"
 
 msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
 msgstr "简单介绍一下您、您的团队和您的数据集…"
+
+msgid "Quotidien"
+msgstr "每天"
 
 msgid "Raccourcis clavier"
 msgstr "键盘快捷键"
@@ -1707,6 +2128,12 @@ msgstr "搜索"
 msgid "Rechercher (Ctrl+K)"
 msgstr "搜索（Ctrl+K）"
 
+msgid "Rechercher un compte"
+msgstr "搜索账户"
+
+msgid "Rechercher un compte…"
+msgstr "搜索账户…"
+
 msgid "Rechercher un fichier"
 msgstr "搜索文件"
 
@@ -1749,11 +2176,20 @@ msgstr "报告为 %(reported)s，重新计算为 %(actual)s"
 msgid "Restauration"
 msgstr "恢复"
 
+msgid "Restauration de la version %(number)s de « %(name)s »"
+msgstr "正在恢复“%(name)s”的版本 %(number)s"
+
 msgid "Restauration de « %(name)s »"
 msgstr "恢复“%(name)s”"
 
+msgid "Restauration impossible : %(error)s"
+msgstr "无法恢复：%(error)s"
+
 msgid "Restaurer"
 msgstr "恢复"
+
+msgid "Restaurer cette version comme version courante ?"
+msgstr "将此版本恢复为当前版本？"
 
 msgid "Retour à la connexion"
 msgstr "返回登录"
@@ -1776,6 +2212,9 @@ msgstr "规则「%(name)s」已删除。"
 msgid "Règles"
 msgstr "规则"
 
+msgid "Règles appliquées"
+msgstr "已应用的规则"
+
 msgid "Règles de nettoyage"
 msgstr "清洗规则"
 
@@ -1796,6 +2235,9 @@ msgstr "问题分布"
 
 msgid "Répartition des problèmes restants"
 msgstr "剩余问题分布"
+
+msgid "Résultat de la simulation : rien n'a été écrit. Confirmez le nettoyage pour appliquer réellement ces changements."
+msgstr "模拟结果：未写入任何内容。确认清洗以真正应用这些更改。"
 
 msgid "Résultats"
 msgstr "结果"
@@ -1821,8 +2263,32 @@ msgstr "撤销"
 msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
 msgstr "撤销此令牌？使用它的集成将停止工作。"
 
+msgid "Révoquer ce partage ?"
+msgstr "撤销此共享？"
+
 msgid "Révoqué"
 msgstr "已撤销"
+
+msgid "Rôle"
+msgstr "角色"
+
+msgid "Rôle de « %(name)s » : %(before)s → %(after)s"
+msgstr "“%(name)s”的角色：%(before)s → %(after)s"
+
+msgid "Rôle de « %(name)s » mis à jour."
+msgstr "已更新“%(name)s”的角色。"
+
+msgid "Rôle du compte"
+msgstr "账户角色"
+
+msgid "Rôle inconnu."
+msgstr "未知角色。"
+
+msgid "Rôles et permissions"
+msgstr "角色与权限"
+
+msgid "Rôles et permissions — DataZen"
+msgstr "角色与权限 — DataZen"
 
 msgid "S'inscrire"
 msgstr "注册"
@@ -1833,8 +2299,14 @@ msgstr "输入 <strong>%(username)s</strong> 以确认"
 msgid "Score"
 msgstr "得分"
 
+msgid "Score après"
+msgstr "之后得分"
+
 msgid "Score après nettoyage"
 msgstr "清理后得分"
+
+msgid "Score avant"
+msgstr "之前得分"
 
 msgid "Score avant nettoyage"
 msgstr "清理前得分"
@@ -1863,6 +2335,9 @@ msgstr "清洗后质量得分"
 msgid "Score qualité avant"
 msgstr "清洗前质量得分"
 
+msgid "Scores mesurés lors de chaque nettoyage."
+msgstr "每次清洗时测得的得分。"
+
 msgid "Se connecter"
 msgstr "登录"
 
@@ -1875,11 +2350,20 @@ msgstr "在结果中移动"
 msgid "Sert uniquement à la réinitialisation du mot de passe."
 msgstr "仅用于密码重置。"
 
+msgid "Seul le propriétaire peut gérer les partages."
+msgstr "只有所有者可以管理共享。"
+
+msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
+msgstr "仅显示前几条修正；实际清洗会应用全部修正。"
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "仅允许 http 和 https 协议。"
 
 msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
 msgstr "如果该地址对应的账户存在，包含重置链接的邮件刚刚已发送。"
+
+msgid "Simulation — aucune modification enregistrée"
+msgstr "模拟 — 未保存任何更改"
 
 msgid "Site web"
 msgstr "网站"
@@ -1923,6 +2407,9 @@ msgstr "删除 %(name)s"
 msgid "Supprimer ce webhook ?"
 msgstr "删除此 Webhook？"
 
+msgid "Supprimer cette planification ?"
+msgstr "删除此计划？"
+
 msgid "Supprimer définitivement ce fichier et toutes ses données ?"
 msgstr "确定要永久删除此文件及其所有数据吗？"
 
@@ -1947,6 +2434,12 @@ msgstr "删除多余空格"
 msgid "Supprimer mon compte"
 msgstr "删除我的账户"
 
+msgid "Suspendre"
+msgstr "暂停"
+
+msgid "Suspendue"
+msgstr "已暂停"
+
 msgid "Synthèse"
 msgstr "综合"
 
@@ -1958,6 +2451,18 @@ msgstr "安全"
 
 msgid "Sélectionner un fichier"
 msgstr "选择一个文件"
+
+msgid "Sélectionnez au moins un fichier."
+msgstr "请至少选择一个文件。"
+
+msgid "Sélectionnez deux versions différentes pour afficher la comparaison."
+msgstr "请选择两个不同的版本以显示比较。"
+
+msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
+msgstr "最多选择 %(limit)s 个文件：超出部分会被截断，以免服务器过载。"
+
+msgid "Sévérité"
+msgstr "严重程度"
 
 msgid "Tableau de bord"
 msgstr "仪表板"
@@ -1998,8 +2503,17 @@ msgstr "一应俱全"
 msgid "Tout voir"
 msgstr "查看全部"
 
+msgid "Toute personne possédant ce lien peut consulter le fichier. Révoquez le partage pour l'invalider immédiatement."
+msgstr "任何拥有此链接的人都可以查看该文件。撤销共享即可立即使其失效。"
+
+msgid "Toute personne possédant le lien peut consulter le jeu de données, sans compte. Le lien est révocable et peut expirer."
+msgstr "任何拥有链接的人无需账户即可查看该数据集。链接可撤销，也可能过期。"
+
 msgid "Toutes les actions"
 msgstr "所有操作"
+
+msgid "Toutes les valeurs renseignées sont valides"
+msgstr "所有已填写的值均有效"
 
 msgid "Traçabilité"
 msgstr "可追溯性"
@@ -2013,11 +2527,17 @@ msgstr "类型"
 msgid "Type de correction"
 msgstr "修正类型"
 
+msgid "Type hétérogène"
+msgstr "混合类型"
+
 msgid "Téléchargement"
 msgstr "下载"
 
 msgid "Téléchargement de « %(name)s »"
 msgstr "下载“%(name)s”"
+
+msgid "Téléphone"
+msgstr "电话"
 
 msgid "Téléphone invalide"
 msgstr "无效电话"
@@ -2027,6 +2547,9 @@ msgstr "格式不规范的电话号码"
 
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "非标准电话号码（%(column)s）："
+
+msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
+msgstr "上传、清洗、计划并删除自己的文件。"
 
 msgid "Téléversement"
 msgstr "上传"
@@ -2057,6 +2580,9 @@ msgstr "无法从此页面删除管理员账户。"
 
 msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
 msgstr "管理员账户无法从本页面删除。请使用"
+
+msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
+msgstr "文件摘录：前几行足以判断数据质量。"
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "仪表板会对比清洗前后的质量，并说明每一处失分的原因。"
@@ -2100,11 +2626,20 @@ msgstr "替换值"
 msgid "Valeur de remplacement (pour le remplissage)."
 msgstr "替换值（用于填充）。"
 
+msgid "Valeur du moment centré"
+msgstr "中心矩的值"
+
+msgid "Valeur inconnue"
+msgstr "未知值"
+
 msgid "Valeur manquante"
 msgstr "缺失值"
 
 msgid "Valeur numérique invalide"
 msgstr "无效数值"
+
+msgid "Valeur unique « %(value)s » sur %(count)s ligne(s)."
+msgstr "%(count)s 行中仅有单一值“%(value)s”。"
 
 msgid "Valeurs aberrantes"
 msgstr "异常值"
@@ -2148,6 +2683,36 @@ msgstr "验证并修正电子邮件（仅修正明显错误）"
 msgid "Validité"
 msgstr "有效性"
 
+msgid "Variance"
+msgstr "方差"
+
+msgid "Version"
+msgstr "版本"
+
+msgid "Version %(number)s restaurée."
+msgstr "版本 %(number)s 已恢复。"
+
+msgid "Version comparée"
+msgstr "被比较的版本"
+
+msgid "Version courante"
+msgstr "当前版本"
+
+msgid "Version de référence"
+msgstr "参考版本"
+
+msgid "Versions"
+msgstr "版本"
+
+msgid "Versions enregistrées ("
+msgstr "已记录的版本（"
+
+msgid "Versions — %(name)s"
+msgstr "版本 — %(name)s"
+
+msgid "Vide pour créer un lien public."
+msgstr "留空以创建公开链接。"
+
 msgid "Visualisations statistiques"
 msgstr "统计可视化"
 
@@ -2169,6 +2734,9 @@ msgstr "您的数据值得<br> <span class=\"dz-gradient-text\">完美无瑕。<
 msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
 msgstr "你的文件始终留在你这里。DataZen 会告诉你哪些超出了所选保留时长，未经你同意不会删除任何内容。"
 
+msgid "Vos jeux de données"
+msgstr "您的数据集"
+
 msgid "Votre espace de travail"
 msgstr "你的工作区"
 
@@ -2187,6 +2755,18 @@ msgstr "您的头像已删除。"
 msgid "Votre profil a été mis à jour."
 msgstr "你的个人资料已更新。"
 
+msgid "Votre rôle ne permet pas de créer une planification."
+msgstr "您的角色不允许创建计划。"
+
+msgid "Votre rôle ne permet pas de lancer un nettoyage. Contactez un administrateur."
+msgstr "您的角色不允许启动清洗。请联系管理员。"
+
+msgid "Votre rôle ne permet pas de modifier les données. Contactez un administrateur."
+msgstr "您的角色不允许修改数据。请联系管理员。"
+
+msgid "Vous"
+msgstr "您"
+
 msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
 msgstr "主动权在你手里：没有你的操作，不会删除任何内容。"
 
@@ -2201,6 +2781,9 @@ msgstr "你无权访问此 Webhook。"
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "您无权访问此规则。"
+
+msgid "Vous ne pouvez pas modifier votre propre rôle."
+msgstr "您不能修改自己的角色。"
 
 msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
 msgstr "汇总全部文件的数据质量视图。"
@@ -2343,6 +2926,9 @@ msgstr "例如：email（留空 = 所有列）"
 msgid "excellente qualité"
 msgstr "质量极佳"
 
+msgid "faible"
+msgstr "低"
+
 msgid "fermer"
 msgstr "关闭"
 
@@ -2354,6 +2940,9 @@ msgstr "格式无法识别"
 
 msgid "généré le"
 msgstr "生成于"
+
+msgid "haute"
+msgstr "高"
 
 msgid "https://exemple.com"
 msgstr "https://exemple.com"
@@ -2373,6 +2962,9 @@ msgstr "未变化"
 msgid "jours"
 msgstr "天"
 
+msgid "lien public"
+msgstr "公开链接"
+
 msgid "lignes"
 msgstr "行"
 
@@ -2381,6 +2973,9 @@ msgstr "长度/格式不正确"
 
 msgid "matplotlib"
 msgstr "matplotlib"
+
+msgid "moyenne"
+msgstr "中"
 
 msgid "naviguer"
 msgstr "导航"
@@ -2436,6 +3031,9 @@ msgstr "已删除"
 msgid "sur"
 msgstr "共"
 
+msgid "suspendue"
+msgstr "已暂停"
+
 msgid "texte"
 msgstr "文本"
 
@@ -2445,11 +3043,17 @@ msgstr "电话"
 msgid "unicité"
 msgstr "唯一性"
 
+msgid "v%(n)s"
+msgstr "v%(n)s"
+
 msgid "valeur(s) extrême(s)"
 msgstr "极端值"
 
 msgid "validité"
 msgstr "有效性"
+
+msgid "« %(value)s » représente %(percent)s %% des valeurs renseignées."
+msgstr "“%(value)s”占已填写值的 %(percent)s %%。"
 
 msgid "· ancien_id :"
 msgstr "· ancien_id："
@@ -2474,6 +3078,12 @@ msgstr "清理失败"
 
 msgid "Échec du nettoyage de « %(name)s »"
 msgstr "“%(name)s”清理失败"
+
+msgid "Échec du nettoyage planifié : %(error)s"
+msgstr "计划清洗失败：%(error)s"
+
+msgid "Éditeur"
+msgstr "编辑者"
 
 msgid "Étape 1"
 msgstr "第 1 步"
@@ -2517,17 +3127,32 @@ msgstr "— 所有列 —"
 msgid "← Retour au fichier"
 msgstr "← 返回文件"
 
+msgid "← Retour à l'historique"
+msgstr "← 返回历史记录"
+
 msgid "⌨️ Raccourcis"
 msgstr "⌨️ 快捷键"
 
 msgid "⌨️ Raccourcis clavier"
 msgstr "⌨️ 键盘快捷键"
 
+msgid "⏱️ Nettoyages planifiés"
+msgstr "⏱️ 计划清洗"
+
+msgid "⏱️ Planifications"
+msgstr "⏱️ 计划"
+
 msgid "⏳ Fichiers expirés"
 msgstr "⏳ 过期文件"
 
 msgid "⏳ Nettoyage en cours…"
 msgstr "⏳ 正在清洗…"
+
+msgid "♻️ Restaurer"
+msgstr "♻️ 恢复"
+
+msgid "⚙️ Opérations communes"
+msgstr "⚙️ 共同操作"
 
 msgid "⚙️ Règles de nettoyage personnalisées"
 msgstr "⚙️ 自定义清洗规则"
@@ -2537,6 +3162,9 @@ msgstr "⚙️ 自定义规则"
 
 msgid "⚙️ Régler la durée"
 msgstr "⚙️ 调整时长"
+
+msgid "⚠️ Anomalies signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ 仅报告异常——绝不自动修改。"
 
 msgid "⚠️ Points nécessitant une vérification humaine"
 msgstr "⚠️ 需要人工核查的项目"
@@ -2586,8 +3214,14 @@ msgstr "✓ 已复制"
 msgid "➕ Nouveau jeton"
 msgstr "➕ 新建令牌"
 
+msgid "➕ Nouveau partage"
+msgstr "➕ 新建共享"
+
 msgid "➕ Nouveau webhook"
 msgstr "➕ 新建 Webhook"
+
+msgid "➕ Nouvelle planification"
+msgstr "➕ 新建计划"
 
 msgid "➕ Nouvelle règle"
 msgstr "➕ 新建规则"
@@ -2597,6 +3231,9 @@ msgstr "➕ 上传文件"
 
 msgid "⬇️ Exporter mes données (JSON)"
 msgstr "⬇️ 导出我的数据（JSON）"
+
+msgid "⬇️ Télécharger"
+msgstr "⬇️ 下载"
 
 msgid "⬇️ Télécharger le fichier nettoyé"
 msgstr "⬇️ 下载清洗后的文件"
@@ -2627,6 +3264,9 @@ msgstr "👁️ 查看报告"
 
 msgid "👤 Mon profil"
 msgstr "👤 我的资料"
+
+msgid "📄 Fichiers à nettoyer"
+msgstr "📄 待清洗文件"
 
 msgid "📈 Analyse exploratoire"
 msgstr "📈 探索性分析"
@@ -2664,8 +3304,14 @@ msgstr "📊 仪表板"
 msgid "📊 Tableau de bord global"
 msgstr "📊 全局仪表板"
 
+msgid "📋 Mes planifications ("
+msgstr "📋 我的计划（"
+
 msgid "📋 Mes règles ("
 msgstr "📋 我的规则（"
+
+msgid "📋 Partages actifs ("
+msgstr "📋 有效共享（"
 
 msgid "📋 Qualité des colonnes"
 msgstr "📋 列质量"
@@ -2703,11 +3349,26 @@ msgstr "🔌 API 与访问令牌"
 msgid "🔌 Jetons d'API"
 msgstr "🔌 API 令牌"
 
+msgid "🔍 Aperçu (simulation)"
+msgstr "🔍 预览（模拟）"
+
+msgid "🔍 Aperçu avant / après (simulation)"
+msgstr "🔍 前后对比预览（模拟）"
+
 msgid "🔍 Avant / après"
 msgstr "🔍 前后对比"
 
 msgid "🔍 Comparaison avant / après"
 msgstr "🔍 清理前后对比"
+
+msgid "🔍 Comparer"
+msgstr "🔍 比较"
+
+msgid "🔍 Comparer des versions"
+msgstr "🔍 比较版本"
+
+msgid "🔍 Comparer deux versions"
+msgstr "🔍 比较两个版本"
 
 msgid "🔍 Doublons"
 msgstr "🔍 重复项"
@@ -2733,6 +3394,9 @@ msgstr "🔎 得分说明"
 msgid "🔑 Mes jetons"
 msgstr "🔑 我的令牌"
 
+msgid "🔑 Votre lien de partage public"
+msgstr "🔑 您的公开共享链接"
+
 msgid "🔑 Votre nouveau jeton"
 msgstr "🔑 你的新令牌"
 
@@ -2747,6 +3411,9 @@ msgstr "🔔 我的 Webhook"
 
 msgid "🔔 Webhooks"
 msgstr "🔔 Webhook"
+
+msgid "🔗 Partager ce jeu de données"
+msgstr "🔗 共享此数据集"
 
 msgid "🔗 Voir mon profil public"
 msgstr "🔗 查看我的公开资料"
@@ -2769,8 +3436,17 @@ msgstr "🕓 活动"
 msgid "🕓 Dernières activités"
 msgstr "🕓 最近活动"
 
+msgid "🕓 Historique des versions"
+msgstr "🕓 版本历史"
+
 msgid "🕓 Journal d'activité"
 msgstr "🕓 活动日志"
+
+msgid "🕓 Versions"
+msgstr "🕓 版本"
+
+msgid "🗂️ Nettoyage par lots"
+msgstr "🗂️ 批量清洗"
 
 msgid "🗃️ Fichiers récents"
 msgstr "🗃️ 最近的文件"
@@ -2796,11 +3472,17 @@ msgstr "🚀 专业版新功能"
 msgid "🚀 Premier appel"
 msgstr "🚀 首次调用"
 
+msgid "🛡️ Rôles et permissions"
+msgstr "🛡️ 角色与权限"
+
 msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
 msgstr "🟢 保留第 1 行（删除其余行）"
 
 msgid "🟣 Fusionner toutes les lignes"
 msgstr "🟣 合并所有行"
+
+msgid "🧩 Anomalies structurelles"
+msgstr "🧩 结构异常"
 
 msgid "🧭 Dimensions les plus fragiles"
 msgstr "🧭 最薄弱的维度"

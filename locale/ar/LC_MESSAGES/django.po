@@ -16,11 +16,20 @@ msgstr "%(actual)s تصحيحات في السجل مقابل %(reported)s مُب
 msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
 msgstr "%(actual)s قيمة غير معروفة في أعمدة البريد الإلكتروني مقابل %(reported)s مُبلَّغ عنها"
 
+msgid "%(count)s anomalie(s) structurelle(s) détectée(s) sur les colonnes."
+msgstr "تم اكتشاف %(count)s من الشذوذات البنيوية في الأعمدة."
+
 msgid "%(count)s colonnes"
 msgstr "%(count)s أعمدة"
 
+msgid "%(count)s doublon(s) exact(s) restant(s)"
+msgstr "%(count)s تكرار مطابق متبقٍ"
+
 msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
 msgstr "%(count)s تكرار محتمل يحتاج إلى تحقق."
+
+msgid "%(count)s doublon(s) potentiel(s) à vérifier (pénalité réduite)"
+msgstr "%(count)s تكرار محتمل يحتاج إلى مراجعة يدوية (عقوبة مخففة)"
 
 msgid "%(count)s entrée(s) d'activité supprimée(s)."
 msgstr "تم حذف %(count)s من مدخلات سجل النشاط."
@@ -28,35 +37,38 @@ msgstr "تم حذف %(count)s من مدخلات سجل النشاط."
 msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
 msgstr "تعذّر تصحيح %(count)s من الأخطاء تلقائيًا."
 
-msgid "%(count)s exact duplicate(s) remaining"
-msgstr "%(count)s تكرار مطابق متبقٍ"
-
-msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
-msgstr "%(count)s قيمة غير متسقة متبقية (لا صالحة ولا غير معروفة)"
+msgid "%(count)s fichier(s) ignoré(s) : lot limité à %(limit)s."
+msgstr "تم تجاهل %(count)s ملف: الدفعة محدودة بـ %(limit)s."
 
 msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
 msgstr "%(count)s بريد إلكتروني غير صالح موجود (غير فارغ وغير معروف)"
 
-msgid "%(count)s invalid value(s) among filled data"
-msgstr "%(count)s قيمة غير صالحة ضمن البيانات المُعبأة"
-
 msgid "%(count)s lignes"
 msgstr "%(count)s صفوف"
 
-msgid "%(count)s missing value(s)"
-msgstr "%(count)s قيمة مفقودة"
-
-msgid "%(count)s non-standard value(s)"
-msgstr "%(count)s قيمة غير قياسية"
-
-msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
-msgstr "%(count)s تكرار محتمل يحتاج إلى مراجعة يدوية (عقوبة مخففة)"
-
-msgid "%(count)s unknown value(s) (data unavailable)"
-msgstr "%(count)s قيمة غير معروفة (البيانات غير متاحة)"
+msgid "%(count)s nettoyage(s) lancé(s) en arrière-plan."
+msgstr "بدأ %(count)s عملية تنظيف في الخلفية."
 
 msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
 msgstr "%(count)s قيمة شاذة تم اكتشافها في الأعمدة الرقمية."
+
+msgid "%(count)s valeur(s) d'identifiant dupliquée(s)."
+msgstr "%(count)s من قيم المعرّف المكرّرة."
+
+msgid "%(count)s valeur(s) incohérente(s) restante(s) (ni valide ni inconnue)"
+msgstr "%(count)s قيمة غير متسقة متبقية (لا صالحة ولا غير معروفة)"
+
+msgid "%(count)s valeur(s) inconnue(s) (donnée indisponible)"
+msgstr "%(count)s قيمة غير معروفة (البيانات غير متاحة)"
+
+msgid "%(count)s valeur(s) invalide(s) parmi les données renseignées"
+msgstr "%(count)s قيمة غير صالحة ضمن البيانات المُعبأة"
+
+msgid "%(count)s valeur(s) manquante(s)"
+msgstr "%(count)s قيمة مفقودة"
+
+msgid "%(count)s valeur(s) non standard"
+msgstr "%(count)s قيمة غير قياسية"
 
 msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
 msgstr "%(count)s قيمة حالياً «غير معروف»."
@@ -73,28 +85,68 @@ msgstr[5] "تم اكتشاف %(counter)s من التكرارات المحتمل�
 msgid "%(counter)s fichier affiché"
 msgid_plural "%(counter)s fichiers affichés"
 msgstr[0] "%(counter)s ملف معروض"
+msgstr[1] "%(counter)s ملف معروض"
+msgstr[2] "%(counter)s ملف معروض"
+msgstr[3] "%(counter)s ملف معروض"
+msgstr[4] "%(counter)s ملف معروض"
+msgstr[5] "%(counter)s ملف معروض"
 
 msgid "%(counter)s inconnu"
 msgid_plural "%(counter)s inconnus"
 msgstr[0] "%(counter)s غير معروف"
+msgstr[1] "%(counter)s غير معروف"
+msgstr[2] "%(counter)s غير معروف"
+msgstr[3] "%(counter)s غير معروف"
+msgstr[4] "%(counter)s غير معروف"
+msgstr[5] "%(counter)s غير معروف"
 
 msgid "%(counter)s invalide,"
 msgid_plural "%(counter)s invalides,"
 msgstr[0] "%(counter)s غير صالح،"
+msgstr[1] "%(counter)s غير صالح،"
+msgstr[2] "%(counter)s غير صالح،"
+msgstr[3] "%(counter)s غير صالح،"
+msgstr[4] "%(counter)s غير صالح،"
+msgstr[5] "%(counter)s غير صالح،"
 
 msgid "%(counter)s ligne concernée :"
 msgid_plural "%(counter)s lignes concernées :"
 msgstr[0] "%(counter)s صف معني:"
+msgstr[1] "%(counter)s صف معني:"
+msgstr[2] "%(counter)s صف معني:"
+msgstr[3] "%(counter)s صف معني:"
+msgstr[4] "%(counter)s صف معني:"
+msgstr[5] "%(counter)s صف معني:"
 
 msgid "%(counter)s valide,"
 msgid_plural "%(counter)s valides,"
 msgstr[0] "%(counter)s صالح،"
+msgstr[1] "%(counter)s صالح،"
+msgstr[2] "%(counter)s صالح،"
+msgstr[3] "%(counter)s صالح،"
+msgstr[4] "%(counter)s صالح،"
+msgstr[5] "%(counter)s صالح،"
+
+msgid "%(numeric)s valeur(s) numérique(s) sur %(total)s renseignée(s) : type hétérogène."
+msgstr "%(numeric)s من القيم الرقمية من أصل %(total)s قيمة مُدخلة: نوع مختلط."
 
 msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
 msgstr "تم حذف %(purged)s ملف، وأرشفة %(archived)s."
 
+msgid "%(runs)s exécution"
+msgid_plural "%(runs)s exécutions"
+msgstr[0] "%(runs)s تنفيذ"
+msgstr[1] "%(runs)s تنفيذ"
+msgstr[2] "%(runs)s تنفيذ"
+msgstr[3] "%(runs)s تنفيذ"
+msgstr[4] "%(runs)s تنفيذ"
+msgstr[5] "%(runs)s تنفيذ"
+
 msgid "%(score)s / 100  (%(weight)s %(percent)s)"
 msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(total)s valeur(s) aberrante(s) détectée(s) (méthode IQR). Colonnes les plus concernées : %(detail)s."
+msgstr "تم اكتشاف %(total)s من القيم الشاذة (طريقة IQR). الأعمدة الأكثر تأثرًا: %(detail)s."
 
 msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
 msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s مقابل %(expected)s متوقعة"
@@ -105,10 +157,23 @@ msgstr "%(value)s %(percent)s"
 msgid "(%(counter)s modification)"
 msgid_plural "(%(counter)s modifications)"
 msgstr[0] "(%(counter)s تعديل)"
+msgstr[1] "(%(counter)s تعديل)"
+msgstr[2] "(%(counter)s تعديل)"
+msgstr[3] "(%(counter)s تعديل)"
+msgstr[4] "(%(counter)s تعديل)"
+msgstr[5] "(%(counter)s تعديل)"
 
 msgid "(%(counter)s non-conformité)"
 msgid_plural "(%(counter)s non-conformités)"
 msgstr[0] "(%(counter)s عدم مطابقة)"
+msgstr[1] "(%(counter)s عدم مطابقة)"
+msgstr[2] "(%(counter)s عدم مطابقة)"
+msgstr[3] "(%(counter)s عدم مطابقة)"
+msgstr[4] "(%(counter)s عدم مطابقة)"
+msgstr[5] "(%(counter)s عدم مطابقة)"
+
+msgid "(%(shown)s sur %(total)s)"
+msgstr "(%(shown)s من %(total)s)"
 
 msgid "(colonnes : %(columns)s)"
 msgstr "(الأعمدة: %(columns)s)"
@@ -198,10 +263,13 @@ msgid "Activée"
 msgstr "مُفعّل"
 
 msgid "Administrateur"
-msgstr "مشرف"
+msgstr "مسؤول"
 
 msgid "Administration"
 msgstr "الإدارة"
+
+msgid "Adresse e-mail"
+msgstr "البريد الإلكتروني"
 
 msgid "Adresse email"
 msgstr "البريد الإلكتروني"
@@ -224,9 +292,6 @@ msgstr "عرض تفاصيل الحالات غير الطبيعية"
 msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
 msgstr "يُضاف إلى الترويسة X-DataZen-Signature ‏(HMAC-SHA256)."
 
-msgid "All filled values are valid"
-msgstr "جميع القيم المُعبأة صالحة"
-
 msgid "Aller au contenu principal"
 msgstr "الانتقال إلى المحتوى الرئيسي"
 
@@ -248,8 +313,20 @@ msgstr "القيمة السابقة"
 msgid "Annuler"
 msgstr "إلغاء"
 
+msgid "Anomalie"
+msgstr "شذوذ"
+
 msgid "Anomalies restantes (à traiter manuellement)"
 msgstr "الشذوذات المتبقية (تُعالج يدوياً)"
+
+msgid "Anomalies structurelles"
+msgstr "الشذوذات البنيوية"
+
+msgid "Anomalies structurelles par type"
+msgstr "الشذوذات البنيوية حسب النوع"
+
+msgid "Anonymisation"
+msgstr "إخفاء الهوية"
 
 msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
 msgstr "إخفاء هوية البيانات الحساسة (تم استبدال %(count)s بقيم مستعارة)"
@@ -263,8 +340,26 @@ msgstr "إخفاء هوية البيانات الحساسة (الأسماء وا
 msgid "Antananarivo, Madagascar"
 msgstr "Antananarivo, Madagascar"
 
+msgid "Aperçu"
+msgstr "معاينة"
+
+msgid "Aperçu calculé : aucune modification n'a été enregistrée. Confirmez pour appliquer le nettoyage."
+msgstr "تم حساب المعاينة: لم يتم حفظ أي تغيير. أكّد لتطبيق التنظيف."
+
+msgid "Aperçu de nettoyage sur « %(name)s »"
+msgstr "معاينة التنظيف لـ «%(name)s»"
+
+msgid "Aperçu des données"
+msgstr "معاينة البيانات"
+
 msgid "Aperçu du fichier nettoyé"
 msgstr "معاينة الملف المنظّف"
+
+msgid "Aperçu limité à %(shown)s lignes sur %(total)s."
+msgstr "المعاينة محدودة بـ %(shown)s من %(total)s صفًا."
+
+msgid "Aplatissement"
+msgstr "التفرطح"
 
 msgid "Appel API"
 msgstr "استدعاء API"
@@ -272,11 +367,20 @@ msgstr "استدعاء API"
 msgid "Appel API : %(path)s"
 msgstr "استدعاء API: %(path)s"
 
+msgid "Appelez-la depuis un planificateur système (cron, Planificateur de tâches Windows) toutes les cinq minutes."
+msgstr "استدعِها من مجدول النظام (cron أو مجدول مهام Windows) كل خمس دقائق."
+
 msgid "Appels"
 msgstr "الاستدعاءات"
 
 msgid "Application"
 msgstr "التطبيق"
+
+msgid "Appliquer"
+msgstr "تطبيق"
+
+msgid "Appliquez les mêmes opérations à plusieurs jeux de données en une seule fois. Les fichiers sont traités en série, un à la fois."
+msgstr "طبّق العمليات نفسها على عدة مجموعات بيانات دفعة واحدة. تُعالَج الملفات بالتتابع، واحدًا تلو الآخر."
 
 msgid "Après"
 msgstr "بعد"
@@ -296,6 +400,21 @@ msgstr "???????"
 msgid "Archivés"
 msgstr "مؤرشفة"
 
+msgid "Asymétrie"
+msgstr "الالتواء"
+
+msgid "Asymétrie et aplatissement (moments centrés) des colonnes numériques."
+msgstr "الالتواء والتفرطح (العزوم المركزية) للأعمدة الرقمية."
+
+msgid "Aucun compte ne correspond à cette recherche."
+msgstr "لا يوجد حساب مطابق لهذا البحث."
+
+msgid "Aucun doublon exact"
+msgstr "لا توجد تكرارات مطابقة"
+
+msgid "Aucun doublon potentiel"
+msgstr "لا توجد تكرارات محتملة"
+
 msgid "Aucun fichier d'origine n'est disponible."
 msgstr "لا يتوفر أي ملف أصلي."
 
@@ -309,7 +428,7 @@ msgid "Aucun fichier ne correspond à votre recherche."
 msgstr "لا يوجد ملف يطابق بحثك."
 
 msgid "Aucun fichier nettoyé n'est disponible."
-msgstr "لا يتوفر أي ملف منظّف."
+msgstr "لا يوجد ملف منظّف متاح."
 
 msgid "Aucun fichier nettoyé pour le moment."
 msgstr "لا يوجد ملف منظّف حتى الآن."
@@ -328,6 +447,12 @@ msgstr "لا يتوفر أي رسم بياني لمجموعة البيانات �
 
 msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
 msgstr "لا يوجد رمز حتى الآن. أنشئ واحدًا لاستخدام API."
+
+msgid "Aucun jeu de données disponible pour le moment."
+msgstr "لا توجد مجموعة بيانات متاحة في الوقت الحالي."
+
+msgid "Aucun jeu de données pour le moment."
+msgstr "لا توجد مجموعة بيانات في الوقت الحالي."
 
 msgid "Aucun journal des modifications n'est disponible."
 msgstr "لا يتوفر أي سجل تغييرات."
@@ -353,6 +478,9 @@ msgstr "لا يوجد نشاط مسجّل."
 msgid "Aucune anomalie restante."
 msgstr "لا توجد شذوذات متبقية."
 
+msgid "Aucune anomalie structurelle détectée."
+msgstr "لم يتم اكتشاف أي شذوذ بنيوي."
+
 msgid "Aucune anomalie."
 msgstr "لا توجد شذوذات."
 
@@ -361,6 +489,9 @@ msgstr "لا أعمدة"
 
 msgid "Aucune correction"
 msgstr "لا تصحيحات"
+
+msgid "Aucune correction de valeur ne serait nécessaire."
+msgstr "لن تكون هناك حاجة إلى أي تصحيح للقيم."
 
 msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
 msgstr "لا فرق ملحوظ بين الملف الأصلي والملف المنظّف: بياناتك كانت نظيفة بالفعل."
@@ -377,6 +508,18 @@ msgstr "لا تتوفر بيانات منظّفة."
 msgid "Aucune modification enregistrée."
 msgstr "لم يتم حفظ أي تعديل."
 
+msgid "Aucune opération enregistrée pour cette version."
+msgstr "لم تُسجَّل أي عملية لهذه النسخة."
+
+msgid "Aucune opération enregistrée."
+msgstr "لم تُسجَّل أي عملية."
+
+msgid "Aucune opération."
+msgstr "لا توجد عملية."
+
+msgid "Aucune planification : programmez un nettoyage récurrent pour ne plus y penser."
+msgstr "لا توجد أي خطة بعد: اضبط تنظيفًا متكررًا ولا تفكر في الأمر مجددًا."
+
 msgid "Aucune règle personnalisée."
 msgstr "لا توجد قاعدة مخصصة."
 
@@ -386,8 +529,17 @@ msgstr "لا توجد قواعد حتى الآن. أنشئ واحدة لإعاد
 msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
 msgstr "لم يتم اكتشاف أي قيمة شاذة في الأعمدة الرقمية."
 
+msgid "Aucune valeur manquante ou inconnue"
+msgstr "لا توجد قيم مفقودة أو غير معروفة"
+
+msgid "Aucune valeur renseignée sur %(rows)s ligne(s)."
+msgstr "لا توجد أي قيمة مُدخلة في %(rows)s صف."
+
 msgid "Aucune valeur « Inconnu »."
 msgstr "لا توجد قيمة «غير معروف»."
+
+msgid "Aucune version enregistrée : lancez un nettoyage pour en créer une."
+msgstr "لا توجد نسخ مسجّلة بعد: نفّذ تنظيفًا لإنشاء واحدة."
 
 msgid "Audit des emails"
 msgstr "تدقيق رسائل البريد الإلكتروني"
@@ -455,8 +607,20 @@ msgstr "توحيد علامة «غير معروف» (تم تصحيح %(count)s)"
 msgid "Capturer"
 msgstr "التقاط"
 
+msgid "Casse"
+msgstr "حالة الأحرف"
+
+msgid "Catégorie"
+msgstr "فئة"
+
 msgid "Ce graphique n'est pas disponible pour ce jeu de données."
 msgstr "هذا المخطط غير متاح لمجموعة البيانات هذه."
+
+msgid "Ce jeu de données n'est partagé avec personne pour le moment."
+msgstr "لم تتم مشاركة مجموعة البيانات هذه مع أي شخص بعد."
+
+msgid "Ce lien de partage est invalide ou a expiré."
+msgstr "رابط المشاركة هذا غير صالح أو منتهي الصلاحية."
 
 msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
 msgstr "لقد تم استخدام رابط إعادة التعيين هذا مسبقًا أو انتهت صلاحيته."
@@ -464,11 +628,20 @@ msgstr "لقد تم استخدام رابط إعادة التعيين هذا م�
 msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
 msgstr "هذا الرابط صالح لمرة واحدة فقط. إذا لم تكن مصدر هذا الطلب، تجاهل هذه الرسالة ببساطة: ستبقى كلمة مرورك دون تغيير. — DataZen"
 
+msgid "Ce lien ne permet pas le téléchargement."
+msgstr "هذا الرابط لا يسمح بالتنزيل."
+
+msgid "Ce partage ne permet pas le téléchargement."
+msgstr "هذه المشاركة لا تسمح بالتنزيل."
+
 msgid "Ce profil n'est pas public."
 msgstr "هذا الملف الشخصي غير عام."
 
 msgid "Ce que le nettoyage a réellement changé dans votre fichier."
 msgstr "ما غيّره التنظيف فعليًا في ملفك."
+
+msgid "Ce que permet chaque rôle"
+msgstr "ما يسمح به كل دور"
 
 msgid "Cellules manquantes"
 msgstr "الخلايا المفقودة"
@@ -478,6 +651,12 @@ msgstr "يتجاوز %(count)s ملف مدة الحفظ البالغة %(days)s 
 
 msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
 msgstr "تغذّي هذه العدّادات البحث الشامل والاختصارات أدناه."
+
+msgid "Ces deux versions sont identiques sur les indicateurs suivis."
+msgstr "هاتان النسختان متطابقتان في المؤشرات المتتبَّعة."
+
+msgid "Cette page est réservée aux administrateurs."
+msgstr "هذه الصفحة مخصّصة للمسؤولين."
 
 msgid "Champ"
 msgstr "الحقل"
@@ -503,6 +682,12 @@ msgstr "تغيير كلمة المرور"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "تغيير كلمة المرور — DataZen"
 
+msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
+msgstr "لكل حساب دور: قارئ أو محرر أو مسؤول. يتم التحقق على الخادم، وليس في الواجهة فقط."
+
+msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
+msgstr "كل تنظيف ناجح يثبّت نسخة: يمكنك تنزيلها ومقارنتها والرجوع عنها."
+
 msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
 msgstr "حمّل بياناتك بصيغة <code>.csv</code> أو <code>.xlsx</code> أو <code>.xls</code>، أيًا كان الفاصل."
 
@@ -511,6 +696,12 @@ msgstr "اختيار لغة الموقع"
 
 msgid "Choisir le format"
 msgstr "اختيار الصيغة"
+
+msgid "Choisissez deux versions pour mesurer ce qui a réellement changé entre elles."
+msgstr "اختر نسختين لقياس ما تغيّر فعليًا بينهما."
+
+msgid "Choisissez un destinataire ou cochez « Créer un lien public »."
+msgstr "اختر مستلمًا أو حدّد «إنشاء رابط عام»."
 
 msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
 msgstr "اختر ملف CSV أو Excel (.csv، .xlsx، .xls)."
@@ -551,6 +742,9 @@ msgstr "رمز اللغة (fr، en، es…). فارغ = لغة التطبيق."
 msgid "Coefficient de Pearson"
 msgstr "معامل بيرسون"
 
+msgid "Collaboration"
+msgstr "التعاون"
+
 msgid "Colonne"
 msgstr "العمود"
 
@@ -559,6 +753,15 @@ msgstr "العمود المستهدف"
 
 msgid "Colonne clé pour la déduplication"
 msgstr "عمود المفتاح لإزالة التكرار"
+
+msgid "Colonne constante"
+msgstr "عمود ثابت"
+
+msgid "Colonne quasi constante"
+msgstr "عمود شبه ثابت"
+
+msgid "Colonne vide"
+msgstr "عمود فارغ"
 
 msgid "Colonnes"
 msgstr "الأعمدة"
@@ -584,17 +787,29 @@ msgstr "الأعمدة غير المعروفة:"
 msgid "Colonnes stables"
 msgstr "أعمدة مستقرّة"
 
+msgid "Colonnes vides, constantes, quasi constantes ou à type hétérogène."
+msgstr "أعمدة فارغة أو ثابتة أو شبه ثابتة أو ذات نوع مختلط."
+
 msgid "Colonnes à vérifier"
 msgstr "أعمدة تستحق المراجعة"
 
 msgid "Combien de fichiers se trouvent dans chaque tranche de score."
 msgstr "عدد الملفات في كل نطاق من النقاط."
 
+msgid "Comment les échéances sont-elles exécutées ?"
+msgstr "كيف تُنفَّذ المواعيد المستحقة؟"
+
 msgid "Comparaison"
 msgstr "المقارنة"
 
 msgid "Comparaison avant / après — %(name)s"
 msgstr "مقارنة قبل / بعد — %(name)s"
+
+msgid "Comparaison de versions — %(name)s"
+msgstr "مقارنة النسخ — %(name)s"
+
+msgid "Comparer"
+msgstr "مقارنة"
 
 msgid "Complétion du profil"
 msgstr "اكتمال الملف الشخصي"
@@ -617,6 +832,9 @@ msgstr "الحساب"
 msgid "Compte actif"
 msgstr "حساب نشط"
 
+msgid "Comptes ("
+msgstr "الحسابات ("
+
 msgid "Condensé"
 msgstr "موجز"
 
@@ -625,6 +843,9 @@ msgstr "الثقة"
 
 msgid "Confirmer la décision"
 msgstr "تأكيد القرار"
+
+msgid "Confirmer le nettoyage"
+msgstr "تأكيد التنظيف"
 
 msgid "Connectez-vous pour retrouver vos fichiers."
 msgstr "سجّل الدخول للوصول إلى ملفاتك."
@@ -635,11 +856,20 @@ msgstr "تسجيل الدخول"
 msgid "Connexion — DataZen"
 msgstr "تسجيل الدخول — DataZen"
 
+msgid "Consultation"
+msgstr "اطّلاع"
+
 msgid "Consultation des graphiques"
 msgstr "عرض الرسوم البيانية"
 
 msgid "Consultation du rapport"
 msgstr "عرض التقرير"
+
+msgid "Consultation et téléchargement"
+msgstr "اطّلاع وتنزيل"
+
+msgid "Consulte et télécharge les jeux de données partagés. Ne modifie rien."
+msgstr "يطّلع على مجموعات البيانات المشتركة وينزّلها. لا يعدّل شيئًا."
 
 msgid "Continuer / valider une étape"
 msgstr "المتابعة / تأكيد خطوة"
@@ -695,11 +925,17 @@ msgstr "إنشاء القاعدة"
 msgid "Créer le jeton"
 msgstr "إنشاء الرمز"
 
+msgid "Créer le partage"
+msgstr "إنشاء المشاركة"
+
 msgid "Créer le webhook"
 msgstr "إنشاء webhook"
 
 msgid "Créer un compte"
 msgstr "إنشاء حساب"
+
+msgid "Créer un lien public"
+msgstr "إنشاء رابط عام"
 
 msgid "Créer une règle"
 msgstr "إنشاء قاعدة"
@@ -710,8 +946,14 @@ msgstr "أنشئ قاعدة مرة واحدة وأعد استخدامها في �
 msgid "Créez votre compte"
 msgstr "أنشئ حسابك"
 
-msgid "Data is consistent: each value is valid or unknown"
-msgstr "البيانات متسقة: كل قيمة صالحة أو غير معروفة"
+msgid "Créé par"
+msgstr "أنشأه"
+
+msgid "Créée par"
+msgstr "أنشأته"
+
+msgid "DataZen ne fait tourner aucun démon en arrière-plan : une commande de gestion reprend les échéances dues et relance le nettoyage par le même chemin de code que l'interface."
+msgstr "لا يشغّل DataZen أي خادم خلفي: أمر إداري يلتقط الخطط المستحقة ويعيد تشغيل التنظيف عبر المسار البرمجي نفسه الذي تستخدمه الواجهة."
 
 msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
 msgstr "DataZen — تطبيق تنظيف البيانات (DataClean Pro) · ©"
@@ -720,7 +962,7 @@ msgid "DataZen — Nettoyage de données"
 msgstr "DataZen — تنظيف البيانات"
 
 msgid "Date"
-msgstr "التاريخ"
+msgstr "تاريخ"
 
 msgid "Date d'expiration"
 msgstr "تاريخ الانتهاء"
@@ -743,14 +985,26 @@ msgstr "آخر رمز HTTP"
 msgid "Dernier déclenchement"
 msgstr "آخر تشغيل"
 
+msgid "Dernier statut"
+msgstr "آخر حالة"
+
 msgid "Dernier usage"
 msgstr "آخر استعمال"
 
 msgid "Derniers fichiers"
 msgstr "أحدث الملفات"
 
+msgid "Dernière : succès"
+msgstr "الأخيرة: ناجحة"
+
+msgid "Dernière : échec"
+msgstr "الأخيرة: فاشلة"
+
 msgid "Dernière connexion"
 msgstr "آخر تسجيل دخول"
+
+msgid "Dernière exécution"
+msgstr "آخر تنفيذ"
 
 msgid "Dernière utilisation"
 msgstr "آخر استخدام"
@@ -761,6 +1015,9 @@ msgstr "أحدث القواعد"
 msgid "Des incohérences ont été détectées entre les statistiques et les données."
 msgstr "تم اكتشاف حالات عدم اتساق بين الإحصاءات والبيانات."
 
+msgid "Destinataire"
+msgstr "المستلم"
+
 msgid "Dimension"
 msgstr "البُعد"
 
@@ -770,6 +1027,12 @@ msgstr "أبعاد الجودة"
 msgid "Dispersion et valeurs extrêmes des colonnes numériques."
 msgstr "التشتت والقيم المتطرفة في الأعمدة الرقمية."
 
+msgid "Distribution la plus asymétrique : « %(colonne)s » (asymétrie %(valeur)s) — moyenne et médiane s'écartent sensiblement, une transformation ou un traitement par quantiles est à envisager."
+msgstr "التوزيع الأكثر التواءً: «%(colonne)s» (الالتواء %(valeur)s) — يتباعد المتوسط والوسيط بشكل ملحوظ، يُنصح بالتفكير في تحويل أو معالجة بالمئينات."
+
+msgid "Distribution la plus concentrée/pointue : « %(colonne)s » (aplatissement %(valeur)s) — forte densité autour de la moyenne avec des valeurs extrêmes marquées."
+msgstr "التوزيع الأكثر تفرطحًا: «%(colonne)s» (التفرطح %(valeur)s) — كثافة عالية حول المتوسط مع قيم متطرفة واضحة."
+
 msgid "Distributions des colonnes numériques"
 msgstr "توزيعات الأعمدة الرقمية"
 
@@ -778,6 +1041,12 @@ msgstr "التوزيعات الرقمية"
 
 msgid "Django · Pandas · Bootstrap"
 msgstr "Django · Pandas · Bootstrap"
+
+msgid "Données cohérentes : chaque valeur est valide ou inconnue"
+msgstr "البيانات متسقة: كل قيمة صالحة أو غير معروفة"
+
+msgid "Doublon"
+msgstr "مكرر"
 
 msgid "Doublon par similarité"
 msgstr "تكرار بالتشابه"
@@ -821,6 +1090,12 @@ msgstr "التكرارات، المسافات الزائدة، البريد ال
 msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
 msgstr "التكرارات والقيم المفقودة والمسافات وحالة الأحرف والبريد الإلكتروني والهواتف والتواريخ والرواتب — كلها موحّدة."
 
+msgid "Droit"
+msgstr "الصلاحية"
+
+msgid "Droit accordé"
+msgstr "الصلاحية الممنوحة"
+
 msgid "Durée de conservation"
 msgstr "مدة الحفظ"
 
@@ -860,8 +1135,17 @@ msgstr "مسح"
 msgid "Effectif"
 msgstr "العدد"
 
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+msgid "Email fictif"
+msgstr "بريد إلكتروني وهمي"
+
 msgid "Email invalide"
 msgstr "بريد إلكتروني غير صالح"
+
+msgid "Email manquant"
+msgstr "بريد إلكتروني مفقود"
 
 msgid "Email nettoyé"
 msgstr "البريد الإلكتروني المنظّف"
@@ -932,8 +1216,14 @@ msgstr "الأخطاء المتبقية"
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
 
+msgid "Exemples de corrections"
+msgstr "أمثلة على التصحيحات"
+
 msgid "Expiration"
-msgstr "الانتهاء"
+msgstr "انتهاء الصلاحية"
+
+msgid "Expire le"
+msgstr "ينتهي في"
 
 msgid "Expiré"
 msgstr "منتهي الصلاحية"
@@ -944,6 +1234,12 @@ msgstr "شرح النتيجة"
 msgid "Export & traçabilité"
 msgstr "التصدير والتتبع"
 
+msgid "Exécuter"
+msgstr "تنفيذ"
+
+msgid "Exécutions"
+msgstr "التنفيذات"
+
 msgid "Fermer"
 msgstr "إغلاق"
 
@@ -951,7 +1247,7 @@ msgid "Fermer la fenêtre active"
 msgstr "إغلاق النافذة النشطة"
 
 msgid "Fichier"
-msgstr "ملف"
+msgstr "الملف"
 
 msgid "Fichier de données"
 msgstr "ملف البيانات"
@@ -1001,6 +1297,9 @@ msgstr "الملفات المنظّفة الأقدم من هذه المدة (0 =
 msgid "Fichiers récents"
 msgstr "الملفات الأخيرة"
 
+msgid "Fichiers à nettoyer"
+msgstr "الملفات المطلوب تنظيفها"
+
 msgid "Fil d'Ariane"
 msgstr "مسار التنقل"
 
@@ -1034,8 +1333,17 @@ msgstr "الصيغ المقبولة: <code>.csv</code> و<code>.xlsx</code> و<c
 msgid "Formats de dates (%(column)s) :"
 msgstr "تنسيقات التواريخ (%(column)s):"
 
-msgid "Formats standardized (phones, dates)"
+msgid "Formats standardisés (téléphones, dates)"
 msgstr "التنسيقات الموحّدة (الهواتف، التواريخ)"
+
+msgid "Forme des distributions"
+msgstr "شكل التوزيعات"
+
+msgid "Forme des distributions (asymétrie et aplatissement)"
+msgstr "شكل التوزيعات (الالتواء والتفرطح)"
+
+msgid "Fréquence"
+msgstr "التكرار"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "وفّر وقتك: كل ما يهم في DataZen على مسافة تركيبة مفاتيح."
@@ -1055,14 +1363,23 @@ msgstr "رسوم بيانية إحصائية تُنشأ باستخدام <strong
 msgid "Gratuit, immédiat, et vos fichiers restent privés."
 msgstr "مجاني وفوري، وتبقى ملفاتك خاصة."
 
+msgid "Gère les rôles et voit l'ensemble des fichiers de la plateforme."
+msgstr "يدير الأدوار ويرى جميع ملفات المنصة."
+
 msgid "Gérer les règles…"
 msgstr "إدارة القواعد…"
+
+msgid "Hebdomadaire"
+msgstr "أسبوعي"
 
 msgid "Histogrammes des colonnes numériques détectées."
 msgstr "مدرجات تكرار الأعمدة الرقمية المكتشفة."
 
 msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
 msgstr "سجل زمني لإجراءاتك: الرفع والتنظيف والتصدير وAPI."
+
+msgid "Identifiant non unique"
+msgstr "معرّف غير فريد"
 
 msgid "Identité"
 msgstr "الهوية"
@@ -1075,6 +1392,9 @@ msgstr "استيراد CSV و Excel"
 
 msgid "Impossible d'appliquer la décision : %(error)s"
 msgstr "تعذّر تطبيق القرار: %(error)s"
+
+msgid "Impossible de comparer ces versions : %(error)s"
+msgstr "تعذّرت مقارنة هذه النسخ: %(error)s"
 
 msgid "Impossible de convertir le fichier : %(error)s"
 msgstr "تعذّر تحويل الملف: %(error)s"
@@ -1091,6 +1411,9 @@ msgstr "تعذّر قراءة الملف: %(error)s"
 msgid "Impossible de lire le rapport : %(error)s"
 msgstr "تعذّر قراءة التقرير: %(error)s"
 
+msgid "Impossible de simuler le nettoyage : le fichier est illisible."
+msgstr "تعذّر محاكاة التنظيف: الملف غير قابل للقراءة."
+
 msgid "Inactif"
 msgstr "غير نشط"
 
@@ -1102,6 +1425,9 @@ msgstr "غير معروف"
 
 msgid "Indicateur"
 msgstr "المؤشر"
+
+msgid "Indicateurs"
+msgstr "المؤشرات"
 
 msgid "Indicateurs comparés"
 msgstr "المؤشرات المقارنة"
@@ -1145,6 +1471,9 @@ msgstr "تم إنشاء الرمز. انسخه الآن: لن يُعرض مرة 
 msgid "Jeton d'API"
 msgstr "رمز API"
 
+msgid "Jeton du lien"
+msgstr "رمز الرابط"
+
 msgid "Jeton « %(name)s » révoqué."
 msgstr "تم إلغاء الرمز « %(name)s »."
 
@@ -1153,6 +1482,12 @@ msgstr "الرموز"
 
 msgid "Jetons d'API"
 msgstr "رموز API"
+
+msgid "Jeu de données"
+msgstr "مجموعة البيانات"
+
+msgid "Jeu de données partagé en lecture seule via un lien DataZen."
+msgstr "مجموعة بيانات مشتركة للقراءة فقط عبر رابط DataZen."
 
 msgid "Journal d'activité"
 msgstr "سجل النشاط"
@@ -1181,8 +1516,17 @@ msgstr "يؤدي حذف الحساب إلى محو ملفاتك وقواعدك �
 msgid "Laisser vide pour appliquer à toutes les colonnes."
 msgstr "اتركه فارغاً لتطبيقه على جميع الأعمدة."
 
+msgid "Laissez vide pour démarrer à la prochaine échéance."
+msgstr "اتركه فارغًا للبدء عند الموعد التالي."
+
 msgid "Laissez vide pour un jeton sans expiration."
 msgstr "اتركه فارغًا لرمز بلا انتهاء صلاحية."
+
+msgid "Laissez vide pour un partage sans expiration."
+msgstr "اتركه فارغًا لمشاركة بلا انتهاء صلاحية."
+
+msgid "Lancer le nettoyage des fichiers sélectionnés"
+msgstr "بدء تنظيف الملفات المحددة"
 
 msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
 msgstr "ابدأ أولاً بعملية تنظيف للوصول إلى التحليل الاستكشافي."
@@ -1195,6 +1539,9 @@ msgstr "لغة الواجهة"
 
 msgid "Le compte « %(username)s » a été supprimé."
 msgstr "تم حذف الحساب «%(username)s»."
+
+msgid "Le fichier de cette version n'est plus disponible."
+msgstr "ملف هذه النسخة لم يعد متاحًا."
 
 msgid "Le fichier ne doit pas dépasser 20 Mo."
 msgstr "يجب ألا يتجاوز حجم الملف 20 ميغابايت."
@@ -1214,6 +1561,9 @@ msgstr "اسم مضيف الـ webhook يشير إلى عنوان داخلي."
 msgid "Le nom d'hôte est absent de l'URL."
 msgstr "اسم المضيف مفقود في عنوان URL."
 
+msgid "Le partage est toujours en lecture seule : le destinataire consulte et, si vous l'autorisez, télécharge. Il ne modifie jamais vos données."
+msgstr "المشاركة للقراءة فقط دائمًا: يطّلع المستلم، وينزّل إن سمحت له. ولا يعدّل بياناتك أبدًا."
+
 msgid "Le port est invalide."
 msgstr "المنفذ غير صالح."
 
@@ -1222,6 +1572,12 @@ msgstr "تتبع سمة «النظام» إعدادات جهازك."
 
 msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
 msgstr "تتم المعالجة في الخلفية. يتم تحديث هذه الصفحة تلقائيًا عند الانتهاء."
+
+msgid "Lecteur"
+msgstr "قارئ"
+
+msgid "Lecteur : consultation et téléchargement. Éditeur : peut aussi nettoyer et supprimer ses fichiers. Administrateur : gère les rôles et voit tous les fichiers."
+msgstr "قارئ: اطّلاع وتنزيل. محرر: يمكنه أيضًا تنظيف ملفاته وحذفها. مسؤول: يدير الأدوار ويرى جميع الملفات."
 
 msgid "Les adresses internes sont refusées."
 msgstr "العناوين الداخلية مرفوضة."
@@ -1247,14 +1603,23 @@ msgstr "تُؤرشف الملفات المنظّفة ثم تُحذف بعد هذ
 msgid "Les identifiants intégrés à l'URL sont refusés."
 msgstr "بيانات الاعتماد المضمّنة في عنوان URL مرفوضة."
 
+msgid "Les options choisies ne changeraient rien à ce jeu de données."
+msgstr "الخيارات المحددة لن تغيّر مجموعة البيانات هذه."
+
 msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 msgstr "المسارات المتاحة: /api/، /api/datasets/، /api/datasets/<id>/، /api/stats/."
 
 msgid "Les statistiques affichées correspondent aux données réelles."
 msgstr "تتوافق الإحصاءات المعروضة مع البيانات الفعلية."
 
+msgid "Lien de partage public"
+msgstr "رابط مشاركة عام"
+
 msgid "Lien invalide"
 msgstr "رابط غير صالح"
+
+msgid "Lien public"
+msgstr "رابط عام"
 
 msgid "Ligne"
 msgstr "الصف"
@@ -1297,6 +1662,9 @@ msgstr "تحكّم في دورة حياة بياناتك."
 
 msgid "Membre depuis"
 msgstr "عضو منذ"
+
+msgid "Mensuel"
+msgstr "شهري"
 
 msgid "Mes règles"
 msgstr "قواعدي"
@@ -1379,6 +1747,18 @@ msgstr "تم بدء التنظيف في الخلفية. تُحدَّث الصف�
 msgid "Nettoyage lancé sur « %(name)s »"
 msgstr "بدأ تنظيف « %(name)s »"
 
+msgid "Nettoyage par lots"
+msgstr "التنظيف بالدفعات"
+
+msgid "Nettoyage par lots : %(count)s fichier(s) lancé(s)"
+msgstr "التنظيف بالدفعات: بدأ %(count)s ملف"
+
+msgid "Nettoyage par lots — DataZen"
+msgstr "التنظيف بالدفعات — DataZen"
+
+msgid "Nettoyage planifié de « %(name)s » lancé."
+msgstr "بدأ التنظيف المجدول لـ «%(name)s»."
+
 msgid "Nettoyage terminé"
 msgstr "اكتمل التنظيف"
 
@@ -1406,20 +1786,14 @@ msgstr "منظَّفة"
 msgid "Niveau"
 msgstr "المستوى"
 
-msgid "No exact duplicates"
-msgstr "لا توجد تكرارات مطابقة"
-
-msgid "No missing or unknown values"
-msgstr "لا توجد قيم مفقودة أو غير معروفة"
-
-msgid "No potential duplicates"
-msgstr "لا توجد تكرارات محتملة"
-
 msgid "Nom"
 msgstr "الاسم"
 
 msgid "Nom d'utilisateur"
 msgstr "اسم المستخدم"
+
+msgid "Nom de la colonne unique (ex. email). Laissez vide pour ne supprimer que les lignes 100 % identiques. Une colonne absente d'un fichier est ignorée pour ce fichier."
+msgstr "اسم العمود الفريد (مثل email). اتركه فارغًا لحذف الصفوف المتطابقة 100% فقط. يُتجاهل العمود الغائب من ملف بالنسبة لذلك الملف."
 
 msgid "Nom de la règle"
 msgstr "اسم القاعدة"
@@ -1435,6 +1809,9 @@ msgstr "عدد الاستدعاءات"
 
 msgid "Nombre d'occurrences"
 msgstr "عدد التكرارات"
+
+msgid "Nombre de colonnes concernées"
+msgstr "عدد الأعمدة المتأثرة"
 
 msgid "Nombre de nettoyages et score moyen par semaine."
 msgstr "عدد عمليات التنظيف ومتوسط النقاط أسبوعيًا."
@@ -1502,11 +1879,29 @@ msgstr "الصورة الجديدة جاهزة"
 msgid "Nouvelle valeur"
 msgstr "القيمة الجديدة"
 
+msgid "Numérique"
+msgstr "رقمي"
+
+msgid "Numéro de version"
+msgstr "رقم النسخة"
+
+msgid "Options de nettoyage"
+msgstr "خيارات التنظيف"
+
 msgid "Opération"
 msgstr "العملية"
 
+msgid "Opérations appliquées"
+msgstr "العمليات المطبَّقة"
+
 msgid "Opérations de nettoyage"
 msgstr "عمليات التنظيف"
+
+msgid "Opérations de v%(n)s"
+msgstr "عمليات v%(n)s"
+
+msgid "Opérations qui seraient appliquées"
+msgstr "العمليات التي ستُطبَّق"
 
 msgid "Organisation"
 msgstr "المؤسسة"
@@ -1532,6 +1927,27 @@ msgstr "صفحة"
 msgid "Parcourir…"
 msgstr "اختر ملفًا"
 
+msgid "Partage"
+msgstr "مشاركة"
+
+msgid "Partage créé."
+msgstr "تم إنشاء المشاركة."
+
+msgid "Partage de « %(name)s » avec %(target)s"
+msgstr "مشاركة «%(name)s» مع %(target)s"
+
+msgid "Partage révoqué."
+msgstr "تم إلغاء المشاركة."
+
+msgid "Partage — %(name)s"
+msgstr "مشاركة — %(name)s"
+
+msgid "Partages"
+msgstr "المشاركات"
+
+msgid "Partagé le"
+msgstr "شورك في"
+
 msgid "Pas encore de compte ?"
 msgstr "ليس لديك حساب بعد؟"
 
@@ -1546,6 +1962,27 @@ msgstr "صورة الملف الشخصي"
 
 msgid "Pilotage"
 msgstr "القيادة"
+
+msgid "Planification"
+msgstr "الخطة"
+
+msgid "Planification %(state)s."
+msgstr "الخطة %(state)s."
+
+msgid "Planification créée pour « %(name)s »"
+msgstr "تم إنشاء خطة لـ «%(name)s»"
+
+msgid "Planification créée."
+msgstr "تم إنشاء الخطة."
+
+msgid "Planification supprimée."
+msgstr "تم حذف الخطة."
+
+msgid "Planifications"
+msgstr "الخطط"
+
+msgid "Planifications — DataZen"
+msgstr "الخطط — DataZen"
 
 msgid "Plus fréquent"
 msgstr "الأكثر تكرارًا"
@@ -1562,11 +1999,17 @@ msgstr "الترجيح"
 msgid "Premier quartile"
 msgstr "الربيع الأول"
 
+msgid "Première exécution"
+msgstr "أول تنفيذ"
+
 msgid "Prendre une photo avec la caméra"
 msgstr "التقاط صورة بالكاميرا"
 
 msgid "Problème"
 msgstr "مشكلة"
+
+msgid "Problèmes"
+msgstr "المشكلات"
 
 msgid "Problèmes après"
 msgstr "مشاكل بعد"
@@ -1579,6 +2022,9 @@ msgstr "المشكلات المكتشفة"
 
 msgid "Problèmes restants"
 msgstr "المشاكل المتبقية"
+
+msgid "Prochaine exécution"
+msgstr "التنفيذ التالي"
 
 msgid "Productivité"
 msgstr "الإنتاجية"
@@ -1598,8 +2044,17 @@ msgstr "الملف الشخصي العام"
 msgid "Profil visible publiquement"
 msgstr "ملف شخصي ظاهر للعموم"
 
+msgid "Profilage statistique"
+msgstr "التحليل الإحصائي"
+
 msgid "Profils"
 msgstr "الملفات الشخصية"
+
+msgid "Programmer"
+msgstr "جدولة"
+
+msgid "Programmez un nettoyage récurrent : les mêmes options s'appliquent à chaque échéance, sans intervention de votre part."
+msgstr "اضبط تنظيفًا متكررًا: تُطبَّق الخيارات نفسها عند كل موعد دون تدخّل منك."
 
 msgid "Progression"
 msgstr "التقدّم"
@@ -1646,6 +2101,9 @@ msgstr "الربع الأول"
 msgid "Q3"
 msgstr "الربع الثالث"
 
+msgid "Qualité : v%(before)s → v%(after)s"
+msgstr "الجودة: v%(before)s → v%(after)s"
+
 msgid "Qualité moyenne"
 msgstr "متوسط الجودة"
 
@@ -1654,6 +2112,9 @@ msgstr "الجودة حسب العمود"
 
 msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
 msgstr "بضع كلمات عنك وعن فريقك ومجموعات بياناتك…"
+
+msgid "Quotidien"
+msgstr "يومي"
 
 msgid "Raccourcis clavier"
 msgstr "اختصارات لوحة المفاتيح"
@@ -1712,6 +2173,12 @@ msgstr "بحث"
 msgid "Rechercher (Ctrl+K)"
 msgstr "بحث (Ctrl+K)"
 
+msgid "Rechercher un compte"
+msgstr "البحث عن حساب"
+
+msgid "Rechercher un compte…"
+msgstr "البحث عن حساب…"
+
 msgid "Rechercher un fichier"
 msgstr "البحث عن ملف"
 
@@ -1754,11 +2221,20 @@ msgstr "المُبلَّغ عنها %(reported)s مقابل المُعاد حس�
 msgid "Restauration"
 msgstr "الاستعادة"
 
+msgid "Restauration de la version %(number)s de « %(name)s »"
+msgstr "استعادة النسخة %(number)s من «%(name)s»"
+
 msgid "Restauration de « %(name)s »"
 msgstr "استعادة « %(name)s »"
 
+msgid "Restauration impossible : %(error)s"
+msgstr "تعذّرت الاستعادة: %(error)s"
+
 msgid "Restaurer"
 msgstr "استعادة"
+
+msgid "Restaurer cette version comme version courante ?"
+msgstr "استعادة هذه النسخة كنسخة حالية؟"
 
 msgid "Retour à la connexion"
 msgstr "العودة إلى تسجيل الدخول"
@@ -1781,6 +2257,9 @@ msgstr "تم حذف القاعدة «%(name)s»."
 msgid "Règles"
 msgstr "القواعد"
 
+msgid "Règles appliquées"
+msgstr "القواعد المطبَّقة"
+
 msgid "Règles de nettoyage"
 msgstr "قواعد التنظيف"
 
@@ -1801,6 +2280,9 @@ msgstr "توزيع المشكلات"
 
 msgid "Répartition des problèmes restants"
 msgstr "توزيع المشكلات المتبقية"
+
+msgid "Résultat de la simulation : rien n'a été écrit. Confirmez le nettoyage pour appliquer réellement ces changements."
+msgstr "نتيجة المحاكاة: لم تتم كتابة أي شيء. أكّد التنظيف لتطبيق هذه التغييرات فعليًا."
 
 msgid "Résultats"
 msgstr "النتائج"
@@ -1826,8 +2308,32 @@ msgstr "إلغاء"
 msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
 msgstr "إلغاء هذا الرمز؟ ستتوقف التكاملات التي تستخدمه عن العمل."
 
+msgid "Révoquer ce partage ?"
+msgstr "إلغاء هذه المشاركة؟"
+
 msgid "Révoqué"
-msgstr "ملغى"
+msgstr "ملغاة"
+
+msgid "Rôle"
+msgstr "الدور"
+
+msgid "Rôle de « %(name)s » : %(before)s → %(after)s"
+msgstr "دور «%(name)s»: %(before)s → %(after)s"
+
+msgid "Rôle de « %(name)s » mis à jour."
+msgstr "تم تحديث دور «%(name)s»."
+
+msgid "Rôle du compte"
+msgstr "دور الحساب"
+
+msgid "Rôle inconnu."
+msgstr "دور غير معروف."
+
+msgid "Rôles et permissions"
+msgstr "الأدوار والصلاحيات"
+
+msgid "Rôles et permissions — DataZen"
+msgstr "الأدوار والصلاحيات — DataZen"
 
 msgid "S'inscrire"
 msgstr "إنشاء حساب"
@@ -1838,8 +2344,14 @@ msgstr "اكتب <strong>%(username)s</strong> للتأكيد"
 msgid "Score"
 msgstr "النتيجة"
 
+msgid "Score après"
+msgstr "النتيجة بعد"
+
 msgid "Score après nettoyage"
 msgstr "النقاط بعد التنظيف"
+
+msgid "Score avant"
+msgstr "النتيجة قبل"
 
 msgid "Score avant nettoyage"
 msgstr "النقاط قبل التنظيف"
@@ -1868,6 +2380,9 @@ msgstr "نتيجة الجودة بعد"
 msgid "Score qualité avant"
 msgstr "نتيجة الجودة قبل"
 
+msgid "Scores mesurés lors de chaque nettoyage."
+msgstr "نتائج تُقاس عند كل تنظيف."
+
 msgid "Se connecter"
 msgstr "تسجيل الدخول"
 
@@ -1880,11 +2395,20 @@ msgstr "التنقّل في النتائج"
 msgid "Sert uniquement à la réinitialisation du mot de passe."
 msgstr "يُستخدم فقط لإعادة تعيين كلمة المرور."
 
+msgid "Seul le propriétaire peut gérer les partages."
+msgstr "المالك وحده يمكنه إدارة المشاركات."
+
+msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
+msgstr "يتم عرض التصحيحات الأولى فقط؛ سيطبق التنظيف الفعلي جميعها."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "يُسمح بمخططي http و https فقط."
 
 msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
 msgstr "إذا وُجد حساب بهذا العنوان، فقد تم للتو إرسال بريد إلكتروني يحتوي على رابط إعادة التعيين."
+
+msgid "Simulation — aucune modification enregistrée"
+msgstr "محاكاة — لم يتم حفظ أي تغيير"
 
 msgid "Site web"
 msgstr "الموقع الإلكتروني"
@@ -1899,7 +2423,7 @@ msgid "Succès"
 msgstr "نجاح"
 
 msgid "Superutilisateur"
-msgstr "مستخدم فائق"
+msgstr "مستخدم خارق"
 
 msgid "Suppression"
 msgstr "الحذف"
@@ -1928,6 +2452,9 @@ msgstr "??? %(name)s"
 msgid "Supprimer ce webhook ?"
 msgstr "حذف هذا webhook؟"
 
+msgid "Supprimer cette planification ?"
+msgstr "حذف هذه الخطة؟"
+
 msgid "Supprimer définitivement ce fichier et toutes ses données ?"
 msgstr "حذف هذا الملف وكل بياناته نهائياً؟"
 
@@ -1952,6 +2479,12 @@ msgstr "إزالة المسافات الزائدة"
 msgid "Supprimer mon compte"
 msgstr "حذف حسابي"
 
+msgid "Suspendre"
+msgstr "تعليق"
+
+msgid "Suspendue"
+msgstr "معلّقة"
+
 msgid "Synthèse"
 msgstr "الخلاصة"
 
@@ -1963,6 +2496,18 @@ msgstr "الأمان"
 
 msgid "Sélectionner un fichier"
 msgstr "تحديد ملف"
+
+msgid "Sélectionnez au moins un fichier."
+msgstr "حدّد ملفًا واحدًا على الأقل."
+
+msgid "Sélectionnez deux versions différentes pour afficher la comparaison."
+msgstr "اختر نسختين مختلفتين لعرض المقارنة."
+
+msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
+msgstr "حدّد حتى %(limit)s ملفات: بعد ذلك تُقتطع الدفعة لتجنّب إثقال الخادم."
+
+msgid "Sévérité"
+msgstr "الخطورة"
 
 msgid "Tableau de bord"
 msgstr "لوحة المعلومات"
@@ -2003,8 +2548,17 @@ msgstr "كل شيء مشمول"
 msgid "Tout voir"
 msgstr "عرض الكل"
 
+msgid "Toute personne possédant ce lien peut consulter le fichier. Révoquez le partage pour l'invalider immédiatement."
+msgstr "يمكن لأي شخص يملك هذا الرابط الاطّلاع على الملف. ألغِ المشاركة لإبطاله فورًا."
+
+msgid "Toute personne possédant le lien peut consulter le jeu de données, sans compte. Le lien est révocable et peut expirer."
+msgstr "يمكن لأي شخص يملك الرابط الاطّلاع على مجموعة البيانات دون حساب. الرابط قابل للإلغاء وقد ينتهي."
+
 msgid "Toutes les actions"
 msgstr "كل الإجراءات"
+
+msgid "Toutes les valeurs renseignées sont valides"
+msgstr "جميع القيم المُعبأة صالحة"
 
 msgid "Traçabilité"
 msgstr "قابلية التتبّع"
@@ -2018,11 +2572,17 @@ msgstr "النوع"
 msgid "Type de correction"
 msgstr "نوع التصحيح"
 
+msgid "Type hétérogène"
+msgstr "نوع مختلط"
+
 msgid "Téléchargement"
 msgstr "التنزيل"
 
 msgid "Téléchargement de « %(name)s »"
 msgstr "تنزيل « %(name)s »"
+
+msgid "Téléphone"
+msgstr "هاتف"
 
 msgid "Téléphone invalide"
 msgstr "رقم هاتف غير صالح"
@@ -2032,6 +2592,9 @@ msgstr "رقم هاتف بتنسيق غير قياسي"
 
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "أرقام هاتف غير قياسية (%(column)s):"
+
+msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
+msgstr "يرفع ملفاته وينظّفها ويجدولها ويحذفها."
 
 msgid "Téléversement"
 msgstr "الرفع"
@@ -2062,6 +2625,9 @@ msgstr "لا يمكن حذف حساب مسؤول من هذه الصفحة."
 
 msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
 msgstr "لا يمكن حذف حساب مشرف من هذه الصفحة. استخدم"
+
+msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
+msgstr "مقتطف من الملف: الصفوف الأولى تكفي للحكم على البيانات."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "تقيس لوحة المعلومات الجودة قبل / بعد وتشرح كل نقطة مفقودة."
@@ -2105,11 +2671,20 @@ msgstr "قيمة الاستبدال"
 msgid "Valeur de remplacement (pour le remplissage)."
 msgstr "قيمة بديلة (للتعبئة)."
 
+msgid "Valeur du moment centré"
+msgstr "قيمة العزم المركزي"
+
+msgid "Valeur inconnue"
+msgstr "قيمة غير معروفة"
+
 msgid "Valeur manquante"
 msgstr "قيمة مفقودة"
 
 msgid "Valeur numérique invalide"
 msgstr "قيمة رقمية غير صالحة"
+
+msgid "Valeur unique « %(value)s » sur %(count)s ligne(s)."
+msgstr "قيمة واحدة «%(value)s» على %(count)s صف."
 
 msgid "Valeurs aberrantes"
 msgstr "القيم الشاذة"
@@ -2153,6 +2728,36 @@ msgstr "التحقق من عناوين البريد الإلكتروني وتص�
 msgid "Validité"
 msgstr "الصحة"
 
+msgid "Variance"
+msgstr "التباين"
+
+msgid "Version"
+msgstr "النسخة"
+
+msgid "Version %(number)s restaurée."
+msgstr "تمت استعادة النسخة %(number)s."
+
+msgid "Version comparée"
+msgstr "النسخة المقارَنة"
+
+msgid "Version courante"
+msgstr "النسخة الحالية"
+
+msgid "Version de référence"
+msgstr "النسخة المرجعية"
+
+msgid "Versions"
+msgstr "النسخ"
+
+msgid "Versions enregistrées ("
+msgstr "النسخ المسجّلة ("
+
+msgid "Versions — %(name)s"
+msgstr "النسخ — %(name)s"
+
+msgid "Vide pour créer un lien public."
+msgstr "اتركه فارغًا لإنشاء رابط عام."
+
 msgid "Visualisations statistiques"
 msgstr "تصورات إحصائية"
 
@@ -2174,6 +2779,9 @@ msgstr "بياناتك تستحق<br> <span class=\"dz-gradient-text\">أن تك
 msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
 msgstr "ملفاتك تبقى لديك. يوضّح لك DataZen ما يتجاوز مدة الحفظ المختارة ولا يحذف شيئًا دون موافقتك."
 
+msgid "Vos jeux de données"
+msgstr "مجموعات بياناتك"
+
 msgid "Votre espace de travail"
 msgstr "مساحة عملك"
 
@@ -2192,6 +2800,18 @@ msgstr "تم حذف صورة ملفك الشخصي."
 msgid "Votre profil a été mis à jour."
 msgstr "تم تحديث ملفك الشخصي."
 
+msgid "Votre rôle ne permet pas de créer une planification."
+msgstr "دورك لا يسمح بإنشاء خطة."
+
+msgid "Votre rôle ne permet pas de lancer un nettoyage. Contactez un administrateur."
+msgstr "دورك لا يسمح ببدء التنظيف. تواصل مع مسؤول."
+
+msgid "Votre rôle ne permet pas de modifier les données. Contactez un administrateur."
+msgstr "دورك لا يسمح بتعديل البيانات. تواصل مع مسؤول."
+
+msgid "Vous"
+msgstr "أنت"
+
 msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
 msgstr "القرار بيدك: لا يُحذف شيء دون إجراء منك."
 
@@ -2206,6 +2826,9 @@ msgstr "ليس لديك صلاحية الوصول إلى هذا webhook."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "ليس لديك صلاحية الوصول إلى هذه القاعدة."
+
+msgid "Vous ne pouvez pas modifier votre propre rôle."
+msgstr "لا يمكنك تعديل دورك الخاص."
 
 msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
 msgstr "عرض موحّد لجودة بياناتك يشمل جميع الملفات."
@@ -2348,6 +2971,9 @@ msgstr "مثال: email (فارغ = جميع الأعمدة)"
 msgid "excellente qualité"
 msgstr "جودة ممتازة"
 
+msgid "faible"
+msgstr "منخفضة"
+
 msgid "fermer"
 msgstr "إغلاق"
 
@@ -2359,6 +2985,9 @@ msgstr "تنسيق غير معروف"
 
 msgid "généré le"
 msgstr "أُنشئ في"
+
+msgid "haute"
+msgstr "مرتفعة"
 
 msgid "https://exemple.com"
 msgstr "https://exemple.com"
@@ -2378,6 +3007,9 @@ msgstr "دون تغيير"
 msgid "jours"
 msgstr "أيام"
 
+msgid "lien public"
+msgstr "رابط عام"
+
 msgid "lignes"
 msgstr "أسطر"
 
@@ -2386,6 +3018,9 @@ msgstr "الطول/التنسيق غير صحيح"
 
 msgid "matplotlib"
 msgstr "matplotlib"
+
+msgid "moyenne"
+msgstr "متوسطة"
 
 msgid "naviguer"
 msgstr "تنقّل"
@@ -2441,6 +3076,9 @@ msgstr "محذوفة"
 msgid "sur"
 msgstr "من"
 
+msgid "suspendue"
+msgstr "معلّقة"
+
 msgid "texte"
 msgstr "النص"
 
@@ -2450,11 +3088,17 @@ msgstr "الهاتف"
 msgid "unicité"
 msgstr "التفرّد"
 
+msgid "v%(n)s"
+msgstr "v%(n)s"
+
 msgid "valeur(s) extrême(s)"
 msgstr "قيمة (قيم) متطرفة"
 
 msgid "validité"
 msgstr "الصلاحية"
+
+msgid "« %(value)s » représente %(percent)s %% des valeurs renseignées."
+msgstr "«%(value)s» يمثل %(percent)s %% من القيم المُدخلة."
 
 msgid "· ancien_id :"
 msgstr "· ancien_id:"
@@ -2479,6 +3123,12 @@ msgstr "فشل التنظيف"
 
 msgid "Échec du nettoyage de « %(name)s »"
 msgstr "فشل تنظيف « %(name)s »"
+
+msgid "Échec du nettoyage planifié : %(error)s"
+msgstr "فشل التنظيف المجدول: %(error)s"
+
+msgid "Éditeur"
+msgstr "محرر"
 
 msgid "Étape 1"
 msgstr "الخطوة 1"
@@ -2522,17 +3172,32 @@ msgstr "— جميع الأعمدة —"
 msgid "← Retour au fichier"
 msgstr "→ العودة إلى الملف"
 
+msgid "← Retour à l'historique"
+msgstr "← العودة إلى السجل"
+
 msgid "⌨️ Raccourcis"
 msgstr "⌨️ الاختصارات"
 
 msgid "⌨️ Raccourcis clavier"
 msgstr "⌨️ اختصارات لوحة المفاتيح"
 
+msgid "⏱️ Nettoyages planifiés"
+msgstr "⏱️ عمليات تنظيف مجدولة"
+
+msgid "⏱️ Planifications"
+msgstr "⏱️ الخطط"
+
 msgid "⏳ Fichiers expirés"
 msgstr "⏳ ملفات منتهية الصلاحية"
 
 msgid "⏳ Nettoyage en cours…"
 msgstr "⏳ جارٍ التنظيف…"
+
+msgid "♻️ Restaurer"
+msgstr "♻️ استعادة"
+
+msgid "⚙️ Opérations communes"
+msgstr "⚙️ العمليات المشتركة"
 
 msgid "⚙️ Règles de nettoyage personnalisées"
 msgstr "⚙️ قواعد تنظيف مخصصة"
@@ -2542,6 +3207,9 @@ msgstr "⚙️ قواعد مخصصة"
 
 msgid "⚙️ Régler la durée"
 msgstr "⚙️ ضبط المدة"
+
+msgid "⚠️ Anomalies signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ يتم الإبلاغ عن الشذوذات فقط — ولا تُعدَّل تلقائيًا أبدًا."
 
 msgid "⚠️ Points nécessitant une vérification humaine"
 msgstr "⚠️ نقاط تتطلب مراجعة بشرية"
@@ -2591,8 +3259,14 @@ msgstr "✓ تم النسخ"
 msgid "➕ Nouveau jeton"
 msgstr "➕ رمز جديد"
 
+msgid "➕ Nouveau partage"
+msgstr "➕ مشاركة جديدة"
+
 msgid "➕ Nouveau webhook"
 msgstr "➕ Webhook جديد"
+
+msgid "➕ Nouvelle planification"
+msgstr "➕ خطة جديدة"
 
 msgid "➕ Nouvelle règle"
 msgstr "➕ قاعدة جديدة"
@@ -2602,6 +3276,9 @@ msgstr "➕ رفع ملف"
 
 msgid "⬇️ Exporter mes données (JSON)"
 msgstr "⬇️ تصدير بياناتي (JSON)"
+
+msgid "⬇️ Télécharger"
+msgstr "⬇️ تنزيل"
 
 msgid "⬇️ Télécharger le fichier nettoyé"
 msgstr "⬇️ تنزيل الملف المنظّف"
@@ -2632,6 +3309,9 @@ msgstr "👁️ عرض التقرير"
 
 msgid "👤 Mon profil"
 msgstr "👤 ملفي الشخصي"
+
+msgid "📄 Fichiers à nettoyer"
+msgstr "📄 الملفات المطلوب تنظيفها"
 
 msgid "📈 Analyse exploratoire"
 msgstr "📈 التحليل الاستكشافي"
@@ -2669,8 +3349,14 @@ msgstr "📊 لوحة المعلومات"
 msgid "📊 Tableau de bord global"
 msgstr "📊 لوحة المعلومات الشاملة"
 
+msgid "📋 Mes planifications ("
+msgstr "📋 خططي ("
+
 msgid "📋 Mes règles ("
 msgstr "📋 قواعدي ("
+
+msgid "📋 Partages actifs ("
+msgstr "📋 المشاركات النشطة ("
 
 msgid "📋 Qualité des colonnes"
 msgstr "📋 جودة الأعمدة"
@@ -2708,11 +3394,26 @@ msgstr "🔌 API ورموز الوصول"
 msgid "🔌 Jetons d'API"
 msgstr "🔌 رموز API"
 
+msgid "🔍 Aperçu (simulation)"
+msgstr "🔍 معاينة (محاكاة)"
+
+msgid "🔍 Aperçu avant / après (simulation)"
+msgstr "🔍 معاينة قبل / بعد (محاكاة)"
+
 msgid "🔍 Avant / après"
 msgstr "🔍 قبل / بعد"
 
 msgid "🔍 Comparaison avant / après"
 msgstr "🔍 مقارنة قبل / بعد"
+
+msgid "🔍 Comparer"
+msgstr "🔍 مقارنة"
+
+msgid "🔍 Comparer des versions"
+msgstr "🔍 مقارنة النسخ"
+
+msgid "🔍 Comparer deux versions"
+msgstr "🔍 مقارنة نسختين"
 
 msgid "🔍 Doublons"
 msgstr "🔍 التكرارات"
@@ -2738,6 +3439,9 @@ msgstr "🔎 شرح النتيجة"
 msgid "🔑 Mes jetons"
 msgstr "🔑 رموزي"
 
+msgid "🔑 Votre lien de partage public"
+msgstr "🔑 رابط المشاركة العام الخاص بك"
+
 msgid "🔑 Votre nouveau jeton"
 msgstr "🔑 رمزك الجديد"
 
@@ -2752,6 +3456,9 @@ msgstr "🔔 الـ webhooks الخاصة بي"
 
 msgid "🔔 Webhooks"
 msgstr "🔔 Webhooks"
+
+msgid "🔗 Partager ce jeu de données"
+msgstr "🔗 شارك مجموعة البيانات هذه"
 
 msgid "🔗 Voir mon profil public"
 msgstr "🔗 عرض ملفي الشخصي العام"
@@ -2774,8 +3481,17 @@ msgstr "🕓 النشاط"
 msgid "🕓 Dernières activités"
 msgstr "🕓 آخر الأنشطة"
 
+msgid "🕓 Historique des versions"
+msgstr "🕓 سجل النسخ"
+
 msgid "🕓 Journal d'activité"
 msgstr "🕓 سجل النشاط"
+
+msgid "🕓 Versions"
+msgstr "🕓 النسخ"
+
+msgid "🗂️ Nettoyage par lots"
+msgstr "🗂️ التنظيف بالدفعات"
 
 msgid "🗃️ Fichiers récents"
 msgstr "🗃️ الملفات الأخيرة"
@@ -2801,11 +3517,17 @@ msgstr "🚀 جديد المساحة الاحترافية"
 msgid "🚀 Premier appel"
 msgstr "🚀 أول استدعاء"
 
+msgid "🛡️ Rôles et permissions"
+msgstr "🛡️ الأدوار والصلاحيات"
+
 msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
 msgstr "🟢 الاحتفاظ بالصف الأول (حذف الباقي)"
 
 msgid "🟣 Fusionner toutes les lignes"
 msgstr "🟣 دمج جميع الصفوف"
+
+msgid "🧩 Anomalies structurelles"
+msgstr "🧩 الشذوذات البنيوية"
 
 msgid "🧭 Dimensions les plus fragiles"
 msgstr "🧭 الأبعاد الأكثر هشاشة"

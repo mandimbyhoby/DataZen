@@ -71,6 +71,33 @@ PLURAL_FORMS = {
 }
 
 
+def plural_count(code: str) -> int:
+    """Nombre de formes plurielles déclarées pour une langue.
+
+    ``PLURAL_FORMS`` commence toujours par ``nplurals=N;`` : on relit ``N``
+    plutôt que de dupliquer la table.
+    """
+    declaration = PLURAL_FORMS.get(code, PLURAL_FORMS["en"])
+    return int(declaration.split("nplurals=", 1)[1].split(";", 1)[0])
+
+
+def plural_value(value, code: str) -> list[str]:
+    """Normalise une traduction plurielle en liste de ``nplurals`` formes.
+
+    Les catalogues déclarent souvent une seule forme (le singulier) pour un
+    msgid pluriel. Sans complétion, ``write_mo`` n'écrit que ``msgstr[0]`` et
+    ``gettext`` retombe sur le msgid — donc sur le français — dès que la
+    langue demande une autre forme. On réplique la forme fournie sur toutes
+    les formes attendues, ce qui est le comportement voulu pour les langues
+    à deux formes (anglais, allemand…) comme pour celles à forme unique.
+    """
+    forms = list(value) if isinstance(value, (list, tuple)) else [value or ""]
+    expected = plural_count(code)
+    while len(forms) < expected:
+        forms.append(forms[-1] if forms else "")
+    return forms[:expected]
+
+
 def po_escape(text: str) -> str:
     """Échappe une chaîne pour un fichier .po."""
     return (
@@ -153,8 +180,7 @@ def write_po(
         lines.append(f'msgid "{po_escape(msgid)}"')
         if plural:
             lines.append(f'msgid_plural "{po_escape(plural)}"')
-            forms = value if isinstance(value, (list, tuple)) else [value or ""]
-            for index, form in enumerate(forms):
+            for index, form in enumerate(plural_value(value, code)):
                 lines.append(f'msgstr[{index}] "{po_escape(form)}"')
         else:
             lines.append(f'msgstr "{po_escape(value)}"')
@@ -200,7 +226,7 @@ def write_mo(
         if not value:
             continue
         if plural:
-            forms = value if isinstance(value, (list, tuple)) else [value]
+            forms = plural_value(value, code)
             body = b"\x00".join(form.encode("utf-8") for form in forms)
         else:
             body = value.encode("utf-8")

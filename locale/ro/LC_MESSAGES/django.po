@@ -16,11 +16,20 @@ msgstr "%(actual)s corectări în jurnal vs %(reported)s raportate"
 msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
 msgstr "%(actual)s valori necunoscute în coloanele de e-mail vs %(reported)s raportate"
 
+msgid "%(count)s anomalie(s) structurelle(s) détectée(s) sur les colonnes."
+msgstr "%(count)s anomalie/anomalii structurale detectate în coloane."
+
 msgid "%(count)s colonnes"
 msgstr "%(count)s coloane"
 
+msgid "%(count)s doublon(s) exact(s) restant(s)"
+msgstr "%(count)s duplicate exacte rămase"
+
 msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
 msgstr "%(count)s duplicate potențiale necesită verificare."
+
+msgid "%(count)s doublon(s) potentiel(s) à vérifier (pénalité réduite)"
+msgstr "%(count)s duplicate potențiale necesită verificare manuală (penalizare redusă)"
 
 msgid "%(count)s entrée(s) d'activité supprimée(s)."
 msgstr "%(count)s înregistrări de activitate au fost șterse."
@@ -28,35 +37,38 @@ msgstr "%(count)s înregistrări de activitate au fost șterse."
 msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
 msgstr "%(count)s erori nu au putut fi corectate automat."
 
-msgid "%(count)s exact duplicate(s) remaining"
-msgstr "%(count)s duplicate exacte rămase"
-
-msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
-msgstr "%(count)s valori inconsistente rămase (nici valide, nici necunoscute)"
+msgid "%(count)s fichier(s) ignoré(s) : lot limité à %(limit)s."
+msgstr "%(count)s fișier(e) ignorat(e): lotul este limitat la %(limit)s."
 
 msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
 msgstr "%(count)s e-mailuri invalide prezente (necompletate și necunoscute)"
 
-msgid "%(count)s invalid value(s) among filled data"
-msgstr "%(count)s valori invalide în datele completate"
-
 msgid "%(count)s lignes"
 msgstr "%(count)s rânduri"
 
-msgid "%(count)s missing value(s)"
-msgstr "%(count)s valori lipsă"
-
-msgid "%(count)s non-standard value(s)"
-msgstr "%(count)s valori nestandard"
-
-msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
-msgstr "%(count)s duplicate potențiale necesită verificare manuală (penalizare redusă)"
-
-msgid "%(count)s unknown value(s) (data unavailable)"
-msgstr "%(count)s valori necunoscute (date indisponibile)"
+msgid "%(count)s nettoyage(s) lancé(s) en arrière-plan."
+msgstr "%(count)s curățare(i) pornită(e) în fundal."
 
 msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
 msgstr "%(count)s valori aberante detectate în coloanele numerice."
+
+msgid "%(count)s valeur(s) d'identifiant dupliquée(s)."
+msgstr "%(count)s valoare/valori de identificator duplicate."
+
+msgid "%(count)s valeur(s) incohérente(s) restante(s) (ni valide ni inconnue)"
+msgstr "%(count)s valori inconsistente rămase (nici valide, nici necunoscute)"
+
+msgid "%(count)s valeur(s) inconnue(s) (donnée indisponible)"
+msgstr "%(count)s valori necunoscute (date indisponibile)"
+
+msgid "%(count)s valeur(s) invalide(s) parmi les données renseignées"
+msgstr "%(count)s valori invalide în datele completate"
+
+msgid "%(count)s valeur(s) manquante(s)"
+msgstr "%(count)s valori lipsă"
+
+msgid "%(count)s valeur(s) non standard"
+msgstr "%(count)s valori nestandard"
 
 msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
 msgstr "%(count)s valori sunt în prezent « Necunoscut »."
@@ -70,28 +82,50 @@ msgstr[2] "Au fost detectate posibile duplicate: %(counter)s. Aceste rânduri <s
 msgid "%(counter)s fichier affiché"
 msgid_plural "%(counter)s fichiers affichés"
 msgstr[0] "%(counter)s fișier afișat"
+msgstr[1] "%(counter)s fișier afișat"
+msgstr[2] "%(counter)s fișier afișat"
 
 msgid "%(counter)s inconnu"
 msgid_plural "%(counter)s inconnus"
 msgstr[0] "%(counter)s necunoscut"
+msgstr[1] "%(counter)s necunoscut"
+msgstr[2] "%(counter)s necunoscut"
 
 msgid "%(counter)s invalide,"
 msgid_plural "%(counter)s invalides,"
 msgstr[0] "%(counter)s invalid,"
+msgstr[1] "%(counter)s invalid,"
+msgstr[2] "%(counter)s invalid,"
 
 msgid "%(counter)s ligne concernée :"
 msgid_plural "%(counter)s lignes concernées :"
 msgstr[0] "%(counter)s rând vizat:"
+msgstr[1] "%(counter)s rând vizat:"
+msgstr[2] "%(counter)s rând vizat:"
 
 msgid "%(counter)s valide,"
 msgid_plural "%(counter)s valides,"
 msgstr[0] "%(counter)s valid,"
+msgstr[1] "%(counter)s valid,"
+msgstr[2] "%(counter)s valid,"
+
+msgid "%(numeric)s valeur(s) numérique(s) sur %(total)s renseignée(s) : type hétérogène."
+msgstr "%(numeric)s valoare/valori numerice din %(total)s completate: tip mixt."
 
 msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
 msgstr "%(purged)s fișiere șterse, %(archived)s arhivate."
 
+msgid "%(runs)s exécution"
+msgid_plural "%(runs)s exécutions"
+msgstr[0] "%(runs)s execuție"
+msgstr[1] "%(runs)s execuție"
+msgstr[2] "%(runs)s execuție"
+
 msgid "%(score)s / 100  (%(weight)s %(percent)s)"
 msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(total)s valeur(s) aberrante(s) détectée(s) (méthode IQR). Colonnes les plus concernées : %(detail)s."
+msgstr "%(total)s valoare/valori aberante detectate (metoda IQR). Coloanele cele mai afectate: %(detail)s."
 
 msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
 msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s așteptate"
@@ -102,10 +136,17 @@ msgstr "%(value)s %(percent)s"
 msgid "(%(counter)s modification)"
 msgid_plural "(%(counter)s modifications)"
 msgstr[0] "(%(counter)s modificare)"
+msgstr[1] "(%(counter)s modificare)"
+msgstr[2] "(%(counter)s modificare)"
 
 msgid "(%(counter)s non-conformité)"
 msgid_plural "(%(counter)s non-conformités)"
 msgstr[0] "(%(counter)s neconformitate)"
+msgstr[1] "(%(counter)s neconformitate)"
+msgstr[2] "(%(counter)s neconformitate)"
+
+msgid "(%(shown)s sur %(total)s)"
+msgstr "(%(shown)s din %(total)s)"
 
 msgid "(colonnes : %(columns)s)"
 msgstr "(coloane: %(columns)s)"
@@ -174,7 +215,7 @@ msgid "Actions"
 msgstr "Acțiuni"
 
 msgid "Active"
-msgstr "Activ"
+msgstr "Activă"
 
 msgid "Activer"
 msgstr "Activează"
@@ -200,6 +241,9 @@ msgstr "Administrator"
 msgid "Administration"
 msgstr "Administrare"
 
+msgid "Adresse e-mail"
+msgstr "Adresă de e-mail"
+
 msgid "Adresse email"
 msgstr "Adresă de e-mail"
 
@@ -220,9 +264,6 @@ msgstr "Afișează detaliile anomaliilor"
 
 msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
 msgstr "Adăugat în antetul X-DataZen-Signature (HMAC-SHA256)."
-
-msgid "All filled values are valid"
-msgstr "Toate valorile completate sunt valide"
 
 msgid "Aller au contenu principal"
 msgstr "Salt la conținutul principal"
@@ -245,8 +286,20 @@ msgstr "Valoare veche"
 msgid "Annuler"
 msgstr "Anulează"
 
+msgid "Anomalie"
+msgstr "Anomalie"
+
 msgid "Anomalies restantes (à traiter manuellement)"
 msgstr "Anomalii rămase (de tratat manual)"
+
+msgid "Anomalies structurelles"
+msgstr "Anomalii structurale"
+
+msgid "Anomalies structurelles par type"
+msgstr "Anomalii structurale pe tip"
+
+msgid "Anonymisation"
+msgstr "Anonimizare"
 
 msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
 msgstr "Anonimizarea datelor sensibile (%(count)s valori pseudonimizate)"
@@ -260,8 +313,26 @@ msgstr "Anonimizează datele sensibile (nume, e-mailuri, numere de telefon)"
 msgid "Antananarivo, Madagascar"
 msgstr "Antananarivo, Madagascar"
 
+msgid "Aperçu"
+msgstr "Previzualizare"
+
+msgid "Aperçu calculé : aucune modification n'a été enregistrée. Confirmez pour appliquer le nettoyage."
+msgstr "Previzualizare calculată: nicio modificare nu a fost salvată. Confirmați pentru a aplica curățarea."
+
+msgid "Aperçu de nettoyage sur « %(name)s »"
+msgstr "Previzualizare curățare pentru „%(name)s”"
+
+msgid "Aperçu des données"
+msgstr "Previzualizarea datelor"
+
 msgid "Aperçu du fichier nettoyé"
 msgstr "Previzualizarea fișierului curățat"
+
+msgid "Aperçu limité à %(shown)s lignes sur %(total)s."
+msgstr "Previzualizare limitată la %(shown)s din %(total)s rânduri."
+
+msgid "Aplatissement"
+msgstr "Curtosis"
 
 msgid "Appel API"
 msgstr "Apel API"
@@ -269,11 +340,20 @@ msgstr "Apel API"
 msgid "Appel API : %(path)s"
 msgstr "Apel API: %(path)s"
 
+msgid "Appelez-la depuis un planificateur système (cron, Planificateur de tâches Windows) toutes les cinq minutes."
+msgstr "Apelați-o dintr-un planificator de sistem (cron, Planificatorul de activități Windows) la fiecare cinci minute."
+
 msgid "Appels"
 msgstr "Apeluri"
 
 msgid "Application"
 msgstr "Aplicație"
+
+msgid "Appliquer"
+msgstr "Aplică"
+
+msgid "Appliquez les mêmes opérations à plusieurs jeux de données en une seule fois. Les fichiers sont traités en série, un à la fois."
+msgstr "Aplicați aceleași operații mai multor seturi de date dintr-o dată. Fișierele sunt procesate în serie, unul câte unul."
 
 msgid "Après"
 msgstr "După"
@@ -292,6 +372,21 @@ msgstr "Arhive"
 
 msgid "Archivés"
 msgstr "Arhivate"
+
+msgid "Asymétrie"
+msgstr "Asimetrie"
+
+msgid "Asymétrie et aplatissement (moments centrés) des colonnes numériques."
+msgstr "Asimetria și boltirea (momente centrate) coloanelor numerice."
+
+msgid "Aucun compte ne correspond à cette recherche."
+msgstr "Niciun cont nu corespunde acestei căutări."
+
+msgid "Aucun doublon exact"
+msgstr "Fără duplicate exacte"
+
+msgid "Aucun doublon potentiel"
+msgstr "Fără duplicate potențiale"
 
 msgid "Aucun fichier d'origine n'est disponible."
 msgstr "Nu este disponibil niciun fișier original."
@@ -326,6 +421,12 @@ msgstr "Nu există grafic disponibil pentru acest set de date: nu conține sufic
 msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
 msgstr "Niciun token deocamdată. Creați unul pentru a folosi API-ul."
 
+msgid "Aucun jeu de données disponible pour le moment."
+msgstr "Momentan nu este disponibil niciun set de date."
+
+msgid "Aucun jeu de données pour le moment."
+msgstr "Momentan nu există seturi de date."
+
 msgid "Aucun journal des modifications n'est disponible."
 msgstr "Nu este disponibil niciun jurnal al modificărilor."
 
@@ -350,6 +451,9 @@ msgstr "Nicio activitate înregistrată."
 msgid "Aucune anomalie restante."
 msgstr "Nu au rămas anomalii."
 
+msgid "Aucune anomalie structurelle détectée."
+msgstr "Nu a fost detectată nicio anomalie structurală."
+
 msgid "Aucune anomalie."
 msgstr "Fără anomalii."
 
@@ -358,6 +462,9 @@ msgstr "Nicio coloană"
 
 msgid "Aucune correction"
 msgstr "Nicio corecție"
+
+msgid "Aucune correction de valeur ne serait nécessaire."
+msgstr "Nu ar fi necesară nicio corectare a valorilor."
 
 msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
 msgstr "Nicio diferență notabilă între fișierul original și cel curățat: datele dvs. erau deja curate."
@@ -374,6 +481,18 @@ msgstr "Nu sunt disponibile date curățate."
 msgid "Aucune modification enregistrée."
 msgstr "Nu a fost salvată nicio modificare."
 
+msgid "Aucune opération enregistrée pour cette version."
+msgstr "Nu s-a înregistrat nicio operație pentru această versiune."
+
+msgid "Aucune opération enregistrée."
+msgstr "Nu s-a înregistrat nicio operație."
+
+msgid "Aucune opération."
+msgstr "Nicio operațiune."
+
+msgid "Aucune planification : programmez un nettoyage récurrent pour ne plus y penser."
+msgstr "Încă nicio planificare: configurați o curățare recurentă și nu mai stați să vă gândiți."
+
 msgid "Aucune règle personnalisée."
 msgstr "Nu există reguli personalizate."
 
@@ -383,8 +502,17 @@ msgstr "Momentan nu există reguli. Creați una pentru a o reutiliza în toate f
 msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
 msgstr "Nu au fost detectate valori aberante în coloanele numerice."
 
+msgid "Aucune valeur manquante ou inconnue"
+msgstr "Fără valori lipsă sau necunoscute"
+
+msgid "Aucune valeur renseignée sur %(rows)s ligne(s)."
+msgstr "Nicio valoare completată în %(rows)s rând(uri)."
+
 msgid "Aucune valeur « Inconnu »."
 msgstr "Nu există valori « Necunoscut »."
+
+msgid "Aucune version enregistrée : lancez un nettoyage pour en créer une."
+msgstr "Nu există încă versiuni înregistrate: rulați o curățare pentru a crea una."
 
 msgid "Audit des emails"
 msgstr "Auditul e-mailurilor"
@@ -452,8 +580,20 @@ msgstr "Uniformizarea marcajului „Necunoscut” (%(count)s corectate)"
 msgid "Capturer"
 msgstr "Capturați"
 
+msgid "Casse"
+msgstr "Majuscule/minuscule"
+
+msgid "Catégorie"
+msgstr "Categorie"
+
 msgid "Ce graphique n'est pas disponible pour ce jeu de données."
 msgstr "Acest grafic nu este disponibil pentru acest set de date."
+
+msgid "Ce jeu de données n'est partagé avec personne pour le moment."
+msgstr "Acest set de date nu este încă partajat cu nimeni."
+
+msgid "Ce lien de partage est invalide ou a expiré."
+msgstr "Acest link de partajare este invalid sau a expirat."
 
 msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
 msgstr "Acest link de resetare a fost deja utilizat sau a expirat."
@@ -461,11 +601,20 @@ msgstr "Acest link de resetare a fost deja utilizat sau a expirat."
 msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
 msgstr "Acest link este valabil o singură dată. Dacă nu ați solicitat acest lucru, ignorați acest mesaj: parola dvs. rămâne neschimbată. — DataZen"
 
+msgid "Ce lien ne permet pas le téléchargement."
+msgstr "Acest link nu permite descărcarea."
+
+msgid "Ce partage ne permet pas le téléchargement."
+msgstr "Această partajare nu permite descărcarea."
+
 msgid "Ce profil n'est pas public."
 msgstr "Acest profil nu este public."
 
 msgid "Ce que le nettoyage a réellement changé dans votre fichier."
 msgstr "Ce a schimbat de fapt curățarea în fișierul dvs."
+
+msgid "Ce que permet chaque rôle"
+msgstr "Ce permite fiecare rol"
 
 msgid "Cellules manquantes"
 msgstr "Celule lipsă"
@@ -475,6 +624,12 @@ msgstr "Aceste %(count)s fișiere depășesc durata de păstrare de %(days)s zil
 
 msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
 msgstr "Acești contori alimentează căutarea globală și comenzile rapide de mai jos."
+
+msgid "Ces deux versions sont identiques sur les indicateurs suivis."
+msgstr "Aceste două versiuni sunt identice la indicatorii urmăriți."
+
+msgid "Cette page est réservée aux administrateurs."
+msgstr "Această pagină este rezervată administratorilor."
 
 msgid "Champ"
 msgstr "Câmp"
@@ -500,6 +655,12 @@ msgstr "Schimbați parola"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Schimbați parola — DataZen"
 
+msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
+msgstr "Fiecare cont are un rol: cititor, editor sau administrator. Verificarea se face pe server, nu doar în interfață."
+
+msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
+msgstr "Fiecare curățare reușită fixează o versiune: o puteți descărca, compara și reveni."
+
 msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
 msgstr "Încărcați datele în format <code>.csv</code>, <code>.xlsx</code> sau <code>.xls</code>, indiferent de separator."
 
@@ -508,6 +669,12 @@ msgstr "Alegeți limba site-ului"
 
 msgid "Choisir le format"
 msgstr "Alegeți formatul"
+
+msgid "Choisissez deux versions pour mesurer ce qui a réellement changé entre elles."
+msgstr "Alegeți două versiuni pentru a măsura ce s-a schimbat efectiv între ele."
+
+msgid "Choisissez un destinataire ou cochez « Créer un lien public »."
+msgstr "Alegeți un destinatar sau bifați «Creează un link public»."
 
 msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
 msgstr "Alegeți un fișier CSV sau Excel (.csv, .xlsx, .xls)."
@@ -548,6 +715,9 @@ msgstr "Cod de limbă (fr, en, es…). Gol = limba aplicației."
 msgid "Coefficient de Pearson"
 msgstr "Coeficientul Pearson"
 
+msgid "Collaboration"
+msgstr "Colaborare"
+
 msgid "Colonne"
 msgstr "Coloană"
 
@@ -556,6 +726,15 @@ msgstr "Coloană vizată"
 
 msgid "Colonne clé pour la déduplication"
 msgstr "Coloană-cheie pentru deduplicare"
+
+msgid "Colonne constante"
+msgstr "Coloană constantă"
+
+msgid "Colonne quasi constante"
+msgstr "Coloană aproape constantă"
+
+msgid "Colonne vide"
+msgstr "Coloană goală"
 
 msgid "Colonnes"
 msgstr "Coloane"
@@ -581,17 +760,29 @@ msgstr "Coloane necunoscute:"
 msgid "Colonnes stables"
 msgstr "Coloane stabile"
 
+msgid "Colonnes vides, constantes, quasi constantes ou à type hétérogène."
+msgstr "Coloane goale, constante, aproape constante sau cu tip mixt."
+
 msgid "Colonnes à vérifier"
 msgstr "Coloane de verificat"
 
 msgid "Combien de fichiers se trouvent dans chaque tranche de score."
 msgstr "Câte fișiere se află în fiecare interval de scor."
 
+msgid "Comment les échéances sont-elles exécutées ?"
+msgstr "Cum se execută termenele?"
+
 msgid "Comparaison"
 msgstr "Comparație"
 
 msgid "Comparaison avant / après — %(name)s"
 msgstr "Comparație înainte / după — %(name)s"
+
+msgid "Comparaison de versions — %(name)s"
+msgstr "Comparație de versiuni — %(name)s"
+
+msgid "Comparer"
+msgstr "Compară"
 
 msgid "Complétion du profil"
 msgstr "Completarea profilului"
@@ -614,6 +805,9 @@ msgstr "Cont"
 msgid "Compte actif"
 msgstr "Cont activ"
 
+msgid "Comptes ("
+msgstr "Conturi ("
+
 msgid "Condensé"
 msgstr "Sinteză"
 
@@ -622,6 +816,9 @@ msgstr "Încredere"
 
 msgid "Confirmer la décision"
 msgstr "Confirmați decizia"
+
+msgid "Confirmer le nettoyage"
+msgstr "Confirmați curățarea"
 
 msgid "Connectez-vous pour retrouver vos fichiers."
 msgstr "Conectați-vă pentru a vă regăsi fișierele."
@@ -632,11 +829,20 @@ msgstr "Conectare"
 msgid "Connexion — DataZen"
 msgstr "Conectare — DataZen"
 
+msgid "Consultation"
+msgstr "Consultare"
+
 msgid "Consultation des graphiques"
 msgstr "Vizualizarea graficelor"
 
 msgid "Consultation du rapport"
 msgstr "Vizualizarea raportului"
+
+msgid "Consultation et téléchargement"
+msgstr "Consultare și descărcare"
+
+msgid "Consulte et télécharge les jeux de données partagés. Ne modifie rien."
+msgstr "Consultă și descarcă seturile de date partajate. Nu modifică nimic."
 
 msgid "Continuer / valider une étape"
 msgstr "Continuați / validați un pas"
@@ -692,11 +898,17 @@ msgstr "Creați regula"
 msgid "Créer le jeton"
 msgstr "Creați tokenul"
 
+msgid "Créer le partage"
+msgstr "Creează partajarea"
+
 msgid "Créer le webhook"
 msgstr "Creați webhook-ul"
 
 msgid "Créer un compte"
 msgstr "Creați un cont"
+
+msgid "Créer un lien public"
+msgstr "Creează un link public"
 
 msgid "Créer une règle"
 msgstr "Creați o regulă"
@@ -707,8 +919,14 @@ msgstr "Creați o regulă o dată, reutilizați-o în toate fișierele."
 msgid "Créez votre compte"
 msgstr "Creați-vă contul"
 
-msgid "Data is consistent: each value is valid or unknown"
-msgstr "Datele sunt consecvente: fiecare valoare este validă sau necunoscută"
+msgid "Créé par"
+msgstr "Creat de"
+
+msgid "Créée par"
+msgstr "Creată de"
+
+msgid "DataZen ne fait tourner aucun démon en arrière-plan : une commande de gestion reprend les échéances dues et relance le nettoyage par le même chemin de code que l'interface."
+msgstr "DataZen nu rulează niciun demon în fundal: o comandă de administrare preia planificările scadente și repornește curățarea prin aceeași cale de cod ca interfața."
 
 msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
 msgstr "DataZen — Aplicație de curățare a datelor (DataClean Pro) · ©"
@@ -740,14 +958,26 @@ msgstr "Ultimul cod HTTP"
 msgid "Dernier déclenchement"
 msgstr "Ultima declanșare"
 
+msgid "Dernier statut"
+msgstr "Ultima stare"
+
 msgid "Dernier usage"
 msgstr "Ultima utilizare"
 
 msgid "Derniers fichiers"
 msgstr "Fișiere recente"
 
+msgid "Dernière : succès"
+msgstr "Ultima: reușită"
+
+msgid "Dernière : échec"
+msgstr "Ultima: eșuată"
+
 msgid "Dernière connexion"
 msgstr "Ultima conectare"
+
+msgid "Dernière exécution"
+msgstr "Ultima execuție"
 
 msgid "Dernière utilisation"
 msgstr "Ultima utilizare"
@@ -758,6 +988,9 @@ msgstr "Ultimele reguli"
 msgid "Des incohérences ont été détectées entre les statistiques et les données."
 msgstr "Au fost detectate inconsistențe între statistici și date."
 
+msgid "Destinataire"
+msgstr "Destinatar"
+
 msgid "Dimension"
 msgstr "Dimensiune"
 
@@ -767,6 +1000,12 @@ msgstr "Dimensiunile calității"
 msgid "Dispersion et valeurs extrêmes des colonnes numériques."
 msgstr "Dispersia și valorile extreme ale coloanelor numerice."
 
+msgid "Distribution la plus asymétrique : « %(colonne)s » (asymétrie %(valeur)s) — moyenne et médiane s'écartent sensiblement, une transformation ou un traitement par quantiles est à envisager."
+msgstr "Distribuția cea mai asimetrică: „%(colonne)s” (asimetrie %(valeur)s) — media și mediana se distanțează vizibil; luați în considerare o transformare sau o prelucrare pe cuantile."
+
+msgid "Distribution la plus concentrée/pointue : « %(colonne)s » (aplatissement %(valeur)s) — forte densité autour de la moyenne avec des valeurs extrêmes marquées."
+msgstr "Distribuția cea mai ascuțită: „%(colonne)s” (boltire %(valeur)s) — densitate ridicată în jurul mediei, cu valori extreme pronunțate."
+
 msgid "Distributions des colonnes numériques"
 msgstr "Distribuțiile coloanelor numerice"
 
@@ -775,6 +1014,12 @@ msgstr "Distribuții numerice"
 
 msgid "Django · Pandas · Bootstrap"
 msgstr "Django · Pandas · Bootstrap"
+
+msgid "Données cohérentes : chaque valeur est valide ou inconnue"
+msgstr "Datele sunt consecvente: fiecare valoare este validă sau necunoscută"
+
+msgid "Doublon"
+msgstr "Duplicat"
 
 msgid "Doublon par similarité"
 msgstr "Duplicat prin similaritate"
@@ -818,6 +1063,12 @@ msgstr "Duplicate, spații parazite, e-mailuri greșite, date inconsistente… D
 msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
 msgstr "Duplicate, valori lipsă, spații, majuscule/minuscule, e-mailuri, telefoane, date și salarii normalizate."
 
+msgid "Droit"
+msgstr "Drept"
+
+msgid "Droit accordé"
+msgstr "Drept acordat"
+
 msgid "Durée de conservation"
 msgstr "Durata de păstrare"
 
@@ -857,8 +1108,17 @@ msgstr "Șterge"
 msgid "Effectif"
 msgstr "Număr"
 
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Email fictif"
+msgstr "E-mail fictiv"
+
 msgid "Email invalide"
 msgstr "E-mail invalid"
+
+msgid "Email manquant"
+msgstr "E-mail lipsă"
 
 msgid "Email nettoyé"
 msgstr "E-mail curățat"
@@ -929,8 +1189,14 @@ msgstr "Erori rămase"
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
 
+msgid "Exemples de corrections"
+msgstr "Exemple de corectări"
+
 msgid "Expiration"
 msgstr "Expirare"
+
+msgid "Expire le"
+msgstr "Expiră la"
 
 msgid "Expiré"
 msgstr "Expirat"
@@ -940,6 +1206,12 @@ msgstr "Explicația scorului"
 
 msgid "Export & traçabilité"
 msgstr "Export și trasabilitate"
+
+msgid "Exécuter"
+msgstr "Execută"
+
+msgid "Exécutions"
+msgstr "Execuții"
 
 msgid "Fermer"
 msgstr "Închide"
@@ -998,6 +1270,9 @@ msgstr "Fișierele curățate mai vechi decât această durată (0 = păstrare n
 msgid "Fichiers récents"
 msgstr "Fișiere recente"
 
+msgid "Fichiers à nettoyer"
+msgstr "Fișiere de curățat"
+
 msgid "Fil d'Ariane"
 msgstr "Fir de navigare"
 
@@ -1031,8 +1306,17 @@ msgstr "Formate acceptate: <code>.csv</code>, <code>.xlsx</code>, <code>.xls</co
 msgid "Formats de dates (%(column)s) :"
 msgstr "Formate de date (%(column)s):"
 
-msgid "Formats standardized (phones, dates)"
+msgid "Formats standardisés (téléphones, dates)"
 msgstr "Formate standardizate (telefoane, date)"
+
+msgid "Forme des distributions"
+msgstr "Forma distribuțiilor"
+
+msgid "Forme des distributions (asymétrie et aplatissement)"
+msgstr "Forma distribuțiilor (asimetrie și boltire)"
+
+msgid "Fréquence"
+msgstr "Frecvență"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Economisiți timp: tot ce contează în DataZen este la o combinație de taste."
@@ -1052,14 +1336,23 @@ msgstr "Grafice statistice generate cu <strong>matplotlib</strong> și <strong>s
 msgid "Gratuit, immédiat, et vos fichiers restent privés."
 msgstr "Gratuit, imediat, iar fișierele dvs. rămân private."
 
+msgid "Gère les rôles et voit l'ensemble des fichiers de la plateforme."
+msgstr "Gestionează rolurile și vede toate fișierele platformei."
+
 msgid "Gérer les règles…"
 msgstr "Gestionați regulile…"
+
+msgid "Hebdomadaire"
+msgstr "Săptămânal"
 
 msgid "Histogrammes des colonnes numériques détectées."
 msgstr "Histograme ale coloanelor numerice detectate."
 
 msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
 msgstr "Istoric cu marcaje de timp al acțiunilor dvs.: încărcări, curățări, exporturi, API."
+
+msgid "Identifiant non unique"
+msgstr "Identificator neunic"
 
 msgid "Identité"
 msgstr "Identitate"
@@ -1073,6 +1366,9 @@ msgstr "Import CSV și Excel"
 msgid "Impossible d'appliquer la décision : %(error)s"
 msgstr "Decizia nu a putut fi aplicată: %(error)s"
 
+msgid "Impossible de comparer ces versions : %(error)s"
+msgstr "Nu se pot compara aceste versiuni: %(error)s"
+
 msgid "Impossible de convertir le fichier : %(error)s"
 msgstr "Fișierul nu a putut fi convertit: %(error)s"
 
@@ -1080,13 +1376,16 @@ msgid "Impossible de générer le PDF : %(error)s"
 msgstr "PDF-ul nu a putut fi generat: %(error)s"
 
 msgid "Impossible de lire ce fichier : %(error)s"
-msgstr "Acest fișier nu a putut fi citit: %(error)s"
+msgstr "Nu se poate citi acest fișier: %(error)s"
 
 msgid "Impossible de lire le fichier : %(error)s"
 msgstr "Fișierul nu a putut fi citit: %(error)s"
 
 msgid "Impossible de lire le rapport : %(error)s"
 msgstr "Raportul nu a putut fi citit: %(error)s"
+
+msgid "Impossible de simuler le nettoyage : le fichier est illisible."
+msgstr "Curățarea nu poate fi simulată: fișierul nu poate fi citit."
 
 msgid "Inactif"
 msgstr "Inactiv"
@@ -1099,6 +1398,9 @@ msgstr "Necunoscut"
 
 msgid "Indicateur"
 msgstr "Indicator"
+
+msgid "Indicateurs"
+msgstr "Indicatori"
 
 msgid "Indicateurs comparés"
 msgstr "Indicatori comparați"
@@ -1142,6 +1444,9 @@ msgstr "Token creat. Copiați-l acum: nu va mai fi afișat."
 msgid "Jeton d'API"
 msgstr "Token API"
 
+msgid "Jeton du lien"
+msgstr "Tokenul linkului"
+
 msgid "Jeton « %(name)s » révoqué."
 msgstr "Tokenul « %(name)s » a fost revocat."
 
@@ -1150,6 +1455,12 @@ msgstr "Tokenuri"
 
 msgid "Jetons d'API"
 msgstr "Tokenuri API"
+
+msgid "Jeu de données"
+msgstr "Set de date"
+
+msgid "Jeu de données partagé en lecture seule via un lien DataZen."
+msgstr "Set de date partajat doar pentru citire printr-un link DataZen."
 
 msgid "Journal d'activité"
 msgstr "Jurnal de activitate"
@@ -1178,8 +1489,17 @@ msgstr "Ștergerea contului vă șterge definitiv fișierele, regulile și profi
 msgid "Laisser vide pour appliquer à toutes les colonnes."
 msgstr "Lăsați gol pentru a aplica tuturor coloanelor."
 
+msgid "Laissez vide pour démarrer à la prochaine échéance."
+msgstr "Lăsați gol pentru a începe la următorul termen."
+
 msgid "Laissez vide pour un jeton sans expiration."
 msgstr "Lăsați gol pentru un token fără expirare."
+
+msgid "Laissez vide pour un partage sans expiration."
+msgstr "Lăsați gol pentru o partajare fără expirare."
+
+msgid "Lancer le nettoyage des fichiers sélectionnés"
+msgstr "Porniți curățarea fișierelor selectate"
 
 msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
 msgstr "Lansați mai întâi o curățare pentru a accesa analiza exploratorie."
@@ -1192,6 +1512,9 @@ msgstr "Limba interfeței"
 
 msgid "Le compte « %(username)s » a été supprimé."
 msgstr "Contul « %(username)s » a fost șters."
+
+msgid "Le fichier de cette version n'est plus disponible."
+msgstr "Fișierul acestei versiuni nu mai este disponibil."
 
 msgid "Le fichier ne doit pas dépasser 20 Mo."
 msgstr "Fișierul nu trebuie să depășească 20 MB."
@@ -1211,6 +1534,9 @@ msgstr "Numele de gazdă al webhook-ului indică o adresă internă."
 msgid "Le nom d'hôte est absent de l'URL."
 msgstr "Numele de gazdă lipsește din adresă."
 
+msgid "Le partage est toujours en lecture seule : le destinataire consulte et, si vous l'autorisez, télécharge. Il ne modifie jamais vos données."
+msgstr "Partajarea este întotdeauna doar pentru citire: destinatarul consultă și, dacă permiteți, descarcă. Nu vă modifică niciodată datele."
+
 msgid "Le port est invalide."
 msgstr "Portul este invalid."
 
@@ -1219,6 +1545,12 @@ msgstr "Tema « Sistem » urmează setările dispozitivului dvs."
 
 msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
 msgstr "Procesarea se execută în fundal. Această pagină se actualizează automat la final."
+
+msgid "Lecteur"
+msgstr "Cititor"
+
+msgid "Lecteur : consultation et téléchargement. Éditeur : peut aussi nettoyer et supprimer ses fichiers. Administrateur : gère les rôles et voit tous les fichiers."
+msgstr "Cititor: consultare și descărcare. Editor: poate curăța și șterge propriile fișiere. Administrator: gestionează rolurile și vede toate fișierele."
 
 msgid "Les adresses internes sont refusées."
 msgstr "Adresele interne sunt refuzate."
@@ -1244,14 +1576,23 @@ msgstr "Fișierele curățate sunt arhivate apoi curățate după această durat
 msgid "Les identifiants intégrés à l'URL sont refusés."
 msgstr "Datele de autentificare incluse în adresă sunt refuzate."
 
+msgid "Les options choisies ne changeraient rien à ce jeu de données."
+msgstr "Opțiunile alese nu ar schimba acest set de date."
+
 msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 msgstr "Rute disponibile: /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 
 msgid "Les statistiques affichées correspondent aux données réelles."
 msgstr "Statisticile afișate corespund datelor reale."
 
+msgid "Lien de partage public"
+msgstr "Link public de partajare"
+
 msgid "Lien invalide"
 msgstr "Link invalid"
+
+msgid "Lien public"
+msgstr "Link public"
 
 msgid "Ligne"
 msgstr "Rând"
@@ -1294,6 +1635,9 @@ msgstr "Stăpâniți durata de viață a datelor dvs."
 
 msgid "Membre depuis"
 msgstr "Membru din"
+
+msgid "Mensuel"
+msgstr "Lunar"
 
 msgid "Mes règles"
 msgstr "Regulile mele"
@@ -1376,6 +1720,18 @@ msgstr "Curățare lansată în fundal. Pagina se actualizează automat."
 msgid "Nettoyage lancé sur « %(name)s »"
 msgstr "Curățare lansată pe « %(name)s »"
 
+msgid "Nettoyage par lots"
+msgstr "Curățare în lot"
+
+msgid "Nettoyage par lots : %(count)s fichier(s) lancé(s)"
+msgstr "Curățare în lot: %(count)s fișier(e) pornit(e)"
+
+msgid "Nettoyage par lots — DataZen"
+msgstr "Curățare în lot — DataZen"
+
+msgid "Nettoyage planifié de « %(name)s » lancé."
+msgstr "Curățarea planificată a „%(name)s” a pornit."
+
 msgid "Nettoyage terminé"
 msgstr "Curățare terminată"
 
@@ -1403,20 +1759,14 @@ msgstr "Curățate"
 msgid "Niveau"
 msgstr "Nivel"
 
-msgid "No exact duplicates"
-msgstr "Fără duplicate exacte"
-
-msgid "No missing or unknown values"
-msgstr "Fără valori lipsă sau necunoscute"
-
-msgid "No potential duplicates"
-msgstr "Fără duplicate potențiale"
-
 msgid "Nom"
 msgstr "Nume"
 
 msgid "Nom d'utilisateur"
 msgstr "Nume de utilizator"
+
+msgid "Nom de la colonne unique (ex. email). Laissez vide pour ne supprimer que les lignes 100 % identiques. Une colonne absente d'un fichier est ignorée pour ce fichier."
+msgstr "Numele coloanei unice (de ex. email). Lăsați gol pentru a elimina doar rândurile identice 100%. O coloană absentă dintr-un fișier este ignorată pentru acel fișier."
 
 msgid "Nom de la règle"
 msgstr "Numele regulii"
@@ -1432,6 +1782,9 @@ msgstr "Număr de apeluri"
 
 msgid "Nombre d'occurrences"
 msgstr "Număr de apariții"
+
+msgid "Nombre de colonnes concernées"
+msgstr "Numărul de coloane afectate"
 
 msgid "Nombre de nettoyages et score moyen par semaine."
 msgstr "Numărul de curățări și scorul mediu pe săptămână."
@@ -1499,11 +1852,29 @@ msgstr "Fotografie nouă pregătită"
 msgid "Nouvelle valeur"
 msgstr "Valoare nouă"
 
+msgid "Numérique"
+msgstr "Numeric"
+
+msgid "Numéro de version"
+msgstr "Număr de versiune"
+
+msgid "Options de nettoyage"
+msgstr "Opțiuni de curățare"
+
 msgid "Opération"
 msgstr "Operațiune"
 
+msgid "Opérations appliquées"
+msgstr "Operațiuni aplicate"
+
 msgid "Opérations de nettoyage"
 msgstr "Operațiuni de curățare"
+
+msgid "Opérations de v%(n)s"
+msgstr "Operațiile v%(n)s"
+
+msgid "Opérations qui seraient appliquées"
+msgstr "Operațiuni care ar fi aplicate"
 
 msgid "Organisation"
 msgstr "Organizație"
@@ -1529,6 +1900,27 @@ msgstr "Pagină"
 msgid "Parcourir…"
 msgstr "Răsfoiește…"
 
+msgid "Partage"
+msgstr "Partajare"
+
+msgid "Partage créé."
+msgstr "Partajare creată."
+
+msgid "Partage de « %(name)s » avec %(target)s"
+msgstr "Partajarea „%(name)s” cu %(target)s"
+
+msgid "Partage révoqué."
+msgstr "Partajare revocată."
+
+msgid "Partage — %(name)s"
+msgstr "Partajare — %(name)s"
+
+msgid "Partages"
+msgstr "Partajări"
+
+msgid "Partagé le"
+msgstr "Partajat la"
+
 msgid "Pas encore de compte ?"
 msgstr "Nu aveți încă un cont?"
 
@@ -1543,6 +1935,27 @@ msgstr "Fotografie de profil"
 
 msgid "Pilotage"
 msgstr "Pilotare"
+
+msgid "Planification"
+msgstr "Planificare"
+
+msgid "Planification %(state)s."
+msgstr "Planificare %(state)s."
+
+msgid "Planification créée pour « %(name)s »"
+msgstr "Planificare creată pentru „%(name)s”"
+
+msgid "Planification créée."
+msgstr "Planificare creată."
+
+msgid "Planification supprimée."
+msgstr "Planificare ștearsă."
+
+msgid "Planifications"
+msgstr "Planificări"
+
+msgid "Planifications — DataZen"
+msgstr "Planificări — DataZen"
 
 msgid "Plus fréquent"
 msgstr "Cea mai frecventă"
@@ -1559,11 +1972,17 @@ msgstr "Pondere"
 msgid "Premier quartile"
 msgstr "Prima quartilă"
 
+msgid "Première exécution"
+msgstr "Prima execuție"
+
 msgid "Prendre une photo avec la caméra"
 msgstr "Faceți o fotografie cu camera"
 
 msgid "Problème"
 msgstr "Problemă"
+
+msgid "Problèmes"
+msgstr "Probleme"
 
 msgid "Problèmes après"
 msgstr "Probleme după"
@@ -1576,6 +1995,9 @@ msgstr "Probleme detectate"
 
 msgid "Problèmes restants"
 msgstr "Probleme rămase"
+
+msgid "Prochaine exécution"
+msgstr "Următoarea execuție"
 
 msgid "Productivité"
 msgstr "Productivitate"
@@ -1595,8 +2017,17 @@ msgstr "Profil public"
 msgid "Profil visible publiquement"
 msgstr "Profil vizibil public"
 
+msgid "Profilage statistique"
+msgstr "Profilare statistică"
+
 msgid "Profils"
 msgstr "Profiluri"
+
+msgid "Programmer"
+msgstr "Planifică"
+
+msgid "Programmez un nettoyage récurrent : les mêmes options s'appliquent à chaque échéance, sans intervention de votre part."
+msgstr "Planificați o curățare recurentă: aceleași opțiuni se aplică la fiecare termen, fără intervenția dvs."
 
 msgid "Progression"
 msgstr "Progres"
@@ -1643,6 +2074,9 @@ msgstr "Q1"
 msgid "Q3"
 msgstr "Q3"
 
+msgid "Qualité : v%(before)s → v%(after)s"
+msgstr "Calitate: v%(before)s → v%(after)s"
+
 msgid "Qualité moyenne"
 msgstr "Calitate medie"
 
@@ -1651,6 +2085,9 @@ msgstr "Calitate pe coloană"
 
 msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
 msgstr "Câteva cuvinte despre dvs., echipa dvs., seturile dvs. de date…"
+
+msgid "Quotidien"
+msgstr "Zilnic"
 
 msgid "Raccourcis clavier"
 msgstr "Comenzi rapide"
@@ -1709,6 +2146,12 @@ msgstr "Caută"
 msgid "Rechercher (Ctrl+K)"
 msgstr "Caută (Ctrl+K)"
 
+msgid "Rechercher un compte"
+msgstr "Caută un cont"
+
+msgid "Rechercher un compte…"
+msgstr "Caută un cont…"
+
 msgid "Rechercher un fichier"
 msgstr "Căutați un fișier"
 
@@ -1751,11 +2194,20 @@ msgstr "%(reported)s raportate vs %(actual)s recalculate"
 msgid "Restauration"
 msgstr "Restaurare"
 
+msgid "Restauration de la version %(number)s de « %(name)s »"
+msgstr "Restaurarea versiunii %(number)s a „%(name)s”"
+
 msgid "Restauration de « %(name)s »"
 msgstr "Restaurarea « %(name)s »"
 
+msgid "Restauration impossible : %(error)s"
+msgstr "Restaurare imposibilă: %(error)s"
+
 msgid "Restaurer"
 msgstr "Restaurați"
+
+msgid "Restaurer cette version comme version courante ?"
+msgstr "Restaurați această versiune ca versiune curentă?"
 
 msgid "Retour à la connexion"
 msgstr "Înapoi la conectare"
@@ -1778,6 +2230,9 @@ msgstr "Regula « %(name)s » a fost ștearsă."
 msgid "Règles"
 msgstr "Reguli"
 
+msgid "Règles appliquées"
+msgstr "Reguli aplicate"
+
 msgid "Règles de nettoyage"
 msgstr "Reguli de curățare"
 
@@ -1798,6 +2253,9 @@ msgstr "Distribuția problemelor"
 
 msgid "Répartition des problèmes restants"
 msgstr "Distribuția problemelor rămase"
+
+msgid "Résultat de la simulation : rien n'a été écrit. Confirmez le nettoyage pour appliquer réellement ces changements."
+msgstr "Rezultatul simulării: nu s-a scris nimic. Confirmați curățarea pentru a aplica efectiv aceste modificări."
 
 msgid "Résultats"
 msgstr "Rezultate"
@@ -1823,8 +2281,32 @@ msgstr "Revocă"
 msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
 msgstr "Revocați acest token? Integrările care îl folosesc nu vor mai funcționa."
 
+msgid "Révoquer ce partage ?"
+msgstr "Revocați această partajare?"
+
 msgid "Révoqué"
 msgstr "Revocat"
+
+msgid "Rôle"
+msgstr "Rol"
+
+msgid "Rôle de « %(name)s » : %(before)s → %(after)s"
+msgstr "Rolul pentru «%(name)s»: %(before)s → %(after)s"
+
+msgid "Rôle de « %(name)s » mis à jour."
+msgstr "Rolul pentru «%(name)s» a fost actualizat."
+
+msgid "Rôle du compte"
+msgstr "Rolul contului"
+
+msgid "Rôle inconnu."
+msgstr "Rol necunoscut."
+
+msgid "Rôles et permissions"
+msgstr "Roluri și permisiuni"
+
+msgid "Rôles et permissions — DataZen"
+msgstr "Roluri și permisiuni — DataZen"
 
 msgid "S'inscrire"
 msgstr "Înregistrați-vă"
@@ -1835,8 +2317,14 @@ msgstr "Introduceți <strong>%(username)s</strong> pentru a confirma"
 msgid "Score"
 msgstr "Scor"
 
+msgid "Score après"
+msgstr "Scor după"
+
 msgid "Score après nettoyage"
 msgstr "Scor după curățare"
+
+msgid "Score avant"
+msgstr "Scor înainte"
 
 msgid "Score avant nettoyage"
 msgstr "Scor înainte de curățare"
@@ -1865,6 +2353,9 @@ msgstr "Scor de calitate după"
 msgid "Score qualité avant"
 msgstr "Scor de calitate înainte"
 
+msgid "Scores mesurés lors de chaque nettoyage."
+msgstr "Scoruri măsurate la fiecare curățare."
+
 msgid "Se connecter"
 msgstr "Conectați-vă"
 
@@ -1877,11 +2368,20 @@ msgstr "Deplasare în rezultate"
 msgid "Sert uniquement à la réinitialisation du mot de passe."
 msgstr "Folosit doar pentru resetarea parolei."
 
+msgid "Seul le propriétaire peut gérer les partages."
+msgstr "Doar proprietarul poate gestiona partajările."
+
+msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
+msgstr "Sunt afișate doar primele corectări; curățarea reală le va aplica pe toate."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "Sunt permise doar schemele http și https."
 
 msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
 msgstr "Dacă există un cont cu această adresă, un e-mail cu linkul de resetare tocmai a fost trimis."
+
+msgid "Simulation — aucune modification enregistrée"
+msgstr "Simulare — nicio modificare salvată"
 
 msgid "Site web"
 msgstr "Site web"
@@ -1925,6 +2425,9 @@ msgstr "Ștergeți %(name)s"
 msgid "Supprimer ce webhook ?"
 msgstr "Ștergeți acest webhook?"
 
+msgid "Supprimer cette planification ?"
+msgstr "Ștergeți această planificare?"
+
 msgid "Supprimer définitivement ce fichier et toutes ses données ?"
 msgstr "Ștergeți definitiv acest fișier și toate datele sale?"
 
@@ -1949,6 +2452,12 @@ msgstr "Elimină spațiile suplimentare"
 msgid "Supprimer mon compte"
 msgstr "Ștergeți contul meu"
 
+msgid "Suspendre"
+msgstr "Suspendă"
+
+msgid "Suspendue"
+msgstr "Suspendat"
+
 msgid "Synthèse"
 msgstr "Sinteză"
 
@@ -1960,6 +2469,18 @@ msgstr "Securitate"
 
 msgid "Sélectionner un fichier"
 msgstr "Selectați un fișier"
+
+msgid "Sélectionnez au moins un fichier."
+msgstr "Selectați cel puțin un fișier."
+
+msgid "Sélectionnez deux versions différentes pour afficher la comparaison."
+msgstr "Selectați două versiuni diferite pentru a afișa comparația."
+
+msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
+msgstr "Selectați până la %(limit)s fișiere: peste acest număr, lotul este trunchiat pentru a nu supraîncărca serverul."
+
+msgid "Sévérité"
+msgstr "Gravitate"
 
 msgid "Tableau de bord"
 msgstr "Tablou de bord"
@@ -2000,8 +2521,17 @@ msgstr "Totul este inclus"
 msgid "Tout voir"
 msgstr "Vezi tot"
 
+msgid "Toute personne possédant ce lien peut consulter le fichier. Révoquez le partage pour l'invalider immédiatement."
+msgstr "Oricine are acest link poate consulta fișierul. Revocați partajarea pentru a o invalida imediat."
+
+msgid "Toute personne possédant le lien peut consulter le jeu de données, sans compte. Le lien est révocable et peut expirer."
+msgstr "Oricine are linkul poate consulta setul de date, fără cont. Linkul poate fi revocat și poate expira."
+
 msgid "Toutes les actions"
 msgstr "Toate acțiunile"
+
+msgid "Toutes les valeurs renseignées sont valides"
+msgstr "Toate valorile completate sunt valide"
 
 msgid "Traçabilité"
 msgstr "Trasabilitate"
@@ -2015,11 +2545,17 @@ msgstr "Tip"
 msgid "Type de correction"
 msgstr "Tip de corecție"
 
+msgid "Type hétérogène"
+msgstr "Tip mixt"
+
 msgid "Téléchargement"
 msgstr "Descărcare"
 
 msgid "Téléchargement de « %(name)s »"
 msgstr "Descărcarea « %(name)s »"
+
+msgid "Téléphone"
+msgstr "Telefon"
 
 msgid "Téléphone invalide"
 msgstr "Telefon invalid"
@@ -2029,6 +2565,9 @@ msgstr "Telefon nestandard"
 
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Telefoane nestandard (%(column)s):"
+
+msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
+msgstr "Încarcă, curăță, programează și șterge propriile fișiere."
 
 msgid "Téléversement"
 msgstr "Încărcare"
@@ -2059,6 +2598,9 @@ msgstr "Un cont de administrator nu poate fi șters din această pagină."
 
 msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
 msgstr "Un cont de administrator nu poate fi șters din această pagină. Folosiți"
+
+msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
+msgstr "Un extras din fișier: primele rânduri sunt suficiente pentru a evalua datele."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "Un tablou de bord măsoară calitatea înainte / după și explică fiecare punct pierdut."
@@ -2102,11 +2644,20 @@ msgstr "Valoare de înlocuire"
 msgid "Valeur de remplacement (pour le remplissage)."
 msgstr "Valoare de înlocuire (pentru completare)."
 
+msgid "Valeur du moment centré"
+msgstr "Valoarea momentului centrat"
+
+msgid "Valeur inconnue"
+msgstr "Valoare necunoscută"
+
 msgid "Valeur manquante"
 msgstr "Valoare lipsă"
 
 msgid "Valeur numérique invalide"
 msgstr "Valoare numerică invalidă"
+
+msgid "Valeur unique « %(value)s » sur %(count)s ligne(s)."
+msgstr "Valoare unică „%(value)s” pe %(count)s rând(uri)."
 
 msgid "Valeurs aberrantes"
 msgstr "Valori aberante"
@@ -2150,6 +2701,36 @@ msgstr "Validează și corectează e-mailurile (doar erorile evidente)"
 msgid "Validité"
 msgstr "Validitate"
 
+msgid "Variance"
+msgstr "Varianta"
+
+msgid "Version"
+msgstr "Versiune"
+
+msgid "Version %(number)s restaurée."
+msgstr "Versiunea %(number)s restaurată."
+
+msgid "Version comparée"
+msgstr "Versiune comparată"
+
+msgid "Version courante"
+msgstr "Versiune curentă"
+
+msgid "Version de référence"
+msgstr "Versiune de referință"
+
+msgid "Versions"
+msgstr "Versiuni"
+
+msgid "Versions enregistrées ("
+msgstr "Versiuni înregistrate ("
+
+msgid "Versions — %(name)s"
+msgstr "Versiuni — %(name)s"
+
+msgid "Vide pour créer un lien public."
+msgstr "Gol pentru a crea un link public."
+
 msgid "Visualisations statistiques"
 msgstr "Vizualizări statistice"
 
@@ -2171,6 +2752,9 @@ msgstr "Datele dvs. merită<br> <span class=\"dz-gradient-text\">să fie impecab
 msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
 msgstr "Fișierele dvs. rămân la dvs. DataZen vă indică ce depășește durata de păstrare aleasă și nu șterge nimic fără acordul dvs."
 
+msgid "Vos jeux de données"
+msgstr "Seturile dvs. de date"
+
 msgid "Votre espace de travail"
 msgstr "Spațiul dvs. de lucru"
 
@@ -2189,6 +2773,18 @@ msgstr "Fotografia dvs. de profil a fost ștearsă."
 msgid "Votre profil a été mis à jour."
 msgstr "Profilul dvs. a fost actualizat."
 
+msgid "Votre rôle ne permet pas de créer une planification."
+msgstr "Rolul dvs. nu permite crearea unei planificări."
+
+msgid "Votre rôle ne permet pas de lancer un nettoyage. Contactez un administrateur."
+msgstr "Rolul dvs. nu permite pornirea unei curățări. Contactați un administrator."
+
+msgid "Votre rôle ne permet pas de modifier les données. Contactez un administrateur."
+msgstr "Rolul dvs. nu permite modificarea datelor. Contactați un administrator."
+
+msgid "Vous"
+msgstr "Dvs."
+
 msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
 msgstr "Păstrați controlul: nimic nu este șters fără acțiunea dvs."
 
@@ -2203,6 +2799,9 @@ msgstr "Nu aveți acces la acest webhook."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "Nu aveți acces la această regulă."
+
+msgid "Vous ne pouvez pas modifier votre propre rôle."
+msgstr "Nu vă puteți modifica propriul rol."
 
 msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
 msgstr "Vedere consolidată a calității datelor dvs., toate fișierele incluse."
@@ -2345,6 +2944,9 @@ msgstr "ex.: email (gol = toate coloanele)"
 msgid "excellente qualité"
 msgstr "calitate excelentă"
 
+msgid "faible"
+msgstr "scăzută"
+
 msgid "fermer"
 msgstr "închide"
 
@@ -2356,6 +2958,9 @@ msgstr "format nerecunoscut"
 
 msgid "généré le"
 msgstr "generat la"
+
+msgid "haute"
+msgstr "ridicată"
 
 msgid "https://exemple.com"
 msgstr "https://exemple.com"
@@ -2375,6 +2980,9 @@ msgstr "neschimbat"
 msgid "jours"
 msgstr "zile"
 
+msgid "lien public"
+msgstr "link public"
+
 msgid "lignes"
 msgstr "linii"
 
@@ -2383,6 +2991,9 @@ msgstr "lungime/format incorect"
 
 msgid "matplotlib"
 msgstr "matplotlib"
+
+msgid "moyenne"
+msgstr "medie"
 
 msgid "naviguer"
 msgstr "navighează"
@@ -2438,6 +3049,9 @@ msgstr "ștearsă"
 msgid "sur"
 msgstr "pe"
 
+msgid "suspendue"
+msgstr "suspendată"
+
 msgid "texte"
 msgstr "text"
 
@@ -2447,11 +3061,17 @@ msgstr "telefon"
 msgid "unicité"
 msgstr "unicitate"
 
+msgid "v%(n)s"
+msgstr "v%(n)s"
+
 msgid "valeur(s) extrême(s)"
 msgstr "valoare (valori) extremă (extreme)"
 
 msgid "validité"
 msgstr "validitate"
+
+msgid "« %(value)s » représente %(percent)s %% des valeurs renseignées."
+msgstr "„%(value)s” reprezintă %(percent)s %% din valorile completate."
 
 msgid "· ancien_id :"
 msgstr "· vechi_id:"
@@ -2476,6 +3096,12 @@ msgstr "Curățarea a eșuat"
 
 msgid "Échec du nettoyage de « %(name)s »"
 msgstr "Curățarea « %(name)s » a eșuat"
+
+msgid "Échec du nettoyage planifié : %(error)s"
+msgstr "Curățarea planificată a eșuat: %(error)s"
+
+msgid "Éditeur"
+msgstr "Editor"
 
 msgid "Étape 1"
 msgstr "Pasul 1"
@@ -2519,17 +3145,32 @@ msgstr "— Toate coloanele —"
 msgid "← Retour au fichier"
 msgstr "← Înapoi la fișier"
 
+msgid "← Retour à l'historique"
+msgstr "← Înapoi la istoric"
+
 msgid "⌨️ Raccourcis"
 msgstr "⌨️ Comenzi rapide"
 
 msgid "⌨️ Raccourcis clavier"
 msgstr "⌨️ Comenzi rapide de tastatură"
 
+msgid "⏱️ Nettoyages planifiés"
+msgstr "⏱️ Curățări planificate"
+
+msgid "⏱️ Planifications"
+msgstr "⏱️ Planificări"
+
 msgid "⏳ Fichiers expirés"
 msgstr "⏳ Fișiere expirate"
 
 msgid "⏳ Nettoyage en cours…"
 msgstr "⏳ Curățare în curs…"
+
+msgid "♻️ Restaurer"
+msgstr "♻️ Restaurează"
+
+msgid "⚙️ Opérations communes"
+msgstr "⚙️ Operații comune"
 
 msgid "⚙️ Règles de nettoyage personnalisées"
 msgstr "⚙️ Reguli de curățare personalizate"
@@ -2539,6 +3180,9 @@ msgstr "⚙️ Reguli personalizate"
 
 msgid "⚙️ Régler la durée"
 msgstr "⚙️ Ajustați durata"
+
+msgid "⚠️ Anomalies signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ Anomaliile sunt doar semnalate — nu sunt modificate automat niciodată."
 
 msgid "⚠️ Points nécessitant une vérification humaine"
 msgstr "⚠️ Puncte care necesită verificare umană"
@@ -2588,8 +3232,14 @@ msgstr "✓ Copiat"
 msgid "➕ Nouveau jeton"
 msgstr "➕ Token nou"
 
+msgid "➕ Nouveau partage"
+msgstr "➕ Partajare nouă"
+
 msgid "➕ Nouveau webhook"
 msgstr "➕ Webhook nou"
+
+msgid "➕ Nouvelle planification"
+msgstr "➕ Planificare nouă"
 
 msgid "➕ Nouvelle règle"
 msgstr "➕ Regulă nouă"
@@ -2599,6 +3249,9 @@ msgstr "➕ Încărcați un fișier"
 
 msgid "⬇️ Exporter mes données (JSON)"
 msgstr "⬇️ Exportați datele mele (JSON)"
+
+msgid "⬇️ Télécharger"
+msgstr "⬇️ Descarcă"
 
 msgid "⬇️ Télécharger le fichier nettoyé"
 msgstr "⬇️ Descărcați fișierul curățat"
@@ -2629,6 +3282,9 @@ msgstr "👁️ Consultați raportul"
 
 msgid "👤 Mon profil"
 msgstr "👤 Profilul meu"
+
+msgid "📄 Fichiers à nettoyer"
+msgstr "📄 Fișiere de curățat"
 
 msgid "📈 Analyse exploratoire"
 msgstr "📈 Analiză exploratorie"
@@ -2666,8 +3322,14 @@ msgstr "📊 Tablou de bord"
 msgid "📊 Tableau de bord global"
 msgstr "📊 Tablou de bord global"
 
+msgid "📋 Mes planifications ("
+msgstr "📋 Planificările mele ("
+
 msgid "📋 Mes règles ("
 msgstr "📋 Regulile mele ("
+
+msgid "📋 Partages actifs ("
+msgstr "📋 Partajări active ("
 
 msgid "📋 Qualité des colonnes"
 msgstr "📋 Calitatea coloanelor"
@@ -2705,11 +3367,26 @@ msgstr "🔌 API și tokenuri de acces"
 msgid "🔌 Jetons d'API"
 msgstr "🔌 Tokenuri API"
 
+msgid "🔍 Aperçu (simulation)"
+msgstr "🔍 Previzualizare (simulare)"
+
+msgid "🔍 Aperçu avant / après (simulation)"
+msgstr "🔍 Previzualizare înainte / după (simulare)"
+
 msgid "🔍 Avant / après"
 msgstr "🔍 Înainte / după"
 
 msgid "🔍 Comparaison avant / après"
 msgstr "🔍 Comparație înainte / după"
+
+msgid "🔍 Comparer"
+msgstr "🔍 Compară"
+
+msgid "🔍 Comparer des versions"
+msgstr "🔍 Compară versiuni"
+
+msgid "🔍 Comparer deux versions"
+msgstr "🔍 Compară două versiuni"
 
 msgid "🔍 Doublons"
 msgstr "🔍 Duplicate"
@@ -2735,6 +3412,9 @@ msgstr "🔎 Explicația scorului"
 msgid "🔑 Mes jetons"
 msgstr "🔑 Tokenurile mele"
 
+msgid "🔑 Votre lien de partage public"
+msgstr "🔑 Linkul dvs. public de partajare"
+
 msgid "🔑 Votre nouveau jeton"
 msgstr "🔑 Noul dvs. token"
 
@@ -2749,6 +3429,9 @@ msgstr "🔔 Webhook-urile mele"
 
 msgid "🔔 Webhooks"
 msgstr "🔔 Webhook-uri"
+
+msgid "🔗 Partager ce jeu de données"
+msgstr "🔗 Partajați acest set de date"
 
 msgid "🔗 Voir mon profil public"
 msgstr "🔗 Vezi profilul meu public"
@@ -2771,8 +3454,17 @@ msgstr "🕓 Activitate"
 msgid "🕓 Dernières activités"
 msgstr "🕓 Ultimele activități"
 
+msgid "🕓 Historique des versions"
+msgstr "🕓 Istoricul versiunilor"
+
 msgid "🕓 Journal d'activité"
 msgstr "🕓 Jurnal de activitate"
+
+msgid "🕓 Versions"
+msgstr "🕓 Versiuni"
+
+msgid "🗂️ Nettoyage par lots"
+msgstr "🗂️ Curățare în lot"
 
 msgid "🗃️ Fichiers récents"
 msgstr "🗃️ Fișiere recente"
@@ -2798,11 +3490,17 @@ msgstr "🚀 Noutăți din spațiul pro"
 msgid "🚀 Premier appel"
 msgstr "🚀 Primul apel"
 
+msgid "🛡️ Rôles et permissions"
+msgstr "🛡️ Roluri și permisiuni"
+
 msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
 msgstr "🟢 Păstrați primul rând (ștergeți celelalte)"
 
 msgid "🟣 Fusionner toutes les lignes"
 msgstr "🟣 Îmbinați toate rândurile"
+
+msgid "🧩 Anomalies structurelles"
+msgstr "🧩 Anomalii structurale"
 
 msgid "🧭 Dimensions les plus fragiles"
 msgstr "🧭 Cele mai fragile dimensiuni"

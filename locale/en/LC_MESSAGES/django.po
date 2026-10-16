@@ -16,11 +16,20 @@ msgstr "%(actual)s correction(s) in the log vs %(reported)s reported"
 msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
 msgstr "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
 
+msgid "%(count)s anomalie(s) structurelle(s) détectée(s) sur les colonnes."
+msgstr "%(count)s structural anomaly(ies) detected in the columns."
+
 msgid "%(count)s colonnes"
 msgstr "%(count)s columns"
 
+msgid "%(count)s doublon(s) exact(s) restant(s)"
+msgstr "%(count)s exact duplicate(s) remaining"
+
 msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
 msgstr "%(count)s potential duplicate(s) need review."
+
+msgid "%(count)s doublon(s) potentiel(s) à vérifier (pénalité réduite)"
+msgstr "%(count)s potential duplicate(s) need manual review (reduced penalty)"
 
 msgid "%(count)s entrée(s) d'activité supprimée(s)."
 msgstr "%(count)s activity log entry(ies) deleted."
@@ -28,35 +37,38 @@ msgstr "%(count)s activity log entry(ies) deleted."
 msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
 msgstr "%(count)s error(s) could not be corrected automatically."
 
-msgid "%(count)s exact duplicate(s) remaining"
-msgstr "%(count)s exact duplicate(s) remaining"
-
-msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
-msgstr "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
+msgid "%(count)s fichier(s) ignoré(s) : lot limité à %(limit)s."
+msgstr "%(count)s file(s) ignored: batch limited to %(limit)s."
 
 msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
 msgstr "%(count)s invalid email(s) present (non-empty and not unknown)"
 
-msgid "%(count)s invalid value(s) among filled data"
-msgstr "%(count)s invalid value(s) among filled data"
-
 msgid "%(count)s lignes"
 msgstr "%(count)s rows"
 
-msgid "%(count)s missing value(s)"
-msgstr "%(count)s missing value(s)"
-
-msgid "%(count)s non-standard value(s)"
-msgstr "%(count)s non-standard value(s)"
-
-msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
-msgstr "%(count)s potential duplicate(s) need manual review (reduced penalty)"
-
-msgid "%(count)s unknown value(s) (data unavailable)"
-msgstr "%(count)s unknown value(s) (data unavailable)"
+msgid "%(count)s nettoyage(s) lancé(s) en arrière-plan."
+msgstr "%(count)s cleaning(s) started in the background."
 
 msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
 msgstr "%(count)s outlier(s) detected in the numeric columns."
+
+msgid "%(count)s valeur(s) d'identifiant dupliquée(s)."
+msgstr "%(count)s duplicated identifier value(s)."
+
+msgid "%(count)s valeur(s) incohérente(s) restante(s) (ni valide ni inconnue)"
+msgstr "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
+
+msgid "%(count)s valeur(s) inconnue(s) (donnée indisponible)"
+msgstr "%(count)s unknown value(s) (data unavailable)"
+
+msgid "%(count)s valeur(s) invalide(s) parmi les données renseignées"
+msgstr "%(count)s invalid value(s) among filled data"
+
+msgid "%(count)s valeur(s) manquante(s)"
+msgstr "%(count)s missing value(s)"
+
+msgid "%(count)s valeur(s) non standard"
+msgstr "%(count)s non-standard value(s)"
 
 msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
 msgstr "%(count)s value(s) are currently “Unknown”."
@@ -69,28 +81,44 @@ msgstr[1] "%(counter)s potential duplicates detected. These rows are <strong>nev
 msgid "%(counter)s fichier affiché"
 msgid_plural "%(counter)s fichiers affichés"
 msgstr[0] "%(counter)s file shown"
+msgstr[1] "%(counter)s file shown"
 
 msgid "%(counter)s inconnu"
 msgid_plural "%(counter)s inconnus"
 msgstr[0] "%(counter)s unknown"
+msgstr[1] "%(counter)s unknown"
 
 msgid "%(counter)s invalide,"
 msgid_plural "%(counter)s invalides,"
 msgstr[0] "%(counter)s invalid,"
+msgstr[1] "%(counter)s invalid,"
 
 msgid "%(counter)s ligne concernée :"
 msgid_plural "%(counter)s lignes concernées :"
 msgstr[0] "%(counter)s affected row:"
+msgstr[1] "%(counter)s affected row:"
 
 msgid "%(counter)s valide,"
 msgid_plural "%(counter)s valides,"
 msgstr[0] "%(counter)s valid,"
+msgstr[1] "%(counter)s valid,"
+
+msgid "%(numeric)s valeur(s) numérique(s) sur %(total)s renseignée(s) : type hétérogène."
+msgstr "%(numeric)s numeric value(s) out of %(total)s filled: mixed type."
 
 msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
 msgstr "%(purged)s file(s) deleted, %(archived)s archived."
 
+msgid "%(runs)s exécution"
+msgid_plural "%(runs)s exécutions"
+msgstr[0] "%(runs)s run"
+msgstr[1] "%(runs)s run"
+
 msgid "%(score)s / 100  (%(weight)s %(percent)s)"
 msgstr "%(score)s / 100  (%(weight)s%(percent)s)"
+
+msgid "%(total)s valeur(s) aberrante(s) détectée(s) (méthode IQR). Colonnes les plus concernées : %(detail)s."
+msgstr "%(total)s outlier(s) detected (IQR method). Most affected columns: %(detail)s."
 
 msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
 msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
@@ -101,10 +129,15 @@ msgstr "%(value)s%(percent)s"
 msgid "(%(counter)s modification)"
 msgid_plural "(%(counter)s modifications)"
 msgstr[0] "(%(counter)s change)"
+msgstr[1] "(%(counter)s change)"
 
 msgid "(%(counter)s non-conformité)"
 msgid_plural "(%(counter)s non-conformités)"
 msgstr[0] "(%(counter)s non-compliance)"
+msgstr[1] "(%(counter)s non-compliance)"
+
+msgid "(%(shown)s sur %(total)s)"
+msgstr "(%(shown)s of %(total)s)"
 
 msgid "(colonnes : %(columns)s)"
 msgstr "(columns: %(columns)s)"
@@ -176,7 +209,7 @@ msgid "Active"
 msgstr "Active"
 
 msgid "Activer"
-msgstr "Enable"
+msgstr "Activate"
 
 msgid "Activer le thème clair"
 msgstr "Switch to light theme"
@@ -199,6 +232,9 @@ msgstr "Administrator"
 msgid "Administration"
 msgstr "Administration"
 
+msgid "Adresse e-mail"
+msgstr "Email address"
+
 msgid "Adresse email"
 msgstr "Email address"
 
@@ -219,9 +255,6 @@ msgstr "Show anomaly details"
 
 msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
 msgstr "Added to the X-DataZen-Signature header (HMAC-SHA256)."
-
-msgid "All filled values are valid"
-msgstr "All filled values are valid"
 
 msgid "Aller au contenu principal"
 msgstr "Skip to main content"
@@ -244,8 +277,20 @@ msgstr "Old value"
 msgid "Annuler"
 msgstr "Cancel"
 
+msgid "Anomalie"
+msgstr "Anomaly"
+
 msgid "Anomalies restantes (à traiter manuellement)"
 msgstr "Remaining anomalies (to handle manually)"
+
+msgid "Anomalies structurelles"
+msgstr "Structural anomalies"
+
+msgid "Anomalies structurelles par type"
+msgstr "Structural anomalies by type"
+
+msgid "Anonymisation"
+msgstr "Anonymization"
 
 msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
 msgstr "Anonymize sensitive data (%(count)s values pseudonymized)"
@@ -259,8 +304,26 @@ msgstr "Anonymize sensitive data (names, emails, phone numbers)"
 msgid "Antananarivo, Madagascar"
 msgstr "Antananarivo, Madagascar"
 
+msgid "Aperçu"
+msgstr "Preview"
+
+msgid "Aperçu calculé : aucune modification n'a été enregistrée. Confirmez pour appliquer le nettoyage."
+msgstr "Preview computed: no change was saved. Confirm to apply the cleaning."
+
+msgid "Aperçu de nettoyage sur « %(name)s »"
+msgstr "Cleaning preview on “%(name)s”"
+
+msgid "Aperçu des données"
+msgstr "Data preview"
+
 msgid "Aperçu du fichier nettoyé"
 msgstr "Preview of the cleaned file"
+
+msgid "Aperçu limité à %(shown)s lignes sur %(total)s."
+msgstr "Preview limited to %(shown)s of %(total)s rows."
+
+msgid "Aplatissement"
+msgstr "Kurtosis"
 
 msgid "Appel API"
 msgstr "API call"
@@ -268,11 +331,20 @@ msgstr "API call"
 msgid "Appel API : %(path)s"
 msgstr "API call: %(path)s"
 
+msgid "Appelez-la depuis un planificateur système (cron, Planificateur de tâches Windows) toutes les cinq minutes."
+msgstr "Call it from a system scheduler (cron, Windows Task Scheduler) every five minutes."
+
 msgid "Appels"
 msgstr "Calls"
 
 msgid "Application"
 msgstr "Application"
+
+msgid "Appliquer"
+msgstr "Apply"
+
+msgid "Appliquez les mêmes opérations à plusieurs jeux de données en une seule fois. Les fichiers sont traités en série, un à la fois."
+msgstr "Apply the same operations to several datasets at once. Files are processed in series, one at a time."
 
 msgid "Après"
 msgstr "After"
@@ -291,6 +363,21 @@ msgstr "Archive"
 
 msgid "Archivés"
 msgstr "Archived"
+
+msgid "Asymétrie"
+msgstr "Skewness"
+
+msgid "Asymétrie et aplatissement (moments centrés) des colonnes numériques."
+msgstr "Skewness and kurtosis (central moments) of the numeric columns."
+
+msgid "Aucun compte ne correspond à cette recherche."
+msgstr "No account matches this search."
+
+msgid "Aucun doublon exact"
+msgstr "No exact duplicates"
+
+msgid "Aucun doublon potentiel"
+msgstr "No potential duplicates"
 
 msgid "Aucun fichier d'origine n'est disponible."
 msgstr "No original file is available."
@@ -325,6 +412,12 @@ msgstr "No chart is available for this dataset: it does not contain enough usabl
 msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
 msgstr "No token yet. Create one to use the API."
 
+msgid "Aucun jeu de données disponible pour le moment."
+msgstr "No dataset available at the moment."
+
+msgid "Aucun jeu de données pour le moment."
+msgstr "No dataset at the moment."
+
 msgid "Aucun journal des modifications n'est disponible."
 msgstr "No change log is available."
 
@@ -349,6 +442,9 @@ msgstr "No activity recorded."
 msgid "Aucune anomalie restante."
 msgstr "No remaining anomaly."
 
+msgid "Aucune anomalie structurelle détectée."
+msgstr "No structural anomaly detected."
+
 msgid "Aucune anomalie."
 msgstr "No anomaly."
 
@@ -357,6 +453,9 @@ msgstr "No column"
 
 msgid "Aucune correction"
 msgstr "No correction"
+
+msgid "Aucune correction de valeur ne serait nécessaire."
+msgstr "No value correction would be needed."
 
 msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
 msgstr "No notable difference between the original file and the cleaned file: your data was already clean."
@@ -373,6 +472,18 @@ msgstr "No cleaned data available."
 msgid "Aucune modification enregistrée."
 msgstr "No change recorded."
 
+msgid "Aucune opération enregistrée pour cette version."
+msgstr "No operation recorded for this version."
+
+msgid "Aucune opération enregistrée."
+msgstr "No operation recorded."
+
+msgid "Aucune opération."
+msgstr "No operation."
+
+msgid "Aucune planification : programmez un nettoyage récurrent pour ne plus y penser."
+msgstr "No schedule yet: set up a recurring cleaning and stop thinking about it."
+
 msgid "Aucune règle personnalisée."
 msgstr "No custom rule."
 
@@ -382,8 +493,17 @@ msgstr "No rules yet. Create one to reuse it across all your files."
 msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
 msgstr "No outlier detected in the numeric columns."
 
+msgid "Aucune valeur manquante ou inconnue"
+msgstr "No missing or unknown values"
+
+msgid "Aucune valeur renseignée sur %(rows)s ligne(s)."
+msgstr "No value filled in %(rows)s row(s)."
+
 msgid "Aucune valeur « Inconnu »."
 msgstr "No “Unknown” value."
+
+msgid "Aucune version enregistrée : lancez un nettoyage pour en créer une."
+msgstr "No version recorded yet: run a cleaning to create one."
 
 msgid "Audit des emails"
 msgstr "Email audit"
@@ -451,8 +571,20 @@ msgstr "Canonicalize the ‘Unknown’ marker (%(count)s corrected)"
 msgid "Capturer"
 msgstr "Capture"
 
+msgid "Casse"
+msgstr "Case"
+
+msgid "Catégorie"
+msgstr "Category"
+
 msgid "Ce graphique n'est pas disponible pour ce jeu de données."
 msgstr "This chart is not available for this dataset."
+
+msgid "Ce jeu de données n'est partagé avec personne pour le moment."
+msgstr "This dataset is not shared with anyone yet."
+
+msgid "Ce lien de partage est invalide ou a expiré."
+msgstr "This share link is invalid or has expired."
 
 msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
 msgstr "This reset link has already been used or has expired."
@@ -460,11 +592,20 @@ msgstr "This reset link has already been used or has expired."
 msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
 msgstr "This link is valid only once. If you did not request it, simply ignore this message: your password stays unchanged. — DataZen"
 
+msgid "Ce lien ne permet pas le téléchargement."
+msgstr "This link does not allow downloading."
+
+msgid "Ce partage ne permet pas le téléchargement."
+msgstr "This share does not allow downloading."
+
 msgid "Ce profil n'est pas public."
 msgstr "This profile is not public."
 
 msgid "Ce que le nettoyage a réellement changé dans votre fichier."
 msgstr "What the cleaning actually changed in your file."
+
+msgid "Ce que permet chaque rôle"
+msgstr "What each role allows"
 
 msgid "Cellules manquantes"
 msgstr "Missing cells"
@@ -474,6 +615,12 @@ msgstr "These %(count)s file(s) exceed the %(days)s-day retention period. They a
 
 msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
 msgstr "These counters feed the global search and the shortcuts below."
+
+msgid "Ces deux versions sont identiques sur les indicateurs suivis."
+msgstr "These two versions are identical on the tracked indicators."
+
+msgid "Cette page est réservée aux administrateurs."
+msgstr "This page is reserved for administrators."
 
 msgid "Champ"
 msgstr "Field"
@@ -499,6 +646,12 @@ msgstr "Change my password"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Change my password — DataZen"
 
+msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
+msgstr "Every account has a role: viewer, editor or administrator. Enforcement happens server-side, not only in the interface."
+
+msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
+msgstr "Every successful cleaning freezes a version: you can download it, compare it and roll back."
+
 msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
 msgstr "Load your data as <code>.csv</code>, <code>.xlsx</code> or <code>.xls</code>, whatever the separator."
 
@@ -507,6 +660,12 @@ msgstr "Choose the site language"
 
 msgid "Choisir le format"
 msgstr "Choose the format"
+
+msgid "Choisissez deux versions pour mesurer ce qui a réellement changé entre elles."
+msgstr "Choose two versions to measure what actually changed between them."
+
+msgid "Choisissez un destinataire ou cochez « Créer un lien public »."
+msgstr "Choose a recipient or tick “Create a public link”."
 
 msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
 msgstr "Choose a CSV or Excel file (.csv, .xlsx, .xls)."
@@ -547,6 +706,9 @@ msgstr "Language code (fr, en, es…). Empty = application language."
 msgid "Coefficient de Pearson"
 msgstr "Pearson coefficient"
 
+msgid "Collaboration"
+msgstr "Collaboration"
+
 msgid "Colonne"
 msgstr "Column"
 
@@ -555,6 +717,15 @@ msgstr "Target column"
 
 msgid "Colonne clé pour la déduplication"
 msgstr "Deduplication key column"
+
+msgid "Colonne constante"
+msgstr "Constant column"
+
+msgid "Colonne quasi constante"
+msgstr "Quasi-constant column"
+
+msgid "Colonne vide"
+msgstr "Empty column"
 
 msgid "Colonnes"
 msgstr "Columns"
@@ -580,17 +751,29 @@ msgstr "Unknown columns:"
 msgid "Colonnes stables"
 msgstr "Stable columns"
 
+msgid "Colonnes vides, constantes, quasi constantes ou à type hétérogène."
+msgstr "Empty, constant, quasi-constant or mixed-type columns."
+
 msgid "Colonnes à vérifier"
 msgstr "Columns to review"
 
 msgid "Combien de fichiers se trouvent dans chaque tranche de score."
 msgstr "How many files fall in each score bracket."
 
+msgid "Comment les échéances sont-elles exécutées ?"
+msgstr "How are due dates executed?"
+
 msgid "Comparaison"
 msgstr "Comparison"
 
 msgid "Comparaison avant / après — %(name)s"
 msgstr "Before / after comparison — %(name)s"
+
+msgid "Comparaison de versions — %(name)s"
+msgstr "Version comparison — %(name)s"
+
+msgid "Comparer"
+msgstr "Compare"
 
 msgid "Complétion du profil"
 msgstr "Profile completion"
@@ -613,6 +796,9 @@ msgstr "Account"
 msgid "Compte actif"
 msgstr "Active account"
 
+msgid "Comptes ("
+msgstr "Accounts ("
+
 msgid "Condensé"
 msgstr "Digest"
 
@@ -621,6 +807,9 @@ msgstr "Trust"
 
 msgid "Confirmer la décision"
 msgstr "Confirm decision"
+
+msgid "Confirmer le nettoyage"
+msgstr "Confirm cleaning"
 
 msgid "Connectez-vous pour retrouver vos fichiers."
 msgstr "Sign in to get back to your files."
@@ -631,11 +820,20 @@ msgstr "Sign in"
 msgid "Connexion — DataZen"
 msgstr "Sign in — DataZen"
 
+msgid "Consultation"
+msgstr "View"
+
 msgid "Consultation des graphiques"
 msgstr "Viewing the charts"
 
 msgid "Consultation du rapport"
 msgstr "Viewing the report"
+
+msgid "Consultation et téléchargement"
+msgstr "View and download"
+
+msgid "Consulte et télécharge les jeux de données partagés. Ne modifie rien."
+msgstr "Views and downloads shared datasets. Changes nothing."
 
 msgid "Continuer / valider une étape"
 msgstr "Continue / confirm a step"
@@ -691,11 +889,17 @@ msgstr "Create the rule"
 msgid "Créer le jeton"
 msgstr "Create the token"
 
+msgid "Créer le partage"
+msgstr "Create the share"
+
 msgid "Créer le webhook"
 msgstr "Create the webhook"
 
 msgid "Créer un compte"
 msgstr "Create an account"
+
+msgid "Créer un lien public"
+msgstr "Create a public link"
 
 msgid "Créer une règle"
 msgstr "Create a rule"
@@ -706,8 +910,14 @@ msgstr "Create a rule once, reuse it across all your files."
 msgid "Créez votre compte"
 msgstr "Create your account"
 
-msgid "Data is consistent: each value is valid or unknown"
-msgstr "Data is consistent: each value is valid or unknown"
+msgid "Créé par"
+msgstr "Created by"
+
+msgid "Créée par"
+msgstr "Created by"
+
+msgid "DataZen ne fait tourner aucun démon en arrière-plan : une commande de gestion reprend les échéances dues et relance le nettoyage par le même chemin de code que l'interface."
+msgstr "DataZen runs no background daemon: a management command picks up due schedules and restarts the cleaning through the same code path as the interface."
 
 msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
 msgstr "DataZen — Data cleaning application (DataClean Pro) · ©"
@@ -739,14 +949,26 @@ msgstr "Last HTTP status"
 msgid "Dernier déclenchement"
 msgstr "Last trigger"
 
+msgid "Dernier statut"
+msgstr "Last status"
+
 msgid "Dernier usage"
 msgstr "Last used"
 
 msgid "Derniers fichiers"
 msgstr "Recent files"
 
+msgid "Dernière : succès"
+msgstr "Last: success"
+
+msgid "Dernière : échec"
+msgstr "Last: failure"
+
 msgid "Dernière connexion"
 msgstr "Last sign-in"
+
+msgid "Dernière exécution"
+msgstr "Last run"
 
 msgid "Dernière utilisation"
 msgstr "Last used"
@@ -757,6 +979,9 @@ msgstr "Recent rules"
 msgid "Des incohérences ont été détectées entre les statistiques et les données."
 msgstr "Inconsistencies were detected between the statistics and the data."
 
+msgid "Destinataire"
+msgstr "Recipient"
+
 msgid "Dimension"
 msgstr "Dimension"
 
@@ -766,6 +991,12 @@ msgstr "Quality dimensions"
 msgid "Dispersion et valeurs extrêmes des colonnes numériques."
 msgstr "Dispersion and extreme values of numeric columns."
 
+msgid "Distribution la plus asymétrique : « %(colonne)s » (asymétrie %(valeur)s) — moyenne et médiane s'écartent sensiblement, une transformation ou un traitement par quantiles est à envisager."
+msgstr "Most skewed distribution: “%(colonne)s” (skewness %(valeur)s) — mean and median differ noticeably; consider a transformation or quantile treatment."
+
+msgid "Distribution la plus concentrée/pointue : « %(colonne)s » (aplatissement %(valeur)s) — forte densité autour de la moyenne avec des valeurs extrêmes marquées."
+msgstr "Most peaked distribution: “%(colonne)s” (kurtosis %(valeur)s) — high density around the mean with marked extreme values."
+
 msgid "Distributions des colonnes numériques"
 msgstr "Distributions of numeric columns"
 
@@ -774,6 +1005,12 @@ msgstr "Numeric distributions"
 
 msgid "Django · Pandas · Bootstrap"
 msgstr "Django · Pandas · Bootstrap"
+
+msgid "Données cohérentes : chaque valeur est valide ou inconnue"
+msgstr "Data is consistent: each value is valid or unknown"
+
+msgid "Doublon"
+msgstr "Duplicate"
 
 msgid "Doublon par similarité"
 msgstr "Similarity duplicate"
@@ -817,6 +1054,12 @@ msgstr "Duplicates, stray spaces, malformed emails, inconsistent dates… DataZe
 msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
 msgstr "Duplicates, missing values, spaces, casing, emails, phones, dates and salaries normalised."
 
+msgid "Droit"
+msgstr "Permission"
+
+msgid "Droit accordé"
+msgstr "Permission granted"
+
 msgid "Durée de conservation"
 msgstr "Retention period"
 
@@ -856,8 +1099,17 @@ msgstr "Clear"
 msgid "Effectif"
 msgstr "Count"
 
+msgid "Email"
+msgstr "Email"
+
+msgid "Email fictif"
+msgstr "Placeholder email"
+
 msgid "Email invalide"
 msgstr "Invalid email"
+
+msgid "Email manquant"
+msgstr "Missing email"
 
 msgid "Email nettoyé"
 msgstr "Cleaned email"
@@ -928,8 +1180,14 @@ msgstr "Remaining errors"
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
 
+msgid "Exemples de corrections"
+msgstr "Sample corrections"
+
 msgid "Expiration"
 msgstr "Expiry"
+
+msgid "Expire le"
+msgstr "Expires on"
 
 msgid "Expiré"
 msgstr "Expired"
@@ -939,6 +1197,12 @@ msgstr "Score explanation"
 
 msgid "Export & traçabilité"
 msgstr "Export & traceability"
+
+msgid "Exécuter"
+msgstr "Run"
+
+msgid "Exécutions"
+msgstr "Runs"
 
 msgid "Fermer"
 msgstr "Close"
@@ -997,6 +1261,9 @@ msgstr "Cleaned files older than this period (0 = unlimited retention)."
 msgid "Fichiers récents"
 msgstr "Recent files"
 
+msgid "Fichiers à nettoyer"
+msgstr "Files to clean"
+
 msgid "Fil d'Ariane"
 msgstr "Breadcrumb"
 
@@ -1030,8 +1297,17 @@ msgstr "Accepted formats: <code>.csv</code>, <code>.xlsx</code>, <code>.xls</cod
 msgid "Formats de dates (%(column)s) :"
 msgstr "Date formats (%(column)s):"
 
-msgid "Formats standardized (phones, dates)"
+msgid "Formats standardisés (téléphones, dates)"
 msgstr "Formats standardized (phones, dates)"
+
+msgid "Forme des distributions"
+msgstr "Distribution shape"
+
+msgid "Forme des distributions (asymétrie et aplatissement)"
+msgstr "Distribution shape (skewness and kurtosis)"
+
+msgid "Fréquence"
+msgstr "Frequency"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Save time: everything that matters in DataZen is one key combination away."
@@ -1051,14 +1327,23 @@ msgstr "Statistical charts generated with <strong>matplotlib</strong> and <stron
 msgid "Gratuit, immédiat, et vos fichiers restent privés."
 msgstr "Free, instant, and your files stay private."
 
+msgid "Gère les rôles et voit l'ensemble des fichiers de la plateforme."
+msgstr "Manages roles and sees every file on the platform."
+
 msgid "Gérer les règles…"
 msgstr "Manage rules…"
+
+msgid "Hebdomadaire"
+msgstr "Weekly"
 
 msgid "Histogrammes des colonnes numériques détectées."
 msgstr "Histograms of the detected numeric columns."
 
 msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
 msgstr "Timestamped history of your actions: uploads, cleanings, exports, API."
+
+msgid "Identifiant non unique"
+msgstr "Non-unique identifier"
 
 msgid "Identité"
 msgstr "Identity"
@@ -1071,6 +1356,9 @@ msgstr "CSV & Excel import"
 
 msgid "Impossible d'appliquer la décision : %(error)s"
 msgstr "Unable to apply the decision: %(error)s"
+
+msgid "Impossible de comparer ces versions : %(error)s"
+msgstr "Unable to compare these versions: %(error)s"
 
 msgid "Impossible de convertir le fichier : %(error)s"
 msgstr "Unable to convert the file: %(error)s"
@@ -1087,6 +1375,9 @@ msgstr "Unable to read the file: %(error)s"
 msgid "Impossible de lire le rapport : %(error)s"
 msgstr "Unable to read the report: %(error)s"
 
+msgid "Impossible de simuler le nettoyage : le fichier est illisible."
+msgstr "Unable to simulate the cleaning: the file cannot be read."
+
 msgid "Inactif"
 msgstr "Inactive"
 
@@ -1098,6 +1389,9 @@ msgstr "Unknown"
 
 msgid "Indicateur"
 msgstr "Metric"
+
+msgid "Indicateurs"
+msgstr "Indicators"
 
 msgid "Indicateurs comparés"
 msgstr "Compared metrics"
@@ -1141,6 +1435,9 @@ msgstr "Token created. Copy it now: it will not be shown again."
 msgid "Jeton d'API"
 msgstr "API token"
 
+msgid "Jeton du lien"
+msgstr "Link token"
+
 msgid "Jeton « %(name)s » révoqué."
 msgstr "Token “%(name)s” revoked."
 
@@ -1149,6 +1446,12 @@ msgstr "Tokens"
 
 msgid "Jetons d'API"
 msgstr "API tokens"
+
+msgid "Jeu de données"
+msgstr "Dataset"
+
+msgid "Jeu de données partagé en lecture seule via un lien DataZen."
+msgstr "Dataset shared read-only through a DataZen link."
 
 msgid "Journal d'activité"
 msgstr "Activity log"
@@ -1177,8 +1480,17 @@ msgstr "Deleting the account permanently erases your files, your rules and your 
 msgid "Laisser vide pour appliquer à toutes les colonnes."
 msgstr "Leave empty to apply to all columns."
 
+msgid "Laissez vide pour démarrer à la prochaine échéance."
+msgstr "Leave empty to start at the next due date."
+
 msgid "Laissez vide pour un jeton sans expiration."
 msgstr "Leave empty for a token with no expiry."
+
+msgid "Laissez vide pour un partage sans expiration."
+msgstr "Leave empty for a share with no expiry."
+
+msgid "Lancer le nettoyage des fichiers sélectionnés"
+msgstr "Start cleaning the selected files"
 
 msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
 msgstr "Run a cleaning first to access exploratory analysis."
@@ -1191,6 +1503,9 @@ msgstr "Interface language"
 
 msgid "Le compte « %(username)s » a été supprimé."
 msgstr "The account “%(username)s” has been deleted."
+
+msgid "Le fichier de cette version n'est plus disponible."
+msgstr "The file for this version is no longer available."
 
 msgid "Le fichier ne doit pas dépasser 20 Mo."
 msgstr "The file must not exceed 20 MB."
@@ -1210,6 +1525,9 @@ msgstr "The webhook host name points to an internal address."
 msgid "Le nom d'hôte est absent de l'URL."
 msgstr "The URL has no host name."
 
+msgid "Le partage est toujours en lecture seule : le destinataire consulte et, si vous l'autorisez, télécharge. Il ne modifie jamais vos données."
+msgstr "Sharing is always read-only: the recipient views and, if you allow it, downloads. They never modify your data."
+
 msgid "Le port est invalide."
 msgstr "The port is invalid."
 
@@ -1218,6 +1536,12 @@ msgstr "The “System” theme follows your device settings."
 
 msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
 msgstr "Processing runs in the background. This page updates automatically when it finishes."
+
+msgid "Lecteur"
+msgstr "Viewer"
+
+msgid "Lecteur : consultation et téléchargement. Éditeur : peut aussi nettoyer et supprimer ses fichiers. Administrateur : gère les rôles et voit tous les fichiers."
+msgstr "Viewer: viewing and downloading. Editor: can also clean and delete their own files. Administrator: manages roles and sees all files."
 
 msgid "Les adresses internes sont refusées."
 msgstr "Internal addresses are refused."
@@ -1243,14 +1567,23 @@ msgstr "Cleaned files are archived then purged after this period (0 = unlimited 
 msgid "Les identifiants intégrés à l'URL sont refusés."
 msgstr "Credentials embedded in the URL are refused."
 
+msgid "Les options choisies ne changeraient rien à ce jeu de données."
+msgstr "The selected options would not change this dataset."
+
 msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 msgstr "Available routes: /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 
 msgid "Les statistiques affichées correspondent aux données réelles."
 msgstr "The displayed statistics match the actual data."
 
+msgid "Lien de partage public"
+msgstr "Public share link"
+
 msgid "Lien invalide"
 msgstr "Invalid link"
+
+msgid "Lien public"
+msgstr "Public link"
 
 msgid "Ligne"
 msgstr "Row"
@@ -1293,6 +1626,9 @@ msgstr "Take control of your data lifecycle."
 
 msgid "Membre depuis"
 msgstr "Member since"
+
+msgid "Mensuel"
+msgstr "Monthly"
 
 msgid "Mes règles"
 msgstr "My rules"
@@ -1375,6 +1711,18 @@ msgstr "Cleaning started in the background. The page updates automatically."
 msgid "Nettoyage lancé sur « %(name)s »"
 msgstr "Cleaning started on “%(name)s”"
 
+msgid "Nettoyage par lots"
+msgstr "Batch cleaning"
+
+msgid "Nettoyage par lots : %(count)s fichier(s) lancé(s)"
+msgstr "Batch cleaning: %(count)s file(s) started"
+
+msgid "Nettoyage par lots — DataZen"
+msgstr "Batch cleaning — DataZen"
+
+msgid "Nettoyage planifié de « %(name)s » lancé."
+msgstr "Scheduled cleaning of “%(name)s” started."
+
 msgid "Nettoyage terminé"
 msgstr "Cleaning finished"
 
@@ -1402,20 +1750,14 @@ msgstr "Cleaned"
 msgid "Niveau"
 msgstr "Level"
 
-msgid "No exact duplicates"
-msgstr "No exact duplicates"
-
-msgid "No missing or unknown values"
-msgstr "No missing or unknown values"
-
-msgid "No potential duplicates"
-msgstr "No potential duplicates"
-
 msgid "Nom"
 msgstr "Name"
 
 msgid "Nom d'utilisateur"
 msgstr "Username"
+
+msgid "Nom de la colonne unique (ex. email). Laissez vide pour ne supprimer que les lignes 100 % identiques. Une colonne absente d'un fichier est ignorée pour ce fichier."
+msgstr "Name of the unique column (e.g. email). Leave empty to remove only 100% identical rows. A column missing from a file is ignored for that file."
 
 msgid "Nom de la règle"
 msgstr "Rule name"
@@ -1431,6 +1773,9 @@ msgstr "Number of calls"
 
 msgid "Nombre d'occurrences"
 msgstr "Number of occurrences"
+
+msgid "Nombre de colonnes concernées"
+msgstr "Number of affected columns"
 
 msgid "Nombre de nettoyages et score moyen par semaine."
 msgstr "Number of cleanings and average score per week."
@@ -1498,11 +1843,29 @@ msgstr "New picture ready"
 msgid "Nouvelle valeur"
 msgstr "New value"
 
+msgid "Numérique"
+msgstr "Numeric"
+
+msgid "Numéro de version"
+msgstr "Version number"
+
+msgid "Options de nettoyage"
+msgstr "Cleaning options"
+
 msgid "Opération"
 msgstr "Operation"
 
+msgid "Opérations appliquées"
+msgstr "Applied operations"
+
 msgid "Opérations de nettoyage"
 msgstr "Cleaning operations"
+
+msgid "Opérations de v%(n)s"
+msgstr "Operations of v%(n)s"
+
+msgid "Opérations qui seraient appliquées"
+msgstr "Operations that would be applied"
 
 msgid "Organisation"
 msgstr "Organisation"
@@ -1528,6 +1891,27 @@ msgstr "Page"
 msgid "Parcourir…"
 msgstr "Choose file"
 
+msgid "Partage"
+msgstr "Share"
+
+msgid "Partage créé."
+msgstr "Share created."
+
+msgid "Partage de « %(name)s » avec %(target)s"
+msgstr "Share of “%(name)s” with %(target)s"
+
+msgid "Partage révoqué."
+msgstr "Share revoked."
+
+msgid "Partage — %(name)s"
+msgstr "Share — %(name)s"
+
+msgid "Partages"
+msgstr "Shares"
+
+msgid "Partagé le"
+msgstr "Shared on"
+
 msgid "Pas encore de compte ?"
 msgstr "No account yet?"
 
@@ -1542,6 +1926,27 @@ msgstr "Profile picture"
 
 msgid "Pilotage"
 msgstr "Overview"
+
+msgid "Planification"
+msgstr "Schedule"
+
+msgid "Planification %(state)s."
+msgstr "Schedule %(state)s."
+
+msgid "Planification créée pour « %(name)s »"
+msgstr "Schedule created for “%(name)s”"
+
+msgid "Planification créée."
+msgstr "Schedule created."
+
+msgid "Planification supprimée."
+msgstr "Schedule deleted."
+
+msgid "Planifications"
+msgstr "Schedules"
+
+msgid "Planifications — DataZen"
+msgstr "Schedules — DataZen"
 
 msgid "Plus fréquent"
 msgstr "Most frequent"
@@ -1558,11 +1963,17 @@ msgstr "Weight"
 msgid "Premier quartile"
 msgstr "First quartile"
 
+msgid "Première exécution"
+msgstr "First run"
+
 msgid "Prendre une photo avec la caméra"
 msgstr "Take a picture with the camera"
 
 msgid "Problème"
 msgstr "Problem"
+
+msgid "Problèmes"
+msgstr "Issues"
 
 msgid "Problèmes après"
 msgstr "Problems after"
@@ -1575,6 +1986,9 @@ msgstr "Detected issues"
 
 msgid "Problèmes restants"
 msgstr "Remaining problems"
+
+msgid "Prochaine exécution"
+msgstr "Next run"
 
 msgid "Productivité"
 msgstr "Productivity"
@@ -1594,8 +2008,17 @@ msgstr "Public profile"
 msgid "Profil visible publiquement"
 msgstr "Publicly visible profile"
 
+msgid "Profilage statistique"
+msgstr "Statistical profiling"
+
 msgid "Profils"
 msgstr "Profiles"
+
+msgid "Programmer"
+msgstr "Schedule"
+
+msgid "Programmez un nettoyage récurrent : les mêmes options s'appliquent à chaque échéance, sans intervention de votre part."
+msgstr "Set up a recurring cleaning: the same options apply at every due date, with no action from you."
 
 msgid "Progression"
 msgstr "Progression"
@@ -1642,6 +2065,9 @@ msgstr "Q1"
 msgid "Q3"
 msgstr "Q3"
 
+msgid "Qualité : v%(before)s → v%(after)s"
+msgstr "Quality: v%(before)s → v%(after)s"
+
 msgid "Qualité moyenne"
 msgstr "Average quality"
 
@@ -1650,6 +2076,9 @@ msgstr "Quality per column"
 
 msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
 msgstr "A few words about you, your team, your datasets…"
+
+msgid "Quotidien"
+msgstr "Daily"
 
 msgid "Raccourcis clavier"
 msgstr "Keyboard shortcuts"
@@ -1708,6 +2137,12 @@ msgstr "Search"
 msgid "Rechercher (Ctrl+K)"
 msgstr "Search (Ctrl+K)"
 
+msgid "Rechercher un compte"
+msgstr "Search for an account"
+
+msgid "Rechercher un compte…"
+msgstr "Search for an account…"
+
 msgid "Rechercher un fichier"
 msgstr "Search for a file"
 
@@ -1750,11 +2185,20 @@ msgstr "Reported %(reported)s vs recalculated %(actual)s"
 msgid "Restauration"
 msgstr "Restoring"
 
+msgid "Restauration de la version %(number)s de « %(name)s »"
+msgstr "Restoring version %(number)s of “%(name)s”"
+
 msgid "Restauration de « %(name)s »"
 msgstr "Restoring “%(name)s”"
 
+msgid "Restauration impossible : %(error)s"
+msgstr "Restore failed: %(error)s"
+
 msgid "Restaurer"
 msgstr "Restore"
+
+msgid "Restaurer cette version comme version courante ?"
+msgstr "Restore this version as the current one?"
 
 msgid "Retour à la connexion"
 msgstr "Back to sign in"
@@ -1777,6 +2221,9 @@ msgstr "Rule “%(name)s” deleted."
 msgid "Règles"
 msgstr "Rules"
 
+msgid "Règles appliquées"
+msgstr "Rules applied"
+
 msgid "Règles de nettoyage"
 msgstr "Cleaning rules"
 
@@ -1797,6 +2244,9 @@ msgstr "Distribution of issues"
 
 msgid "Répartition des problèmes restants"
 msgstr "Distribution of remaining issues"
+
+msgid "Résultat de la simulation : rien n'a été écrit. Confirmez le nettoyage pour appliquer réellement ces changements."
+msgstr "Simulation result: nothing was written. Confirm the cleaning to actually apply these changes."
 
 msgid "Résultats"
 msgstr "Results"
@@ -1822,8 +2272,32 @@ msgstr "Revoke"
 msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
 msgstr "Revoke this token? Integrations using it will stop working."
 
+msgid "Révoquer ce partage ?"
+msgstr "Revoke this share?"
+
 msgid "Révoqué"
 msgstr "Revoked"
+
+msgid "Rôle"
+msgstr "Role"
+
+msgid "Rôle de « %(name)s » : %(before)s → %(after)s"
+msgstr "Role of “%(name)s”: %(before)s → %(after)s"
+
+msgid "Rôle de « %(name)s » mis à jour."
+msgstr "Role of “%(name)s” updated."
+
+msgid "Rôle du compte"
+msgstr "Account role"
+
+msgid "Rôle inconnu."
+msgstr "Unknown role."
+
+msgid "Rôles et permissions"
+msgstr "Roles and permissions"
+
+msgid "Rôles et permissions — DataZen"
+msgstr "Roles and permissions — DataZen"
 
 msgid "S'inscrire"
 msgstr "Sign up"
@@ -1834,8 +2308,14 @@ msgstr "Type <strong>%(username)s</strong> to confirm"
 msgid "Score"
 msgstr "Score"
 
+msgid "Score après"
+msgstr "Score after"
+
 msgid "Score après nettoyage"
 msgstr "Score after cleaning"
+
+msgid "Score avant"
+msgstr "Score before"
 
 msgid "Score avant nettoyage"
 msgstr "Score before cleaning"
@@ -1864,6 +2344,9 @@ msgstr "Quality score after"
 msgid "Score qualité avant"
 msgstr "Quality score before"
 
+msgid "Scores mesurés lors de chaque nettoyage."
+msgstr "Scores measured at each cleaning."
+
 msgid "Se connecter"
 msgstr "Sign in"
 
@@ -1876,11 +2359,20 @@ msgstr "Move through the results"
 msgid "Sert uniquement à la réinitialisation du mot de passe."
 msgstr "Used only for password reset."
 
+msgid "Seul le propriétaire peut gérer les partages."
+msgstr "Only the owner can manage shares."
+
+msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
+msgstr "Only the first corrections are shown; the real cleaning will apply them all."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "Only http and https schemes are allowed."
 
 msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
 msgstr "If an account exists with this address, an email containing the reset link has just been sent."
+
+msgid "Simulation — aucune modification enregistrée"
+msgstr "Simulation — no change saved"
 
 msgid "Site web"
 msgstr "Website"
@@ -1924,6 +2416,9 @@ msgstr "Delete %(name)s"
 msgid "Supprimer ce webhook ?"
 msgstr "Delete this webhook?"
 
+msgid "Supprimer cette planification ?"
+msgstr "Delete this schedule?"
+
 msgid "Supprimer définitivement ce fichier et toutes ses données ?"
 msgstr "Permanently delete this file and all its data?"
 
@@ -1948,6 +2443,12 @@ msgstr "Trim extra whitespace"
 msgid "Supprimer mon compte"
 msgstr "Delete my account"
 
+msgid "Suspendre"
+msgstr "Suspend"
+
+msgid "Suspendue"
+msgstr "Suspended"
+
 msgid "Synthèse"
 msgstr "Summary"
 
@@ -1959,6 +2460,18 @@ msgstr "Security"
 
 msgid "Sélectionner un fichier"
 msgstr "Select a file"
+
+msgid "Sélectionnez au moins un fichier."
+msgstr "Select at least one file."
+
+msgid "Sélectionnez deux versions différentes pour afficher la comparaison."
+msgstr "Select two different versions to display the comparison."
+
+msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
+msgstr "Select up to %(limit)s files: beyond that, the batch is truncated to avoid overloading the server."
+
+msgid "Sévérité"
+msgstr "Severity"
 
 msgid "Tableau de bord"
 msgstr "Dashboard"
@@ -1999,8 +2512,17 @@ msgstr "Everything included"
 msgid "Tout voir"
 msgstr "View all"
 
+msgid "Toute personne possédant ce lien peut consulter le fichier. Révoquez le partage pour l'invalider immédiatement."
+msgstr "Anyone with this link can view the file. Revoke the share to invalidate it immediately."
+
+msgid "Toute personne possédant le lien peut consulter le jeu de données, sans compte. Le lien est révocable et peut expirer."
+msgstr "Anyone with the link can view the dataset, without an account. The link can be revoked and may expire."
+
 msgid "Toutes les actions"
 msgstr "All actions"
+
+msgid "Toutes les valeurs renseignées sont valides"
+msgstr "All filled values are valid"
 
 msgid "Traçabilité"
 msgstr "Traceability"
@@ -2014,11 +2536,17 @@ msgstr "Type"
 msgid "Type de correction"
 msgstr "Correction type"
 
+msgid "Type hétérogène"
+msgstr "Mixed type"
+
 msgid "Téléchargement"
 msgstr "Download"
 
 msgid "Téléchargement de « %(name)s »"
 msgstr "Downloading “%(name)s”"
+
+msgid "Téléphone"
+msgstr "Phone"
 
 msgid "Téléphone invalide"
 msgstr "Invalid phone number"
@@ -2028,6 +2556,9 @@ msgstr "Non-standard phone number"
 
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Non-standard phone numbers (%(column)s):"
+
+msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
+msgstr "Uploads, cleans, schedules and deletes their own files."
 
 msgid "Téléversement"
 msgstr "Upload"
@@ -2058,6 +2589,9 @@ msgstr "An administrator account cannot be deleted from this page."
 
 msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
 msgstr "An administrator account cannot be deleted from this page. Use the"
+
+msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
+msgstr "An extract of the file: the first rows are enough to judge the data."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "A dashboard measures quality before / after and explains every lost point."
@@ -2101,11 +2635,20 @@ msgstr "Replacement value"
 msgid "Valeur de remplacement (pour le remplissage)."
 msgstr "Replacement value (for filling)."
 
+msgid "Valeur du moment centré"
+msgstr "Central moment value"
+
+msgid "Valeur inconnue"
+msgstr "Unknown value"
+
 msgid "Valeur manquante"
 msgstr "Missing value"
 
 msgid "Valeur numérique invalide"
 msgstr "Invalid numeric value"
+
+msgid "Valeur unique « %(value)s » sur %(count)s ligne(s)."
+msgstr "Single value “%(value)s” across %(count)s row(s)."
 
 msgid "Valeurs aberrantes"
 msgstr "Outliers"
@@ -2149,6 +2692,36 @@ msgstr "Validate and correct emails (obvious errors only)"
 msgid "Validité"
 msgstr "Validity"
 
+msgid "Variance"
+msgstr "Variance"
+
+msgid "Version"
+msgstr "Version"
+
+msgid "Version %(number)s restaurée."
+msgstr "Version %(number)s restored."
+
+msgid "Version comparée"
+msgstr "Compared version"
+
+msgid "Version courante"
+msgstr "Current version"
+
+msgid "Version de référence"
+msgstr "Reference version"
+
+msgid "Versions"
+msgstr "Versions"
+
+msgid "Versions enregistrées ("
+msgstr "Recorded versions ("
+
+msgid "Versions — %(name)s"
+msgstr "Versions — %(name)s"
+
+msgid "Vide pour créer un lien public."
+msgstr "Empty to create a public link."
+
 msgid "Visualisations statistiques"
 msgstr "Statistical visualisations"
 
@@ -2170,6 +2743,9 @@ msgstr "Your data deserves<br> <span class=\"dz-gradient-text\">to be flawless.<
 msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
 msgstr "Your files stay with you. DataZen shows you what exceeds the chosen retention period and deletes nothing without your approval."
 
+msgid "Vos jeux de données"
+msgstr "Your datasets"
+
 msgid "Votre espace de travail"
 msgstr "Your workspace"
 
@@ -2188,6 +2764,18 @@ msgstr "Your profile picture has been deleted."
 msgid "Votre profil a été mis à jour."
 msgstr "Your profile has been updated."
 
+msgid "Votre rôle ne permet pas de créer une planification."
+msgstr "Your role does not allow creating a schedule."
+
+msgid "Votre rôle ne permet pas de lancer un nettoyage. Contactez un administrateur."
+msgstr "Your role does not allow starting a cleaning. Contact an administrator."
+
+msgid "Votre rôle ne permet pas de modifier les données. Contactez un administrateur."
+msgstr "Your role does not allow modifying data. Contact an administrator."
+
+msgid "Vous"
+msgstr "You"
+
 msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
 msgstr "You stay in control: nothing is deleted without an action from you."
 
@@ -2202,6 +2790,9 @@ msgstr "You do not have access to this webhook."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "You do not have access to this rule."
+
+msgid "Vous ne pouvez pas modifier votre propre rôle."
+msgstr "You cannot change your own role."
 
 msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
 msgstr "Consolidated view of your data quality, across every file."
@@ -2344,6 +2935,9 @@ msgstr "e.g. email (empty = all columns)"
 msgid "excellente qualité"
 msgstr "excellent quality"
 
+msgid "faible"
+msgstr "low"
+
 msgid "fermer"
 msgstr "close"
 
@@ -2355,6 +2949,9 @@ msgstr "unrecognised format"
 
 msgid "généré le"
 msgstr "generated on"
+
+msgid "haute"
+msgstr "high"
 
 msgid "https://exemple.com"
 msgstr "https://exemple.com"
@@ -2374,6 +2971,9 @@ msgstr "unchanged"
 msgid "jours"
 msgstr "days"
 
+msgid "lien public"
+msgstr "public link"
+
 msgid "lignes"
 msgstr "rows"
 
@@ -2382,6 +2982,9 @@ msgstr "incorrect length/format"
 
 msgid "matplotlib"
 msgstr "matplotlib"
+
+msgid "moyenne"
+msgstr "medium"
 
 msgid "naviguer"
 msgstr "navigate"
@@ -2437,6 +3040,9 @@ msgstr "deleted"
 msgid "sur"
 msgstr "of"
 
+msgid "suspendue"
+msgstr "suspended"
+
 msgid "texte"
 msgstr "text"
 
@@ -2446,11 +3052,17 @@ msgstr "phone"
 msgid "unicité"
 msgstr "uniqueness"
 
+msgid "v%(n)s"
+msgstr "v%(n)s"
+
 msgid "valeur(s) extrême(s)"
 msgstr "extreme value(s)"
 
 msgid "validité"
 msgstr "validity"
+
+msgid "« %(value)s » représente %(percent)s %% des valeurs renseignées."
+msgstr "“%(value)s” accounts for %(percent)s %% of filled values."
 
 msgid "· ancien_id :"
 msgstr "· old_id:"
@@ -2476,11 +3088,17 @@ msgstr "Cleaning failed"
 msgid "Échec du nettoyage de « %(name)s »"
 msgstr "Cleaning failed for “%(name)s”"
 
+msgid "Échec du nettoyage planifié : %(error)s"
+msgstr "Scheduled cleaning failed: %(error)s"
+
+msgid "Éditeur"
+msgstr "Editor"
+
 msgid "Étape 1"
 msgstr "Step 1"
 
 msgid "État"
-msgstr "State"
+msgstr "Status"
 
 msgid "Évolution hebdomadaire du score de qualité"
 msgstr "Weekly change in the quality score"
@@ -2518,17 +3136,32 @@ msgstr "— All columns —"
 msgid "← Retour au fichier"
 msgstr "← Back to the file"
 
+msgid "← Retour à l'historique"
+msgstr "← Back to history"
+
 msgid "⌨️ Raccourcis"
 msgstr "⌨️ Shortcuts"
 
 msgid "⌨️ Raccourcis clavier"
 msgstr "⌨️ Keyboard shortcuts"
 
+msgid "⏱️ Nettoyages planifiés"
+msgstr "⏱️ Scheduled cleanings"
+
+msgid "⏱️ Planifications"
+msgstr "⏱️ Schedules"
+
 msgid "⏳ Fichiers expirés"
 msgstr "⏳ Expired files"
 
 msgid "⏳ Nettoyage en cours…"
 msgstr "⏳ Cleaning in progress…"
+
+msgid "♻️ Restaurer"
+msgstr "♻️ Restore"
+
+msgid "⚙️ Opérations communes"
+msgstr "⚙️ Common operations"
 
 msgid "⚙️ Règles de nettoyage personnalisées"
 msgstr "⚙️ Custom cleaning rules"
@@ -2538,6 +3171,9 @@ msgstr "⚙️ Custom rules"
 
 msgid "⚙️ Régler la durée"
 msgstr "⚙️ Set the period"
+
+msgid "⚠️ Anomalies signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ Anomalies are reported only — never modified automatically."
 
 msgid "⚠️ Points nécessitant une vérification humaine"
 msgstr "⚠️ Items requiring human review"
@@ -2587,8 +3223,14 @@ msgstr "✓ Copied"
 msgid "➕ Nouveau jeton"
 msgstr "➕ New token"
 
+msgid "➕ Nouveau partage"
+msgstr "➕ New share"
+
 msgid "➕ Nouveau webhook"
 msgstr "➕ New webhook"
+
+msgid "➕ Nouvelle planification"
+msgstr "➕ New schedule"
 
 msgid "➕ Nouvelle règle"
 msgstr "➕ New rule"
@@ -2598,6 +3240,9 @@ msgstr "➕ Upload a file"
 
 msgid "⬇️ Exporter mes données (JSON)"
 msgstr "⬇️ Export my data (JSON)"
+
+msgid "⬇️ Télécharger"
+msgstr "⬇️ Download"
 
 msgid "⬇️ Télécharger le fichier nettoyé"
 msgstr "⬇️ Download the cleaned file"
@@ -2628,6 +3273,9 @@ msgstr "👁️ View the report"
 
 msgid "👤 Mon profil"
 msgstr "👤 My profile"
+
+msgid "📄 Fichiers à nettoyer"
+msgstr "📄 Files to clean"
 
 msgid "📈 Analyse exploratoire"
 msgstr "📈 Exploratory analysis"
@@ -2665,8 +3313,14 @@ msgstr "📊 Dashboard"
 msgid "📊 Tableau de bord global"
 msgstr "📊 Global dashboard"
 
+msgid "📋 Mes planifications ("
+msgstr "📋 My schedules ("
+
 msgid "📋 Mes règles ("
 msgstr "📋 My rules ("
+
+msgid "📋 Partages actifs ("
+msgstr "📋 Active shares ("
 
 msgid "📋 Qualité des colonnes"
 msgstr "📋 Column quality"
@@ -2704,11 +3358,26 @@ msgstr "🔌 API and access tokens"
 msgid "🔌 Jetons d'API"
 msgstr "🔌 API tokens"
 
+msgid "🔍 Aperçu (simulation)"
+msgstr "🔍 Preview (simulation)"
+
+msgid "🔍 Aperçu avant / après (simulation)"
+msgstr "🔍 Before / after preview (simulation)"
+
 msgid "🔍 Avant / après"
 msgstr "🔍 Before / after"
 
 msgid "🔍 Comparaison avant / après"
 msgstr "🔍 Before / after comparison"
+
+msgid "🔍 Comparer"
+msgstr "🔍 Compare"
+
+msgid "🔍 Comparer des versions"
+msgstr "🔍 Compare versions"
+
+msgid "🔍 Comparer deux versions"
+msgstr "🔍 Compare two versions"
 
 msgid "🔍 Doublons"
 msgstr "🔍 Duplicates"
@@ -2734,6 +3403,9 @@ msgstr "🔎 Score explanation"
 msgid "🔑 Mes jetons"
 msgstr "🔑 My tokens"
 
+msgid "🔑 Votre lien de partage public"
+msgstr "🔑 Your public share link"
+
 msgid "🔑 Votre nouveau jeton"
 msgstr "🔑 Your new token"
 
@@ -2748,6 +3420,9 @@ msgstr "🔔 My webhooks"
 
 msgid "🔔 Webhooks"
 msgstr "🔔 Webhooks"
+
+msgid "🔗 Partager ce jeu de données"
+msgstr "🔗 Share this dataset"
 
 msgid "🔗 Voir mon profil public"
 msgstr "🔗 View my public profile"
@@ -2770,8 +3445,17 @@ msgstr "🕓 Activity"
 msgid "🕓 Dernières activités"
 msgstr "🕓 Latest activity"
 
+msgid "🕓 Historique des versions"
+msgstr "🕓 Version history"
+
 msgid "🕓 Journal d'activité"
 msgstr "🕓 Activity log"
+
+msgid "🕓 Versions"
+msgstr "🕓 Versions"
+
+msgid "🗂️ Nettoyage par lots"
+msgstr "🗂️ Batch cleaning"
 
 msgid "🗃️ Fichiers récents"
 msgstr "🗃️ Recent files"
@@ -2797,11 +3481,17 @@ msgstr "🚀 New in the pro workspace"
 msgid "🚀 Premier appel"
 msgstr "🚀 First call"
 
+msgid "🛡️ Rôles et permissions"
+msgstr "🛡️ Roles and permissions"
+
 msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
 msgstr "🟢 Keep the 1st row (delete the others)"
 
 msgid "🟣 Fusionner toutes les lignes"
 msgstr "🟣 Merge all rows"
+
+msgid "🧩 Anomalies structurelles"
+msgstr "🧩 Structural anomalies"
 
 msgid "🧭 Dimensions les plus fragiles"
 msgstr "🧭 Most fragile dimensions"

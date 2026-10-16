@@ -16,11 +16,20 @@ msgstr "%(actual)s oprava/oprav v protokolu vs %(reported)s nahlášených"
 msgid "%(actual)s unknown value(s) in email column(s) vs %(reported)s reported"
 msgstr "%(actual)s neznámých hodnot ve sloupcích e-mailu vs %(reported)s nahlášených"
 
+msgid "%(count)s anomalie(s) structurelle(s) détectée(s) sur les colonnes."
+msgstr "V sloupcích bylo zjištěno %(count)s strukturálních anomálií."
+
 msgid "%(count)s colonnes"
 msgstr "%(count)s sloupců"
 
+msgid "%(count)s doublon(s) exact(s) restant(s)"
+msgstr "%(count)s přesných duplicit zbývá"
+
 msgid "%(count)s doublon(s) potentiel(s) nécessitent une vérification."
 msgstr "%(count)s možných duplicit vyžaduje kontrolu."
+
+msgid "%(count)s doublon(s) potentiel(s) à vérifier (pénalité réduite)"
+msgstr "%(count)s možných duplicit vyžaduje ruční kontrolu (snížená penalizace)"
 
 msgid "%(count)s entrée(s) d'activité supprimée(s)."
 msgstr "Odstraněno %(count)s záznamů protokolu aktivity."
@@ -28,35 +37,38 @@ msgstr "Odstraněno %(count)s záznamů protokolu aktivity."
 msgid "%(count)s erreur(s) n'ont pas pu être corrigée(s) automatiquement."
 msgstr "%(count)s chyb se nepodařilo automaticky opravit."
 
-msgid "%(count)s exact duplicate(s) remaining"
-msgstr "%(count)s přesných duplicit zbývá"
-
-msgid "%(count)s inconsistent value(s) remaining (neither valid nor unknown)"
-msgstr "%(count)s nekonzistentních hodnot zbývá (ani platné, ani neznámé)"
+msgid "%(count)s fichier(s) ignoré(s) : lot limité à %(limit)s."
+msgstr "%(count)s soubor(ů) ignorováno: dávka omezena na %(limit)s."
 
 msgid "%(count)s invalid email(s) present (non-empty and not unknown)"
 msgstr "%(count)s neplatných e-mailů (nejsou prázdné ani neznámé)"
 
-msgid "%(count)s invalid value(s) among filled data"
-msgstr "%(count)s neplatných hodnot mezi vyplněnými daty"
-
 msgid "%(count)s lignes"
 msgstr "%(count)s řádků"
 
-msgid "%(count)s missing value(s)"
-msgstr "%(count)s chybějících hodnot"
-
-msgid "%(count)s non-standard value(s)"
-msgstr "%(count)s nestandardních hodnot"
-
-msgid "%(count)s potential duplicate(s) need manual review (reduced penalty)"
-msgstr "%(count)s možných duplicit vyžaduje ruční kontrolu (snížená penalizace)"
-
-msgid "%(count)s unknown value(s) (data unavailable)"
-msgstr "%(count)s neznámých hodnot (data nejsou k dispozici)"
+msgid "%(count)s nettoyage(s) lancé(s) en arrière-plan."
+msgstr "%(count)s čištění spuštěno na pozadí."
 
 msgid "%(count)s valeur(s) aberrante(s) détectée(s) sur les colonnes numériques."
 msgstr "V číselných sloupcích bylo zjištěno %(count)s odlehlých hodnot."
+
+msgid "%(count)s valeur(s) d'identifiant dupliquée(s)."
+msgstr "%(count)s duplicitních hodnot identifikátoru."
+
+msgid "%(count)s valeur(s) incohérente(s) restante(s) (ni valide ni inconnue)"
+msgstr "%(count)s nekonzistentních hodnot zbývá (ani platné, ani neznámé)"
+
+msgid "%(count)s valeur(s) inconnue(s) (donnée indisponible)"
+msgstr "%(count)s neznámých hodnot (data nejsou k dispozici)"
+
+msgid "%(count)s valeur(s) invalide(s) parmi les données renseignées"
+msgstr "%(count)s neplatných hodnot mezi vyplněnými daty"
+
+msgid "%(count)s valeur(s) manquante(s)"
+msgstr "%(count)s chybějících hodnot"
+
+msgid "%(count)s valeur(s) non standard"
+msgstr "%(count)s nestandardních hodnot"
 
 msgid "%(count)s valeur(s) sont actuellement « Inconnu »."
 msgstr "%(count)s hodnot je aktuálně „Neznámé“."
@@ -70,28 +82,50 @@ msgstr[2] "Bylo zjištěno %(counter)s možných duplicit. Tyto řádky se <stro
 msgid "%(counter)s fichier affiché"
 msgid_plural "%(counter)s fichiers affichés"
 msgstr[0] "%(counter)s zobrazený soubor"
+msgstr[1] "%(counter)s zobrazený soubor"
+msgstr[2] "%(counter)s zobrazený soubor"
 
 msgid "%(counter)s inconnu"
 msgid_plural "%(counter)s inconnus"
 msgstr[0] "%(counter)s neznámé"
+msgstr[1] "%(counter)s neznámé"
+msgstr[2] "%(counter)s neznámé"
 
 msgid "%(counter)s invalide,"
 msgid_plural "%(counter)s invalides,"
 msgstr[0] "%(counter)s neplatné,"
+msgstr[1] "%(counter)s neplatné,"
+msgstr[2] "%(counter)s neplatné,"
 
 msgid "%(counter)s ligne concernée :"
 msgid_plural "%(counter)s lignes concernées :"
 msgstr[0] "%(counter)s dotčený řádek:"
+msgstr[1] "%(counter)s dotčený řádek:"
+msgstr[2] "%(counter)s dotčený řádek:"
 
 msgid "%(counter)s valide,"
 msgid_plural "%(counter)s valides,"
 msgstr[0] "%(counter)s platné,"
+msgstr[1] "%(counter)s platné,"
+msgstr[2] "%(counter)s platné,"
+
+msgid "%(numeric)s valeur(s) numérique(s) sur %(total)s renseignée(s) : type hétérogène."
+msgstr "%(numeric)s číselných hodnot z %(total)s vyplněných: smíšený typ."
 
 msgid "%(purged)s fichier(s) supprimé(s), %(archived)s archivé(s)."
 msgstr "Odstraněno %(purged)s souborů, archivováno %(archived)s."
 
+msgid "%(runs)s exécution"
+msgid_plural "%(runs)s exécutions"
+msgstr[0] "%(runs)s spuštění"
+msgstr[1] "%(runs)s spuštění"
+msgstr[2] "%(runs)s spuštění"
+
 msgid "%(score)s / 100  (%(weight)s %(percent)s)"
 msgstr "%(score)s / 100  (%(weight)s %(percent)s)"
+
+msgid "%(total)s valeur(s) aberrante(s) détectée(s) (méthode IQR). Colonnes les plus concernées : %(detail)s."
+msgstr "Bylo zjištěno %(total)s odlehlých hodnot (metoda IQR). Nejvíce zasažené sloupce: %(detail)s."
 
 msgid "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs %(expected)s expected"
 msgstr "%(valid)s + %(invalid)s + %(unknown)s = %(actual)s vs očekávaných %(expected)s"
@@ -102,10 +136,17 @@ msgstr "%(value)s %(percent)s"
 msgid "(%(counter)s modification)"
 msgid_plural "(%(counter)s modifications)"
 msgstr[0] "(%(counter)s změna)"
+msgstr[1] "(%(counter)s změna)"
+msgstr[2] "(%(counter)s změna)"
 
 msgid "(%(counter)s non-conformité)"
 msgid_plural "(%(counter)s non-conformités)"
 msgstr[0] "(%(counter)s neshoda)"
+msgstr[1] "(%(counter)s neshoda)"
+msgstr[2] "(%(counter)s neshoda)"
+
+msgid "(%(shown)s sur %(total)s)"
+msgstr "(%(shown)s z %(total)s)"
 
 msgid "(colonnes : %(columns)s)"
 msgstr "(sloupce: %(columns)s)"
@@ -200,6 +241,9 @@ msgstr "Administrátor"
 msgid "Administration"
 msgstr "Správa"
 
+msgid "Adresse e-mail"
+msgstr "E-mailová adresa"
+
 msgid "Adresse email"
 msgstr "E-mailová adresa"
 
@@ -220,9 +264,6 @@ msgstr "Zobrazit podrobnosti anomálií"
 
 msgid "Ajoutée à l'en-tête X-DataZen-Signature (HMAC-SHA256)."
 msgstr "Přidá se do hlavičky X-DataZen-Signature (HMAC-SHA256)."
-
-msgid "All filled values are valid"
-msgstr "Všechny vyplněné hodnoty jsou platné"
 
 msgid "Aller au contenu principal"
 msgstr "Přejít k hlavnímu obsahu"
@@ -245,8 +286,20 @@ msgstr "Původní hodnota"
 msgid "Annuler"
 msgstr "Zrušit"
 
+msgid "Anomalie"
+msgstr "Anomálie"
+
 msgid "Anomalies restantes (à traiter manuellement)"
 msgstr "Zbývající anomálie (k ručnímu zpracování)"
+
+msgid "Anomalies structurelles"
+msgstr "Strukturální anomálie"
+
+msgid "Anomalies structurelles par type"
+msgstr "Strukturální anomálie podle typu"
+
+msgid "Anonymisation"
+msgstr "Anonymizace"
 
 msgid "Anonymisation des données sensibles (%(count)s valeur(s) pseudonymisée(s))"
 msgstr "Anonymizace citlivých údajů (pseudonymizováno hodnot: %(count)s)"
@@ -260,8 +313,26 @@ msgstr "Anonymizovat citlivá data (jména, e-maily, telefonní čísla)"
 msgid "Antananarivo, Madagascar"
 msgstr "Antananarivo, Madagascar"
 
+msgid "Aperçu"
+msgstr "Náhled"
+
+msgid "Aperçu calculé : aucune modification n'a été enregistrée. Confirmez pour appliquer le nettoyage."
+msgstr "Náhled vypočten: nebyla uložena žádná změna. Potvrďte použití čištění."
+
+msgid "Aperçu de nettoyage sur « %(name)s »"
+msgstr "Náhled čištění „%(name)s“"
+
+msgid "Aperçu des données"
+msgstr "Náhled dat"
+
 msgid "Aperçu du fichier nettoyé"
 msgstr "Náhled vyčištěného souboru"
+
+msgid "Aperçu limité à %(shown)s lignes sur %(total)s."
+msgstr "Náhled omezen na %(shown)s z %(total)s řádků."
+
+msgid "Aplatissement"
+msgstr "Špičatost"
 
 msgid "Appel API"
 msgstr "Volání API"
@@ -269,11 +340,20 @@ msgstr "Volání API"
 msgid "Appel API : %(path)s"
 msgstr "Volání API: %(path)s"
 
+msgid "Appelez-la depuis un planificateur système (cron, Planificateur de tâches Windows) toutes les cinq minutes."
+msgstr "Volejte ji z systémového plánovače (cron, Plánovač úloh Windows) každých pět minut."
+
 msgid "Appels"
 msgstr "Volání"
 
 msgid "Application"
 msgstr "Aplikace"
+
+msgid "Appliquer"
+msgstr "Použít"
+
+msgid "Appliquez les mêmes opérations à plusieurs jeux de données en une seule fois. Les fichiers sont traités en série, un à la fois."
+msgstr "Použijte stejné operace na několik datových sad najednou. Soubory se zpracovávají postupně, jeden po druhém."
 
 msgid "Après"
 msgstr "Po"
@@ -293,6 +373,21 @@ msgstr "Archiv"
 msgid "Archivés"
 msgstr "Archivováno"
 
+msgid "Asymétrie"
+msgstr "Šikmost"
+
+msgid "Asymétrie et aplatissement (moments centrés) des colonnes numériques."
+msgstr "Šikmost a špičatost (centrální momenty) číselných sloupců."
+
+msgid "Aucun compte ne correspond à cette recherche."
+msgstr "Tomuto hledání neodpovídá žádný účet."
+
+msgid "Aucun doublon exact"
+msgstr "Žádné přesné duplicity"
+
+msgid "Aucun doublon potentiel"
+msgstr "Žádné možné duplicity"
+
 msgid "Aucun fichier d'origine n'est disponible."
 msgstr "Původní soubor není k dispozici."
 
@@ -306,7 +401,7 @@ msgid "Aucun fichier ne correspond à votre recherche."
 msgstr "Vašemu hledání neodpovídá žádný soubor."
 
 msgid "Aucun fichier nettoyé n'est disponible."
-msgstr "Vyčištěný soubor není k dispozici."
+msgstr "Není k dispozici žádný vyčištěný soubor."
 
 msgid "Aucun fichier nettoyé pour le moment."
 msgstr "Zatím žádné vyčištěné soubory."
@@ -325,6 +420,12 @@ msgstr "Pro tuto datovou sadu není k dispozici žádný graf: neobsahuje dostat
 
 msgid "Aucun jeton pour le moment. Créez-en un pour utiliser l'API."
 msgstr "Zatím žádné tokeny. Vytvořte jeden pro použití API."
+
+msgid "Aucun jeu de données disponible pour le moment."
+msgstr "Momentálně není k dispozici žádná datová sada."
+
+msgid "Aucun jeu de données pour le moment."
+msgstr "Momentálně žádná datová sada."
 
 msgid "Aucun journal des modifications n'est disponible."
 msgstr "Protokol změn není k dispozici."
@@ -350,6 +451,9 @@ msgstr "Není zaznamenána žádná aktivita."
 msgid "Aucune anomalie restante."
 msgstr "Žádné zbývající anomálie."
 
+msgid "Aucune anomalie structurelle détectée."
+msgstr "Nebyla zjištěna žádná strukturální anomálie."
+
 msgid "Aucune anomalie."
 msgstr "Žádné anomálie."
 
@@ -358,6 +462,9 @@ msgstr "Žádné sloupce"
 
 msgid "Aucune correction"
 msgstr "Žádné opravy"
+
+msgid "Aucune correction de valeur ne serait nécessaire."
+msgstr "Nebyla by nutná žádná oprava hodnot."
 
 msgid "Aucune différence notable entre le fichier d'origine et le fichier nettoyé : vos données étaient déjà propres."
 msgstr "Mezi původním a vyčištěným souborem není patrný rozdíl: vaše data už byla čistá."
@@ -374,6 +481,18 @@ msgstr "Nejsou k dispozici žádná vyčištěná data."
 msgid "Aucune modification enregistrée."
 msgstr "Nejsou uloženy žádné změny."
 
+msgid "Aucune opération enregistrée pour cette version."
+msgstr "Pro tuto verzi není zaznamenána žádná operace."
+
+msgid "Aucune opération enregistrée."
+msgstr "Není zaznamenána žádná operace."
+
+msgid "Aucune opération."
+msgstr "Žádná operace."
+
+msgid "Aucune planification : programmez un nettoyage récurrent pour ne plus y penser."
+msgstr "Zatím žádné plány: nastavte pravidelné čištění a přestaňte na to myslet."
+
 msgid "Aucune règle personnalisée."
 msgstr "Žádné vlastní pravidlo."
 
@@ -383,8 +502,17 @@ msgstr "Zatím žádná pravidla. Vytvořte pravidlo a znovu je použijte u vše
 msgid "Aucune valeur aberrante détectée sur les colonnes numériques."
 msgstr "V číselných sloupcích nebyly zjištěny žádné odlehlé hodnoty."
 
+msgid "Aucune valeur manquante ou inconnue"
+msgstr "Žádné chybějící nebo neznámé hodnoty"
+
+msgid "Aucune valeur renseignée sur %(rows)s ligne(s)."
+msgstr "V %(rows)s řádcích není vyplněna žádná hodnota."
+
 msgid "Aucune valeur « Inconnu »."
 msgstr "Žádná hodnota „Neznámé“."
+
+msgid "Aucune version enregistrée : lancez un nettoyage pour en créer une."
+msgstr "Zatím není zaznamenána žádná verze: spusťte čištění a vytvořte ji."
 
 msgid "Audit des emails"
 msgstr "Audit e-mailů"
@@ -452,8 +580,20 @@ msgstr "Sjednocení značky „Neznámé“ (opraveno: %(count)s)"
 msgid "Capturer"
 msgstr "Zachytit"
 
+msgid "Casse"
+msgstr "Velikost písmen"
+
+msgid "Catégorie"
+msgstr "Kategorie"
+
 msgid "Ce graphique n'est pas disponible pour ce jeu de données."
 msgstr "Tento graf není pro tuto datovou sadu k dispozici."
+
+msgid "Ce jeu de données n'est partagé avec personne pour le moment."
+msgstr "Tato datová sada zatím není s nikým sdílena."
+
+msgid "Ce lien de partage est invalide ou a expiré."
+msgstr "Tento odkaz pro sdílení je neplatný nebo vypršel."
 
 msgid "Ce lien de réinitialisation a déjà été utilisé ou a expiré."
 msgstr "Tento odkaz pro obnovení již byl použit nebo vypršel."
@@ -461,11 +601,20 @@ msgstr "Tento odkaz pro obnovení již byl použit nebo vypršel."
 msgid "Ce lien est valable une seule fois. Si vous n'êtes pas à l'origine de cette demande, ignorez simplement ce message : votre mot de passe reste inchangé. — DataZen"
 msgstr "Tento odkaz platí pouze jednou. Pokud jste o obnovení nežádali, tuto zprávu jednoduše ignorujte: vaše heslo zůstane nezměněno. — DataZen"
 
+msgid "Ce lien ne permet pas le téléchargement."
+msgstr "Tento odkaz neumožňuje stahování."
+
+msgid "Ce partage ne permet pas le téléchargement."
+msgstr "Toto sdílení neumožňuje stahování."
+
 msgid "Ce profil n'est pas public."
 msgstr "Tento profil není veřejný."
 
 msgid "Ce que le nettoyage a réellement changé dans votre fichier."
 msgstr "Co čištění ve vašem souboru skutečně změnilo."
+
+msgid "Ce que permet chaque rôle"
+msgstr "Co která role umožňuje"
 
 msgid "Cellules manquantes"
 msgstr "Chybějící buňky"
@@ -475,6 +624,12 @@ msgstr "Tyto %(count)s souborů překračují dobu uchování %(days)s dnů. Nej
 
 msgid "Ces compteurs alimentent la recherche globale et les raccourcis ci-dessous."
 msgstr "Tyto počítadla napájejí globální hledání a zkratky níže."
+
+msgid "Ces deux versions sont identiques sur les indicateurs suivis."
+msgstr "Tyto dvě verze jsou shodné ve sledovaných ukazatelích."
+
+msgid "Cette page est réservée aux administrateurs."
+msgstr "Tato stránka je vyhrazena administrátorům."
 
 msgid "Champ"
 msgstr "Pole"
@@ -500,6 +655,12 @@ msgstr "Změnit mé heslo"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Změnit mé heslo — DataZen"
 
+msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
+msgstr "Každý účet má roli: čtenář, editor nebo administrátor. Kontrola probíhá na serveru, nejen v rozhraní."
+
+msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
+msgstr "Každé úspěšné čištění zafixuje verzi: můžete ji stáhnout, porovnat a vrátit se zpět."
+
 msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
 msgstr "Načtěte svá data ve formátu <code>.csv</code>, <code>.xlsx</code> nebo <code>.xls</code> bez ohledu na oddělovač."
 
@@ -508,6 +669,12 @@ msgstr "Zvolte jazyk webu"
 
 msgid "Choisir le format"
 msgstr "Zvolte formát"
+
+msgid "Choisissez deux versions pour mesurer ce qui a réellement changé entre elles."
+msgstr "Vyberte dvě verze a změřte, co se mezi nimi skutečně změnilo."
+
+msgid "Choisissez un destinataire ou cochez « Créer un lien public »."
+msgstr "Vyberte příjemce nebo zaškrtněte „Vytvořit veřejný odkaz“."
 
 msgid "Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls)."
 msgstr "Zvolte soubor CSV nebo Excel (.csv, .xlsx, .xls)."
@@ -548,6 +715,9 @@ msgstr "Kód jazyka (fr, en, es…). Prázdné = jazyk aplikace."
 msgid "Coefficient de Pearson"
 msgstr "Pearsonův koeficient"
 
+msgid "Collaboration"
+msgstr "Spolupráce"
+
 msgid "Colonne"
 msgstr "Sloupec"
 
@@ -556,6 +726,15 @@ msgstr "Cílový sloupec"
 
 msgid "Colonne clé pour la déduplication"
 msgstr "Klíčový sloupec pro odstranění duplicit"
+
+msgid "Colonne constante"
+msgstr "Konstantní sloupec"
+
+msgid "Colonne quasi constante"
+msgstr "Téměř konstantní sloupec"
+
+msgid "Colonne vide"
+msgstr "Prázdný sloupec"
 
 msgid "Colonnes"
 msgstr "Sloupce"
@@ -581,17 +760,29 @@ msgstr "Neznámé sloupce:"
 msgid "Colonnes stables"
 msgstr "Stabilní sloupce"
 
+msgid "Colonnes vides, constantes, quasi constantes ou à type hétérogène."
+msgstr "Prázdné, konstantní, téměř konstantní nebo smíšené sloupce."
+
 msgid "Colonnes à vérifier"
 msgstr "Sloupce ke kontrole"
 
 msgid "Combien de fichiers se trouvent dans chaque tranche de score."
 msgstr "Kolik souborů se nachází v každém pásmu skóre."
 
+msgid "Comment les échéances sont-elles exécutées ?"
+msgstr "Jak se termíny spouštějí?"
+
 msgid "Comparaison"
 msgstr "Porovnání"
 
 msgid "Comparaison avant / après — %(name)s"
 msgstr "Srovnání před / po — %(name)s"
+
+msgid "Comparaison de versions — %(name)s"
+msgstr "Porovnání verzí — %(name)s"
+
+msgid "Comparer"
+msgstr "Porovnat"
 
 msgid "Complétion du profil"
 msgstr "Úplnost profilu"
@@ -614,6 +805,9 @@ msgstr "Účet"
 msgid "Compte actif"
 msgstr "Aktivní účet"
 
+msgid "Comptes ("
+msgstr "Účty ("
+
 msgid "Condensé"
 msgstr "Shrnutí"
 
@@ -622,6 +816,9 @@ msgstr "Důvěra"
 
 msgid "Confirmer la décision"
 msgstr "Potvrdit rozhodnutí"
+
+msgid "Confirmer le nettoyage"
+msgstr "Potvrdit čištění"
 
 msgid "Connectez-vous pour retrouver vos fichiers."
 msgstr "Přihlaste se a vraťte se ke svým souborům."
@@ -632,11 +829,20 @@ msgstr "Přihlášení"
 msgid "Connexion — DataZen"
 msgstr "Přihlášení — DataZen"
 
+msgid "Consultation"
+msgstr "Prohlížení"
+
 msgid "Consultation des graphiques"
 msgstr "Zobrazit grafy"
 
 msgid "Consultation du rapport"
 msgstr "Zobrazit report"
+
+msgid "Consultation et téléchargement"
+msgstr "Prohlížení a stahování"
+
+msgid "Consulte et télécharge les jeux de données partagés. Ne modifie rien."
+msgstr "Prohlíží a stahuje sdílené datové sady. Nic nemění."
 
 msgid "Continuer / valider une étape"
 msgstr "Pokračovat / potvrdit krok"
@@ -692,11 +898,17 @@ msgstr "Vytvořit pravidlo"
 msgid "Créer le jeton"
 msgstr "Vytvořit token"
 
+msgid "Créer le partage"
+msgstr "Vytvořit sdílení"
+
 msgid "Créer le webhook"
 msgstr "Vytvořit webhook"
 
 msgid "Créer un compte"
 msgstr "Vytvořit účet"
+
+msgid "Créer un lien public"
+msgstr "Vytvořit veřejný odkaz"
 
 msgid "Créer une règle"
 msgstr "Vytvořit pravidlo"
@@ -707,8 +919,14 @@ msgstr "Vytvořte pravidlo jednou a znovu je použijte u všech svých souborů.
 msgid "Créez votre compte"
 msgstr "Vytvořte si účet"
 
-msgid "Data is consistent: each value is valid or unknown"
-msgstr "Data jsou konzistentní: každá hodnota je platná nebo neznámá"
+msgid "Créé par"
+msgstr "Vytvořil"
+
+msgid "Créée par"
+msgstr "Vytvořila"
+
+msgid "DataZen ne fait tourner aucun démon en arrière-plan : une commande de gestion reprend les échéances dues et relance le nettoyage par le même chemin de code que l'interface."
+msgstr "DataZen nespouští žádného démona na pozadí: příkaz pro správu převezme splatné plány a znovu spustí čištění stejnou cestou kódu jako rozhraní."
 
 msgid "DataZen — Application de nettoyage de données (DataClean Pro) · ©"
 msgstr "DataZen — Aplikace pro čištění dat (DataClean Pro) · ©"
@@ -740,14 +958,26 @@ msgstr "Poslední kód HTTP"
 msgid "Dernier déclenchement"
 msgstr "Poslední spuštění"
 
+msgid "Dernier statut"
+msgstr "Poslední stav"
+
 msgid "Dernier usage"
 msgstr "Poslední použití"
 
 msgid "Derniers fichiers"
 msgstr "Nedávné soubory"
 
+msgid "Dernière : succès"
+msgstr "Poslední: úspěch"
+
+msgid "Dernière : échec"
+msgstr "Poslední: selhání"
+
 msgid "Dernière connexion"
 msgstr "Poslední přihlášení"
+
+msgid "Dernière exécution"
+msgstr "Poslední spuštění"
 
 msgid "Dernière utilisation"
 msgstr "Poslední použití"
@@ -758,6 +988,9 @@ msgstr "Nedávná pravidla"
 msgid "Des incohérences ont été détectées entre les statistiques et les données."
 msgstr "Byly zjištěny nesrovnalosti mezi statistikami a daty."
 
+msgid "Destinataire"
+msgstr "Příjemce"
+
 msgid "Dimension"
 msgstr "Dimenze"
 
@@ -767,6 +1000,12 @@ msgstr "Dimenze kvality"
 msgid "Dispersion et valeurs extrêmes des colonnes numériques."
 msgstr "Rozptyl a extrémní hodnoty číselných sloupců."
 
+msgid "Distribution la plus asymétrique : « %(colonne)s » (asymétrie %(valeur)s) — moyenne et médiane s'écartent sensiblement, une transformation ou un traitement par quantiles est à envisager."
+msgstr "Nejvíce zešikmené rozdělení: „%(colonne)s“ (šikmost %(valeur)s) — průměr a medián se výrazně liší; zvažte transformaci nebo kvantilové zpracování."
+
+msgid "Distribution la plus concentrée/pointue : « %(colonne)s » (aplatissement %(valeur)s) — forte densité autour de la moyenne avec des valeurs extrêmes marquées."
+msgstr "Nejšpičatější rozdělení: „%(colonne)s“ (špičatost %(valeur)s) — vysoká hustota kolem průměru s výraznými extrémními hodnotami."
+
 msgid "Distributions des colonnes numériques"
 msgstr "Rozložení číselných sloupců"
 
@@ -775,6 +1014,12 @@ msgstr "Číselná rozdělení"
 
 msgid "Django · Pandas · Bootstrap"
 msgstr "Django · Pandas · Bootstrap"
+
+msgid "Données cohérentes : chaque valeur est valide ou inconnue"
+msgstr "Data jsou konzistentní: každá hodnota je platná nebo neznámá"
+
+msgid "Doublon"
+msgstr "Duplikát"
 
 msgid "Doublon par similarité"
 msgstr "Duplicita podle podobnosti"
@@ -818,6 +1063,12 @@ msgstr "Duplicity, přebytečné mezery, chybně formátované e-maily, nekonzis
 msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
 msgstr "Duplicity, chybějící hodnoty, mezery, velikost písmen, e-maily, telefony, data a mzdy normalizovány."
 
+msgid "Droit"
+msgstr "Oprávnění"
+
+msgid "Droit accordé"
+msgstr "Udělené oprávnění"
+
 msgid "Durée de conservation"
 msgstr "Doba uchování"
 
@@ -857,8 +1108,17 @@ msgstr "Vymazat"
 msgid "Effectif"
 msgstr "Počet"
 
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Email fictif"
+msgstr "Fiktivní e-mail"
+
 msgid "Email invalide"
 msgstr "Neplatný e-mail"
+
+msgid "Email manquant"
+msgstr "Chybějící e-mail"
 
 msgid "Email nettoyé"
 msgstr "Vyčištěný e-mail"
@@ -929,17 +1189,29 @@ msgstr "Zbývající chyby"
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
 
+msgid "Exemples de corrections"
+msgstr "Příklady oprav"
+
 msgid "Expiration"
 msgstr "Vypršení"
 
+msgid "Expire le"
+msgstr "Vyprší"
+
 msgid "Expiré"
-msgstr "Prošlé"
+msgstr "Vypršelo"
 
 msgid "Explication du score"
 msgstr "Vysvětlení skóre"
 
 msgid "Export & traçabilité"
 msgstr "Export a sledovatelnost"
+
+msgid "Exécuter"
+msgstr "Spustit"
+
+msgid "Exécutions"
+msgstr "Spuštění"
 
 msgid "Fermer"
 msgstr "Zavřít"
@@ -998,6 +1270,9 @@ msgstr "Vyčištěné soubory starší než tato doba (0 = neomezené uchování
 msgid "Fichiers récents"
 msgstr "Nedávné soubory"
 
+msgid "Fichiers à nettoyer"
+msgstr "Soubory k vyčištění"
+
 msgid "Fil d'Ariane"
 msgstr "Drobečková navigace"
 
@@ -1031,8 +1306,17 @@ msgstr "Přijímané formáty: <code>.csv</code>, <code>.xlsx</code>, <code>.xls
 msgid "Formats de dates (%(column)s) :"
 msgstr "Formáty data (%(column)s):"
 
-msgid "Formats standardized (phones, dates)"
+msgid "Formats standardisés (téléphones, dates)"
 msgstr "Standardizované formáty (telefony, data)"
+
+msgid "Forme des distributions"
+msgstr "Tvar rozdělení"
+
+msgid "Forme des distributions (asymétrie et aplatissement)"
+msgstr "Tvar rozdělení (šikmost a špičatost)"
+
+msgid "Fréquence"
+msgstr "Frekvence"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Šetřete čas: vše důležité v DataZen je na klávesové zkratce."
@@ -1052,14 +1336,23 @@ msgstr "Statistické grafy generované pomocí <strong>matplotlib</strong> a <st
 msgid "Gratuit, immédiat, et vos fichiers restent privés."
 msgstr "Zdarma, okamžitě a vaše soubory zůstávají v soukromí."
 
+msgid "Gère les rôles et voit l'ensemble des fichiers de la plateforme."
+msgstr "Spravuje role a vidí všechny soubory platformy."
+
 msgid "Gérer les règles…"
 msgstr "Spravovat pravidla…"
+
+msgid "Hebdomadaire"
+msgstr "Týdně"
 
 msgid "Histogrammes des colonnes numériques détectées."
 msgstr "Histogramy zjištěných číselných sloupců."
 
 msgid "Historique horodaté de vos actions : téléversements, nettoyages, exports, API."
 msgstr "Časově označená historie vašich akcí: nahrání, čištění, exporty, API."
+
+msgid "Identifiant non unique"
+msgstr "Nejedinečný identifikátor"
 
 msgid "Identité"
 msgstr "Identita"
@@ -1072,6 +1365,9 @@ msgstr "Import CSV a Excel"
 
 msgid "Impossible d'appliquer la décision : %(error)s"
 msgstr "Rozhodnutí nelze použít: %(error)s"
+
+msgid "Impossible de comparer ces versions : %(error)s"
+msgstr "Tyto verze nelze porovnat: %(error)s"
 
 msgid "Impossible de convertir le fichier : %(error)s"
 msgstr "Soubor nelze převést: %(error)s"
@@ -1088,6 +1384,9 @@ msgstr "Soubor nelze přečíst: %(error)s"
 msgid "Impossible de lire le rapport : %(error)s"
 msgstr "Zprávu nelze přečíst: %(error)s"
 
+msgid "Impossible de simuler le nettoyage : le fichier est illisible."
+msgstr "Čištění nelze simulovat: soubor nelze přečíst."
+
 msgid "Inactif"
 msgstr "Neaktivní"
 
@@ -1099,6 +1398,9 @@ msgstr "Neznámé"
 
 msgid "Indicateur"
 msgstr "Ukazatel"
+
+msgid "Indicateurs"
+msgstr "Ukazatele"
 
 msgid "Indicateurs comparés"
 msgstr "Srovnávané ukazatele"
@@ -1142,6 +1444,9 @@ msgstr "Token vytvořen. Zkopírujte ho nyní: už nebude zobrazen."
 msgid "Jeton d'API"
 msgstr "API token"
 
+msgid "Jeton du lien"
+msgstr "Token odkazu"
+
 msgid "Jeton « %(name)s » révoqué."
 msgstr "Token « %(name)s » odvolán."
 
@@ -1150,6 +1455,12 @@ msgstr "Tokeny"
 
 msgid "Jetons d'API"
 msgstr "API tokeny"
+
+msgid "Jeu de données"
+msgstr "Datová sada"
+
+msgid "Jeu de données partagé en lecture seule via un lien DataZen."
+msgstr "Datová sada sdílená pouze pro čtení přes odkaz DataZen."
 
 msgid "Journal d'activité"
 msgstr "Protokol aktivity"
@@ -1178,8 +1489,17 @@ msgstr "Smazáním účtu trvale vymažete své soubory, svá pravidla i profil.
 msgid "Laisser vide pour appliquer à toutes les colonnes."
 msgstr "Ponechte prázdné pro použití na všechny sloupce."
 
+msgid "Laissez vide pour démarrer à la prochaine échéance."
+msgstr "Ponechte prázdné pro spuštění k dalšímu termínu."
+
 msgid "Laissez vide pour un jeton sans expiration."
 msgstr "Ponechte prázdné pro token bez vypršení."
+
+msgid "Laissez vide pour un partage sans expiration."
+msgstr "Ponechte prázdné pro sdílení bez vypršení."
+
+msgid "Lancer le nettoyage des fichiers sélectionnés"
+msgstr "Spustit čištění vybraných souborů"
 
 msgid "Lancez d'abord un nettoyage pour accéder à l'analyse exploratoire."
 msgstr "Nejprve spusťte čištění, abyste získali přístup k průzkumné analýze."
@@ -1192,6 +1512,9 @@ msgstr "Jazyk rozhraní"
 
 msgid "Le compte « %(username)s » a été supprimé."
 msgstr "Účet „%(username)s“ byl smazán."
+
+msgid "Le fichier de cette version n'est plus disponible."
+msgstr "Soubor této verze již není k dispozici."
 
 msgid "Le fichier ne doit pas dépasser 20 Mo."
 msgstr "Soubor nesmí přesáhnout 20 MB."
@@ -1211,6 +1534,9 @@ msgstr "Název hostitele webhooku ukazuje na interní adresu."
 msgid "Le nom d'hôte est absent de l'URL."
 msgstr "V URL chybí název hostitele."
 
+msgid "Le partage est toujours en lecture seule : le destinataire consulte et, si vous l'autorisez, télécharge. Il ne modifie jamais vos données."
+msgstr "Sdílení je vždy pouze pro čtení: příjemce prohlíží a, pokud to povolíte, stahuje. Vaše data nikdy nemění."
+
 msgid "Le port est invalide."
 msgstr "Neplatný port."
 
@@ -1219,6 +1545,12 @@ msgstr "Motiv „Systém“ se řídí nastavením vašeho zařízení."
 
 msgid "Le traitement s'exécute en arrière-plan. Cette page se met à jour automatiquement à la fin."
 msgstr "Zpracování probíhá na pozadí. Tato stránka se po dokončení automaticky aktualizuje."
+
+msgid "Lecteur"
+msgstr "Čtenář"
+
+msgid "Lecteur : consultation et téléchargement. Éditeur : peut aussi nettoyer et supprimer ses fichiers. Administrateur : gère les rôles et voit tous les fichiers."
+msgstr "Čtenář: prohlížení a stahování. Editor: může také čistit a mazat vlastní soubory. Administrátor: spravuje role a vidí všechny soubory."
 
 msgid "Les adresses internes sont refusées."
 msgstr "Interní adresy jsou odmítnuty."
@@ -1244,14 +1576,23 @@ msgstr "Vyčištěné soubory se archivují a po této době se mažou (0 = neom
 msgid "Les identifiants intégrés à l'URL sont refusés."
 msgstr "Přihlašovací údaje vložené do URL jsou odmítnuty."
 
+msgid "Les options choisies ne changeraient rien à ce jeu de données."
+msgstr "Zvolené možnosti by tuto datovou sadu nezměnily."
+
 msgid "Les routes disponibles : /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 msgstr "Dostupné cesty: /api/, /api/datasets/, /api/datasets/<id>/, /api/stats/."
 
 msgid "Les statistiques affichées correspondent aux données réelles."
 msgstr "Zobrazené statistiky odpovídají skutečným datům."
 
+msgid "Lien de partage public"
+msgstr "Veřejný odkaz pro sdílení"
+
 msgid "Lien invalide"
 msgstr "Neplatný odkaz"
+
+msgid "Lien public"
+msgstr "Veřejný odkaz"
 
 msgid "Ligne"
 msgstr "Řádek"
@@ -1294,6 +1635,9 @@ msgstr "Mějte pod kontrolou životní cyklus svých dat."
 
 msgid "Membre depuis"
 msgstr "Členem od"
+
+msgid "Mensuel"
+msgstr "Měsíčně"
 
 msgid "Mes règles"
 msgstr "Moje pravidla"
@@ -1376,6 +1720,18 @@ msgstr "Čištění bylo spuštěno na pozadí. Stránka se aktualizuje automati
 msgid "Nettoyage lancé sur « %(name)s »"
 msgstr "Čištění « %(name)s » spuštěno"
 
+msgid "Nettoyage par lots"
+msgstr "Dávkové čištění"
+
+msgid "Nettoyage par lots : %(count)s fichier(s) lancé(s)"
+msgstr "Dávkové čištění: spuštěno %(count)s soubor(ů)"
+
+msgid "Nettoyage par lots — DataZen"
+msgstr "Dávkové čištění — DataZen"
+
+msgid "Nettoyage planifié de « %(name)s » lancé."
+msgstr "Plánované čištění „%(name)s“ spuštěno."
+
 msgid "Nettoyage terminé"
 msgstr "Čištění dokončeno"
 
@@ -1403,20 +1759,14 @@ msgstr "Vyčištěné"
 msgid "Niveau"
 msgstr "Úroveň"
 
-msgid "No exact duplicates"
-msgstr "Žádné přesné duplicity"
-
-msgid "No missing or unknown values"
-msgstr "Žádné chybějící nebo neznámé hodnoty"
-
-msgid "No potential duplicates"
-msgstr "Žádné možné duplicity"
-
 msgid "Nom"
 msgstr "Název"
 
 msgid "Nom d'utilisateur"
 msgstr "Uživatelské jméno"
+
+msgid "Nom de la colonne unique (ex. email). Laissez vide pour ne supprimer que les lignes 100 % identiques. Une colonne absente d'un fichier est ignorée pour ce fichier."
+msgstr "Název jedinečného sloupce (např. email). Ponechte prázdné, chcete-li odstranit pouze 100% shodné řádky. Sloupec v souboru chybějící se pro tento soubor ignoruje."
 
 msgid "Nom de la règle"
 msgstr "Název pravidla"
@@ -1432,6 +1782,9 @@ msgstr "Počet volání"
 
 msgid "Nombre d'occurrences"
 msgstr "Počet výskytů"
+
+msgid "Nombre de colonnes concernées"
+msgstr "Počet zasažených sloupců"
 
 msgid "Nombre de nettoyages et score moyen par semaine."
 msgstr "Počet čištění a průměrné skóre za týden."
@@ -1499,11 +1852,29 @@ msgstr "Nový obrázek je připraven"
 msgid "Nouvelle valeur"
 msgstr "Nová hodnota"
 
+msgid "Numérique"
+msgstr "Číselný"
+
+msgid "Numéro de version"
+msgstr "Číslo verze"
+
+msgid "Options de nettoyage"
+msgstr "Možnosti čištění"
+
 msgid "Opération"
 msgstr "Operace"
 
+msgid "Opérations appliquées"
+msgstr "Použité operace"
+
 msgid "Opérations de nettoyage"
 msgstr "Operace čištění"
+
+msgid "Opérations de v%(n)s"
+msgstr "Operace v%(n)s"
+
+msgid "Opérations qui seraient appliquées"
+msgstr "Operace, které by se použily"
 
 msgid "Organisation"
 msgstr "Organizace"
@@ -1529,6 +1900,27 @@ msgstr "Stránka"
 msgid "Parcourir…"
 msgstr "Vybrat soubor"
 
+msgid "Partage"
+msgstr "Sdílení"
+
+msgid "Partage créé."
+msgstr "Sdílení vytvořeno."
+
+msgid "Partage de « %(name)s » avec %(target)s"
+msgstr "Sdílení „%(name)s“ s %(target)s"
+
+msgid "Partage révoqué."
+msgstr "Sdílení zrušeno."
+
+msgid "Partage — %(name)s"
+msgstr "Sdílení — %(name)s"
+
+msgid "Partages"
+msgstr "Sdílení"
+
+msgid "Partagé le"
+msgstr "Sdíleno"
+
 msgid "Pas encore de compte ?"
 msgstr "Ještě nemáte účet?"
 
@@ -1543,6 +1935,27 @@ msgstr "Profilový obrázek"
 
 msgid "Pilotage"
 msgstr "Řízení"
+
+msgid "Planification"
+msgstr "Plán"
+
+msgid "Planification %(state)s."
+msgstr "Plán %(state)s."
+
+msgid "Planification créée pour « %(name)s »"
+msgstr "Plán vytvořen pro „%(name)s“"
+
+msgid "Planification créée."
+msgstr "Plán vytvořen."
+
+msgid "Planification supprimée."
+msgstr "Plán smazán."
+
+msgid "Planifications"
+msgstr "Plány"
+
+msgid "Planifications — DataZen"
+msgstr "Plány — DataZen"
 
 msgid "Plus fréquent"
 msgstr "Nejčastější"
@@ -1559,11 +1972,17 @@ msgstr "Váha"
 msgid "Premier quartile"
 msgstr "První kvartil"
 
+msgid "Première exécution"
+msgstr "První spuštění"
+
 msgid "Prendre une photo avec la caméra"
 msgstr "Pořídit snímek kamerou"
 
 msgid "Problème"
 msgstr "Problém"
+
+msgid "Problèmes"
+msgstr "Problémy"
 
 msgid "Problèmes après"
 msgstr "Problémy po"
@@ -1576,6 +1995,9 @@ msgstr "Zjištěné problémy"
 
 msgid "Problèmes restants"
 msgstr "Zbývající problémy"
+
+msgid "Prochaine exécution"
+msgstr "Další spuštění"
 
 msgid "Productivité"
 msgstr "Produktivita"
@@ -1595,8 +2017,17 @@ msgstr "Veřejný profil"
 msgid "Profil visible publiquement"
 msgstr "Profil veřejně viditelný"
 
+msgid "Profilage statistique"
+msgstr "Statistické profilování"
+
 msgid "Profils"
 msgstr "Profily"
+
+msgid "Programmer"
+msgstr "Naplánovat"
+
+msgid "Programmez un nettoyage récurrent : les mêmes options s'appliquent à chaque échéance, sans intervention de votre part."
+msgstr "Naplánujte pravidelné čištění: stejné možnosti platí při každém termínu, bez vašeho zásahu."
 
 msgid "Progression"
 msgstr "Pokrok"
@@ -1643,6 +2074,9 @@ msgstr "Q1"
 msgid "Q3"
 msgstr "Q3"
 
+msgid "Qualité : v%(before)s → v%(after)s"
+msgstr "Kvalita: v%(before)s → v%(after)s"
+
 msgid "Qualité moyenne"
 msgstr "Průměrná kvalita"
 
@@ -1651,6 +2085,9 @@ msgstr "Kvalita podle sloupce"
 
 msgid "Quelques mots sur vous, votre équipe, vos jeux de données…"
 msgstr "Několik slov o vás, vašem týmu a vašich datových sadách…"
+
+msgid "Quotidien"
+msgstr "Denně"
 
 msgid "Raccourcis clavier"
 msgstr "Klávesové zkratky"
@@ -1709,6 +2146,12 @@ msgstr "Hledat"
 msgid "Rechercher (Ctrl+K)"
 msgstr "Hledat (Ctrl+K)"
 
+msgid "Rechercher un compte"
+msgstr "Hledat účet"
+
+msgid "Rechercher un compte…"
+msgstr "Hledat účet…"
+
 msgid "Rechercher un fichier"
 msgstr "Hledat soubor"
 
@@ -1751,11 +2194,20 @@ msgstr "Nahlášeno %(reported)s vs přepočítáno %(actual)s"
 msgid "Restauration"
 msgstr "Obnovení"
 
+msgid "Restauration de la version %(number)s de « %(name)s »"
+msgstr "Obnovení verze %(number)s „%(name)s“"
+
 msgid "Restauration de « %(name)s »"
 msgstr "Obnovení « %(name)s »"
 
+msgid "Restauration impossible : %(error)s"
+msgstr "Obnovení není možné: %(error)s"
+
 msgid "Restaurer"
 msgstr "Obnovit"
+
+msgid "Restaurer cette version comme version courante ?"
+msgstr "Obnovit tuto verzi jako aktuální?"
 
 msgid "Retour à la connexion"
 msgstr "Zpět na přihlášení"
@@ -1778,6 +2230,9 @@ msgstr "Pravidlo „%(name)s“ bylo smazáno."
 msgid "Règles"
 msgstr "Pravidla"
 
+msgid "Règles appliquées"
+msgstr "Použitá pravidla"
+
 msgid "Règles de nettoyage"
 msgstr "Pravidla čištění"
 
@@ -1799,6 +2254,9 @@ msgstr "Rozložení problémů"
 msgid "Répartition des problèmes restants"
 msgstr "Rozložení zbývajících problémů"
 
+msgid "Résultat de la simulation : rien n'a été écrit. Confirmez le nettoyage pour appliquer réellement ces changements."
+msgstr "Výsledek simulace: nebylo nic zapsáno. Potvrďte čištění, abyste tyto změny skutečně použili."
+
 msgid "Résultats"
 msgstr "Výsledky"
 
@@ -1818,13 +2276,37 @@ msgid "Révocation du jeton « %(name)s »"
 msgstr "Odvolání tokenu « %(name)s »"
 
 msgid "Révoquer"
-msgstr "Odvolat"
+msgstr "Zrušit"
 
 msgid "Révoquer ce jeton ? Les intégrations qui l'utilisent cesseront de fonctionner."
 msgstr "Odvolat tento token? Integrace, které ho používají, přestanou fungovat."
 
+msgid "Révoquer ce partage ?"
+msgstr "Zrušit toto sdílení?"
+
 msgid "Révoqué"
-msgstr "Odvolán"
+msgstr "Zrušeno"
+
+msgid "Rôle"
+msgstr "Role"
+
+msgid "Rôle de « %(name)s » : %(before)s → %(after)s"
+msgstr "Role „%(name)s“: %(before)s → %(after)s"
+
+msgid "Rôle de « %(name)s » mis à jour."
+msgstr "Role „%(name)s“ aktualizována."
+
+msgid "Rôle du compte"
+msgstr "Role účtu"
+
+msgid "Rôle inconnu."
+msgstr "Neznámá role."
+
+msgid "Rôles et permissions"
+msgstr "Role a oprávnění"
+
+msgid "Rôles et permissions — DataZen"
+msgstr "Role a oprávnění — DataZen"
 
 msgid "S'inscrire"
 msgstr "Zaregistrovat se"
@@ -1835,8 +2317,14 @@ msgstr "Potvrďte zadáním <strong>%(username)s</strong>"
 msgid "Score"
 msgstr "Skóre"
 
+msgid "Score après"
+msgstr "Skóre po"
+
 msgid "Score après nettoyage"
 msgstr "Skóre po čištění"
+
+msgid "Score avant"
+msgstr "Skóre před"
 
 msgid "Score avant nettoyage"
 msgstr "Skóre před čištěním"
@@ -1865,6 +2353,9 @@ msgstr "Skóre kvality po"
 msgid "Score qualité avant"
 msgstr "Skóre kvality před"
 
+msgid "Scores mesurés lors de chaque nettoyage."
+msgstr "Skóre měřená při každém čištění."
+
 msgid "Se connecter"
 msgstr "Přihlásit se"
 
@@ -1877,11 +2368,20 @@ msgstr "Pohyb ve výsledcích"
 msgid "Sert uniquement à la réinitialisation du mot de passe."
 msgstr "Slouží pouze k obnovení hesla."
 
+msgid "Seul le propriétaire peut gérer les partages."
+msgstr "Sdílení může spravovat pouze vlastník."
+
+msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
+msgstr "Zobrazují se pouze první opravy; skutečné čištění použije všechny."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "Povolena jsou pouze schémata http a https."
 
 msgid "Si un compte existe avec cette adresse, un e-mail contenant le lien de réinitialisation vient d'être envoyé."
 msgstr "Pokud účet s touto adresou existuje, byl právě odeslán e-mail s odkazem pro obnovení."
+
+msgid "Simulation — aucune modification enregistrée"
+msgstr "Simulace — žádná změna nebyla uložena"
 
 msgid "Site web"
 msgstr "Webové stránky"
@@ -1925,6 +2425,9 @@ msgstr "Odstranit %(name)s"
 msgid "Supprimer ce webhook ?"
 msgstr "Smazat tento webhook?"
 
+msgid "Supprimer cette planification ?"
+msgstr "Smazat tento plán?"
+
 msgid "Supprimer définitivement ce fichier et toutes ses données ?"
 msgstr "Trvale smazat tento soubor a všechna jeho data?"
 
@@ -1949,6 +2452,12 @@ msgstr "Odstranit nadbytečné mezery"
 msgid "Supprimer mon compte"
 msgstr "Smazat můj účet"
 
+msgid "Suspendre"
+msgstr "Pozastavit"
+
+msgid "Suspendue"
+msgstr "Pozastaveno"
+
 msgid "Synthèse"
 msgstr "Souhrn"
 
@@ -1960,6 +2469,18 @@ msgstr "Zabezpečení"
 
 msgid "Sélectionner un fichier"
 msgstr "Vyberte soubor"
+
+msgid "Sélectionnez au moins un fichier."
+msgstr "Vyberte alespoň jeden soubor."
+
+msgid "Sélectionnez deux versions différentes pour afficher la comparaison."
+msgstr "Chcete-li zobrazit porovnání, vyberte dvě různé verze."
+
+msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
+msgstr "Vyberte až %(limit)s souborů: nad tento počet se dávka zkrátí, aby se server nepřetížil."
+
+msgid "Sévérité"
+msgstr "Závažnost"
 
 msgid "Tableau de bord"
 msgstr "Dashboard"
@@ -2000,8 +2521,17 @@ msgstr "Vše je zahrnuto"
 msgid "Tout voir"
 msgstr "Zobrazit vše"
 
+msgid "Toute personne possédant ce lien peut consulter le fichier. Révoquez le partage pour l'invalider immédiatement."
+msgstr "Kdokoli s tímto odkazem může soubor prohlížet. Zrušte sdílení a okamžitě jej zneplatněte."
+
+msgid "Toute personne possédant le lien peut consulter le jeu de données, sans compte. Le lien est révocable et peut expirer."
+msgstr "Kdokoli s odkazem může datovou sadu prohlížet bez účtu. Odkaz lze zrušit a může vypršet."
+
 msgid "Toutes les actions"
 msgstr "Všechny akce"
+
+msgid "Toutes les valeurs renseignées sont valides"
+msgstr "Všechny vyplněné hodnoty jsou platné"
 
 msgid "Traçabilité"
 msgstr "Vysledovatelnost"
@@ -2015,11 +2545,17 @@ msgstr "Typ"
 msgid "Type de correction"
 msgstr "Typ opravy"
 
+msgid "Type hétérogène"
+msgstr "Smíšený typ"
+
 msgid "Téléchargement"
 msgstr "Stažení"
 
 msgid "Téléchargement de « %(name)s »"
 msgstr "Stažení « %(name)s »"
+
+msgid "Téléphone"
+msgstr "Telefon"
 
 msgid "Téléphone invalide"
 msgstr "Neplatný telefon"
@@ -2029,6 +2565,9 @@ msgstr "Telefonní číslo v nestandardním formátu"
 
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Nestandardní telefonní čísla (%(column)s):"
+
+msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
+msgstr "Nahrává, čistí, plánuje a maže vlastní soubory."
 
 msgid "Téléversement"
 msgstr "Nahrání"
@@ -2059,6 +2598,9 @@ msgstr "Účet správce nelze z této stránky smazat."
 
 msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. Utilisez la"
 msgstr "Účet správce nelze z této stránky smazat. Použijte"
+
+msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
+msgstr "Výňatek ze souboru: první řádky stačí k posouzení dat."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "Řídicí panel měří kvalitu před / po a vysvětluje každý ztracený bod."
@@ -2102,11 +2644,20 @@ msgstr "Náhradní hodnota"
 msgid "Valeur de remplacement (pour le remplissage)."
 msgstr "Náhradní hodnota (pro vyplnění)."
 
+msgid "Valeur du moment centré"
+msgstr "Hodnota centrálního momentu"
+
+msgid "Valeur inconnue"
+msgstr "Neznámá hodnota"
+
 msgid "Valeur manquante"
 msgstr "Chybějící hodnota"
 
 msgid "Valeur numérique invalide"
 msgstr "Neplatná číselná hodnota"
+
+msgid "Valeur unique « %(value)s » sur %(count)s ligne(s)."
+msgstr "Jediná hodnota „%(value)s“ v %(count)s řádcích."
 
 msgid "Valeurs aberrantes"
 msgstr "Odlehlé hodnoty"
@@ -2150,6 +2701,36 @@ msgstr "Ověřit a opravit e-maily (pouze zjevné chyby)"
 msgid "Validité"
 msgstr "Platnost"
 
+msgid "Variance"
+msgstr "Rozptyl"
+
+msgid "Version"
+msgstr "Verze"
+
+msgid "Version %(number)s restaurée."
+msgstr "Verze %(number)s obnovena."
+
+msgid "Version comparée"
+msgstr "Porovnávaná verze"
+
+msgid "Version courante"
+msgstr "Aktuální verze"
+
+msgid "Version de référence"
+msgstr "Referenční verze"
+
+msgid "Versions"
+msgstr "Verze"
+
+msgid "Versions enregistrées ("
+msgstr "Zaznamenané verze ("
+
+msgid "Versions — %(name)s"
+msgstr "Verze — %(name)s"
+
+msgid "Vide pour créer un lien public."
+msgstr "Prázdné pro vytvoření veřejného odkazu."
+
 msgid "Visualisations statistiques"
 msgstr "Statistické vizualizace"
 
@@ -2171,6 +2752,9 @@ msgstr "Vaše data si zaslouží<br> <span class=\"dz-gradient-text\">být bezch
 msgid "Vos fichiers restent chez vous. DataZen vous indique ce qui dépasse la durée de conservation choisie et ne supprime rien sans votre accord."
 msgstr "Vaše soubory zůstávají u vás. DataZen ukazuje, co překračuje zvolenou dobu uchování, a nic nesmaže bez vašeho souhlasu."
 
+msgid "Vos jeux de données"
+msgstr "Vaše datové sady"
+
 msgid "Votre espace de travail"
 msgstr "Váš pracovní prostor"
 
@@ -2189,6 +2773,18 @@ msgstr "Váš profilový obrázek byl smazán."
 msgid "Votre profil a été mis à jour."
 msgstr "Váš profil byl aktualizován."
 
+msgid "Votre rôle ne permet pas de créer une planification."
+msgstr "Vaše role neumožňuje vytvořit plán."
+
+msgid "Votre rôle ne permet pas de lancer un nettoyage. Contactez un administrateur."
+msgstr "Vaše role neumožňuje spustit čištění. Kontaktujte administrátora."
+
+msgid "Votre rôle ne permet pas de modifier les données. Contactez un administrateur."
+msgstr "Vaše role neumožňuje měnit data. Kontaktujte administrátora."
+
+msgid "Vous"
+msgstr "Vy"
+
 msgid "Vous gardez la main : rien n'est supprimé sans action de votre part."
 msgstr "Kontrola je na vás: nic se nesmaže bez vaší akce."
 
@@ -2203,6 +2799,9 @@ msgstr "K tomuto webhooku nemáte přístup."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "K tomuto pravidlu nemáte přístup."
+
+msgid "Vous ne pouvez pas modifier votre propre rôle."
+msgstr "Nemůžete změnit svou vlastní roli."
 
 msgid "Vue consolidée de la qualité de vos données, tous fichiers confondus."
 msgstr "Souhrnný pohled na kvalitu vašich dat včetně všech souborů."
@@ -2345,6 +2944,9 @@ msgstr "např. email (prázdné = všechny sloupce)"
 msgid "excellente qualité"
 msgstr "vynikající kvalita"
 
+msgid "faible"
+msgstr "nízká"
+
 msgid "fermer"
 msgstr "zavřít"
 
@@ -2356,6 +2958,9 @@ msgstr "nerozpoznaný formát"
 
 msgid "généré le"
 msgstr "vytvořeno"
+
+msgid "haute"
+msgstr "vysoká"
 
 msgid "https://exemple.com"
 msgstr "https://exemple.com"
@@ -2375,6 +2980,9 @@ msgstr "beze změny"
 msgid "jours"
 msgstr "dní"
 
+msgid "lien public"
+msgstr "veřejný odkaz"
+
 msgid "lignes"
 msgstr "řádků"
 
@@ -2383,6 +2991,9 @@ msgstr "nesprávná délka/formát"
 
 msgid "matplotlib"
 msgstr "matplotlib"
+
+msgid "moyenne"
+msgstr "střední"
 
 msgid "naviguer"
 msgstr "navigovat"
@@ -2438,6 +3049,9 @@ msgstr "odstraněna"
 msgid "sur"
 msgstr "z"
 
+msgid "suspendue"
+msgstr "pozastaveno"
+
 msgid "texte"
 msgstr "text"
 
@@ -2447,11 +3061,17 @@ msgstr "telefon"
 msgid "unicité"
 msgstr "jedinečnost"
 
+msgid "v%(n)s"
+msgstr "v%(n)s"
+
 msgid "valeur(s) extrême(s)"
 msgstr "extrémní hodnota(y)"
 
 msgid "validité"
 msgstr "platnost"
+
+msgid "« %(value)s » représente %(percent)s %% des valeurs renseignées."
+msgstr "„%(value)s“ představuje %(percent)s %% vyplněných hodnot."
 
 msgid "· ancien_id :"
 msgstr "· stare_id:"
@@ -2476,6 +3096,12 @@ msgstr "Čištění selhalo"
 
 msgid "Échec du nettoyage de « %(name)s »"
 msgstr "Čištění « %(name)s » selhalo"
+
+msgid "Échec du nettoyage planifié : %(error)s"
+msgstr "Plánované čištění selhalo: %(error)s"
+
+msgid "Éditeur"
+msgstr "Editor"
 
 msgid "Étape 1"
 msgstr "Krok 1"
@@ -2519,17 +3145,32 @@ msgstr "— Všechny sloupce —"
 msgid "← Retour au fichier"
 msgstr "← Zpět k souboru"
 
+msgid "← Retour à l'historique"
+msgstr "← Zpět na historii"
+
 msgid "⌨️ Raccourcis"
 msgstr "⌨️ Zkratky"
 
 msgid "⌨️ Raccourcis clavier"
 msgstr "⌨️ Klávesové zkratky"
 
+msgid "⏱️ Nettoyages planifiés"
+msgstr "⏱️ Plánovaná čištění"
+
+msgid "⏱️ Planifications"
+msgstr "⏱️ Plány"
+
 msgid "⏳ Fichiers expirés"
 msgstr "⏳ Prošlé soubory"
 
 msgid "⏳ Nettoyage en cours…"
 msgstr "⏳ Probíhá čištění…"
+
+msgid "♻️ Restaurer"
+msgstr "♻️ Obnovit"
+
+msgid "⚙️ Opérations communes"
+msgstr "⚙️ Společné operace"
 
 msgid "⚙️ Règles de nettoyage personnalisées"
 msgstr "⚙️ Vlastní pravidla čištění"
@@ -2539,6 +3180,9 @@ msgstr "⚙️ Vlastní pravidla"
 
 msgid "⚙️ Régler la durée"
 msgstr "⚙️ Upravit dobu"
+
+msgid "⚠️ Anomalies signalées uniquement — jamais modifiées automatiquement."
+msgstr "⚠️ Anomálie jsou pouze hlášeny — nikdy se nemění automaticky."
 
 msgid "⚠️ Points nécessitant une vérification humaine"
 msgstr "⚠️ Body vyžadující ruční kontrolu"
@@ -2588,8 +3232,14 @@ msgstr "✓ Zkopírováno"
 msgid "➕ Nouveau jeton"
 msgstr "➕ Nový token"
 
+msgid "➕ Nouveau partage"
+msgstr "➕ Nové sdílení"
+
 msgid "➕ Nouveau webhook"
 msgstr "➕ Nový webhook"
+
+msgid "➕ Nouvelle planification"
+msgstr "➕ Nový plán"
 
 msgid "➕ Nouvelle règle"
 msgstr "➕ Nové pravidlo"
@@ -2599,6 +3249,9 @@ msgstr "➕ Nahrát soubor"
 
 msgid "⬇️ Exporter mes données (JSON)"
 msgstr "⬇️ Exportovat moje data (JSON)"
+
+msgid "⬇️ Télécharger"
+msgstr "⬇️ Stáhnout"
 
 msgid "⬇️ Télécharger le fichier nettoyé"
 msgstr "⬇️ Stáhnout vyčištěný soubor"
@@ -2629,6 +3282,9 @@ msgstr "👁️ Zobrazit zprávu"
 
 msgid "👤 Mon profil"
 msgstr "👤 Můj profil"
+
+msgid "📄 Fichiers à nettoyer"
+msgstr "📄 Soubory k vyčištění"
 
 msgid "📈 Analyse exploratoire"
 msgstr "📈 Explorativní analýza"
@@ -2666,8 +3322,14 @@ msgstr "📊 Dashboard"
 msgid "📊 Tableau de bord global"
 msgstr "📊 Globální dashboard"
 
+msgid "📋 Mes planifications ("
+msgstr "📋 Moje plány ("
+
 msgid "📋 Mes règles ("
 msgstr "📋 Moje pravidla ("
+
+msgid "📋 Partages actifs ("
+msgstr "📋 Aktivní sdílení ("
 
 msgid "📋 Qualité des colonnes"
 msgstr "📋 Kvalita sloupců"
@@ -2705,11 +3367,26 @@ msgstr "🔌 API a přístupové tokeny"
 msgid "🔌 Jetons d'API"
 msgstr "🔌 API tokeny"
 
+msgid "🔍 Aperçu (simulation)"
+msgstr "🔍 Náhled (simulace)"
+
+msgid "🔍 Aperçu avant / après (simulation)"
+msgstr "🔍 Náhled před / po (simulace)"
+
 msgid "🔍 Avant / après"
 msgstr "🔍 Před / po"
 
 msgid "🔍 Comparaison avant / après"
 msgstr "🔍 Srovnání před / po"
+
+msgid "🔍 Comparer"
+msgstr "🔍 Porovnat"
+
+msgid "🔍 Comparer des versions"
+msgstr "🔍 Porovnat verze"
+
+msgid "🔍 Comparer deux versions"
+msgstr "🔍 Porovnat dvě verze"
 
 msgid "🔍 Doublons"
 msgstr "🔍 Duplicity"
@@ -2735,6 +3412,9 @@ msgstr "🔎 Vysvětlení skóre"
 msgid "🔑 Mes jetons"
 msgstr "🔑 Moje tokeny"
 
+msgid "🔑 Votre lien de partage public"
+msgstr "🔑 Váš veřejný odkaz pro sdílení"
+
 msgid "🔑 Votre nouveau jeton"
 msgstr "🔑 Váš nový token"
 
@@ -2749,6 +3429,9 @@ msgstr "🔔 Moje webhooky"
 
 msgid "🔔 Webhooks"
 msgstr "🔔 Webhooky"
+
+msgid "🔗 Partager ce jeu de données"
+msgstr "🔗 Sdílet tuto datovou sadu"
 
 msgid "🔗 Voir mon profil public"
 msgstr "🔗 Zobrazit můj veřejný profil"
@@ -2771,8 +3454,17 @@ msgstr "🕓 Aktivita"
 msgid "🕓 Dernières activités"
 msgstr "🕓 Poslední aktivity"
 
+msgid "🕓 Historique des versions"
+msgstr "🕓 Historie verzí"
+
 msgid "🕓 Journal d'activité"
 msgstr "🕓 Protokol aktivity"
+
+msgid "🕓 Versions"
+msgstr "🕓 Verze"
+
+msgid "🗂️ Nettoyage par lots"
+msgstr "🗂️ Dávkové čištění"
 
 msgid "🗃️ Fichiers récents"
 msgstr "🗃️ Nedávné soubory"
@@ -2798,11 +3490,17 @@ msgstr "🚀 Novinky v pro prostoru"
 msgid "🚀 Premier appel"
 msgstr "🚀 První volání"
 
+msgid "🛡️ Rôles et permissions"
+msgstr "🛡️ Role a oprávnění"
+
 msgid "🟢 Conserver la 1re ligne (supprimer les autres)"
 msgstr "🟢 Zachovat 1. řádek (odstranit ostatní)"
 
 msgid "🟣 Fusionner toutes les lignes"
 msgstr "🟣 Sloučit všechny řádky"
+
+msgid "🧩 Anomalies structurelles"
+msgstr "🧩 Strukturální anomálie"
 
 msgid "🧭 Dimensions les plus fragiles"
 msgstr "🧭 Nejslabší dimenze"

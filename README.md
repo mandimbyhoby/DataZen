@@ -176,6 +176,13 @@ DataZen/
 
    Ouvrez ensuite <http://127.0.0.1:8000/>.
 
+   La clé de signature est générée au premier démarrage dans `var/dev_secret_key`
+   (ignoré par Git) puis réutilisée. Cette persistance est indispensable : une
+   clé qui changerait à chaque redémarrage rendrait indéchiffrables les sessions
+   en cours, avec des messages « Session data corrupted » et la perte des
+   préférences (langue de l'interface, options de nettoyage). Pour la définir
+   vous-même, renseignez la variable d'environnement `DJANGO_SECRET_KEY`.
+
    6. **Compiler les graphiques interactifs** (facultatif — le bundle est déjà
       versionné dans `static/js/charts/`) :
 
@@ -226,6 +233,23 @@ DataZen/
   conformité) avec explication détaillée.
 - **Dashboard Data Quality** : indicateurs, dimensions, qualité par colonne,
   statistiques descriptives.
+- **Profilage avancé** : pour chaque colonne, type détecté, complétude, valeurs
+  uniques, mode, min/max, moyenne, médiane, écart-type, **variance**,
+  **asymétrie**, **aplatissement** (kurtosis), quartiles Q1/Q3 et valeurs
+  aberrantes (méthode IQR). Le rapport Markdown/HTML reprend ce profilage dans
+  une section « 🔬 Profilage statistique » avec lecture interprétative
+  (distribution la plus asymétrique, la plus pointue, colonnes les plus
+  touchées par les valeurs aberrantes).
+- **Anomalies structurelles** : détection des colonnes vides, constantes,
+  quasi constantes, à identifiant non unique ou à type hétérogène — signalées
+  avec leur sévérité, jamais modifiées automatiquement.
+- **Opérations de nettoyage traduites à l'affichage** : le pipeline mémorise
+  des codes stables (`core/services/operations.py`) et non du texte déjà
+  traduit, si bien que la liste des opérations, l'explication du score, le
+  journal des modifications et le rapport suivent la langue active de
+  l'interface même si le nettoyage a été lancé dans une autre langue. Les
+  sessions enregistrées avant l'introduction des codes (texte déjà traduit)
+  sont reconnues puis retraduites à l'affichage, au lieu de rester figées.
 - **Revue manuelle** des doublons potentiels (jamais supprimés automatiquement).
 - **Traçabilité** : journal des modifications (change log) et rapport de
   nettoyage.
@@ -397,6 +421,8 @@ versions interactives offrent infobulles, animations et rendu HiDPI.
 | `correlation` | Matrice de corrélation de Pearson | seaborn `heatmap` | `CorrelationHeatmap` |
 | `categories` | Top 8 des valeurs les plus fréquentes | matplotlib | `CategoryPanels` |
 | `outliers` | Nombre de valeurs aberrantes (méthode IQR) par colonne | matplotlib | `HorizontalBars` |
+| `moments` | Asymétrie et aplatissement (moments centrés) des colonnes numériques | matplotlib | `DistributionMoments` |
+| `structural` | Anomalies structurelles par type (colonnes vides, constantes…) | matplotlib | `HorizontalBars` |
 
 ### Où les retrouver
 
@@ -477,9 +503,11 @@ traitement asynchrone, le pipeline de nettoyage, le profil utilisateur
 (accès, mise à jour, téléversement et suppression de la photo, avatar par défaut,
 validations, informations professionnelles, préférences, complétion, changement
 de mot de passe, export JSON, suppression de compte et profil public) et les
-graphiques matplotlib/seaborn (signature PNG, disponibilité des 9 graphiques,
+graphiques matplotlib/seaborn (signature PNG, disponibilité des 11 graphiques,
 jeux de données vides ou sans colonne numérique, endpoint PNG, page d'analyse,
-contrôle d'accès et embarquement des graphiques dans le rapport HTML).
+contrôle d'accès et embarquement des graphiques dans le rapport HTML), la
+détection des anomalies structurelles (`StructuralAnomalyTests`) et le profilage
+statistique restitué dans le rapport (`PipelineTests`).
 
 Le pack « pro » est couvert par les classes `OverviewServiceTests`,
 `DashboardTests`, `ComparisonTests`, `PdfReportTests`, `ProductivityPageTests`,
@@ -552,7 +580,28 @@ en français. Ils passent par `{% translate %}` et par le catalogue
 les 22 langues cibles ; le test balaie plusieurs langues sur la page des
 raccourcis et vérifie que le catalogue reste complet.
 
-La suite compte 268 tests ; l'exécution complète dure environ 11 minutes.
+`FrenchSourceTranslationTests` verrouille le cas inverse : le français est la
+langue source de DataZen, donc son catalogue reste vide et `gettext` renvoie le
+msgid tel quel. C'est correct tant que le msgid est écrit en français, mais le
+contrôle de cohérence, le tableau de bord et les exports déclaraient leurs
+messages directement en anglais — ils s'affichaient donc en anglais dans une
+interface française. `tools/translations/french_source.py` ne contient que ces
+msgids à source anglaise ; le test vérifie que le bloc « Contrôle de
+cohérence » suit la langue active, que les explications du score et les types
+de correction aussi, et qu'aucune entrée du catalogue n'est identique à son
+msgid (une telle entrée serait inutile).
+
+Le même fichier de tests verrouille les **formes plurielles**. Les catalogues
+ne déclaraient souvent que le singulier d'un msgid pluriel ; `tools/i18n_build.py`
+n'écrivait alors que `msgstr[0]` dans le `.mo`, et `gettext` retombait sur le
+msgid — donc sur le français — dès que la langue demandait une autre forme
+(« 10 valides » restait français en anglais). `plural_count()` et
+`plural_value()` complètent désormais chaque entrée jusqu'au nombre de formes
+déclaré par la langue (réplication de la dernière forme, troncature si le
+catalogue en fournit trop). Le test balaie les 23 langues sur plusieurs valeurs
+de `n` et vérifie qu'aucune ne retombe sur le français.
+
+La suite compte 300 tests ; l'exécution complète dure environ 10 minutes.
 
 ## 🎨 Charte graphique
 
