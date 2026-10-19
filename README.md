@@ -502,6 +502,22 @@ versions interactives offrent infobulles, animations et rendu HiDPI.
 python manage.py test core
 ```
 
+Sur PostgreSQL, la suite crée une base `test_datazen` puis la détruit à la fin.
+La destruction peut échouer avec `database "test_datazen" is being accessed by
+other users` : un fil d'arrière-plan garde brièvement une session ouverte. Les
+tests sont tous passés — seul le nettoyage râle. Pour l'éviter, conservez la
+base de test entre deux exécutions (elle est aussi bien plus rapide) :
+
+```powershell
+python manage.py test core --keepdb
+```
+
+Si une base `test_datazen` reste orpheline, supprimez-la :
+
+```powershell
+docker exec datazen-postgres psql -U datazen -d postgres -c "DROP DATABASE IF EXISTS test_datazen;"
+```
+
 La suite couvre l'authentification, la réinitialisation du mot de passe,
 l'isolation des données par propriétaire, les règles personnalisées, le
 traitement asynchrone, le pipeline de nettoyage, le profil utilisateur
