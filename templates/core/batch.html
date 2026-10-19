@@ -1,0 +1,159 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Nettoyage par lots — DataZen" %}{% endblock %}
+
+{% block content %}
+<div class="container dz-page">
+    <nav aria-label="{% translate "Fil d'Ariane" %}">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{% translate "Nettoyage par lots" %}</li>
+        </ol>
+    </nav>
+
+    <div class="dz-page-head">
+        <span class="dz-eyebrow">{% translate "Productivité" %}</span>
+        <h1 class="h3 mb-1">{% translate "🗂️ Nettoyage par lots" %}</h1>
+        <p class="text-muted mb-0">
+            {% translate "Appliquez les mêmes opérations à plusieurs jeux de données en une seule fois. Les fichiers sont traités en série, un à la fois." %}
+        </p>
+    </div>
+
+    {% if can_edit %}
+        <form method="post">
+            {% csrf_token %}
+            {% for error in form.non_field_errors %}
+                <div class="alert alert-danger">{{ error }}</div>
+            {% endfor %}
+
+            <div class="row dz-grid">
+                <div class="col-lg-5">
+                    <div class="card dz-card-accent">
+                        <div class="card-body">
+                            <h2 class="h5 card-title">
+                                {% translate "📄 Fichiers à nettoyer" %}
+                            </h2>
+                            <p class="text-muted small">
+                                {% blocktranslate trimmed with limit=25 %}
+                                Sélectionnez jusqu'à {{ limit }} fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur.
+                                {% endblocktranslate %}
+                            </p>
+                            <div class="dz-check-list">
+                                {% for checkbox in form.files %}
+                                    <div class="form-check">
+                                        {{ checkbox }}
+                                    </div>
+                                {% empty %}
+                                    <p class="text-muted small mb-0">
+                                        {% translate "Aucun jeu de données disponible pour le moment." %}
+                                    </p>
+                                {% endfor %}
+                            </div>
+                            {% for error in form.files.errors %}
+                                <div class="text-danger small mt-1">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="card dz-panel">
+                        <div class="card-body">
+                            <h2 class="h5 card-title">{% translate "⚙️ Opérations communes" %}</h2>
+                            <div class="row">
+                                {% for field in form %}
+                                    {% if field.name != "files" %}
+                                        <div class="col-md-6 mb-3">
+                                            {% if field.field.widget.input_type == "checkbox" %}
+                                                <div class="form-check">
+                                                    {{ field }}
+                                                    <label class="form-check-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                                                </div>
+                                            {% else %}
+                                                <label class="form-label small" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                                                {{ field }}
+                                            {% endif %}
+                                            {% if field.help_text %}
+                                                <div class="form-text small">{{ field.help_text }}</div>
+                                            {% endif %}
+                                            {% for error in field.errors %}
+                                                <div class="text-danger small mt-1">{{ error }}</div>
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            {% if rules %}
+                                <hr>
+                                <h3 class="h6 text-muted">{% translate "⚙️ Règles personnalisées" %}</h3>
+                                {% for rule in rules %}
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input" type="checkbox" name="rules"
+                                               value="{{ rule.pk }}" id="dz-batch-rule-{{ rule.pk }}">
+                                        <label class="form-check-label small" for="dz-batch-rule-{{ rule.pk }}">
+                                            {{ rule.name }}
+                                            <span class="text-muted">({{ rule.get_operation_display }}{% if rule.column %} · {{ rule.column }}{% endif %})</span>
+                                        </label>
+                                    </div>
+                                {% endfor %}
+                                <a class="small" href="{% url 'core:rules_list' %}">{% translate "Gérer les règles…" %}</a>
+                            {% endif %}
+                            <button type="submit" class="btn btn-primary w-100 mt-3">
+                                {% translate "Lancer le nettoyage des fichiers sélectionnés" %}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="card dz-panel dz-block">
+            <div class="card-body">
+                <h2 class="h6 mb-3">{% translate "Vos jeux de données" %}</h2>
+                <div class="table-responsive">
+                    <table class="table table-sm align-middle mb-0" data-searchable>
+                        <thead>
+                            <tr>
+                                <th>{% translate "Fichier" %}</th>
+                                <th class="text-end">{% translate "Lignes" %}</th>
+                                <th class="text-end">{% translate "Score" %}</th>
+                                <th>{% translate "État" %}</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for data_file in files %}
+                                <tr>
+                                    <td>{{ data_file.original_name }}</td>
+                                    <td class="text-end text-muted">{{ data_file.rows_count|default:"—" }}</td>
+                                    <td class="text-end">{{ data_file.quality_after|default:"—" }}</td>
+                                    <td>
+                                        <span class="badge text-bg-secondary">{{ data_file.get_status_display }}</span>
+                                    </td>
+                                    <td class="text-end">
+                                        <a class="btn btn-sm btn-outline-secondary"
+                                           href="{% url 'core:dataset_detail' data_file.pk %}">
+                                            {% translate "Ouvrir" %}
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% empty %}
+                                <tr>
+                                    <td colspan="5" class="text-center text-muted py-4">
+                                        {% translate "Aucun jeu de données pour le moment." %}
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="alert alert-warning">
+            {% translate "Votre rôle ne permet pas de lancer un nettoyage. Contactez un administrateur." %}
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

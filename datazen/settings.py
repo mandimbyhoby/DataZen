@@ -4,6 +4,7 @@ Configuration Django du projet DataZen.
 DataZen est une application de nettoyage de données (DataClean Pro).
 """
 import os
+import secrets
 from pathlib import Path
 
 # Chemins de base du projet
@@ -19,11 +20,17 @@ def _env_bool(name, default=False):
 
 
 def _load_secret_key():
-    """Clé de signature, lue dans l'environnement ou générée hors production.
+    """Clé de signature, lue dans l'environnement ou persistée en local.
 
     En production (``DJANGO_DEBUG`` désactivé), l'absence de
     ``DJANGO_SECRET_KEY`` interrompt le démarrage : une clé publique permettrait
     de forger des sessions et des jetons de réinitialisation de mot de passe.
+
+    En développement, la clé est lue depuis ``var/dev_secret_key`` puis générée
+    au premier démarrage. Elle doit rester stable : une clé régénérée à chaque
+    redémarrage rend indéchiffrables toutes les sessions existantes, ce qui se
+    manifeste par des messages « Session data corrupted » et des préférences
+    (langue de l'interface, options de nettoyage) silencieusement perdues.
     """
     key = os.environ.get("DJANGO_SECRET_KEY", "").strip()
     if key:
@@ -33,8 +40,17 @@ def _load_secret_key():
             "DJANGO_SECRET_KEY est obligatoire lorsque DEBUG est désactivé. "
             "Définissez-la dans l'environnement avant de démarrer le serveur."
         )
-    # Développement : clé éphémère, régénérée à chaque démarrage.
-    return "django-insecure-dev-" + __import__("secrets").token_hex(32)
+    # Développement : clé persistée localement, jamais versionnée.
+    key_file = BASE_DIR / "var" / "dev_secret_key"
+    try:
+        key = key_file.read_text(encoding="utf-8").strip()
+    except OSError:
+        key = ""
+    if not key:
+        key = "django-insecure-dev-" + secrets.token_hex(32)
+        key_file.parent.mkdir(parents=True, exist_ok=True)
+        key_file.write_text(key, encoding="utf-8")
+    return key
 
 
 # Sécurité — la production doit définir DJANGO_DEBUG=0 et DJANGO_SECRET_KEY.
@@ -68,6 +84,10 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    # Doit rester juste après SecurityMiddleware : sert /static/ directement
+    # depuis le processus WSGI, sans quoi les fichiers statiques renvoient 404
+    # dès que DEBUG=False.
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -167,6 +187,21 @@ STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
+# WhiteNoise sert /static/ en production. Le stockage « manifest » ajoute une
+# empreinte au nom de chaque fichier et permet un cache navigateur d'un an ;
+# il exige d'avoir lancé `collectstatic` au préalable. En développement, le
+# stockage simple évite d'imposer cette étape à chaque modification de CSS.
+STORAGES = {
+    "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
+    "staticfiles": {
+        "BACKEND": (
+            "django.contrib.staticfiles.storage.StaticFilesStorage"
+            if DEBUG
+            else "whitenoise.storage.CompressedManifestStaticFilesStorage"
+        )
+    },
+}
+
 # Fichiers médias (fichiers téléversés par les utilisateurs)
 MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
@@ -176,15 +211,37 @@ LOGIN_URL = "core:login"
 LOGIN_REDIRECT_URL = "core:index"
 LOGOUT_REDIRECT_URL = "core:index"
 
+# Anti-force brute sur la connexion (voir core/throttling.py).
+# Le compteur utilise le cache : LocMemCache convient à un déploiement
+# mono-processus ; au-delà, configurer un cache partagé (Redis/Memcached).
+LOGIN_THROTTLE_MAX_PER_USER = int(os.environ.get("DJANGO_LOGIN_MAX_PER_USER", "5"))
+LOGIN_THROTTLE_MAX_PER_IP = int(os.environ.get("DJANGO_LOGIN_MAX_PER_IP", "20"))
+LOGIN_THROTTLE_WINDOW = int(os.environ.get("DJANGO_LOGIN_WINDOW", "900"))
+
 # Taille maximale de téléversement (20 Mo)
 DATA_UPLOAD_MAX_MEMORY_SIZE = 20 * 1024 * 1024
 FILE_UPLOAD_MAX_MEMORY_SIZE = 20 * 1024 * 1024
 
-# E-mail : en développement, les messages sont affichés dans la console du
-# serveur. Pour un envoi réel, remplacer par un backend SMTP et renseigner
-# EMAIL_HOST / EMAIL_PORT / EMAIL_HOST_USER / EMAIL_HOST_PASSWORD.
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-DEFAULT_FROM_EMAIL = "DataZen <no-reply@datazen.local>"
+# E-mail : sans configuration, les messages sont affichés dans la console du
+# serveur — pratique en développement, mais la réinitialisation de mot de passe
+# reste alors sans effet pour un utilisateur réel. Renseigner DJANGO_EMAIL_HOST
+# bascule automatiquement sur un envoi SMTP.
+EMAIL_HOST = os.environ.get("DJANGO_EMAIL_HOST", "").strip()
+if EMAIL_HOST:
+    EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+    EMAIL_PORT = int(os.environ.get("DJANGO_EMAIL_PORT", "587"))
+    EMAIL_HOST_USER = os.environ.get("DJANGO_EMAIL_USER", "").strip()
+    EMAIL_HOST_PASSWORD = os.environ.get("DJANGO_EMAIL_PASSWORD", "")
+    # 587 (STARTTLS) et 25 utilisent TLS ; 465 utilise SSL implicite.
+    EMAIL_USE_TLS = _env_bool("DJANGO_EMAIL_TLS", EMAIL_PORT != 465)
+    EMAIL_USE_SSL = _env_bool("DJANGO_EMAIL_SSL", EMAIL_PORT == 465)
+    EMAIL_TIMEOUT = int(os.environ.get("DJANGO_EMAIL_TIMEOUT", "15"))
+else:
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+DEFAULT_FROM_EMAIL = os.environ.get(
+    "DJANGO_DEFAULT_FROM_EMAIL", "DataZen <no-reply@datazen.local>"
+)
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 

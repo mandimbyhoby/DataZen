@@ -1,16 +1,21 @@
 """Tests de l'application DataZen (authentification, asynchrone, règles)."""
 import json
 import re
+import tempfile
+from pathlib import Path
 from datetime import timedelta
 from pathlib import Path
 from unittest import mock
 
+from django.conf import settings
 from django.contrib.auth.models import AnonymousUser, User
 from django.core import mail
+from django.core.cache import cache
 from django.core.exceptions import ValidationError
 from django.core.files.uploadedfile import SimpleUploadedFile
-from django.test import TestCase, TransactionTestCase
-from django.urls import reverse
+from django.template.loader import render_to_string
+from django.test import TestCase, TransactionTestCase, override_settings
+from django.urls import get_resolver, reverse
 from django.utils import timezone, translation
 from django.utils.translation import pgettext
 
@@ -4636,7 +4641,7 @@ class DesignSystemTests(TestCase):
         base = (
             Path(__file__).resolve().parent.parent / "templates" / "core" / "base.html"
         ).read_text(encoding="utf-8")
-        self.assertIn("css/style.css' %}?v=20261018-auth", base)
+        self.assertIn("css/style.css' %}?v=20261019-navbar2", base)
 
     def test_inner_pages_use_the_section_rhythm(self):
         # Les gabarits applicatifs troquent l'espacement serré de Bootstrap
@@ -5688,3 +5693,162 @@ class BatchCleaningTests(TestCase):
         form = BatchCleaningForm(files=DataFile.objects.filter(owner=self.user))
         single = CleaningOptionsForm(columns=["nom"])
         self.assertEqual(set(form.fields), set(single.fields) | {"files"})
+
+
+class LoginThrottleTests(TestCase):
+    """La connexion doit ralentir les tentatives répétées (anti-force brute)."""
+
+    def setUp(self):
+        cache.clear()
+        self.user = User.objects.create_user("throttled", password="motdepasse-test-123")
+
+    def tearDown(self):
+        cache.clear()
+
+    def _fail(self, times, username="throttled"):
+        codes = []
+        for _ in range(times):
+            response = self.client.post(
+                reverse("core:login"),
+                {"username": username, "password": "mauvais-mot-de-passe"},
+            )
+            codes.append(response.status_code)
+        return codes
+
+    def test_repeated_failures_are_eventually_rejected(self):
+        codes = self._fail(settings.LOGIN_THROTTLE_MAX_PER_USER + 2)
+        self.assertIn(200, codes)
+        self.assertEqual(codes[-1], 429)
+
+    def test_the_lockout_message_is_shown_to_the_user(self):
+        self._fail(settings.LOGIN_THROTTLE_MAX_PER_USER)
+        response = self.client.post(
+            reverse("core:login"),
+            {"username": "throttled", "password": "mauvais-mot-de-passe"},
+        )
+        self.assertEqual(response.status_code, 429)
+        self.assertContains(response, "Trop de tentatives", status_code=429)
+
+    def test_a_correct_password_is_refused_while_locked_out(self):
+        self._fail(settings.LOGIN_THROTTLE_MAX_PER_USER)
+        response = self.client.post(
+            reverse("core:login"),
+            {"username": "throttled", "password": "motdepasse-test-123"},
+        )
+        self.assertEqual(response.status_code, 429)
+
+    def test_a_successful_login_clears_the_counters(self):
+        self._fail(settings.LOGIN_THROTTLE_MAX_PER_USER - 1)
+        response = self.client.post(
+            reverse("core:login"),
+            {"username": "throttled", "password": "motdepasse-test-123"},
+        )
+        self.assertEqual(response.status_code, 302)
+        # Les compteurs sont remis à zéro : de nouvelles erreurs sont permises.
+        codes = self._fail(1)
+        self.assertEqual(codes, [200])
+
+    def test_another_account_is_not_locked_out(self):
+        User.objects.create_user("voisin", password="motdepasse-test-123")
+        self._fail(settings.LOGIN_THROTTLE_MAX_PER_USER)
+        response = self.client.post(
+            reverse("core:login"),
+            {"username": "voisin", "password": "motdepasse-test-123"},
+        )
+        self.assertEqual(response.status_code, 302)
+
+
+class ErrorPageTests(TestCase):
+    """Les pages d'erreur doivent être personnalisées, pas celles de Django."""
+
+    def test_the_404_page_is_branded(self):
+        response = self.client.get("/cette-adresse-nexiste-pas/")
+        self.assertEqual(response.status_code, 404)
+        self.assertContains(response, "dz-error-card", status_code=404)
+        self.assertContains(response, "DataZen", status_code=404)
+
+    def test_the_error_templates_exist_and_render(self):
+        for name in ("404.html", "403.html", "500.html"):
+            with self.subTest(template=name):
+                html = render_to_string(name)
+                self.assertIn("dz-error-card", html)
+                self.assertIn("DataZen", html)
+
+    def test_the_500_page_renders_without_context(self):
+        # Django rend 500.html sans contexte : le gabarit ne doit dépendre
+        # ni de la session, ni de la base de données.
+        html = render_to_string("500.html", {})
+        self.assertIn("dz-error-card", html)
+
+    def test_the_error_handlers_resolve(self):
+        # Si l'URLconf levait une exception, Django ne pourrait meme pas
+        # resoudre le gestionnaire 500 et le site entier tomberait.
+        resolver = get_resolver()
+        for code in (403, 404, 500):
+            with self.subTest(code=code):
+                self.assertTrue(callable(resolver.resolve_error_handler(code)))
+
+    def test_the_error_templates_avoid_multiple_line_brace_comments(self):
+        # Les accolades {# #} de Django ne couvrent qu'une seule ligne : un
+        # commentaire multiligne est interprete comme du texte, et un tag cite
+        # dedans est alors evalue (TemplateSyntaxError au chargement).
+        for name in ("404.html", "403.html", "500.html"):
+            with self.subTest(template=name):
+                path = Path(settings.BASE_DIR) / "templates" / name
+                source = path.read_text(encoding="utf-8")
+                start = source.find("{#")
+                while start != -1:
+                    end = source.find("#}", start)
+                    self.assertNotIn(
+                        "\n",
+                        source[start:end],
+                        "%s : commentaire {# #} sur plusieurs lignes." % name,
+                    )
+                    start = source.find("{#", end)
+
+
+class ProductionStaticFilesTests(TestCase):
+    """WhiteNoise doit servir /static/ même avec DEBUG=False."""
+
+    def test_whitenoise_is_installed_in_the_middleware_stack(self):
+        self.assertTrue(
+            any("whitenoise" in entry for entry in settings.MIDDLEWARE),
+            "WhiteNoiseMiddleware est absent : /static/ renverrait 404 en production.",
+        )
+
+    def test_the_staticfiles_storage_is_configured(self):
+        # Le lanceur de tests importe les reglages avec DEBUG=True : le repli
+        # sur le stockage simple est donc normal ici. On verifie que le reglage
+        # est bien cable sur l'un des deux moteurs prevus.
+        backend = settings.STORAGES["staticfiles"]["BACKEND"]
+        self.assertIn(
+            backend,
+            {
+                "django.contrib.staticfiles.storage.StaticFilesStorage",
+                "whitenoise.storage.CompressedManifestStaticFilesStorage",
+            },
+        )
+
+    def test_the_manifest_storage_is_available(self):
+        # La production bascule sur CompressedManifestStaticFilesStorage :
+        # la classe doit etre importable, sinon le demarrage echoue.
+        from whitenoise.storage import CompressedManifestStaticFilesStorage
+
+        self.assertTrue(callable(CompressedManifestStaticFilesStorage))
+
+    def test_the_urlconf_loads_without_a_staticfiles_manifest(self):
+        # Avec le stockage a manifeste, `static()` leve ValueError si
+        # `collectstatic` n'a pas tourne. Un appel au chargement de l'URLconf
+        # rendrait alors tout le site indisponible, gestionnaire 500 compris.
+        with override_settings(STATIC_ROOT=self._empty_dir()):
+            resolver = get_resolver()
+            self.assertTrue(callable(resolver.resolve_error_handler(500)))
+
+            response = self.client.get("/cette-adresse-nexiste-pas/")
+            self.assertEqual(response.status_code, 404)
+            self.assertContains(response, "dz-error-card", status_code=404)
+
+    @staticmethod
+    def _empty_dir():
+        empty = tempfile.mkdtemp(prefix="dz-no-static-")
+        return empty

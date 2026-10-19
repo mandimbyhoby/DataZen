@@ -4,6 +4,8 @@ from datetime import datetime
 
 from django.utils.translation import gettext as _
 
+from .operations import render_operations, render_score_explanations
+
 
 def _total_changes(changes):
     """Nombre total de corrections effectuées (hors suppressions de doublons)."""
@@ -32,7 +34,7 @@ def _format_score(lines, score, title):
     lines.append("")
 
     # Explication automatique : principaux éléments qui font varier le score.
-    explanations = score.get("explanations", [])
+    explanations = render_score_explanations(score.get("explanations", []))
     if explanations:
         lines.append("### 🔎 " + _("Explication du score"))
         lines.append("")
@@ -216,6 +218,99 @@ def _format_consistency(lines, consistency):
     lines.append("")
 
 
+def _format_profile(lines, profile):
+    """Ajoute le tableau de profilage statistique par colonne."""
+    if not profile:
+        return
+    lines.append("## 🔬 " + _("Profilage statistique"))
+    lines.append("")
+    lines.append(
+        "| " + _("Colonne") + " | " + _("Type") + " | " + _("Complétude")
+        + " | " + _("Uniques") + " | " + _("Moyenne") + " | " + _("Médiane")
+        + " | " + _("Écart-type") + " | " + _("Variance") + " | "
+        + _("Asymétrie") + " | " + _("Aplatissement") + " | " + _("Min")
+        + " | " + _("Max") + " | " + _("Outliers") + " |"
+    )
+    lines.append("| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |")
+    for row in profile:
+        lines.append(
+            f"| {row.get('colonne', '')} | {row.get('type', '')} | "
+            f"{row.get('completude', '—')} % | {row.get('n_unique', '—')} | "
+            f"{row.get('moyenne', '—')} | {row.get('mediane', '—')} | "
+            f"{row.get('ecart_type', '—')} | {row.get('variance', '—')} | "
+            f"{row.get('asymetrie', '—')} | {row.get('aplatissement', '—')} | "
+            f"{row.get('min', '—')} | {row.get('max', '—')} | "
+            f"{row.get('outliers', 0)} |"
+        )
+    lines.append("")
+
+    # Lecture statistique des colonnes numériques : signale les distributions
+    # les plus asymétriques, les plus « pointues » et les plus dispersées.
+    numeric = [r for r in profile if r.get("type") == "numérique"]
+    if not numeric:
+        return
+
+    def _as_float(value):
+        try:
+            return float(str(value).replace(",", "."))
+        except (TypeError, ValueError):
+            return None
+
+    skew_candidates = [
+        (r["colonne"], v)
+        for r in numeric
+        for v in [_as_float(r.get("asymetrie"))]
+        if v is not None
+    ]
+    if skew_candidates:
+        worst = max(skew_candidates, key=lambda item: abs(item[1]))
+        if abs(worst[1]) >= 1:
+            lines.append(
+                "- "
+                + _(
+                    "Distribution la plus asymétrique : « %(colonne)s » "
+                    "(asymétrie %(valeur)s) — moyenne et médiane s'écartent "
+                    "sensiblement, une transformation ou un traitement par "
+                    "quantiles est à envisager."
+                )
+                % {"colonne": worst[0], "valeur": f"{worst[1]:.2f}"}
+            )
+
+    kurt_candidates = [
+        (r["colonne"], v)
+        for r in numeric
+        for v in [_as_float(r.get("aplatissement"))]
+        if v is not None
+    ]
+    if kurt_candidates:
+        worst = max(kurt_candidates, key=lambda item: abs(item[1]))
+        if abs(worst[1]) >= 1:
+            lines.append(
+                "- "
+                + _(
+                    "Distribution la plus concentrée/pointue : « %(colonne)s » "
+                    "(aplatissement %(valeur)s) — forte densité autour de la "
+                    "moyenne avec des valeurs extrêmes marquées."
+                )
+                % {"colonne": worst[0], "valeur": f"{worst[1]:.2f}"}
+            )
+
+    with_outliers = [(r["colonne"], r.get("outliers", 0)) for r in numeric]
+    total_outliers = sum(count for _c, count in with_outliers)
+    if total_outliers:
+        top = sorted(with_outliers, key=lambda item: item[1], reverse=True)[:3]
+        detail = ", ".join(f"« {c} » ({n})" for c, n in top if n)
+        lines.append(
+            "- "
+            + _(
+                "%(total)s valeur(s) aberrante(s) détectée(s) (méthode IQR). "
+                "Colonnes les plus concernées : %(detail)s."
+            )
+            % {"total": total_outliers, "detail": detail}
+        )
+    lines.append("")
+
+
 def build_report(
     data_file_name,
     operations,
@@ -229,6 +324,7 @@ def build_report(
     change_log=None,
     email_audit=None,
     consistency=None,
+    profile=None,
 ):
     """Construit le rapport complet de qualité des données en Markdown.
 
@@ -240,6 +336,7 @@ def build_report(
     - ``change_log`` : DataFrame du journal des modifications.
     - ``email_audit`` : DataFrame d'audit des emails.
     - ``consistency`` : résultat de ``verify_consistency``.
+    - ``profile`` : profilage statistique par colonne (``profile_dataframe``).
     """
     lines = []
     timestamp = datetime.now().strftime("%d/%m/%Y à %H:%M:%S")
@@ -316,13 +413,14 @@ def build_report(
     _format_anomalies(lines, detected, _("Problèmes détectés"))
 
     # --- Opérations appliquées ---
-    lines.append("## Opérations appliquées")
+    lines.append(f"## {_('Opérations appliquées')}")
     lines.append("")
-    if operations:
-        for op in operations:
+    rendered_operations = render_operations(operations)
+    if rendered_operations:
+        for op in rendered_operations:
             lines.append(f"- {op}")
     else:
-        lines.append("- Aucune opération.")
+        lines.append(f"- {_('Aucune opération.')}")
     lines.append("")
 
     # --- Journal des modifications ---
@@ -333,6 +431,9 @@ def build_report(
 
     # --- Contrôle de cohérence ---
     _format_consistency(lines, consistency)
+
+    # --- Profilage statistique ---
+    _format_profile(lines, profile)
 
     # --- Anomalies restantes ---
     _format_anomalies(lines, validation, _("Anomalies restantes (à traiter manuellement)"))

@@ -2,7 +2,7 @@
 from django.contrib.auth import views as auth_views
 from django.urls import path, reverse_lazy
 
-from . import views, views_pro
+from . import views, views_auth, views_collab, views_pro
 
 app_name = "core"
 
@@ -85,7 +85,7 @@ urlpatterns = [
     path("accounts/signup/", views.signup, name="signup"),
     path(
         "accounts/login/",
-        auth_views.LoginView.as_view(template_name="core/login.html"),
+        views_auth.ThrottledLoginView.as_view(),
         name="login",
     ),
     path("accounts/logout/", auth_views.LogoutView.as_view(), name="logout"),
@@ -133,4 +133,60 @@ urlpatterns = [
     path("profile/export/", views.profile_export, name="profile_export"),
     path("profile/delete/", views.profile_delete, name="profile_delete"),
     path("u/<str:username>/", views.profile_public, name="profile_public"),
+    # Rôles et permissions
+    path("roles/", views_collab.roles, name="roles"),
+    # Partage de jeux de données
+    path("datasets/<int:pk>/share/", views_collab.share_dataset, name="share_dataset"),
+    path(
+        "datasets/<int:pk>/share/<int:share_id>/revoke/",
+        views_collab.share_revoke,
+        name="share_revoke",
+    ),
+    # Lien public : accessible sans compte, le jeton fait office de secret.
+    path("s/<str:token>/", views_collab.shared_dataset, name="shared_dataset"),
+    path(
+        "s/<str:token>/download/",
+        views_collab.shared_dataset_download,
+        name="shared_dataset_download",
+    ),
+    # Historique des versions
+    path(
+        "datasets/<int:pk>/versions/",
+        views_collab.dataset_versions,
+        name="dataset_versions",
+    ),
+    path(
+        "datasets/<int:pk>/versions/compare/",
+        views_collab.version_compare,
+        name="version_compare",
+    ),
+    path(
+        "datasets/<int:pk>/versions/<int:number>/download/",
+        views_collab.version_download,
+        name="version_download",
+    ),
+    path(
+        "datasets/<int:pk>/versions/<int:number>/restore/",
+        views_collab.version_restore,
+        name="version_restore",
+    ),
+    # Planification du nettoyage
+    path("schedules/", views_collab.schedules, name="schedules"),
+    path(
+        "schedules/<int:pk>/toggle/",
+        views_collab.schedule_toggle,
+        name="schedule_toggle",
+    ),
+    path(
+        "schedules/<int:pk>/delete/",
+        views_collab.schedule_delete,
+        name="schedule_delete",
+    ),
+    path(
+        "schedules/<int:pk>/run/",
+        views_collab.schedule_run_now,
+        name="schedule_run",
+    ),
+    # Nettoyage par lots
+    path("batch/", views_collab.batch_cleaning, name="batch_cleaning"),
 ]

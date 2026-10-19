@@ -1,0 +1,185 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Planifications — DataZen" %}{% endblock %}
+
+{% block content %}
+<div class="container dz-page">
+    <nav aria-label="{% translate "Fil d'Ariane" %}">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{% translate "Planifications" %}</li>
+        </ol>
+    </nav>
+
+    <div class="dz-page-head">
+        <span class="dz-eyebrow">{% translate "Automatisation" %}</span>
+        <h1 class="h3 mb-1">{% translate "⏱️ Nettoyages planifiés" %}</h1>
+        <p class="text-muted mb-0">
+            {% translate "Programmez un nettoyage récurrent : les mêmes options s'appliquent à chaque échéance, sans intervention de votre part." %}
+        </p>
+    </div>
+
+    <div class="row dz-grid">
+        <div class="col-lg-5">
+            <div class="card dz-card-accent">
+                <div class="card-body">
+                    <h2 class="h5 card-title">{% translate "➕ Nouvelle planification" %}</h2>
+                    {% if can_edit %}
+                        <form method="post">
+                            {% csrf_token %}
+                            {% for field in form %}
+                                <div class="mb-3">
+                                    {% if field.field.widget.input_type == "checkbox" %}
+                                        <div class="form-check">
+                                            {{ field }}
+                                            <label class="form-check-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                                        </div>
+                                    {% else %}
+                                        <label class="form-label small" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                                        {{ field }}
+                                    {% endif %}
+                                    {% if field.help_text %}
+                                        <div class="form-text small">{{ field.help_text }}</div>
+                                    {% endif %}
+                                    {% for error in field.errors %}
+                                        <div class="text-danger small mt-1">{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+                            {% endfor %}
+                            {% if rules %}
+                                <hr>
+                                <h3 class="h6 text-muted">{% translate "⚙️ Règles personnalisées" %}</h3>
+                                {% for rule in rules %}
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input" type="checkbox" name="rules"
+                                               value="{{ rule.pk }}" id="dz-schedule-rule-{{ rule.pk }}">
+                                        <label class="form-check-label small" for="dz-schedule-rule-{{ rule.pk }}">
+                                            {{ rule.name }}
+                                            <span class="text-muted">({{ rule.get_operation_display }}{% if rule.column %} · {{ rule.column }}{% endif %})</span>
+                                        </label>
+                                    </div>
+                                {% endfor %}
+                                <a class="small" href="{% url 'core:rules_list' %}">{% translate "Gérer les règles…" %}</a>
+                            {% endif %}
+                            {% for error in form.non_field_errors %}
+                                <div class="text-danger small mb-2">{{ error }}</div>
+                            {% endfor %}
+                            <button type="submit" class="btn btn-primary w-100 mt-3">{% translate "Programmer" %}</button>
+                        </form>
+                    {% else %}
+                        <div class="alert alert-warning mb-0">
+                            {% translate "Votre rôle ne permet pas de créer une planification." %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-7">
+            <div class="card dz-panel">
+                <div class="card-body">
+                    <h2 class="h5 card-title">
+                        {% translate "📋 Mes planifications (" %}{{ schedules|length }})
+                    </h2>
+                    {% if schedules %}
+                        <div class="table-responsive">
+                            <table class="table table-sm align-middle" data-searchable>
+                                <thead>
+                                    <tr>
+                                        <th>{% translate "Jeu de données" %}</th>
+                                        <th>{% translate "Fréquence" %}</th>
+                                        <th>{% translate "Prochaine exécution" %}</th>
+                                        <th>{% translate "État" %}</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for schedule in schedules %}
+                                        <tr>
+                                            <td>
+                                                <a href="{% url 'core:dataset_detail' schedule.data_file.pk %}">
+                                                    {{ schedule.data_file.original_name }}
+                                                </a>
+                                                {% if schedule.run_count %}
+                                                    <span class="text-muted small d-block">
+                                                        {% blocktranslate trimmed count runs=schedule.run_count %}
+                                                        {{ runs }} exécution
+                                                        {% plural %}
+                                                        {{ runs }} exécutions
+                                                        {% endblocktranslate %}
+                                                        {% if schedule.last_run_at %}
+                                                            · {{ schedule.last_run_at|date:"SHORT_DATETIME_FORMAT" }}
+                                                        {% endif %}
+                                                    </span>
+                                                {% endif %}
+                                            </td>
+                                            <td><span class="badge text-bg-secondary">{{ schedule.get_frequency_display }}</span></td>
+                                            <td class="small">
+                                                {{ schedule.next_run_at|date:"SHORT_DATETIME_FORMAT" }}
+                                            </td>
+                                            <td>
+                                                {% if schedule.is_active %}
+                                                    <span class="badge text-bg-success">{% translate "Active" %}</span>
+                                                {% else %}
+                                                    <span class="badge text-bg-secondary">{% translate "Suspendue" %}</span>
+                                                {% endif %}
+                                                {% if schedule.last_status == "ok" %}
+                                                    <span class="badge text-bg-light border">{% translate "Dernière : succès" %}</span>
+                                                {% elif schedule.last_status == "error" %}
+                                                    <span class="badge text-bg-danger">{% translate "Dernière : échec" %}</span>
+                                                {% endif %}
+                                            </td>
+                                            <td class="text-end text-nowrap">
+                                                {% if can_edit %}
+                                                    <form method="post" action="{% url 'core:schedule_run_now' schedule.pk %}" class="d-inline">
+                                                        {% csrf_token %}
+                                                        <button type="submit" class="btn btn-sm btn-outline-primary">
+                                                            {% translate "Exécuter" %}
+                                                        </button>
+                                                    </form>
+                                                    <form method="post" action="{% url 'core:schedule_toggle' schedule.pk %}" class="d-inline">
+                                                        {% csrf_token %}
+                                                        <button type="submit" class="btn btn-sm btn-outline-secondary">
+                                                            {% if schedule.is_active %}{% translate "Suspendre" %}{% else %}{% translate "Activer" %}{% endif %}
+                                                        </button>
+                                                    </form>
+                                                {% endif %}
+                                                <form method="post" action="{% url 'core:schedule_delete' schedule.pk %}" class="d-inline"
+                                                      onsubmit="return confirm('{% translate "Supprimer cette planification ?" %}');">
+                                                    {% csrf_token %}
+                                                    <button type="submit" class="btn btn-sm btn-outline-danger">🗑️</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class="text-center py-4">
+                            <div class="fs-1 mb-2" aria-hidden="true">⏱️</div>
+                            <p class="text-muted mb-0">
+                                {% translate "Aucune planification : programmez un nettoyage récurrent pour ne plus y penser." %}
+                            </p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="card dz-panel mt-3">
+                <div class="card-body">
+                    <h2 class="h6 mb-2">{% translate "Comment les échéances sont-elles exécutées ?" %}</h2>
+                    <p class="text-muted small mb-2">
+                        {% translate "DataZen ne fait tourner aucun démon en arrière-plan : une commande de gestion reprend les échéances dues et relance le nettoyage par le même chemin de code que l'interface." %}
+                    </p>
+                    <pre class="dz-pre-wrap small mb-0">python manage.py run_schedules</pre>
+                    <p class="text-muted small mt-2 mb-0">
+                        {% translate "Appelez-la depuis un planificateur système (cron, Planificateur de tâches Windows) toutes les cinq minutes." %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

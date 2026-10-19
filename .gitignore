@@ -31,6 +31,9 @@ frontend/dist/
 *.pem
 *.key
 
+# Clé de développement persistée (générée au premier démarrage)
+/var/
+
 # Sources de design (non servies : intrants de build et références)
 /design/
 

@@ -1,0 +1,248 @@
+{% extends "core/base.html" %}
+{% load i18n humanize l10n %}
+
+{% block title %}{% blocktranslate trimmed with name=data_file.original_name %}Comparaison de versions — {{ name }}{% endblocktranslate %}{% endblock %}
+
+{% block content %}
+<div class="container dz-page">
+    <nav aria-label="{% translate "Fil d'Ariane" %}">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+            <li class="breadcrumb-item">
+                <a href="{% url 'core:dataset_detail' data_file.pk %}">{{ data_file.original_name }}</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="{% url 'core:dataset_versions' data_file.pk %}">{% translate "Versions" %}</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">{% translate "Comparaison" %}</li>
+        </ol>
+    </nav>
+
+    <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 dz-page-head">
+        <div>
+            <span class="dz-eyebrow">{% translate "Confiance" %}</span>
+            <h1 class="h3 mb-1">{% translate "🔍 Comparer deux versions" %}</h1>
+            <p class="text-muted mb-0">
+                {% translate "Choisissez deux versions pour mesurer ce qui a réellement changé entre elles." %}
+            </p>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-outline-secondary" href="{% url 'core:dataset_versions' data_file.pk %}">
+                {% translate "← Retour à l'historique" %}
+            </a>
+        </div>
+    </div>
+
+    <div class="card dz-card-accent dz-block">
+        <div class="card-body">
+            <form method="get" class="row g-3 align-items-end">
+                <div class="col-md-4">
+                    <label class="form-label small" for="dz-before">{% translate "Version de référence" %}</label>
+                    <select name="before" id="dz-before" class="form-select">
+                        {% for version in versions %}
+                            <option value="{{ version.number }}"
+                                    {% if version.pk == before.pk %}selected{% endif %}>
+                                v{{ version.number }} — {{ version.created_at|date:"SHORT_DATETIME_FORMAT" }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label small" for="dz-after">{% translate "Version comparée" %}</label>
+                    <select name="after" id="dz-after" class="form-select">
+                        {% for version in versions %}
+                            <option value="{{ version.number }}"
+                                    {% if version.pk == after.pk %}selected{% endif %}>
+                                v{{ version.number }} — {{ version.created_at|date:"SHORT_DATETIME_FORMAT" }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary w-100">{% translate "Comparer" %}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {% if comparison %}
+        <section class="dz-kpi-dashboard dz-block" aria-labelledby="dz-version-compare-kpi">
+            <div class="dz-kpi-heading">
+                <div>
+                    <h2 class="h5 mb-1" id="dz-version-compare-kpi">
+                        {% blocktranslate trimmed with before=before.number after=after.number %}
+                        Qualité : v{{ before }} → v{{ after }}
+                        {% endblocktranslate %}
+                    </h2>
+                    <p class="text-muted small mb-0">
+                        {% translate "Scores mesurés lors de chaque nettoyage." %}
+                    </p>
+                </div>
+                <div class="text-end">
+                    <div class="display-6 fw-bold lh-1">
+                        {{ comparison.before.score }}<span class="fs-6 text-muted"> → </span>{{ comparison.after.score }}
+                    </div>
+                    <span class="badge text-bg-{% if comparison.delta > 0 %}success{% elif comparison.delta < 0 %}danger{% else %}secondary{% endif %}">
+                        {% if comparison.delta > 0 %}+{% endif %}{{ comparison.delta }}
+                    </span>
+                </div>
+            </div>
+            <div class="dz-kpi-grid">
+                <article class="dz-kpi-card dz-kpi-card--primary">
+                    <div class="dz-kpi-card__top">
+                        <span class="dz-kpi-card__icon" aria-hidden="true">✅</span>
+                        <span class="dz-kpi-card__label">{% translate "Colonnes améliorées" %}</span>
+                    </div>
+                    <div class="dz-kpi-card__value">{{ comparison.improved_columns }}</div>
+                </article>
+                <article class="dz-kpi-card dz-kpi-card--warning">
+                    <div class="dz-kpi-card__top">
+                        <span class="dz-kpi-card__icon" aria-hidden="true">⚠️</span>
+                        <span class="dz-kpi-card__label">{% translate "Colonnes à vérifier" %}</span>
+                    </div>
+                    <div class="dz-kpi-card__value">{{ comparison.regressed_columns }}</div>
+                </article>
+                <article class="dz-kpi-card dz-kpi-card--secondary">
+                    <div class="dz-kpi-card__top">
+                        <span class="dz-kpi-card__icon" aria-hidden="true">➖</span>
+                        <span class="dz-kpi-card__label">{% translate "Colonnes stables" %}</span>
+                    </div>
+                    <div class="dz-kpi-card__value">{{ comparison.stable_columns }}</div>
+                </article>
+                <article class="dz-kpi-card dz-kpi-card--primary">
+                    <div class="dz-kpi-card__top">
+                        <span class="dz-kpi-card__icon" aria-hidden="true">🔢</span>
+                        <span class="dz-kpi-card__label">{% translate "Colonnes analysées" %}</span>
+                    </div>
+                    <div class="dz-kpi-card__value">{{ comparison.columns|length }}</div>
+                </article>
+            </div>
+        </section>
+
+        {% if not comparison.has_changes %}
+            <div class="alert alert-info">
+                {% translate "Ces deux versions sont identiques sur les indicateurs suivis." %}
+            </div>
+        {% endif %}
+
+        <div class="card dz-panel dz-block">
+            <div class="card-body">
+                <h2 class="h6 mb-3">{% translate "Indicateurs comparés" %}</h2>
+                <div class="table-responsive">
+                    <table class="table align-middle mb-0" data-searchable>
+                        <thead>
+                            <tr>
+                                <th>{% translate "Indicateur" %}</th>
+                                <th class="text-end">{% blocktranslate trimmed with n=before.number %}v{{ n }}{% endblocktranslate %}</th>
+                                <th class="text-end">{% blocktranslate trimmed with n=after.number %}v{{ n }}{% endblocktranslate %}</th>
+                                <th class="text-end">{% translate "Écart" %}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in comparison.indicators %}
+                                <tr>
+                                    <td>{{ row.label }}</td>
+                                    <td class="text-end text-muted">{{ row.before|default:"—" }}{{ row.unit }}</td>
+                                    <td class="text-end fw-semibold">{{ row.after|default:"—" }}{{ row.unit }}</td>
+                                    <td class="text-end">
+                                        <span class="badge text-bg-{{ row.css }}">{{ row.text }}</span>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="card dz-panel dz-block">
+            <div class="card-body">
+                <h2 class="h6 mb-3">{% translate "Détail par colonne" %}</h2>
+                <div class="table-responsive">
+                    <table class="table table-sm align-middle mb-0" data-searchable>
+                        <thead>
+                            <tr>
+                                <th>{% translate "Colonne" %}</th>
+                                <th class="text-end">{% translate "Problèmes" %}</th>
+                                <th class="text-end">{% translate "Complétude" %}</th>
+                                <th>{% translate "État" %}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for column in comparison.columns %}
+                                <tr>
+                                    <td>
+                                        {{ column.name }}
+                                        {% if column.after.type %}
+                                            <span class="badge text-bg-light border">{{ column.after.type }}</span>
+                                        {% endif %}
+                                    </td>
+                                    <td class="text-end">
+                                        <span class="text-muted">{{ column.before.issues|default:"—" }}</span>
+                                        <span class="text-muted"> → </span>
+                                        <span>{{ column.after.issues|default:"—" }}</span>
+                                    </td>
+                                    <td class="text-end">
+                                        {% if column.after %}
+                                            {{ column.after.completeness }}%
+                                            {% if column.delta_completeness %}
+                                                <span class="badge text-bg-{% if column.delta_completeness > 0 %}success{% else %}danger{% endif %}">
+                                                    {% if column.delta_completeness > 0 %}+{% endif %}{{ column.delta_completeness }}
+                                                </span>
+                                            {% endif %}
+                                        {% else %}
+                                            —
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <span class="badge text-bg-{{ column.status_css }}">{{ column.status_label }}</span>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="alert alert-info">
+            {% translate "Sélectionnez deux versions différentes pour afficher la comparaison." %}
+        </div>
+    {% endif %}
+
+    <div class="row dz-grid">
+        <div class="col-lg-6">
+            <div class="card dz-panel h-100">
+                <div class="card-body">
+                    <h2 class="h6 mb-3">
+                        {% blocktranslate trimmed with n=before.number %}Opérations de v{{ n }}{% endblocktranslate %}
+                    </h2>
+                    <ul class="list-unstyled small mb-0">
+                        {% for operation in before_operations %}
+                            <li>✔️ {{ operation }}</li>
+                        {% empty %}
+                            <li class="text-muted">{% translate "Aucune opération enregistrée." %}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card dz-panel h-100">
+                <div class="card-body">
+                    <h2 class="h6 mb-3">
+                        {% blocktranslate trimmed with n=after.number %}Opérations de v{{ n }}{% endblocktranslate %}
+                    </h2>
+                    <ul class="list-unstyled small mb-0">
+                        {% for operation in after_operations %}
+                            <li>✔️ {{ operation }}</li>
+                        {% empty %}
+                            <li class="text-muted">{% translate "Aucune opération enregistrée." %}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

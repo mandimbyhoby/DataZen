@@ -138,3 +138,50 @@ DJANGO_HTTPS=1
 
 Sans `DJANGO_SECRET_KEY` alors que `DJANGO_DEBUG=0`, l'application refuse de
 démarrer : c'est intentionnel.
+
+## Aptitude à la mise en service
+
+Un second passage, cette fois **dynamique** (parcours utilisateur complet dans un
+navigateur, sondes de contrôle d'accès, exports, démarrage réel du serveur de
+production), a complété l'audit statique. Il a révélé cinq manques bloquants
+pour une ouverture au public, tous corrigés depuis.
+
+| # | Gravité | Constat | Correction |
+|---|---------|---------|------------|
+| 1 | 🔴 CRITIQUE | Aucun serveur WSGI : `runserver` est mono-processus et réservé au développement | `waitress` ajouté aux dépendances, commande de lancement documentée |
+| 2 | 🔴 CRITIQUE | `/static/css/style.css` renvoyait **404** avec `DEBUG=False` : l'application se serait affichée sans style | `WhiteNoiseMiddleware` + `CompressedManifestStaticFilesStorage` ; vérifié 200 sous waitress |
+| 3 | 🟠 ÉLEVÉE | Réinitialisation de mot de passe inopérante : le *console backend* écrit le lien dans le terminal, l'utilisateur ne reçoit rien | Backend SMTP activé dès que `DJANGO_EMAIL_HOST` est défini |
+| 4 | 🟡 MOYENNE | Aucune page d'erreur personnalisée : 404/403/500 affichaient la page Django nue | `templates/404.html`, `403.html`, `500.html` autonomes et traduits |
+| 5 | 🟡 MOYENNE | Connexion sans limitation : force brute illimitée | `core/throttling.py` + `ThrottledLoginView` : 5 échecs par identifiant, 20 par IP, fenêtre de 15 min, HTTP 429 |
+| 6 | 🟠 ÉLEVÉE | Une fois `collectstatic` activé, un manifeste absent faisait échouer le chargement de l'URLconf : **tout le site tombait en erreur**, gestionnaire 500 compris | `_favicon_url()` tolère l'absence de manifeste ; les pages d'erreur utilisent des chemins littéraux. Vérifié : 404 et 500 réels s'affichent sans manifeste |
+
+### Points vérifiés et jugés sains
+
+- `check --deploy` avec `DJANGO_DEBUG=0` et `DJANGO_HTTPS=1` : **aucun problème**.
+- Contrôle d'accès : anonyme redirigé, aucun lien `/admin/` pour un compte
+  ordinaire, `/admin/` inaccessible sans révéler de modèle.
+- **IDOR** : l'accès au jeu de données d'un autre compte redirige sans divulguer
+  le nom du propriétaire.
+- Les sept exports (CSV, Markdown, PDF, HTML, journal, JSON, analyse) répondent
+  en 200 avec `Content-Disposition: attachment`.
+- Quatre validateurs de mot de passe actifs.
+- **Pages d'erreur** : 404, 403 et 500 réels s'affichent avec l'habillage
+  DataZen, sans trace technique et sans dépendre du manifeste statique.
+
+### Limites connues, non bloquantes
+
+- **SQLite** : verrou en écriture, adapté à un usage mono-utilisateur ou à
+  faible trafic. Passer à PostgreSQL au-delà.
+- **`LocMemCache`** : le compteur anti-force brute est propre à chaque
+  processus. Avec plusieurs workers, configurer Redis ou Memcached.
+- **`media/`** : servi par Django en développement seulement ; en production,
+  le reverse proxy doit s'en charger.
+- **`collectstatic` obligatoire** : en production, le stockage à manifeste exige
+  `staticfiles/staticfiles.json`. À relancer après chaque modification de CSS,
+  JS ou image ; sinon les pages échouent avec `Missing staticfiles manifest
+  entry`. Les pages d'erreur, elles, restent fonctionnelles.
+- **Pas de `Content-Security-Policy`** : les autres en-têtes de sécurité sont
+  présents (`nosniff`, `X-Frame-Options: DENY`, `Referrer-Policy`,
+  `Cross-Origin-Opener-Policy`). Une CSP demanderait d'autoriser explicitement
+  les CDN Bootstrap et Google Fonts utilisés par les gabarits.
+

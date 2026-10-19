@@ -152,7 +152,7 @@
             <div class="card shadow-sm">
                 <div class="card-body">
                     <h5 class="card-title">{% translate "🧹 Options de nettoyage" %}</h5>
-                    <form method="post">
+                    <form method="post" id="cleaning-form">
                         {% csrf_token %}
                         <div class="form-check mb-2">
                             {{ form.remove_duplicates }}
@@ -262,13 +262,142 @@
                                                     <a class="small" href="{% url 'core:rules_list' %}">{% translate "Gérer les règles…" %}</a>
                                                     <hr>
                                                 {% endif %}
-                                                <button type="submit" class="btn btn-primary w-100">{% translate "Nettoyer" %}</button>
+                                                <div class="d-grid gap-2">
+                                                    <button type="submit" name="action" value="preview" class="btn btn-outline-primary">
+                                                        {% translate "🔍 Aperçu (simulation)" %}
+                                                    </button>
+                                                    <button type="submit" name="action" value="clean" class="btn btn-primary">
+                                                        {% translate "Nettoyer" %}
+                                                    </button>
+                                                </div>
                     </form>
+
+                    {% if preview %}
+                        <hr>
+                        <div id="preview-result"
+                             class="alert {% if preview.has_changes %}alert-info{% else %}alert-secondary{% endif %} py-2 px-3 mb-0">
+                            <strong>{% translate "Simulation — aucune modification enregistrée" %}</strong>
+                            {% if not preview.has_changes %}
+                                <div class="small mt-1">
+                                    {% translate "Les options choisies ne changeraient rien à ce jeu de données." %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
 
         <div class="col-lg-8">
+            {% if preview %}
+                <div class="card shadow-sm mb-3 border-info" id="preview-card">
+                    <div class="card-body">
+                        <h5 class="card-title">{% translate "🔍 Aperçu avant / après (simulation)" %}</h5>
+                        <p class="text-muted small">
+                            {% blocktranslate trimmed %}Résultat de la simulation : rien n'a été écrit. Confirmez le
+                            nettoyage pour appliquer réellement ces changements.{% endblocktranslate %}
+                        </p>
+
+                        <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+                            {% if preview.score_indicator %}
+                                <div class="text-center">
+                                    <div class="h3 mb-0">{{ preview.score_indicator.before }}{{ preview.score_indicator.unit }}</div>
+                                    <div class="text-muted small">{% translate "Avant" %}</div>
+                                </div>
+                                <div class="h4 mb-0 text-muted">→</div>
+                                <div class="text-center">
+                                    <div class="h3 mb-0">{{ preview.score_indicator.after }}{{ preview.score_indicator.unit }}</div>
+                                    <div class="text-muted small">{% translate "Après" %}</div>
+                                </div>
+                                <span class="badge text-bg-{{ preview.score_indicator.css }}">{{ preview.score_indicator.text }}</span>
+                            {% endif %}
+                        </div>
+
+                        <div class="table-responsive mb-3">
+                            <table class="table table-sm align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>{% translate "Indicateur" %}</th>
+                                        <th class="text-end">{% translate "Avant" %}</th>
+                                        <th class="text-end">{% translate "Après" %}</th>
+                                        <th class="text-end">{% translate "Écart" %}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for row in preview.indicators %}
+                                        <tr>
+                                            <td>{{ row.label }}</td>
+                                            <td class="text-end">{{ row.before }}{{ row.unit }}</td>
+                                            <td class="text-end">{{ row.after }}{{ row.unit }}</td>
+                                            <td class="text-end">
+                                                <span class="badge text-bg-{{ row.css }}">{{ row.text }}</span>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        {% if preview.rendered_operations %}
+                            <h6 class="text-muted">{% translate "Opérations qui seraient appliquées" %}</h6>
+                            <ul class="small mb-3">
+                                {% for operation in preview.rendered_operations %}
+                                    <li>{{ operation }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+
+                        {% if preview.change_log.rows %}
+                            <h6 class="text-muted">
+                                {% translate "Exemples de corrections" %}
+                                <span class="small">
+                                    {% blocktranslate trimmed with shown=preview.change_log.rows|length total=preview.change_log.total %}
+                                        ({{ shown }} sur {{ total }})
+                                    {% endblocktranslate %}
+                                </span>
+                            </h6>
+                            <div class="table-responsive mb-3">
+                                <table class="table table-sm table-striped align-middle mb-0">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>{% translate "Ligne" %}</th>
+                                            <th>{% translate "Colonne" %}</th>
+                                            <th>{% translate "Avant" %}</th>
+                                            <th>{% translate "Après" %}</th>
+                                            <th>{% translate "Type" %}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for entry in preview.change_log.rows %}
+                                            <tr>
+                                                <td>{{ entry.line }}</td>
+                                                <td>{{ entry.column }}</td>
+                                                <td class="text-muted text-decoration-line-through">{{ entry.before }}</td>
+                                                <td class="fw-semibold text-success-emphasis">{{ entry.after }}</td>
+                                                <td><span class="badge text-bg-secondary">{{ entry.kind }}</span></td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                            {% if preview.change_log.truncated %}
+                                <p class="small text-muted">
+                                    {% translate "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes." %}
+                                </p>
+                            {% endif %}
+                        {% else %}
+                            <p class="small text-muted">
+                                {% translate "Aucune correction de valeur ne serait nécessaire." %}
+                            </p>
+                        {% endif %}
+
+                        <button type="submit" form="cleaning-form" name="action" value="clean" class="btn btn-primary">
+                            {% translate "Confirmer le nettoyage" %}
+                        </button>
+                    </div>
+                </div>
+            {% endif %}
+
             <div class="card shadow-sm mb-3">
                 <div class="card-body">
                     <h5 class="card-title">{% translate "🔍 Problèmes détectés" %}</h5>
@@ -606,6 +735,9 @@
                                     <th>{% translate "Moyenne" %}</th>
                                     <th>{% translate "Médiane" %}</th>
                                     <th>{% translate "Écart-type" %}</th>
+                                    <th>{% translate "Variance" %}</th>
+                                    <th>{% translate "Asymétrie" %}</th>
+                                    <th>{% translate "Aplatissement" %}</th>
                                     <th>{% translate "Q1" %}</th>
                                     <th>{% translate "Q3" %}</th>
                                     <th>{% translate "Outliers" %}</th>
@@ -624,6 +756,9 @@
                                         <td>{{ p.moyenne }}</td>
                                         <td>{{ p.mediane }}</td>
                                         <td>{{ p.ecart_type }}</td>
+                                        <td>{{ p.variance }}</td>
+                                        <td>{{ p.asymetrie }}</td>
+                                        <td>{{ p.aplatissement }}</td>
                                         <td>{{ p.q1 }}</td>
                                         <td>{{ p.q3 }}</td>
                                         <td>{% if p.outliers %}<span class="badge bg-warning text-dark">{{ p.outliers }}</span>{% else %}0{% endif %}</td>
@@ -666,6 +801,36 @@
                                                     {% else %}
                                                         <div class="small text-muted">{% translate "Aucune valeur aberrante détectée sur les colonnes numériques." %}</div>
                                                     {% endif %}
+
+                                                                                                        <!-- Anomalies structurelles -->
+                                                                                                        <h6 class="text-muted mt-4">{% translate "🧩 Anomalies structurelles" %} <span class="small">({{ dashboard.structural_count }})</span></h6>
+                                                                                                        {% if dashboard.structural_anomalies %}
+                                                                                                            <div class="table-responsive">
+                                                                                                                <table class="table table-sm table-striped align-middle mb-0" data-searchable>
+                                                                                                                    <thead class="table-light">
+                                                                                                                        <tr>
+                                                                                                                            <th>{% translate "Colonne" %}</th>
+                                                                                                                            <th>{% translate "Type" %}</th>
+                                                                                                                            <th>{% translate "Sévérité" %}</th>
+                                                                                                                            <th>{% translate "Détail" %}</th>
+                                                                                                                        </tr>
+                                                                                                                    </thead>
+                                                                                                                    <tbody>
+                                                                                                                        {% for a in dashboard.structural_anomalies %}
+                                                                                                                            <tr>
+                                                                                                                                <td>{{ a.colonne }}</td>
+                                                                                                                                <td>{{ a.type }}</td>
+                                                                                                                                <td><span class="badge bg-{{ a.classe }}">{{ a.severite }}</span></td>
+                                                                                                                                <td>{{ a.detail }}</td>
+                                                                                                                            </tr>
+                                                                                                                        {% endfor %}
+                                                                                                                    </tbody>
+                                                                                                                </table>
+                                                                                                            </div>
+                                                                                                            <div class="small text-muted mt-1">{% translate "⚠️ Anomalies signalées uniquement — jamais modifiées automatiquement." %}</div>
+                                                                                                        {% else %}
+                                                                                                            <div class="small text-muted">{% translate "Aucune anomalie structurelle détectée." %}</div>
+                                                                                                        {% endif %}
 
                                                                                                         <!-- Règles regex personnalisées -->
                                                                                                         {% if regex_violations %}

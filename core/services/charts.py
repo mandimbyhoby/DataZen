@@ -32,6 +32,10 @@ from django.utils.translation import gettext_lazy as _lazy  # noqa: E402
 
 from . import dashboard as dashboard_service  # noqa: E402
 from .cleaning import is_unknown  # noqa: E402
+from .validation import (  # noqa: E402
+    profile_dataframe,
+    structural_anomaly_label,
+)
 
 # Palette alignée sur la charte graphique DataZen (dégradé de marque).
 BRAND = [
@@ -126,6 +130,16 @@ CHART_SPECS = [
         _lazy("Valeurs aberrantes"),
         _lazy("Nombre de valeurs aberrantes (méthode IQR) par colonne."),
     ),
+    (
+        "moments",
+        _lazy("Forme des distributions"),
+        _lazy("Asymétrie et aplatissement (moments centrés) des colonnes numériques."),
+    ),
+    (
+        "structural",
+        _lazy("Anomalies structurelles"),
+        _lazy("Colonnes vides, constantes, quasi constantes ou à type hétérogène."),
+    ),
 ]
 
 
@@ -201,6 +215,14 @@ def _num(value, decimals=None):
     text = f"{number:g}" if decimals is None else f"{number:.{decimals}f}"
     separator = number_format(1.5, decimal_pos=1, use_l10n=True)[1]
     return text.replace(".", separator)
+
+
+def _to_float(value):
+    """Convertit une valeur formatée (``"1,23"``) en flottant, sinon ``None``."""
+    try:
+        return float(str(value).replace(",", "."))
+    except (TypeError, ValueError):
+        return None
 
 
 def _style(theme):
@@ -750,6 +772,107 @@ def chart_outliers(df, outliers, theme="light"):
     return _figure_to_png(fig)
 
 
+def _moments_items(df):
+    """Asymétrie et aplatissement par colonne numérique (moments centrés).
+
+    Réutilise :func:`validation.profile_dataframe` : aucune statistique n'est
+    recalculée ici, le graphique ne fait que représenter des valeurs déjà
+    produites par le profilage.
+    """
+    items = []
+    for row in profile_dataframe(df):
+        if row.get("type") != "numérique":
+            continue
+        skewness = _to_float(row.get("asymetrie"))
+        kurtosis = _to_float(row.get("aplatissement"))
+        if skewness is None or kurtosis is None:
+            continue
+        items.append(
+            {
+                "label": str(row["colonne"]),
+                "skewness": skewness,
+                "kurtosis": kurtosis,
+            }
+        )
+    return items
+
+
+def chart_moments(df, theme="light"):
+    """Forme des distributions : asymétrie et aplatissement par colonne."""
+    items = _moments_items(df)
+    if not items:
+        return None
+    t = _style(theme)
+
+    labels = [_label(item["label"][:26]) for item in items][::-1]
+    skewness = [item["skewness"] for item in items][::-1]
+    kurtosis = [item["kurtosis"] for item in items][::-1]
+    positions = range(len(labels))
+    height = 0.36
+
+    fig, ax = plt.subplots(figsize=(FULL_WIDTH, 0.62 * len(labels) + 2.6))
+    ax.barh(
+        [p + height / 2 for p in positions],
+        skewness,
+        height=height,
+        color=BRAND[0],
+        label=_("Asymétrie"),
+        zorder=2,
+    )
+    ax.barh(
+        [p - height / 2 for p in positions],
+        kurtosis,
+        height=height,
+        color=BRAND[2],
+        label=_("Aplatissement"),
+        zorder=2,
+    )
+    ax.axvline(0, color=t["muted"], linewidth=1.0, zorder=1)
+    ax.set_yticks(list(positions))
+    ax.set_yticklabels(labels)
+    ax.set_xlabel(_("Valeur du moment centré"))
+    ax.set_title(
+        _("Forme des distributions (asymétrie et aplatissement)"),
+        color=t["text"],
+        loc="left",
+    )
+    legend = ax.legend(loc="lower right", frameon=False)
+    for text in legend.get_texts():
+        text.set_color(t["text"])
+    ax.margins(x=0.14)
+    _soft_grid(ax, axis="x")
+    fig.tight_layout()
+    return _figure_to_png(fig)
+
+
+def chart_structural(df, anomalies, theme="light"):
+    """Anomalies structurelles détectées, regroupées par type."""
+    if not anomalies:
+        return None
+    t = _style(theme)
+    counts = Counter(str(a.get("type", "—")) for a in anomalies)
+    items = counts.most_common()
+    labels = [_label(structural_anomaly_label(code)[:30]) for code, _n in items][::-1]
+    values = [n for _code, n in items][::-1]
+
+    fig, ax = plt.subplots(figsize=(FULL_WIDTH, 0.5 * len(labels) + 2.4))
+    bars = ax.barh(labels, values, color=COLOR_WARN, height=0.6, zorder=2)
+    for bar, value in zip(bars, values):
+        _value_label(
+            ax,
+            value,
+            bar.get_y() + bar.get_height() / 2,
+            f" {_num(value)}",
+            t["muted"],
+        )
+    ax.set_xlabel(_("Nombre de colonnes concernées"))
+    ax.set_title(_("Anomalies structurelles par type"), color=t["text"], loc="left")
+    ax.margins(x=0.12)
+    _soft_grid(ax, axis="x")
+    fig.tight_layout()
+    return _figure_to_png(fig)
+
+
 # --------------------------------------------------------------------------
 # Données JSON (rendu interactif React + Chart.js)
 # --------------------------------------------------------------------------
@@ -1068,6 +1191,43 @@ def chart_data(df, dashboard=None):
         if items:
             payloads["outliers"] = {"kind": "hbar", "data": {"items": items}}
 
+    if "moments" in available:
+        items = [
+            {
+                "label": item["label"],
+                "skewness": _json_number(item["skewness"]),
+                "kurtosis": _json_number(item["kurtosis"]),
+            }
+            for item in _moments_items(df)
+        ]
+        if items:
+            payloads["moments"] = {
+                "kind": "moments",
+                "data": {
+                    "items": items,
+                    "labels": {
+                        "skewness": _("Asymétrie"),
+                        "kurtosis": _("Aplatissement"),
+                    },
+                },
+            }
+
+    if "structural" in available:
+        counts = Counter(
+            str(anomaly.get("type_code", "—"))
+            for anomaly in dashboard.get("structural_anomalies") or []
+        )
+        items = [
+            {
+                "label": str(structural_anomaly_label(code)),
+                "value": count,
+                "color": COLOR_WARN,
+            }
+            for code, count in counts.most_common(12)
+        ]
+        if items:
+            payloads["structural"] = {"kind": "hbar", "data": {"items": items}}
+
     charts = []
     for slug, title, description in CHART_SPECS:
         payload = payloads.get(slug)
@@ -1107,6 +1267,10 @@ def _builders(df, dashboard, theme):
         "correlation": lambda: chart_correlation(df, theme),
         "categories": lambda: chart_categories(df, theme),
         "outliers": lambda: chart_outliers(df, dashboard.get("outliers"), theme),
+        "moments": lambda: chart_moments(df, theme),
+        "structural": lambda: chart_structural(
+            df, dashboard.get("structural_anomalies"), theme
+        ),
     }
 
 
@@ -1143,6 +1307,10 @@ def available_charts(df, dashboard=None):
         slugs.append("categories")
     if dashboard.get("outliers"):
         slugs.append("outliers")
+    if _moments_items(df):
+        slugs.append("moments")
+    if dashboard.get("structural_anomalies"):
+        slugs.append("structural")
     return slugs
 
 

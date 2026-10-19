@@ -13,7 +13,8 @@ import re
 from datetime import datetime
 
 import pandas as pd
-from django.utils.translation import gettext
+
+from .operations import operation_entry
 
 # Valeur spéciale « inconnu » : marqueur de donnée absente/indisponible.
 # « Inconnu » n'est ni une erreur, ni une valeur manquante, ni un email invalide.
@@ -1391,50 +1392,55 @@ class DataCleaner:
             if operation == "remove_duplicates":
                 self.remove_duplicates(subset=columns, ignore_case=True)
                 applied.append(
-                    gettext("[Règle] Suppression des doublons (%(count)s supprimé(s))")
-                    % {"count": self.changes.get("duplicates_removed", 0)}
+                    operation_entry(
+                        "rule_remove_duplicates",
+                        count=self.changes.get("duplicates_removed", 0),
+                    )
                 )
             elif operation == "trim_whitespace":
                 self.trim_whitespace()
-                applied.append(gettext("[Règle] Suppression des espaces superflus"))
+                applied.append(operation_entry("rule_trim_whitespace"))
             elif operation == "normalize_case":
                 self.normalize_text()
-                applied.append(gettext("[Règle] Normalisation de la casse"))
+                applied.append(operation_entry("rule_normalize_case"))
             elif operation == "normalize_emails":
                 self.normalize_emails()
                 applied.append(
-                    gettext("[Règle] Normalisation des emails (%(count)s corrigé(s))")
-                    % {"count": self.changes.get("emails_corriges", 0)}
+                    operation_entry(
+                        "rule_normalize_emails",
+                        count=self.changes.get("emails_corriges", 0),
+                    )
                 )
             elif operation == "normalize_phones":
                 self.normalize_phones()
                 applied.append(
-                    gettext("[Règle] Normalisation des téléphones (%(count)s corrigé(s))")
-                    % {"count": self.changes.get("phones", 0)}
+                    operation_entry(
+                        "rule_normalize_phones", count=self.changes.get("phones", 0)
+                    )
                 )
             elif operation == "normalize_dates":
                 self.normalize_dates()
                 applied.append(
-                    gettext("[Règle] Normalisation des dates (%(count)s corrigée(s))")
-                    % {"count": self.changes.get("dates", 0)}
+                    operation_entry(
+                        "rule_normalize_dates", count=self.changes.get("dates", 0)
+                    )
                 )
             elif operation == "normalize_salaries":
                 self.normalize_salaries()
                 applied.append(
-                    gettext("[Règle] Conversion des montants (%(count)s converti(s))")
-                    % {"count": self.changes.get("salaries", 0)}
+                    operation_entry(
+                        "rule_normalize_salaries", count=self.changes.get("salaries", 0)
+                    )
                 )
             elif operation == "fill_missing":
                 self.fill_missing(value)
-                applied.append(
-                    gettext("[Règle] Remplissage des valeurs manquantes par « %(value)s »")
-                    % {"value": value}
-                )
+                applied.append(operation_entry("rule_fill_missing", value=value))
             elif operation == "anonymize":
                 self.anonymize(columns=columns)
                 applied.append(
-                    gettext("[Règle] Anonymisation (%(count)s valeur(s))")
-                    % {"count": self.changes.get("anonymized", 0)}
+                    operation_entry(
+                        "rule_anonymize", count=self.changes.get("anonymized", 0)
+                    )
                 )
         return applied
 

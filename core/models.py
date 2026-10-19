@@ -239,6 +239,23 @@ class Profile(models.Model):
         default=False,
         verbose_name=_("Profil visible publiquement"),
     )
+
+    class Role(models.TextChoices):
+        VIEWER = "viewer", _("Lecteur")
+        EDITOR = "editor", _("Éditeur")
+        ADMIN = "admin", _("Administrateur")
+
+    role = models.CharField(
+        max_length=10,
+        choices=Role.choices,
+        default=Role.EDITOR,
+        verbose_name=_("Rôle"),
+        help_text=_(
+            "Lecteur : consultation et téléchargement. "
+            "Éditeur : peut aussi nettoyer et supprimer ses fichiers. "
+            "Administrateur : gère les rôles et voit tous les fichiers."
+        ),
+    )
     retention_days = models.PositiveSmallIntegerField(
         default=180,
         verbose_name=_("Durée de conservation (jours)"),
@@ -295,6 +312,18 @@ class Profile(models.Model):
     def display_name(self):
         """Nom complet si renseigné, sinon le nom d'utilisateur."""
         return self.user.get_full_name() or self.user.username
+
+    def is_admin(self):
+        """Un superutilisateur est toujours administrateur."""
+        return self.user.is_superuser or self.role == self.Role.ADMIN
+
+    def can_edit(self):
+        """Autorise les actions qui transforment les données (nettoyage…)."""
+        return self.user.is_superuser or self.role in (self.Role.EDITOR, self.Role.ADMIN)
+
+    def can_delete(self):
+        """Autorise la suppression d'un jeu de données."""
+        return self.can_edit()
 
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
@@ -482,3 +511,209 @@ class Webhook(models.Model):
 
     def __str__(self):
         return f"{self.name} → {self.event}"
+
+
+class DatasetShare(models.Model):
+    """Partage d'un jeu de données avec un utilisateur ou via un lien public.
+
+    Deux usages cohabitent : un partage nominatif (``shared_with`` renseigné,
+    le destinataire retrouve le fichier dans sa liste) et un lien public
+    (``shared_with`` vide, le jeton suffit). Le droit accordé est toujours en
+    lecture seule : seul le propriétaire modifie les données.
+    """
+
+    class Permission(models.TextChoices):
+        VIEW = "view", _("Consultation")
+        DOWNLOAD = "download", _("Consultation et téléchargement")
+
+    data_file = models.ForeignKey(
+        DataFile,
+        on_delete=models.CASCADE,
+        related_name="shares",
+        verbose_name=_("Fichier"),
+    )
+    shared_with = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="shared_datasets",
+        null=True,
+        blank=True,
+        verbose_name=_("Destinataire"),
+        help_text=_("Vide pour créer un lien public."),
+    )
+    permission = models.CharField(
+        max_length=10,
+        choices=Permission.choices,
+        default=Permission.VIEW,
+        verbose_name=_("Droit accordé"),
+    )
+    token = models.CharField(
+        max_length=64, unique=True, db_index=True, verbose_name=_("Jeton du lien")
+    )
+    expires_at = models.DateTimeField(
+        null=True, blank=True, verbose_name=_("Expiration")
+    )
+    is_active = models.BooleanField(default=True, verbose_name=_("Actif"))
+    created_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="created_shares",
+        null=True,
+        blank=True,
+        verbose_name=_("Créé par"),
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-created_at"]
+        verbose_name = _("Partage")
+        verbose_name_plural = _("Partages")
+
+    def __str__(self):
+        target = self.shared_with.username if self.shared_with_id else _("lien public")
+        return f"{self.data_file} → {target}"
+
+    @property
+    def is_public_link(self):
+        """Vrai lorsque le partage se fait par lien, sans destinataire nommé."""
+        return self.shared_with_id is None
+
+    @property
+    def is_expired(self):
+        """Vrai si la date d'expiration est dépassée."""
+        return bool(self.expires_at and self.expires_at <= timezone.now())
+
+    @property
+    def is_valid(self):
+        """Vrai si le partage est encore utilisable."""
+        return self.is_active and not self.is_expired
+
+
+class DatasetVersion(models.Model):
+    """Version figée d'un jeu de données après un nettoyage.
+
+    Chaque nettoyage réussi crée une version : elle conserve une copie du
+    fichier nettoyé et les indicateurs du moment, ce qui permet de consulter
+    l'historique, de comparer deux versions et de revenir en arrière.
+    """
+
+    data_file = models.ForeignKey(
+        DataFile,
+        on_delete=models.CASCADE,
+        related_name="versions",
+        verbose_name=_("Fichier"),
+    )
+    number = models.PositiveIntegerField(verbose_name=_("Numéro de version"))
+    cleaned_file = models.FileField(
+        upload_to="versions/%Y/%m/%d/",
+        blank=True,
+        null=True,
+        verbose_name=_("Fichier nettoyé"),
+    )
+    change_log_file = models.FileField(
+        upload_to="versions/logs/%Y/%m/%d/",
+        blank=True,
+        null=True,
+        verbose_name=_("Journal des modifications"),
+    )
+    quality_before = models.FloatField(null=True, blank=True)
+    quality_after = models.FloatField(null=True, blank=True)
+    rows_count = models.PositiveIntegerField(null=True, blank=True)
+    columns_count = models.PositiveSmallIntegerField(null=True, blank=True)
+    changes_count = models.PositiveIntegerField(null=True, blank=True)
+    metrics = models.JSONField(default=dict, blank=True)
+    # Codes d'opération appliqués, stockés sans traduction puis rendus à
+    # l'affichage : l'historique reste lisible dans toutes les langues.
+    operations = models.JSONField(default=list, blank=True)
+    created_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.SET_NULL,
+        related_name="dataset_versions",
+        null=True,
+        blank=True,
+        verbose_name=_("Créée par"),
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-number"]
+        verbose_name = _("Version")
+        verbose_name_plural = _("Versions")
+        constraints = [
+            models.UniqueConstraint(
+                fields=["data_file", "number"], name="unique_version_per_dataset"
+            )
+        ]
+
+    def __str__(self):
+        return f"{self.data_file} — v{self.number}"
+
+
+class CleaningSchedule(models.Model):
+    """Nettoyage récurrent d'un jeu de données.
+
+    La planification ne devine rien : une commande de gestion reprend les
+    échéances dues et relance le nettoyage via le même chemin de code que
+    l'interface, afin qu'un traitement planifié et un traitement manuel
+    produisent exactement le même résultat.
+    """
+
+    class Frequency(models.TextChoices):
+        DAILY = "daily", _("Quotidien")
+        WEEKLY = "weekly", _("Hebdomadaire")
+        MONTHLY = "monthly", _("Mensuel")
+
+    data_file = models.ForeignKey(
+        DataFile,
+        on_delete=models.CASCADE,
+        related_name="schedules",
+        verbose_name=_("Fichier"),
+    )
+    owner = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="cleaning_schedules",
+        verbose_name=_("Propriétaire"),
+    )
+    frequency = models.CharField(
+        max_length=10,
+        choices=Frequency.choices,
+        default=Frequency.WEEKLY,
+        verbose_name=_("Fréquence"),
+    )
+    options = models.JSONField(
+        default=dict, blank=True, verbose_name=_("Options de nettoyage")
+    )
+    rule_ids = models.JSONField(
+        default=list, blank=True, verbose_name=_("Règles appliquées")
+    )
+    next_run_at = models.DateTimeField(verbose_name=_("Prochaine exécution"))
+    last_run_at = models.DateTimeField(
+        null=True, blank=True, verbose_name=_("Dernière exécution")
+    )
+    is_active = models.BooleanField(default=True, verbose_name=_("Actif"))
+    run_count = models.PositiveIntegerField(default=0, verbose_name=_("Exécutions"))
+    last_status = models.CharField(
+        max_length=20, blank=True, default="", verbose_name=_("Dernier statut")
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["next_run_at"]
+        verbose_name = _("Planification")
+        verbose_name_plural = _("Planifications")
+
+    def __str__(self):
+        return f"{self.data_file} — {self.get_frequency_display()}"
+
+    def compute_next_run(self, from_moment=None):
+        """Calcule la prochaine échéance à partir d'un instant de référence."""
+        from datetime import timedelta
+
+        base = from_moment or timezone.now()
+        step = {
+            self.Frequency.DAILY: timedelta(days=1),
+            self.Frequency.WEEKLY: timedelta(days=7),
+            self.Frequency.MONTHLY: timedelta(days=30),
+        }[self.frequency]
+        return base + step

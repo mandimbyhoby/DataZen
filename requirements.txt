@@ -12,3 +12,8 @@ python-bidi>=0.6
 # Facultatif : les fichiers de static/video/ sont versionnés, ce paquet n'est
 # nécessaire que pour les régénérer.
 imageio-ffmpeg>=0.4
+# Production : serveur WSGI et service des fichiers statiques.
+# `runserver` est mono-processus et refuse de servir /static/ dès que
+# DEBUG=False ; sans ces deux paquets l'application se déploie sans style.
+waitress>=3.0
+whitenoise>=6.6

@@ -33,6 +33,7 @@ from .validation import (
     compute_quality_score,
     is_missing,
     profile_dataframe,
+    structural_anomaly_label,
 )
 
 
@@ -274,12 +275,16 @@ def build_dashboard(df, detection=None, score=None, change_log_df=None, operatio
     outliers = detection.get("outliers", [])
     outlier_count = len(outliers)
 
+    structural_anomalies = detection.get("structural", [])
+    structural_count = len(structural_anomalies)
+
     indicators = [
         {"label": _("Lignes après nettoyage"), "value": n, "icon": "📄", "class": "primary"},
         {"label": _("Doublons exacts"), "value": exact_duplicates, "icon": "🔴", "class": "danger" if exact_duplicates else "success"},
         {"label": _("Doublons potentiels"), "value": potential_count, "icon": "🟠", "class": "warning" if potential_count else "success"},
         {"label": _("Valeurs « Inconnu »"), "value": unknown_total, "icon": "⚪", "class": "secondary" if unknown_total else "success"},
         {"label": _("Valeurs aberrantes"), "value": outlier_count, "icon": "📈", "class": "warning" if outlier_count else "success"},
+        {"label": _("Anomalies structurelles"), "value": structural_count, "icon": "🧩", "class": "warning" if structural_count else "success"},
         {"label": _("Erreurs restantes"), "value": errors_total, "icon": "❌", "class": "danger" if errors_total else "success"},
     ]
 
@@ -408,12 +413,51 @@ def build_dashboard(df, detection=None, score=None, change_log_df=None, operatio
                 % {"count": outlier_count},
             }
         )
+    if structural_count:
+        to_verify.append(
+            {
+                "type": "warn",
+                "text": _("%(count)s anomalie(s) structurelle(s) détectée(s) sur les colonnes.")
+                % {"count": structural_count},
+                "items": [
+                    {
+                        "column": anomaly["colonne"],
+                        "type": anomaly["type"],
+                        "severity": anomaly["severite"],
+                        "detail": anomaly["detail"],
+                    }
+                    for anomaly in structural_anomalies
+                ],
+            }
+        )
+
+    # --- Anomalies structurelles (libellés traduits, prêts pour le template) ---
+    anomaly_classes = {
+        "haute": "danger",
+        "moyenne": "warning",
+        "faible": "secondary",
+    }
+    structural_rows = [
+        {
+            "colonne": anomaly["colonne"],
+            "type_code": anomaly["type"],
+            "type": str(structural_anomaly_label(anomaly["type"])),
+            "severite_code": anomaly["severite"],
+            "severite": _("haute") if anomaly["severite"] == "haute" else (
+                _("moyenne") if anomaly["severite"] == "moyenne" else _("faible")
+            ),
+            "classe": anomaly_classes.get(anomaly["severite"], "secondary"),
+            "detail": anomaly["detail"],
+        }
+        for anomaly in structural_anomalies
+    ]
 
     # --- Répartition des problèmes (pour mini-graphique) ---
     problems = [
         {"label": _("Doublons potentiels"), "value": potential_count, "class": "warning"},
         {"label": _("Valeurs « Inconnu »"), "value": unknown_total, "class": "secondary"},
         {"label": _("Valeurs aberrantes"), "value": outlier_count, "class": "info"},
+        {"label": _("Anomalies structurelles"), "value": structural_count, "class": "warning"},
         {"label": _("Erreurs restantes"), "value": errors_total, "class": "danger"},
     ]
     max_problem = max((p["value"] for p in problems), default=0)
@@ -433,10 +477,12 @@ def build_dashboard(df, detection=None, score=None, change_log_df=None, operatio
         "potential_count": potential_count,
         "columns_quality": columns_quality,
         "column_stats": column_stats,
-                "profile": profile,
-                "outliers": outliers,
-                "outlier_count": outlier_count,
-                "operations": operations or [],
+        "profile": profile,
+        "outliers": outliers,
+        "outlier_count": outlier_count,
+        "structural_anomalies": structural_rows,
+        "structural_count": structural_count,
+        "operations": operations or [],
         "change_log_rows": change_log_rows,
         "change_log_columns": change_log_columns,
         "change_log_total": change_log_total,

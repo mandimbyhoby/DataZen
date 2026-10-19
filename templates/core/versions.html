@@ -1,0 +1,158 @@
+{% extends "core/base.html" %}
+{% load i18n humanize %}
+
+{% block title %}{% blocktranslate trimmed with name=data_file.original_name %}Versions — {{ name }}{% endblocktranslate %}{% endblock %}
+
+{% block content %}
+<div class="container dz-page">
+    <nav aria-label="{% translate "Fil d'Ariane" %}">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+            <li class="breadcrumb-item">
+                <a href="{% url 'core:dataset_detail' data_file.pk %}">{{ data_file.original_name }}</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">{% translate "Versions" %}</li>
+        </ol>
+    </nav>
+
+    <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 dz-page-head">
+        <div>
+            <span class="dz-eyebrow">{% translate "Traçabilité" %}</span>
+            <h1 class="h3 mb-1">{% translate "🕓 Historique des versions" %}</h1>
+            <p class="text-muted mb-0">
+                {% translate "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière." %}
+            </p>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-outline-secondary" href="{% url 'core:dataset_detail' data_file.pk %}">
+                {% translate "← Retour au fichier" %}
+            </a>
+            {% if entries %}
+                <a class="btn btn-primary" href="{% url 'core:version_compare' data_file.pk %}">
+                    {% translate "🔍 Comparer des versions" %}
+                </a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="card dz-panel dz-block">
+        <div class="card-body">
+            <h2 class="h6 mb-3">
+                {% translate "Versions enregistrées (" %}{{ entries|length }})
+            </h2>
+            {% if entries %}
+                <div class="accordion dz-accordion" id="dz-versions">
+                    {% for entry in entries %}
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="dz-version-head-{{ entry.version.pk }}">
+                                <button class="accordion-button{% if not forloop.first %} collapsed{% endif %}" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#dz-version-body-{{ entry.version.pk }}"
+                                        aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}"
+                                        aria-controls="dz-version-body-{{ entry.version.pk }}">
+                                    <span class="d-flex flex-wrap align-items-center gap-2 me-auto">
+                                        <span class="badge text-bg-primary">v{{ entry.version.number }}</span>
+                                        <span class="small text-muted">
+                                            {{ entry.version.created_at|date:"SHORT_DATETIME_FORMAT" }}
+                                        </span>
+                                        {% if forloop.first %}
+                                            <span class="badge text-bg-success">{% translate "Version courante" %}</span>
+                                        {% endif %}
+                                    </span>
+                                    <span class="d-none d-md-flex flex-wrap align-items-center gap-2 small">
+                                        {% if entry.version.quality_after is not None %}
+                                            <span class="text-muted">{% translate "Score" %}</span>
+                                            <span class="fw-semibold">{{ entry.version.quality_after }}</span>
+                                        {% endif %}
+                                        {% if entry.version.rows_count is not None %}
+                                            <span class="text-muted">·</span>
+                                            <span>{{ entry.version.rows_count|intcomma }} {% translate "lignes" %}</span>
+                                        {% endif %}
+                                    </span>
+                                </button>
+                            </h3>
+                            <div id="dz-version-body-{{ entry.version.pk }}"
+                                 class="accordion-collapse collapse{% if forloop.first %} show{% endif %}"
+                                 aria-labelledby="dz-version-head-{{ entry.version.pk }}"
+                                 data-bs-parent="#dz-versions">
+                                <div class="accordion-body">
+                                    <div class="row dz-grid">
+                                        <div class="col-lg-7">
+                                            <h4 class="h6">{% translate "Opérations appliquées" %}</h4>
+                                            {% if entry.operations %}
+                                                <ul class="list-unstyled small mb-3">
+                                                    {% for operation in entry.operations %}
+                                                        <li>✔️ {{ operation }}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                            {% else %}
+                                                <p class="text-muted small">
+                                                    {% translate "Aucune opération enregistrée pour cette version." %}
+                                                </p>
+                                            {% endif %}
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <h4 class="h6">{% translate "Indicateurs" %}</h4>
+                                            <ul class="list-unstyled small mb-3">
+                                                <li class="d-flex justify-content-between">
+                                                    <span class="text-muted">{% translate "Score avant" %}</span>
+                                                    <span>{{ entry.version.quality_before|default:"—" }}</span>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span class="text-muted">{% translate "Score après" %}</span>
+                                                    <span class="fw-semibold">{{ entry.version.quality_after|default:"—" }}</span>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span class="text-muted">{% translate "Colonnes" %}</span>
+                                                    <span>{{ entry.version.columns_count|default:"—" }}</span>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span class="text-muted">{% translate "Corrections" %}</span>
+                                                    <span>{{ entry.version.changes_count|default:"—" }}</span>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span class="text-muted">{% translate "Créée par" %}</span>
+                                                    <span>{{ entry.version.created_by.username|default:"—" }}</span>
+                                                </li>
+                                            </ul>
+                                            <div class="d-flex flex-wrap gap-2">
+                                                {% if entry.version.cleaned_file %}
+                                                    <a class="btn btn-sm btn-outline-secondary"
+                                                       href="{% url 'core:version_download' data_file.pk entry.version.number %}">
+                                                        {% translate "⬇️ Télécharger" %}
+                                                    </a>
+                                                {% endif %}
+                                                <a class="btn btn-sm btn-outline-secondary"
+                                                   href="{% url 'core:version_compare' data_file.pk %}?after={{ entry.version.number }}">
+                                                    {% translate "🔍 Comparer" %}
+                                                </a>
+                                                {% if not forloop.first and can_edit %}
+                                                    <form method="post" class="d-inline"
+                                                          action="{% url 'core:version_restore' data_file.pk entry.version.number %}"
+                                                          onsubmit="return confirm('{% translate "Restaurer cette version comme version courante ?" %}');">
+                                                        {% csrf_token %}
+                                                        <button type="submit" class="btn btn-sm btn-outline-warning">
+                                                            {% translate "♻️ Restaurer" %}
+                                                        </button>
+                                                    </form>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="text-center py-4">
+                    <div class="fs-1 mb-2" aria-hidden="true">🕓</div>
+                    <p class="text-muted mb-0">
+                        {% translate "Aucune version enregistrée : lancez un nettoyage pour en créer une." %}
+                    </p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

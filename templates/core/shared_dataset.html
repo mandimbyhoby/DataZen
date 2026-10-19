@@ -1,0 +1,102 @@
+{% extends "core/base.html" %}
+{% load i18n humanize %}
+
+{% block title %}{% blocktranslate trimmed with name=data_file.original_name %}Partage — {{ name }}{% endblocktranslate %}{% endblock %}
+
+{% block content %}
+<div class="container dz-page dz-page--shared">
+    <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 dz-page-head">
+        <div>
+            <span class="dz-eyebrow">{% translate "Partage" %}</span>
+            <h1 class="h3 mb-1">🔗 {{ data_file.original_name }}</h1>
+            <p class="text-muted mb-0">
+                {% translate "Jeu de données partagé en lecture seule via un lien DataZen." %}
+            </p>
+        </div>
+        <div class="d-flex flex-wrap gap-2 align-items-center">
+            <span class="badge text-bg-secondary">{{ share.get_permission_display }}</span>
+            {% if share.permission == "download" %}
+                <a class="btn btn-primary" href="{% url 'core:shared_dataset_download' share.token %}">
+                    {% translate "⬇️ Télécharger" %}
+                </a>
+            {% endif %}
+        </div>
+    </div>
+
+    <section class="dz-kpi-dashboard dz-block" aria-labelledby="dz-shared-kpi">
+        <div class="dz-kpi-heading">
+            <div>
+                <h2 class="h5 mb-1" id="dz-shared-kpi">{% translate "Aperçu" %}</h2>
+                <p class="text-muted small mb-0">
+                    {% translate "Un extrait du fichier : les premières lignes suffisent pour juger les données." %}
+                </p>
+            </div>
+        </div>
+        <div class="dz-kpi-grid">
+            <article class="dz-kpi-card dz-kpi-card--primary">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">📄</span>
+                    <span class="dz-kpi-card__label">{% translate "Lignes" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ row_count|intcomma }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--secondary">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">🔢</span>
+                    <span class="dz-kpi-card__label">{% translate "Colonnes" %}</span>
+                </div>
+                <div class="dz-kpi-card__value">{{ columns|length }}</div>
+            </article>
+            <article class="dz-kpi-card dz-kpi-card--success">
+                <div class="dz-kpi-card__top">
+                    <span class="dz-kpi-card__icon" aria-hidden="true">🕓</span>
+                    <span class="dz-kpi-card__label">{% translate "Partagé le" %}</span>
+                </div>
+                <div class="dz-kpi-card__value fs-6">{{ share.created_at|date:"SHORT_DATE_FORMAT" }}</div>
+            </article>
+            {% if share.expires_at %}
+                <article class="dz-kpi-card dz-kpi-card--warning">
+                    <div class="dz-kpi-card__top">
+                        <span class="dz-kpi-card__icon" aria-hidden="true">⏳</span>
+                        <span class="dz-kpi-card__label">{% translate "Expire le" %}</span>
+                    </div>
+                    <div class="dz-kpi-card__value fs-6">{{ share.expires_at|date:"SHORT_DATE_FORMAT" }}</div>
+                </article>
+            {% endif %}
+        </div>
+    </section>
+
+    <div class="card dz-panel dz-block">
+        <div class="card-body">
+            <h2 class="h6 mb-3">{% translate "Aperçu des données" %}</h2>
+            <div class="table-responsive">
+                <table class="table table-sm table-striped align-middle mb-0">
+                    <thead>
+                        <tr>
+                            {% for column in columns %}
+                                <th>{{ column }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in preview_rows %}
+                            <tr>
+                                {% for value in row %}
+                                    <td>{{ value|default:"—" }}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% if row_count > preview_rows|length %}
+                <p class="text-muted small mt-3 mb-0">
+                    {% blocktranslate trimmed with shown=preview_rows|length total=row_count %}
+                    Aperçu limité à {{ shown }} lignes sur {{ total }}.
+                    {% endblocktranslate %}
+                </p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

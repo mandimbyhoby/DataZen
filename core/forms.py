@@ -4,7 +4,15 @@ from django.contrib.auth.forms import PasswordChangeForm, UserCreationForm
 from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
 
-from .models import ApiToken, CleaningRule, DataFile, Profile, Webhook
+from .models import (
+    ApiToken,
+    CleaningRule,
+    CleaningSchedule,
+    DataFile,
+    DatasetShare,
+    Profile,
+    Webhook,
+)
 
 # Noms de colonnes candidats pour servir de clé de déduplication par défaut
 # (une valeur censée être unique par enregistrement : email, téléphone…).
@@ -513,3 +521,171 @@ class WebhookForm(forms.ModelForm):
             return validate_webhook_url(url, resolve=False)
         except WebhookUrlError as exc:
             raise forms.ValidationError(str(exc)) from exc
+
+
+class ShareForm(forms.Form):
+    """Création d'un partage : destinataire nommé **ou** lien public.
+
+    Le formulaire ne devine pas l'intention : cocher « lien public » crée un
+    jeton, sinon un destinataire est exigé. Les deux cas restent en lecture
+    seule pour le destinataire.
+    """
+
+    shared_with = forms.ModelChoiceField(
+        required=False,
+        queryset=User.objects.none(),
+        label=_("Destinataire"),
+        widget=forms.Select(attrs={"class": "form-select"}),
+    )
+    public_link = forms.BooleanField(
+        required=False,
+        label=_("Créer un lien public"),
+        help_text=_(
+            "Toute personne possédant le lien peut consulter le jeu de données, "
+            "sans compte. Le lien est révocable et peut expirer."
+        ),
+        widget=forms.CheckboxInput(attrs={"class": "form-check-input"}),
+    )
+    permission = forms.ChoiceField(
+        choices=DatasetShare.Permission.choices,
+        initial=DatasetShare.Permission.VIEW,
+        label=_("Droit accordé"),
+        widget=forms.Select(attrs={"class": "form-select"}),
+    )
+    expires_at = forms.DateTimeField(
+        required=False,
+        label=_("Expiration"),
+        help_text=_("Laissez vide pour un partage sans expiration."),
+        widget=forms.DateTimeInput(
+            attrs={"class": "form-control", "type": "datetime-local"}
+        ),
+    )
+
+    def __init__(self, *args, data_file=None, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.data_file = data_file
+        # On ne propose jamais le propriétaire ni les comptes déjà destinataires
+        # d'un partage actif : ces choix n'auraient aucun effet.
+        excluded = set()
+        if data_file is not None:
+            excluded.add(data_file.owner_id)
+            excluded.update(
+                data_file.shares.exclude(shared_with=None).values_list(
+                    "shared_with_id", flat=True
+                )
+            )
+        self.fields["shared_with"].queryset = (
+            User.objects.exclude(pk__in=excluded).order_by("username")
+            if excluded
+            else User.objects.order_by("username")
+        )
+
+    def clean(self):
+        """Exige soit un destinataire, soit le mode « lien public »."""
+        cleaned = super().clean()
+        if cleaned.get("public_link"):
+            cleaned["shared_with"] = None
+        elif not cleaned.get("shared_with"):
+            raise forms.ValidationError(
+                _("Choisissez un destinataire ou cochez « Créer un lien public ».")
+            )
+        return cleaned
+
+
+class _CleaningOptionsMixin:
+    """Sépare les options de nettoyage des champs propres au formulaire.
+
+    Les formulaires de lot et de planification réutilisent
+    :class:`CleaningOptionsForm` par héritage : les options disponibles, leurs
+    valeurs par défaut et leur signification restent donc définies à un seul
+    endroit, et un nettoyage par lot ne peut pas diverger d'un nettoyage
+    unitaire.
+    """
+
+    EXTRA_FIELDS = ()
+
+    def cleaned_options(self):
+        """Options de nettoyage prêtes pour le pipeline."""
+        return {
+            name: value
+            for name, value in self.cleaned_data.items()
+            if name not in self.EXTRA_FIELDS
+        }
+
+
+class BatchCleaningForm(_CleaningOptionsMixin, CleaningOptionsForm):
+    """Nettoyage de plusieurs fichiers avec un jeu d'options commun."""
+
+    EXTRA_FIELDS = ("files",)
+
+    files = forms.ModelMultipleChoiceField(
+        queryset=DataFile.objects.none(),
+        label=_("Fichiers à nettoyer"),
+        widget=forms.CheckboxSelectMultiple(attrs={"class": "form-check-input"}),
+    )
+
+    def __init__(self, *args, files=None, **kwargs):
+        super().__init__(*args, **kwargs)
+        # La colonne clé de déduplication dépend des colonnes du fichier : elle
+        # n'a pas de choix communs à plusieurs fichiers, elle est donc saisie
+        # librement (une colonne absente d'un fichier est simplement ignorée).
+        self.fields["dedupe_column"] = forms.CharField(
+            required=False,
+            label=_("Colonne clé pour la déduplication"),
+            help_text=_(
+                "Nom de la colonne unique (ex. email). Laissez vide pour ne "
+                "supprimer que les lignes 100 % identiques. Une colonne absente "
+                "d'un fichier est ignorée pour ce fichier."
+            ),
+            widget=forms.TextInput(attrs={"class": "form-control"}),
+        )
+        if files is not None:
+            self.fields["files"].queryset = files
+
+    def clean_files(self):
+        """Refuse un lot vide : sans sélection, rien ne serait lancé."""
+        files = self.cleaned_data["files"]
+        if not files:
+            raise forms.ValidationError(_("Sélectionnez au moins un fichier."))
+        return files
+
+
+class ScheduleForm(_CleaningOptionsMixin, CleaningOptionsForm):
+    """Planification récurrente du nettoyage d'un jeu de données."""
+
+    EXTRA_FIELDS = ("data_file", "frequency", "first_run_at", "rules")
+
+    data_file = forms.ModelChoiceField(
+        queryset=DataFile.objects.none(),
+        label=_("Jeu de données"),
+        widget=forms.Select(attrs={"class": "form-select"}),
+    )
+    frequency = forms.ChoiceField(
+        choices=CleaningSchedule.Frequency.choices,
+        initial=CleaningSchedule.Frequency.WEEKLY,
+        label=_("Fréquence"),
+        widget=forms.Select(attrs={"class": "form-select"}),
+    )
+    first_run_at = forms.DateTimeField(
+        required=False,
+        label=_("Première exécution"),
+        help_text=_("Laissez vide pour démarrer à la prochaine échéance."),
+        widget=forms.DateTimeInput(
+            attrs={"class": "form-control", "type": "datetime-local"}
+        ),
+    )
+
+    def __init__(self, *args, user=None, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["dedupe_column"] = forms.CharField(
+            required=False,
+            label=_("Colonne clé pour la déduplication"),
+            widget=forms.TextInput(attrs={"class": "form-control"}),
+        )
+        if user is not None:
+            self.fields["data_file"].queryset = DataFile.objects.filter(owner=user)
+
+    def cleaned_rule_ids(self):
+        """Règles personnalisées cochées, conservées par identifiant."""
+        return [int(pk) for pk in self.data.getlist("rules") if str(pk).isdigit()]
+

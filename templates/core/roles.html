@@ -1,0 +1,133 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Rôles et permissions — DataZen" %}{% endblock %}
+
+{% block content %}
+<div class="container dz-page">
+    <nav aria-label="{% translate "Fil d'Ariane" %}">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{% translate "Rôles et permissions" %}</li>
+        </ol>
+    </nav>
+
+    <div class="dz-page-head">
+        <span class="dz-eyebrow">{% translate "Administration" %}</span>
+        <h1 class="h3 mb-1">{% translate "🛡️ Rôles et permissions" %}</h1>
+        <p class="text-muted mb-0">
+            {% translate "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface." %}
+        </p>
+    </div>
+
+    <div class="row dz-grid">
+        <div class="col-lg-4">
+            <div class="card dz-panel h-100">
+                <div class="card-body">
+                    <h2 class="h6 mb-3">{% translate "Ce que permet chaque rôle" %}</h2>
+                    <ul class="list-unstyled small mb-0">
+                        <li class="mb-3">
+                            <span class="badge text-bg-secondary">{% translate "Lecteur" %}</span>
+                            <p class="text-muted mb-0 mt-1">
+                                {% translate "Consulte et télécharge les jeux de données partagés. Ne modifie rien." %}
+                            </p>
+                        </li>
+                        <li class="mb-3">
+                            <span class="badge text-bg-primary">{% translate "Éditeur" %}</span>
+                            <p class="text-muted mb-0 mt-1">
+                                {% translate "Téléverse, nettoie, planifie et supprime ses propres fichiers." %}
+                            </p>
+                        </li>
+                        <li>
+                            <span class="badge text-bg-danger">{% translate "Administrateur" %}</span>
+                            <p class="text-muted mb-0 mt-1">
+                                {% translate "Gère les rôles et voit l'ensemble des fichiers de la plateforme." %}
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <div class="card dz-card-accent">
+                <div class="card-body">
+                    <form method="get" class="d-flex gap-2 mb-3" role="search">
+                        <input type="search" name="q" value="{{ query }}" class="form-control"
+                               placeholder="{% translate 'Rechercher un compte…' %}"
+                               aria-label="{% translate 'Rechercher un compte' %}">
+                        <button type="submit" class="btn btn-outline-secondary">{% translate "Rechercher" %}</button>
+                    </form>
+
+                    <h2 class="h6 mb-3">
+                        {% translate "Comptes (" %}{{ users|length }})
+                    </h2>
+                    <div class="table-responsive">
+                        <table class="table table-sm align-middle" data-searchable>
+                            <thead>
+                                <tr>
+                                    <th>{% translate "Compte" %}</th>
+                                    <th>{% translate "Adresse e-mail" %}</th>
+                                    <th>{% translate "Fichiers" %}</th>
+                                    <th>{% translate "Rôle" %}</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for account in users %}
+                                    <tr>
+                                        <td>
+                                            <span class="fw-semibold">{{ account.user.username }}</span>
+                                            {% if account.user.get_full_name %}
+                                                <span class="text-muted small d-block">{{ account.user.get_full_name }}</span>
+                                            {% endif %}
+                                            {% if account.user.is_superuser %}
+                                                <span class="badge text-bg-dark">{% translate "Superutilisateur" %}</span>
+                                            {% endif %}
+                                        </td>
+                                        <td class="text-muted small">{{ account.user.email|default:"—" }}</td>
+                                        <td class="text-muted small">{{ account.files_count }}</td>
+                                        <td>
+                                            {% if account.user.pk == request.user.pk %}
+                                                <span class="badge text-bg-light border">{{ account.user.profile.get_role_display }}</span>
+                                            {% else %}
+                                                <form method="post" class="d-flex gap-2">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="user_id" value="{{ account.user.pk }}">
+                                                    <label class="visually-hidden" for="dz-role-{{ account.user.pk }}">
+                                                        {% translate "Rôle du compte" %}
+                                                    </label>
+                                                    <select name="role" id="dz-role-{{ account.user.pk }}" class="form-select form-select-sm">
+                                                        {% for value, label in role_choices %}
+                                                            <option value="{{ value }}"
+                                                                    {% if account.user.profile.role == value %}selected{% endif %}>{{ label }}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                    <button type="submit" class="btn btn-sm btn-primary text-nowrap">
+                                                        {% translate "Appliquer" %}
+                                                    </button>
+                                                </form>
+                                            {% endif %}
+                                        </td>
+                                        <td class="text-end text-muted small text-nowrap">
+                                            {% if account.user.pk == request.user.pk %}
+                                                {% translate "Vous" %}
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                {% empty %}
+                                    <tr>
+                                        <td colspan="5" class="text-center text-muted py-4">
+                                            {% translate "Aucun compte ne correspond à cette recherche." %}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

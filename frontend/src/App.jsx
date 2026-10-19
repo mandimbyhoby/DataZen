@@ -13,6 +13,7 @@ import { readTheme } from "./theme";
 import BoxPlots from "./charts/BoxPlots";
 import CategoryPanels from "./charts/CategoryPanels";
 import CorrelationHeatmap from "./charts/CorrelationHeatmap";
+import DistributionMoments from "./charts/DistributionMoments";
 import Histograms from "./charts/Histograms";
 import HorizontalBars from "./charts/HorizontalBars";
 import ScoreGauge from "./charts/ScoreGauge";
@@ -26,6 +27,7 @@ const COMPONENTS = {
   boxplots: BoxPlots,
   heatmap: CorrelationHeatmap,
   categories: CategoryPanels,
+  moments: DistributionMoments,
 };
 
 // Une seule requête par URL, partagée par tous les graphiques de la page.

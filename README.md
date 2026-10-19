@@ -679,17 +679,112 @@ Le projet utilise le *console backend* en développement : les messages
 (réinitialisation de mot de passe) sont affichés **dans le terminal** où tourne
 `runserver`, avec le lien cliquable. Aucun serveur SMTP n'est requis.
 
-Pour un envoi réel, renseignez dans `datazen/settings.py` :
+En production, la réinitialisation de mot de passe n'a de sens que si les
+messages partent réellement. Il suffit de définir `DJANGO_EMAIL_HOST` : le
+réglage bascule alors automatiquement sur un envoi SMTP.
 
-```python
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.example.com"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "..."
-EMAIL_HOST_PASSWORD = "..."
-DEFAULT_FROM_EMAIL = "DataZen <no-reply@example.com>"
+```bash
+DJANGO_EMAIL_HOST=smtp.example.com
+DJANGO_EMAIL_PORT=587
+DJANGO_EMAIL_USER=no-reply@example.com
+DJANGO_EMAIL_PASSWORD=...
+DJANGO_DEFAULT_FROM_EMAIL="DataZen <no-reply@example.com>"
 ```
+
+Le port 587 active STARTTLS, le port 465 active SSL implicite. Les deux
+comportements restent surchargeables avec `DJANGO_EMAIL_TLS` et
+`DJANGO_EMAIL_SSL`.
+
+## 🚀 Mise en production
+
+`runserver` est un serveur de développement : mono-processus, sans service des
+fichiers statiques dès que `DEBUG=False`. Le projet est livré avec
+**waitress** (serveur WSGI compatible Windows) et **WhiteNoise** (service des
+fichiers statiques depuis le processus applicatif).
+
+### 1. Variables d'environnement
+
+Copiez `.env.example` et renseignez au minimum :
+
+| Variable | Rôle |
+| --- | --- |
+| `DJANGO_DEBUG` | `0` en production (obligatoire) |
+| `DJANGO_SECRET_KEY` | Clé secrète longue et aléatoire (obligatoire) |
+| `DJANGO_ALLOWED_HOSTS` | Hôtes autorisés, séparés par des virgules |
+| `DJANGO_HTTPS` | `1` si le site est servi en HTTPS |
+| `DJANGO_EMAIL_HOST` | Serveur SMTP pour les e-mails réels |
+
+Sans `DJANGO_SECRET_KEY` et avec `DJANGO_DEBUG=0`, l'application refuse de
+démarrer : c'est volontaire, une clé de développement ne doit jamais servir en
+production.
+
+Générer une clé :
+
+```bash
+python -c "import secrets; print(secrets.token_urlsafe(64))"
+```
+
+### 2. Préparation
+
+```bash
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py collectstatic --noinput
+python manage.py check --deploy
+```
+
+`check --deploy` doit répondre **« no issues »**. Les avertissements de sécurité
+(HSTS, cookies `Secure`, redirection SSL) sont tous pilotés par `DJANGO_HTTPS`
+et `DJANGO_DEBUG`.
+
+> ⚠️ **`collectstatic` est obligatoire avant chaque démarrage.** En production,
+> l'application utilise `CompressedManifestStaticFilesStorage`, qui lit
+> `staticfiles/staticfiles.json` pour résoudre chaque URL statique. Sans ce
+> fichier, toute page lève `ValueError: Missing staticfiles manifest entry`.
+> Relancez donc `collectstatic` après **chaque** modification de CSS, JS ou
+> image. Les pages d'erreur (404/403/500) ne dépendent pas du manifeste : elles
+> s'affichent même si l'étape a été oubliée.
+
+### 3. Lancement
+
+```bash
+waitress-serve --listen=0.0.0.0:8000 --threads=8 datazen.wsgi:application
+```
+
+Sous Linux, `gunicorn --workers 3 --bind 0.0.0.0:8000 datazen.wsgi:application`
+fonctionne également.
+
+### 4. Reverse proxy
+
+Placez nginx (ou IIS) devant waitress pour terminer le TLS. Deux points
+d'attention :
+
+- transmettre `X-Forwarded-Proto` et définir `SECURE_PROXY_SSL_HEADER` (déjà
+  configuré) pour que Django sache que la requête est en HTTPS ;
+- ne pas laisser nginx servir `/static/` : WhiteNoise s'en charge, ce qui évite
+  d'oublier un `collectstatic` après un déploiement.
+
+Après un déploiement, vérifiez le démarrage avec :
+
+```bash
+python manage.py check --deploy          # doit afficher « no issues »
+python -c "import urllib.request as u; print(u.urlopen('https://votre-domaine/').status)"
+```
+
+Le test décisif est la première visite : si vous voyez
+`Missing staticfiles manifest entry`, c'est que `collectstatic` n'a pas été
+relancé sur le serveur.
+
+### 5. Limites connues
+
+- **SQLite** convient à un usage mono-utilisateur ou à faible trafic. Au-delà,
+  passez à PostgreSQL (`psycopg`) : SQLite verrouille la base en écriture.
+- **Cache local** : la limitation des tentatives de connexion s'appuie sur
+  `LocMemCache`, propre à chaque processus. Avec plusieurs workers, configurez
+  Redis ou Memcached pour que le blocage soit partagé.
+- **Fichiers médias** : `media/` est servi par Django uniquement en
+  développement. En production, laissez le reverse proxy servir `/media/`, ou
+  stockez les fichiers sur un service objet.
 
 ## 📝 Licence
 

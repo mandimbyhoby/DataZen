@@ -281,8 +281,8 @@ code {
     backdrop-filter: saturate(180%) blur(16px);
     -webkit-backdrop-filter: saturate(180%) blur(16px);
     border-bottom: 1px solid var(--dz-border);
-    padding-top: 0.65rem;
-    padding-bottom: 0.65rem;
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
     transition: box-shadow var(--dz-transition), background-color var(--dz-transition);
 }
 
@@ -305,7 +305,13 @@ code {
 .dz-navbar .navbar-brand {
     display: inline-flex;
     align-items: center;
+    /* Le logo ne doit jamais être comprimé par les entrées du menu : sans
+       cela il tombait à 0 px dès que la barre manquait de place. */
+    flex: 0 0 auto;
     gap: 0.55rem;
+    /* Un peu d'air après le logo : sans cela la première entrée du menu
+       venait le coller dès que la rangée était serrée. */
+    margin-right: 0.5rem;
     font-weight: 800;
     font-size: 1.2rem;
     letter-spacing: -0.02em;
@@ -338,6 +344,12 @@ code {
     display: block;
 }
 
+/* Le conteneur de la barre n'est pas bridé comme celui du contenu : le menu
+   déployé a besoin de plus de place que la largeur de lecture. */
+.dz-navbar .container {
+    max-width: 96rem;
+}
+
 .dz-navbar .navbar-brand:hover .dz-logo-img {
     transform: translateY(-1px) scale(1.03);
     filter: drop-shadow(0 10px 22px rgba(79, 70, 229, 0.45));
@@ -349,8 +361,29 @@ code {
     font-weight: 500;
     padding: 0.45rem 0.85rem;
     border-radius: var(--dz-radius-sm);
+    /* Sans `nowrap`, un libellé long (« Tableau de bord ») se repliait sur
+       deux lignes et étirait toute la barre. */
+    white-space: nowrap;
     transition: color var(--dz-transition), background var(--dz-transition),
                 box-shadow var(--dz-transition);
+}
+
+/* Hauteur commune à toutes les entrées de la barre : les liens, les menus
+   déroulants, le sélecteur de langue, la recherche et le thème mélangeaient
+   `block` et `inline-flex` avec des paddings différents, ce qui produisait
+   cinq lignes de base distinctes. */
+.dz-navbar .navbar-nav > li {
+    display: flex;
+    align-items: center;
+}
+
+.dz-navbar .navbar-nav > li > .nav-link,
+.dz-navbar .navbar-nav > li > .dz-lang-toggle,
+.dz-navbar .navbar-nav > li > .dz-search-trigger,
+.dz-navbar .navbar-nav > li > #theme-toggle {
+    min-height: 2.4rem;
+    display: inline-flex;
+    align-items: center;
 }
 
 /* Soulignement dégradé qui se déploie au survol (hors menus déroulants,
@@ -2401,6 +2434,19 @@ pre {
         gap: 0.15rem !important;
     }
 
+    /* Dans le panneau empilé, chaque entrée reprend toute la largeur. */
+    .dz-navbar .navbar-nav > li {
+        display: block;
+        width: 100%;
+    }
+
+    .dz-navbar .navbar-nav > li > .nav-link,
+    .dz-navbar .navbar-nav > li > .dz-lang-toggle,
+    .dz-navbar .navbar-nav > li > .dz-search-trigger {
+        display: flex;
+        width: 100%;
+    }
+
     .dz-navbar .nav-link {
         padding: 0.7rem 0.85rem;
         border-radius: var(--dz-radius-sm);
@@ -2439,6 +2485,59 @@ pre {
 
     .dz-logo-img {
         height: 1.75rem;
+    }
+}
+
+/* Entre 992 et 1399 px la barre déployée est plus large que le conteneur :
+   on resserre les entrées plutôt que de laisser le menu déborder. */
+@media (min-width: 992px) and (max-width: 1399.98px) {
+    .dz-navbar .nav-link {
+        padding-left: 0.55rem;
+        padding-right: 0.55rem;
+    }
+
+    .dz-navbar .navbar-nav {
+        gap: 0 !important;
+        font-size: 0.9375rem;
+    }
+
+    .dz-navbar .dz-search-trigger__label {
+        display: none;
+    }
+
+    .dz-navbar .dz-nav-username {
+        max-width: 7rem;
+    }
+
+    /* Le rappel « Ctrl K » est décoratif : le raccourci reste affiché dans
+       la page Raccourcis clavier. */
+    .dz-navbar .dz-kbd {
+        display: none;
+    }
+
+    /* Le code de langue fait doublon avec le nom de la langue du menu. */
+    .dz-navbar .dz-lang-code {
+        display: none;
+    }
+}
+
+/* Sous 1200 px, les libellés les plus longs (ru, de, pl) ont encore besoin
+   de ces quelques pixels pour tenir sur une seule ligne. */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .dz-navbar .navbar-nav {
+        font-size: 0.8125rem;
+    }
+
+    .dz-navbar .navbar-brand {
+        margin-right: 0;
+    }
+
+    .dz-logo-img {
+        height: 1.9rem;
+    }
+
+    .dz-navbar .dz-lang-flag {
+        display: none;
     }
 }
 
@@ -3175,4 +3274,72 @@ pre {
 @media (max-width: 575.98px) {
     .dz-search-trigger__label { display: none; }
     .dz-timeline__labels { font-size: 0.55rem; }
+}
+
+/* 19. Pages d'erreur ------------------------------------------------------ */
+/* Gabarits autonomes (404/403/500) : ils n'héritent pas de base.html car
+   Django les rend sans contexte, donc sans garantie sur user ni session. */
+.dz-error-page {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    padding: clamp(2rem, 6vw, 5rem) 0;
+    background:
+        radial-gradient(circle at 15% 15%, rgba(79, 70, 229, 0.10), transparent 55%),
+        radial-gradient(circle at 85% 80%, rgba(6, 182, 212, 0.10), transparent 55%),
+        var(--dz-surface-2);
+}
+
+.dz-error-card {
+    position: relative;
+    max-width: 34rem;
+    margin: 0 auto;
+    padding: clamp(2rem, 5vw, 3.25rem);
+    text-align: center;
+    background: var(--dz-surface);
+    border: 1px solid rgba(79, 70, 229, 0.14);
+    border-radius: 1.5rem;
+    box-shadow: 0 24px 60px -28px rgba(15, 23, 42, 0.35);
+}
+
+.dz-error-code {
+    font-size: clamp(3.5rem, 12vw, 6rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    background: linear-gradient(135deg, var(--dz-brand-500), var(--dz-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.dz-error-icon {
+    font-size: 2rem;
+    line-height: 1;
+    margin: 0.75rem 0 1rem;
+}
+
+.dz-error-card h1 {
+    font-size: clamp(1.35rem, 3.2vw, 1.75rem);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.dz-error-lead {
+    color: var(--bs-secondary-color);
+    margin-bottom: 1.75rem;
+}
+
+.dz-error-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.dz-error-actions .btn { min-width: 11rem; }
+
+@media (max-width: 575.98px) {
+    .dz-error-actions { flex-direction: column; }
+    .dz-error-actions .btn { width: 100%; }
 }

@@ -1,0 +1,158 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+
+{% block title %}{% blocktranslate trimmed with name=data_file.original_name %}Partage — {{ name }}{% endblocktranslate %}{% endblock %}
+
+{% block content %}
+<div class="container dz-page">
+    <nav aria-label="{% translate "Fil d'Ariane" %}">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+            <li class="breadcrumb-item">
+                <a href="{% url 'core:dataset_detail' data_file.pk %}">{{ data_file.original_name }}</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">{% translate "Partage" %}</li>
+        </ol>
+    </nav>
+
+    <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 dz-page-head">
+        <div>
+            <span class="dz-eyebrow">{% translate "Collaboration" %}</span>
+            <h1 class="h3 mb-1">{% translate "🔗 Partager ce jeu de données" %}</h1>
+            <p class="text-muted mb-0">
+                {% translate "Le partage est toujours en lecture seule : le destinataire consulte et, si vous l'autorisez, télécharge. Il ne modifie jamais vos données." %}
+            </p>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-outline-secondary" href="{% url 'core:dataset_detail' data_file.pk %}">
+                {% translate "← Retour au fichier" %}
+            </a>
+            <a class="btn btn-outline-secondary" href="{% url 'core:dataset_versions' data_file.pk %}">
+                {% translate "🕓 Versions" %}
+            </a>
+        </div>
+    </div>
+
+    {% if share_url %}
+        <div class="alert alert-success" role="alert">
+            <h2 class="h6">{% translate "🔑 Votre lien de partage public" %}</h2>
+            <p class="small mb-2">
+                {% translate "Toute personne possédant ce lien peut consulter le fichier. Révoquez le partage pour l'invalider immédiatement." %}
+            </p>
+            <div class="input-group">
+                <input type="text" class="form-control font-monospace" id="dz-share-url"
+                       value="{{ share_url }}" readonly
+                       aria-label="{% translate 'Lien de partage public' %}">
+                <button class="btn btn-outline-secondary" type="button"
+                        data-dz-copy="#dz-share-url">{% translate "Copier" %}</button>
+            </div>
+        </div>
+    {% endif %}
+
+    <div class="row dz-grid">
+        <div class="col-lg-5">
+            <div class="card dz-card-accent">
+                <div class="card-body">
+                    <h2 class="h5 card-title">{% translate "➕ Nouveau partage" %}</h2>
+                    <form method="post">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <div class="mb-3">
+                                {% if field.field.widget.input_type == "checkbox" %}
+                                    <div class="form-check">
+                                        {{ field }}
+                                        <label class="form-check-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                                    </div>
+                                {% else %}
+                                    <label class="form-label small" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                                    {{ field }}
+                                {% endif %}
+                                {% if field.help_text %}
+                                    <div class="form-text small">{{ field.help_text }}</div>
+                                {% endif %}
+                                {% for error in field.errors %}
+                                    <div class="text-danger small mt-1">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                        {% for error in form.non_field_errors %}
+                            <div class="text-danger small mb-2">{{ error }}</div>
+                        {% endfor %}
+                        <button type="submit" class="btn btn-primary w-100">{% translate "Créer le partage" %}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-7">
+            <div class="card dz-panel">
+                <div class="card-body">
+                    <h2 class="h5 card-title">
+                        {% translate "📋 Partages actifs (" %}{{ shares|length }})
+                    </h2>
+                    {% if shares %}
+                        <div class="table-responsive">
+                            <table class="table table-sm align-middle" data-searchable>
+                                <thead>
+                                    <tr>
+                                        <th>{% translate "Destinataire" %}</th>
+                                        <th>{% translate "Droit" %}</th>
+                                        <th>{% translate "Expiration" %}</th>
+                                        <th>{% translate "État" %}</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for share in shares %}
+                                        <tr>
+                                            <td>
+                                                {% if share.is_public_link %}
+                                                    <span class="badge text-bg-info">{% translate "Lien public" %}</span>
+                                                {% else %}
+                                                    {{ share.shared_with.username }}
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                <span class="badge text-bg-secondary">{{ share.get_permission_display }}</span>
+                                            </td>
+                                            <td class="text-muted small">
+                                                {{ share.expires_at|date:"SHORT_DATETIME_FORMAT"|default:"—" }}
+                                            </td>
+                                            <td>
+                                                {% if share.is_expired %}
+                                                    <span class="badge text-bg-warning">{% translate "Expiré" %}</span>
+                                                {% elif share.is_active %}
+                                                    <span class="badge text-bg-success">{% translate "Actif" %}</span>
+                                                {% else %}
+                                                    <span class="badge text-bg-secondary">{% translate "Révoqué" %}</span>
+                                                {% endif %}
+                                            </td>
+                                            <td class="text-end text-nowrap">
+                                                <form method="post" action="{% url 'core:share_revoke' data_file.pk share.pk %}"
+                                                      class="d-inline"
+                                                      onsubmit="return confirm('{% translate "Révoquer ce partage ?" %}');">
+                                                    {% csrf_token %}
+                                                    <button type="submit" class="btn btn-sm btn-outline-danger">
+                                                        {% translate "Révoquer" %}
+                                                    </button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class="text-center py-4">
+                            <div class="fs-1 mb-2" aria-hidden="true">🔗</div>
+                            <p class="text-muted mb-0">
+                                {% translate "Ce jeu de données n'est partagé avec personne pour le moment." %}
+                            </p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
