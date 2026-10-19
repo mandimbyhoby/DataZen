@@ -17,6 +17,9 @@ db.sqlite3-journal
 /media/
 /staticfiles/
 *.log
+# Sauvegardes de base (pg_dump) : jamais versionnées.
+*.dump
+*.sql.gz
 
 # Frontend
 frontend/node_modules/

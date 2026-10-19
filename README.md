@@ -156,19 +156,24 @@ DataZen/
    pip install -r requirements.txt
    ```
 
-3. **Appliquer les migrations** :
+3. **Fournir un PostgreSQL** — le moteur par défaut. Copiez `.env.example` vers
+   `.env` et renseignez `DJANGO_DB_PASSWORD` (voir
+   [Base de données](#2-base-de-données)). Sans serveur PostgreSQL,
+   `DJANGO_DB_ENGINE=sqlite` permet de travailler sur `db.sqlite3`.
+
+4. **Appliquer les migrations** :
 
    ```powershell
    python manage.py migrate
    ```
 
-4. **Créer un super-utilisateur** (pour accéder à l'administration) :
+5. **Créer un super-utilisateur** (pour accéder à l'administration) :
 
    ```powershell
    python manage.py createsuperuser
    ```
 
-5. **Lancer le serveur de développement** :
+6. **Lancer le serveur de développement** :
 
    ```powershell
    python manage.py runserver
@@ -183,7 +188,7 @@ DataZen/
    préférences (langue de l'interface, options de nettoyage). Pour la définir
    vous-même, renseignez la variable d'environnement `DJANGO_SECRET_KEY`.
 
-   6. **Compiler les graphiques interactifs** (facultatif — le bundle est déjà
+   7. **Compiler les graphiques interactifs** (facultatif — le bundle est déjà
       versionné dans `static/js/charts/`) :
 
       ```powershell
@@ -196,7 +201,7 @@ DataZen/
       rebuild, incrémentez la chaîne de version `?v=…` du `<script>` dans
       `templates/core/base.html` pour invalider le cache navigateur.
 
-   7. **Régénérer les vidéos de fond** (facultatif — les fichiers de
+   8. **Régénérer les vidéos de fond** (facultatif — les fichiers de
       `static/video/` sont versionnés) :
 
       ```powershell
@@ -713,6 +718,7 @@ Copiez `.env.example` et renseignez au minimum :
 | `DJANGO_ALLOWED_HOSTS` | Hôtes autorisés, séparés par des virgules |
 | `DJANGO_HTTPS` | `1` si le site est servi en HTTPS |
 | `DJANGO_EMAIL_HOST` | Serveur SMTP pour les e-mails réels |
+| `DJANGO_DB_PASSWORD` | Mot de passe PostgreSQL (obligatoire) |
 
 Sans `DJANGO_SECRET_KEY` et avec `DJANGO_DEBUG=0`, l'application refuse de
 démarrer : c'est volontaire, une clé de développement ne doit jamais servir en
@@ -724,7 +730,44 @@ Générer une clé :
 python -c "import secrets; print(secrets.token_urlsafe(64))"
 ```
 
-### 2. Préparation
+### 2. Base de données
+
+L'application utilise **PostgreSQL par défaut** (`psycopg` 3). SQLite verrouille
+la base en écriture et ne supporte pas plusieurs workers WSGI simultanés ; il
+n'est conservé que comme repli pour un poste isolé.
+
+| Variable | Défaut | Rôle |
+| --- | --- | --- |
+| `DJANGO_DB_ENGINE` | `postgresql` | `sqlite` bascule sur `db.sqlite3` |
+| `DJANGO_DB_NAME` | `datazen` | Nom de la base |
+| `DJANGO_DB_USER` | `datazen` | Utilisateur |
+| `DJANGO_DB_PASSWORD` | — | Mot de passe |
+| `DJANGO_DB_HOST` | `127.0.0.1` | Hôte |
+| `DJANGO_DB_PORT` | `5432` | Port |
+| `DJANGO_DB_SSLMODE` | `prefer` | `require` chez les hébergeurs gérés |
+| `DJANGO_DB_CONN_MAX_AGE` | `60` | Connexions persistantes, en secondes |
+
+Créer la base et l'utilisateur :
+
+```sql
+CREATE ROLE datazen LOGIN PASSWORD '...';
+CREATE DATABASE datazen OWNER datazen;
+```
+
+Pour un PostgreSQL local immédiat, Docker fournit l'équivalent :
+
+```bash
+docker run -d --name datazen-postgres --restart unless-stopped \
+  -e POSTGRES_DB=datazen -e POSTGRES_USER=datazen -e POSTGRES_PASSWORD=... \
+  -p 127.0.0.1:5432:5432 -v datazen_pgdata:/var/lib/postgresql/data \
+  postgres:16-alpine
+```
+
+`DJANGO_DB_CONN_MAX_AGE` doit rester **inférieur** au délai d'inactivité du
+serveur (sinon une connexion recyclée peut être coupée côté serveur). Pour
+repartir d'une base propre : `python manage.py migrate`.
+
+### 3. Préparation
 
 ```bash
 pip install -r requirements.txt
@@ -745,7 +788,7 @@ et `DJANGO_DEBUG`.
 > image. Les pages d'erreur (404/403/500) ne dépendent pas du manifeste : elles
 > s'affichent même si l'étape a été oubliée.
 
-### 3. Lancement
+### 4. Lancement
 
 ```bash
 waitress-serve --listen=0.0.0.0:8000 --threads=8 datazen.wsgi:application
@@ -754,7 +797,7 @@ waitress-serve --listen=0.0.0.0:8000 --threads=8 datazen.wsgi:application
 Sous Linux, `gunicorn --workers 3 --bind 0.0.0.0:8000 datazen.wsgi:application`
 fonctionne également.
 
-### 4. Reverse proxy
+### 5. Reverse proxy
 
 Placez nginx (ou IIS) devant waitress pour terminer le TLS. Deux points
 d'attention :
@@ -775,10 +818,8 @@ Le test décisif est la première visite : si vous voyez
 `Missing staticfiles manifest entry`, c'est que `collectstatic` n'a pas été
 relancé sur le serveur.
 
-### 5. Limites connues
+### 6. Limites connues
 
-- **SQLite** convient à un usage mono-utilisateur ou à faible trafic. Au-delà,
-  passez à PostgreSQL (`psycopg`) : SQLite verrouille la base en écriture.
 - **Cache local** : la limitation des tentatives de connexion s'appuie sur
   `LocMemCache`, propre à chaque processus. Avec plusieurs workers, configurez
   Redis ou Memcached pour que le blocage soit partagé.

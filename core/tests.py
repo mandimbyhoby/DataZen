@@ -15,6 +15,7 @@ from django.core.exceptions import ValidationError
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.template.loader import render_to_string
 from django.test import TestCase, TransactionTestCase, override_settings
+from django.test.client import closing_iterator_wrapper
 from django.urls import get_resolver, reverse
 from django.utils import timezone, translation
 from django.utils.translation import pgettext
@@ -82,6 +83,22 @@ MIXED_CSV_CONTENT = (
 
 def make_upload(name="clients.csv", content=CSV_CONTENT):
     return SimpleUploadedFile(name, content.encode("utf-8"), content_type="text/csv")
+
+
+def consume_streaming_response(response):
+    """Consomme un flux en laissant Django fermer la réponse une seule fois.
+
+    Le client de test ferme déjà la réponse en fin d'itération. La fermer une
+    seconde fois envoie ``request_finished`` avec le récepteur
+    ``close_old_connections`` rebranché : ``close_if_unusable_or_obsolete`` voit
+    alors ``get_autocommit()`` à ``False`` (bloc ``atomic`` du ``TestCase``) et
+    ferme la connexion du test en cours. Sur SQLite la base de test est en
+    mémoire, donc ``close()`` est ignoré — ce qui masquait le défaut ; sur
+    PostgreSQL la connexion est réellement fermée et tout échoue ensuite.
+    """
+    return b"".join(
+        closing_iterator_wrapper(response.streaming_content, response.close)
+    )
 
 
 class AuthTests(TestCase):
@@ -2328,7 +2345,7 @@ class ChartTests(TestCase):
             reverse("core:download_report_html", args=[data_file.pk])
         )
         self.assertEqual(response.status_code, 200)
-        content = b"".join(response.streaming_content).decode("utf-8")
+        content = consume_streaming_response(response).decode("utf-8")
         self.assertIn("Visualisations statistiques", content)
         self.assertIn("data:image/png;base64,", content)
 
@@ -2484,7 +2501,7 @@ class ChartTests(TestCase):
 
         self._set_language("en")
         response = self.client.get(url)
-        content = b"".join(response.streaming_content).decode("utf-8")
+        content = consume_streaming_response(response).decode("utf-8")
         self.assertIn("Statistical visualisations", content)
         self.assertIn('<html lang="en">', content)
         self.assertNotIn("Visualisations statistiques", content)
@@ -3187,8 +3204,7 @@ class PdfReportTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTrue(response["Content-Type"].startswith("application/pdf"))
         self.assertIn("attachment", response["Content-Disposition"])
-        payload = b"".join(response.streaming_content)
-        response.close()
+        payload = consume_streaming_response(response)
         self.assertTrue(payload.startswith(b"%PDF"))
         self.assertGreater(len(payload), 5000)
         self.assertTrue(
@@ -3980,8 +3996,7 @@ class ActivityJournalTests(TestCase):
         response = self.client.get(
             reverse("core:download_cleaned", args=[data_file.pk])
         )
-        b"".join(response.streaming_content)
-        response.close()
+        consume_streaming_response(response)
 
         self.assertEqual(response.status_code, 200)
         self.assertIn(ActivityLog.Action.DOWNLOAD, self.actions())

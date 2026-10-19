@@ -17,3 +17,5 @@ imageio-ffmpeg>=0.4
 # DEBUG=False ; sans ces deux paquets l'application se déploie sans style.
 waitress>=3.0
 whitenoise>=6.6
+# Pilote PostgreSQL (moteur de base de données par défaut).
+psycopg[binary]>=3.1

@@ -170,8 +170,8 @@ pour une ouverture au public, tous corrigés depuis.
 
 ### Limites connues, non bloquantes
 
-- **SQLite** : verrou en écriture, adapté à un usage mono-utilisateur ou à
-  faible trafic. Passer à PostgreSQL au-delà.
+- **PostgreSQL** est le moteur par défaut ; SQLite reste un repli pour un poste
+  isolé, inadapté à plusieurs workers (verrou en écriture).
 - **`LocMemCache`** : le compteur anti-force brute est propre à chaque
   processus. Avec plusieurs workers, configurer Redis ou Memcached.
 - **`media/`** : servi par Django en développement seulement ; en production,

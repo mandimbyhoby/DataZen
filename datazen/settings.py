@@ -11,6 +11,37 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+def _load_dotenv(path):
+    """Charge un fichier ``.env`` dans l'environnement, sans écraser l'existant.
+
+    Les variables déjà présentes dans l'environnement du processus gagnent :
+    un déploiement qui exporte ses secrets (systemd, Docker, CI) n'est jamais
+    écrasé par un fichier laissé sur le disque. Le format accepté est celui de
+    ``.env.example`` : ``CLE=valeur``, commentaires sur une ligne commençant
+    par ``#``, guillemets simples ou doubles facultatifs autour de la valeur.
+    """
+    try:
+        content = path.read_text(encoding="utf-8")
+    except OSError:
+        return
+    for raw_line in content.splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        name, _, value = line.partition("=")
+        name = name.strip()
+        value = value.strip()
+        if len(value) >= 2 and value[0] == value[-1] and value[0] in {'"', "'"}:
+            value = value[1:-1]
+        if name and name not in os.environ:
+            os.environ[name] = value
+
+
+# Chargé avant toute lecture de variable : `DJANGO_DEBUG`, la clé secrète et
+# les identifiants de base de données proviennent de ce fichier en local.
+_load_dotenv(BASE_DIR / ".env")
+
+
 def _env_bool(name, default=False):
     """Lit un booléen d'environnement (``1``/``true``/``oui``/``yes``)."""
     value = os.environ.get(name)
@@ -124,12 +155,48 @@ TEMPLATES = [
 WSGI_APPLICATION = "datazen.wsgi.application"
 
 # Base de données
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+#
+# PostgreSQL est le moteur par défaut : SQLite verrouille la base en écriture
+# et ne supporte donc pas plusieurs workers WSGI simultanés. Le moteur SQLite
+# reste accessible avec `DJANGO_DB_ENGINE=sqlite` pour un démarrage sans
+# dépendance externe (tests hors ligne, poste isolé).
+_db_engine = os.environ.get("DJANGO_DB_ENGINE", "postgresql").strip().lower()
+
+if _db_engine in {"sqlite", "sqlite3"}:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
     }
-}
+else:
+    # Connexions persistantes : évite de rouvrir une session TCP à chaque
+    # requête. Doit rester inférieur au délai d'expiration des connexions
+    # inactives du serveur PostgreSQL.
+    _db_conn_max_age = int(os.environ.get("DJANGO_DB_CONN_MAX_AGE", "60"))
+
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": os.environ.get("DJANGO_DB_NAME", "datazen"),
+            "USER": os.environ.get("DJANGO_DB_USER", "datazen"),
+            "PASSWORD": os.environ.get("DJANGO_DB_PASSWORD", ""),
+            "HOST": os.environ.get("DJANGO_DB_HOST", "127.0.0.1"),
+            "PORT": os.environ.get("DJANGO_DB_PORT", "5432"),
+            "CONN_MAX_AGE": _db_conn_max_age,
+            # `prefer` chiffre la connexion si le serveur le propose ; les
+            # hébergeurs gérés exigent `require`.
+            "OPTIONS": {
+                "sslmode": os.environ.get("DJANGO_DB_SSLMODE", "prefer"),
+            },
+            # Sans ce contrôle, une connexion persistante refermée par le
+            # serveur (expiration d'inactivité, `pgbouncer`, redémarrage) est
+            # réutilisée telle quelle et la requête échoue avec
+            # « the connection is closed ». Le contrôle la remplace par une
+            # connexion neuve. Inutile sans persistance, d'où la condition.
+            "CONN_HEALTH_CHECKS": _db_conn_max_age > 0,
+        }
+    }
 
 # Validation des mots de passe
 AUTH_PASSWORD_VALIDATORS = [
