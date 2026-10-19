@@ -28,6 +28,7 @@ frontend/dist/
 # Secrets et configuration locale
 .env
 .env.*
+!.env.example
 *.pem
 *.key
 
