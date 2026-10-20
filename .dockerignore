@@ -1,0 +1,59 @@
+# ---------------------------------------------------------------------------
+# Contexte de build Docker — tout ce qui n'est pas nécessaire à l'exécution
+# est exclu pour garder l'image et le contexte aussi petits que possible.
+# ---------------------------------------------------------------------------
+
+# Environnement Python local (331 Mo)
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets et configuration locale : injectés par docker-compose, jamais copiés
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Données et artefacts générés localement
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+var/
+files/
+design/
+*.log
+*.dump
+*.sql.gz
+
+# Jeux de données de démonstration à la racine du dépôt
+donnees_*
+
+# Front-end Vite (42 Mo) : les assets compilés vivent déjà dans static/
+frontend/
+
+# Outils de développement
+.git/
+.gitignore
+.github/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Scripts de vérification ponctuels
+_chk_*.py
+_smoke_*.py
+
+# Documentation et fichiers d'orchestration (inutiles dans l'image)
+README.md
+SECURITY-REVIEW.md
+Dockerfile
+docker-compose.yml
+.dockerignore

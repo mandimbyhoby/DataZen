@@ -622,7 +622,7 @@ déclaré par la langue (réplication de la dernière forme, troncature si le
 catalogue en fournit trop). Le test balaie les 23 langues sur plusieurs valeurs
 de `n` et vérifie qu'aucune ne retombe sur le français.
 
-La suite compte 300 tests ; l'exécution complète dure environ 10 minutes.
+La suite compte 418 tests ; l'exécution complète dure environ 19 minutes.
 
 ## 🎨 Charte graphique
 

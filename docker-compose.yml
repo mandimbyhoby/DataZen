@@ -1,0 +1,101 @@
+# ---------------------------------------------------------------------------
+# DataZen — pile complète : application Django + PostgreSQL 16.
+#
+#   docker compose up -d --build      # construire et démarrer
+#   docker compose ps                 # état des services
+#   docker compose logs -f web        # journaux de l'application
+#   docker compose down               # arrêter (les données sont conservées)
+#
+# Les valeurs sensibles sont lues dans le fichier `.env` du projet (chargé
+# automatiquement par Compose pour l'interpolation). Voir `.env.example`.
+# ---------------------------------------------------------------------------
+
+name: datazen
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DJANGO_DB_NAME:-datazen}
+      POSTGRES_USER: ${DJANGO_DB_USER:-datazen}
+      POSTGRES_PASSWORD: ${DJANGO_DB_PASSWORD:?DJANGO_DB_PASSWORD est absent du fichier .env}
+    volumes:
+      # Réutilise le volume créé lors de la migration initiale : les comptes et
+      # les fichiers déjà en base sont conservés d'un `up` à l'autre.
+      - datazen_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U ${DJANGO_DB_USER:-datazen} -d ${DJANGO_DB_NAME:-datazen}
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+    # Aucun port publié : l'application joint la base par le réseau interne de
+    # Compose. Cela évite aussi le conflit avec un conteneur PostgreSQL déjà
+    # à l'écoute sur 127.0.0.1:5432.
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      # DEBUG=0 active WhiteNoise + le stockage à manifeste et impose une clé
+      # secrète (datazen/settings.py lève RuntimeError sinon).
+      DJANGO_DEBUG: "0"
+      # HTTPS=0 : le conteneur sert du HTTP en clair. Passer à "1" derrière un
+      # reverse proxy TLS, sinon toutes les requêtes répondent 301.
+      DJANGO_HTTPS: "0"
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:?DJANGO_SECRET_KEY est absent du fichier .env}
+      DJANGO_ALLOWED_HOSTS: "${DJANGO_ALLOWED_HOSTS:-localhost,127.0.0.1,[::1]}"
+      DJANGO_DB_ENGINE: postgresql
+      DJANGO_DB_NAME: ${DJANGO_DB_NAME:-datazen}
+      DJANGO_DB_USER: ${DJANGO_DB_USER:-datazen}
+      DJANGO_DB_PASSWORD: ${DJANGO_DB_PASSWORD:?DJANGO_DB_PASSWORD est absent du fichier .env}
+      # Nom du service Compose, et non 127.0.0.1 : dans un conteneur, la boucle
+      # locale désigne le conteneur lui-même.
+      DJANGO_DB_HOST: db
+      DJANGO_DB_PORT: "5432"
+      # Trafic interne au réseau Docker : pas de négociation TLS.
+      DJANGO_DB_SSLMODE: disable
+      DJANGO_DB_CONN_MAX_AGE: "60"
+      # Envoi des courriels (réinitialisation de mot de passe, notifications).
+      # Laisser vide bascule Django sur la console : les messages partent dans
+      # `docker compose logs web` au lieu d'être expédiés.
+      DJANGO_EMAIL_HOST: ${DJANGO_EMAIL_HOST:-}
+      DJANGO_EMAIL_PORT: ${DJANGO_EMAIL_PORT:-587}
+      DJANGO_EMAIL_USER: ${DJANGO_EMAIL_USER:-}
+      DJANGO_EMAIL_PASSWORD: ${DJANGO_EMAIL_PASSWORD:-}
+      DJANGO_EMAIL_DEFAULT_FROM_EMAIL: ${DJANGO_EMAIL_DEFAULT_FROM_EMAIL:-}
+      DJANGO_EMAIL_TLS: ${DJANGO_EMAIL_TLS:-1}
+      DJANGO_EMAIL_SSL: ${DJANGO_EMAIL_SSL:-0}
+    ports:
+      - "8000:8000"
+    volumes:
+      # Téléversements, fichiers nettoyés, rapports, avatars et versions :
+      # tout passe par settings.MEDIA_ROOT. Un volume nommé conserverait ces
+      # fichiers, mais le montage sur l'hôte les rend consultables directement.
+      - ./media:/app/media
+    healthcheck:
+      # LoginRequiredMiddleware redirige « / » vers la page de connexion, qui
+      # répond 200 : c'est la seule URL publique fiable (pas de /health/).
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/accounts/login/', timeout=5)
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+
+volumes:
+  datazen_pgdata:
+    # Nom fixe : le volume existant est réutilisé au lieu d'en créer un
+    # nouveau préfixé par le nom du projet.
+    name: datazen_pgdata
