@@ -190,6 +190,12 @@ msgstr "Abonnementer"
 msgid "Accueil"
 msgstr "Hjem"
 
+msgid "Accès refusé"
+msgstr ""
+
+msgid "Accès refusé — DataZen"
+msgstr ""
+
 msgid "Actif"
 msgstr "Aktiv"
 
@@ -621,6 +627,9 @@ msgstr "Disse to versioner er identiske på de fulgte indikatorer."
 
 msgid "Cette page est réservée aux administrateurs."
 msgstr "Denne side er forbeholdt administratorer."
+
+msgid "Cette page n'existe pas"
+msgstr ""
 
 msgid "Champ"
 msgstr "Felt"
@@ -1171,6 +1180,9 @@ msgstr "Fejl"
 msgid "Erreur de nettoyage"
 msgstr "Oprydningsfejl"
 
+msgid "Erreur serveur — DataZen"
+msgstr ""
+
 msgid "Erreurs de format"
 msgstr "Formatfejl"
 
@@ -1513,6 +1525,9 @@ msgstr "Filen må ikke overstige 20 MB."
 msgid "Le journal conserve également %(days)s jours d'historique."
 msgstr "Loggen bevarer også %(days)s dages historik."
 
+msgid "Le lien est peut-être obsolète, ou l'adresse comporte une faute de frappe."
+msgstr ""
+
 msgid "Le nettoyage a échoué."
 msgstr "Rensningen mislykkedes."
 
@@ -1530,6 +1545,9 @@ msgstr "Deling er altid skrivebeskyttet: modtageren ser og henter, hvis du tilla
 
 msgid "Le port est invalide."
 msgstr "Porten er ugyldig."
+
+msgid "Le problème a été enregistré. Vos fichiers n'ont pas été modifiés : réessayez dans quelques instants."
+msgstr ""
 
 msgid "Le thème « Système » suit les réglages de votre appareil."
 msgstr "Temaet “System” følger din enheds indstillinger."
@@ -1888,6 +1906,9 @@ msgstr "Åbn det valgte resultat"
 msgid "Page"
 msgstr "Side"
 
+msgid "Page introuvable — DataZen"
+msgstr ""
+
 msgid "Parcourir…"
 msgstr "Vælg fil"
 
@@ -2158,8 +2179,8 @@ msgstr "Søg efter en fil…"
 msgid "Recommandation"
 msgstr "Anbefaling"
 
-msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
-msgstr "Erstatter navne, e-mails og telefonnumre med deterministiske pseudonymer (samme værdi → samme pseudonym). Relationerne mellem rækker bevares."
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
+msgstr "Erstatter navne, e-mails og telefonnumre med deterministiske pseudonymer (samme værdi → samme pseudonym). Relationerne mellem rækker bevares. Ændringsloggen gemmer kun et fingeraftryk af de oprindelige værdier."
 
 msgid "Remplacer les valeurs manquantes"
 msgstr "Erstat manglende værdier"
@@ -2200,6 +2221,9 @@ msgstr "Gendan"
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Gendan denne version som den aktuelle?"
 
+msgid "Retour à l'accueil"
+msgstr ""
+
 msgid "Retour à la connexion"
 msgstr "Tilbage til login"
 
@@ -2235,6 +2259,9 @@ msgstr "Brugerdefinerede regex-valideringsregler"
 
 msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
 msgstr "Hent den rensede fil, den detaljerede rapport og den fuldstændige ændringslog."
+
+msgid "Réessayer"
+msgstr ""
 
 msgid "Réinitialiser"
 msgstr "Nulstil"
@@ -2530,6 +2557,9 @@ msgstr "Sporbarhed"
 msgid "Troisième quartile"
 msgstr "Tredje kvartil"
 
+msgid "Trop de tentatives de connexion échouées. Réessayez dans %(minutes)s minute(s)."
+msgstr ""
+
 msgid "Type"
 msgstr "Type"
 
@@ -2601,6 +2631,9 @@ msgstr "En destinations-URL er påkrævet."
 
 msgid "Une boîte à outils complète"
 msgstr "En komplet værktøjskasse"
+
+msgid "Une erreur inattendue s'est produite"
+msgstr ""
 
 msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
 msgstr "Én regel pr. linje i formatet ”kolonne:mønster”. Eksempel: ”postnummer:^\\d{5}$”. Værdier, der ikke matcher, markeres (ændres aldrig)."
@@ -2710,6 +2743,9 @@ msgstr "Aktuel version"
 msgid "Version de référence"
 msgstr "Referenceversion"
 
+msgid "Version du condensé"
+msgstr ""
+
 msgid "Versions"
 msgstr "Versioner"
 
@@ -2790,6 +2826,9 @@ msgstr "Du har ikke adgang til denne webhook."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "Du har ikke adgang til denne regel."
+
+msgid "Vous n'avez pas les droits nécessaires pour consulter cette page."
+msgstr ""
 
 msgid "Vous ne pouvez pas modifier votre propre rôle."
 msgstr "Du kan ikke ændre din egen rolle."

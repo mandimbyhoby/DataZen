@@ -328,7 +328,15 @@ X_FRAME_OPTIONS = "DENY"
 SESSION_COOKIE_SECURE = HTTPS_ENFORCED
 CSRF_COOKIE_SECURE = HTTPS_ENFORCED
 SECURE_SSL_REDIRECT = HTTPS_ENFORCED
-SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
+# L'en-tête `X-Forwarded-Proto` n'est digne de confiance que derrière un proxy
+# qui le réécrit lui-même. Sans proxy, n'importe quel client peut l'envoyer et
+# faire croire à l'application qu'elle est en HTTPS (`request.is_secure()`),
+# ce qui fausse le contrôle de référent CSRF et les redirections de langue.
+# Le réglage n'est donc activé que si le site est réellement servi en HTTPS,
+# ou sur demande explicite via `DJANGO_TRUST_PROXY_HEADERS=1`.
+if HTTPS_ENFORCED or _env_bool("DJANGO_TRUST_PROXY_HEADERS", False):
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 if HTTPS_ENFORCED:
     SECURE_HSTS_SECONDS = 60 * 60 * 24 * 365

@@ -199,6 +199,12 @@ msgstr "Abonamente"
 msgid "Accueil"
 msgstr "Acasă"
 
+msgid "Accès refusé"
+msgstr ""
+
+msgid "Accès refusé — DataZen"
+msgstr ""
+
 msgid "Actif"
 msgstr "Activ"
 
@@ -630,6 +636,9 @@ msgstr "Aceste două versiuni sunt identice la indicatorii urmăriți."
 
 msgid "Cette page est réservée aux administrateurs."
 msgstr "Această pagină este rezervată administratorilor."
+
+msgid "Cette page n'existe pas"
+msgstr ""
 
 msgid "Champ"
 msgstr "Câmp"
@@ -1180,6 +1189,9 @@ msgstr "Eroare"
 msgid "Erreur de nettoyage"
 msgstr "Eroare de curățare"
 
+msgid "Erreur serveur — DataZen"
+msgstr ""
+
 msgid "Erreurs de format"
 msgstr "Erori de format"
 
@@ -1522,6 +1534,9 @@ msgstr "Fișierul nu trebuie să depășească 20 MB."
 msgid "Le journal conserve également %(days)s jours d'historique."
 msgstr "Jurnalul păstrează de asemenea %(days)s zile de istoric."
 
+msgid "Le lien est peut-être obsolète, ou l'adresse comporte une faute de frappe."
+msgstr ""
+
 msgid "Le nettoyage a échoué."
 msgstr "Curățarea a eșuat."
 
@@ -1539,6 +1554,9 @@ msgstr "Partajarea este întotdeauna doar pentru citire: destinatarul consultă 
 
 msgid "Le port est invalide."
 msgstr "Portul este invalid."
+
+msgid "Le problème a été enregistré. Vos fichiers n'ont pas été modifiés : réessayez dans quelques instants."
+msgstr ""
 
 msgid "Le thème « Système » suit les réglages de votre appareil."
 msgstr "Tema « Sistem » urmează setările dispozitivului dvs."
@@ -1897,6 +1915,9 @@ msgstr "Deschide rezultatul selectat"
 msgid "Page"
 msgstr "Pagină"
 
+msgid "Page introuvable — DataZen"
+msgstr ""
+
 msgid "Parcourir…"
 msgstr "Răsfoiește…"
 
@@ -2167,8 +2188,8 @@ msgstr "Căutați un fișier…"
 msgid "Recommandation"
 msgstr "Recomandare"
 
-msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
-msgstr "Înlocuiește numele, e-mailurile și numerele de telefon cu pseudonime deterministe (aceeași valoare → același pseudonim). Relațiile dintre rânduri sunt păstrate."
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
+msgstr "Înlocuiește numele, e-mailurile și numerele de telefon cu pseudonime deterministe (aceeași valoare → același pseudonim). Relațiile dintre rânduri sunt păstrate. Jurnalul modificărilor păstrează doar o amprentă a valorilor originale."
 
 msgid "Remplacer les valeurs manquantes"
 msgstr "Înlocuiește valorile lipsă"
@@ -2209,6 +2230,9 @@ msgstr "Restaurați"
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Restaurați această versiune ca versiune curentă?"
 
+msgid "Retour à l'accueil"
+msgstr ""
+
 msgid "Retour à la connexion"
 msgstr "Înapoi la conectare"
 
@@ -2244,6 +2268,9 @@ msgstr "Reguli personalizate de validare regex"
 
 msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
 msgstr "Obțineți fișierul curățat, raportul detaliat și jurnalul complet al modificărilor."
+
+msgid "Réessayer"
+msgstr ""
 
 msgid "Réinitialiser"
 msgstr "Resetează"
@@ -2539,6 +2566,9 @@ msgstr "Trasabilitate"
 msgid "Troisième quartile"
 msgstr "A treia quartilă"
 
+msgid "Trop de tentatives de connexion échouées. Réessayez dans %(minutes)s minute(s)."
+msgstr ""
+
 msgid "Type"
 msgstr "Tip"
 
@@ -2610,6 +2640,9 @@ msgstr "Este necesară o adresă URL de destinație."
 
 msgid "Une boîte à outils complète"
 msgstr "O trusă completă de instrumente"
+
+msgid "Une erreur inattendue s'est produite"
+msgstr ""
 
 msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
 msgstr "O regulă pe fiecare rând, în formatul „coloană:model”. Exemplu: „cod_poștal:^\\d{5}$”. Valorile care nu corespund vor fi semnalate (nu vor fi modificate)."
@@ -2719,6 +2752,9 @@ msgstr "Versiune curentă"
 msgid "Version de référence"
 msgstr "Versiune de referință"
 
+msgid "Version du condensé"
+msgstr ""
+
 msgid "Versions"
 msgstr "Versiuni"
 
@@ -2799,6 +2835,9 @@ msgstr "Nu aveți acces la acest webhook."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "Nu aveți acces la această regulă."
+
+msgid "Vous n'avez pas les droits nécessaires pour consulter cette page."
+msgstr ""
 
 msgid "Vous ne pouvez pas modifier votre propre rôle."
 msgstr "Nu vă puteți modifica propriul rol."

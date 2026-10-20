@@ -190,6 +190,12 @@ msgstr "Subscriptions"
 msgid "Accueil"
 msgstr "Home"
 
+msgid "Accès refusé"
+msgstr ""
+
+msgid "Accès refusé — DataZen"
+msgstr ""
+
 msgid "Actif"
 msgstr "Active"
 
@@ -621,6 +627,9 @@ msgstr "These two versions are identical on the tracked indicators."
 
 msgid "Cette page est réservée aux administrateurs."
 msgstr "This page is reserved for administrators."
+
+msgid "Cette page n'existe pas"
+msgstr ""
 
 msgid "Champ"
 msgstr "Field"
@@ -1171,6 +1180,9 @@ msgstr "Error"
 msgid "Erreur de nettoyage"
 msgstr "Cleaning error"
 
+msgid "Erreur serveur — DataZen"
+msgstr ""
+
 msgid "Erreurs de format"
 msgstr "Format errors"
 
@@ -1513,6 +1525,9 @@ msgstr "The file must not exceed 20 MB."
 msgid "Le journal conserve également %(days)s jours d'historique."
 msgstr "The log also keeps %(days)s days of history."
 
+msgid "Le lien est peut-être obsolète, ou l'adresse comporte une faute de frappe."
+msgstr ""
+
 msgid "Le nettoyage a échoué."
 msgstr "Cleaning failed."
 
@@ -1530,6 +1545,9 @@ msgstr "Sharing is always read-only: the recipient views and, if you allow it, d
 
 msgid "Le port est invalide."
 msgstr "The port is invalid."
+
+msgid "Le problème a été enregistré. Vos fichiers n'ont pas été modifiés : réessayez dans quelques instants."
+msgstr ""
 
 msgid "Le thème « Système » suit les réglages de votre appareil."
 msgstr "The “System” theme follows your device settings."
@@ -1888,6 +1906,9 @@ msgstr "Open the selected result"
 msgid "Page"
 msgstr "Page"
 
+msgid "Page introuvable — DataZen"
+msgstr ""
+
 msgid "Parcourir…"
 msgstr "Choose file"
 
@@ -2158,8 +2179,8 @@ msgstr "Search for a file…"
 msgid "Recommandation"
 msgstr "Recommendation"
 
-msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
-msgstr "Replaces names, emails, and phone numbers with deterministic pseudonyms (same value → same pseudonym). Relationships between rows are preserved."
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
+msgstr "Replaces names, emails, and phone numbers with deterministic pseudonyms (same value → same pseudonym). Relationships between rows are preserved. The change log keeps only a fingerprint of the original values."
 
 msgid "Remplacer les valeurs manquantes"
 msgstr "Replace missing values"
@@ -2200,6 +2221,9 @@ msgstr "Restore"
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Restore this version as the current one?"
 
+msgid "Retour à l'accueil"
+msgstr ""
+
 msgid "Retour à la connexion"
 msgstr "Back to sign in"
 
@@ -2235,6 +2259,9 @@ msgstr "Custom regex validation rules"
 
 msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
 msgstr "Get the cleaned file, the detailed report and the full change log."
+
+msgid "Réessayer"
+msgstr ""
 
 msgid "Réinitialiser"
 msgstr "Reset"
@@ -2530,6 +2557,9 @@ msgstr "Traceability"
 msgid "Troisième quartile"
 msgstr "Third quartile"
 
+msgid "Trop de tentatives de connexion échouées. Réessayez dans %(minutes)s minute(s)."
+msgstr ""
+
 msgid "Type"
 msgstr "Type"
 
@@ -2601,6 +2631,9 @@ msgstr "A destination URL is required."
 
 msgid "Une boîte à outils complète"
 msgstr "A complete toolkit"
+
+msgid "Une erreur inattendue s'est produite"
+msgstr ""
 
 msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
 msgstr "One rule per line, in the format “column:pattern”. Example: “postal_code:^\\d{5}$”. Values that do not match the pattern will be flagged (never modified)."
@@ -2710,6 +2743,9 @@ msgstr "Current version"
 msgid "Version de référence"
 msgstr "Reference version"
 
+msgid "Version du condensé"
+msgstr ""
+
 msgid "Versions"
 msgstr "Versions"
 
@@ -2790,6 +2826,9 @@ msgstr "You do not have access to this webhook."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "You do not have access to this rule."
+
+msgid "Vous n'avez pas les droits nécessaires pour consulter cette page."
+msgstr ""
 
 msgid "Vous ne pouvez pas modifier votre propre rôle."
 msgstr "You cannot change your own role."

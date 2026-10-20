@@ -190,6 +190,12 @@ msgstr "Tilaukset"
 msgid "Accueil"
 msgstr "Etusivu"
 
+msgid "Accès refusé"
+msgstr ""
+
+msgid "Accès refusé — DataZen"
+msgstr ""
+
 msgid "Actif"
 msgstr "Aktiivinen"
 
@@ -621,6 +627,9 @@ msgstr "Nämä kaksi versiota ovat identtiset seuratuissa mittareissa."
 
 msgid "Cette page est réservée aux administrateurs."
 msgstr "Tämä sivu on varattu ylläpitäjille."
+
+msgid "Cette page n'existe pas"
+msgstr ""
 
 msgid "Champ"
 msgstr "Kenttä"
@@ -1171,6 +1180,9 @@ msgstr "Virhe"
 msgid "Erreur de nettoyage"
 msgstr "Siivousvirhe"
 
+msgid "Erreur serveur — DataZen"
+msgstr ""
+
 msgid "Erreurs de format"
 msgstr "Muotovirheet"
 
@@ -1513,6 +1525,9 @@ msgstr "Tiedosto ei saa ylittää 20 Mt."
 msgid "Le journal conserve également %(days)s jours d'historique."
 msgstr "Loki säilyttää myös %(days)s päivän historian."
 
+msgid "Le lien est peut-être obsolète, ou l'adresse comporte une faute de frappe."
+msgstr ""
+
 msgid "Le nettoyage a échoué."
 msgstr "Puhdistus epäonnistui."
 
@@ -1530,6 +1545,9 @@ msgstr "Jako on aina vain luku -tilassa: vastaanottaja katselee ja lataa, jos sa
 
 msgid "Le port est invalide."
 msgstr "Portti on virheellinen."
+
+msgid "Le problème a été enregistré. Vos fichiers n'ont pas été modifiés : réessayez dans quelques instants."
+msgstr ""
 
 msgid "Le thème « Système » suit les réglages de votre appareil."
 msgstr "”Järjestelmä”-teema noudattaa laitteesi asetuksia."
@@ -1888,6 +1906,9 @@ msgstr "Avaa valittu tulos"
 msgid "Page"
 msgstr "Sivu"
 
+msgid "Page introuvable — DataZen"
+msgstr ""
+
 msgid "Parcourir…"
 msgstr "Valitse tiedosto"
 
@@ -2158,8 +2179,8 @@ msgstr "Etsi tiedostoa…"
 msgid "Recommandation"
 msgstr "Suositus"
 
-msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
-msgstr "Korvaa nimet, sähköpostit ja puhelinnumerot deterministisillä peitenimillä (sama arvo → sama peitenimi). Rivien väliset suhteet säilyvät."
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
+msgstr "Korvaa nimet, sähköpostit ja puhelinnumerot deterministisillä peitenimillä (sama arvo → sama peitenimi). Rivien väliset suhteet säilyvät. Muutosloki säilyttää vain sormenjäljen alkuperäisistä arvoista."
 
 msgid "Remplacer les valeurs manquantes"
 msgstr "Korvaa puuttuvat arvot"
@@ -2200,6 +2221,9 @@ msgstr "Palauta"
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Palautetaanko tämä versio nykyiseksi versioksi?"
 
+msgid "Retour à l'accueil"
+msgstr ""
+
 msgid "Retour à la connexion"
 msgstr "Takaisin kirjautumiseen"
 
@@ -2235,6 +2259,9 @@ msgstr "Mukautetut säännöllisten lausekkeiden tarkistussäännöt"
 
 msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
 msgstr "Hae puhdistettu tiedosto, yksityiskohtainen raportti ja täydellinen muutosloki."
+
+msgid "Réessayer"
+msgstr ""
 
 msgid "Réinitialiser"
 msgstr "Nollaa"
@@ -2530,6 +2557,9 @@ msgstr "Jäljitettävyys"
 msgid "Troisième quartile"
 msgstr "Kolmas kvartiili"
 
+msgid "Trop de tentatives de connexion échouées. Réessayez dans %(minutes)s minute(s)."
+msgstr ""
+
 msgid "Type"
 msgstr "Tyyppi"
 
@@ -2601,6 +2631,9 @@ msgstr "Kohde-URL vaaditaan."
 
 msgid "Une boîte à outils complète"
 msgstr "Täydellinen työkalupakki"
+
+msgid "Une erreur inattendue s'est produite"
+msgstr ""
 
 msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
 msgstr "Yksi sääntö rivillä muodossa ”sarake:kuvio”. Esimerkki: ”postinumero:^\\d{5}$”. Kuviota vastaamattomat arvot merkitään (niitä ei muuteta)."
@@ -2710,6 +2743,9 @@ msgstr "Nykyinen versio"
 msgid "Version de référence"
 msgstr "Viiteversio"
 
+msgid "Version du condensé"
+msgstr ""
+
 msgid "Versions"
 msgstr "Versiot"
 
@@ -2790,6 +2826,9 @@ msgstr "Sinulla ei ole pääsyä tähän webhookiin."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "Sinulla ei ole pääsyä tähän sääntöön."
+
+msgid "Vous n'avez pas les droits nécessaires pour consulter cette page."
+msgstr ""
 
 msgid "Vous ne pouvez pas modifier votre propre rôle."
 msgstr "Et voi muuttaa omaa rooliasi."

@@ -199,6 +199,12 @@ msgstr "Odběry"
 msgid "Accueil"
 msgstr "Domů"
 
+msgid "Accès refusé"
+msgstr ""
+
+msgid "Accès refusé — DataZen"
+msgstr ""
+
 msgid "Actif"
 msgstr "Aktivní"
 
@@ -630,6 +636,9 @@ msgstr "Tyto dvě verze jsou shodné ve sledovaných ukazatelích."
 
 msgid "Cette page est réservée aux administrateurs."
 msgstr "Tato stránka je vyhrazena administrátorům."
+
+msgid "Cette page n'existe pas"
+msgstr ""
 
 msgid "Champ"
 msgstr "Pole"
@@ -1180,6 +1189,9 @@ msgstr "Chyba"
 msgid "Erreur de nettoyage"
 msgstr "Chyba čištění"
 
+msgid "Erreur serveur — DataZen"
+msgstr ""
+
 msgid "Erreurs de format"
 msgstr "Chyby formátu"
 
@@ -1522,6 +1534,9 @@ msgstr "Soubor nesmí přesáhnout 20 MB."
 msgid "Le journal conserve également %(days)s jours d'historique."
 msgstr "Protokol uchovává také %(days)s dnů historie."
 
+msgid "Le lien est peut-être obsolète, ou l'adresse comporte une faute de frappe."
+msgstr ""
+
 msgid "Le nettoyage a échoué."
 msgstr "Čištění se nezdařilo."
 
@@ -1539,6 +1554,9 @@ msgstr "Sdílení je vždy pouze pro čtení: příjemce prohlíží a, pokud to
 
 msgid "Le port est invalide."
 msgstr "Neplatný port."
+
+msgid "Le problème a été enregistré. Vos fichiers n'ont pas été modifiés : réessayez dans quelques instants."
+msgstr ""
 
 msgid "Le thème « Système » suit les réglages de votre appareil."
 msgstr "Motiv „Systém“ se řídí nastavením vašeho zařízení."
@@ -1897,6 +1915,9 @@ msgstr "Otevřít vybraný výsledek"
 msgid "Page"
 msgstr "Stránka"
 
+msgid "Page introuvable — DataZen"
+msgstr ""
+
 msgid "Parcourir…"
 msgstr "Vybrat soubor"
 
@@ -2167,8 +2188,8 @@ msgstr "Hledat soubor…"
 msgid "Recommandation"
 msgstr "Doporučení"
 
-msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
-msgstr "Nahrazuje jména, e-maily a telefonní čísla deterministickými pseudonymy (stejná hodnota → stejný pseudonym). Vztahy mezi řádky zůstávají zachovány."
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
+msgstr "Nahrazuje jména, e-maily a telefonní čísla deterministickými pseudonymy (stejná hodnota → stejný pseudonym). Vztahy mezi řádky zůstávají zachovány. Protokol změn uchovává pouze otisk původních hodnot."
 
 msgid "Remplacer les valeurs manquantes"
 msgstr "Nahradit chybějící hodnoty"
@@ -2209,6 +2230,9 @@ msgstr "Obnovit"
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Obnovit tuto verzi jako aktuální?"
 
+msgid "Retour à l'accueil"
+msgstr ""
+
 msgid "Retour à la connexion"
 msgstr "Zpět na přihlášení"
 
@@ -2244,6 +2268,9 @@ msgstr "Vlastní pravidla ověření regex"
 
 msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
 msgstr "Získejte vyčištěný soubor, podrobnou zprávu a úplný protokol změn."
+
+msgid "Réessayer"
+msgstr ""
 
 msgid "Réinitialiser"
 msgstr "Obnovit"
@@ -2539,6 +2566,9 @@ msgstr "Vysledovatelnost"
 msgid "Troisième quartile"
 msgstr "Třetí kvartil"
 
+msgid "Trop de tentatives de connexion échouées. Réessayez dans %(minutes)s minute(s)."
+msgstr ""
+
 msgid "Type"
 msgstr "Typ"
 
@@ -2610,6 +2640,9 @@ msgstr "Je vyžadována cílová URL."
 
 msgid "Une boîte à outils complète"
 msgstr "Kompletní sada nástrojů"
+
+msgid "Une erreur inattendue s'est produite"
+msgstr ""
 
 msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
 msgstr "Jedno pravidlo na řádek ve formátu „sloupec:vzor“. Příklad: „PSČ:^\\d{5}$“. Hodnoty, které vzoru neodpovídají, budou označeny (nikdy změněny)."
@@ -2719,6 +2752,9 @@ msgstr "Aktuální verze"
 msgid "Version de référence"
 msgstr "Referenční verze"
 
+msgid "Version du condensé"
+msgstr ""
+
 msgid "Versions"
 msgstr "Verze"
 
@@ -2799,6 +2835,9 @@ msgstr "K tomuto webhooku nemáte přístup."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "K tomuto pravidlu nemáte přístup."
+
+msgid "Vous n'avez pas les droits nécessaires pour consulter cette page."
+msgstr ""
 
 msgid "Vous ne pouvez pas modifier votre propre rôle."
 msgstr "Nemůžete změnit svou vlastní roli."

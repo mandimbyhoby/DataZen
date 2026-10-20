@@ -190,6 +190,12 @@ msgstr "Assinaturas"
 msgid "Accueil"
 msgstr "Início"
 
+msgid "Accès refusé"
+msgstr ""
+
+msgid "Accès refusé — DataZen"
+msgstr ""
+
 msgid "Actif"
 msgstr "Ativo"
 
@@ -621,6 +627,9 @@ msgstr "Estas duas versões são idênticas nos indicadores acompanhados."
 
 msgid "Cette page est réservée aux administrateurs."
 msgstr "Esta página é reservada aos administradores."
+
+msgid "Cette page n'existe pas"
+msgstr ""
 
 msgid "Champ"
 msgstr "Campo"
@@ -1171,6 +1180,9 @@ msgstr "Erro"
 msgid "Erreur de nettoyage"
 msgstr "Erro de limpeza"
 
+msgid "Erreur serveur — DataZen"
+msgstr ""
+
 msgid "Erreurs de format"
 msgstr "Erros de formato"
 
@@ -1513,6 +1525,9 @@ msgstr "O ficheiro não deve exceder 20 MB."
 msgid "Le journal conserve également %(days)s jours d'historique."
 msgstr "O registro também mantém %(days)s dias de histórico."
 
+msgid "Le lien est peut-être obsolète, ou l'adresse comporte une faute de frappe."
+msgstr ""
+
 msgid "Le nettoyage a échoué."
 msgstr "A limpeza falhou."
 
@@ -1530,6 +1545,9 @@ msgstr "A partilha é sempre só de leitura: o destinatário consulta e, se auto
 
 msgid "Le port est invalide."
 msgstr "A porta é inválida."
+
+msgid "Le problème a été enregistré. Vos fichiers n'ont pas été modifiés : réessayez dans quelques instants."
+msgstr ""
 
 msgid "Le thème « Système » suit les réglages de votre appareil."
 msgstr "O tema «Sistema» segue as definições do seu dispositivo."
@@ -1888,6 +1906,9 @@ msgstr "Abrir o resultado selecionado"
 msgid "Page"
 msgstr "Página"
 
+msgid "Page introuvable — DataZen"
+msgstr ""
+
 msgid "Parcourir…"
 msgstr "Escolher arquivo"
 
@@ -2158,8 +2179,8 @@ msgstr "Procurar um ficheiro…"
 msgid "Recommandation"
 msgstr "Recomendação"
 
-msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
-msgstr "Substitui nomes, emails e telefones por pseudónimos determinísticos (mesmo valor → mesmo pseudónimo). As relações entre linhas são preservadas."
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
+msgstr "Substitui nomes, emails e telefones por pseudónimos determinísticos (mesmo valor → mesmo pseudónimo). As relações entre linhas são preservadas. O registo de alterações conserva apenas uma impressão digital dos valores originais."
 
 msgid "Remplacer les valeurs manquantes"
 msgstr "Substituir valores em falta"
@@ -2200,6 +2221,9 @@ msgstr "Restaurar"
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Restaurar esta versão como versão atual?"
 
+msgid "Retour à l'accueil"
+msgstr ""
+
 msgid "Retour à la connexion"
 msgstr "Voltar ao início de sessão"
 
@@ -2235,6 +2259,9 @@ msgstr "Regras personalizadas de validação regex"
 
 msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
 msgstr "Obtenha o ficheiro limpo, o relatório detalhado e o registo completo das alterações."
+
+msgid "Réessayer"
+msgstr ""
 
 msgid "Réinitialiser"
 msgstr "Redefinir"
@@ -2530,6 +2557,9 @@ msgstr "Rastreabilidade"
 msgid "Troisième quartile"
 msgstr "Terceiro quartil"
 
+msgid "Trop de tentatives de connexion échouées. Réessayez dans %(minutes)s minute(s)."
+msgstr ""
+
 msgid "Type"
 msgstr "Tipo"
 
@@ -2601,6 +2631,9 @@ msgstr "É necessária uma URL de destino."
 
 msgid "Une boîte à outils complète"
 msgstr "Uma caixa de ferramentas completa"
+
+msgid "Une erreur inattendue s'est produite"
+msgstr ""
 
 msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
 msgstr "Uma regra por linha, no formato « coluna:padrão ». Exemplo: « código_postal:^\\d{5}$ ». Os valores que não corresponderem serão assinalados (nunca alterados)."
@@ -2710,6 +2743,9 @@ msgstr "Versão atual"
 msgid "Version de référence"
 msgstr "Versão de referência"
 
+msgid "Version du condensé"
+msgstr ""
+
 msgid "Versions"
 msgstr "Versões"
 
@@ -2790,6 +2826,9 @@ msgstr "Você não tem acesso a este webhook."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "Não tem acesso a esta regra."
+
+msgid "Vous n'avez pas les droits nécessaires pour consulter cette page."
+msgstr ""
 
 msgid "Vous ne pouvez pas modifier votre propre rôle."
 msgstr "Não pode alterar a sua própria função."

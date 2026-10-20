@@ -19,7 +19,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "Custom regex validation rules",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "One rule per line, in the format “column:pattern”. Example: “postal_code:^\\d{5}$”. Values that do not match the pattern will be flagged (never modified).",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "Anonymize sensitive data (names, emails, phone numbers)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "Replaces names, emails, and phone numbers with deterministic pseudonyms (same value → same pseudonym). Relationships between rows are preserved.",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "Replaces names, emails, and phone numbers with deterministic pseudonyms (same value → same pseudonym). Relationships between rows are preserved. The change log keeps only a fingerprint of the original values.",
         "— Toutes les colonnes —": "— All columns —",
     },
     "es": {
@@ -40,7 +40,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "Reglas personalizadas de validación regex",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "Una regla por línea, con el formato « columna:patrón ». Ejemplo: « código_postal:^\\d{5}$ ». Los valores que no coincidan se marcarán (nunca se modificarán).",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "Anonimizar datos sensibles (nombres, correos, teléfonos)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "Sustituye nombres, correos y teléfonos por seudónimos deterministas (mismo valor → mismo seudónimo). Se conservan las relaciones entre filas.",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "Sustituye nombres, correos y teléfonos por seudónimos deterministas (mismo valor → mismo seudónimo). Se conservan las relaciones entre filas. El registro de cambios solo conserva una huella de los valores originales.",
         "— Toutes les colonnes —": "— Todas las columnas —",
     },
     "de": {
@@ -61,7 +61,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "Benutzerdefinierte Regex-Prüfregeln",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "Eine Regel pro Zeile im Format „Spalte:Muster“. Beispiel: „Postleitzahl:^\\d{5}$“. Nicht passende Werte werden markiert (nie geändert).",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "Sensible Daten anonymisieren (Namen, E-Mails, Telefonnummern)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "Ersetzt Namen, E-Mails und Telefonnummern durch deterministische Pseudonyme (gleicher Wert → gleiches Pseudonym). Beziehungen zwischen Zeilen bleiben erhalten.",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "Ersetzt Namen, E-Mails und Telefonnummern durch deterministische Pseudonyme (gleicher Wert → gleiches Pseudonym). Beziehungen zwischen Zeilen bleiben erhalten. Das Änderungsprotokoll speichert nur einen Fingerabdruck der Originalwerte.",
         "— Toutes les colonnes —": "— Alle Spalten —",
     },
     "it": {
@@ -82,7 +82,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "Regole personalizzate di convalida regex",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "Una regola per riga, nel formato « colonna:modello ». Esempio: « codice_postale:^\\d{5}$ ». I valori non corrispondenti verranno segnalati (mai modificati).",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "Anonimizza i dati sensibili (nomi, email, numeri di telefono)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "Sostituisce nomi, email e numeri di telefono con pseudonimi deterministici (stesso valore → stesso pseudonimo). Le relazioni tra le righe vengono mantenute.",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "Sostituisce nomi, email e numeri di telefono con pseudonimi deterministici (stesso valore → stesso pseudonimo). Le relazioni tra le righe vengono mantenute. Il registro delle modifiche conserva solo un'impronta dei valori originali.",
         "— Toutes les colonnes —": "— Tutte le colonne —",
     },
     "pt": {
@@ -103,7 +103,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "Regras personalizadas de validação regex",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "Uma regra por linha, no formato « coluna:padrão ». Exemplo: « código_postal:^\\d{5}$ ». Os valores que não corresponderem serão assinalados (nunca alterados).",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "Anonimizar dados sensíveis (nomes, emails, telefones)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "Substitui nomes, emails e telefones por pseudónimos determinísticos (mesmo valor → mesmo pseudónimo). As relações entre linhas são preservadas.",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "Substitui nomes, emails e telefones por pseudónimos determinísticos (mesmo valor → mesmo pseudónimo). As relações entre linhas são preservadas. O registo de alterações conserva apenas uma impressão digital dos valores originais.",
         "— Toutes les colonnes —": "— Todas as colunas —",
     },
     "nl": {
@@ -124,7 +124,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "Aangepaste regex-validatieregels",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "Eén regel per regel, in de indeling ‘kolom:patroon’. Voorbeeld: ‘postcode:^\\d{5}$’. Waarden die niet overeenkomen worden gemarkeerd (nooit gewijzigd).",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "Gevoelige gegevens anonimiseren (namen, e-mails, telefoonnummers)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "Vervangt namen, e-mails en telefoonnummers door deterministische pseudoniemen (dezelfde waarde → hetzelfde pseudoniem). Relaties tussen rijen blijven behouden.",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "Vervangt namen, e-mails en telefoonnummers door deterministische pseudoniemen (dezelfde waarde → hetzelfde pseudoniem). Relaties tussen rijen blijven behouden. Het wijzigingslogboek bewaart alleen een vingerafdruk van de oorspronkelijke waarden.",
         "— Toutes les colonnes —": "— Alle kolommen —",
     },
     "ar": {
@@ -145,7 +145,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "قواعد تحقق مخصصة بالتعبيرات النمطية",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "قاعدة واحدة في كل سطر بالتنسيق «العمود:النمط». مثال: «الرمز_البريدي:^\\d{5}$». سيتم الإبلاغ عن القيم غير المطابقة (دون تعديلها مطلقًا).",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "إخفاء هوية البيانات الحساسة (الأسماء والبريد الإلكتروني وأرقام الهواتف)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "يستبدل الأسماء والبريد الإلكتروني وأرقام الهواتف بأسماء مستعارة ثابتة (القيمة نفسها ← الاسم المستعار نفسه). مع الحفاظ على العلاقات بين الصفوف.",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "يستبدل الأسماء والبريد الإلكتروني وأرقام الهواتف بأسماء مستعارة ثابتة (القيمة نفسها ← الاسم المستعار نفسه). مع الحفاظ على العلاقات بين الصفوف. لا يحتفظ سجل التغييرات إلا ببصمة للقيم الأصلية.",
         "— Toutes les colonnes —": "— جميع الأعمدة —",
     },
     "zh-hans": {
@@ -166,7 +166,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "自定义正则表达式验证规则",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "每行一条规则，格式为“列:模式”。示例：“邮政编码:^\\d{5}$”。不匹配的值将被标记（不会修改）。",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "匿名化敏感数据（姓名、电子邮件、电话号码）",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "将姓名、电子邮件和电话号码替换为确定性化名（相同值对应相同化名），并保留行之间的关系。",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "将姓名、电子邮件和电话号码替换为确定性化名（相同值对应相同化名），并保留行之间的关系。 更改日志仅保留原始值的指纹。",
         "— Toutes les colonnes —": "— 所有列 —",
     },
     "ru": {
@@ -187,7 +187,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "Пользовательские правила проверки регулярными выражениями",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "Одно правило в строке в формате «столбец:шаблон». Пример: «индекс:^\\d{5}$». Несоответствующие значения будут отмечены (без изменений).",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "Анонимизировать конфиденциальные данные (имена, электронную почту, телефоны)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "Заменяет имена, адреса электронной почты и телефоны детерминированными псевдонимами (одно значение → один псевдоним). Связи между строками сохраняются.",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "Заменяет имена, адреса электронной почты и телефоны детерминированными псевдонимами (одно значение → один псевдоним). Связи между строками сохраняются. Журнал изменений хранит только отпечаток исходных значений.",
         "— Toutes les colonnes —": "— Все столбцы —",
     },
     "ja": {
@@ -208,7 +208,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "カスタム正規表現の検証ルール",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "1行につき1つのルールを「列:パターン」の形式で入力します。例：「郵便番号:^\\d{5}$」。一致しない値は通知されます（変更されません）。",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "機密データを匿名化（氏名、メールアドレス、電話番号）",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "氏名、メールアドレス、電話番号を決定論的な仮名に置き換えます（同じ値には同じ仮名）。行間の関係は維持されます。",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "氏名、メールアドレス、電話番号を決定論的な仮名に置き換えます（同じ値には同じ仮名）。行間の関係は維持されます。 変更ログには元の値のフィンガープリントのみが保存されます。",
         "— Toutes les colonnes —": "— すべての列 —",
     },
     "ko": {
@@ -229,7 +229,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "사용자 지정 정규식 검증 규칙",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "한 줄에 규칙 하나를 ‘열:패턴’ 형식으로 입력하세요. 예: ‘우편번호:^\\d{5}$’. 패턴과 일치하지 않는 값은 표시되며 변경되지 않습니다.",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "민감한 데이터 익명화(이름, 이메일, 전화번호)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "이름, 이메일, 전화번호를 결정적 별칭으로 바꿉니다(같은 값은 같은 별칭 사용). 행 간 관계는 유지됩니다.",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "이름, 이메일, 전화번호를 결정적 별칭으로 바꿉니다(같은 값은 같은 별칭 사용). 행 간 관계는 유지됩니다. 변경 로그에는 원본 값의 지문만 보관됩니다.",
         "— Toutes les colonnes —": "— 모든 열 —",
     },
     "tr": {
@@ -250,7 +250,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "Özel regex doğrulama kuralları",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "Her satıra « sütun:desen » biçiminde bir kural yazın. Örnek: « posta_kodu:^\\d{5}$ ». Desenle eşleşmeyen değerler işaretlenir (değiştirilmez).",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "Hassas verileri anonimleştir (adlar, e-postalar, telefonlar)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "Adları, e-postaları ve telefonları belirleyici takma adlarla değiştirir (aynı değer → aynı takma ad). Satırlar arasındaki ilişkiler korunur.",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "Adları, e-postaları ve telefonları belirleyici takma adlarla değiştirir (aynı değer → aynı takma ad). Satırlar arasındaki ilişkiler korunur. Değişiklik günlüğü, özgün değerlerin yalnızca bir parmak izini saklar.",
         "— Toutes les colonnes —": "— Tüm sütunlar —",
     },
     "hi": {
@@ -271,7 +271,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "कस्टम regex सत्यापन नियम",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "हर पंक्ति में « कॉलम:पैटर्न » प्रारूप में एक नियम लिखें। उदाहरण: « पिन_कोड:^\\d{5}$ ». मेल न खाने वाले मान चिह्नित होंगे (बदले नहीं जाएँगे)।",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "संवेदनशील डेटा गुमनाम करें (नाम, ईमेल, फ़ोन नंबर)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "नाम, ईमेल और फ़ोन नंबर को नियत छद्मनामों से बदलता है (एक ही मान → एक ही छद्मनाम)। पंक्तियों के बीच संबंध सुरक्षित रहते हैं।",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "नाम, ईमेल और फ़ोन नंबर को नियत छद्मनामों से बदलता है (एक ही मान → एक ही छद्मनाम)। पंक्तियों के बीच संबंध सुरक्षित रहते हैं। परिवर्तन लॉग मूल मानों की केवल एक फ़िंगरप्रिंट रखता है।",
         "— Toutes les colonnes —": "— सभी कॉलम —",
     },
     "pl": {
@@ -292,7 +292,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "Niestandardowe reguły walidacji regex",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "Jedna reguła w wierszu w formacie „kolumna:wzorzec”. Przykład: „kod_pocztowy:^\\d{5}$”. Niezgodne wartości zostaną oznaczone (bez zmian).",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "Anonimizuj dane wrażliwe (imiona, e-maile, numery telefonów)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "Zastępuje imiona, e-maile i numery telefonów deterministycznymi pseudonimami (ta sama wartość → ten sam pseudonim). Relacje między wierszami są zachowywane.",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "Zastępuje imiona, e-maile i numery telefonów deterministycznymi pseudonimami (ta sama wartość → ten sam pseudonim). Relacje między wierszami są zachowywane. Dziennik zmian przechowuje wyłącznie odcisk palca oryginalnych wartości.",
         "— Toutes les colonnes —": "— Wszystkie kolumny —",
     },
     "sv": {
@@ -313,7 +313,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "Anpassade regex-valideringsregler",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "En regel per rad i formatet ”kolumn:mönster”. Exempel: ”postnummer:^\\d{5}$”. Värden som inte matchar markeras (ändras aldrig).",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "Anonymisera känsliga uppgifter (namn, e-post, telefonnummer)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "Ersätter namn, e-post och telefonnummer med deterministiska pseudonymer (samma värde → samma pseudonym). Relationerna mellan rader bevaras.",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "Ersätter namn, e-post och telefonnummer med deterministiska pseudonymer (samma värde → samma pseudonym). Relationerna mellan rader bevaras. Ändringsloggen bevarar endast ett fingeravtryck av de ursprungliga värdena.",
         "— Toutes les colonnes —": "— Alla kolumner —",
     },
     "da": {
@@ -334,7 +334,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "Brugerdefinerede regex-valideringsregler",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "Én regel pr. linje i formatet ”kolonne:mønster”. Eksempel: ”postnummer:^\\d{5}$”. Værdier, der ikke matcher, markeres (ændres aldrig).",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "Anonymisér følsomme data (navne, e-mails, telefonnumre)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "Erstatter navne, e-mails og telefonnumre med deterministiske pseudonymer (samme værdi → samme pseudonym). Relationerne mellem rækker bevares.",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "Erstatter navne, e-mails og telefonnumre med deterministiske pseudonymer (samme værdi → samme pseudonym). Relationerne mellem rækker bevares. Ændringsloggen gemmer kun et fingeraftryk af de oprindelige værdier.",
         "— Toutes les colonnes —": "— Alle kolonner —",
     },
     "fi": {
@@ -355,7 +355,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "Mukautetut säännöllisten lausekkeiden tarkistussäännöt",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "Yksi sääntö rivillä muodossa ”sarake:kuvio”. Esimerkki: ”postinumero:^\\d{5}$”. Kuviota vastaamattomat arvot merkitään (niitä ei muuteta).",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "Anonymisoi arkaluonteiset tiedot (nimet, sähköpostit, puhelinnumerot)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "Korvaa nimet, sähköpostit ja puhelinnumerot deterministisillä peitenimillä (sama arvo → sama peitenimi). Rivien väliset suhteet säilyvät.",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "Korvaa nimet, sähköpostit ja puhelinnumerot deterministisillä peitenimillä (sama arvo → sama peitenimi). Rivien väliset suhteet säilyvät. Muutosloki säilyttää vain sormenjäljen alkuperäisistä arvoista.",
         "— Toutes les colonnes —": "— Kaikki sarakkeet —",
     },
     "cs": {
@@ -376,7 +376,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "Vlastní pravidla ověření regex",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "Jedno pravidlo na řádek ve formátu „sloupec:vzor“. Příklad: „PSČ:^\\d{5}$“. Hodnoty, které vzoru neodpovídají, budou označeny (nikdy změněny).",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "Anonymizovat citlivá data (jména, e-maily, telefonní čísla)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "Nahrazuje jména, e-maily a telefonní čísla deterministickými pseudonymy (stejná hodnota → stejný pseudonym). Vztahy mezi řádky zůstávají zachovány.",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "Nahrazuje jména, e-maily a telefonní čísla deterministickými pseudonymy (stejná hodnota → stejný pseudonym). Vztahy mezi řádky zůstávají zachovány. Protokol změn uchovává pouze otisk původních hodnot.",
         "— Toutes les colonnes —": "— Všechny sloupce —",
     },
     "ro": {
@@ -397,7 +397,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "Reguli personalizate de validare regex",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "O regulă pe fiecare rând, în formatul „coloană:model”. Exemplu: „cod_poștal:^\\d{5}$”. Valorile care nu corespund vor fi semnalate (nu vor fi modificate).",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "Anonimizează datele sensibile (nume, e-mailuri, numere de telefon)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "Înlocuiește numele, e-mailurile și numerele de telefon cu pseudonime deterministe (aceeași valoare → același pseudonim). Relațiile dintre rânduri sunt păstrate.",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "Înlocuiește numele, e-mailurile și numerele de telefon cu pseudonime deterministe (aceeași valoare → același pseudonim). Relațiile dintre rânduri sunt păstrate. Jurnalul modificărilor păstrează doar o amprentă a valorilor originale.",
         "— Toutes les colonnes —": "— Toate coloanele —",
     },
     "vi": {
@@ -418,7 +418,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "Quy tắc xác thực regex tùy chỉnh",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "Mỗi dòng một quy tắc theo định dạng « cột:mẫu ». Ví dụ: « mã_bưu_chính:^\\d{5}$ ». Các giá trị không khớp sẽ được đánh dấu (không bị thay đổi).",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "Ẩn danh dữ liệu nhạy cảm (tên, email, số điện thoại)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "Thay tên, email và số điện thoại bằng bí danh xác định (cùng giá trị → cùng bí danh). Các mối liên hệ giữa các hàng được giữ nguyên.",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "Thay tên, email và số điện thoại bằng bí danh xác định (cùng giá trị → cùng bí danh). Các mối liên hệ giữa các hàng được giữ nguyên. Nhật ký thay đổi chỉ lưu giữ dấu vân tay của các giá trị gốc.",
         "— Toutes les colonnes —": "— Tất cả các cột —",
     },
     "th": {
@@ -439,7 +439,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "กฎตรวจสอบ regex ที่กำหนดเอง",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "หนึ่งกฎต่อบรรทัดในรูปแบบ « คอลัมน์:รูปแบบ » ตัวอย่าง: « รหัสไปรษณีย์:^\\d{5}$ » ระบบจะแจ้งค่าที่ไม่ตรงรูปแบบ (แต่จะไม่แก้ไข)",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "ทำข้อมูลละเอียดอ่อนให้ไม่ระบุตัวตน (ชื่อ อีเมล หมายเลขโทรศัพท์)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "แทนที่ชื่อ อีเมล และหมายเลขโทรศัพท์ด้วยนามแฝงที่คงที่ (ค่าเดียวกัน → นามแฝงเดียวกัน) โดยรักษาความสัมพันธ์ระหว่างแถวไว้",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "แทนที่ชื่อ อีเมล และหมายเลขโทรศัพท์ด้วยนามแฝงที่คงที่ (ค่าเดียวกัน → นามแฝงเดียวกัน) โดยรักษาความสัมพันธ์ระหว่างแถวไว้ บันทึกการเปลี่ยนแปลงเก็บเฉพาะลายนิ้วมือของค่าเดิมเท่านั้น",
         "— Toutes les colonnes —": "— ทุกคอลัมน์ —",
     },
     "id": {
@@ -460,7 +460,7 @@ _TRANSLATIONS = {
         "Règles de validation regex personnalisées": "Aturan validasi regex khusus",
         "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées).": "Satu aturan per baris dengan format « kolom:pola ». Contoh: « kode_pos:^\\d{5}$ ». Nilai yang tidak cocok akan ditandai (tidak diubah).",
         "Anonymiser les données sensibles (noms, emails, téléphones)": "Anonimkan data sensitif (nama, email, nomor telepon)",
-        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées.": "Mengganti nama, email, dan nomor telepon dengan nama samaran deterministik (nilai sama → nama samaran sama). Hubungan antarbari tetap terjaga.",
+        "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine.": "Mengganti nama, email, dan nomor telepon dengan nama samaran deterministik (nilai sama → nama samaran sama). Hubungan antarbari tetap terjaga. Log perubahan hanya menyimpan sidik jari dari nilai asli.",
         "— Toutes les colonnes —": "— Semua kolom —",
     },
 }

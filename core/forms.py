@@ -180,7 +180,8 @@ class CleaningOptionsForm(forms.Form):
             help_text=_(
                 "Remplace les noms, emails et téléphones par des pseudonymes "
                 "déterministes (même valeur → même pseudonyme). Les relations "
-                "entre lignes sont préservées."
+                "entre lignes sont préservées. Le journal des modifications ne "
+                "conserve qu'une empreinte des valeurs d'origine."
             ),
             widget=forms.CheckboxInput(attrs={"class": "form-check-input"}),
         )

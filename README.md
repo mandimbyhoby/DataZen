@@ -833,10 +833,18 @@ fonctionne également.
 Placez nginx (ou IIS) devant waitress pour terminer le TLS. Deux points
 d'attention :
 
-- transmettre `X-Forwarded-Proto` et définir `SECURE_PROXY_SSL_HEADER` (déjà
-  configuré) pour que Django sache que la requête est en HTTPS ;
+- transmettre `X-Forwarded-Proto` et définir `SECURE_PROXY_SSL_HEADER` pour que
+  Django sache que la requête est en HTTPS. Le réglage est activé
+  automatiquement dès que `DJANGO_HTTPS=1` ; si le site est servi en HTTPS sans
+  que ce drapeau soit posé, activez-le explicitement avec
+  `DJANGO_TRUST_PROXY_HEADERS=1`. **Le proxy doit toujours réécrire cet
+  en-tête** : laissé tel quel, un client pourrait le falsifier ;
 - ne pas laisser nginx servir `/static/` : WhiteNoise s'en charge, ce qui évite
   d'oublier un `collectstatic` après un déploiement.
+
+La pile `docker compose` applique déjà ces réglages : `DJANGO_HTTPS=1` et le
+port publié sur `127.0.0.1:8000` uniquement, pour que l'application ne soit
+joignable qu'à travers le proxy TLS.
 
 Après un déploiement, vérifiez le démarrage avec :
 

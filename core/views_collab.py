@@ -536,7 +536,9 @@ def batch_cleaning(request):
     le pipeline habituel. Le traitement est séquentiel à dessein : un seul
     nettoyage lourd à la fois évite de saturer le processus.
     """
-    candidates = _visible_files(request.user).order_by("-created_at")
+    candidates = _visible_files(request.user).filter(
+        pk__in=permissions_service.writable_dataset_ids(request.user)
+    ).order_by("-created_at")
 
     if request.method == "POST":
         if not _require_edit(request):

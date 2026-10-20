@@ -46,6 +46,7 @@ from .services.validation import build_detection, compute_quality_score
 from .views import (
     _cleaned_dataframe,
     _get_visible_file,
+    _require_download,
     _theme,
     _visible_files,
     _visible_rules,
@@ -119,6 +120,9 @@ def download_pdf_report(request, pk):
     data_file = _get_visible_file(request, pk)
     if data_file is None:
         return redirect("core:index")
+
+    if not _require_download(request, data_file):
+        return redirect("core:dataset_detail", pk=pk)
 
     df = _cleaned_dataframe(data_file)
     if df is None:

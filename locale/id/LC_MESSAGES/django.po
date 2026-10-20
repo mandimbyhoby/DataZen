@@ -181,6 +181,12 @@ msgstr "Langganan"
 msgid "Accueil"
 msgstr "Beranda"
 
+msgid "Accès refusé"
+msgstr ""
+
+msgid "Accès refusé — DataZen"
+msgstr ""
+
 msgid "Actif"
 msgstr "Aktif"
 
@@ -612,6 +618,9 @@ msgstr "Kedua versi ini identik pada indikator yang dipantau."
 
 msgid "Cette page est réservée aux administrateurs."
 msgstr "Halaman ini khusus untuk administrator."
+
+msgid "Cette page n'existe pas"
+msgstr ""
 
 msgid "Champ"
 msgstr "Bidang"
@@ -1162,6 +1171,9 @@ msgstr "Kesalahan"
 msgid "Erreur de nettoyage"
 msgstr "Kesalahan pembersihan"
 
+msgid "Erreur serveur — DataZen"
+msgstr ""
+
 msgid "Erreurs de format"
 msgstr "Kesalahan format"
 
@@ -1504,6 +1516,9 @@ msgstr "File tidak boleh melebihi 20 MB."
 msgid "Le journal conserve également %(days)s jours d'historique."
 msgstr "Log juga menyimpan %(days)s hari riwayat."
 
+msgid "Le lien est peut-être obsolète, ou l'adresse comporte une faute de frappe."
+msgstr ""
+
 msgid "Le nettoyage a échoué."
 msgstr "Pembersihan gagal."
 
@@ -1521,6 +1536,9 @@ msgstr "Berbagi selalu hanya-baca: penerima meninjau dan, jika Anda izinkan, men
 
 msgid "Le port est invalide."
 msgstr "Port tidak valid."
+
+msgid "Le problème a été enregistré. Vos fichiers n'ont pas été modifiés : réessayez dans quelques instants."
+msgstr ""
 
 msgid "Le thème « Système » suit les réglages de votre appareil."
 msgstr "Tema « Sistem » mengikuti pengaturan perangkat Anda."
@@ -1879,6 +1897,9 @@ msgstr "Buka hasil yang dipilih"
 msgid "Page"
 msgstr "Halaman"
 
+msgid "Page introuvable — DataZen"
+msgstr ""
+
 msgid "Parcourir…"
 msgstr "Telusuri…"
 
@@ -2149,8 +2170,8 @@ msgstr "Cari file…"
 msgid "Recommandation"
 msgstr "Rekomendasi"
 
-msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
-msgstr "Mengganti nama, email, dan nomor telepon dengan nama samaran deterministik (nilai sama → nama samaran sama). Hubungan antarbari tetap terjaga."
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
+msgstr "Mengganti nama, email, dan nomor telepon dengan nama samaran deterministik (nilai sama → nama samaran sama). Hubungan antarbari tetap terjaga. Log perubahan hanya menyimpan sidik jari dari nilai asli."
 
 msgid "Remplacer les valeurs manquantes"
 msgstr "Ganti nilai yang hilang"
@@ -2191,6 +2212,9 @@ msgstr "Pulihkan"
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Pulihkan versi ini sebagai versi saat ini?"
 
+msgid "Retour à l'accueil"
+msgstr ""
+
 msgid "Retour à la connexion"
 msgstr "Kembali ke halaman masuk"
 
@@ -2226,6 +2250,9 @@ msgstr "Aturan validasi regex khusus"
 
 msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
 msgstr "Dapatkan file bersih, laporan terperinci, dan log perubahan lengkap."
+
+msgid "Réessayer"
+msgstr ""
 
 msgid "Réinitialiser"
 msgstr "Setel ulang"
@@ -2521,6 +2548,9 @@ msgstr "Ketertelusuran"
 msgid "Troisième quartile"
 msgstr "Kuartil ketiga"
 
+msgid "Trop de tentatives de connexion échouées. Réessayez dans %(minutes)s minute(s)."
+msgstr ""
+
 msgid "Type"
 msgstr "Jenis"
 
@@ -2592,6 +2622,9 @@ msgstr "URL tujuan wajib diisi."
 
 msgid "Une boîte à outils complète"
 msgstr "Perangkat lengkap"
+
+msgid "Une erreur inattendue s'est produite"
+msgstr ""
 
 msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
 msgstr "Satu aturan per baris dengan format « kolom:pola ». Contoh: « kode_pos:^\\d{5}$ ». Nilai yang tidak cocok akan ditandai (tidak diubah)."
@@ -2701,6 +2734,9 @@ msgstr "Versi saat ini"
 msgid "Version de référence"
 msgstr "Versi referensi"
 
+msgid "Version du condensé"
+msgstr ""
+
 msgid "Versions"
 msgstr "Versi"
 
@@ -2781,6 +2817,9 @@ msgstr "Anda tidak memiliki akses ke webhook ini."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "Anda tidak memiliki akses ke aturan ini."
+
+msgid "Vous n'avez pas les droits nécessaires pour consulter cette page."
+msgstr ""
 
 msgid "Vous ne pouvez pas modifier votre propre rôle."
 msgstr "Anda tidak dapat mengubah peran Anda sendiri."

@@ -190,6 +190,12 @@ msgstr "सदस्यताएँ"
 msgid "Accueil"
 msgstr "होम"
 
+msgid "Accès refusé"
+msgstr ""
+
+msgid "Accès refusé — DataZen"
+msgstr ""
+
 msgid "Actif"
 msgstr "सक्रिय"
 
@@ -621,6 +627,9 @@ msgstr "ये दो संस्करण ट्रैक किए गए स
 
 msgid "Cette page est réservée aux administrateurs."
 msgstr "यह पृष्ठ प्रशासकों के लिए आरक्षित है।"
+
+msgid "Cette page n'existe pas"
+msgstr ""
 
 msgid "Champ"
 msgstr "फ़ील्ड"
@@ -1171,6 +1180,9 @@ msgstr "त्रुटि"
 msgid "Erreur de nettoyage"
 msgstr "सफ़ाई त्रुटि"
 
+msgid "Erreur serveur — DataZen"
+msgstr ""
+
 msgid "Erreurs de format"
 msgstr "फ़ॉर्मैट त्रुटियाँ"
 
@@ -1513,6 +1525,9 @@ msgstr "फ़ाइल 20 MB से अधिक नहीं होनी च�
 msgid "Le journal conserve également %(days)s jours d'historique."
 msgstr "लॉग %(days)s दिन का इतिहास भी रखता है।"
 
+msgid "Le lien est peut-être obsolète, ou l'adresse comporte une faute de frappe."
+msgstr ""
+
 msgid "Le nettoyage a échoué."
 msgstr "सफ़ाई विफल रही।"
 
@@ -1530,6 +1545,9 @@ msgstr "साझाकरण हमेशा केवल-पढ़ने क�
 
 msgid "Le port est invalide."
 msgstr "पोर्ट अमान्य है।"
+
+msgid "Le problème a été enregistré. Vos fichiers n'ont pas été modifiés : réessayez dans quelques instants."
+msgstr ""
 
 msgid "Le thème « Système » suit les réglages de votre appareil."
 msgstr "« सिस्टम » थीम आपके डिवाइस की सेटिंग्स का पालन करती है।"
@@ -1888,6 +1906,9 @@ msgstr "चयनित परिणाम खोलें"
 msgid "Page"
 msgstr "पृष्ठ"
 
+msgid "Page introuvable — DataZen"
+msgstr ""
+
 msgid "Parcourir…"
 msgstr "ब्राउज़ करें…"
 
@@ -2158,8 +2179,8 @@ msgstr "फ़ाइल खोजें…"
 msgid "Recommandation"
 msgstr "सिफ़ारिश"
 
-msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
-msgstr "नाम, ईमेल और फ़ोन नंबर को नियत छद्मनामों से बदलता है (एक ही मान → एक ही छद्मनाम)। पंक्तियों के बीच संबंध सुरक्षित रहते हैं।"
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
+msgstr "नाम, ईमेल और फ़ोन नंबर को नियत छद्मनामों से बदलता है (एक ही मान → एक ही छद्मनाम)। पंक्तियों के बीच संबंध सुरक्षित रहते हैं। परिवर्तन लॉग मूल मानों की केवल एक फ़िंगरप्रिंट रखता है।"
 
 msgid "Remplacer les valeurs manquantes"
 msgstr "गुम मान बदलें"
@@ -2200,6 +2221,9 @@ msgstr "पुनर्स्थापित करें"
 msgid "Restaurer cette version comme version courante ?"
 msgstr "इस संस्करण को वर्तमान संस्करण के रूप में बहाल करें?"
 
+msgid "Retour à l'accueil"
+msgstr ""
+
 msgid "Retour à la connexion"
 msgstr "लॉग इन पर वापस जाएँ"
 
@@ -2235,6 +2259,9 @@ msgstr "कस्टम regex सत्यापन नियम"
 
 msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
 msgstr "साफ़ की गई फ़ाइल, विस्तृत रिपोर्ट और पूरा परिवर्तन लॉग प्राप्त करें।"
+
+msgid "Réessayer"
+msgstr ""
 
 msgid "Réinitialiser"
 msgstr "रीसेट"
@@ -2530,6 +2557,9 @@ msgstr "ट्रेसबिलिटी"
 msgid "Troisième quartile"
 msgstr "तृतीय चतुर्थक"
 
+msgid "Trop de tentatives de connexion échouées. Réessayez dans %(minutes)s minute(s)."
+msgstr ""
+
 msgid "Type"
 msgstr "प्रकार"
 
@@ -2601,6 +2631,9 @@ msgstr "गंतव्य URL आवश्यक है।"
 
 msgid "Une boîte à outils complète"
 msgstr "एक पूर्ण टूलकिट"
+
+msgid "Une erreur inattendue s'est produite"
+msgstr ""
 
 msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
 msgstr "हर पंक्ति में « कॉलम:पैटर्न » प्रारूप में एक नियम लिखें। उदाहरण: « पिन_कोड:^\\d{5}$ ». मेल न खाने वाले मान चिह्नित होंगे (बदले नहीं जाएँगे)।"
@@ -2710,6 +2743,9 @@ msgstr "वर्तमान संस्करण"
 msgid "Version de référence"
 msgstr "संदर्भ संस्करण"
 
+msgid "Version du condensé"
+msgstr ""
+
 msgid "Versions"
 msgstr "संस्करण"
 
@@ -2790,6 +2826,9 @@ msgstr "आपके पास इस webhook तक पहुँच नही�
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "आपके पास इस नियम तक पहुँच नहीं है।"
+
+msgid "Vous n'avez pas les droits nécessaires pour consulter cette page."
+msgstr ""
 
 msgid "Vous ne pouvez pas modifier votre propre rôle."
 msgstr "आप अपनी भूमिका नहीं बदल सकते।"

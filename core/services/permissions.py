@@ -14,7 +14,7 @@ import secrets
 from django.db.models import Q
 from django.utils import timezone
 
-from ..models import DatasetShare, Profile
+from ..models import DataFile, DatasetShare, Profile
 
 TOKEN_BYTES = 24
 
@@ -52,6 +52,24 @@ def can_edit(user):
     return role_of(user) in ("editor", "admin")
 
 
+def can_write(user, data_file):
+    """Vrai si le compte peut modifier *ce* jeu de données.
+
+    Le rôle global ne suffit pas : un partage est toujours accordé en lecture
+    seule (voir :class:`~core.models.DatasetShare`). Seuls le propriétaire, un
+    administrateur et un superutilisateur peuvent écrire. Sans ce contrôle, un
+    destinataire d'un partage en consultation — dont le rôle par défaut est
+    ``editor`` — pourrait nettoyer, archiver ou supprimer les données d'autrui.
+    """
+    if not getattr(user, "is_authenticated", False):
+        return False
+    if user.is_superuser or is_admin(user):
+        return True
+    if data_file is None:
+        return can_edit(user)
+    return data_file.owner_id == user.pk
+
+
 def can_view(user, data_file):
     """Vrai si le compte peut consulter le jeu de données."""
     if not getattr(user, "is_authenticated", False):
@@ -87,6 +105,21 @@ def valid_shares_for(user):
 def shared_dataset_ids(user):
     """Identifiants des jeux de données partagés avec l'utilisateur."""
     return valid_shares_for(user).values_list("data_file_id", flat=True)
+
+
+def writable_dataset_ids(user):
+    """Identifiants des jeux de données que l'utilisateur peut modifier.
+
+    Un partage étant toujours accordé en lecture seule, seuls les jeux de
+    données dont l'utilisateur est propriétaire (ou tous, pour un
+    administrateur) sont modifiables. Sert à restreindre les listes
+    proposées à l'écriture — nettoyage par lots notamment.
+    """
+    if not getattr(user, "is_authenticated", False):
+        return DataFile.objects.none().values_list("pk", flat=True)
+    if user.is_superuser or is_admin(user):
+        return DataFile.objects.values_list("pk", flat=True)
+    return DataFile.objects.filter(owner=user).values_list("pk", flat=True)
 
 
 def new_share_token():

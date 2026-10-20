@@ -181,6 +181,12 @@ msgstr "订阅"
 msgid "Accueil"
 msgstr "首页"
 
+msgid "Accès refusé"
+msgstr ""
+
+msgid "Accès refusé — DataZen"
+msgstr ""
+
 msgid "Actif"
 msgstr "启用"
 
@@ -612,6 +618,9 @@ msgstr "这两个版本在跟踪的指标上完全相同。"
 
 msgid "Cette page est réservée aux administrateurs."
 msgstr "此页面仅限管理员访问。"
+
+msgid "Cette page n'existe pas"
+msgstr ""
 
 msgid "Champ"
 msgstr "字段"
@@ -1162,6 +1171,9 @@ msgstr "错误"
 msgid "Erreur de nettoyage"
 msgstr "清理错误"
 
+msgid "Erreur serveur — DataZen"
+msgstr ""
+
 msgid "Erreurs de format"
 msgstr "格式错误"
 
@@ -1504,6 +1516,9 @@ msgstr "文件不得超过 20 MB。"
 msgid "Le journal conserve également %(days)s jours d'historique."
 msgstr "日志还会保留 %(days)s 天的历史。"
 
+msgid "Le lien est peut-être obsolète, ou l'adresse comporte une faute de frappe."
+msgstr ""
+
 msgid "Le nettoyage a échoué."
 msgstr "清洗失败。"
 
@@ -1521,6 +1536,9 @@ msgstr "共享始终为只读：接收者可以查看，并在您允许时下载
 
 msgid "Le port est invalide."
 msgstr "端口无效。"
+
+msgid "Le problème a été enregistré. Vos fichiers n'ont pas été modifiés : réessayez dans quelques instants."
+msgstr ""
 
 msgid "Le thème « Système » suit les réglages de votre appareil."
 msgstr "“系统”主题会跟随您的设备设置。"
@@ -1879,6 +1897,9 @@ msgstr "打开所选结果"
 msgid "Page"
 msgstr "页面"
 
+msgid "Page introuvable — DataZen"
+msgstr ""
+
 msgid "Parcourir…"
 msgstr "选择文件"
 
@@ -2149,8 +2170,8 @@ msgstr "搜索文件…"
 msgid "Recommandation"
 msgstr "建议"
 
-msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
-msgstr "将姓名、电子邮件和电话号码替换为确定性化名（相同值对应相同化名），并保留行之间的关系。"
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
+msgstr "将姓名、电子邮件和电话号码替换为确定性化名（相同值对应相同化名），并保留行之间的关系。 更改日志仅保留原始值的指纹。"
 
 msgid "Remplacer les valeurs manquantes"
 msgstr "替换缺失值"
@@ -2191,6 +2212,9 @@ msgstr "恢复"
 msgid "Restaurer cette version comme version courante ?"
 msgstr "将此版本恢复为当前版本？"
 
+msgid "Retour à l'accueil"
+msgstr ""
+
 msgid "Retour à la connexion"
 msgstr "返回登录"
 
@@ -2226,6 +2250,9 @@ msgstr "自定义正则表达式验证规则"
 
 msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
 msgstr "获取清洗后的文件、详细报告和完整的变更日志。"
+
+msgid "Réessayer"
+msgstr ""
 
 msgid "Réinitialiser"
 msgstr "重置"
@@ -2521,6 +2548,9 @@ msgstr "可追溯性"
 msgid "Troisième quartile"
 msgstr "第三四分位数"
 
+msgid "Trop de tentatives de connexion échouées. Réessayez dans %(minutes)s minute(s)."
+msgstr ""
+
 msgid "Type"
 msgstr "类型"
 
@@ -2592,6 +2622,9 @@ msgstr "需要目标 URL。"
 
 msgid "Une boîte à outils complète"
 msgstr "一整套工具"
+
+msgid "Une erreur inattendue s'est produite"
+msgstr ""
 
 msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
 msgstr "每行一条规则，格式为“列:模式”。示例：“邮政编码:^\\d{5}$”。不匹配的值将被标记（不会修改）。"
@@ -2701,6 +2734,9 @@ msgstr "当前版本"
 msgid "Version de référence"
 msgstr "参考版本"
 
+msgid "Version du condensé"
+msgstr ""
+
 msgid "Versions"
 msgstr "版本"
 
@@ -2781,6 +2817,9 @@ msgstr "你无权访问此 Webhook。"
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "您无权访问此规则。"
+
+msgid "Vous n'avez pas les droits nécessaires pour consulter cette page."
+msgstr ""
 
 msgid "Vous ne pouvez pas modifier votre propre rôle."
 msgstr "您不能修改自己的角色。"

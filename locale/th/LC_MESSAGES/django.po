@@ -181,6 +181,12 @@ msgstr "การสมัครใช้งาน"
 msgid "Accueil"
 msgstr "หน้าแรก"
 
+msgid "Accès refusé"
+msgstr ""
+
+msgid "Accès refusé — DataZen"
+msgstr ""
+
 msgid "Actif"
 msgstr "ใช้งานอยู่"
 
@@ -612,6 +618,9 @@ msgstr "สองเวอร์ชันนี้เหมือนกันใ
 
 msgid "Cette page est réservée aux administrateurs."
 msgstr "หน้านี้สงวนไว้สำหรับผู้ดูแลระบบ"
+
+msgid "Cette page n'existe pas"
+msgstr ""
 
 msgid "Champ"
 msgstr "ฟิลด์"
@@ -1162,6 +1171,9 @@ msgstr "ข้อผิดพลาด"
 msgid "Erreur de nettoyage"
 msgstr "ข้อผิดพลาดในการล้างข้อมูล"
 
+msgid "Erreur serveur — DataZen"
+msgstr ""
+
 msgid "Erreurs de format"
 msgstr "ข้อผิดพลาดรูปแบบ"
 
@@ -1504,6 +1516,9 @@ msgstr "ไฟล์ต้องมีขนาดไม่เกิน 20 MB"
 msgid "Le journal conserve également %(days)s jours d'historique."
 msgstr "บันทึกเก็บประวัติ %(days)s วันเช่นกัน"
 
+msgid "Le lien est peut-être obsolète, ou l'adresse comporte une faute de frappe."
+msgstr ""
+
 msgid "Le nettoyage a échoué."
 msgstr "การทำความสะอาดล้มเหลว"
 
@@ -1521,6 +1536,9 @@ msgstr "การแชร์เป็นแบบอ่านอย่างเ
 
 msgid "Le port est invalide."
 msgstr "พอร์ตไม่ถูกต้อง"
+
+msgid "Le problème a été enregistré. Vos fichiers n'ont pas été modifiés : réessayez dans quelques instants."
+msgstr ""
 
 msgid "Le thème « Système » suit les réglages de votre appareil."
 msgstr "ธีม « ระบบ » จะตามการตั้งค่าอุปกรณ์ของคุณ"
@@ -1879,6 +1897,9 @@ msgstr "เปิดผลลัพธ์ที่เลือก"
 msgid "Page"
 msgstr "หน้า"
 
+msgid "Page introuvable — DataZen"
+msgstr ""
+
 msgid "Parcourir…"
 msgstr "เรียกดู…"
 
@@ -2149,8 +2170,8 @@ msgstr "ค้นหาไฟล์…"
 msgid "Recommandation"
 msgstr "คำแนะนำ"
 
-msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
-msgstr "แทนที่ชื่อ อีเมล และหมายเลขโทรศัพท์ด้วยนามแฝงที่คงที่ (ค่าเดียวกัน → นามแฝงเดียวกัน) โดยรักษาความสัมพันธ์ระหว่างแถวไว้"
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
+msgstr "แทนที่ชื่อ อีเมล และหมายเลขโทรศัพท์ด้วยนามแฝงที่คงที่ (ค่าเดียวกัน → นามแฝงเดียวกัน) โดยรักษาความสัมพันธ์ระหว่างแถวไว้ บันทึกการเปลี่ยนแปลงเก็บเฉพาะลายนิ้วมือของค่าเดิมเท่านั้น"
 
 msgid "Remplacer les valeurs manquantes"
 msgstr "แทนค่าที่หายไป"
@@ -2191,6 +2212,9 @@ msgstr "กู้คืน"
 msgid "Restaurer cette version comme version courante ?"
 msgstr "กู้คืนเวอร์ชันนี้เป็นเวอร์ชันปัจจุบันหรือไม่"
 
+msgid "Retour à l'accueil"
+msgstr ""
+
 msgid "Retour à la connexion"
 msgstr "กลับไปหน้าเข้าสู่ระบบ"
 
@@ -2226,6 +2250,9 @@ msgstr "กฎตรวจสอบ regex ที่กำหนดเอง"
 
 msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
 msgstr "ดาวน์โหลดไฟล์ที่ทำความสะอาดแล้ว รายงานโดยละเอียด และบันทึกการแก้ไขทั้งหมด"
+
+msgid "Réessayer"
+msgstr ""
 
 msgid "Réinitialiser"
 msgstr "รีเซ็ต"
@@ -2521,6 +2548,9 @@ msgstr "การตรวจสอบย้อนกลับ"
 msgid "Troisième quartile"
 msgstr "ควอไทล์ที่สาม"
 
+msgid "Trop de tentatives de connexion échouées. Réessayez dans %(minutes)s minute(s)."
+msgstr ""
+
 msgid "Type"
 msgstr "ประเภท"
 
@@ -2592,6 +2622,9 @@ msgstr "ต้องระบุ URL ปลายทาง"
 
 msgid "Une boîte à outils complète"
 msgstr "ชุดเครื่องมือที่ครบครัน"
+
+msgid "Une erreur inattendue s'est produite"
+msgstr ""
 
 msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
 msgstr "หนึ่งกฎต่อบรรทัดในรูปแบบ « คอลัมน์:รูปแบบ » ตัวอย่าง: « รหัสไปรษณีย์:^\\d{5}$ » ระบบจะแจ้งค่าที่ไม่ตรงรูปแบบ (แต่จะไม่แก้ไข)"
@@ -2701,6 +2734,9 @@ msgstr "เวอร์ชันปัจจุบัน"
 msgid "Version de référence"
 msgstr "เวอร์ชันอ้างอิง"
 
+msgid "Version du condensé"
+msgstr ""
+
 msgid "Versions"
 msgstr "เวอร์ชัน"
 
@@ -2781,6 +2817,9 @@ msgstr "คุณไม่มีสิทธิ์เข้าถึง webhook 
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "คุณไม่มีสิทธิ์เข้าถึงกฎนี้"
+
+msgid "Vous n'avez pas les droits nécessaires pour consulter cette page."
+msgstr ""
 
 msgid "Vous ne pouvez pas modifier votre propre rôle."
 msgstr "คุณไม่สามารถเปลี่ยนบทบาทของตนเองได้"

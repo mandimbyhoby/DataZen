@@ -226,6 +226,12 @@ msgstr "الاشتراكات"
 msgid "Accueil"
 msgstr "الرئيسية"
 
+msgid "Accès refusé"
+msgstr ""
+
+msgid "Accès refusé — DataZen"
+msgstr ""
+
 msgid "Actif"
 msgstr "نشط"
 
@@ -657,6 +663,9 @@ msgstr "هاتان النسختان متطابقتان في المؤشرات ا�
 
 msgid "Cette page est réservée aux administrateurs."
 msgstr "هذه الصفحة مخصّصة للمسؤولين."
+
+msgid "Cette page n'existe pas"
+msgstr ""
 
 msgid "Champ"
 msgstr "الحقل"
@@ -1207,6 +1216,9 @@ msgstr "خطأ"
 msgid "Erreur de nettoyage"
 msgstr "خطأ في التنظيف"
 
+msgid "Erreur serveur — DataZen"
+msgstr ""
+
 msgid "Erreurs de format"
 msgstr "أخطاء التنسيق"
 
@@ -1549,6 +1561,9 @@ msgstr "يجب ألا يتجاوز حجم الملف 20 ميغابايت."
 msgid "Le journal conserve également %(days)s jours d'historique."
 msgstr "يحفظ السجل أيضًا %(days)s يومًا من التاريخ."
 
+msgid "Le lien est peut-être obsolète, ou l'adresse comporte une faute de frappe."
+msgstr ""
+
 msgid "Le nettoyage a échoué."
 msgstr "فشل التنظيف."
 
@@ -1566,6 +1581,9 @@ msgstr "المشاركة للقراءة فقط دائمًا: يطّلع المس
 
 msgid "Le port est invalide."
 msgstr "المنفذ غير صالح."
+
+msgid "Le problème a été enregistré. Vos fichiers n'ont pas été modifiés : réessayez dans quelques instants."
+msgstr ""
 
 msgid "Le thème « Système » suit les réglages de votre appareil."
 msgstr "تتبع سمة «النظام» إعدادات جهازك."
@@ -1924,6 +1942,9 @@ msgstr "فتح النتيجة المحددة"
 msgid "Page"
 msgstr "صفحة"
 
+msgid "Page introuvable — DataZen"
+msgstr ""
+
 msgid "Parcourir…"
 msgstr "اختر ملفًا"
 
@@ -2194,8 +2215,8 @@ msgstr "البحث عن ملف…"
 msgid "Recommandation"
 msgstr "التوصية"
 
-msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
-msgstr "يستبدل الأسماء والبريد الإلكتروني وأرقام الهواتف بأسماء مستعارة ثابتة (القيمة نفسها ← الاسم المستعار نفسه). مع الحفاظ على العلاقات بين الصفوف."
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
+msgstr "يستبدل الأسماء والبريد الإلكتروني وأرقام الهواتف بأسماء مستعارة ثابتة (القيمة نفسها ← الاسم المستعار نفسه). مع الحفاظ على العلاقات بين الصفوف. لا يحتفظ سجل التغييرات إلا ببصمة للقيم الأصلية."
 
 msgid "Remplacer les valeurs manquantes"
 msgstr "استبدال القيم المفقودة"
@@ -2236,6 +2257,9 @@ msgstr "استعادة"
 msgid "Restaurer cette version comme version courante ?"
 msgstr "استعادة هذه النسخة كنسخة حالية؟"
 
+msgid "Retour à l'accueil"
+msgstr ""
+
 msgid "Retour à la connexion"
 msgstr "العودة إلى تسجيل الدخول"
 
@@ -2271,6 +2295,9 @@ msgstr "قواعد تحقق مخصصة بالتعبيرات النمطية"
 
 msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
 msgstr "احصل على الملف المنظّف والتقرير المفصل وسجل التغييرات الكامل."
+
+msgid "Réessayer"
+msgstr ""
 
 msgid "Réinitialiser"
 msgstr "إعادة التعيين"
@@ -2566,6 +2593,9 @@ msgstr "قابلية التتبّع"
 msgid "Troisième quartile"
 msgstr "الربيع الثالث"
 
+msgid "Trop de tentatives de connexion échouées. Réessayez dans %(minutes)s minute(s)."
+msgstr ""
+
 msgid "Type"
 msgstr "النوع"
 
@@ -2637,6 +2667,9 @@ msgstr "مطلوب عنوان URL للوجهة."
 
 msgid "Une boîte à outils complète"
 msgstr "صندوق أدوات متكامل"
+
+msgid "Une erreur inattendue s'est produite"
+msgstr ""
 
 msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
 msgstr "قاعدة واحدة في كل سطر بالتنسيق «العمود:النمط». مثال: «الرمز_البريدي:^\\d{5}$». سيتم الإبلاغ عن القيم غير المطابقة (دون تعديلها مطلقًا)."
@@ -2746,6 +2779,9 @@ msgstr "النسخة الحالية"
 msgid "Version de référence"
 msgstr "النسخة المرجعية"
 
+msgid "Version du condensé"
+msgstr ""
+
 msgid "Versions"
 msgstr "النسخ"
 
@@ -2826,6 +2862,9 @@ msgstr "ليس لديك صلاحية الوصول إلى هذا webhook."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "ليس لديك صلاحية الوصول إلى هذه القاعدة."
+
+msgid "Vous n'avez pas les droits nécessaires pour consulter cette page."
+msgstr ""
 
 msgid "Vous ne pouvez pas modifier votre propre rôle."
 msgstr "لا يمكنك تعديل دورك الخاص."

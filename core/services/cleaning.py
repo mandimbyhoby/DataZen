@@ -9,6 +9,7 @@ gestion des valeurs manquantes, etc.) seront ajoutées ici au fil
 des étapes du projet.
 """
 
+import hashlib
 import re
 from datetime import datetime
 
@@ -531,6 +532,20 @@ def _display(value):
     return str(value)
 
 
+def _fingerprint(value):
+    """Empreinte non réversible d'une valeur, pour le journal d'anonymisation.
+
+    Le journal des modifications est un fichier téléchargeable : y écrire la
+    valeur d'origine en clair annulerait la pseudonymisation. On conserve une
+    empreinte tronquée, suffisante pour vérifier qu'une valeur a bien été
+    traitée, mais inexploitable pour retrouver la donnée personnelle.
+    """
+    text = _display(value)
+    if not text:
+        return ""
+    return "empreinte:" + hashlib.sha256(text.encode("utf-8")).hexdigest()[:12]
+
+
 def _normalize_phone(value):
     """Normalise un numéro de téléphone français en ``06XXXXXXXX``.
 
@@ -605,7 +620,14 @@ class DataCleaner:
 
     # --- Traçabilité -----------------------------------------------------
     def _record(self, index, column, old, new, correction_type, reason):
-        """Ajoute une entrée au journal des modifications."""
+        """Ajoute une entrée au journal des modifications.
+
+        Pour une anonymisation, la valeur d'origine n'est jamais écrite en
+        clair : le journal est téléchargeable et permettrait sinon de
+        reconstituer les données personnelles censées avoir disparu.
+        """
+        if correction_type == "anonymisation":
+            old = _fingerprint(old)
         self._change_log.append(
             {
                 "ligne": int(index) + 1,

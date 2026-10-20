@@ -190,6 +190,12 @@ msgstr "Abonelikler"
 msgid "Accueil"
 msgstr "Ana sayfa"
 
+msgid "Accès refusé"
+msgstr ""
+
+msgid "Accès refusé — DataZen"
+msgstr ""
+
 msgid "Actif"
 msgstr "Etkin"
 
@@ -621,6 +627,9 @@ msgstr "Bu iki sürüm izlenen göstergelerde aynı."
 
 msgid "Cette page est réservée aux administrateurs."
 msgstr "Bu sayfa yöneticilere ayrılmıştır."
+
+msgid "Cette page n'existe pas"
+msgstr ""
 
 msgid "Champ"
 msgstr "Alan"
@@ -1171,6 +1180,9 @@ msgstr "Hata"
 msgid "Erreur de nettoyage"
 msgstr "Temizlik hatası"
 
+msgid "Erreur serveur — DataZen"
+msgstr ""
+
 msgid "Erreurs de format"
 msgstr "Biçim hataları"
 
@@ -1513,6 +1525,9 @@ msgstr "Dosya 20 MB'ı aşmamalıdır."
 msgid "Le journal conserve également %(days)s jours d'historique."
 msgstr "Kayıt ayrıca %(days)s günlük geçmişi saklar."
 
+msgid "Le lien est peut-être obsolète, ou l'adresse comporte une faute de frappe."
+msgstr ""
+
 msgid "Le nettoyage a échoué."
 msgstr "Temizleme başarısız oldu."
 
@@ -1530,6 +1545,9 @@ msgstr "Paylaşım her zaman salt okunurdur: alıcı görüntüler ve izin verir
 
 msgid "Le port est invalide."
 msgstr "Bağlantı noktası geçersiz."
+
+msgid "Le problème a été enregistré. Vos fichiers n'ont pas été modifiés : réessayez dans quelques instants."
+msgstr ""
 
 msgid "Le thème « Système » suit les réglages de votre appareil."
 msgstr "« Sistem » teması cihazınızın ayarlarını izler."
@@ -1888,6 +1906,9 @@ msgstr "Seçili sonucu aç"
 msgid "Page"
 msgstr "Sayfa"
 
+msgid "Page introuvable — DataZen"
+msgstr ""
+
 msgid "Parcourir…"
 msgstr "Gözat…"
 
@@ -2158,8 +2179,8 @@ msgstr "Dosya ara…"
 msgid "Recommandation"
 msgstr "Öneri"
 
-msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
-msgstr "Adları, e-postaları ve telefonları belirleyici takma adlarla değiştirir (aynı değer → aynı takma ad). Satırlar arasındaki ilişkiler korunur."
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
+msgstr "Adları, e-postaları ve telefonları belirleyici takma adlarla değiştirir (aynı değer → aynı takma ad). Satırlar arasındaki ilişkiler korunur. Değişiklik günlüğü, özgün değerlerin yalnızca bir parmak izini saklar."
 
 msgid "Remplacer les valeurs manquantes"
 msgstr "Eksik değerleri değiştir"
@@ -2200,6 +2221,9 @@ msgstr "Geri yükle"
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Bu sürüm geçerli sürüm olarak geri yüklensin mi?"
 
+msgid "Retour à l'accueil"
+msgstr ""
+
 msgid "Retour à la connexion"
 msgstr "Girişe dön"
 
@@ -2235,6 +2259,9 @@ msgstr "Özel regex doğrulama kuralları"
 
 msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
 msgstr "Temizlenmiş dosyayı, ayrıntılı raporu ve tam değişiklik günlüğünü alın."
+
+msgid "Réessayer"
+msgstr ""
 
 msgid "Réinitialiser"
 msgstr "Sıfırla"
@@ -2530,6 +2557,9 @@ msgstr "İzlenebilirlik"
 msgid "Troisième quartile"
 msgstr "Üçüncü çeyrek"
 
+msgid "Trop de tentatives de connexion échouées. Réessayez dans %(minutes)s minute(s)."
+msgstr ""
+
 msgid "Type"
 msgstr "Tür"
 
@@ -2601,6 +2631,9 @@ msgstr "Bir hedef URL gerekli."
 
 msgid "Une boîte à outils complète"
 msgstr "Eksiksiz bir araç seti"
+
+msgid "Une erreur inattendue s'est produite"
+msgstr ""
 
 msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
 msgstr "Her satıra « sütun:desen » biçiminde bir kural yazın. Örnek: « posta_kodu:^\\d{5}$ ». Desenle eşleşmeyen değerler işaretlenir (değiştirilmez)."
@@ -2710,6 +2743,9 @@ msgstr "Geçerli sürüm"
 msgid "Version de référence"
 msgstr "Referans sürüm"
 
+msgid "Version du condensé"
+msgstr ""
+
 msgid "Versions"
 msgstr "Sürümler"
 
@@ -2790,6 +2826,9 @@ msgstr "Bu webhook için erişimin yok."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "Bu kurala erişiminiz yok."
+
+msgid "Vous n'avez pas les droits nécessaires pour consulter cette page."
+msgstr ""
 
 msgid "Vous ne pouvez pas modifier votre propre rôle."
 msgstr "Kendi rolünüzü değiştiremezsiniz."

@@ -49,6 +49,7 @@ from .services.charts import (
 )
 from .services.cleaning import restore_semantic_types
 from .services.comparison import load_comparison
+from .services.exporter import neutralize_dataframe
 from .services.markdown import markdown_to_html
 from .services.operations import render_operations
 from .services.pdf import build_pdf
@@ -218,8 +219,13 @@ def _require_edit(request, data_file=None):
     Un lecteur consulte et télécharge ; il ne nettoie ni ne supprime. Le
     contrôle est repris ici plutôt que dans le gabarit seul, car une page HTML
     ne protège rien : la requête doit être refusée côté serveur.
+
+    Quand le jeu de données est connu, le droit est évalué sur *ce* fichier :
+    un partage étant toujours accordé en lecture seule, seul le propriétaire
+    (ou un administrateur) peut écrire. Sans ``data_file``, on retombe sur le
+    rôle global — utile pour les vues qui ne visent aucun fichier précis.
     """
-    if permissions_service.can_edit(request.user):
+    if permissions_service.can_write(request.user, data_file):
         return True
     messages.error(
         request,
@@ -551,8 +557,8 @@ def download_cleaned(request, pk):
     fmt = request.GET.get("format", "").strip().lower()
     if fmt in {"csv", "xlsx", "xls"} and fmt != current_ext:
         try:
-            df = restore_semantic_types(
-                read_dataframe(data_file.cleaned_file.path)
+            df = neutralize_dataframe(
+                restore_semantic_types(read_dataframe(data_file.cleaned_file.path))
             )
             if fmt == "csv":
                 buffer = io.BytesIO()
@@ -635,6 +641,9 @@ def _set_dataset_archived(request, pk, archived):
     data_file = _get_visible_file(request, pk)
     if data_file is None:
         return redirect("core:index")
+
+    if not _require_edit(request, data_file):
+        return redirect("core:dataset_detail", pk=pk)
 
     name = data_file.original_name
     data_file.archived_at = timezone.now() if archived else None
@@ -967,6 +976,9 @@ def review_duplicate(request, pk):
         return redirect("core:index")
 
     if request.method != "POST":
+        return redirect("core:dataset_detail", pk=pk)
+
+    if not _require_edit(request, data_file):
         return redirect("core:dataset_detail", pk=pk)
 
     if not data_file.cleaned_file:

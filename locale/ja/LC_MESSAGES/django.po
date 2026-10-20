@@ -181,6 +181,12 @@ msgstr "サブスクリプション"
 msgid "Accueil"
 msgstr "ホーム"
 
+msgid "Accès refusé"
+msgstr ""
+
+msgid "Accès refusé — DataZen"
+msgstr ""
+
 msgid "Actif"
 msgstr "有効"
 
@@ -612,6 +618,9 @@ msgstr "この 2 つのバージョンは追跡指標において同一です。
 
 msgid "Cette page est réservée aux administrateurs."
 msgstr "このページは管理者専用です。"
+
+msgid "Cette page n'existe pas"
+msgstr ""
 
 msgid "Champ"
 msgstr "フィールド"
@@ -1162,6 +1171,9 @@ msgstr "エラー"
 msgid "Erreur de nettoyage"
 msgstr "クリーニングエラー"
 
+msgid "Erreur serveur — DataZen"
+msgstr ""
+
 msgid "Erreurs de format"
 msgstr "形式エラー"
 
@@ -1504,6 +1516,9 @@ msgstr "ファイルは 20 MB を超えないようにしてください。"
 msgid "Le journal conserve également %(days)s jours d'historique."
 msgstr "ログはさらに %(days)s 日分の履歴を保持します。"
 
+msgid "Le lien est peut-être obsolète, ou l'adresse comporte une faute de frappe."
+msgstr ""
+
 msgid "Le nettoyage a échoué."
 msgstr "クレンジングに失敗しました。"
 
@@ -1521,6 +1536,9 @@ msgstr "共有は常に読み取り専用です: 受信者は閲覧し、許可�
 
 msgid "Le port est invalide."
 msgstr "ポートが無効です。"
+
+msgid "Le problème a été enregistré. Vos fichiers n'ont pas été modifiés : réessayez dans quelques instants."
+msgstr ""
 
 msgid "Le thème « Système » suit les réglages de votre appareil."
 msgstr "「システム」テーマは端末の設定に従います。"
@@ -1879,6 +1897,9 @@ msgstr "選択した結果を開く"
 msgid "Page"
 msgstr "ページ"
 
+msgid "Page introuvable — DataZen"
+msgstr ""
+
 msgid "Parcourir…"
 msgstr "ファイルを選択"
 
@@ -2149,8 +2170,8 @@ msgstr "ファイルを検索…"
 msgid "Recommandation"
 msgstr "推奨"
 
-msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
-msgstr "氏名、メールアドレス、電話番号を決定論的な仮名に置き換えます（同じ値には同じ仮名）。行間の関係は維持されます。"
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
+msgstr "氏名、メールアドレス、電話番号を決定論的な仮名に置き換えます（同じ値には同じ仮名）。行間の関係は維持されます。 変更ログには元の値のフィンガープリントのみが保存されます。"
 
 msgid "Remplacer les valeurs manquantes"
 msgstr "欠損値を置換"
@@ -2191,6 +2212,9 @@ msgstr "復元"
 msgid "Restaurer cette version comme version courante ?"
 msgstr "このバージョンを現在のバージョンとして復元しますか？"
 
+msgid "Retour à l'accueil"
+msgstr ""
+
 msgid "Retour à la connexion"
 msgstr "ログインに戻る"
 
@@ -2226,6 +2250,9 @@ msgstr "カスタム正規表現の検証ルール"
 
 msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
 msgstr "クレンジング済みファイル、詳細レポート、完全な変更ログを取得できます。"
+
+msgid "Réessayer"
+msgstr ""
 
 msgid "Réinitialiser"
 msgstr "リセット"
@@ -2521,6 +2548,9 @@ msgstr "追跡性"
 msgid "Troisième quartile"
 msgstr "第3四分位数"
 
+msgid "Trop de tentatives de connexion échouées. Réessayez dans %(minutes)s minute(s)."
+msgstr ""
+
 msgid "Type"
 msgstr "種類"
 
@@ -2592,6 +2622,9 @@ msgstr "宛先 URL が必要です。"
 
 msgid "Une boîte à outils complète"
 msgstr "充実したツールセット"
+
+msgid "Une erreur inattendue s'est produite"
+msgstr ""
 
 msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
 msgstr "1行につき1つのルールを「列:パターン」の形式で入力します。例：「郵便番号:^\\d{5}$」。一致しない値は通知されます（変更されません）。"
@@ -2701,6 +2734,9 @@ msgstr "現在のバージョン"
 msgid "Version de référence"
 msgstr "基準バージョン"
 
+msgid "Version du condensé"
+msgstr ""
+
 msgid "Versions"
 msgstr "バージョン"
 
@@ -2781,6 +2817,9 @@ msgstr "この Webhook へのアクセス権がありません。"
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "このルールへのアクセス権がありません。"
+
+msgid "Vous n'avez pas les droits nécessaires pour consulter cette page."
+msgstr ""
 
 msgid "Vous ne pouvez pas modifier votre propre rôle."
 msgstr "自分のロールは変更できません。"

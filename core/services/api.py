@@ -3,7 +3,7 @@
 L'API de DataZen est volontairement minimaliste (Django « nu », sans DRF) :
 
 - un jeton ``dz_<préfixe>_<secret>`` est généré une seule fois puis seul son
-  condensé SHA-256 est conservé en base ;
+  condensé HMAC-SHA256 (keyé par ``SECRET_KEY``) est conservé en base ;
 - les webhooks sont appelés en tâche de fond (``threading``) afin de ne jamais
   ralentir la requête utilisateur, avec une signature HMAC optionnelle.
 
@@ -140,9 +140,6 @@ class _NoRedirectHandler(urllib.request.HTTPRedirectHandler):
         )
 
 TOKEN_PREFIX = "dz"
-# Conservé uniquement pour reconnaître les condensés produits avant le passage
-# au hachage keyé : un jeton hérité est accepté une fois puis réécrit.
-SALT_PREFIX = "datazen"
 
 
 def generate_token():
@@ -168,12 +165,6 @@ def hash_token(clear_token):
     return hmac.new(key, clear_token.encode("utf-8"), hashlib.sha256).hexdigest()
 
 
-def legacy_token_hash(clear_token):
-    """Ancien condensé (SHA-256 à sel statique), pour migrer les jetons en base."""
-    salted = f"{SALT_PREFIX}:{clear_token}".encode("utf-8")
-    return hashlib.sha256(salted).hexdigest()
-
-
 def generate_secret():
     """Clé de signature HMAC pour un nouveau webhook."""
     return secrets.token_hex(24)
@@ -193,25 +184,22 @@ def create_token(user, name, expires_at=None):
 
 
 def resolve_token(clear_token):
-    """Retrouve un jeton valide à partir de sa valeur en clair (ou ``None``)."""
+    """Retrouve un jeton valide à partir de sa valeur en clair (ou ``None``).
+
+    Seuls les condensés keyés sont acceptés : l'ancien condensé à sel statique
+    a été révoqué par la migration ``0016`` (il restait vérifiable hors ligne à
+    partir d'un vidage de la base). Un jeton hérité doit être régénéré.
+    """
     if not clear_token or not clear_token.startswith(f"{TOKEN_PREFIX}_"):
         return None
     token = (
         ApiToken.objects.select_related("owner")
-        .filter(key_hash=hash_token(clear_token))
+        .filter(
+            key_hash=hash_token(clear_token),
+            hash_version=ApiToken.HASH_VERSION_KEYED,
+        )
         .first()
     )
-    if token is None:
-        # Jeton créé avant le passage au hachage keyé : on le reconnaît une
-        # dernière fois puis on réécrit son condensé au format actuel.
-        legacy = legacy_token_hash(clear_token)
-        token = (
-            ApiToken.objects.select_related("owner")
-            .filter(key_hash=legacy)
-            .first()
-        )
-        if token is not None:
-            ApiToken.objects.filter(pk=token.pk).update(key_hash=hash_token(clear_token))
     if token is None or not token.is_valid:
         return None
     return token

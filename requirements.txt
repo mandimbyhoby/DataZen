@@ -1,24 +1,34 @@
-Django>=5.0,<6.0
-pandas>=2.2
-openpyxl>=3.1
-Pillow>=10.0
-matplotlib>=3.8
-seaborn>=0.13
+# Dépendances de production — versions figées.
+#
+# Les versions sont épinglées exactement : une installation reproductible est
+# une condition de la sécurité (une dépendance compromise ou une montée de
+# version silencieuse ne doit pas pouvoir entrer en production sans revue).
+# Pour mettre à jour : modifier la version ici, réinstaller, puis relancer
+# `manage.py test core` avant de committer.
+#
+# Versions validées avec Python 3.13 (voir README, section « Installation »).
+
+Django==5.2.17
+pandas==3.0.6
+openpyxl==3.1.5
+Pillow==12.3.0
+matplotlib==3.11.2
+seaborn==0.13.2
 # Façonnage des libellés arabes dans les graphiques (facultatif : sans ces
 # paquets, les graphiques restent générés mais l'arabe n'est pas réordonné).
-arabic-reshaper>=3.0
-python-bidi>=0.6
+arabic-reshaper==3.0.1
+python-bidi==0.6.11
 # Outillage : encodage de la vidéo de fond du héros (tools/generate_hero_video.py).
 # Facultatif : les fichiers de static/video/ sont versionnés, ce paquet n'est
 # nécessaire que pour les régénérer.
-imageio-ffmpeg>=0.4
+imageio-ffmpeg==0.6.0
 # Génération des rapports PDF (core/services/pdf.py l'importe sans repli :
 # sans ce paquet, l'application échoue dès l'import des vues).
-reportlab>=4.0
+reportlab==5.0.1
 # Production : serveur WSGI et service des fichiers statiques.
 # `runserver` est mono-processus et refuse de servir /static/ dès que
 # DEBUG=False ; sans ces deux paquets l'application se déploie sans style.
-waitress>=3.0
-whitenoise>=6.6
+waitress==3.0.2
+whitenoise==6.12.0
 # Pilote PostgreSQL (moteur de base de données par défaut).
-psycopg[binary]>=3.1
+psycopg[binary]==3.3.6

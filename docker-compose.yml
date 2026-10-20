@@ -56,9 +56,11 @@ services:
       # DEBUG=0 active WhiteNoise + le stockage à manifeste et impose une clé
       # secrète (datazen/settings.py lève RuntimeError sinon).
       DJANGO_DEBUG: "0"
-      # HTTPS=0 : le conteneur sert du HTTP en clair. Passer à "1" derrière un
-      # reverse proxy TLS, sinon toutes les requêtes répondent 301.
-      DJANGO_HTTPS: "0"
+      # HTTPS=1 : le conteneur est derrière un reverse proxy TLS. Les cookies
+      # de session et CSRF ne partent alors qu'en HTTPS et HSTS est activé.
+      # Passer à "0" uniquement pour un essai local en HTTP : les cookies
+      # circuleraient en clair.
+      DJANGO_HTTPS: "1"
       DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:?DJANGO_SECRET_KEY est absent du fichier .env}
       DJANGO_ALLOWED_HOSTS: "${DJANGO_ALLOWED_HOSTS:-localhost,127.0.0.1,[::1]}"
       DJANGO_DB_ENGINE: postgresql
@@ -83,7 +85,10 @@ services:
       DJANGO_EMAIL_TLS: ${DJANGO_EMAIL_TLS:-1}
       DJANGO_EMAIL_SSL: ${DJANGO_EMAIL_SSL:-0}
     ports:
-      - "8000:8000"
+      # Lié à la boucle locale : le conteneur n'est joignable que depuis la
+      # machine, donc uniquement à travers le reverse proxy TLS. Publier
+      # "8000:8000" exposerait l'application en HTTP en clair sur le réseau.
+      - "127.0.0.1:8000:8000"
     volumes:
       # Téléversements, fichiers nettoyés, rapports, avatars et versions :
       # tout passe par settings.MEDIA_ROOT. Un volume nommé conserverait ces

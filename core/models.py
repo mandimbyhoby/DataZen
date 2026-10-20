@@ -411,6 +411,13 @@ class ApiToken(models.Model):
     affichée qu'une seule fois, à la création.
     """
 
+    #: Ancien condensé : SHA-256 à sel statique, vérifiable hors ligne à partir
+    #: d'un vidage de la base. Conservé uniquement pour identifier les jetons à
+    #: révoquer (voir la migration ``0016``).
+    HASH_VERSION_LEGACY = 1
+    #: Condensé actuel : HMAC-SHA256 keyé par ``SECRET_KEY``.
+    HASH_VERSION_KEYED = 2
+
     owner = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
@@ -420,6 +427,10 @@ class ApiToken(models.Model):
     name = models.CharField(max_length=120, verbose_name=_("Nom du jeton"))
     prefix = models.CharField(max_length=16, verbose_name=_("Préfixe"))
     key_hash = models.CharField(max_length=64, unique=True, verbose_name=_("Condensé"))
+    hash_version = models.PositiveSmallIntegerField(
+        default=HASH_VERSION_KEYED,
+        verbose_name=_("Version du condensé"),
+    )
     is_active = models.BooleanField(default=True, verbose_name=_("Actif"))
     last_used_at = models.DateTimeField(null=True, blank=True, verbose_name=_("Dernière utilisation"))
     call_count = models.PositiveIntegerField(default=0, verbose_name=_("Nombre d'appels"))

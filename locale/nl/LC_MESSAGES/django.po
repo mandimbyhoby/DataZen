@@ -190,6 +190,12 @@ msgstr "Abonnementen"
 msgid "Accueil"
 msgstr "Home"
 
+msgid "Accès refusé"
+msgstr ""
+
+msgid "Accès refusé — DataZen"
+msgstr ""
+
 msgid "Actif"
 msgstr "Actief"
 
@@ -621,6 +627,9 @@ msgstr "Deze twee versies zijn identiek op de gevolgde indicatoren."
 
 msgid "Cette page est réservée aux administrateurs."
 msgstr "Deze pagina is voorbehouden aan beheerders."
+
+msgid "Cette page n'existe pas"
+msgstr ""
 
 msgid "Champ"
 msgstr "Veld"
@@ -1171,6 +1180,9 @@ msgstr "Fout"
 msgid "Erreur de nettoyage"
 msgstr "Opschoonfout"
 
+msgid "Erreur serveur — DataZen"
+msgstr ""
+
 msgid "Erreurs de format"
 msgstr "Formaatfouten"
 
@@ -1513,6 +1525,9 @@ msgstr "Het bestand mag niet groter zijn dan 20 MB."
 msgid "Le journal conserve également %(days)s jours d'historique."
 msgstr "Het log bewaart ook %(days)s dagen geschiedenis."
 
+msgid "Le lien est peut-être obsolète, ou l'adresse comporte une faute de frappe."
+msgstr ""
+
 msgid "Le nettoyage a échoué."
 msgstr "Het opschonen is mislukt."
 
@@ -1530,6 +1545,9 @@ msgstr "Delen is altijd alleen-lezen: de ontvanger bekijkt en downloadt als u da
 
 msgid "Le port est invalide."
 msgstr "De poort is ongeldig."
+
+msgid "Le problème a été enregistré. Vos fichiers n'ont pas été modifiés : réessayez dans quelques instants."
+msgstr ""
 
 msgid "Le thème « Système » suit les réglages de votre appareil."
 msgstr "Het thema ‘Systeem’ volgt de instellingen van uw apparaat."
@@ -1888,6 +1906,9 @@ msgstr "Het geselecteerde resultaat openen"
 msgid "Page"
 msgstr "Pagina"
 
+msgid "Page introuvable — DataZen"
+msgstr ""
+
 msgid "Parcourir…"
 msgstr "Bestand kiezen"
 
@@ -2158,8 +2179,8 @@ msgstr "Een bestand zoeken…"
 msgid "Recommandation"
 msgstr "Aanbeveling"
 
-msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
-msgstr "Vervangt namen, e-mails en telefoonnummers door deterministische pseudoniemen (dezelfde waarde → hetzelfde pseudoniem). Relaties tussen rijen blijven behouden."
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
+msgstr "Vervangt namen, e-mails en telefoonnummers door deterministische pseudoniemen (dezelfde waarde → hetzelfde pseudoniem). Relaties tussen rijen blijven behouden. Het wijzigingslogboek bewaart alleen een vingerafdruk van de oorspronkelijke waarden."
 
 msgid "Remplacer les valeurs manquantes"
 msgstr "Ontbrekende waarden vervangen"
@@ -2200,6 +2221,9 @@ msgstr "Herstellen"
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Deze versie als huidige versie herstellen?"
 
+msgid "Retour à l'accueil"
+msgstr ""
+
 msgid "Retour à la connexion"
 msgstr "Terug naar aanmelden"
 
@@ -2235,6 +2259,9 @@ msgstr "Aangepaste regex-validatieregels"
 
 msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
 msgstr "Haal het opgeschoonde bestand, het gedetailleerde rapport en het volledige wijzigingslogboek op."
+
+msgid "Réessayer"
+msgstr ""
 
 msgid "Réinitialiser"
 msgstr "Resetten"
@@ -2530,6 +2557,9 @@ msgstr "Traceerbaarheid"
 msgid "Troisième quartile"
 msgstr "Derde kwartiel"
 
+msgid "Trop de tentatives de connexion échouées. Réessayez dans %(minutes)s minute(s)."
+msgstr ""
+
 msgid "Type"
 msgstr "Type"
 
@@ -2601,6 +2631,9 @@ msgstr "Een doel-URL is verplicht."
 
 msgid "Une boîte à outils complète"
 msgstr "Een complete gereedschapskist"
+
+msgid "Une erreur inattendue s'est produite"
+msgstr ""
 
 msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
 msgstr "Eén regel per regel, in de indeling ‘kolom:patroon’. Voorbeeld: ‘postcode:^\\d{5}$’. Waarden die niet overeenkomen worden gemarkeerd (nooit gewijzigd)."
@@ -2710,6 +2743,9 @@ msgstr "Huidige versie"
 msgid "Version de référence"
 msgstr "Referentieversie"
 
+msgid "Version du condensé"
+msgstr ""
+
 msgid "Versions"
 msgstr "Versies"
 
@@ -2790,6 +2826,9 @@ msgstr "Je hebt geen toegang tot deze webhook."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "U hebt geen toegang tot deze regel."
+
+msgid "Vous n'avez pas les droits nécessaires pour consulter cette page."
+msgstr ""
 
 msgid "Vous ne pouvez pas modifier votre propre rôle."
 msgstr "U kunt uw eigen rol niet wijzigen."

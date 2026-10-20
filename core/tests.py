@@ -1,4 +1,5 @@
 """Tests de l'application DataZen (authentification, asynchrone, règles)."""
+import hashlib
 import json
 import re
 import tempfile
@@ -20,6 +21,8 @@ from django.urls import get_resolver, reverse
 from django.utils import timezone, translation
 from django.utils.translation import pgettext
 
+import pandas as pd
+
 from . import views
 from .errors import user_error
 from .forms import BatchCleaningForm, CleaningOptionsForm, ShareForm, WebhookForm
@@ -37,13 +40,14 @@ from .models import (
 from .services import activity as activity_service
 from .services import api as api_service
 from .services import batch as batch_service
+from .services import cleaning as cleaning_service
+from .services import exporter
 from .services import permissions as permissions_service
 from .services import schedules as schedule_service
 from .services import versions as version_service
 from .services.api import (
     WebhookUrlError,
     hash_token,
-    legacy_token_hash,
     validate_webhook_url,
 )
 from .services import overview as overview_service
@@ -57,7 +61,7 @@ from .services.operations import (
     render_operations,
     render_score_explanations,
 )
-from .services.pipeline import preview_cleaning, run_cleaning
+from .services.pipeline import preview_cleaning, read_change_log, run_cleaning
 from .services.reader import read_dataframe
 from .services.validation import build_detection, verify_consistency
 
@@ -4938,23 +4942,31 @@ class SecurityHardeningTests(TestCase):
         self.assertNotIn(chr(10), message)
         self.assertLessEqual(len(user_error(ValueError("x" * 900), "test")), 181)
 
-    def test_token_digest_is_keyed_and_differs_from_the_legacy_one(self):
+    def test_token_digest_is_keyed_and_not_a_plain_sha256(self):
         clear = api_service.generate_token()[0]
-        self.assertNotEqual(hash_token(clear), legacy_token_hash(clear))
         self.assertEqual(len(hash_token(clear)), 64)
         self.assertEqual(hash_token(clear), hash_token(clear))
+        # Le sel statique d'origine produisait un condensé calculable hors ligne.
+        unkeyed = hashlib.sha256(f"datazen:{clear}".encode("utf-8")).hexdigest()
+        self.assertNotEqual(hash_token(clear), unkeyed)
 
-    def test_a_legacy_token_still_resolves_then_is_migrated(self):
+    def test_a_legacy_digest_no_longer_resolves(self):
         clear = api_service.generate_token()[0]
         token = ApiToken.objects.create(
             owner=self.user,
             name="Herite",
-            key_hash=legacy_token_hash(clear),
+            key_hash=hashlib.sha256(f"datazen:{clear}".encode("utf-8")).hexdigest(),
             prefix=clear[:10],
+            hash_version=ApiToken.HASH_VERSION_LEGACY,
         )
-        self.assertEqual(api_service.resolve_token(clear), token)
+        self.assertIsNone(api_service.resolve_token(clear))
         token.refresh_from_db()
-        self.assertEqual(token.key_hash, hash_token(clear))
+        self.assertEqual(token.hash_version, ApiToken.HASH_VERSION_LEGACY)
+
+    def test_a_keyed_token_resolves(self):
+        token, clear = api_service.create_token(self.user, "Keye")
+        self.assertEqual(token.hash_version, ApiToken.HASH_VERSION_KEYED)
+        self.assertEqual(api_service.resolve_token(clear), token)
 
     def test_an_unknown_token_does_not_resolve(self):
         self.assertIsNone(api_service.resolve_token(api_service.generate_token()[0]))
@@ -5867,3 +5879,241 @@ class ProductionStaticFilesTests(TestCase):
     def _empty_dir():
         empty = tempfile.mkdtemp(prefix="dz-no-static-")
         return empty
+
+
+# ---------------------------------------------------------------------------
+# Correctifs d'audit : écriture réservée au propriétaire, export sûr
+# ---------------------------------------------------------------------------
+
+
+class WriteAccessTests(TestCase):
+    """Un partage en lecture ne doit jamais ouvrir une écriture.
+
+    ``can_edit`` ne regardait que le rôle global : un lecteur promu « éditeur »
+    pouvait modifier le jeu de données d'un tiers simplement partagé avec lui.
+    L'écriture est désormais réservée au propriétaire (ou à un administrateur).
+    """
+
+    def setUp(self):
+        self.owner = User.objects.create_user("writeowner", "WritePass!2024")
+        self.guest = User.objects.create_user("writeguest", "WritePass!2024")
+        self.data_file = make_cleaned_file(self.owner)
+        run_cleaning(self.data_file, {})
+        self.data_file.refresh_from_db()
+        DatasetShare.objects.create(
+            data_file=self.data_file,
+            created_by=self.owner,
+            shared_with=self.guest,
+            permission=DatasetShare.Permission.VIEW,
+            token=permissions_service.new_share_token(),
+        )
+
+    def test_can_write_is_reserved_to_the_owner(self):
+        self.assertTrue(permissions_service.can_write(self.owner, self.data_file))
+        self.assertFalse(permissions_service.can_write(self.guest, self.data_file))
+
+    def test_an_admin_can_write_a_foreign_dataset(self):
+        admin = User.objects.create_user("writeadmin", "WritePass!2024")
+        admin.profile.role = Profile.Role.ADMIN
+        admin.profile.save()
+        self.assertTrue(permissions_service.can_write(admin, self.data_file))
+
+    def test_can_write_without_a_dataset_falls_back_to_the_role(self):
+        self.assertTrue(permissions_service.can_write(self.owner, None))
+        viewer = User.objects.create_user("writeviewer", "WritePass!2024")
+        viewer.profile.role = Profile.Role.VIEWER
+        viewer.profile.save()
+        self.assertFalse(permissions_service.can_write(viewer, None))
+
+    def test_writable_dataset_ids_excludes_shared_datasets(self):
+        ids = set(permissions_service.writable_dataset_ids(self.guest))
+        self.assertNotIn(self.data_file.pk, ids)
+        self.assertIn(
+            self.data_file.pk,
+            set(permissions_service.writable_dataset_ids(self.owner)),
+        )
+
+    def test_a_recipient_cannot_clean_a_shared_dataset(self):
+        self.client.force_login(self.guest)
+        before = self.data_file.changes_count
+        versions_before = self.data_file.versions.count()
+        response = self.client.post(
+            reverse("core:dataset_detail", args=[self.data_file.pk]),
+            {"trim_whitespace": "on", "action": "clean"},
+        )
+        self.assertEqual(response.status_code, 302)
+        self.data_file.refresh_from_db()
+        self.assertEqual(self.data_file.changes_count, before)
+        self.assertEqual(self.data_file.versions.count(), versions_before)
+
+    def test_a_recipient_cannot_delete_a_shared_dataset(self):
+        self.client.force_login(self.guest)
+        response = self.client.post(
+            reverse("core:delete_dataset", args=[self.data_file.pk])
+        )
+        self.assertEqual(response.status_code, 302)
+        self.assertTrue(DataFile.objects.filter(pk=self.data_file.pk).exists())
+
+    def test_a_recipient_cannot_archive_a_shared_dataset(self):
+        self.client.force_login(self.guest)
+        response = self.client.post(
+            reverse("core:archive_dataset", args=[self.data_file.pk])
+        )
+        self.assertEqual(response.status_code, 302)
+        self.data_file.refresh_from_db()
+        self.assertIsNone(self.data_file.archived_at)
+
+    def test_a_recipient_cannot_resolve_a_duplicate(self):
+        self.client.force_login(self.guest)
+        before = self.data_file.changes_count
+        response = self.client.post(
+            reverse("core:review_duplicate", args=[self.data_file.pk]),
+            {"action": "keep_a", "ancien_ids": "1,2"},
+        )
+        self.assertEqual(response.status_code, 302)
+        self.data_file.refresh_from_db()
+        self.assertEqual(self.data_file.changes_count, before)
+
+    def test_a_recipient_cannot_download_the_pdf_report(self):
+        self.client.force_login(self.guest)
+        response = self.client.get(
+            reverse("core:download_pdf_report", args=[self.data_file.pk])
+        )
+        self.assertEqual(response.status_code, 302)
+
+    def test_a_recipient_cannot_start_a_batch_on_a_shared_dataset(self):
+        self.client.force_login(self.guest)
+        before = self.data_file.changes_count
+        response = self.client.post(
+            reverse("core:batch_cleaning"),
+            {"files": [self.data_file.pk], "trim_whitespace": "on"},
+        )
+        # Le fichier n'est pas dans le queryset du formulaire : la sélection est
+        # refusée et la page est ré-affichée avec une erreur, sans redirection.
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(response.context["form"].errors)
+        self.data_file.refresh_from_db()
+        self.assertEqual(self.data_file.changes_count, before)
+
+    def test_the_batch_form_never_offers_a_shared_dataset(self):
+        form = BatchCleaningForm(
+            files=DataFile.objects.filter(
+                pk__in=permissions_service.writable_dataset_ids(self.guest)
+            )
+        )
+        offered = set(form.fields["files"].queryset.values_list("pk", flat=True))
+        self.assertNotIn(self.data_file.pk, offered)
+
+
+class FormulaInjectionTests(TestCase):
+    """Un export ne doit jamais produire de cellule interprétée comme formule."""
+
+    def test_a_formula_prefix_is_neutralized(self):
+        for value in ("=1+1", "+cmd", "-2+3", "@SUM(A1)", "\t=1", "\r=1"):
+            with self.subTest(value=value):
+                self.assertEqual(
+                    exporter.neutralize_formula(value), "'" + value
+                )
+
+    def test_ordinary_text_and_numbers_are_untouched(self):
+        for value in ("alice", "a=b", "", "12", 12, -3.5, None, True):
+            with self.subTest(value=value):
+                self.assertEqual(exporter.neutralize_formula(value), value)
+
+    def test_a_negative_number_stays_a_number(self):
+        self.assertEqual(exporter.neutralize_formula(-42), -42)
+
+    def test_the_dataframe_neutralization_only_touches_text_columns(self):
+        frame = pd.DataFrame(
+            {"nom": ["=1+1", "bob"], "age": [1, 2], "solde": [-5.0, 3.0]}
+        )
+        safe = exporter.neutralize_dataframe(frame)
+        self.assertEqual(list(safe["nom"]), ["'=1+1", "bob"])
+        self.assertEqual(list(safe["age"]), [1, 2])
+        self.assertEqual(list(safe["solde"]), [-5.0, 3.0])
+
+    def test_the_original_dataframe_is_not_mutated(self):
+        frame = pd.DataFrame({"nom": ["=1+1"]})
+        exporter.neutralize_dataframe(frame)
+        self.assertEqual(list(frame["nom"]), ["=1+1"])
+
+    def test_an_exported_csv_contains_no_live_formula(self):
+        frame = pd.DataFrame({"nom": ["=1+1", "bob"], "age": [1, 2]})
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "export.csv"
+            exporter.export_dataframe(frame, path)
+            written = path.read_text(encoding="utf-8-sig")
+        self.assertIn("'=1+1", written)
+        self.assertNotIn(";=1+1", written)
+
+    def test_an_exported_workbook_contains_no_live_formula(self):
+        frame = pd.DataFrame({"nom": ["=1+1", "bob"], "age": [1, 2]})
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "export.xlsx"
+            exporter.export_dataframe(frame, path)
+            reloaded = pd.read_excel(path, dtype=str)
+        self.assertEqual(reloaded.loc[0, "nom"], "'=1+1")
+
+    def test_an_unsupported_extension_is_refused(self):
+        frame = pd.DataFrame({"nom": ["bob"]})
+        with tempfile.TemporaryDirectory() as folder:
+            with self.assertRaises(ValueError):
+                exporter.export_dataframe(frame, Path(folder) / "export.txt")
+
+
+class AnonymizationJournalTests(TestCase):
+    """Le journal des modifications ne doit pas conserver la donnée d'origine."""
+
+    def setUp(self):
+        self.user = User.objects.create_user("anonjournal", "WritePass!2024")
+        self.data_file = DataFile.objects.create(
+            file=make_upload("anonymes.csv"),
+            original_name="anonymes.csv",
+            owner=self.user,
+        )
+
+    def _journal_values(self):
+        """Valeurs d'origine telles qu'écrites dans le journal persisté."""
+        journal = read_change_log(self.data_file)
+        if journal is None or journal.empty:
+            return []
+        return [str(value) for value in journal["ancienne_valeur"].tolist()]
+
+    def test_the_journal_keeps_a_fingerprint_not_the_original_value(self):
+        run_cleaning(self.data_file, {"anonymize": True})
+        self.data_file.refresh_from_db()
+        entries = self._journal_values()
+        self.assertTrue(entries)
+        joined = " ".join(entries).lower()
+        self.assertNotIn("alice", joined)
+        self.assertNotIn("bob", joined)
+        self.assertNotIn("@example.com", joined)
+
+    def test_the_fingerprint_is_stable_and_truncated(self):
+        first = cleaning_service._fingerprint("Alice@Example.COM")
+        second = cleaning_service._fingerprint("Alice@Example.COM")
+        self.assertEqual(first, second)
+        self.assertEqual(len(first), len("empreinte:") + 12)
+        self.assertNotEqual(first, cleaning_service._fingerprint("bob@example.com"))
+
+    def test_a_non_anonymizing_cleaning_keeps_the_original_value(self):
+        run_cleaning(self.data_file, {"normalize_case": True})
+        self.data_file.refresh_from_db()
+        joined = " ".join(self._journal_values()).lower()
+        self.assertIn("alice", joined)
+
+
+class ProxyHeaderTests(TestCase):
+    """L'en-tête de proxy ne doit être cru que si un proxy le réécrit."""
+
+    def test_the_proxy_header_is_ignored_by_default(self):
+        self.assertIsNone(settings.SECURE_PROXY_SSL_HEADER)
+
+    def test_the_proxy_header_is_honoured_when_https_is_enforced(self):
+        with override_settings(
+            SECURE_PROXY_SSL_HEADER=("HTTP_X_FORWARDED_PROTO", "https")
+        ):
+            self.assertEqual(
+                settings.SECURE_PROXY_SSL_HEADER,
+                ("HTTP_X_FORWARDED_PROTO", "https"),
+            )

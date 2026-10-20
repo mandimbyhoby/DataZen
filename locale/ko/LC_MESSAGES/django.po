@@ -181,6 +181,12 @@ msgstr "구독"
 msgid "Accueil"
 msgstr "홈"
 
+msgid "Accès refusé"
+msgstr ""
+
+msgid "Accès refusé — DataZen"
+msgstr ""
+
 msgid "Actif"
 msgstr "활성"
 
@@ -612,6 +618,9 @@ msgstr "이 두 버전은 추적 지표에서 동일합니다."
 
 msgid "Cette page est réservée aux administrateurs."
 msgstr "이 페이지는 관리자 전용입니다."
+
+msgid "Cette page n'existe pas"
+msgstr ""
 
 msgid "Champ"
 msgstr "필드"
@@ -1162,6 +1171,9 @@ msgstr "오류"
 msgid "Erreur de nettoyage"
 msgstr "정리 오류"
 
+msgid "Erreur serveur — DataZen"
+msgstr ""
+
 msgid "Erreurs de format"
 msgstr "형식 오류"
 
@@ -1504,6 +1516,9 @@ msgstr "파일은 20MB를 초과할 수 없습니다."
 msgid "Le journal conserve également %(days)s jours d'historique."
 msgstr "로그는 %(days)s일의 이력도 함께 보관합니다."
 
+msgid "Le lien est peut-être obsolète, ou l'adresse comporte une faute de frappe."
+msgstr ""
+
 msgid "Le nettoyage a échoué."
 msgstr "정제에 실패했습니다."
 
@@ -1521,6 +1536,9 @@ msgstr "공유는 항상 읽기 전용입니다: 받는 사람은 보고, 허용
 
 msgid "Le port est invalide."
 msgstr "포트가 유효하지 않습니다."
+
+msgid "Le problème a été enregistré. Vos fichiers n'ont pas été modifiés : réessayez dans quelques instants."
+msgstr ""
 
 msgid "Le thème « Système » suit les réglages de votre appareil."
 msgstr "«시스템» 테마는 기기 설정을 따릅니다."
@@ -1879,6 +1897,9 @@ msgstr "선택한 결과 열기"
 msgid "Page"
 msgstr "페이지"
 
+msgid "Page introuvable — DataZen"
+msgstr ""
+
 msgid "Parcourir…"
 msgstr "파일 선택"
 
@@ -2149,8 +2170,8 @@ msgstr "파일 검색…"
 msgid "Recommandation"
 msgstr "권장 사항"
 
-msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
-msgstr "이름, 이메일, 전화번호를 결정적 별칭으로 바꿉니다(같은 값은 같은 별칭 사용). 행 간 관계는 유지됩니다."
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
+msgstr "이름, 이메일, 전화번호를 결정적 별칭으로 바꿉니다(같은 값은 같은 별칭 사용). 행 간 관계는 유지됩니다. 변경 로그에는 원본 값의 지문만 보관됩니다."
 
 msgid "Remplacer les valeurs manquantes"
 msgstr "누락된 값 바꾸기"
@@ -2191,6 +2212,9 @@ msgstr "복원"
 msgid "Restaurer cette version comme version courante ?"
 msgstr "이 버전을 현재 버전으로 복원할까요?"
 
+msgid "Retour à l'accueil"
+msgstr ""
+
 msgid "Retour à la connexion"
 msgstr "로그인으로 돌아가기"
 
@@ -2226,6 +2250,9 @@ msgstr "사용자 지정 정규식 검증 규칙"
 
 msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
 msgstr "정제된 파일, 상세 보고서, 전체 변경 로그를 받아보세요."
+
+msgid "Réessayer"
+msgstr ""
 
 msgid "Réinitialiser"
 msgstr "초기화"
@@ -2521,6 +2548,9 @@ msgstr "추적성"
 msgid "Troisième quartile"
 msgstr "제3사분위수"
 
+msgid "Trop de tentatives de connexion échouées. Réessayez dans %(minutes)s minute(s)."
+msgstr ""
+
 msgid "Type"
 msgstr "유형"
 
@@ -2592,6 +2622,9 @@ msgstr "대상 URL이 필요합니다."
 
 msgid "Une boîte à outils complète"
 msgstr "완전한 도구 모음"
+
+msgid "Une erreur inattendue s'est produite"
+msgstr ""
 
 msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
 msgstr "한 줄에 규칙 하나를 ‘열:패턴’ 형식으로 입력하세요. 예: ‘우편번호:^\\d{5}$’. 패턴과 일치하지 않는 값은 표시되며 변경되지 않습니다."
@@ -2701,6 +2734,9 @@ msgstr "현재 버전"
 msgid "Version de référence"
 msgstr "기준 버전"
 
+msgid "Version du condensé"
+msgstr ""
+
 msgid "Versions"
 msgstr "버전"
 
@@ -2781,6 +2817,9 @@ msgstr "이 webhook에 접근할 수 없습니다."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "이 규칙에 접근할 수 없습니다."
+
+msgid "Vous n'avez pas les droits nécessaires pour consulter cette page."
+msgstr ""
 
 msgid "Vous ne pouvez pas modifier votre propre rôle."
 msgstr "자신의 역할은 변경할 수 없습니다."

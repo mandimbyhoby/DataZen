@@ -181,6 +181,12 @@ msgstr "Đăng ký"
 msgid "Accueil"
 msgstr "Trang chủ"
 
+msgid "Accès refusé"
+msgstr ""
+
+msgid "Accès refusé — DataZen"
+msgstr ""
+
 msgid "Actif"
 msgstr "Đang bật"
 
@@ -612,6 +618,9 @@ msgstr "Hai phiên bản này giống nhau ở các chỉ số được theo dõ
 
 msgid "Cette page est réservée aux administrateurs."
 msgstr "Trang này dành riêng cho quản trị viên."
+
+msgid "Cette page n'existe pas"
+msgstr ""
 
 msgid "Champ"
 msgstr "Trường"
@@ -1162,6 +1171,9 @@ msgstr "Lỗi"
 msgid "Erreur de nettoyage"
 msgstr "Lỗi làm sạch"
 
+msgid "Erreur serveur — DataZen"
+msgstr ""
+
 msgid "Erreurs de format"
 msgstr "Lỗi định dạng"
 
@@ -1504,6 +1516,9 @@ msgstr "Tệp không được vượt quá 20 MB."
 msgid "Le journal conserve également %(days)s jours d'historique."
 msgstr "Nhật ký cũng lưu giữ %(days)s ngày lịch sử."
 
+msgid "Le lien est peut-être obsolète, ou l'adresse comporte une faute de frappe."
+msgstr ""
+
 msgid "Le nettoyage a échoué."
 msgstr "Làm sạch thất bại."
 
@@ -1521,6 +1536,9 @@ msgstr "Chia sẻ luôn chỉ đọc: người nhận xem và, nếu bạn cho p
 
 msgid "Le port est invalide."
 msgstr "Cổng không hợp lệ."
+
+msgid "Le problème a été enregistré. Vos fichiers n'ont pas été modifiés : réessayez dans quelques instants."
+msgstr ""
 
 msgid "Le thème « Système » suit les réglages de votre appareil."
 msgstr "Giao diện « Hệ thống » tuân theo cài đặt thiết bị của bạn."
@@ -1879,6 +1897,9 @@ msgstr "Mở kết quả đã chọn"
 msgid "Page"
 msgstr "Trang"
 
+msgid "Page introuvable — DataZen"
+msgstr ""
+
 msgid "Parcourir…"
 msgstr "Duyệt…"
 
@@ -2149,8 +2170,8 @@ msgstr "Tìm kiếm tệp…"
 msgid "Recommandation"
 msgstr "Đề xuất"
 
-msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
-msgstr "Thay tên, email và số điện thoại bằng bí danh xác định (cùng giá trị → cùng bí danh). Các mối liên hệ giữa các hàng được giữ nguyên."
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
+msgstr "Thay tên, email và số điện thoại bằng bí danh xác định (cùng giá trị → cùng bí danh). Các mối liên hệ giữa các hàng được giữ nguyên. Nhật ký thay đổi chỉ lưu giữ dấu vân tay của các giá trị gốc."
 
 msgid "Remplacer les valeurs manquantes"
 msgstr "Thay thế giá trị còn thiếu"
@@ -2191,6 +2212,9 @@ msgstr "Khôi phục"
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Khôi phục phiên bản này làm phiên bản hiện tại?"
 
+msgid "Retour à l'accueil"
+msgstr ""
+
 msgid "Retour à la connexion"
 msgstr "Quay lại đăng nhập"
 
@@ -2226,6 +2250,9 @@ msgstr "Quy tắc xác thực regex tùy chỉnh"
 
 msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
 msgstr "Tải về tệp đã làm sạch, báo cáo chi tiết và nhật ký thay đổi đầy đủ."
+
+msgid "Réessayer"
+msgstr ""
 
 msgid "Réinitialiser"
 msgstr "Đặt lại"
@@ -2521,6 +2548,9 @@ msgstr "Khả năng truy vết"
 msgid "Troisième quartile"
 msgstr "Tứ phân vị thứ ba"
 
+msgid "Trop de tentatives de connexion échouées. Réessayez dans %(minutes)s minute(s)."
+msgstr ""
+
 msgid "Type"
 msgstr "Loại"
 
@@ -2592,6 +2622,9 @@ msgstr "Cần có URL đích."
 
 msgid "Une boîte à outils complète"
 msgstr "Bộ công cụ đầy đủ"
+
+msgid "Une erreur inattendue s'est produite"
+msgstr ""
 
 msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
 msgstr "Mỗi dòng một quy tắc theo định dạng « cột:mẫu ». Ví dụ: « mã_bưu_chính:^\\d{5}$ ». Các giá trị không khớp sẽ được đánh dấu (không bị thay đổi)."
@@ -2701,6 +2734,9 @@ msgstr "Phiên bản hiện tại"
 msgid "Version de référence"
 msgstr "Phiên bản tham chiếu"
 
+msgid "Version du condensé"
+msgstr ""
+
 msgid "Versions"
 msgstr "Phiên bản"
 
@@ -2781,6 +2817,9 @@ msgstr "Bạn không có quyền truy cập webhook này."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "Bạn không có quyền truy cập quy tắc này."
+
+msgid "Vous n'avez pas les droits nécessaires pour consulter cette page."
+msgstr ""
 
 msgid "Vous ne pouvez pas modifier votre propre rôle."
 msgstr "Bạn không thể thay đổi vai trò của chính mình."

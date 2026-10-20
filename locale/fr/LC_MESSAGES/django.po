@@ -190,6 +190,12 @@ msgstr ""
 msgid "Accueil"
 msgstr ""
 
+msgid "Accès refusé"
+msgstr ""
+
+msgid "Accès refusé — DataZen"
+msgstr ""
+
 msgid "Actif"
 msgstr ""
 
@@ -620,6 +626,9 @@ msgid "Ces deux versions sont identiques sur les indicateurs suivis."
 msgstr ""
 
 msgid "Cette page est réservée aux administrateurs."
+msgstr ""
+
+msgid "Cette page n'existe pas"
 msgstr ""
 
 msgid "Champ"
@@ -1171,6 +1180,9 @@ msgstr ""
 msgid "Erreur de nettoyage"
 msgstr ""
 
+msgid "Erreur serveur — DataZen"
+msgstr ""
+
 msgid "Erreurs de format"
 msgstr ""
 
@@ -1513,6 +1525,9 @@ msgstr ""
 msgid "Le journal conserve également %(days)s jours d'historique."
 msgstr ""
 
+msgid "Le lien est peut-être obsolète, ou l'adresse comporte une faute de frappe."
+msgstr ""
+
 msgid "Le nettoyage a échoué."
 msgstr ""
 
@@ -1529,6 +1544,9 @@ msgid "Le partage est toujours en lecture seule : le destinataire consulte et, s
 msgstr ""
 
 msgid "Le port est invalide."
+msgstr ""
+
+msgid "Le problème a été enregistré. Vos fichiers n'ont pas été modifiés : réessayez dans quelques instants."
 msgstr ""
 
 msgid "Le thème « Système » suit les réglages de votre appareil."
@@ -1888,6 +1906,9 @@ msgstr ""
 msgid "Page"
 msgstr ""
 
+msgid "Page introuvable — DataZen"
+msgstr ""
+
 msgid "Parcourir…"
 msgstr ""
 
@@ -2158,7 +2179,7 @@ msgstr ""
 msgid "Recommandation"
 msgstr ""
 
-msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr ""
 
 msgid "Remplacer les valeurs manquantes"
@@ -2200,6 +2221,9 @@ msgstr ""
 msgid "Restaurer cette version comme version courante ?"
 msgstr ""
 
+msgid "Retour à l'accueil"
+msgstr ""
+
 msgid "Retour à la connexion"
 msgstr ""
 
@@ -2234,6 +2258,9 @@ msgid "Règles de validation regex personnalisées"
 msgstr ""
 
 msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
+msgstr ""
+
+msgid "Réessayer"
 msgstr ""
 
 msgid "Réinitialiser"
@@ -2530,6 +2557,9 @@ msgstr ""
 msgid "Troisième quartile"
 msgstr ""
 
+msgid "Trop de tentatives de connexion échouées. Réessayez dans %(minutes)s minute(s)."
+msgstr ""
+
 msgid "Type"
 msgstr ""
 
@@ -2600,6 +2630,9 @@ msgid "Une URL de destination est requise."
 msgstr ""
 
 msgid "Une boîte à outils complète"
+msgstr ""
+
+msgid "Une erreur inattendue s'est produite"
 msgstr ""
 
 msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
@@ -2710,6 +2743,9 @@ msgstr ""
 msgid "Version de référence"
 msgstr ""
 
+msgid "Version du condensé"
+msgstr ""
+
 msgid "Versions"
 msgstr ""
 
@@ -2789,6 +2825,9 @@ msgid "Vous n'avez pas accès à ce webhook."
 msgstr ""
 
 msgid "Vous n'avez pas accès à cette règle."
+msgstr ""
+
+msgid "Vous n'avez pas les droits nécessaires pour consulter cette page."
 msgstr ""
 
 msgid "Vous ne pouvez pas modifier votre propre rôle."

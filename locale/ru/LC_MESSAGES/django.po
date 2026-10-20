@@ -199,6 +199,12 @@ msgstr "Подписки"
 msgid "Accueil"
 msgstr "Главная"
 
+msgid "Accès refusé"
+msgstr ""
+
+msgid "Accès refusé — DataZen"
+msgstr ""
+
 msgid "Actif"
 msgstr "Активно"
 
@@ -630,6 +636,9 @@ msgstr "Эти две версии идентичны по отслеживае�
 
 msgid "Cette page est réservée aux administrateurs."
 msgstr "Эта страница доступна только администраторам."
+
+msgid "Cette page n'existe pas"
+msgstr ""
 
 msgid "Champ"
 msgstr "Поле"
@@ -1180,6 +1189,9 @@ msgstr "Ошибка"
 msgid "Erreur de nettoyage"
 msgstr "Ошибка очистки"
 
+msgid "Erreur serveur — DataZen"
+msgstr ""
+
 msgid "Erreurs de format"
 msgstr "Ошибки формата"
 
@@ -1522,6 +1534,9 @@ msgstr "Размер файла не должен превышать 20 МБ."
 msgid "Le journal conserve également %(days)s jours d'historique."
 msgstr "Журнал также хранит историю за %(days)s дней."
 
+msgid "Le lien est peut-être obsolète, ou l'adresse comporte une faute de frappe."
+msgstr ""
+
 msgid "Le nettoyage a échoué."
 msgstr "Очистка не удалась."
 
@@ -1539,6 +1554,9 @@ msgstr "Общий доступ всегда только для чтения: �
 
 msgid "Le port est invalide."
 msgstr "Недопустимый порт."
+
+msgid "Le problème a été enregistré. Vos fichiers n'ont pas été modifiés : réessayez dans quelques instants."
+msgstr ""
 
 msgid "Le thème « Système » suit les réglages de votre appareil."
 msgstr "Тема «Системная» следует настройкам вашего устройства."
@@ -1897,6 +1915,9 @@ msgstr "Открыть выбранный результат"
 msgid "Page"
 msgstr "Страница"
 
+msgid "Page introuvable — DataZen"
+msgstr ""
+
 msgid "Parcourir…"
 msgstr "Выбрать файл"
 
@@ -2167,8 +2188,8 @@ msgstr "Найти файл…"
 msgid "Recommandation"
 msgstr "Рекомендация"
 
-msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées."
-msgstr "Заменяет имена, адреса электронной почты и телефоны детерминированными псевдонимами (одно значение → один псевдоним). Связи между строками сохраняются."
+msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
+msgstr "Заменяет имена, адреса электронной почты и телефоны детерминированными псевдонимами (одно значение → один псевдоним). Связи между строками сохраняются. Журнал изменений хранит только отпечаток исходных значений."
 
 msgid "Remplacer les valeurs manquantes"
 msgstr "Заменить отсутствующие значения"
@@ -2209,6 +2230,9 @@ msgstr "Восстановить"
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Восстановить эту версию как текущую?"
 
+msgid "Retour à l'accueil"
+msgstr ""
+
 msgid "Retour à la connexion"
 msgstr "Вернуться ко входу"
 
@@ -2244,6 +2268,9 @@ msgstr "Пользовательские правила проверки рег�
 
 msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
 msgstr "Получите очищенный файл, подробный отчёт и полный журнал изменений."
+
+msgid "Réessayer"
+msgstr ""
 
 msgid "Réinitialiser"
 msgstr "Сбросить"
@@ -2539,6 +2566,9 @@ msgstr "Прослеживаемость"
 msgid "Troisième quartile"
 msgstr "Третий квартиль"
 
+msgid "Trop de tentatives de connexion échouées. Réessayez dans %(minutes)s minute(s)."
+msgstr ""
+
 msgid "Type"
 msgstr "Тип"
 
@@ -2610,6 +2640,9 @@ msgstr "Требуется URL назначения."
 
 msgid "Une boîte à outils complète"
 msgstr "Полный набор инструментов"
+
+msgid "Une erreur inattendue s'est produite"
+msgstr ""
 
 msgid "Une règle par ligne, au format « colonne:motif ». Exemple : « code_postal:^\\d{5}$ ». Les valeurs ne correspondant pas au motif seront signalées (jamais modifiées)."
 msgstr "Одно правило в строке в формате «столбец:шаблон». Пример: «индекс:^\\d{5}$». Несоответствующие значения будут отмечены (без изменений)."
@@ -2719,6 +2752,9 @@ msgstr "Текущая версия"
 msgid "Version de référence"
 msgstr "Опорная версия"
 
+msgid "Version du condensé"
+msgstr ""
+
 msgid "Versions"
 msgstr "Версии"
 
@@ -2799,6 +2835,9 @@ msgstr "У вас нет доступа к этому webhook."
 
 msgid "Vous n'avez pas accès à cette règle."
 msgstr "У вас нет доступа к этому правилу."
+
+msgid "Vous n'avez pas les droits nécessaires pour consulter cette page."
+msgstr ""
 
 msgid "Vous ne pouvez pas modifier votre propre rôle."
 msgstr "Вы не можете изменить свою собственную роль."
