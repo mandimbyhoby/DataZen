@@ -756,7 +756,6 @@ python -c "import secrets; print(secrets.token_urlsafe(64))"
 ```
 
 ### 2. Base de données
-
 L'application utilise **PostgreSQL par défaut** (`psycopg` 3). SQLite verrouille
 la base en écriture et ne supporte pas plusieurs workers WSGI simultanés ; il
 n'est conservé que comme repli pour un poste isolé.
@@ -791,6 +790,13 @@ docker run -d --name datazen-postgres --restart unless-stopped \
 `DJANGO_DB_CONN_MAX_AGE` doit rester **inférieur** au délai d'inactivité du
 serveur (sinon une connexion recyclée peut être coupée côté serveur). Pour
 repartir d'une base propre : `python manage.py migrate`.
+
+> **Un seul PostgreSQL à la fois.** La pile `docker compose` ne publie pas le
+> port de sa base (voir `docker-compose.yml`) ; quand elle tourne, `runserver`
+> et `manage.py test` lancés sur l'hôte ne joignent plus la base. Les deux
+> conteneurs partageant le volume `datazen_pgdata`, arrêtez la pile
+> (`docker compose down`) avant de reprendre le conteneur de développement
+> ci-dessus — et inversement.
 
 ### 3. Préparation
 

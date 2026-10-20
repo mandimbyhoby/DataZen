@@ -35,6 +35,14 @@ services:
     # Aucun port publié : l'application joint la base par le réseau interne de
     # Compose. Cela évite aussi le conflit avec un conteneur PostgreSQL déjà
     # à l'écoute sur 127.0.0.1:5432.
+    #
+    # Conséquence : quand cette pile tourne, `manage.py test` et `runserver`
+    # lancés sur l'hôte ne joignent plus la base (le port 5432 n'est pas
+    # publié). Pour travailler côté hôte, décommenter la ligne ci-dessous et
+    # laisser le conteneur de développement arrêté : les deux partagent le
+    # volume `datazen_pgdata`, un seul doit être en service à la fois.
+    # ports:
+    #   - "127.0.0.1:5432:5432"
 
   web:
     build:
