@@ -57,6 +57,13 @@ de `static/js/main.js`.
 DataZen/
 ├── manage.py                 # Utilitaire de commande Django
 ├── requirements.txt          # Dépendances Python
+├── Dockerfile                # Image de production (python:3.13-slim + Waitress)
+├── docker-compose.yml        # Pile complète : base PostgreSQL + application
+├── .dockerignore             # Contexte de build allégé
+├── .env.example              # Modèle de configuration (à copier en .env)
+├── docker/
+│   └── entrypoint.py         # Attente de la base, migrations, puis exécution WSGI
+├── samples/                  # Jeux de données d'exemple (CSV, Excel, JSON, TSV)
 ├── datazen/                  # Configuration du projet
 │   ├── settings.py
 │   ├── urls.py
@@ -179,7 +186,9 @@ DataZen/
    python manage.py runserver
    ```
 
-   Ouvrez ensuite <http://127.0.0.1:8000/>.
+   Ouvrez ensuite <http://127.0.0.1:8000/>. Le dossier `samples/` contient des
+   jeux de données d'exemple (CSV, Excel, JSON, TSV) prêts à être téléversés
+   pour essayer l'application.
 
    La clé de signature est générée au premier démarrage dans `var/dev_secret_key`
    (ignoré par Git) puis réutilisée. Cette persistance est indispensable : une

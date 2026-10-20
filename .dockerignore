@@ -34,6 +34,7 @@ design/
 
 # Jeux de données de démonstration à la racine du dépôt
 donnees_*
+samples/
 
 # Front-end Vite (42 Mo) : les assets compilés vivent déjà dans static/
 frontend/
@@ -51,7 +52,7 @@ Thumbs.db
 _chk_*.py
 _smoke_*.py
 
-# Documentation et fichiers d'orchestration (inutiles dans l'image)
+# Documentation, rapports locaux et orchestration (inutiles dans l'image)
 README.md
 SECURITY-REVIEW.md
 Dockerfile

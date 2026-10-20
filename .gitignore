@@ -41,6 +41,10 @@ frontend/dist/
 # Sources de design (non servies : intrants de build et références)
 /design/
 
+# Rapports d'audit locaux : décrivent des vulnérabilités exploitables,
+# ils ne doivent pas être publiés avec le code.
+SECURITY-REVIEW.md
+
 # IDE / éditeurs
 .vscode/
 .idea/
