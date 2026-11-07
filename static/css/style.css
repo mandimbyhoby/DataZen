@@ -3482,3 +3482,602 @@ main:has(> .dz-auth-shell) + .dz-footer {
 [data-bs-theme="dark"] .dz-issues-list > li::marker {
     color: #818cf8;
 }
+
+/* ==========================================================================
+   19. Couche « moderne »
+   --------------------------------------------------------------------------
+   Surcouche appliquée en dernier : elle redéfinit les jetons (couleurs,
+   ombres, police) puis affine les composants. Esprit : surfaces nettes,
+   bordures fines, ombres discrètes, couleur de marque utilisée avec
+   parcimonie (le dégradé reste réservé aux accents).
+   ========================================================================== */
+
+:root {
+    --dz-font-sans: "Geist", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --dz-font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --bs-body-font-family: var(--dz-font-sans);
+    --bs-font-monospace: var(--dz-font-mono);
+
+    --dz-brand-400: #818cf8;
+    --dz-surface: #ffffff;
+    --dz-surface-2: #f7f7f9;
+    --dz-surface-3: #f1f1f5;
+    --dz-border: rgba(24, 24, 40, 0.08);
+    --dz-border-strong: rgba(24, 24, 40, 0.14);
+    --dz-text: #0b0b14;
+    --dz-text-muted: #5f6475;
+
+    --dz-shadow-xs: 0 1px 2px rgba(16, 16, 32, 0.05);
+    --dz-shadow-sm:
+        0 1px 2px rgba(16, 16, 32, 0.04),
+        0 4px 12px -4px rgba(16, 16, 32, 0.06);
+    --dz-shadow:
+        0 1px 3px rgba(16, 16, 32, 0.05),
+        0 12px 28px -12px rgba(16, 16, 32, 0.12);
+    --dz-shadow-lg:
+        0 2px 6px rgba(16, 16, 32, 0.05),
+        0 28px 56px -24px rgba(16, 16, 32, 0.22);
+    --dz-shadow-brand: 0 8px 20px -8px rgba(79, 70, 229, 0.55);
+    --dz-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+
+    --dz-navbar-bg: rgba(255, 255, 255, 0.72);
+    --dz-navbar-bg-scrolled: rgba(255, 255, 255, 0.86);
+    --dz-navbar-link-hover-bg: rgba(24, 24, 40, 0.05);
+    --dz-navbar-link-active-bg: rgba(79, 70, 229, 0.09);
+
+    --dz-grid-dot: rgba(24, 24, 40, 0.07);
+    --dz-aurora:
+        radial-gradient(42rem 26rem at 18% -6rem, rgba(99, 102, 241, 0.16), transparent 70%),
+        radial-gradient(36rem 22rem at 86% -8rem, rgba(34, 211, 238, 0.13), transparent 70%);
+
+    --bs-body-bg: #f7f7f9;
+    --bs-body-color: #0b0b14;
+    --bs-secondary-color: #5f6475;
+}
+
+:root[data-bs-theme="dark"] {
+    --dz-brand-400: #a5b4fc;
+    --dz-surface: #111117;
+    --dz-surface-2: #09090d;
+    --dz-surface-3: #18181f;
+    --dz-border: rgba(255, 255, 255, 0.08);
+    --dz-border-strong: rgba(255, 255, 255, 0.14);
+    --dz-text: #ededf2;
+    --dz-text-muted: #9a9cab;
+
+    --dz-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.5);
+    --dz-shadow-sm:
+        0 1px 2px rgba(0, 0, 0, 0.4),
+        0 6px 16px -6px rgba(0, 0, 0, 0.5);
+    --dz-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.45),
+        0 16px 36px -14px rgba(0, 0, 0, 0.7);
+    --dz-shadow-lg:
+        0 2px 6px rgba(0, 0, 0, 0.5),
+        0 32px 64px -24px rgba(0, 0, 0, 0.85);
+    --dz-shadow-brand: 0 8px 24px -8px rgba(99, 102, 241, 0.6);
+    --dz-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    --dz-navbar-bg: rgba(12, 12, 18, 0.72);
+    --dz-navbar-bg-scrolled: rgba(12, 12, 18, 0.88);
+    --dz-navbar-link-hover-bg: rgba(255, 255, 255, 0.06);
+    --dz-navbar-link-active-bg: rgba(129, 140, 248, 0.16);
+
+    --dz-grid-dot: rgba(255, 255, 255, 0.06);
+    --dz-aurora:
+        radial-gradient(42rem 26rem at 18% -6rem, rgba(99, 102, 241, 0.24), transparent 70%),
+        radial-gradient(36rem 22rem at 86% -8rem, rgba(34, 211, 238, 0.12), transparent 70%);
+
+    --bs-body-bg: #09090d;
+    --bs-body-color: #ededf2;
+    --bs-secondary-color: #9a9cab;
+}
+
+/* --- 19.1 Base ------------------------------------------------------------ */
+html {
+    scroll-padding-top: 6rem;
+}
+
+body,
+[data-bs-theme="dark"] body {
+    font-family: var(--dz-font-sans);
+    font-feature-settings: "ss01", "cv11";
+    background-color: var(--dz-surface-2);
+    background-image: var(--dz-aurora);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    color: var(--dz-text);
+}
+
+/* Trame de points très légère, estompée vers le bas : donne du relief au
+   haut de page sans charger le contenu. */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 34rem;
+    z-index: -1;
+    pointer-events: none;
+    background-image: radial-gradient(var(--dz-grid-dot) 1px, transparent 1px);
+    background-size: 22px 22px;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, transparent 100%);
+}
+
+body {
+    position: relative;
+    isolation: isolate;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: var(--dz-font-sans);
+    font-weight: 650;
+    letter-spacing: -0.03em;
+}
+
+.dz-section-title,
+.dz-hero h1 {
+    font-weight: 700;
+    letter-spacing: -0.045em;
+}
+
+code, kbd, pre, .dz-kbd {
+    font-family: var(--dz-font-mono);
+}
+
+code {
+    color: var(--dz-brand-600);
+    background: var(--dz-surface-3);
+    border: 1px solid var(--dz-border);
+    padding: 0.08rem 0.35rem;
+    border-radius: 0.4rem;
+}
+
+[data-bs-theme="dark"] code {
+    color: var(--dz-brand-400);
+}
+
+::selection {
+    background: rgba(99, 102, 241, 0.22);
+}
+
+:focus-visible {
+    outline: 2px solid var(--dz-brand-500);
+    outline-offset: 2px;
+}
+
+.dz-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.28rem 0.7rem;
+    border: 1px solid var(--dz-border);
+    border-radius: 999px;
+    background: var(--dz-surface);
+    box-shadow: var(--dz-shadow-xs);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--dz-brand-600);
+}
+
+.dz-eyebrow::before {
+    content: "";
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: var(--dz-gradient);
+}
+
+[data-bs-theme="dark"] .dz-eyebrow {
+    color: var(--dz-brand-400);
+}
+
+/* --- 19.2 Barre de navigation flottante ---------------------------------- */
+.dz-navbar {
+    background-image: none;
+    border-bottom: 1px solid var(--dz-border);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.dz-navbar::after {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .dz-navbar {
+        top: 0.75rem;
+        width: min(100% - 2rem, 84rem);
+        margin: 0.75rem auto 0;
+        padding: 0.4rem 0.5rem;
+        border: 1px solid var(--dz-border);
+        border-radius: 1.1rem;
+        box-shadow: var(--dz-shadow-sm), var(--dz-highlight);
+    }
+
+    .dz-navbar.is-scrolled {
+        box-shadow: var(--dz-shadow), var(--dz-highlight);
+    }
+
+    .dz-navbar .container {
+        max-width: none;
+        padding-inline: 0.5rem;
+    }
+
+    .dz-page {
+        padding-top: clamp(2.25rem, 1.75rem + 1.6vw, 3.25rem);
+    }
+
+    .dz-auth-shell {
+        margin-top: -4.5rem;
+        padding-top: 4.5rem;
+    }
+}
+
+.dz-navbar .nav-link {
+    font-size: 0.92rem;
+    color: var(--dz-text-muted);
+    border-radius: 0.65rem;
+    padding: 0.4rem 0.75rem;
+}
+
+.dz-navbar .nav-link:not(.dropdown-toggle)::after {
+    display: none;
+}
+
+.dz-navbar .nav-link:hover,
+.dz-navbar .nav-link:focus-visible {
+    color: var(--dz-text);
+}
+
+.dz-navbar .nav-link.active {
+    color: var(--dz-brand-600);
+    box-shadow: none;
+    font-weight: 600;
+}
+
+[data-bs-theme="dark"] .dz-navbar .nav-link.active {
+    color: var(--dz-brand-400);
+}
+
+.dz-navbar .navbar-nav > li > .dz-search-trigger,
+.dz-navbar .navbar-nav > li > #theme-toggle {
+    min-height: 2.25rem;
+    border-radius: 0.65rem;
+    border: 1px solid var(--dz-border);
+    background: var(--dz-surface);
+    box-shadow: var(--dz-shadow-xs);
+}
+
+/* Menus déroulants : panneau net, éléments arrondis. */
+.dropdown-menu {
+    --bs-dropdown-link-active-bg: rgba(79, 70, 229, 0.1);
+    --bs-dropdown-link-active-color: var(--dz-brand-600);
+    padding: 0.35rem;
+    border: 1px solid var(--dz-border);
+    border-radius: 0.9rem;
+    background: var(--dz-surface);
+    box-shadow: var(--dz-shadow-lg) !important;
+    font-size: 0.92rem;
+}
+
+.dropdown-item {
+    border-radius: 0.55rem;
+    padding: 0.45rem 0.7rem;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background: var(--dz-surface-3);
+    color: var(--dz-text);
+}
+
+/* --- 19.3 Surfaces -------------------------------------------------------- */
+.card,
+.dz-panel {
+    border: 1px solid var(--dz-border);
+    border-radius: 1.25rem;
+    background: var(--dz-surface);
+    box-shadow: var(--dz-shadow-sm), var(--dz-highlight);
+}
+
+.dz-panel-xl {
+    border-radius: 1.5rem;
+    box-shadow: var(--dz-shadow), var(--dz-highlight);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card h5,
+.card .card-title {
+    font-size: 1.02rem;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+}
+
+.dz-card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--dz-shadow-lg);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+.dz-card-accent::before {
+    height: 2px;
+}
+
+/* Indicateurs */
+.dz-stat,
+.dz-kpi-card {
+    border-radius: 1rem;
+    box-shadow: var(--dz-shadow-xs), var(--dz-highlight);
+}
+
+.dz-kpi-card {
+    border-inline-start: 1px solid var(--dz-border);
+    padding: 1.1rem 1.15rem 1.2rem;
+}
+
+.dz-kpi-card::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto auto 1.15rem;
+    width: 2rem;
+    height: 2px;
+    border-radius: 0 0 2px 2px;
+    background: var(--dz-kpi-accent);
+}
+
+.dz-kpi-card__value,
+.dz-stat .dz-stat-value {
+    font-weight: 650;
+    letter-spacing: -0.05em;
+    font-variant-numeric: tabular-nums;
+}
+
+.dz-feature .dz-feature-icon,
+.dz-kpi-card__icon {
+    border: 1px solid var(--dz-border);
+}
+
+/* --- 19.4 Boutons --------------------------------------------------------- */
+.btn {
+    font-weight: 550;
+    border-radius: 0.7rem;
+    letter-spacing: -0.01em;
+}
+
+.btn-lg {
+    border-radius: 0.85rem;
+}
+
+.btn-sm {
+    border-radius: 0.55rem;
+}
+
+/* Bouton principal : couleur pleine, léger dégradé vertical et reflet
+   intérieur, plutôt que l'arc-en-ciel indigo → cyan. */
+.btn-primary,
+.btn-primary:disabled,
+.btn-primary.disabled {
+    background: linear-gradient(180deg, #6366f1 0%, #4f46e5 100%);
+    border: 1px solid #4338ca;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.22),
+        0 1px 2px rgba(16, 16, 32, 0.12),
+        0 6px 16px -8px rgba(79, 70, 229, 0.7);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: linear-gradient(180deg, #7072f5 0%, #5a52ea 100%);
+    filter: none;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.25),
+        0 2px 4px rgba(16, 16, 32, 0.12),
+        0 10px 22px -8px rgba(79, 70, 229, 0.75);
+}
+
+.btn-outline-secondary,
+.btn-outline-primary,
+.btn-light {
+    background: var(--dz-surface);
+    border: 1px solid var(--dz-border-strong);
+    color: var(--dz-text);
+    box-shadow: var(--dz-shadow-xs);
+}
+
+.btn-outline-secondary:hover,
+.btn-light:hover {
+    background: var(--dz-surface-3);
+    border-color: var(--dz-border-strong);
+    color: var(--dz-text);
+}
+
+.btn-outline-primary {
+    color: var(--dz-brand-600);
+}
+
+.btn-outline-primary:hover {
+    background: rgba(79, 70, 229, 0.08);
+    border-color: rgba(79, 70, 229, 0.45);
+    color: var(--dz-brand-600);
+    box-shadow: var(--dz-shadow-xs);
+}
+
+[data-bs-theme="dark"] .btn-outline-primary,
+[data-bs-theme="dark"] .btn-outline-primary:hover {
+    color: var(--dz-brand-400);
+}
+
+.btn-outline-danger {
+    background: var(--dz-surface);
+    border-color: rgba(239, 68, 68, 0.4);
+    box-shadow: var(--dz-shadow-xs);
+}
+
+/* --- 19.5 Formulaires ----------------------------------------------------- */
+.form-control,
+.form-select {
+    border-radius: 0.7rem;
+    border-color: var(--dz-border-strong);
+    background-color: var(--dz-surface);
+    box-shadow: var(--dz-shadow-xs);
+    font-size: 0.95rem;
+}
+
+.form-control:hover,
+.form-select:hover {
+    border-color: rgba(99, 102, 241, 0.35);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--dz-brand-500);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+.form-control::placeholder {
+    color: color-mix(in srgb, var(--dz-text-muted) 70%, transparent);
+}
+
+.form-label {
+    font-weight: 550;
+    font-size: 0.875rem;
+}
+
+.form-check-input {
+    border-color: var(--dz-border-strong);
+    border-radius: 0.35em;
+}
+
+.form-check-input:checked {
+    background-color: var(--dz-brand-500);
+    border-color: var(--dz-brand-500);
+}
+
+.form-switch .form-check-input {
+    border-radius: 2em;
+}
+
+.dz-dropzone {
+    border: 1.5px dashed rgba(99, 102, 241, 0.35);
+    border-radius: 1.1rem;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.09), transparent 70%),
+        var(--dz-surface-2);
+}
+
+.dz-dropzone:hover,
+.dz-dropzone.is-dragover {
+    background:
+        radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.16), transparent 70%),
+        var(--dz-surface-2);
+}
+
+/* --- 19.6 Tableaux -------------------------------------------------------- */
+.table thead th {
+    background: var(--dz-surface-2);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    border-bottom: 1px solid var(--dz-border);
+}
+
+.table td {
+    border-color: var(--dz-border);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    --bs-table-bg-type: color-mix(in srgb, var(--dz-surface-3) 55%, transparent);
+}
+
+.table-hover > tbody > tr:hover > * {
+    --bs-table-bg-state: rgba(99, 102, 241, 0.05);
+}
+
+/* --- 19.7 Badges & alertes : teintes douces ------------------------------ */
+.badge {
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.32em 0.7em;
+    letter-spacing: 0;
+}
+
+.badge.text-bg-success   { background: rgba(16, 185, 129, 0.13) !important; color: #047857 !important; }
+.badge.text-bg-danger    { background: rgba(239, 68, 68, 0.12) !important;  color: #b91c1c !important; }
+.badge.text-bg-warning   { background: rgba(245, 158, 11, 0.16) !important; color: #b45309 !important; }
+.badge.text-bg-info      { background: rgba(6, 182, 212, 0.13) !important;  color: #0e7490 !important; }
+.badge.text-bg-primary   { background: rgba(99, 102, 241, 0.13) !important; color: #4338ca !important; }
+.badge.text-bg-secondary { background: rgba(100, 116, 139, 0.14) !important; color: #475569 !important; }
+
+[data-bs-theme="dark"] .badge.text-bg-success   { color: #6ee7b7 !important; background: rgba(16, 185, 129, 0.18) !important; }
+[data-bs-theme="dark"] .badge.text-bg-danger    { color: #fca5a5 !important; background: rgba(239, 68, 68, 0.18) !important; }
+[data-bs-theme="dark"] .badge.text-bg-warning   { color: #fcd34d !important; background: rgba(245, 158, 11, 0.18) !important; }
+[data-bs-theme="dark"] .badge.text-bg-info      { color: #67e8f9 !important; background: rgba(6, 182, 212, 0.18) !important; }
+[data-bs-theme="dark"] .badge.text-bg-primary   { color: #c7d2fe !important; background: rgba(99, 102, 241, 0.22) !important; }
+[data-bs-theme="dark"] .badge.text-bg-secondary { color: #cbd5e1 !important; background: rgba(148, 163, 184, 0.16) !important; }
+
+.alert {
+    border: 1px solid var(--dz-border);
+    border-left-width: 1px;
+    border-radius: 0.9rem;
+    box-shadow: var(--dz-shadow-xs);
+    font-size: 0.94rem;
+}
+
+.alert-success { background: color-mix(in srgb, #10b981 9%, var(--dz-surface));  border-color: color-mix(in srgb, #10b981 30%, transparent); color: var(--dz-text); }
+.alert-danger  { background: color-mix(in srgb, #ef4444 8%, var(--dz-surface));  border-color: color-mix(in srgb, #ef4444 30%, transparent); color: var(--dz-text); }
+.alert-warning { background: color-mix(in srgb, #f59e0b 10%, var(--dz-surface)); border-color: color-mix(in srgb, #f59e0b 32%, transparent); color: var(--dz-text); }
+.alert-info    { background: color-mix(in srgb, #06b6d4 8%, var(--dz-surface));  border-color: color-mix(in srgb, #06b6d4 30%, transparent); color: var(--dz-text); }
+
+.progress {
+    border-radius: 999px;
+    background: var(--dz-surface-3);
+}
+
+.progress-bar {
+    border-radius: 999px;
+}
+
+/* --- 19.8 Fil d'Ariane, pied de page ------------------------------------- */
+.breadcrumb {
+    font-size: 0.875rem;
+}
+
+.breadcrumb-item a {
+    color: var(--dz-text-muted);
+}
+
+.breadcrumb-item a:hover {
+    color: var(--dz-brand-600);
+}
+
+.dz-footer {
+    background: transparent;
+    border-top: 1px solid var(--dz-border);
+}
+
+[data-bs-theme="dark"] .dz-footer {
+    background: transparent;
+}
+
+.dz-footer h6 {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: var(--dz-text-muted);
+}
+
+/* --- 19.9 Défilement ----------------------------------------------------- */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--dz-border-strong) transparent;
+}
+
+/* La rangée `.row.w-100` combinait largeur pleine et marges négatives de
+   gouttière : la carte d'authentification était décalée vers la gauche. */
+.dz-auth > .row.w-100 {
+    margin-inline: 0;
+}
