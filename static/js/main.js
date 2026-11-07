@@ -616,3 +616,61 @@ function initTableSearch() {
         });
     });
 })();
+
+/* ---------------------------------------------------------------------------
+   Pastilles d'icône : l'emoji placé en tête d'un titre de page ou de carte
+   (« 📊 Tableau de bord ») est isolé dans un <span class="dz-emoji">, que le
+   CSS présente comme une icône sur fond teinté. Le texte traduit n'est pas
+   modifié : seul le premier nœud texte est découpé.
+   --------------------------------------------------------------------------- */
+(function () {
+    "use strict";
+
+    const LEADING_EMOJI = /^\s*((?:\p{Extended_Pictographic}|\p{Regional_Indicator})(?:️|‍(?:\p{Extended_Pictographic})|\p{Emoji_Modifier})*️?)\s*/u;
+    const SELECTOR = [
+        ".dz-page-head h1",
+        ".card-title",
+        ".card h2.h5",
+        ".card h2.h6",
+        ".card h3.h5",
+        ".card h3.h6",
+        ".card h4.h6",
+    ].join(",");
+
+    function decorate(heading) {
+        if (heading.querySelector(".dz-emoji")) {
+            return;
+        }
+        const first = heading.firstChild;
+        let node = first;
+        while (node && node.nodeType === Node.TEXT_NODE && !node.nodeValue.trim()) {
+            node = node.nextSibling;
+        }
+        if (!node || node.nodeType !== Node.TEXT_NODE) {
+            return;
+        }
+        const match = LEADING_EMOJI.exec(node.nodeValue);
+        if (!match) {
+            return;
+        }
+        const icon = document.createElement("span");
+        icon.className = "dz-emoji";
+        icon.setAttribute("aria-hidden", "true");
+        icon.textContent = match[1];
+        node.nodeValue = node.nodeValue.slice(match[0].length);
+        heading.insertBefore(icon, node);
+        heading.classList.add("dz-has-emoji");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(SELECTOR).forEach(decorate);
+
+        // Rapport : les titres Markdown hérités du rapport texte
+        // (« === RAPPORT … === ») perdent leurs bordures d'égalités à l'écran.
+        document.querySelectorAll(".report-content h1, .report-content h2").forEach(function (h) {
+            if (h.children.length === 0) {
+                h.textContent = h.textContent.replace(/^\s*=+\s*|\s*=+\s*$/g, "");
+            }
+        });
+    });
+})();

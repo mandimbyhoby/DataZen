@@ -4081,3 +4081,234 @@ code {
 .dz-auth > .row.w-100 {
     margin-inline: 0;
 }
+
+/* ==========================================================================
+   20. Pages : en-têtes en bandeau, pastilles d'icône, fonds d'ambiance
+   ========================================================================== */
+
+/* --- 20.1 Bandeau d'en-tête de page -------------------------------------- */
+/* Chaque page interne ouvre sur un bandeau : maillage de couleurs doux,
+   trame de points et grand titre. La règle cible l'en-tête direct de
+   `.dz-page` pour ne pas toucher aux usages internes de la classe. */
+.dz-page > .dz-page-head {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: clamp(1.4rem, 1rem + 1.6vw, 2.25rem) clamp(1.25rem, 0.9rem + 1.8vw, 2.5rem);
+    border: 1px solid var(--dz-border);
+    border-radius: 1.5rem;
+    background:
+        radial-gradient(28rem 16rem at 0% 0%, rgba(99, 102, 241, 0.14), transparent 70%),
+        radial-gradient(24rem 14rem at 100% 100%, rgba(34, 211, 238, 0.12), transparent 70%),
+        radial-gradient(20rem 12rem at 85% 0%, rgba(168, 85, 247, 0.10), transparent 70%),
+        var(--dz-surface);
+    box-shadow: var(--dz-shadow-sm), var(--dz-highlight);
+    margin-bottom: clamp(1.75rem, 1.25rem + 1.6vw, 2.75rem);
+}
+
+.dz-page > .dz-page-head::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: radial-gradient(var(--dz-grid-dot) 1px, transparent 1px);
+    background-size: 18px 18px;
+    -webkit-mask-image: linear-gradient(105deg, transparent 30%, #000 100%);
+    mask-image: linear-gradient(105deg, transparent 30%, #000 100%);
+    pointer-events: none;
+}
+
+.dz-page > .dz-page-head h1 {
+    font-size: clamp(1.55rem, 1.2rem + 1.4vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    margin-bottom: 0.35rem !important;
+}
+
+.dz-page > .dz-page-head p {
+    max-width: 44rem;
+    font-size: 0.98rem;
+}
+
+.dz-page > .dz-page-head .dz-eyebrow {
+    margin-bottom: 0.9rem;
+}
+
+[data-bs-theme="dark"] .dz-page > .dz-page-head {
+    background:
+        radial-gradient(28rem 16rem at 0% 0%, rgba(99, 102, 241, 0.22), transparent 70%),
+        radial-gradient(24rem 14rem at 100% 100%, rgba(34, 211, 238, 0.12), transparent 70%),
+        radial-gradient(20rem 12rem at 85% 0%, rgba(168, 85, 247, 0.14), transparent 70%),
+        var(--dz-surface);
+}
+
+/* Le fil d'Ariane se place juste au-dessus du bandeau. */
+.dz-page > nav[aria-label] .breadcrumb {
+    margin-bottom: 0.85rem;
+}
+
+/* --- 20.2 Pastilles d'icône (emoji de titre isolé par main.js) ----------- */
+.dz-has-emoji {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.dz-emoji {
+    display: inline-grid;
+    flex: 0 0 auto;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--dz-border);
+    border-radius: 0.65rem;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)),
+        linear-gradient(135deg, rgba(99, 102, 241, 0.14), rgba(34, 211, 238, 0.12));
+    box-shadow: var(--dz-shadow-xs);
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.dz-page-head h1 .dz-emoji {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.85rem;
+    font-size: 1.35rem;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.4)),
+        linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(34, 211, 238, 0.2));
+    box-shadow: var(--dz-shadow-sm), var(--dz-highlight);
+}
+
+[data-bs-theme="dark"] .dz-emoji,
+[data-bs-theme="dark"] .dz-page-head h1 .dz-emoji {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.22), rgba(34, 211, 238, 0.12));
+}
+
+/* Titres de carte : séparés du contenu par un vrai blanc. */
+.card .card-title.dz-has-emoji,
+.card h2.dz-has-emoji,
+.card h3.dz-has-emoji {
+    margin-bottom: 1rem;
+}
+
+/* --- 20.3 Pages d'authentification sans vidéo ---------------------------- */
+/* Inscription, mot de passe oublié… : la carte flotte sur un fond
+   d'ambiance au lieu d'un aplat gris. */
+main:has(> .dz-auth) {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(34rem 24rem at 15% 20%, rgba(99, 102, 241, 0.18), transparent 70%),
+        radial-gradient(30rem 22rem at 85% 75%, rgba(34, 211, 238, 0.16), transparent 70%),
+        radial-gradient(24rem 18rem at 70% 10%, rgba(168, 85, 247, 0.12), transparent 70%);
+}
+
+main:has(> .dz-auth)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: radial-gradient(var(--dz-grid-dot) 1px, transparent 1px);
+    background-size: 22px 22px;
+    -webkit-mask-image: radial-gradient(60% 60% at 50% 45%, #000, transparent);
+    mask-image: radial-gradient(60% 60% at 50% 45%, #000, transparent);
+    pointer-events: none;
+}
+
+main:has(> .dz-auth) + .dz-footer {
+    margin-top: 0;
+}
+
+.dz-auth-card {
+    border-radius: 1.5rem;
+}
+
+main > .dz-auth .dz-auth-card {
+    background: color-mix(in srgb, var(--dz-surface) 82%, transparent);
+    border: 1px solid var(--dz-border);
+    box-shadow: var(--dz-shadow-lg), var(--dz-highlight);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    backdrop-filter: blur(18px) saturate(140%);
+}
+
+/* --- 20.4 Rapport --------------------------------------------------------- */
+.report-content h1 {
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+    letter-spacing: -0.04em;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--dz-border);
+}
+
+.report-content h2 {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    letter-spacing: -0.03em;
+}
+
+.report-content h3 {
+    margin-top: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.report-content table {
+    margin-block: 0.75rem 1.25rem;
+    border: 1px solid var(--dz-border);
+    border-radius: 0.9rem;
+    overflow: hidden;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* --- 20.5 Détails ---------------------------------------------------------- */
+/* Les rangées d'actions des en-têtes restent groupées et alignées. */
+.dz-page > .dz-page-head > .d-flex {
+    position: relative;
+}
+
+/* Les cartes cliquables (raccourcis, fonctionnalités) gagnent un reflet
+   de marque au survol. */
+.dz-feature:hover,
+.dz-shortcut-tile:hover {
+    border-color: rgba(99, 102, 241, 0.35);
+    box-shadow: var(--dz-shadow-lg), 0 0 0 4px rgba(99, 102, 241, 0.06);
+}
+
+/* --- 20.6 Champs rendus sans classe -------------------------------------- */
+/* Certains formulaires Django (mot de passe oublié…) affichent le widget
+   brut : on lui donne l'apparence de `.form-control`. */
+form :is(input[type="email"], input[type="text"], input[type="password"],
+         input[type="url"], input[type="number"], input[type="date"],
+         input[type="datetime-local"], select, textarea):not([class]) {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 0.85rem;
+    font: inherit;
+    font-size: 0.95rem;
+    color: var(--dz-text);
+    background: var(--dz-surface);
+    border: 1px solid var(--dz-border-strong);
+    border-radius: 0.7rem;
+    box-shadow: var(--dz-shadow-xs);
+    transition: border-color var(--dz-transition), box-shadow var(--dz-transition);
+}
+
+form :is(input, select, textarea):not([class]):focus {
+    outline: none;
+    border-color: var(--dz-brand-500);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+/* Titres équilibrés : pas de « ? » ou de mot isolé en fin de titre. */
+h1, h2, h3, .h1, .h2, .h3, .card-title {
+    text-wrap: balance;
+}
+
+/* Badges neutres (`text-bg-light` / `text-bg-dark`) en teinte douce. */
+.badge.text-bg-light,
+.badge.text-bg-dark {
+    background: rgba(100, 116, 139, 0.12) !important;
+    color: var(--dz-text-muted) !important;
+    border: 1px solid var(--dz-border);
+}
