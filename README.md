@@ -210,7 +210,11 @@ DataZen/
    .\start-dev.ps1 -Port 8080   # autre port
    .\start-dev.ps1 -Sqlite      # force SQLite
    .\start-dev.ps1 -Postgres    # force PostgreSQL (échoue si absent)
+   .\start-dev.ps1 -NoBrowser   # n'ouvre pas le navigateur
    ```
+
+   Dès que le serveur répond, le lanceur ouvre <http://127.0.0.1:8000/> dans
+   le navigateur par défaut (option `-NoBrowser` pour s'en passer).
 
    `start-dev.bat` fait la même chose et se lance par double-clic. Le script
    refuse de démarrer si le port est déjà occupé et indique le PID à libérer.

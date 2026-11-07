@@ -19,16 +19,22 @@
 .PARAMETER Postgres
     Force PostgreSQL : echoue si le serveur n'est pas joignable.
 
+.PARAMETER NoBrowser
+    N'ouvre pas le navigateur. Par defaut, la page d'accueil s'ouvre dans le
+    navigateur par defaut des que le serveur repond.
+
 .EXAMPLE
     .\start-dev.ps1
     .\start-dev.ps1 -Port 8080
     .\start-dev.ps1 -Sqlite
+    .\start-dev.ps1 -NoBrowser
 #>
 [CmdletBinding()]
 param(
     [int]$Port = 8000,
     [switch]$Sqlite,
-    [switch]$Postgres
+    [switch]$Postgres,
+    [switch]$NoBrowser
 )
 
 $ErrorActionPreference = 'Stop'
@@ -99,8 +105,33 @@ if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
 }
 
+# --- Ouverture du navigateur -------------------------------------------------
+# `runserver` bloque cette fenetre : une tache d'arriere-plan attend que le
+# port reponde (30 s maximum), puis ouvre l'URL dans le navigateur par defaut.
+$url = "http://127.0.0.1:$Port/"
+if (-not $NoBrowser) {
+    $null = Start-Job -ArgumentList $Port, $url -ScriptBlock {
+        param($p, $u)
+        for ($i = 0; $i -lt 60; $i++) {
+            $client = New-Object System.Net.Sockets.TcpClient
+            try {
+                $client.Connect('127.0.0.1', $p)
+                Start-Process $u
+                return
+            } catch {
+                Start-Sleep -Milliseconds 500
+            } finally {
+                $client.Dispose()
+            }
+        }
+    }
+}
+
 # --- Serveur -----------------------------------------------------------------
-Write-Step "Demarrage du serveur sur http://127.0.0.1:$Port/"
+Write-Step "Demarrage du serveur sur $url"
+if (-not $NoBrowser) {
+    Write-Host "    Le navigateur s'ouvrira automatiquement des que le serveur repond." -ForegroundColor Gray
+}
 Write-Host "    Arret avec Ctrl+C. Cette fenetre doit rester ouverte." -ForegroundColor Gray
 Write-Host ""
 
