@@ -56,11 +56,17 @@ de `static/js/main.js`.
 ```
 DataZen/
 ├── manage.py                 # Utilitaire de commande Django
-├── requirements.txt          # Dépendances Python
+├── requirements.txt          # Dépendances Python (dépendances directes)
+├── requirements.lock.txt     # Verrou : versions exactes + hachages SHA-256
 ├── Dockerfile                # Image de production (python:3.13-slim + Waitress)
 ├── docker-compose.yml        # Pile complète : base PostgreSQL + application
 ├── .dockerignore             # Contexte de build allégé
 ├── .env.example              # Modèle de configuration (à copier en .env)
+├── start-dev.ps1             # Lanceur de développement (migrations + serveur)
+├── start-dev.bat            # Même lanceur, par double-clic
+├── scripts/
+│   ├── backup.ps1            # Sauvegarde base + médias (rotation)
+│   └── restore.ps1           # Restauration vérifiée (jamais destructive sans -Force)
 ├── docker/
 │   └── entrypoint.py         # Attente de la base, migrations, puis exécution WSGI
 ├── samples/                  # Jeux de données d'exemple (CSV, Excel, JSON, TSV)
@@ -160,8 +166,14 @@ DataZen/
 2. **Installer les dépendances** :
 
    ```powershell
-   pip install -r requirements.txt
+   pip install --require-hashes -r requirements.lock.txt
    ```
+
+   > Le verrou fige **aussi** les dépendances transitives et vérifie le SHA-256
+   > de chaque archive : pip refuse tout fichier substitué. `requirements.txt`
+   > reste la source de vérité (dépendances directes, versions épinglées) ; le
+   > verrou en est dérivé. Pour un environnement de développement sans
+   > vérification des hachages : `pip install -r requirements.txt`.
 
 3. **Fournir un PostgreSQL** — le moteur par défaut. Copiez `.env.example` vers
    `.env` et renseignez `DJANGO_DB_PASSWORD` (voir
@@ -189,6 +201,21 @@ DataZen/
    Ouvrez ensuite <http://127.0.0.1:8000/>. Le dossier `samples/` contient des
    jeux de données d'exemple (CSV, Excel, JSON, TSV) prêts à être téléversés
    pour essayer l'application.
+
+   Un lanceur est fourni pour éviter de retenir ces détails — il applique les
+   migrations, choisit le moteur de base de données et démarre le serveur :
+
+   ```powershell
+   .\start-dev.ps1              # port 8000, moteur déduit de .env
+   .\start-dev.ps1 -Port 8080   # autre port
+   .\start-dev.ps1 -Sqlite      # force SQLite
+   .\start-dev.ps1 -Postgres    # force PostgreSQL (échoue si absent)
+   ```
+
+   `start-dev.bat` fait la même chose et se lance par double-clic. Le script
+   refuse de démarrer si le port est déjà occupé et indique le PID à libérer.
+   Si `DJANGO_DB_ENGINE=postgresql` mais qu'aucun serveur n'écoute sur le port
+   5432, il bascule automatiquement sur SQLite en le signalant.
 
    La clé de signature est générée au premier démarrage dans `var/dev_secret_key`
    (ignoré par Git) puis réutilisée. Cette persistance est indispensable : une
@@ -801,7 +828,7 @@ repartir d'une base propre : `python manage.py migrate`.
 ### 3. Préparation
 
 ```bash
-pip install -r requirements.txt
+pip install --require-hashes -r requirements.lock.txt
 python manage.py migrate
 python manage.py collectstatic --noinput
 python manage.py check --deploy
@@ -857,7 +884,128 @@ Le test décisif est la première visite : si vous voyez
 `Missing staticfiles manifest entry`, c'est que `collectstatic` n'a pas été
 relancé sur le serveur.
 
-### 6. Limites connues
+### 6. Dépendances
+
+Les paquets ne sont pas installés depuis `requirements.txt` mais depuis
+`requirements.lock.txt`, avec `--require-hashes` :
+
+```bash
+pip install --require-hashes -r requirements.lock.txt
+```
+
+Le verrou contient les versions exactes des dépendances **directes et
+transitives**, chacune accompagnée du SHA-256 de ses archives. pip vérifie ces
+empreintes avant installation : un paquet substitué (dépendance compromise,
+miroir malveillant, attaque par confusion de nom) fait échouer l'installation
+au lieu d'entrer silencieusement en production. C'est aussi ce que fait le
+`Dockerfile`.
+
+Pour régénérer le verrou après une modification de `requirements.txt` :
+
+```bash
+pip install --require-hashes -r requirements.lock.txt   # conserver l'existant
+pip freeze | Out-File requirements.lock.txt              # puis re-hacher
+```
+
+L'ancien verrou sert de contrainte : les versions déjà validées par la suite de
+tests sont conservées, seules les dépendances modifiées sont recalculées. Puis
+`python manage.py test core`, `docker compose build` et
+`python manage.py check --deploy`.
+
+### 7. Sauvegarde et restauration
+
+Une application qui traite des données utilisateur sans sauvegarde testée n'est
+pas déployable : une base corrompue ou un disque perdu efface définitivement le
+travail des utilisateurs. Deux éléments distincts doivent être sauvegardés.
+
+| Élément | Contenu | Perte si absent |
+| --- | --- | --- |
+| Base PostgreSQL | Comptes, jeux de données, nettoyages, journal d'activité | Tout est à reconstruire |
+| Répertoire `media/` | Fichiers importés par les utilisateurs | Datasets introuvables, base incohérente |
+| `.env` | Clé secrète, accès SMTP et base | Sessions invalidées, plus d'envoi d'e-mail |
+
+> ⚠️ **Base et `media/` vont ensemble.** Restaurer l'une sans l'autre laisse des
+> `DataFile` qui pointent vers des fichiers disparus (ou l'inverse). Sauvegardez
+> et restaurez toujours les deux au même instant.
+
+#### Sauvegarde
+
+`scripts/backup.ps1` automatise l'ensemble (base + médias + horodatage +
+rotation) :
+
+```powershell
+.\scripts\backup.ps1                       # vers .\backups
+.\scripts\backup.ps1 -Keep 30              # ne garde que 30 archives
+.\scripts\backup.ps1 -Destination D:\srv  # autre disque
+```
+
+Équivalent manuel, si vous préférez garder la main :
+
+```bash
+pg_dump --format=custom --no-owner --no-acl \
+        --file=backup-$(date +%F).dump datazen
+tar -czf media-$(date +%F).tar.gz media/
+```
+
+`--format=custom` produit une archive compressée restaurable sélectivement avec
+`pg_restore`. N'utilisez pas `pg_dump` en SQL brut pour une sauvegarde
+automatisée : la restauration y est bien plus fragile (ordre des objets,
+extensions, séquences).
+
+Sous Docker, passez par le conteneur pour éviter tout décalage de version entre
+le client `pg_dump` de l'hôte et le serveur :
+
+```bash
+docker compose exec -T db pg_dump -U datazen --format=custom datazen > backup.dump
+```
+
+#### Restauration
+
+`scripts/restore.ps1` restaure les deux éléments et vérifie l'intégrité de la
+base. Par sécurité, la base active n'est **jamais** écrasée sans `-Force` :
+PostgreSQL restaure dans `<base>_restaure`, SQLite dans un fichier séparé.
+
+```powershell
+.\scripts\restore.ps1 -List                     # voir les archives disponibles
+.\scripts\restore.ps1 -DbArchive .\backups\datazen-db-20260115-030000.dump
+.\scripts\restore.ps1 -MediaArchive .\backups\datazen-media-20260115-030000.tar.gz
+```
+
+Équivalent manuel :
+
+```bash
+createdb -O datazen datazen_restaure
+pg_restore --no-owner --no-acl --dbname=datazen_restaure backup.dump
+tar -xzf media-2026-01-15.tar.gz          # remet media/ en place
+```
+
+Puis pointez `DJANGO_DB_NAME` sur la base restaurée, lancez `python manage.py
+migrate`, et vérifiez que `python manage.py check --deploy` reste propre.
+
+#### Vérifier qu'une sauvegarde est utilisable
+
+Une archive jamais restaurée n'est pas une sauvegarde. **Une fois par mois**,
+restaurez la dernière archive dans une base jetable (`datazen_restaure`
+ci-dessus) et ouvrez la page de connexion : si elle s'affiche et qu'un compte
+existant peut se connecter, la sauvegarde est valide. Supprimez ensuite la base
+jetable.
+
+`scripts/restore.ps1` fait cette vérification automatiquement : il affiche
+`integrity: ok` et le nombre de comptes de l'archive restaurée.
+
+Conservez au moins **une copie hors de la machine** (disque externe, espace
+objet, autre serveur) : une sauvegarde stockée sur le disque qu'elle protège ne
+protège de rien.
+
+Pour automatiser, créez une tâche planifiée quotidienne (Planificateur de
+tâches Windows) :
+
+```powershell
+schtasks /create /tn "DataZen Backup" /sc daily /st 03:00 ^
+  /tr "powershell -NoProfile -ExecutionPolicy Bypass -File C:\DataZen\scripts\backup.ps1 -Keep 14"
+```
+
+### 8. Limites connues
 
 - **Cache local** : la limitation des tentatives de connexion s'appuie sur
   `LocMemCache`, propre à chaque processus. Avec plusieurs workers, configurez
