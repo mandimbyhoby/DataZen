@@ -2383,6 +2383,9 @@ msgstr "공유는 소유자만 관리할 수 있습니다."
 msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
 msgstr "처음 몇 개의 수정만 표시됩니다. 실제 정리에서는 모두 적용됩니다."
 
+msgid "Seuls les %(shown)s premiers éléments sur %(total)s sont affichés ici ; le rapport téléchargeable contient la liste complète."
+msgstr "여기에는 %(total)s개 중 처음 %(shown)s개만 표시됩니다. 전체 목록은 다운로드 가능한 보고서에 포함되어 있습니다."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "http 및 https 스킴만 허용됩니다."
 

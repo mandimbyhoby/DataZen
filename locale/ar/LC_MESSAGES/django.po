@@ -2428,6 +2428,9 @@ msgstr "المالك وحده يمكنه إدارة المشاركات."
 msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
 msgstr "يتم عرض التصحيحات الأولى فقط؛ سيطبق التنظيف الفعلي جميعها."
 
+msgid "Seuls les %(shown)s premiers éléments sur %(total)s sont affichés ici ; le rapport téléchargeable contient la liste complète."
+msgstr "تُعرض هنا أول %(shown)s عناصر فقط من أصل %(total)s؛ يحتوي التقرير القابل للتنزيل على القائمة الكاملة."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "يُسمح بمخططي http و https فقط."
 

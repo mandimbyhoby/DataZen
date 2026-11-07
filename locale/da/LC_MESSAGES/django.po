@@ -2392,6 +2392,9 @@ msgstr "Kun ejeren kan administrere delinger."
 msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
 msgstr "Kun de første rettelser vises; den rigtige rensning anvender dem alle."
 
+msgid "Seuls les %(shown)s premiers éléments sur %(total)s sont affichés ici ; le rapport téléchargeable contient la liste complète."
+msgstr "Her vises kun de første %(shown)s af %(total)s elementer; den rapport, der kan downloades, indeholder hele listen."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "Kun skemaerne http og https er tilladt."
 

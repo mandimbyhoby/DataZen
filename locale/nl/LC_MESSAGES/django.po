@@ -2392,6 +2392,9 @@ msgstr "Alleen de eigenaar kan delingen beheren."
 msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
 msgstr "Alleen de eerste correcties worden getoond; de echte opschoning past ze allemaal toe."
 
+msgid "Seuls les %(shown)s premiers éléments sur %(total)s sont affichés ici ; le rapport téléchargeable contient la liste complète."
+msgstr "Hier worden alleen de eerste %(shown)s van %(total)s items getoond; het downloadbare rapport bevat de volledige lijst."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "Alleen de schema's http en https zijn toegestaan."
 

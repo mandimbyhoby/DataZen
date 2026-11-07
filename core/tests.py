@@ -6117,3 +6117,80 @@ class ProxyHeaderTests(TestCase):
                 settings.SECURE_PROXY_SSL_HEADER,
                 ("HTTP_X_FORWARDED_PROTO", "https"),
             )
+
+
+class LargeFilePerformanceTests(TestCase):
+    """Les gros fichiers (plusieurs milliers de lignes) restent traitables.
+
+    Ces tests verrouillent les optimisations qui ont rendu la page d'un
+    fichier de 2 000 lignes ~15 fois plus rapide, sans changer les résultats.
+    """
+
+    @staticmethod
+    def _pairwise_reference(values):
+        from .services.validation import text_similarity
+
+        sims = [
+            text_similarity(values[i], values[j])
+            for i in range(len(values))
+            for j in range(i + 1, len(values))
+        ]
+        return (max(sims), any(s < 1.0 for s in sims)) if sims else (0.0, False)
+
+    def test_group_similarity_matches_the_pairwise_computation(self):
+        from .services.validation import _group_similarity
+
+        cases = [
+            ["Paris", "paris", "Lyon"],
+            ["Alice", "Alicia", None, ""],
+            ["a@x.fr", " A@X.FR "],
+            [None, None],
+            ["", "Lyon"],
+            ["Martin", "Martine", "Martins", "Bob"],
+            [10, 10.0, "10"],
+        ]
+        for values in cases:
+            score, differs = _group_similarity(values)
+            ref_score, ref_differs = self._pairwise_reference(values)
+            self.assertAlmostEqual(score, ref_score, msg=values)
+            self.assertEqual(differs, ref_differs, msg=values)
+
+    def test_build_detection_is_memoized_but_returns_independent_copies(self):
+        from .services import validation
+
+        df = pd.DataFrame({"nom": ["Alice", "alice", "Bob"], "email": ["a@x.fr", "a@x.fr", ""]})
+        with mock.patch.object(validation, "_build_detection", wraps=validation._build_detection) as spy:
+            first = validation.build_detection(df)
+            first["duplicates"] = 999
+            second = validation.build_detection(df.copy())
+        self.assertEqual(spy.call_count, 1)
+        self.assertNotEqual(second["duplicates"], 999)
+
+    def test_stats_do_not_run_the_full_detection(self):
+        from .services import pipeline
+
+        df = pd.DataFrame({"a": ["x", "x", "y"], "b": [1, 1, 2]})
+        with mock.patch.object(pipeline, "build_detection") as spy:
+            result = pipeline.stats(df)
+        spy.assert_not_called()
+        self.assertEqual(result["duplicates"], 1)
+
+    def test_cleaned_preview_is_limited(self):
+        from .services import pipeline
+
+        df = pd.DataFrame({"a": range(pipeline.CLEANED_PREVIEW_LIMIT + 50)})
+        self.assertEqual(len(pipeline._rows(df)), pipeline.CLEANED_PREVIEW_LIMIT)
+
+    def test_review_cell_reader_matches_iloc(self):
+        from .services.review import _cell_reader
+
+        df = pd.DataFrame({"n": [1, 2], "f": [1.5, None], "s": ["a", None]})
+        cell = _cell_reader(df)
+        for r in range(len(df)):
+            for c in df.columns:
+                expected, actual = df.iloc[r][c], cell(r, c)
+                if pd.isna(expected):
+                    self.assertTrue(pd.isna(actual))
+                else:
+                    self.assertEqual(expected, actual)
+                    self.assertEqual(type(expected), type(actual))

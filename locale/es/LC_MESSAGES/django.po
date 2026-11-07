@@ -2392,6 +2392,9 @@ msgstr "Solo el propietario puede gestionar los usos compartidos."
 msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
 msgstr "Solo se muestran las primeras correcciones; la limpieza real las aplicará todas."
 
+msgid "Seuls les %(shown)s premiers éléments sur %(total)s sont affichés ici ; le rapport téléchargeable contient la liste complète."
+msgstr "Aquí solo se muestran los primeros %(shown)s de %(total)s elementos; el informe descargable contiene la lista completa."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "Solo se permiten los esquemas http y https."
 

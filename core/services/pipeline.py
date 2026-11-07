@@ -31,6 +31,7 @@ from .validation import (
     build_detection,
     compute_quality_score,
     count_missing_cells,
+    detect_duplicates,
     detect_regex_violations,
     parse_regex_rules,
     profile_dataframe,
@@ -60,7 +61,7 @@ def stats(df):
     return {
         "rows": len(df),
         "columns": df.shape[1],
-        "duplicates": build_detection(df)["duplicates"],
+        "duplicates": detect_duplicates(df),
         "missing": count_missing_cells(df),
     }
 
@@ -567,8 +568,14 @@ def build_cleaned_context(data_file, operations=None, regex_rules=None, theme="l
     }
 
 
+# Lignes affichées dans l'aperçu du fichier nettoyé. Le fichier complet reste
+# téléchargeable : au-delà, la page dépassait plusieurs dizaines de mégaoctets
+# (20 000 lignes ≈ 23 Mo de HTML) et le navigateur ne pouvait plus l'afficher.
+CLEANED_PREVIEW_LIMIT = 100
+
+
 def _rows(df):
-    """Convertit toutes les lignes d'un DataFrame en liste de listes."""
+    """Convertit les premières lignes d'un DataFrame en liste de listes."""
     from .reader import dataframe_to_rows
 
-    return dataframe_to_rows(df, limit=None)
+    return dataframe_to_rows(df, limit=CLEANED_PREVIEW_LIMIT)

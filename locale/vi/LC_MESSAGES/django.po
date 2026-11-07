@@ -2383,6 +2383,9 @@ msgstr "Chỉ chủ sở hữu mới quản lý được chia sẻ."
 msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
 msgstr "Chỉ hiển thị những chỉnh sửa đầu tiên; việc làm sạch thực tế sẽ áp dụng tất cả."
 
+msgid "Seuls les %(shown)s premiers éléments sur %(total)s sont affichés ici ; le rapport téléchargeable contient la liste complète."
+msgstr "Chỉ hiển thị %(shown)s mục đầu tiên trên tổng số %(total)s tại đây; báo cáo có thể tải xuống chứa danh sách đầy đủ."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "Chỉ cho phép lược đồ http và https."
 

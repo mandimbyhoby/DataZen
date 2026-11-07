@@ -2401,6 +2401,9 @@ msgstr "Tylko właściciel może zarządzać udostępnieniami."
 msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
 msgstr "Wyświetlane są tylko pierwsze korekty; rzeczywiste czyszczenie zastosuje je wszystkie."
 
+msgid "Seuls les %(shown)s premiers éléments sur %(total)s sont affichés ici ; le rapport téléchargeable contient la liste complète."
+msgstr "Wyświetlono tu tylko pierwsze %(shown)s z %(total)s elementów; pełna lista znajduje się w raporcie do pobrania."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "Dozwolone są tylko schematy http i https."
 

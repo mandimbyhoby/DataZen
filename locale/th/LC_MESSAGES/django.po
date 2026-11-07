@@ -2383,6 +2383,9 @@ msgstr "เจ้าของเท่านั้นที่จัดการ
 msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
 msgstr "แสดงเฉพาะการแก้ไขแรก ๆ เท่านั้น การทำความสะอาดจริงจะนำไปใช้ทั้งหมด"
 
+msgid "Seuls les %(shown)s premiers éléments sur %(total)s sont affichés ici ; le rapport téléchargeable contient la liste complète."
+msgstr "แสดงเฉพาะ %(shown)s รายการแรกจากทั้งหมด %(total)s รายการที่นี่ รายงานที่ดาวน์โหลดได้มีรายการครบถ้วน"
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "อนุญาตเฉพาะสคีมา http และ https เท่านั้น"
 

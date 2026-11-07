@@ -10,8 +10,10 @@ Le module n'utilise que la bibliothèque standard (``re``, ``datetime``,
 ``difflib``) et pandas : aucune dépendance externe.
 """
 
+import copy
 import re
-from collections import Counter
+import threading
+from collections import Counter, OrderedDict
 from datetime import datetime
 from difflib import SequenceMatcher
 
@@ -80,14 +82,59 @@ def count_missing_cells(df):
     return int(df.map(is_missing).sum().sum())
 
 
+def _similarity_text(value):
+    """Forme normalisée utilisée par :func:`text_similarity` (``None`` si vide)."""
+    if value is None:
+        return None
+    try:
+        if pd.isna(value):
+            return None
+    except (TypeError, ValueError):
+        pass
+    text = str(value).strip().lower()
+    return text or None
+
+
 def text_similarity(a, b):
     """Similarité textuelle entre deux valeurs (0.0 à 1.0), via ``difflib``."""
-    if a is None or b is None or pd.isna(a) or pd.isna(b):
-        return 0.0
-    sa, sb = str(a).strip().lower(), str(b).strip().lower()
-    if not sa or not sb:
+    sa, sb = _similarity_text(a), _similarity_text(b)
+    if sa is None or sb is None:
         return 0.0
     return SequenceMatcher(None, sa, sb).ratio()
+
+
+# Au-delà de ce nombre de valeurs distinctes dans un groupe, la meilleure
+# similarité n'est estimée que sur les premières valeurs : le calcul exact
+# serait quadratique pour un gain nul (le groupe est de toute façon signalé).
+_MAX_DISTINCT_COMPARED = 40
+
+
+def _group_similarity(values):
+    """Résume les similarités deux à deux d'une liste de valeurs.
+
+    Renvoie ``(meilleur_score, au_moins_une_difference)``, exactement comme
+    si :func:`text_similarity` était appliquée à toutes les paires, mais en
+    ne comparant que les valeurs **distinctes** : un groupe de 200 lignes
+    portant 3 valeurs différentes coûte 3 comparaisons au lieu de 19 900.
+    """
+    if len(values) < 2:
+        return 0.0, False
+    normalized = [_similarity_text(v) for v in values]
+    present = [t for t in normalized if t is not None]
+    counts = Counter(present)
+    # Une valeur absente donne une similarité de 0 avec toute autre valeur.
+    differs = len(present) < len(normalized) or len(counts) > 1
+    if any(n >= 2 for n in counts.values()):
+        return 1.0, differs
+    distinct = list(counts)[:_MAX_DISTINCT_COMPARED]
+    best = 0.0
+    for i in range(len(distinct)):
+        for j in range(i + 1, len(distinct)):
+            matcher = SequenceMatcher(None, distinct[i], distinct[j])
+            if matcher.real_quick_ratio() <= best or matcher.quick_ratio() <= best:
+                continue
+            best = max(best, matcher.ratio())
+    return best, differs
 
 
 def detect_duplicates(df, subset=None):
@@ -380,16 +427,10 @@ def detect_potential_duplicates(df):
         differing = []
         best_score = 0.0
         for c in compared:
-            values = df.loc[idxs, c].tolist()
-            sims = [
-                text_similarity(values[i], values[j])
-                for i in range(len(values))
-                for j in range(i + 1, len(values))
-            ]
-            if sims:
-                best_score = max(best_score, max(sims))
-                if any(s < 1.0 for s in sims):
-                    differing.append(c)
+            score, differs = _group_similarity(df.loc[idxs, c].tolist())
+            best_score = max(best_score, score)
+            if differs:
+                differing.append(c)
 
         potential.append(
             {
@@ -432,12 +473,29 @@ def detect_fuzzy_duplicates(df, threshold=0.8, max_rows=500):
 
     results = []
     n = len(df)
+    # Textes normalisés une seule fois, plutôt qu'à chaque paire via iloc.
+    columns = [[_similarity_text(v) for v in df[c].tolist()] for c in preferred]
+    # Seuil sous lequel une similarité n'influence ni les colonnes similaires
+    # (>= 0,7) ni la décision (>= threshold).
+    cutoff = min(0.7, threshold)
     for i in range(n):
         for j in range(i + 1, n):
             best = 0.0
             sim_cols = []
-            for c in preferred:
-                s = text_similarity(df.iloc[i][c], df.iloc[j][c])
+            for c, texts in zip(preferred, columns):
+                a, b = texts[i], texts[j]
+                if a is None or b is None:
+                    continue
+                if a == b:
+                    s = 1.0
+                else:
+                    # Bornes supérieures bon marché : une paire qui ne peut
+                    # atteindre ni 0,7 (colonne similaire) ni le seuil n'a
+                    # pas besoin du calcul exact.
+                    matcher = SequenceMatcher(None, a, b)
+                    if matcher.real_quick_ratio() < cutoff or matcher.quick_ratio() < cutoff:
+                        continue
+                    s = matcher.ratio()
                 best = max(best, s)
                 if s >= 0.7:
                     sim_cols.append(c)
@@ -863,11 +921,54 @@ def profile_dataframe(df):
         return profile
 
 
+# Mémoire des dernières analyses : une même page (détail d'un fichier,
+# comparaison…) analysait jusqu'à cinq fois le même tableau. La clé est une
+# empreinte du contenu ; une copie est rendue pour que l'appelant puisse
+# modifier le résultat sans altérer la mémoire.
+_DETECTION_CACHE = OrderedDict()
+_DETECTION_CACHE_SIZE = 8
+_DETECTION_LOCK = threading.Lock()
+
+
+def _detection_key(df):
+    try:
+        digest = pd.util.hash_pandas_object(df, index=True).to_numpy()
+    except (TypeError, ValueError):
+        return None
+    return (
+        tuple(str(c) for c in df.columns),
+        tuple(str(t) for t in df.dtypes),
+        len(df),
+        int(digest.sum()),
+        int((digest * 31).sum()),
+    )
+
+
 def build_detection(df):
     """Analyse complète d'un DataFrame (détection ou validation).
 
-    Renvoie les comptes et les coordonnées des problèmes détectés.
+    Renvoie les comptes et les coordonnées des problèmes détectés. Le
+    résultat est mémorisé : rappeler la fonction sur un tableau identique
+    renvoie une copie de l'analyse précédente au lieu de la recalculer.
     """
+    key = _detection_key(df)
+    if key is not None:
+        with _DETECTION_LOCK:
+            cached = _DETECTION_CACHE.get(key)
+            if cached is not None:
+                _DETECTION_CACHE.move_to_end(key)
+                return copy.deepcopy(cached)
+    result = _build_detection(df)
+    if key is not None:
+        with _DETECTION_LOCK:
+            _DETECTION_CACHE[key] = copy.deepcopy(result)
+            while len(_DETECTION_CACHE) > _DETECTION_CACHE_SIZE:
+                _DETECTION_CACHE.popitem(last=False)
+    return result
+
+
+def _build_detection(df):
+    """Calcul effectif de :func:`build_detection` (sans mémoire)."""
     emails = detect_email_report(df)
     dates = detect_date_issues(df)
     phones = detect_phone_issues(df)

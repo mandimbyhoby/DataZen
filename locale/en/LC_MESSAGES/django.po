@@ -2392,6 +2392,9 @@ msgstr "Only the owner can manage shares."
 msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
 msgstr "Only the first corrections are shown; the real cleaning will apply them all."
 
+msgid "Seuls les %(shown)s premiers éléments sur %(total)s sont affichés ici ; le rapport téléchargeable contient la liste complète."
+msgstr "Only the first %(shown)s of %(total)s items are shown here; the downloadable report contains the full list."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "Only http and https schemes are allowed."
 

@@ -21,7 +21,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {% for issue in item.issues %}
+                                            {% for issue in item.issues|slice:":200" %}
                                                 <tr>
                                                     <td>{{ issue.row }}</td>
                                                     <td>{{ issue.column }}</td>
@@ -32,6 +32,7 @@
                                         </tbody>
                                     </table>
                                 </div>
+                                {% if item.issues|length > 200 %}<p class="small text-muted mt-2 mb-0">{% blocktranslate trimmed with shown=200 total=item.issues|length %}Seuls les {{ shown }} premiers éléments sur {{ total }} sont affichés ici ; le rapport téléchargeable contient la liste complète.{% endblocktranslate %}</p>{% endif %}
                             </details>
                         {% endif %}
                     </li>

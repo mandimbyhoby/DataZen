@@ -228,8 +228,11 @@ def _column_stats(df):
 def _row_values(df, idx):
     """Convertit une ligne du DataFrame en liste de chaînes, alignée sur les colonnes."""
     out = []
+    # Une seule ligne extraite (et non une par cellule) : ``df.iloc[idx]``
+    # reconstruisait toute la ligne pour lire chaque colonne.
+    row = df.iloc[idx]
     for col in df.columns:
-        value = df.iloc[idx][col]
+        value = row[col]
         if value is None or (isinstance(value, float) and pd.isna(value)):
             out.append("")
         else:

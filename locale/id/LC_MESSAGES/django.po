@@ -2383,6 +2383,9 @@ msgstr "Hanya pemilik yang dapat mengelola berbagi."
 msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
 msgstr "Hanya koreksi pertama yang ditampilkan; pembersihan sebenarnya akan menerapkan semuanya."
 
+msgid "Seuls les %(shown)s premiers éléments sur %(total)s sont affichés ici ; le rapport téléchargeable contient la liste complète."
+msgstr "Hanya %(shown)s item pertama dari %(total)s yang ditampilkan di sini; laporan yang dapat diunduh berisi daftar lengkap."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "Hanya skema http dan https yang diizinkan."
 

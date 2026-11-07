@@ -410,13 +410,14 @@
                                 <strong>{% translate "Doublons potentiels (⚠️ à vérifier) :" %}</strong>
                                 {{ issues.potential_duplicates|length }}
                                 <ul class="mb-0">
-                                    {% for p in issues.potential_duplicates %}
+                                    {% for p in issues.potential_duplicates|slice:":50" %}
                                         <li>
                                             {% translate "Lignes" %} {% for r in p.rows %}{{ r|add:"1" }}{% if not forloop.last %}, {% endif %}{% endfor %}
                                             {% if p.similar_columns %}<span class="text-muted">{% blocktranslate trimmed with columns=p.similar_columns|join:", " %}(colonnes : {{ columns }}){% endblocktranslate %}</span>{% endif %}
                                         </li>
                                     {% endfor %}
                                 </ul>
+                                {% if issues.potential_duplicates|length > 50 %}<p class="mb-0 text-muted">{% blocktranslate trimmed with shown=50 total=issues.potential_duplicates|length %}Seuls les {{ shown }} premiers éléments sur {{ total }} sont affichés ici ; le rapport téléchargeable contient la liste complète.{% endblocktranslate %}</p>{% endif %}
                             </li>
                         {% else %}
                             <li>{% blocktranslate trimmed %}<strong>Doublons potentiels :</strong> aucun{% endblocktranslate %}</li>
@@ -648,7 +649,7 @@
                                             <tr><th>#</th><th>{% translate "Lignes" %}</th><th>{% translate "Score" %}</th><th>{% translate "Colonnes différentes" %}</th></tr>
                                         </thead>
                                         <tbody>
-                                            {% for g in dashboard.duplicate_groups %}
+                                            {% for g in dashboard.duplicate_groups|slice:":50" %}
                                                 <tr>
                                                     <td>{{ g.n }}</td>
                                                     <td>{{ g.lignes|join:", " }}</td>
@@ -659,6 +660,7 @@
                                         </tbody>
                                     </table>
                                 </div>
+                                {% if dashboard.duplicate_groups|length > 50 %}<p class="small text-muted mt-1 mb-0">{% blocktranslate trimmed with shown=50 total=dashboard.duplicate_groups|length %}Seuls les {{ shown }} premiers éléments sur {{ total }} sont affichés ici ; le rapport téléchargeable contient la liste complète.{% endblocktranslate %}</p>{% endif %}
                                 <div class="small text-muted mt-1">{% translate "⚠️ À vérifier manuellement (jamais supprimés automatiquement)." %}</div>
                             {% endif %}
                         </div>
@@ -919,7 +921,7 @@
                         <div class="text-success">{% translate "✅ Aucun doublon potentiel à vérifier." %}</div>
                     {% endif %}
 
-                    {% for g in review_groups %}
+                    {% for g in review_groups|slice:":50" %}
                         <div class="border rounded p-3 mb-3">
                             <h6 class="mb-2">{% translate "Doublon potentiel" %} #{{ g.n }}</h6>
                             <div class="small text-muted mb-2">
@@ -988,6 +990,7 @@
                             </form>
                         </div>
                     {% endfor %}
+                    {% if review_groups|length > 50 %}<p class="small text-muted mb-0">{% blocktranslate trimmed with shown=50 total=review_groups|length %}Seuls les {{ shown }} premiers éléments sur {{ total }} sont affichés ici ; le rapport téléchargeable contient la liste complète.{% endblocktranslate %}</p>{% endif %}
                 </div>
             </div>
         {% endif %}

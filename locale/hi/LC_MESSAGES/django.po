@@ -2392,6 +2392,9 @@ msgstr "साझाकरण केवल मालिक ही प्रब�
 msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
 msgstr "केवल पहले कुछ सुधार दिखाए गए हैं; वास्तविक सफ़ाई सभी को लागू करेगी।"
 
+msgid "Seuls les %(shown)s premiers éléments sur %(total)s sont affichés ici ; le rapport téléchargeable contient la liste complète."
+msgstr "यहाँ %(total)s में से केवल पहले %(shown)s आइटम दिखाए गए हैं; डाउनलोड की जा सकने वाली रिपोर्ट में पूरी सूची है।"
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "केवल http और https स्कीम की अनुमति है।"
 

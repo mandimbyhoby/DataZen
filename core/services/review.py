@@ -74,6 +74,24 @@ def _label_for(status):
     return {"identique": "✅ identique", "different": "❌ différent", "inconnu": "⚪ inconnu"}[status]
 
 
+def _cell_reader(df):
+    """Renvoie ``cell(r, c)``, équivalent exact mais rapide de ``df.iloc[r][c]``.
+
+    Chaque ligne n'est extraite qu'une fois (puis mémorisée) au lieu d'être
+    reconstruite pour chaque cellule : les valeurs et leurs types restent
+    strictement ceux de ``df.iloc[r]``.
+    """
+    rows = {}
+
+    def cell(r, c):
+        row = rows.get(r)
+        if row is None:
+            row = rows[r] = df.iloc[r]
+        return row[c]
+
+    return cell
+
+
 def build_review_groups(df):
     """Construit les groupes de doublons potentiels pour la revue manuelle.
 
@@ -85,6 +103,7 @@ def build_review_groups(df):
     """
     detection = build_detection(df)
     groups = []
+    cell = _cell_reader(df)
     for p in detection["potential_duplicates"]:
         rows = p["rows"]
         if len(rows) < 2:
@@ -99,7 +118,7 @@ def build_review_groups(df):
         differentes = []
         inconnues = []
         for c in cols:
-            values = [df.iloc[r][c] for r in rows]
+            values = [cell(r, c) for r in rows]
             status = _column_status(values)
             libelle = _label_for(status)
             if status == "identique":
@@ -128,9 +147,9 @@ def build_review_groups(df):
             lines.append(
                 {
                     "ligne": r + 1,
-                    "ancien_id": _display(df.iloc[r][anc_col]) if anc_col else "",
-                    "id": _display(df.iloc[r][id_col]) if id_col else "",
-                    "valeurs": {str(c): _display(df.iloc[r][c]) for c in cols},
+                    "ancien_id": _display(cell(r, anc_col)) if anc_col else "",
+                    "id": _display(cell(r, id_col)) if id_col else "",
+                    "valeurs": {str(c): _display(cell(r, c)) for c in cols},
                 }
             )
 
@@ -140,8 +159,8 @@ def build_review_groups(df):
                 "rows": [int(r) for r in rows],
                 "lignes": [r + 1 for r in rows],
                 "nb_lignes": len(rows),
-                "ids": [_display(df.iloc[r][id_col]) if id_col else str(r + 1) for r in rows],
-                "ancien_ids": [_display(df.iloc[r][anc_col]) if anc_col else "" for r in rows],
+                "ids": [_display(cell(r, id_col)) if id_col else str(r + 1) for r in rows],
+                "ancien_ids": [_display(cell(r, anc_col)) if anc_col else "" for r in rows],
                 "score": round(p.get("score", 0.0) * 100, 1),
                 "raison": p.get("reason", ""),
                 "columns": [str(c) for c in cols],

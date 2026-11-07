@@ -2392,6 +2392,9 @@ msgstr "Nur der Eigentümer kann Freigaben verwalten."
 msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
 msgstr "Es werden nur die ersten Korrekturen angezeigt; die tatsächliche Bereinigung wendet sie alle an."
 
+msgid "Seuls les %(shown)s premiers éléments sur %(total)s sont affichés ici ; le rapport téléchargeable contient la liste complète."
+msgstr "Hier werden nur die ersten %(shown)s von %(total)s Einträgen angezeigt; der herunterladbare Bericht enthält die vollständige Liste."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "Nur die Schemata http und https sind erlaubt."
 

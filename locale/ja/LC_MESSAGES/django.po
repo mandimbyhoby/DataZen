@@ -2383,6 +2383,9 @@ msgstr "共有を管理できるのは所有者だけです。"
 msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
 msgstr "最初のいくつかの修正のみを表示しています。実際のクレンジングではすべて適用されます。"
 
+msgid "Seuls les %(shown)s premiers éléments sur %(total)s sont affichés ici ; le rapport téléchargeable contient la liste complète."
+msgstr "ここには %(total)s 件中最初の %(shown)s 件のみ表示しています。完全な一覧はダウンロード可能なレポートに含まれています。"
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "使用できるのは http と https スキームのみです。"
 

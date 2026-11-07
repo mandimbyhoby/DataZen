@@ -2383,6 +2383,9 @@ msgstr "只有所有者可以管理共享。"
 msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
 msgstr "仅显示前几条修正；实际清洗会应用全部修正。"
 
+msgid "Seuls les %(shown)s premiers éléments sur %(total)s sont affichés ici ; le rapport téléchargeable contient la liste complète."
+msgstr "此处仅显示 %(total)s 项中的前 %(shown)s 项；可下载的报告包含完整列表。"
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "仅允许 http 和 https 协议。"
 

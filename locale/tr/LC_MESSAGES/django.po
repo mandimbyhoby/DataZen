@@ -2392,6 +2392,9 @@ msgstr "Paylaşımları yalnızca sahibi yönetebilir."
 msgid "Seules les premières corrections sont affichées ; le nettoyage réel les appliquera toutes."
 msgstr "Yalnızca ilk düzeltmeler gösterilir; gerçek temizleme hepsini uygular."
 
+msgid "Seuls les %(shown)s premiers éléments sur %(total)s sont affichés ici ; le rapport téléchargeable contient la liste complète."
+msgstr "Burada %(total)s öğeden yalnızca ilk %(shown)s tanesi gösteriliyor; indirilebilir rapor tam listeyi içerir."
+
 msgid "Seuls les schémas http et https sont autorisés."
 msgstr "Yalnızca http ve https şemalarına izin verilir."
 
