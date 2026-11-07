@@ -1,29 +1,28 @@
 {% extends "core/base.html" %}
-{% load i18n %}
 
-{% block title %}{% blocktranslate trimmed with name=data_file.original_name %}Rapport — {{ name }}{% endblocktranslate %}{% endblock %}
+{% block title %}Rapport — {{ data_file.original_name }}{% endblock %}
 
 {% block content %}
-<div class="container dz-page">
-    <nav aria-label="{% translate "Fil d'Ariane" %}">
+<div class="container py-4">
+    <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">{% translate "Accueil" %}</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'core:index' %}">Accueil</a></li>
             <li class="breadcrumb-item"><a href="{% url 'core:dataset_detail' data_file.pk %}">{{ data_file.original_name }}</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{% translate "Rapport" %}</li>
+            <li class="breadcrumb-item active" aria-current="page">Rapport</li>
         </ol>
     </nav>
 
-    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 dz-page-head">
-        <h1 class="h3 mb-0">{% translate "📋 Rapport de nettoyage" %}</h1>
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-4">
+        <h1 class="h3 mb-0">📋 Rapport de nettoyage</h1>
         <div class="d-flex flex-wrap gap-2">
             <a class="btn btn-outline-secondary" href="{% url 'core:dataset_detail' data_file.pk %}">
-                {% translate "← Retour au fichier" %}
+                ← Retour au fichier
             </a>
             <a class="btn btn-outline-secondary" href="{% url 'core:download_report' data_file.pk %}">
-                {% translate "📥 Markdown (.md)" %}
+                📥 Markdown (.md)
             </a>
             <a class="btn btn-primary" href="{% url 'core:download_report_html' data_file.pk %}">
-                {% translate "🌐 HTML (.html)" %}
+                🌐 HTML (.html)
             </a>
         </div>
     </div>

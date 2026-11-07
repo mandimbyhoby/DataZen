@@ -7,9 +7,13 @@ n'est pas écoulée.
 """
 from __future__ import annotations
 
+from django.contrib.auth import login
+from django.contrib.auth.decorators import login_not_required
 from django.contrib.auth.views import LoginView
+from django.shortcuts import redirect, render
 from django.utils.translation import gettext_lazy as _
 
+from .forms import SignUpForm
 from . import throttling
 
 
@@ -47,3 +51,13 @@ class ThrottledLoginView(LoginView):
             throttling.register_failure(request, username)
 
         return response
+
+
+@login_not_required
+def signup(request):
+    form = SignUpForm(request.POST or None)
+    if request.method == "POST" and form.is_valid():
+        user = form.save()
+        login(request, user)
+        return redirect("core:index")
+    return render(request, "core/signup.html", {"form": form})

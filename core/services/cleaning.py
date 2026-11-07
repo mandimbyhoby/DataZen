@@ -9,13 +9,10 @@ gestion des valeurs manquantes, etc.) seront ajoutées ici au fil
 des étapes du projet.
 """
 
-import hashlib
 import re
 from datetime import datetime
 
 import pandas as pd
-
-from .operations import operation_entry
 
 # Valeur spéciale « inconnu » : marqueur de donnée absente/indisponible.
 # « Inconnu » n'est ni une erreur, ni une valeur manquante, ni un email invalide.
@@ -257,32 +254,6 @@ def _is_label_column(column):
     """Indique si une colonne est un libellé libre (produit, article…)."""
     name = str(column).strip().lower()
     return any(token in name for token in LABEL_COLUMN_TOKENS)
-
-
-# Noms de colonnes représentant un choix binaire oui/non (newsletter, abonné…).
-# Leurs valeurs sont uniformisées en minuscules (``OUI`` → ``oui``).
-BOOLEAN_COLUMN_TOKENS = (
-    "newsletter",
-    "abonne",
-    "abonné",
-    "abonnement",
-    "optin",
-    "opt_in",
-    "consentement",
-    "consent",
-    "actif",
-    "active",
-    "flag",
-    "booleen",
-    "booléen",
-    "boolean",
-)
-
-
-def _is_boolean_column(column):
-    """Indique si une colonne est un choix binaire oui/non (newsletter…)."""
-    name = str(column).strip().lower()
-    return any(token in name for token in BOOLEAN_COLUMN_TOKENS)
 
 
 # Noms de colonnes représentant des codes/références (``CMD-001``…) : on les
@@ -532,20 +503,6 @@ def _display(value):
     return str(value)
 
 
-def _fingerprint(value):
-    """Empreinte non réversible d'une valeur, pour le journal d'anonymisation.
-
-    Le journal des modifications est un fichier téléchargeable : y écrire la
-    valeur d'origine en clair annulerait la pseudonymisation. On conserve une
-    empreinte tronquée, suffisante pour vérifier qu'une valeur a bien été
-    traitée, mais inexploitable pour retrouver la donnée personnelle.
-    """
-    text = _display(value)
-    if not text:
-        return ""
-    return "empreinte:" + hashlib.sha256(text.encode("utf-8")).hexdigest()[:12]
-
-
 def _normalize_phone(value):
     """Normalise un numéro de téléphone français en ``06XXXXXXXX``.
 
@@ -620,14 +577,7 @@ class DataCleaner:
 
     # --- Traçabilité -----------------------------------------------------
     def _record(self, index, column, old, new, correction_type, reason):
-        """Ajoute une entrée au journal des modifications.
-
-        Pour une anonymisation, la valeur d'origine n'est jamais écrite en
-        clair : le journal est téléchargeable et permettrait sinon de
-        reconstituer les données personnelles censées avoir disparu.
-        """
-        if correction_type == "anonymisation":
-            old = _fingerprint(old)
+        """Ajoute une entrée au journal des modifications."""
         self._change_log.append(
             {
                 "ligne": int(index) + 1,
@@ -905,101 +855,6 @@ class DataCleaner:
                     )
                     changed += 1
         self.changes["codes"] = changed
-        return self
-
-    def normalize_booleans(self):
-        """Uniformise les choix binaires oui/non en minuscules.
-
-        ``OUI`` → ``oui``, ``NON`` → ``non``, ``Non`` → ``non``. Les colonnes
-        reconnues comme booléennes (:func:`_is_boolean_column`, ex.
-        ``newsletter``) sont mises en minuscules pour une présentation
-        homogène. Les valeurs « Inconnu » et les cellules vides sont laissées
-        intactes.
-        """
-        changed = 0
-        for col in self.dataframe.columns:
-            if not _is_boolean_column(col):
-                continue
-            series = self.dataframe[col]
-            for idx, value in series.items():
-                if pd.isna(value) or is_unknown(value):
-                    continue
-                text = str(value).strip()
-                lowered = text.lower()
-                if lowered != text:
-                    self.dataframe.at[idx, col] = lowered
-                    self._record(
-                        idx,
-                        col,
-                        value,
-                        lowered,
-                        "casse",
-                        "normalisation des choix oui/non en minuscules",
-                    )
-                    changed += 1
-        self.changes["booleans"] = changed
-        return self
-
-    def anonymize(self, columns=None):
-        """Pseudonymise les colonnes sensibles (noms, emails, téléphones).
-
-        Remplace les valeurs par des pseudonymes **déterministes** (même valeur
-        → même pseudonyme), ce qui préserve les relations entre lignes tout en
-        masquant les données personnelles. Les colonnes ciblées sont, par
-        défaut, celles reconnues comme nom, email ou téléphone ; on peut en
-        fournir une liste explicite via ``columns``.
-
-        - Noms : ``Dupont`` → ``Personne_1``, ``Martin`` → ``Personne_2``…
-        - Emails : ``alice@mail.com`` → ``email_1@anonyme.local``…
-        - Téléphones : ``0612345678`` → ``telephone_1``…
-
-        Les valeurs « Inconnu » et manquantes sont laissées intactes. Chaque
-        remplacement est journalisé (type ``anonymisation``).
-        """
-        cols = columns or [
-            c
-            for c in self.dataframe.columns
-            if _is_name_column(c) or _is_email_column(c) or _is_phone_column(c)
-        ]
-
-        # Compteurs par colonne pour des pseudonymes stables et lisibles.
-        counters = {}
-        changed = 0
-
-        for col in cols:
-            if col not in self.dataframe.columns:
-                continue
-            mapping = {}
-            series = self.dataframe[col]
-            for idx, value in series.items():
-                if pd.isna(value) or is_unknown(value):
-                    continue
-                text = str(value).strip()
-                if not text:
-                    continue
-                if text not in mapping:
-                    counters[col] = counters.get(col, 0) + 1
-                    n = counters[col]
-                    if _is_email_column(col):
-                        mapping[text] = f"email_{n}@anonyme.local"
-                    elif _is_phone_column(col):
-                        mapping[text] = f"telephone_{n}"
-                    else:
-                        mapping[text] = f"Personne_{n}"
-                new = mapping[text]
-                if new != text:
-                    self.dataframe.at[idx, col] = new
-                    self._record(
-                        idx,
-                        col,
-                        value,
-                        new,
-                        "anonymisation",
-                        "pseudonymisation de donnée sensible",
-                    )
-                    changed += 1
-
-        self.changes["anonymized"] = changed
         return self
 
     def normalize_unknown(self):
@@ -1354,9 +1209,7 @@ class DataCleaner:
           si ``value`` est un nombre (ex. ``0``) ; sinon laissées manquantes
           (on n'écrit jamais un texte dans une colonne numérique).
         - Colonnes montant : remplies par ``value`` au format ``X.XX``
-          uniquement si ``value`` est un nombre. Le marqueur « Inconnu » est
-          toutefois accepté : une donnée absente peut être signalée comme
-          telle, même dans une colonne montant.
+          uniquement si ``value`` est un nombre.
         - Identifiants, codes et dates : jamais remplies par un placeholder
           texte (un code ou une date « Inconnu » serait incohérent).
         - Autres colonnes de texte : remplies par ``value``.
@@ -1386,8 +1239,6 @@ class DataCleaner:
                     self.dataframe[col] = series.fillna(
                         f"{_normalize_salary(value):.2f}"
                     )
-                elif is_unknown(value):
-                    self.dataframe[col] = series.fillna(UNKNOWN_VALUE)
                 continue
             # Identifiant / code / date : pas de placeholder texte.
             if not _is_placeholder_column(col):
@@ -1395,76 +1246,6 @@ class DataCleaner:
             # Texte libre / email : remplit par la valeur.
             self.dataframe[col] = series.fillna(value)
         return self
-
-    def apply_rules(self, rules):
-        """Applique une liste de règles de nettoyage personnalisées.
-
-        Chaque règle est un dictionnaire ``{"operation", "column", "value"}``.
-        Les opérations reprennent les méthodes existantes du moteur : aucune
-        logique de nettoyage n'est dupliquée. Renvoie la liste des
-        descriptions d'opérations réellement appliquées (pour le rapport).
-        """
-        applied = []
-        for rule in rules or []:
-            operation = (rule.get("operation") or "").strip()
-            column = (rule.get("column") or "").strip()
-            value = rule.get("value") or ""
-            columns = [column] if column else None
-
-            if operation == "remove_duplicates":
-                self.remove_duplicates(subset=columns, ignore_case=True)
-                applied.append(
-                    operation_entry(
-                        "rule_remove_duplicates",
-                        count=self.changes.get("duplicates_removed", 0),
-                    )
-                )
-            elif operation == "trim_whitespace":
-                self.trim_whitespace()
-                applied.append(operation_entry("rule_trim_whitespace"))
-            elif operation == "normalize_case":
-                self.normalize_text()
-                applied.append(operation_entry("rule_normalize_case"))
-            elif operation == "normalize_emails":
-                self.normalize_emails()
-                applied.append(
-                    operation_entry(
-                        "rule_normalize_emails",
-                        count=self.changes.get("emails_corriges", 0),
-                    )
-                )
-            elif operation == "normalize_phones":
-                self.normalize_phones()
-                applied.append(
-                    operation_entry(
-                        "rule_normalize_phones", count=self.changes.get("phones", 0)
-                    )
-                )
-            elif operation == "normalize_dates":
-                self.normalize_dates()
-                applied.append(
-                    operation_entry(
-                        "rule_normalize_dates", count=self.changes.get("dates", 0)
-                    )
-                )
-            elif operation == "normalize_salaries":
-                self.normalize_salaries()
-                applied.append(
-                    operation_entry(
-                        "rule_normalize_salaries", count=self.changes.get("salaries", 0)
-                    )
-                )
-            elif operation == "fill_missing":
-                self.fill_missing(value)
-                applied.append(operation_entry("rule_fill_missing", value=value))
-            elif operation == "anonymize":
-                self.anonymize(columns=columns)
-                applied.append(
-                    operation_entry(
-                        "rule_anonymize", count=self.changes.get("anonymized", 0)
-                    )
-                )
-        return applied
 
     @property
     def result(self):

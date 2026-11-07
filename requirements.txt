@@ -7,6 +7,11 @@
 # `manage.py test core` avant de committer.
 #
 # Versions validées avec Python 3.13 (voir README, section « Installation »).
+#
+# Production : installer requirements.lock.txt (versions exactes des
+# dépendances transitives + hachages SHA-256, vérifiés par pip). Ce fichier-ci
+# reste la source de vérité pour la résolution ; le verrou en est dérivé.
+#   pip install --require-hashes -r requirements.lock.txt
 
 Django==5.2.17
 pandas==3.0.6

@@ -5,13 +5,18 @@
 
 {% block content %}
 <section class="dz-auth-shell">
-    {# Décor animé : purement esthétique, donc masqué aux lecteurs d'écran. #}
+    {% comment %}
+    Décor animé : purement esthétique, donc masqué aux lecteurs d'écran.
+    main.js choisit la vidéo claire ou sombre selon le thème actif, et la
+    change en fondu quand l'utilisateur bascule de thème.
+    {% endcomment %}
     <div class="dz-auth-video" aria-hidden="true">
-        <video class="dz-auth-video__media" autoplay muted loop playsinline preload="metadata"
-               poster="{% static 'img/login-poster.jpg' %}" tabindex="-1">
-            <source src="{% static 'video/login.webm' %}" type="video/webm">
-            <source src="{% static 'video/login.mp4' %}" type="video/mp4">
-        </video>
+        <video class="dz-auth-video__media" autoplay muted loop playsinline preload="none"
+               poster="{% static 'img/login-poster-light.jpg' %}" tabindex="-1"
+               data-src-light="{% static 'video/login-bg-light.mp4' %}"
+               data-src-dark="{% static 'video/login-bg.mp4' %}"
+               data-poster-light="{% static 'img/login-poster-light.jpg' %}"
+               data-poster-dark="{% static 'img/login-poster.jpg' %}"></video>
         <div class="dz-auth-video__overlay"></div>
     </div>
     <div class="container dz-auth">

@@ -3031,11 +3031,14 @@ class PreviewCleaningTests(TestCase):
         self.assertTrue(
             any(e["before"] == "  alice " and e["after"] == "Alice" for e in entries)
         )
+        # La colonne email est rédigée : le journal ne conserve qu'une empreinte.
         self.assertTrue(
             any(
-                e["before"] == "Alice@Example.COM" and e["after"] == "alice@example.com"
+                e["before"].startswith("empreinte:")
+                and e["after"] == "alice@example.com"
                 for e in entries
-            )
+            ),
+            "L'email d'origine doit être remplacé par une empreinte dans le journal.",
         )
         self.assertTrue(
             any(
@@ -4660,7 +4663,7 @@ class DesignSystemTests(TestCase):
         base = (
             Path(__file__).resolve().parent.parent / "templates" / "core" / "base.html"
         ).read_text(encoding="utf-8")
-        self.assertIn("css/style.css' %}?v=20261019-navbar2", base)
+        self.assertIn("css/style.css' %}?v=20261104-aurora2", base)
 
     def test_inner_pages_use_the_section_rhythm(self):
         # Les gabarits applicatifs troquent l'espacement serré de Bootstrap
@@ -4771,15 +4774,21 @@ class LoginVideoTests(TestCase):
     vérifient qu'ils sont présents, lisibles et correctement branchés.
     """
 
-    WEBM = "video/login.webm"
-    MP4 = "video/login.mp4"
-    POSTER = "img/login-poster.jpg"
+    MP4_DARK = "video/login-bg.mp4"
+    MP4_LIGHT = "video/login-bg-light.mp4"
+    POSTER_DARK = "img/login-poster.jpg"
+    POSTER_LIGHT = "img/login-poster-light.jpg"
 
     def setUp(self):
         self.root = Path(__file__).resolve().parent.parent / "static"
 
     def test_video_and_poster_assets_exist(self):
-        for relative in (self.WEBM, self.MP4, self.POSTER):
+        for relative in (
+            self.MP4_DARK,
+            self.MP4_LIGHT,
+            self.POSTER_DARK,
+            self.POSTER_LIGHT,
+        ):
             asset = self.root / relative
             self.assertTrue(asset.is_file(), f"{relative} manquant")
             self.assertGreater(
@@ -4787,26 +4796,31 @@ class LoginVideoTests(TestCase):
             )
 
     def test_mp4_starts_with_an_iso_base_media_box(self):
-        head = (self.root / self.MP4).read_bytes()[:12]
+        for relative in (self.MP4_DARK, self.MP4_LIGHT):
+            head = (self.root / relative).read_bytes()[:12]
 
-        self.assertEqual(head[4:8], b"ftyp")
-        self.assertIn(head[8:12], (b"isom", b"mp42", b"avc1"))
+            self.assertEqual(head[4:8], b"ftyp", relative)
+            self.assertIn(head[8:12], (b"isom", b"mp42", b"avc1"), relative)
 
     def test_poster_is_a_jpeg(self):
-        head = (self.root / self.POSTER).read_bytes()[:3]
+        for relative in (self.POSTER_DARK, self.POSTER_LIGHT):
+            head = (self.root / relative).read_bytes()[:3]
 
-        self.assertEqual(head, b"\xff\xd8\xff")
+            self.assertEqual(head, b"\xff\xd8\xff", relative)
 
     def test_login_page_embeds_the_decorative_video(self):
         html = self.client.get(reverse("core:login")).content.decode("utf-8")
 
         self.assertIn("dz-auth-video", html)
         self.assertIn("<video", html)
-        self.assertIn('poster="/static/img/login-poster.jpg"', html)
+        # Une paire de sources : le script échange la vidéo selon le thème.
+        self.assertIn('data-src-light="/static/video/login-bg-light.mp4"', html)
+        self.assertIn('data-src-dark="/static/video/login-bg.mp4"', html)
+        self.assertIn('data-poster-light="/static/img/login-poster-light.jpg"', html)
+        self.assertIn('data-poster-dark="/static/img/login-poster.jpg"', html)
+        self.assertIn('poster="/static/img/login-poster-light.jpg"', html)
         for attribute in ("muted", "loop", "playsinline", "autoplay"):
             self.assertIn(attribute, html)
-        self.assertIn("/static/video/login.webm", html)
-        self.assertIn("/static/video/login.mp4", html)
 
     def test_video_is_hidden_from_assistive_technologies(self):
         html = self.client.get(reverse("core:login")).content.decode("utf-8")

@@ -20,6 +20,10 @@ db.sqlite3-journal
 # Sauvegardes de base (pg_dump) : jamais versionnées.
 *.dump
 *.sql.gz
+*.sqlite3
+/backups/
+datazen-db-*
+datazen-media-*
 
 # Frontend
 frontend/node_modules/

@@ -14,6 +14,7 @@ import re
 from collections import Counter
 from datetime import datetime
 from difflib import SequenceMatcher
+from fractions import Fraction
 
 import pandas as pd
 from django.utils.translation import gettext as _
@@ -404,14 +405,78 @@ def detect_potential_duplicates(df):
     return potential
 
 
+def _fuzzy_candidate_pairs(strings_list, threshold):
+    """Paires d'index textuellement proches, sans comparaison exhaustive.
+
+    Deux bornes supérieures exactes de ``SequenceMatcher.ratio()`` sont
+    appliquées avant tout alignement :
+
+    1. ``ratio <= 2*min_len / (len_a + len_b)`` — un tri par longueur puis un
+       balayage par fenêtre écartent les paires de longueurs trop différentes ;
+    2. ``ratio <= quick_ratio`` — intersection des multi-ensembles de
+       caractères, calculée sans alignement.
+
+    Les comparaisons se font en arithmétique entière (``Fraction``) : une borne
+    évaluée en flottant écarterait à tort les paires pile au seuil. Aucune paire
+    atteignant ``threshold`` n'est donc perdue, et le résultat est identique à
+    une comparaison exhaustive pour un coût très inférieur.
+
+    Renvoie un ensemble de ``(i, j)`` avec ``i < j``.
+    """
+    texts = ["" if value is None else value for value in strings_list]
+    order = sorted(range(len(texts)), key=lambda k: len(texts[k]))
+    lengths = [len(texts[k]) for k in order]
+    counters = [Counter(texts[k]) for k in order]
+
+    # Seuil exact : 0.8 devient 4/5, ce qui rend les bornes comparables sans
+    # erreur d'arrondi.
+    ratio = Fraction(threshold).limit_denominator(10**6)
+    num, den = ratio.numerator, ratio.denominator
+
+    pairs = set()
+    total = len(order)
+    for position, i in enumerate(order):
+        len_i = lengths[position]
+        if len_i == 0:
+            continue
+        counter_i = counters[position]
+        for following in range(position + 1, total):
+            len_j = lengths[following]
+            # Fenêtre triée par longueur : dès que la borne est franchie,
+            # aucune paire suivante ne peut atteindre le seuil.
+            if 2 * len_i * den < num * (len_i + len_j):
+                break
+            # Borne de quick_ratio : 2*|intersection| / (len_i + len_j).
+            counter_j = counters[following]
+            shared = sum(
+                min(count, counter_j[char]) for char, count in counter_i.items()
+            )
+            if 2 * shared * den < num * (len_i + len_j):
+                continue
+            j = order[following]
+            pairs.add((i, j) if i < j else (j, i))
+    return pairs
+
+
+def _normalized_text(value):
+    """Forme normalisée utilisée par :func:`text_similarity`, ou ``None``."""
+    if value is None or pd.isna(value):
+        return None
+    text = str(value).strip().lower()
+    return text or None
+
+
 def detect_fuzzy_duplicates(df, threshold=0.8, max_rows=500):
     """Détecte les doublons par similarité textuelle (fuzzy matching).
 
-    Compare les lignes deux à deux sur les colonnes identifiantes (nom,
-    prénom, email). Renvoie une liste de dictionnaires
+    Compare les lignes sur les colonnes identifiantes (nom, prénom, email) et
+    signale les similarités imparfaites (fautes de frappe, variantes). Renvoie
+    une liste de dictionnaires
     ``{row_a, row_b, score, similar_columns, reason, recommendation}``.
 
-    Limité à ``max_rows`` lignes pour rester performant.
+    Les paires réellement comparées sont d'abord réduites par
+    :func:`_fuzzy_candidate_pairs`, ce qui évite la comparaison exhaustive
+    deux à deux sans changer le résultat.
     """
     if len(df) > max_rows:
         return []
@@ -430,30 +495,45 @@ def detect_fuzzy_duplicates(df, threshold=0.8, max_rows=500):
     if not preferred:
         return []
 
+    # Normalisation unique par colonne : sert au pré-filtrage et au calcul.
+    columns = {}
+    for c in preferred:
+        values = [_normalized_text(v) for v in df[c].tolist()]
+        columns[c] = values
+
+    # Union des paires candidates de chaque colonne : une paire ne peut
+    # dépasser le seuil que si au moins une colonne le dépasse.
+    candidates = set()
+    for values in columns.values():
+        candidates |= _fuzzy_candidate_pairs(values, threshold)
+
     results = []
-    n = len(df)
-    for i in range(n):
-        for j in range(i + 1, n):
-            best = 0.0
-            sim_cols = []
-            for c in preferred:
-                s = text_similarity(df.iloc[i][c], df.iloc[j][c])
-                best = max(best, s)
-                if s >= 0.7:
-                    sim_cols.append(c)
-            # Ignore les paires strictement identiques (doublons exacts déjà
-            # traités) : on ne signale que les similarités imparfaites (typos).
-            if best >= threshold and best < 0.999:
-                results.append(
-                    {
-                        "row_a": int(i),
-                        "row_b": int(j),
-                        "score": round(best, 3),
-                        "similar_columns": sim_cols,
-                        "reason": "similarité textuelle élevée (fuzzy matching)",
-                        "recommendation": "à vérifier manuellement",
-                    }
-                )
+    for i, j in sorted(candidates):
+        best = 0.0
+        sim_cols = []
+        for c in preferred:
+            values = columns[c]
+            a, b = values[i], values[j]
+            if a is None or b is None:
+                s = 0.0
+            else:
+                s = SequenceMatcher(None, a, b).ratio()
+            best = max(best, s)
+            if s >= 0.7:
+                sim_cols.append(c)
+        # Ignore les paires strictement identiques (doublons exacts déjà
+        # traités) : on ne signale que les similarités imparfaites (typos).
+        if best >= threshold and best < 0.999:
+            results.append(
+                {
+                    "row_a": int(i),
+                    "row_b": int(j),
+                    "score": round(best, 3),
+                    "similar_columns": sim_cols,
+                    "reason": "similarité textuelle élevée (fuzzy matching)",
+                    "recommendation": "à vérifier manuellement",
+                }
+            )
     return results
 
 
