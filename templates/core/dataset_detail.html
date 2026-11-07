@@ -401,7 +401,7 @@
             <div class="card shadow-sm mb-3">
                 <div class="card-body">
                     <h5 class="card-title">{% translate "🔍 Problèmes détectés" %}</h5>
-                    <ul class="mb-0 small">
+                    <ul class="mb-0 small dz-issues-list">
                         <li>
                             <strong>{% translate "Doublons exacts :" %}</strong> {{ issues.duplicates }}
                         </li>
@@ -867,7 +867,7 @@
             <div class="card shadow-sm dz-block">
                 <div class="card-body">
                     <h5 class="card-title">{% translate "🔎 Explication du score" %}</h5>
-                    <ul class="mb-0 small">
+                    <ul class="mb-0 small dz-issues-list">
                         {% for item in quality_after.explanations %}
                             <li>
                                 {% if item.type == "warn" %}⚠️{% else %}✅{% endif %}
@@ -996,7 +996,7 @@
             <div class="card shadow-sm dz-block border-warning">
                 <div class="card-body">
                     <h5 class="card-title">{% translate "✅ Validation après nettoyage" %}</h5>
-                    <ul class="mb-0 small">
+                    <ul class="mb-0 small dz-issues-list">
                         <li><strong>{% translate "Doublons exacts restants :" %}</strong> {{ validation.duplicates }}</li>
                         {% if validation.potential_duplicates %}
                             <li>
@@ -1094,7 +1094,7 @@
                             {% translate "Des incohérences ont été détectées entre les statistiques et les données." %}
                         {% endif %}
                     </p>
-                    <ul class="mb-0 small">
+                    <ul class="mb-0 small dz-issues-list">
                         {% for check in consistency.checks %}
                             <li>
                                 {% if check.ok %}✅{% else %}❌{% endif %}

@@ -3343,3 +3343,142 @@ pre {
     .dz-error-actions { flex-direction: column; }
     .dz-error-actions .btn { width: 100%; }
 }
+
+/* --- 18. Affinements visuels ---------------------------------------------- */
+
+/* Tableaux : `overflow-wrap: anywhere` (section 15) abaisse la largeur
+   minimale des cellules à un seul caractère ; dans un tableau, le navigateur
+   comprime alors les colonnes jusqu'à couper « Alice Martin » lettre par
+   lettre. `break-word` ne coupe qu'en dernier recours sans réduire la largeur
+   minimale : les colonnes gardent leur taille et `.table-responsive` défile. */
+.table td,
+.table th {
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+/* Aperçus de données (tableaux compacts défilants) : une ligne de données
+   = une ligne à l'écran, alignée à gauche comme dans un tableur. */
+.table-responsive > .table-sm td,
+.table-responsive > .table-sm th {
+    white-space: nowrap;
+    text-align: start;
+    padding: 0.55rem 0.85rem;
+}
+
+.table-responsive > .table-sm td {
+    max-width: 22rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-variant-numeric: tabular-nums;
+}
+
+.table-responsive > .table-sm tbody tr:hover > * {
+    background: rgba(79, 70, 229, 0.06);
+}
+
+.table-responsive {
+    border: 1px solid var(--dz-border);
+    scrollbar-width: thin;
+}
+
+/* Listes de diagnostic : puces discrètes et lignes aérées. */
+.dz-issues-list {
+    padding-inline-start: 1.1rem;
+    line-height: 1.6;
+}
+
+.dz-issues-list > li + li {
+    margin-top: 0.35rem;
+}
+
+.dz-issues-list > li::marker {
+    color: var(--dz-brand-500);
+}
+
+.dz-issues-list ul {
+    margin-top: 0.25rem;
+    padding-inline-start: 1rem;
+    color: var(--dz-text-muted);
+}
+
+/* Tableau de bord : 8 indicateurs → deux rangées pleines de quatre. */
+@media (min-width: 992px) {
+    .dz-kpi-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* Détail hebdomadaire : grille compacte plutôt qu'une longue colonne. */
+.dz-timeline-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 9.5rem), 1fr));
+    gap: 0.4rem 0.75rem;
+}
+
+.dz-timeline-list > li {
+    align-items: center;
+    padding: 0.35rem 0.6rem !important;
+    border: 1px solid var(--dz-border) !important;
+    border-radius: var(--dz-radius-sm);
+    background: var(--dz-surface-2);
+}
+
+.dz-timeline-list > li > span:last-child {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.dz-timeline-count {
+    color: var(--dz-brand-600);
+    background: rgba(79, 70, 229, 0.1);
+    min-width: 1.6rem;
+}
+
+/* États vides : encart pointillé centré plutôt qu'une phrase isolée. */
+.dz-empty-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 6rem;
+    padding: 1.25rem;
+    text-align: center;
+    border: 1px dashed var(--dz-border-strong);
+    border-radius: var(--dz-radius);
+    background: var(--dz-gradient-soft);
+}
+
+/* Authentification : la carte occupe l'écran, sans bande vide avant le pied
+   de page, et la vidéo reste lumineuse au lieu d'un voile gris. */
+main:has(> .dz-auth-shell) + .dz-footer {
+    margin-top: 0;
+}
+
+:root:not([data-bs-theme="dark"]) .dz-auth-video__media {
+    filter: saturate(1.15) brightness(1.12);
+}
+
+:root:not([data-bs-theme="dark"]) .dz-auth-video__overlay {
+    background:
+        radial-gradient(70% 80% at 50% 50%, rgba(247, 248, 252, 0.55) 0%, rgba(247, 248, 252, 0) 70%),
+        linear-gradient(180deg, rgba(238, 242, 255, 0.35) 0%, rgba(247, 248, 252, 0.85) 100%);
+}
+
+/* Mode sombre */
+[data-bs-theme="dark"] .dz-timeline-list > li {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+[data-bs-theme="dark"] .dz-timeline-count {
+    color: #c7d2fe;
+    background: rgba(129, 140, 248, 0.18);
+}
+
+[data-bs-theme="dark"] .table-responsive > .table-sm tbody tr:hover > * {
+    background: rgba(129, 140, 248, 0.1);
+}
+
+[data-bs-theme="dark"] .dz-issues-list > li::marker {
+    color: #818cf8;
+}
