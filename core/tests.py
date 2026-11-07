@@ -6194,3 +6194,35 @@ class LargeFilePerformanceTests(TestCase):
                 else:
                     self.assertEqual(expected, actual)
                     self.assertEqual(type(expected), type(actual))
+
+    def test_fuzzy_duplicates_match_the_naive_pairwise_scan(self):
+        from difflib import SequenceMatcher
+
+        from .services.validation import _similarity_text, detect_fuzzy_duplicates
+
+        df = pd.DataFrame(
+            {
+                "nom": ["Alice Martin", "Alice Martn", "alice martin", "Bob Dupont",
+                        "Bob Dupond", None, "", "Zoé Nguyen", "Zoe Nguyen"],
+                "email": ["a.martin@mail.com", "a.martin@mail.co", None, "bob@x.fr",
+                          "bob@x.fr", "z@y.com", "", "zoe@y.com", "zoé@y.com"],
+            }
+        )
+        expected = []
+        cols = ["nom", "email"]
+        for i in range(len(df)):
+            for j in range(i + 1, len(df)):
+                best, sim_cols = 0.0, []
+                for c in cols:
+                    a, b = _similarity_text(df[c][i]), _similarity_text(df[c][j])
+                    s = 0.0 if a is None or b is None else SequenceMatcher(None, a, b).ratio()
+                    best = max(best, s)
+                    if s >= 0.7:
+                        sim_cols.append(c)
+                if 0.8 <= best < 0.999:
+                    expected.append((i, j, round(best, 3), sim_cols))
+        found = [
+            (r["row_a"], r["row_b"], r["score"], r["similar_columns"])
+            for r in detect_fuzzy_duplicates(df)
+        ]
+        self.assertEqual(found, expected)

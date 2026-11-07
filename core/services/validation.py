@@ -17,6 +17,7 @@ from collections import Counter, OrderedDict
 from datetime import datetime
 from difflib import SequenceMatcher
 
+import numpy as np
 import pandas as pd
 from django.utils.translation import gettext as _
 from django.utils.translation import gettext_lazy
@@ -471,48 +472,108 @@ def detect_fuzzy_duplicates(df, threshold=0.8, max_rows=500):
     if not preferred:
         return []
 
-    results = []
     n = len(df)
     # Textes normalisés une seule fois, plutôt qu'à chaque paire via iloc.
     columns = [[_similarity_text(v) for v in df[c].tolist()] for c in preferred]
+    candidates = _fuzzy_candidate_pairs(columns, threshold)
     # Seuil sous lequel une similarité n'influence ni les colonnes similaires
     # (>= 0,7) ni la décision (>= threshold).
     cutoff = min(0.7, threshold)
-    for i in range(n):
-        for j in range(i + 1, n):
-            best = 0.0
-            sim_cols = []
-            for c, texts in zip(preferred, columns):
-                a, b = texts[i], texts[j]
-                if a is None or b is None:
+
+    results = []
+    for i, j in candidates:
+        best = 0.0
+        sim_cols = []
+        for c, texts in zip(preferred, columns):
+            a, b = texts[i], texts[j]
+            if a is None or b is None:
+                continue
+            if a == b:
+                s = 1.0
+            else:
+                matcher = SequenceMatcher(None, a, b)
+                if matcher.real_quick_ratio() < cutoff or matcher.quick_ratio() < cutoff:
                     continue
-                if a == b:
-                    s = 1.0
-                else:
-                    # Bornes supérieures bon marché : une paire qui ne peut
-                    # atteindre ni 0,7 (colonne similaire) ni le seuil n'a
-                    # pas besoin du calcul exact.
-                    matcher = SequenceMatcher(None, a, b)
-                    if matcher.real_quick_ratio() < cutoff or matcher.quick_ratio() < cutoff:
-                        continue
-                    s = matcher.ratio()
-                best = max(best, s)
-                if s >= 0.7:
-                    sim_cols.append(c)
-            # Ignore les paires strictement identiques (doublons exacts déjà
-            # traités) : on ne signale que les similarités imparfaites (typos).
-            if best >= threshold and best < 0.999:
-                results.append(
-                    {
-                        "row_a": int(i),
-                        "row_b": int(j),
-                        "score": round(best, 3),
-                        "similar_columns": sim_cols,
-                        "reason": "similarité textuelle élevée (fuzzy matching)",
-                        "recommendation": "à vérifier manuellement",
-                    }
-                )
+                s = matcher.ratio()
+            best = max(best, s)
+            if s >= 0.7:
+                sim_cols.append(c)
+        # Ignore les paires strictement identiques (doublons exacts déjà
+        # traités) : on ne signale que les similarités imparfaites (typos).
+        if best >= threshold and best < 0.999:
+            results.append(
+                {
+                    "row_a": int(i),
+                    "row_b": int(j),
+                    "score": round(best, 3),
+                    "similar_columns": sim_cols,
+                    "reason": "similarité textuelle élevée (fuzzy matching)",
+                    "recommendation": "à vérifier manuellement",
+                }
+            )
     return results
+
+
+def _fuzzy_candidate_pairs(columns, threshold):
+    """Paires ``(i, j)`` (i < j, dans l'ordre) pouvant atteindre ``threshold``.
+
+    Présélection exacte, vectorisée avec numpy, de
+    :func:`detect_fuzzy_duplicates` :
+
+    * ``SequenceMatcher.ratio()`` ne dépasse jamais ``quick_ratio()``
+      (2 × caractères communs / longueurs cumulées) : une paire dont aucune
+      colonne n'atteint le seuil par cette borne ne peut pas être signalée ;
+    * une paire ayant une valeur strictement identique dans une colonne
+      obtient une similarité de 1,0, donc n'est jamais signalée.
+
+    Seules les paires restantes passent au calcul exact (souvent quelques
+    centaines sur 125 000 pour un fichier de 500 lignes).
+    """
+    n = len(columns[0]) if columns else 0
+    if n < 2:
+        return []
+
+    prepared = []
+    for texts in columns:
+        alphabet = {}
+        for text in texts:
+            if text is not None:
+                for ch in text:
+                    alphabet.setdefault(ch, len(alphabet))
+        counts = np.zeros((n, max(len(alphabet), 1)), dtype=np.int32)
+        lengths = np.zeros(n, dtype=np.int64)
+        codes = np.full(n, -1, dtype=np.int64)
+        seen = {}
+        for row, text in enumerate(texts):
+            if text is None:
+                continue
+            lengths[row] = len(text)
+            codes[row] = seen.setdefault(text, len(seen))
+            for ch, k in Counter(text).items():
+                counts[row, alphabet[ch]] = k
+        prepared.append((counts, lengths, codes))
+
+    pairs = []
+    for i in range(n - 1):
+        possible = np.zeros(n - i - 1, dtype=bool)
+        identical = np.zeros(n - i - 1, dtype=bool)
+        for counts, lengths, codes in prepared:
+            if codes[i] < 0:
+                continue
+            others = codes[i + 1:]
+            present = others >= 0
+            identical |= present & (others == codes[i])
+            common = np.minimum(counts[i], counts[i + 1:]).sum(axis=1)
+            total = lengths[i] + lengths[i + 1:]
+            bound = np.divide(
+                2.0 * common, total, out=np.zeros(len(total)), where=total > 0
+            )
+            # Petite marge : la comparaison au seuil reste du côté prudent
+            # face aux arrondis flottants.
+            possible |= present & (bound >= threshold - 1e-9)
+        for offset in np.flatnonzero(possible & ~identical):
+            pairs.append((i, i + 1 + int(offset)))
+    return pairs
 
 
 def _date_label(value):
