@@ -30,8 +30,13 @@ WORKDIR /app
 
 # Les dépendances sont copiées seules pour profiter du cache de couches :
 # une modification du code ne réinstalle pas les paquets.
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+#
+# L'installation se fait depuis requirements.lock.txt avec --require-hashes :
+# pip vérifie alors le SHA-256 de chaque archive téléchargée. Une dépendance
+# substituée (paquet compromis, miroir malveillant) fait échouer la
+# construction au lieu d'entrer silencieusement dans l'image.
+COPY requirements.txt requirements.lock.txt ./
+RUN pip install --no-cache-dir --require-hashes -r requirements.lock.txt
 
 COPY . .
 
