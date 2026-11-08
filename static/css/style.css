@@ -5229,3 +5229,195 @@ h1, .h1, .dz-section-title, .dz-page > .dz-page-head h1 {
         padding: 0.5rem;
     }
 }
+
+/* ==========================================================================
+   24. Logo animé (templates/core/_logo.html)
+   ========================================================================== */
+.dz-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    line-height: 1;
+}
+
+.dz-brand__mark {
+    flex: 0 0 auto;
+    width: 2.6rem;
+    height: 2.6rem;
+    overflow: visible;
+    filter: drop-shadow(0 6px 10px rgba(110, 165, 43, 0.35));
+    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
+}
+
+.dz-brand__word {
+    font-size: 1.42rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    color: var(--dz-text);
+}
+
+/* « Zen » : dégradé lime traversé d'un reflet lumineux. */
+.dz-brand__zen {
+    background: linear-gradient(100deg, #6ea52b 0%, #8cc63f 35%, #e6f7b0 50%, #8cc63f 65%, #4f9d2a 100%);
+    background-size: 250% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: dz-logo-zen 5s ease-in-out infinite;
+}
+
+[data-bs-theme="dark"] .dz-brand__zen {
+    background-image: linear-gradient(100deg, #8cc63f 0%, #b5e04a 35%, #f4ffd6 50%, #b5e04a 65%, #8cc63f 100%);
+}
+
+/* Barres de données : ondulation douce, chacune avec un temps de retard. */
+.dz-brand__bar {
+    fill: #ffffff;
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: dz-logo-bar 3.2s cubic-bezier(0.45, 0, 0.25, 1) infinite;
+}
+
+.dz-brand__bar--2 { animation-delay: 0.18s; }
+.dz-brand__bar--3 { animation-delay: 0.36s; }
+
+/* Reflet qui balaie l'écrin. */
+.dz-brand__shine {
+    transform: skewX(-18deg);
+    animation: dz-logo-shine 5s ease-in-out infinite;
+}
+
+/* Étoiles qui scintillent. */
+.dz-brand__spark {
+    fill: #ffffff;
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+    animation: dz-logo-spark 2.6s ease-in-out infinite;
+}
+
+.dz-brand__spark--mini {
+    fill: #8cc63f;
+    animation-delay: 1.3s;
+}
+
+[data-bs-theme="dark"] .dz-brand__spark--mini {
+    fill: #c6e66b;
+}
+
+/* Orbite : anneau pointillé et satellite. */
+.dz-brand__ring {
+    fill: none;
+    stroke: rgba(140, 198, 63, 0.35);
+    stroke-width: 1.2;
+    stroke-dasharray: 2 4;
+}
+
+.dz-brand__orbit {
+    transform-origin: 24px 24px;
+    animation: dz-logo-orbit 7s linear infinite;
+}
+
+.dz-brand__satellite {
+    fill: #8cc63f;
+    filter: drop-shadow(0 0 3px rgba(198, 230, 107, 0.9));
+}
+
+/* Survol : petit bond, étoile qui tourne, orbite qui s'accélère. */
+.navbar-brand:hover .dz-brand__mark,
+.navbar-brand:focus-visible .dz-brand__mark {
+    transform: translateY(-2px) rotate(-6deg) scale(1.06);
+    filter: drop-shadow(0 10px 16px rgba(110, 165, 43, 0.5));
+}
+
+.navbar-brand:hover .dz-brand__spark--main {
+    animation: dz-logo-spin 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.navbar-brand:hover .dz-brand__orbit {
+    animation-duration: 1.6s;
+}
+
+.navbar-brand:hover .dz-brand__bar {
+    animation: dz-logo-jump 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.navbar-brand:hover .dz-brand__bar--2 { animation-delay: 0.06s; }
+.navbar-brand:hover .dz-brand__bar--3 { animation-delay: 0.12s; }
+
+.dz-footer-brand .dz-brand__mark {
+    width: 2.3rem;
+    height: 2.3rem;
+}
+
+.dz-footer-brand .dz-brand__word {
+    font-size: 1.25rem;
+}
+
+@keyframes dz-logo-bar {
+    0%, 100% { transform: scaleY(1); }
+    30% { transform: scaleY(0.72); }
+    60% { transform: scaleY(1.08); }
+}
+
+@keyframes dz-logo-jump {
+    0% { transform: scaleY(1); }
+    40% { transform: scaleY(0.55); }
+    100% { transform: scaleY(1); }
+}
+
+@keyframes dz-logo-shine {
+    0%, 55% { transform: translateX(0) skewX(-18deg); }
+    85%, 100% { transform: translateX(90px) skewX(-18deg); }
+}
+
+@keyframes dz-logo-spark {
+    0%, 100% { transform: scale(0.55) rotate(0deg); opacity: 0.55; }
+    50% { transform: scale(1.1) rotate(45deg); opacity: 1; }
+}
+
+@keyframes dz-logo-spin {
+    from { transform: scale(1) rotate(0deg); }
+    to { transform: scale(1.25) rotate(180deg); }
+}
+
+@keyframes dz-logo-orbit {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes dz-logo-zen {
+    0%, 50% { background-position: 100% 0; }
+    80%, 100% { background-position: 0% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dz-brand__bar,
+    .dz-brand__shine,
+    .dz-brand__spark,
+    .dz-brand__orbit,
+    .dz-brand__zen,
+    .navbar-brand:hover .dz-brand__bar,
+    .navbar-brand:hover .dz-brand__spark--main {
+        animation: none !important;
+    }
+
+    .dz-brand__shine {
+        display: none;
+    }
+
+    .dz-brand__mark {
+        transition: none;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .dz-brand__mark {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    .dz-brand__word {
+        font-size: 1.25rem;
+    }
+}

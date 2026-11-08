@@ -131,8 +131,7 @@ DataZen/
 │   ├── img/                  # Affiches des vidéos de fond (générées)
 │   │   ├── hero-poster.jpg   # Affiche de la page d'accueil
 │   │   ├── login-poster.jpg  # Affiche de la page de connexion
-│   │   ├── logo-datazen.png  # Logo (détouré, thème clair)
-│   │   ├── logo-datazen-dark.png  # Logo éclairci pour le thème sombre
+│   │   ├── favicon.svg       # Icône d'onglet vectorielle (symbole du logo)
 │   │   ├── favicon.ico       # Icône d'onglet multi-tailles (16/32/48/64)
 │   │   └── favicon-180.png   # Icône Apple Touch (180 px, fond blanc)
 │   ├── video/                # Vidéos de fond décoratives (générées)
@@ -140,7 +139,7 @@ DataZen/
 │       ├── charts/datazen-charts.js  # Bundle des graphiques (généré)
 │       └── ui/datazen-ui.js          # Bundle des îlots d'interface (généré)
 ├── design/                   # Sources de design (non servies, hors static/)
-│   ├── logo-source.png       # Logo d'origine, intrant de make_logo_asset.py
+│   ├── logo-source.png       # Ancien logo d'origine (remplacé par le logo SVG animé)
 │   └── mockup-reference.jpg  # Maquette de référence de la refonte
 ├── tools/                    # Outillage de développement
 │   ├── i18n_extract.py       # Collecte des chaînes traduisibles
@@ -148,8 +147,7 @@ DataZen/
 │   ├── video_kit.py          # Encodeur ffmpeg partagé par les générateurs
 │   ├── generate_hero_video.py  # Vidéo de fond du héros (MP4 / WebM + affiche)
 │   ├── generate_login_video.py # Tableau de bord animé de la connexion
-│   ├── make_logo_asset.py    # Détourage du logo source (clair + sombre)
-│   ├── make_favicon.py       # Icône d'onglet dérivée de la marque
+│   ├── make_favicon.py       # Icônes d'onglet dessinées d'après le symbole du logo
 │   └── translations/         # Traductions hors code source
 │       ├── ui_strings.py     # Libellés générés par JavaScript
 │       ├── search_labels.py  # Libellés de la palette de recherche
@@ -648,11 +646,13 @@ Deux classes verrouillent l'identité visuelle : `NavbarDesignTests` vérifie qu
 la barre de navigation reste collante (`position: sticky` non écrasée, garde
 `overflow-x: clip`), que le verre teinté, le liseré dégradé et l'ombre colorée
 au défilement sont bien déclarés, et que le soulignement dégradé épargne les
-menus déroulants ; `LogoAssetTests` vérifie que les deux variantes du logo
-existent en PNG transparent, que la barre et le pied de page les affichent, que
-le thème sombre bascule sur la variante éclaircie et que l'effet de survol de la
-marque est conservé. `FaviconTests` complète l'identité : `tools/make_favicon.py`
-isole le glyphe gauche du logo et produit un `.ico` multi-tailles plus une icône
+menus déroulants ; `LogoAssetTests` vérifie que le logo SVG animé
+(`templates/core/_logo.html` : écrin lime, barres de données qui ondulent,
+étoile scintillante, reflet et point en orbite) est affiché dans la barre et le
+pied de page avec des identifiants SVG uniques, que le lien porte un nom
+accessible et que « réduire les animations » coupe toutes ses animations.
+`FaviconTests` complète l'identité : `tools/make_favicon.py` dessine le symbole
+du logo et produit un `favicon.svg`, un `.ico` multi-tailles et une icône
 Apple Touch, déclarés dans le gabarit de base ; la route `/favicon.ico` renvoie
 l'icône statique au lieu d'un 404, et reste publique malgré
 `LoginRequiredMiddleware`.
@@ -715,7 +715,7 @@ CSS (`--dz-*`) : changer la couleur de marque se fait en modifiant
 | Élément | Classe | Rôle |
 | --- | --- | --- |
 | Barre de navigation | `.dz-navbar` | Verre teinté (reflet de marque + liseré dégradé), ombre colorée au défilement |
-| Logo | `.dz-logo-img` | Image de marque détourée, variante éclaircie en thème sombre |
+| Logo | `.dz-brand` | Logo SVG animé intégré ; « Data » suit la couleur du texte, « Zen » en dégradé lime |
 | Héros | `.dz-hero` | Titre principal avec halo lumineux |
 | Vidéo du héros | `.dz-hero-video` | Animation de fond décorative (MP4 / WebM) |
 | Vidéo d'authentification | `.dz-auth-video` | Tableau de bord animé en fond de la page de connexion |

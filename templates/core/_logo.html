@@ -1,0 +1,57 @@
+{% comment %}
+Logo animé DataZen (SVG intégré, aucune image à charger).
+
+Symbole : écrin lime arrondi, trois barres de données qui ondulent, étoile
+scintillante, reflet lumineux qui balaie l'écrin et point en orbite.
+Mot-symbole : « Data » à la couleur du texte (suit le thème clair / sombre),
+« Zen » en dégradé lime traversé d'un reflet.
+
+Paramètre : `uid` rend uniques les identifiants SVG (dégradés, découpe), car
+le logo apparaît deux fois par page (barre de navigation et pied de page).
+Les animations sont décrites en CSS (section 24 de style.css) et coupées par
+`prefers-reduced-motion`.
+{% endcomment %}
+<span class="dz-brand">
+    <svg class="dz-brand__mark" viewBox="-6 -6 60 60" width="40" height="40" aria-hidden="true" focusable="false">
+        <defs>
+            <linearGradient id="dz-logo-fill-{{ uid }}" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#d4ef7a"/>
+                <stop offset="0.5" stop-color="#8cc63f"/>
+                <stop offset="1" stop-color="#3f8a1f"/>
+            </linearGradient>
+            <linearGradient id="dz-logo-shine-{{ uid }}" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+                <stop offset="0.5" stop-color="#fff" stop-opacity="0.75"/>
+                <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+            </linearGradient>
+            <clipPath id="dz-logo-clip-{{ uid }}">
+                <rect x="2" y="2" width="44" height="44" rx="13"/>
+            </clipPath>
+        </defs>
+
+        {# Orbite : anneau discret et point lumineux qui tourne autour. #}
+        <circle class="dz-brand__ring" cx="24" cy="24" r="27"/>
+        <g class="dz-brand__orbit">
+            <circle class="dz-brand__satellite" cx="24" cy="-3" r="2.6"/>
+        </g>
+
+        {# Écrin. #}
+        <rect class="dz-brand__tile" x="2" y="2" width="44" height="44" rx="13" fill="url(#dz-logo-fill-{{ uid }})"/>
+        <g clip-path="url(#dz-logo-clip-{{ uid }})">
+            <rect x="2" y="2" width="44" height="20" fill="#fff" opacity="0.16"/>
+            {# Barres de données (ondulation décalée). #}
+            <rect class="dz-brand__bar dz-brand__bar--1" x="10.5" y="27" width="7" height="12" rx="3.5"/>
+            <rect class="dz-brand__bar dz-brand__bar--2" x="20.5" y="21" width="7" height="18" rx="3.5"/>
+            <rect class="dz-brand__bar dz-brand__bar--3" x="30.5" y="15" width="7" height="24" rx="3.5"/>
+            {# Reflet qui balaie l'écrin. #}
+            <rect class="dz-brand__shine" x="-30" y="-10" width="16" height="70" fill="url(#dz-logo-shine-{{ uid }})"/>
+        </g>
+
+        {# Étoiles scintillantes. #}
+        <path class="dz-brand__spark dz-brand__spark--main"
+              d="M14 6.5 Q15 11 19.5 12 Q15 13 14 17.5 Q13 13 8.5 12 Q13 11 14 6.5Z"/>
+        <path class="dz-brand__spark dz-brand__spark--mini"
+              d="M41 -1 Q41.5 1.5 44 2 Q41.5 2.5 41 5 Q40.5 2.5 38 2 Q40.5 1.5 41 -1Z"/>
+    </svg>
+    <span class="dz-brand__word">Data<span class="dz-brand__zen">Zen</span></span>
+</span>

@@ -4483,15 +4483,13 @@ class NavbarDesignTests(TestCase):
 
 
 class LogoAssetTests(TestCase):
-    """Le logo de marque est une image dérivée du fichier source fourni.
+    """Le logo de marque est un SVG animé intégré (templates/core/_logo.html).
 
-    `tools/make_logo_asset.py` détoure le PNG d'origine (fond blanc) et produit
-    deux variantes : la version d'origine et une version éclaircie pour le
-    thème sombre. Les tests verrouillent les fichiers et leur branchement.
+    Symbole lime (barres de données, étoile, reflet, orbite) et mot-symbole
+    « DataZen » en texte, qui suit le thème clair / sombre. Les tests
+    verrouillent le branchement, l'unicité des identifiants SVG et le respect
+    de « réduire les animations ».
     """
-
-    LIGHT = "img/logo-datazen.png"
-    DARK = "img/logo-datazen-dark.png"
 
     def setUp(self):
         self.root = Path(__file__).resolve().parent.parent / "static"
@@ -4499,39 +4497,39 @@ class LogoAssetTests(TestCase):
         self.user = User.objects.create_user(username="logoviewer")
         self.client.force_login(self.user)
 
-    def test_logo_assets_exist_and_are_transparent_pngs(self):
-        for relative in (self.LIGHT, self.DARK):
-            asset = self.root / relative
-            self.assertTrue(asset.is_file(), f"{relative} manquant")
-            self.assertGreater(asset.stat().st_size, 1024, f"{relative} tronqué")
-            # Signature PNG puis chunk IHDR : couleur 6 = RGBA.
-            head = asset.read_bytes()[:26]
-            self.assertEqual(head[:8], b"\x89PNG\r\n\x1a\n")
-            self.assertEqual(head[25], 6, f"{relative} doit être en RGBA")
-
-    def test_navbar_and_footer_render_the_logo_image(self):
+    def test_navbar_and_footer_render_the_animated_logo(self):
         response = self.client.get(reverse("core:index"))
-        self.assertContains(response, "img/logo-datazen.png")
-        self.assertContains(response, "img/logo-datazen-dark.png")
-        self.assertContains(response, 'class="dz-logo-img dz-logo-img--light"')
-        self.assertContains(response, 'class="dz-logo-img dz-logo-img--dark"')
-        # L'ancienne pastille emoji ne doit plus apparaître.
-        self.assertNotContains(response, "dz-logo-mark")
+        html = response.content.decode()
+        self.assertEqual(html.count('class="dz-brand"'), 2)
+        self.assertIn('class="dz-brand__mark"', html)
+        self.assertIn('class="dz-brand__zen">Zen</span>', html)
+        # L'ancien logo PNG et l'ancienne pastille emoji ont disparu.
+        self.assertNotIn("logo-datazen.png", html)
+        self.assertNotIn("dz-logo-mark", html)
 
-    def test_dark_variant_is_swapped_by_the_theme(self):
-        self.assertIn(".dz-logo-img--dark {\n    display: none;", self.css)
-        self.assertIn('[data-bs-theme="dark"] .dz-logo-img--light', self.css)
-        self.assertIn('[data-bs-theme="dark"] .dz-logo-img--dark', self.css)
+    def test_svg_ids_are_unique_per_page(self):
+        html = self.client.get(reverse("core:index")).content.decode()
+        ids = re.findall(r'id="(dz-logo-[^"]+)"', html)
+        self.assertTrue(ids)
+        self.assertEqual(len(ids), len(set(ids)))
 
-    def test_logo_keeps_the_brand_hover_lift(self):
-        self.assertIn(".dz-navbar .navbar-brand:hover .dz-logo-img", self.css)
-        self.assertIn("transform: translateY(-1px) scale(1.03)", self.css)
+    def test_link_has_an_accessible_name(self):
+        response = self.client.get(reverse("core:index"))
+        self.assertContains(response, 'aria-label="DataZen — Accueil"')
+
+    def test_animations_respect_reduced_motion(self):
+        section = self.css[self.css.index("24. Logo animé") :]
+        self.assertIn("@keyframes dz-logo-bar", section)
+        self.assertIn("@keyframes dz-logo-orbit", section)
+        reduced = section[section.index("@media (prefers-reduced-motion: reduce)") :]
+        self.assertIn(".dz-brand__orbit", reduced)
+        self.assertIn("animation: none !important", reduced)
 
 
 class FaviconTests(TestCase):
     """L'onglet du navigateur porte la marque DataZen.
 
-    `tools/make_favicon.py` isole le glyphe gauche du logo et produit un .ico
+    `tools/make_favicon.py` dessine le symbole du logo et produit un .ico
     multi-tailles plus une icône Apple. Les tests verrouillent les fichiers,
     leur branchement dans le gabarit et la route /favicon.ico.
     """
@@ -4660,7 +4658,7 @@ class DesignSystemTests(TestCase):
         base = (
             Path(__file__).resolve().parent.parent / "templates" / "core" / "base.html"
         ).read_text(encoding="utf-8")
-        self.assertIn("css/style.css' %}?v=20261108-demo", base)
+        self.assertIn("css/style.css' %}?v=20261108-logo", base)
 
     def test_inner_pages_use_the_section_rhythm(self):
         # Les gabarits applicatifs troquent l'espacement serré de Bootstrap
