@@ -280,6 +280,9 @@ msgstr "Veri analisti"
 msgid "Ancienne valeur"
 msgstr "Eski değer"
 
+msgid "Animation : un tableau de données est analysé, corrigé, puis son score de qualité augmente."
+msgstr "Animasyon: bir veri tablosu analiz edilip düzeltilir, ardından kalite puanı yükselir."
+
 msgid "Annuler"
 msgstr "İptal"
 
@@ -655,6 +658,9 @@ msgstr "Parolamı değiştir"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Parolamı değiştir — DataZen"
 
+msgid "Chaque cellule est analysée : doublons, formats, valeurs manquantes."
+msgstr "Her hücre analiz edilir: yinelenenler, biçimler, eksik değerler."
+
 msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
 msgstr "Her hesabın bir rolü vardır: görüntüleyici, düzenleyici veya yönetici. Denetim yalnızca arayüzde değil, sunucu tarafında uygulanır."
 
@@ -871,6 +877,9 @@ msgstr "Kopyala"
 msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
 msgstr "Şimdi kopyala: güvenliğin için bir daha gösterilmeyecek."
 
+msgid "Correction"
+msgstr "Düzeltme"
+
 msgid "Corrections"
 msgstr "Düzeltmeler"
 
@@ -1069,6 +1078,9 @@ msgstr "İzin"
 msgid "Droit accordé"
 msgstr "Verilen izin"
 
+msgid "Du fichier brut au fichier impeccable"
+msgstr "Ham dosyadan kusursuz dosyaya"
+
 msgid "Durée de conservation"
 msgstr "Saklama süresi"
 
@@ -1098,6 +1110,12 @@ msgstr "Hafta bazında ayrıntı"
 
 msgid "Détails techniques"
 msgstr "Teknik ayrıntılar"
+
+msgid "Détection"
+msgstr "Tespit"
+
+msgid "Détection des anomalies, corrections automatiques, score de qualité : DataZen fait le travail en quelques secondes."
+msgstr "Anomali tespiti, otomatik düzeltmeler, kalite puanı: DataZen işi saniyeler içinde yapar."
 
 msgid "E-mail envoyé — DataZen"
 msgstr "E-posta gönderildi — DataZen"
@@ -1143,6 +1161,9 @@ msgstr "Kalan e-postalar:"
 
 msgid "Emails: valid + invalid + unknown = total"
 msgstr "E-postalar: geçerli + geçersiz + bilinmeyen = toplam"
+
+msgid "En action"
+msgstr "İş başında"
 
 msgid "En attente"
 msgstr "Beklemede"
@@ -1579,6 +1600,9 @@ msgstr "Yerel adresler reddedilir."
 msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
 msgstr "Yinelenenler işaretlenir ancak otomatik olarak silinmez. Silmek için bu kutuyu işaretleyin."
 
+msgid "Les erreurs sont corrigées automatiquement ; rien n'est supprimé sans votre accord."
+msgstr "Hatalar otomatik olarak düzeltilir; onayınız olmadan hiçbir şey silinmez."
+
 msgid "Les fichiers archivés restent accessibles et téléchargeables."
 msgstr "Arşivlenen dosyalar erişilebilir ve indirilebilir kalır."
 
@@ -1627,6 +1651,9 @@ msgstr "Değişiklik kaydı satırları"
 msgid "Lignes traitées"
 msgstr "İşlenen satırlar"
 
+msgid "Lire la vidéo"
+msgstr "Videoyu oynat"
+
 msgid "Localisation"
 msgstr "Konum"
 
@@ -1668,6 +1695,9 @@ msgstr "Temizleme kurallarım"
 
 msgid "Mesuré avant et après le nettoyage."
 msgstr "Temizlikten önce ve sonra ölçülür."
+
+msgid "Mettre la vidéo en pause"
+msgstr "Videoyu duraklat"
 
 msgid "Mettre à jour le mot de passe"
 msgstr "Parolayı güncelle"
@@ -2643,6 +2673,9 @@ msgstr "Bir yönetici hesabı bu sayfadan silinemez. Şunu kullanın:"
 
 msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
 msgstr "Dosyadan bir alıntı: ilk satırlar veriyi değerlendirmeye yeter."
+
+msgid "Un score sur 100 mesure le gain avant et après nettoyage."
+msgstr "100 üzerinden bir puan, temizlik öncesi ve sonrası kazancı ölçer."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "Bir kontrol paneli kaliteyi öncesi/sonrası ölçer ve kaybedilen her puanı açıklar."

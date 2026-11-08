@@ -280,6 +280,9 @@ msgstr "Data-analyytikko"
 msgid "Ancienne valeur"
 msgstr "Aiempi arvo"
 
+msgid "Animation : un tableau de données est analysé, corrigé, puis son score de qualité augmente."
+msgstr "Animaatio: datataulukko analysoidaan ja korjataan, minkä jälkeen sen laatupisteet nousevat."
+
 msgid "Annuler"
 msgstr "Peruuta"
 
@@ -655,6 +658,9 @@ msgstr "Vaihda salasanani"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Vaihda salasanani — DataZen"
 
+msgid "Chaque cellule est analysée : doublons, formats, valeurs manquantes."
+msgstr "Jokainen solu analysoidaan: kaksoiskappaleet, muodot, puuttuvat arvot."
+
 msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
 msgstr "Jokaisella tilillä on rooli: katselija, muokkaaja tai ylläpitäjä. Tarkistus tehdään palvelimella, ei vain käyttöliittymässä."
 
@@ -871,6 +877,9 @@ msgstr "Kopioi"
 msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
 msgstr "Kopioi nyt: turvallisuutesi vuoksi sitä ei näytetä enää."
 
+msgid "Correction"
+msgstr "Korjaus"
+
 msgid "Corrections"
 msgstr "Korjaukset"
 
@@ -1069,6 +1078,9 @@ msgstr "Käyttöoikeus"
 msgid "Droit accordé"
 msgstr "Myönnetty käyttöoikeus"
 
+msgid "Du fichier brut au fichier impeccable"
+msgstr "Raakatiedostosta virheettömäksi"
+
 msgid "Durée de conservation"
 msgstr "Säilytysaika"
 
@@ -1098,6 +1110,12 @@ msgstr "Erittely viikoittain"
 
 msgid "Détails techniques"
 msgstr "Tekniset tiedot"
+
+msgid "Détection"
+msgstr "Tunnistus"
+
+msgid "Détection des anomalies, corrections automatiques, score de qualité : DataZen fait le travail en quelques secondes."
+msgstr "Poikkeamien tunnistus, automaattiset korjaukset, laatupisteet: DataZen tekee työn sekunneissa."
 
 msgid "E-mail envoyé — DataZen"
 msgstr "Sähköposti lähetetty — DataZen"
@@ -1143,6 +1161,9 @@ msgstr "Jäljellä olevat sähköpostit:"
 
 msgid "Emails: valid + invalid + unknown = total"
 msgstr "Sähköpostit: kelvolliset + virheelliset + tuntemattomat = yhteensä"
+
+msgid "En action"
+msgstr "Toiminnassa"
 
 msgid "En attente"
 msgstr "Odottaa"
@@ -1579,6 +1600,9 @@ msgstr "Paikalliset osoitteet hylätään."
 msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
 msgstr "Kaksoiskappaleet merkitään, mutta niitä ei poisteta automaattisesti. Valitse tämä ruutu poistaaksesi ne erikseen."
 
+msgid "Les erreurs sont corrigées automatiquement ; rien n'est supprimé sans votre accord."
+msgstr "Virheet korjataan automaattisesti; mitään ei poisteta ilman suostumustasi."
+
 msgid "Les fichiers archivés restent accessibles et téléchargeables."
 msgstr "Arkistoidut tiedostot ovat edelleen käytettävissä ja ladattavissa."
 
@@ -1627,6 +1651,9 @@ msgstr "Muutoslokin rivit"
 msgid "Lignes traitées"
 msgstr "Käsitellyt rivit"
 
+msgid "Lire la vidéo"
+msgstr "Toista video"
+
 msgid "Localisation"
 msgstr "Sijainti"
 
@@ -1668,6 +1695,9 @@ msgstr "Omat puhdistussäännöt"
 
 msgid "Mesuré avant et après le nettoyage."
 msgstr "Mitattu ennen siivousta ja sen jälkeen."
+
+msgid "Mettre la vidéo en pause"
+msgstr "Keskeytä video"
 
 msgid "Mettre à jour le mot de passe"
 msgstr "Päivitä salasana"
@@ -2643,6 +2673,9 @@ msgstr "Ylläpitäjätiliä ei voi poistaa tältä sivulta. Käytä"
 
 msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
 msgstr "Ote tiedostosta: ensimmäiset rivit riittävät tietojen arviointiin."
+
+msgid "Un score sur 100 mesure le gain avant et après nettoyage."
+msgstr "Pisteet asteikolla 0–100 mittaavat parannusta ennen ja jälkeen puhdistuksen."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "Kojelauta mittaa laatua ennen / jälkeen ja selittää jokaisen menetetyn pisteen."

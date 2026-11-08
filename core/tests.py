@@ -4660,7 +4660,7 @@ class DesignSystemTests(TestCase):
         base = (
             Path(__file__).resolve().parent.parent / "templates" / "core" / "base.html"
         ).read_text(encoding="utf-8")
-        self.assertIn("css/style.css' %}?v=20261108-lime", base)
+        self.assertIn("css/style.css' %}?v=20261108-demo", base)
 
     def test_inner_pages_use_the_section_rhythm(self):
         # Les gabarits applicatifs troquent l'espacement serré de Bootstrap
@@ -6253,3 +6253,33 @@ class ReactIslandTests(TestCase):
         self.client.cookies[settings.LANGUAGE_COOKIE_NAME] = "en"
         response = self.client.get(reverse("core:index"))
         self.assertContains(response, "Drag and drop your file here")
+
+
+class DemoVideoTests(TestCase):
+    """La page d'accueil présente une démonstration animée, légère et accessible."""
+
+    def setUp(self):
+        self.user = User.objects.create_user(username="demoviewer", password="MotDePasse!2026")
+        self.client.force_login(self.user)
+
+    def test_assets_exist_and_stay_light(self):
+        root = Path(settings.BASE_DIR) / "static"
+        for relative in ("video/demo.webm", "video/demo.mp4", "img/demo-poster.jpg"):
+            path = root / relative
+            self.assertTrue(path.is_file(), relative)
+            self.assertLess(path.stat().st_size, 600 * 1024, relative)
+
+    def test_section_is_rendered_with_controls_and_steps(self):
+        response = self.client.get(reverse("core:index"))
+        self.assertContains(response, "data-dz-demo-video")
+        self.assertContains(response, "video/demo.webm")
+        self.assertContains(response, "img/demo-poster.jpg")
+        # Contrôle lecture / pause (animation en boucle de plus de 5 s).
+        self.assertContains(response, "data-dz-demo-toggle")
+        self.assertContains(response, 'data-dz-demo-step="', count=3)
+
+    def test_section_is_translated(self):
+        self.client.cookies[settings.LANGUAGE_COOKIE_NAME] = "en"
+        response = self.client.get(reverse("core:index"))
+        self.assertContains(response, "From raw file to flawless file")
+        self.assertContains(response, "Pause the video")

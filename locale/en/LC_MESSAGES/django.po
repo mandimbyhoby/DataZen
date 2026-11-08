@@ -280,6 +280,9 @@ msgstr "Data analyst"
 msgid "Ancienne valeur"
 msgstr "Old value"
 
+msgid "Animation : un tableau de données est analysé, corrigé, puis son score de qualité augmente."
+msgstr "Animation: a data table is analysed and corrected, then its quality score rises."
+
 msgid "Annuler"
 msgstr "Cancel"
 
@@ -655,6 +658,9 @@ msgstr "Change my password"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Change my password — DataZen"
 
+msgid "Chaque cellule est analysée : doublons, formats, valeurs manquantes."
+msgstr "Every cell is analysed: duplicates, formats, missing values."
+
 msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
 msgstr "Every account has a role: viewer, editor or administrator. Enforcement happens server-side, not only in the interface."
 
@@ -871,6 +877,9 @@ msgstr "Copy"
 msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
 msgstr "Copy it now: for your security it will never be shown again."
 
+msgid "Correction"
+msgstr "Correction"
+
 msgid "Corrections"
 msgstr "Corrections"
 
@@ -1069,6 +1078,9 @@ msgstr "Permission"
 msgid "Droit accordé"
 msgstr "Permission granted"
 
+msgid "Du fichier brut au fichier impeccable"
+msgstr "From raw file to flawless file"
+
 msgid "Durée de conservation"
 msgstr "Retention period"
 
@@ -1098,6 +1110,12 @@ msgstr "Detail per week"
 
 msgid "Détails techniques"
 msgstr "Technical details"
+
+msgid "Détection"
+msgstr "Detection"
+
+msgid "Détection des anomalies, corrections automatiques, score de qualité : DataZen fait le travail en quelques secondes."
+msgstr "Anomaly detection, automatic corrections, quality score: DataZen does the work in seconds."
 
 msgid "E-mail envoyé — DataZen"
 msgstr "Email sent — DataZen"
@@ -1143,6 +1161,9 @@ msgstr "Remaining emails:"
 
 msgid "Emails: valid + invalid + unknown = total"
 msgstr "Emails: valid + invalid + unknown = total"
+
+msgid "En action"
+msgstr "In action"
 
 msgid "En attente"
 msgstr "Pending"
@@ -1579,6 +1600,9 @@ msgstr "Local addresses are refused."
 msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
 msgstr "Duplicates are flagged but never removed automatically. Check this box to explicitly remove them."
 
+msgid "Les erreurs sont corrigées automatiquement ; rien n'est supprimé sans votre accord."
+msgstr "Errors are corrected automatically; nothing is deleted without your consent."
+
 msgid "Les fichiers archivés restent accessibles et téléchargeables."
 msgstr "Archived files remain accessible and downloadable."
 
@@ -1627,6 +1651,9 @@ msgstr "Changelog lines"
 msgid "Lignes traitées"
 msgstr "Rows processed"
 
+msgid "Lire la vidéo"
+msgstr "Play the video"
+
 msgid "Localisation"
 msgstr "Location"
 
@@ -1668,6 +1695,9 @@ msgstr "My cleaning rules"
 
 msgid "Mesuré avant et après le nettoyage."
 msgstr "Measured before and after cleaning."
+
+msgid "Mettre la vidéo en pause"
+msgstr "Pause the video"
 
 msgid "Mettre à jour le mot de passe"
 msgstr "Update the password"
@@ -2643,6 +2673,9 @@ msgstr "An administrator account cannot be deleted from this page. Use the"
 
 msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
 msgstr "An extract of the file: the first rows are enough to judge the data."
+
+msgid "Un score sur 100 mesure le gain avant et après nettoyage."
+msgstr "A score out of 100 measures the gain before and after cleaning."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "A dashboard measures quality before / after and explains every lost point."

@@ -5028,3 +5028,204 @@ h1, .h1, .dz-section-title, .dz-page > .dz-page-head h1 {
 .dz-auth-video {
     filter: hue-rotate(205deg) saturate(1.1) brightness(1.18);
 }
+
+/* ==========================================================================
+   23. Démonstration animée (page d'accueil)
+   ========================================================================== */
+.dz-demo {
+    position: relative;
+}
+
+.dz-demo__steps {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dz-demo__step {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--dz-border);
+    border-radius: 1rem;
+    background: var(--dz-surface);
+    box-shadow: var(--dz-shadow-xs);
+    transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.dz-demo__step strong {
+    display: block;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.dz-demo__step span:not(.dz-demo__num) {
+    display: block;
+    color: var(--dz-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+/* Pastille numérotée ronde, comme les objectifs de la référence. */
+.dz-demo__num {
+    flex: 0 0 auto;
+    display: inline-grid;
+    place-items: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    background: var(--dz-surface-3);
+    color: var(--dz-text-muted);
+    font-weight: 800;
+    font-size: 0.9rem;
+    font-variant-numeric: tabular-nums;
+    transition: background 0.35s ease, color 0.35s ease, transform 0.35s ease;
+}
+
+.dz-demo__step.is-active {
+    border-color: rgba(140, 198, 63, 0.55);
+    box-shadow: 0 0 0 4px rgba(140, 198, 63, 0.14), var(--dz-shadow-sm);
+    transform: translateX(6px);
+}
+
+.dz-demo__step.is-active .dz-demo__num {
+    background: linear-gradient(135deg, #c6e66b 0%, #8cc63f 100%);
+    color: #12200a;
+    transform: scale(1.08);
+}
+
+/* Scène : fenêtre de navigateur posée sur des arcs verts. */
+.dz-demo__stage {
+    position: relative;
+    isolation: isolate;
+    padding: 1.25rem;
+}
+
+.dz-demo__stage::before,
+.dz-demo__stage::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.dz-demo__stage::before {
+    inset: -12% -8% auto auto;
+    width: 62%;
+    aspect-ratio: 1;
+    border: 0.6rem solid var(--dz-lime);
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(10deg);
+}
+
+.dz-demo__stage::after {
+    inset: auto auto -10% -6%;
+    width: 38%;
+    aspect-ratio: 1;
+    background-image: radial-gradient(var(--dz-grid-dot) 1.4px, transparent 1.6px);
+    background-size: 16px 16px;
+}
+
+.dz-demo__window {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--dz-border);
+    border-radius: 1.25rem;
+    background: #f6f7f3;
+    box-shadow: var(--dz-shadow-lg), var(--dz-highlight);
+}
+
+.dz-demo__bar {
+    display: flex;
+    gap: 0.4rem;
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--dz-border);
+    background: var(--dz-surface);
+}
+
+.dz-demo__bar i {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: #ff5f57;
+}
+
+.dz-demo__bar i:nth-child(2) { background: #febc2e; }
+.dz-demo__bar i:nth-child(3) { background: #28c840; }
+
+.dz-demo__video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.dz-demo__toggle {
+    position: absolute;
+    right: 0.85rem;
+    bottom: 0.85rem;
+    display: inline-grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid var(--dz-border);
+    border-radius: 50%;
+    background: color-mix(in srgb, #ffffff 88%, transparent);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: var(--dz-shadow-sm);
+    color: #12200a;
+    opacity: 0.75;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.dz-demo__toggle:hover,
+.dz-demo__toggle:focus-visible {
+    opacity: 1;
+    transform: scale(1.06);
+}
+
+/* Icône pause (deux barres) / lecture (triangle), sans police d'icônes. */
+.dz-demo__icon-pause {
+    width: 0.8rem;
+    height: 0.85rem;
+    border-left: 0.26rem solid currentColor;
+    border-right: 0.26rem solid currentColor;
+}
+
+.dz-demo__toggle.is-paused .dz-demo__icon-pause {
+    width: 0;
+    height: 0;
+    margin-left: 0.2rem;
+    border-top: 0.45rem solid transparent;
+    border-bottom: 0.45rem solid transparent;
+    border-left: 0.75rem solid currentColor;
+    border-right: 0;
+}
+
+[data-bs-theme="dark"] .dz-demo__window {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dz-demo__step,
+    .dz-demo__num {
+        transition: none;
+    }
+
+    .dz-demo__step.is-active {
+        transform: none;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .dz-demo__stage {
+        padding: 0.5rem;
+    }
+}

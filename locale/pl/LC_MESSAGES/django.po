@@ -289,6 +289,9 @@ msgstr "Analityk danych"
 msgid "Ancienne valeur"
 msgstr "Poprzednia wartość"
 
+msgid "Animation : un tableau de données est analysé, corrigé, puis son score de qualité augmente."
+msgstr "Animacja: tabela danych jest analizowana i poprawiana, a następnie rośnie jej wynik jakości."
+
 msgid "Annuler"
 msgstr "Anuluj"
 
@@ -664,6 +667,9 @@ msgstr "Zmień hasło"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Zmień hasło — DataZen"
 
+msgid "Chaque cellule est analysée : doublons, formats, valeurs manquantes."
+msgstr "Analizowana jest każda komórka: duplikaty, formaty, brakujące wartości."
+
 msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
 msgstr "Każde konto ma rolę: czytelnik, edytor lub administrator. Kontrola odbywa się po stronie serwera, nie tylko w interfejsie."
 
@@ -880,6 +886,9 @@ msgstr "Kopiuj"
 msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
 msgstr "Skopiuj teraz: ze względów bezpieczeństwa nie zostanie już pokazany."
 
+msgid "Correction"
+msgstr "Korekta"
+
 msgid "Corrections"
 msgstr "Poprawki"
 
@@ -1078,6 +1087,9 @@ msgstr "Uprawnienie"
 msgid "Droit accordé"
 msgstr "Przyznane uprawnienie"
 
+msgid "Du fichier brut au fichier impeccable"
+msgstr "Od surowego pliku do bezbłędnego"
+
 msgid "Durée de conservation"
 msgstr "Okres przechowywania"
 
@@ -1107,6 +1119,12 @@ msgstr "Szczegóły według tygodnia"
 
 msgid "Détails techniques"
 msgstr "Szczegóły techniczne"
+
+msgid "Détection"
+msgstr "Wykrywanie"
+
+msgid "Détection des anomalies, corrections automatiques, score de qualité : DataZen fait le travail en quelques secondes."
+msgstr "Wykrywanie anomalii, automatyczne poprawki, wynik jakości: DataZen wykonuje pracę w kilka sekund."
 
 msgid "E-mail envoyé — DataZen"
 msgstr "E-mail wysłany — DataZen"
@@ -1152,6 +1170,9 @@ msgstr "Pozostałe e-maile:"
 
 msgid "Emails: valid + invalid + unknown = total"
 msgstr "E-maile: poprawne + niepoprawne + nieznane = razem"
+
+msgid "En action"
+msgstr "W akcji"
 
 msgid "En attente"
 msgstr "Oczekujące"
@@ -1588,6 +1609,9 @@ msgstr "Adresy lokalne są odrzucane."
 msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
 msgstr "Duplikaty są oznaczane, ale nigdy nie są usuwane automatycznie. Zaznacz to pole, aby usunąć je jawnie."
 
+msgid "Les erreurs sont corrigées automatiquement ; rien n'est supprimé sans votre accord."
+msgstr "Błędy są poprawiane automatycznie; nic nie jest usuwane bez Twojej zgody."
+
 msgid "Les fichiers archivés restent accessibles et téléchargeables."
 msgstr "Zarchiwizowane pliki pozostają dostępne i można je pobierać."
 
@@ -1636,6 +1660,9 @@ msgstr "Wiersze dziennika zmian"
 msgid "Lignes traitées"
 msgstr "Przetworzone wiersze"
 
+msgid "Lire la vidéo"
+msgstr "Odtwórz film"
+
 msgid "Localisation"
 msgstr "Lokalizacja"
 
@@ -1677,6 +1704,9 @@ msgstr "Moje reguły czyszczenia"
 
 msgid "Mesuré avant et après le nettoyage."
 msgstr "Mierzone przed i po czyszczeniu."
+
+msgid "Mettre la vidéo en pause"
+msgstr "Wstrzymaj film"
 
 msgid "Mettre à jour le mot de passe"
 msgstr "Zaktualizuj hasło"
@@ -2652,6 +2682,9 @@ msgstr "Konta administratora nie można usunąć z tej strony. Użyj"
 
 msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
 msgstr "Fragment pliku: pierwsze wiersze wystarczą, aby ocenić dane."
+
+msgid "Un score sur 100 mesure le gain avant et après nettoyage."
+msgstr "Wynik w skali do 100 mierzy poprawę przed czyszczeniem i po nim."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "Panel mierzy jakość przed / po i wyjaśnia każdy utracony punkt."

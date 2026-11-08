@@ -280,6 +280,9 @@ msgstr "Dataanalytiker"
 msgid "Ancienne valeur"
 msgstr "Tidligere værdi"
 
+msgid "Animation : un tableau de données est analysé, corrigé, puis son score de qualité augmente."
+msgstr "Animation: en datatabel analyseres og rettes, hvorefter dens kvalitetsscore stiger."
+
 msgid "Annuler"
 msgstr "Annullér"
 
@@ -655,6 +658,9 @@ msgstr "Skift min adgangskode"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Skift min adgangskode — DataZen"
 
+msgid "Chaque cellule est analysée : doublons, formats, valeurs manquantes."
+msgstr "Hver celle analyseres: dubletter, formater, manglende værdier."
+
 msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
 msgstr "Hver konto har en rolle: læser, redaktør eller administrator. Kontrollen sker på serveren, ikke kun i brugerfladen."
 
@@ -871,6 +877,9 @@ msgstr "Kopiér"
 msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
 msgstr "Kopiér nu: af sikkerhedshensyn vises den aldrig igen."
 
+msgid "Correction"
+msgstr "Rettelse"
+
 msgid "Corrections"
 msgstr "Rettelser"
 
@@ -1069,6 +1078,9 @@ msgstr "Tilladelse"
 msgid "Droit accordé"
 msgstr "Givet tilladelse"
 
+msgid "Du fichier brut au fichier impeccable"
+msgstr "Fra rå fil til fejlfri fil"
+
 msgid "Durée de conservation"
 msgstr "Opbevaringsperiode"
 
@@ -1098,6 +1110,12 @@ msgstr "Detalje pr. uge"
 
 msgid "Détails techniques"
 msgstr "Tekniske detaljer"
+
+msgid "Détection"
+msgstr "Registrering"
+
+msgid "Détection des anomalies, corrections automatiques, score de qualité : DataZen fait le travail en quelques secondes."
+msgstr "Registrering af afvigelser, automatiske rettelser, kvalitetsscore: DataZen klarer arbejdet på få sekunder."
 
 msgid "E-mail envoyé — DataZen"
 msgstr "E-mail sendt — DataZen"
@@ -1143,6 +1161,9 @@ msgstr "Resterende e-mails:"
 
 msgid "Emails: valid + invalid + unknown = total"
 msgstr "E-mails: gyldige + ugyldige + ukendte = i alt"
+
+msgid "En action"
+msgstr "I aktion"
 
 msgid "En attente"
 msgstr "Afventer"
@@ -1579,6 +1600,9 @@ msgstr "Lokale adresser afvises."
 msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
 msgstr "Dubletter markeres, men fjernes aldrig automatisk. Markér dette felt for at fjerne dem udtrykkeligt."
 
+msgid "Les erreurs sont corrigées automatiquement ; rien n'est supprimé sans votre accord."
+msgstr "Fejl rettes automatisk; intet slettes uden dit samtykke."
+
 msgid "Les fichiers archivés restent accessibles et téléchargeables."
 msgstr "Arkiverede filer er stadig tilgængelige og kan downloades."
 
@@ -1627,6 +1651,9 @@ msgstr "Linjer i ændringsloggen"
 msgid "Lignes traitées"
 msgstr "Behandlede linjer"
 
+msgid "Lire la vidéo"
+msgstr "Afspil videoen"
+
 msgid "Localisation"
 msgstr "Placering"
 
@@ -1668,6 +1695,9 @@ msgstr "Mine rensningsregler"
 
 msgid "Mesuré avant et après le nettoyage."
 msgstr "Målt før og efter oprydningen."
+
+msgid "Mettre la vidéo en pause"
+msgstr "Sæt videoen på pause"
 
 msgid "Mettre à jour le mot de passe"
 msgstr "Opdatér adgangskoden"
@@ -2643,6 +2673,9 @@ msgstr "En administratorkonto kan ikke slettes fra denne side. Brug"
 
 msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
 msgstr "Et uddrag af filen: de første rækker er nok til at vurdere dataene."
+
+msgid "Un score sur 100 mesure le gain avant et après nettoyage."
+msgstr "En score ud af 100 måler gevinsten før og efter rensningen."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "Et dashboard måler kvaliteten før / efter og forklarer hvert tabt point."

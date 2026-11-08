@@ -289,6 +289,9 @@ msgstr "Analist de date"
 msgid "Ancienne valeur"
 msgstr "Valoare veche"
 
+msgid "Animation : un tableau de données est analysé, corrigé, puis son score de qualité augmente."
+msgstr "Animație: un tabel de date este analizat și corectat, apoi scorul său de calitate crește."
+
 msgid "Annuler"
 msgstr "Anulează"
 
@@ -664,6 +667,9 @@ msgstr "Schimbați parola"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Schimbați parola — DataZen"
 
+msgid "Chaque cellule est analysée : doublons, formats, valeurs manquantes."
+msgstr "Fiecare celulă este analizată: duplicate, formate, valori lipsă."
+
 msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
 msgstr "Fiecare cont are un rol: cititor, editor sau administrator. Verificarea se face pe server, nu doar în interfață."
 
@@ -880,6 +886,9 @@ msgstr "Copiază"
 msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
 msgstr "Copiați-l acum: pentru siguranța dvs., nu va mai fi afișat niciodată."
 
+msgid "Correction"
+msgstr "Corectare"
+
 msgid "Corrections"
 msgstr "Corecții"
 
@@ -1078,6 +1087,9 @@ msgstr "Drept"
 msgid "Droit accordé"
 msgstr "Drept acordat"
 
+msgid "Du fichier brut au fichier impeccable"
+msgstr "De la fișierul brut la fișierul impecabil"
+
 msgid "Durée de conservation"
 msgstr "Durata de păstrare"
 
@@ -1107,6 +1119,12 @@ msgstr "Detaliu pe săptămână"
 
 msgid "Détails techniques"
 msgstr "Detalii tehnice"
+
+msgid "Détection"
+msgstr "Detectare"
+
+msgid "Détection des anomalies, corrections automatiques, score de qualité : DataZen fait le travail en quelques secondes."
+msgstr "Detectarea anomaliilor, corecturi automate, scor de calitate: DataZen face treaba în câteva secunde."
 
 msgid "E-mail envoyé — DataZen"
 msgstr "E-mail trimis — DataZen"
@@ -1152,6 +1170,9 @@ msgstr "E-mailuri rămase:"
 
 msgid "Emails: valid + invalid + unknown = total"
 msgstr "E-mailuri: valide + invalide + necunoscute = total"
+
+msgid "En action"
+msgstr "În acțiune"
 
 msgid "En attente"
 msgstr "În așteptare"
@@ -1588,6 +1609,9 @@ msgstr "Adresele locale sunt refuzate."
 msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
 msgstr "Duplicatele sunt semnalate, dar nu sunt șterse automat. Bifați această casetă pentru a le șterge în mod explicit."
 
+msgid "Les erreurs sont corrigées automatiquement ; rien n'est supprimé sans votre accord."
+msgstr "Erorile sunt corectate automat; nimic nu este șters fără acordul dvs."
+
 msgid "Les fichiers archivés restent accessibles et téléchargeables."
 msgstr "Fișierele arhivate rămân accesibile și descărcabile."
 
@@ -1636,6 +1660,9 @@ msgstr "Linii din jurnalul modificărilor"
 msgid "Lignes traitées"
 msgstr "Linii procesate"
 
+msgid "Lire la vidéo"
+msgstr "Redați videoclipul"
+
 msgid "Localisation"
 msgstr "Localizare"
 
@@ -1677,6 +1704,9 @@ msgstr "Regulile mele de curățare"
 
 msgid "Mesuré avant et après le nettoyage."
 msgstr "Măsurat înainte și după curățare."
+
+msgid "Mettre la vidéo en pause"
+msgstr "Întrerupeți videoclipul"
 
 msgid "Mettre à jour le mot de passe"
 msgstr "Actualizați parola"
@@ -2652,6 +2682,9 @@ msgstr "Un cont de administrator nu poate fi șters din această pagină. Folosi
 
 msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
 msgstr "Un extras din fișier: primele rânduri sunt suficiente pentru a evalua datele."
+
+msgid "Un score sur 100 mesure le gain avant et après nettoyage."
+msgstr "Un scor din 100 măsoară câștigul înainte și după curățare."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "Un tablou de bord măsoară calitatea înainte / după și explică fiecare punct pierdut."

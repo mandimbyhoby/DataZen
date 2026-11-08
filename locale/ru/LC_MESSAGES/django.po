@@ -289,6 +289,9 @@ msgstr "Аналитик данных"
 msgid "Ancienne valeur"
 msgstr "Прежнее значение"
 
+msgid "Animation : un tableau de données est analysé, corrigé, puis son score de qualité augmente."
+msgstr "Анимация: таблица данных анализируется и исправляется, затем её оценка качества растёт."
+
 msgid "Annuler"
 msgstr "Отмена"
 
@@ -664,6 +667,9 @@ msgstr "Изменить мой пароль"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Изменение моего пароля — DataZen"
 
+msgid "Chaque cellule est analysée : doublons, formats, valeurs manquantes."
+msgstr "Анализируется каждая ячейка: дубликаты, форматы, пропущенные значения."
+
 msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
 msgstr "У каждой учётной записи есть роль: читатель, редактор или администратор. Проверка выполняется на сервере, а не только в интерфейсе."
 
@@ -880,6 +886,9 @@ msgstr "Копировать"
 msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
 msgstr "Скопируйте сейчас: в целях безопасности он больше не будет показан."
 
+msgid "Correction"
+msgstr "Исправление"
+
 msgid "Corrections"
 msgstr "Исправления"
 
@@ -1078,6 +1087,9 @@ msgstr "Право"
 msgid "Droit accordé"
 msgstr "Предоставленное право"
 
+msgid "Du fichier brut au fichier impeccable"
+msgstr "От исходного файла к безупречному"
+
 msgid "Durée de conservation"
 msgstr "Срок хранения"
 
@@ -1107,6 +1119,12 @@ msgstr "Детализация по неделям"
 
 msgid "Détails techniques"
 msgstr "Технические детали"
+
+msgid "Détection"
+msgstr "Обнаружение"
+
+msgid "Détection des anomalies, corrections automatiques, score de qualité : DataZen fait le travail en quelques secondes."
+msgstr "Поиск аномалий, автоматические исправления, оценка качества: DataZen делает всё за несколько секунд."
 
 msgid "E-mail envoyé — DataZen"
 msgstr "Письмо отправлено — DataZen"
@@ -1152,6 +1170,9 @@ msgstr "Оставшиеся адреса электронной почты:"
 
 msgid "Emails: valid + invalid + unknown = total"
 msgstr "Адреса email: допустимые + недопустимые + неизвестные = всего"
+
+msgid "En action"
+msgstr "В действии"
 
 msgid "En attente"
 msgstr "В ожидании"
@@ -1588,6 +1609,9 @@ msgstr "Локальные адреса отклоняются."
 msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
 msgstr "Дубликаты отмечаются, но не удаляются автоматически. Установите этот флажок, чтобы удалить их вручную."
 
+msgid "Les erreurs sont corrigées automatiquement ; rien n'est supprimé sans votre accord."
+msgstr "Ошибки исправляются автоматически; ничего не удаляется без вашего согласия."
+
 msgid "Les fichiers archivés restent accessibles et téléchargeables."
 msgstr "Архивные файлы остаются доступными для скачивания."
 
@@ -1636,6 +1660,9 @@ msgstr "Строки журнала изменений"
 msgid "Lignes traitées"
 msgstr "Обработанные строки"
 
+msgid "Lire la vidéo"
+msgstr "Воспроизвести видео"
+
 msgid "Localisation"
 msgstr "Местоположение"
 
@@ -1677,6 +1704,9 @@ msgstr "Мои правила очистки"
 
 msgid "Mesuré avant et après le nettoyage."
 msgstr "Измеряется до и после очистки."
+
+msgid "Mettre la vidéo en pause"
+msgstr "Приостановить видео"
 
 msgid "Mettre à jour le mot de passe"
 msgstr "Обновить пароль"
@@ -2652,6 +2682,9 @@ msgstr "Учётную запись администратора нельзя у
 
 msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
 msgstr "Фрагмент файла: первых строк достаточно, чтобы оценить данные."
+
+msgid "Un score sur 100 mesure le gain avant et après nettoyage."
+msgstr "Оценка по 100-балльной шкале показывает улучшение до и после очистки."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "Панель управления измеряет качество до / после и объясняет каждый потерянный балл."

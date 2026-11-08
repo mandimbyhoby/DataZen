@@ -252,7 +252,18 @@ DataZen/
       python tools\generate_hero_video.py
       python tools\generate_login_video.py
       python tools\generate_login_video.py --preview 3
+      python tools\generate_demo_video.py
+      python tools\generate_demo_video.py --preview 6
       ```
+
+      `generate_demo_video.py` produit la **démonstration animée** de la page
+      d'accueil (`static/video/demo.mp4`, `demo.webm` et l'affiche
+      `static/img/demo-poster.jpg`) : boucle de 12 s à 30 i/s, dans la palette
+      lime, qui montre un tableau analysé, corrigé cellule par cellule, puis
+      un score de qualité qui grimpe. Elle ne contient aucun texte (valable
+      dans les 23 langues) ; les étapes 01 / 02 / 03 affichées à côté
+      s'allument au rythme de la vidéo (`static/js/main.js`), un bouton permet
+      de la mettre en pause et « réduire les animations » la laisse à l'arrêt.
 
       Les scripts dessinent une animation de 10 s (240 images à 24 i/s) avec
       numpy et Pillow, puis l'encodent en MP4 (H.264) et WebM (VP9) via le

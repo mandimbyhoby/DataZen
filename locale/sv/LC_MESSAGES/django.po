@@ -280,6 +280,9 @@ msgstr "Dataanalytiker"
 msgid "Ancienne valeur"
 msgstr "Tidigare värde"
 
+msgid "Animation : un tableau de données est analysé, corrigé, puis son score de qualité augmente."
+msgstr "Animation: en datatabell analyseras och korrigeras, sedan stiger dess kvalitetspoäng."
+
 msgid "Annuler"
 msgstr "Avbryt"
 
@@ -655,6 +658,9 @@ msgstr "Byt lösenord"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Byt lösenord — DataZen"
 
+msgid "Chaque cellule est analysée : doublons, formats, valeurs manquantes."
+msgstr "Varje cell analyseras: dubbletter, format, saknade värden."
+
 msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
 msgstr "Varje konto har en roll: läsare, redigerare eller administratör. Kontrollen sker på servern, inte bara i gränssnittet."
 
@@ -871,6 +877,9 @@ msgstr "Kopiera"
 msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
 msgstr "Kopiera nu: för din säkerhet visas den aldrig igen."
 
+msgid "Correction"
+msgstr "Korrigering"
+
 msgid "Corrections"
 msgstr "Korrigeringar"
 
@@ -1069,6 +1078,9 @@ msgstr "Behörighet"
 msgid "Droit accordé"
 msgstr "Beviljad behörighet"
 
+msgid "Du fichier brut au fichier impeccable"
+msgstr "Från rå fil till felfri fil"
+
 msgid "Durée de conservation"
 msgstr "Bevarandetid"
 
@@ -1098,6 +1110,12 @@ msgstr "Detalj per vecka"
 
 msgid "Détails techniques"
 msgstr "Tekniska detaljer"
+
+msgid "Détection"
+msgstr "Upptäckt"
+
+msgid "Détection des anomalies, corrections automatiques, score de qualité : DataZen fait le travail en quelques secondes."
+msgstr "Avvikelsedetektering, automatiska korrigeringar, kvalitetspoäng: DataZen gör jobbet på några sekunder."
 
 msgid "E-mail envoyé — DataZen"
 msgstr "E-post skickad — DataZen"
@@ -1143,6 +1161,9 @@ msgstr "Återstående e-postadresser:"
 
 msgid "Emails: valid + invalid + unknown = total"
 msgstr "E-post: giltiga + ogiltiga + okända = totalt"
+
+msgid "En action"
+msgstr "I praktiken"
 
 msgid "En attente"
 msgstr "Väntar"
@@ -1579,6 +1600,9 @@ msgstr "Lokala adresser avvisas."
 msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
 msgstr "Dubbletter markeras men tas aldrig bort automatiskt. Markera rutan för att ta bort dem uttryckligen."
 
+msgid "Les erreurs sont corrigées automatiquement ; rien n'est supprimé sans votre accord."
+msgstr "Fel korrigeras automatiskt; inget tas bort utan ditt samtycke."
+
 msgid "Les fichiers archivés restent accessibles et téléchargeables."
 msgstr "Arkiverade filer är fortfarande tillgängliga och kan laddas ner."
 
@@ -1627,6 +1651,9 @@ msgstr "Rader i ändringsloggen"
 msgid "Lignes traitées"
 msgstr "Bearbetade rader"
 
+msgid "Lire la vidéo"
+msgstr "Spela upp videon"
+
 msgid "Localisation"
 msgstr "Plats"
 
@@ -1668,6 +1695,9 @@ msgstr "Mina rensningsregler"
 
 msgid "Mesuré avant et après le nettoyage."
 msgstr "Mätt före och efter rensningen."
+
+msgid "Mettre la vidéo en pause"
+msgstr "Pausa videon"
 
 msgid "Mettre à jour le mot de passe"
 msgstr "Uppdatera lösenordet"
@@ -2643,6 +2673,9 @@ msgstr "Ett administratörskonto kan inte tas bort från den här sidan. Använd
 
 msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
 msgstr "Ett utdrag ur filen: de första raderna räcker för att bedöma data."
+
+msgid "Un score sur 100 mesure le gain avant et après nettoyage."
+msgstr "En poäng av 100 mäter förbättringen före och efter rensningen."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "En instrumentpanel mäter kvaliteten före / efter och förklarar varje förlorad poäng."

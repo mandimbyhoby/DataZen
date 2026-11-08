@@ -271,6 +271,9 @@ msgstr "データアナリスト"
 msgid "Ancienne valeur"
 msgstr "変更前の値"
 
+msgid "Animation : un tableau de données est analysé, corrigé, puis son score de qualité augmente."
+msgstr "アニメーション：データ表が分析・修正され、品質スコアが上昇します。"
+
 msgid "Annuler"
 msgstr "キャンセル"
 
@@ -646,6 +649,9 @@ msgstr "パスワードを変更"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "パスワードの変更 — DataZen"
 
+msgid "Chaque cellule est analysée : doublons, formats, valeurs manquantes."
+msgstr "すべてのセルを分析：重複、形式、欠損値。"
+
 msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
 msgstr "すべてのアカウントにはロールがあります: 閲覧者、編集者、管理者。制御はサーバー側で行われ、画面だけではありません。"
 
@@ -862,6 +868,9 @@ msgstr "コピー"
 msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
 msgstr "今すぐコピーしてください。安全のため、再表示されることはありません。"
 
+msgid "Correction"
+msgstr "修正"
+
 msgid "Corrections"
 msgstr "修正"
 
@@ -1060,6 +1069,9 @@ msgstr "権限"
 msgid "Droit accordé"
 msgstr "付与された権限"
 
+msgid "Du fichier brut au fichier impeccable"
+msgstr "生のファイルから完璧なファイルへ"
+
 msgid "Durée de conservation"
 msgstr "保持期間"
 
@@ -1089,6 +1101,12 @@ msgstr "週ごとの詳細"
 
 msgid "Détails techniques"
 msgstr "技術的な詳細"
+
+msgid "Détection"
+msgstr "検出"
+
+msgid "Détection des anomalies, corrections automatiques, score de qualité : DataZen fait le travail en quelques secondes."
+msgstr "異常の検出、自動修正、品質スコア：DataZen が数秒で処理します。"
 
 msgid "E-mail envoyé — DataZen"
 msgstr "メールを送信しました — DataZen"
@@ -1134,6 +1152,9 @@ msgstr "残っているメールアドレス:"
 
 msgid "Emails: valid + invalid + unknown = total"
 msgstr "メール: 有効 + 無効 + 不明 = 合計"
+
+msgid "En action"
+msgstr "実際の動作"
 
 msgid "En attente"
 msgstr "待機中"
@@ -1570,6 +1591,9 @@ msgstr "ローカルアドレスは拒否されます。"
 msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
 msgstr "重複は検出されますが、自動では削除されません。削除するにはこの項目を選択してください。"
 
+msgid "Les erreurs sont corrigées automatiquement ; rien n'est supprimé sans votre accord."
+msgstr "エラーは自動的に修正されます。同意なしに削除されることはありません。"
+
 msgid "Les fichiers archivés restent accessibles et téléchargeables."
 msgstr "アーカイブされたファイルは引き続き閲覧・ダウンロードできます。"
 
@@ -1618,6 +1642,9 @@ msgstr "変更ログの行数"
 msgid "Lignes traitées"
 msgstr "処理した行数"
 
+msgid "Lire la vidéo"
+msgstr "動画を再生"
+
 msgid "Localisation"
 msgstr "所在地"
 
@@ -1659,6 +1686,9 @@ msgstr "マイ クレンジングルール"
 
 msgid "Mesuré avant et après le nettoyage."
 msgstr "クリーニングの前後で測定。"
+
+msgid "Mettre la vidéo en pause"
+msgstr "動画を一時停止"
 
 msgid "Mettre à jour le mot de passe"
 msgstr "パスワードを更新"
@@ -2634,6 +2664,9 @@ msgstr "管理者アカウントはこのページから削除できません。
 
 msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
 msgstr "ファイルの抜粋: 最初の数行でデータを判断できます。"
+
+msgid "Un score sur 100 mesure le gain avant et après nettoyage."
+msgstr "100 点満点のスコアで、クリーニング前後の改善を測定します。"
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "ダッシュボードがクレンジング前後の品質を測定し、失われたポイントを一つずつ説明します。"

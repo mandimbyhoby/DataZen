@@ -280,6 +280,9 @@ msgstr "Data-analist"
 msgid "Ancienne valeur"
 msgstr "Oude waarde"
 
+msgid "Animation : un tableau de données est analysé, corrigé, puis son score de qualité augmente."
+msgstr "Animatie: een gegevenstabel wordt geanalyseerd en gecorrigeerd, daarna stijgt de kwaliteitsscore."
+
 msgid "Annuler"
 msgstr "Annuleren"
 
@@ -655,6 +658,9 @@ msgstr "Mijn wachtwoord wijzigen"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Mijn wachtwoord wijzigen — DataZen"
 
+msgid "Chaque cellule est analysée : doublons, formats, valeurs manquantes."
+msgstr "Elke cel wordt geanalyseerd: duplicaten, formaten, ontbrekende waarden."
+
 msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
 msgstr "Elk account heeft een rol: kijker, bewerker of beheerder. De controle gebeurt op de server, niet alleen in de interface."
 
@@ -871,6 +877,9 @@ msgstr "Kopiëren"
 msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
 msgstr "Kopieer het nu: voor je veiligheid wordt het nooit meer getoond."
 
+msgid "Correction"
+msgstr "Correctie"
+
 msgid "Corrections"
 msgstr "Correcties"
 
@@ -1069,6 +1078,9 @@ msgstr "Recht"
 msgid "Droit accordé"
 msgstr "Verleend recht"
 
+msgid "Du fichier brut au fichier impeccable"
+msgstr "Van ruw bestand naar foutloos bestand"
+
 msgid "Durée de conservation"
 msgstr "Bewaartermijn"
 
@@ -1098,6 +1110,12 @@ msgstr "Detail per week"
 
 msgid "Détails techniques"
 msgstr "Technische details"
+
+msgid "Détection"
+msgstr "Detectie"
+
+msgid "Détection des anomalies, corrections automatiques, score de qualité : DataZen fait le travail en quelques secondes."
+msgstr "Afwijkingen opsporen, automatische correcties, kwaliteitsscore: DataZen doet het werk in enkele seconden."
 
 msgid "E-mail envoyé — DataZen"
 msgstr "E-mail verzonden — DataZen"
@@ -1143,6 +1161,9 @@ msgstr "Resterende e-mails:"
 
 msgid "Emails: valid + invalid + unknown = total"
 msgstr "E-mails: geldig + ongeldig + onbekend = totaal"
+
+msgid "En action"
+msgstr "In actie"
 
 msgid "En attente"
 msgstr "In behandeling"
@@ -1579,6 +1600,9 @@ msgstr "Lokale adressen worden geweigerd."
 msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
 msgstr "Duplicaten worden gemarkeerd, maar nooit automatisch verwijderd. Vink dit vakje aan om ze expliciet te verwijderen."
 
+msgid "Les erreurs sont corrigées automatiquement ; rien n'est supprimé sans votre accord."
+msgstr "Fouten worden automatisch gecorrigeerd; niets wordt zonder uw toestemming verwijderd."
+
 msgid "Les fichiers archivés restent accessibles et téléchargeables."
 msgstr "Gearchiveerde bestanden blijven toegankelijk en downloadbaar."
 
@@ -1627,6 +1651,9 @@ msgstr "Regels in het wijzigingslog"
 msgid "Lignes traitées"
 msgstr "Verwerkte regels"
 
+msgid "Lire la vidéo"
+msgstr "Video afspelen"
+
 msgid "Localisation"
 msgstr "Locatie"
 
@@ -1668,6 +1695,9 @@ msgstr "Mijn opschoonregels"
 
 msgid "Mesuré avant et après le nettoyage."
 msgstr "Gemeten voor en na het opschonen."
+
+msgid "Mettre la vidéo en pause"
+msgstr "Video pauzeren"
 
 msgid "Mettre à jour le mot de passe"
 msgstr "Het wachtwoord bijwerken"
@@ -2643,6 +2673,9 @@ msgstr "Een beheerdersaccount kan niet via deze pagina worden verwijderd. Gebrui
 
 msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
 msgstr "Een uittreksel van het bestand: de eerste rijen volstaan om de gegevens te beoordelen."
+
+msgid "Un score sur 100 mesure le gain avant et après nettoyage."
+msgstr "Een score op 100 meet de winst voor en na het opschonen."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "Een dashboard meet de kwaliteit voor / na en verklaart elk verloren punt."

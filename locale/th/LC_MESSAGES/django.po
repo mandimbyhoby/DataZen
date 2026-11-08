@@ -271,6 +271,9 @@ msgstr "นักวิเคราะห์ข้อมูล"
 msgid "Ancienne valeur"
 msgstr "ค่าเดิม"
 
+msgid "Animation : un tableau de données est analysé, corrigé, puis son score de qualité augmente."
+msgstr "ภาพเคลื่อนไหว: ตารางข้อมูลถูกวิเคราะห์และแก้ไข จากนั้นคะแนนคุณภาพจะเพิ่มขึ้น"
+
 msgid "Annuler"
 msgstr "ยกเลิก"
 
@@ -646,6 +649,9 @@ msgstr "เปลี่ยนรหัสผ่าน"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "เปลี่ยนรหัสผ่าน — DataZen"
 
+msgid "Chaque cellule est analysée : doublons, formats, valeurs manquantes."
+msgstr "วิเคราะห์ทุกเซลล์: ข้อมูลซ้ำ รูปแบบ และค่าที่ขาดหาย"
+
 msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
 msgstr "ทุกบัญชีมีบทบาท: ผู้ชม ผู้แก้ไข หรือผู้ดูแลระบบ การตรวจสอบทำที่เซิร์ฟเวอร์ ไม่ใช่แค่ในหน้าจอ"
 
@@ -862,6 +868,9 @@ msgstr "คัดลอก"
 msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
 msgstr "คัดลอกตอนนี้ เพื่อความปลอดภัยจะไม่แสดงอีก"
 
+msgid "Correction"
+msgstr "การแก้ไข"
+
 msgid "Corrections"
 msgstr "การแก้ไข"
 
@@ -1060,6 +1069,9 @@ msgstr "สิทธิ์"
 msgid "Droit accordé"
 msgstr "สิทธิ์ที่ให้"
 
+msgid "Du fichier brut au fichier impeccable"
+msgstr "จากไฟล์ดิบสู่ไฟล์ที่ไร้ที่ติ"
+
 msgid "Durée de conservation"
 msgstr "ระยะเวลาเก็บรักษา"
 
@@ -1089,6 +1101,12 @@ msgstr "รายละเอียดตามสัปดาห์"
 
 msgid "Détails techniques"
 msgstr "รายละเอียดทางเทคนิค"
+
+msgid "Détection"
+msgstr "การตรวจหา"
+
+msgid "Détection des anomalies, corrections automatiques, score de qualité : DataZen fait le travail en quelques secondes."
+msgstr "ตรวจหาความผิดปกติ แก้ไขอัตโนมัติ และให้คะแนนคุณภาพ: DataZen ทำงานเสร็จในไม่กี่วินาที"
 
 msgid "E-mail envoyé — DataZen"
 msgstr "ส่งอีเมลแล้ว — DataZen"
@@ -1134,6 +1152,9 @@ msgstr "อีเมลที่เหลือ:"
 
 msgid "Emails: valid + invalid + unknown = total"
 msgstr "อีเมล: ถูกต้อง + ไม่ถูกต้อง + ไม่ทราบ = ทั้งหมด"
+
+msgid "En action"
+msgstr "การทำงานจริง"
 
 msgid "En attente"
 msgstr "รอดำเนินการ"
@@ -1570,6 +1591,9 @@ msgstr "ที่อยู่ภายในเครื่องจะถูก
 msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
 msgstr "ระบบจะแจ้งข้อมูลซ้ำแต่จะไม่ลบโดยอัตโนมัติ เลือกช่องนี้เพื่อลบข้อมูลซ้ำอย่างชัดเจน"
 
+msgid "Les erreurs sont corrigées automatiquement ; rien n'est supprimé sans votre accord."
+msgstr "ข้อผิดพลาดจะถูกแก้ไขโดยอัตโนมัติ และจะไม่มีการลบสิ่งใดโดยไม่ได้รับความยินยอมจากคุณ"
+
 msgid "Les fichiers archivés restent accessibles et téléchargeables."
 msgstr "ไฟล์ที่เก็บถาวรยังคงเข้าถึงและดาวน์โหลดได้"
 
@@ -1618,6 +1642,9 @@ msgstr "บรรทัดบันทึกการเปลี่ยนแป
 msgid "Lignes traitées"
 msgstr "บรรทัดที่ประมวลผล"
 
+msgid "Lire la vidéo"
+msgstr "เล่นวิดีโอ"
+
 msgid "Localisation"
 msgstr "ตำแหน่ง"
 
@@ -1659,6 +1686,9 @@ msgstr "กฎการทำความสะอาดของฉัน"
 
 msgid "Mesuré avant et après le nettoyage."
 msgstr "วัดก่อนและหลังการล้างข้อมูล"
+
+msgid "Mettre la vidéo en pause"
+msgstr "หยุดวิดีโอชั่วคราว"
 
 msgid "Mettre à jour le mot de passe"
 msgstr "อัปเดตรหัสผ่าน"
@@ -2634,6 +2664,9 @@ msgstr "ไม่สามารถลบบัญชีผู้ดูแลร
 
 msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
 msgstr "ตัวอย่างจากไฟล์: แถวแรก ๆ ก็เพียงพอต่อการประเมินข้อมูล"
+
+msgid "Un score sur 100 mesure le gain avant et après nettoyage."
+msgstr "คะแนนเต็ม 100 ใช้วัดการปรับปรุงก่อนและหลังการทำความสะอาด"
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "แดชบอร์ดวัดคุณภาพก่อน / หลัง และอธิบายทุกคะแนนที่สูญเสียไป"

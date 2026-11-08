@@ -316,6 +316,9 @@ msgstr "محلل بيانات"
 msgid "Ancienne valeur"
 msgstr "القيمة السابقة"
 
+msgid "Animation : un tableau de données est analysé, corrigé, puis son score de qualité augmente."
+msgstr "رسم متحرك: يُحلَّل جدول بيانات ويُصحَّح، ثم ترتفع درجة جودته."
+
 msgid "Annuler"
 msgstr "إلغاء"
 
@@ -691,6 +694,9 @@ msgstr "تغيير كلمة المرور"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "تغيير كلمة المرور — DataZen"
 
+msgid "Chaque cellule est analysée : doublons, formats, valeurs manquantes."
+msgstr "تُحلَّل كل خلية: التكرارات والتنسيقات والقيم المفقودة."
+
 msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
 msgstr "لكل حساب دور: قارئ أو محرر أو مسؤول. يتم التحقق على الخادم، وليس في الواجهة فقط."
 
@@ -907,6 +913,9 @@ msgstr "نسخ"
 msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
 msgstr "انسخه الآن: لن يُعرض مرة أخرى حفاظًا على أمانك."
 
+msgid "Correction"
+msgstr "التصحيح"
+
 msgid "Corrections"
 msgstr "التصحيحات"
 
@@ -1105,6 +1114,9 @@ msgstr "الصلاحية"
 msgid "Droit accordé"
 msgstr "الصلاحية الممنوحة"
 
+msgid "Du fichier brut au fichier impeccable"
+msgstr "من الملف الخام إلى ملف بلا أخطاء"
+
 msgid "Durée de conservation"
 msgstr "مدة الحفظ"
 
@@ -1134,6 +1146,12 @@ msgstr "التفصيل حسب الأسبوع"
 
 msgid "Détails techniques"
 msgstr "تفاصيل تقنية"
+
+msgid "Détection"
+msgstr "الاكتشاف"
+
+msgid "Détection des anomalies, corrections automatiques, score de qualité : DataZen fait le travail en quelques secondes."
+msgstr "اكتشاف الحالات الشاذة، والتصحيح التلقائي، ودرجة الجودة: يُنجز DataZen العمل في ثوانٍ."
 
 msgid "E-mail envoyé — DataZen"
 msgstr "تم إرسال البريد الإلكتروني — DataZen"
@@ -1179,6 +1197,9 @@ msgstr "رسائل البريد الإلكتروني المتبقية:"
 
 msgid "Emails: valid + invalid + unknown = total"
 msgstr "رسائل البريد الإلكتروني: صالحة + غير صالحة + غير معروفة = الإجمالي"
+
+msgid "En action"
+msgstr "أثناء العمل"
 
 msgid "En attente"
 msgstr "قيد الانتظار"
@@ -1615,6 +1636,9 @@ msgstr "العناوين المحلية مرفوضة."
 msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
 msgstr "يتم الإبلاغ عن التكرارات دون حذفها تلقائيًا. حدّد هذا المربع لحذفها صراحةً."
 
+msgid "Les erreurs sont corrigées automatiquement ; rien n'est supprimé sans votre accord."
+msgstr "تُصحَّح الأخطاء تلقائيًا؛ ولا يُحذف أي شيء دون موافقتك."
+
 msgid "Les fichiers archivés restent accessibles et téléchargeables."
 msgstr "تظل الملفات المؤرشفة متاحة وقابلة للتنزيل."
 
@@ -1663,6 +1687,9 @@ msgstr "أسطر سجل التعديلات"
 msgid "Lignes traitées"
 msgstr "الأسطر المعالَجة"
 
+msgid "Lire la vidéo"
+msgstr "تشغيل الفيديو"
+
 msgid "Localisation"
 msgstr "الموقع"
 
@@ -1704,6 +1731,9 @@ msgstr "قواعد التنظيف الخاصة بي"
 
 msgid "Mesuré avant et après le nettoyage."
 msgstr "مقيسة قبل التنظيف وبعده."
+
+msgid "Mettre la vidéo en pause"
+msgstr "إيقاف الفيديو مؤقتًا"
 
 msgid "Mettre à jour le mot de passe"
 msgstr "تحديث كلمة المرور"
@@ -2679,6 +2709,9 @@ msgstr "لا يمكن حذف حساب مشرف من هذه الصفحة. است�
 
 msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
 msgstr "مقتطف من الملف: الصفوف الأولى تكفي للحكم على البيانات."
+
+msgid "Un score sur 100 mesure le gain avant et après nettoyage."
+msgstr "تقيس درجة من 100 مقدار التحسن قبل التنظيف وبعده."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "تقيس لوحة المعلومات الجودة قبل / بعد وتشرح كل نقطة مفقودة."

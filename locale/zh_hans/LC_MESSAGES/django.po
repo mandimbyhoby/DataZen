@@ -271,6 +271,9 @@ msgstr "数据分析师"
 msgid "Ancienne valeur"
 msgstr "原值"
 
+msgid "Animation : un tableau de données est analysé, corrigé, puis son score de qualité augmente."
+msgstr "动画：数据表经过分析和纠正后，其质量评分随之提高。"
+
 msgid "Annuler"
 msgstr "取消"
 
@@ -646,6 +649,9 @@ msgstr "修改我的密码"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "修改我的密码 — DataZen"
 
+msgid "Chaque cellule est analysée : doublons, formats, valeurs manquantes."
+msgstr "逐个单元格分析：重复项、格式、缺失值。"
+
 msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
 msgstr "每个账户都有一个角色：查看者、编辑者或管理员。权限校验在服务端执行，而不仅仅在界面中。"
 
@@ -862,6 +868,9 @@ msgstr "复制"
 msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
 msgstr "请立即复制：出于安全考虑，它不会再显示。"
 
+msgid "Correction"
+msgstr "纠正"
+
 msgid "Corrections"
 msgstr "修正"
 
@@ -1060,6 +1069,9 @@ msgstr "权限"
 msgid "Droit accordé"
 msgstr "已授予权限"
 
+msgid "Du fichier brut au fichier impeccable"
+msgstr "从原始文件到完美文件"
+
 msgid "Durée de conservation"
 msgstr "保留时长"
 
@@ -1089,6 +1101,12 @@ msgstr "按周明细"
 
 msgid "Détails techniques"
 msgstr "技术细节"
+
+msgid "Détection"
+msgstr "检测"
+
+msgid "Détection des anomalies, corrections automatiques, score de qualité : DataZen fait le travail en quelques secondes."
+msgstr "异常检测、自动纠正、质量评分：DataZen 几秒内即可完成。"
 
 msgid "E-mail envoyé — DataZen"
 msgstr "邮件已发送 — DataZen"
@@ -1134,6 +1152,9 @@ msgstr "剩余邮箱："
 
 msgid "Emails: valid + invalid + unknown = total"
 msgstr "邮箱：有效 + 无效 + 未知 = 总计"
+
+msgid "En action"
+msgstr "实际演示"
 
 msgid "En attente"
 msgstr "等待中"
@@ -1570,6 +1591,9 @@ msgstr "拒绝本地地址。"
 msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
 msgstr "系统会标记重复项，但不会自动删除。勾选此项以明确删除重复项。"
 
+msgid "Les erreurs sont corrigées automatiquement ; rien n'est supprimé sans votre accord."
+msgstr "错误会自动纠正；未经您同意不会删除任何内容。"
+
 msgid "Les fichiers archivés restent accessibles et téléchargeables."
 msgstr "已归档的文件仍可访问和下载。"
 
@@ -1618,6 +1642,9 @@ msgstr "变更日志行数"
 msgid "Lignes traitées"
 msgstr "已处理行数"
 
+msgid "Lire la vidéo"
+msgstr "播放视频"
+
 msgid "Localisation"
 msgstr "所在地"
 
@@ -1659,6 +1686,9 @@ msgstr "我的清洗规则"
 
 msgid "Mesuré avant et après le nettoyage."
 msgstr "在清理前后分别度量。"
+
+msgid "Mettre la vidéo en pause"
+msgstr "暂停视频"
 
 msgid "Mettre à jour le mot de passe"
 msgstr "更新密码"
@@ -2634,6 +2664,9 @@ msgstr "管理员账户无法从本页面删除。请使用"
 
 msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
 msgstr "文件摘录：前几行足以判断数据质量。"
+
+msgid "Un score sur 100 mesure le gain avant et après nettoyage."
+msgstr "满分 100 的评分衡量清理前后的提升。"
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "仪表板会对比清洗前后的质量，并说明每一处失分的原因。"

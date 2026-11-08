@@ -271,6 +271,9 @@ msgstr "Analis data"
 msgid "Ancienne valeur"
 msgstr "Nilai lama"
 
+msgid "Animation : un tableau de données est analysé, corrigé, puis son score de qualité augmente."
+msgstr "Animasi: sebuah tabel data dianalisis dan dikoreksi, lalu skor kualitasnya naik."
+
 msgid "Annuler"
 msgstr "Batal"
 
@@ -646,6 +649,9 @@ msgstr "Ganti kata sandi saya"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Ganti kata sandi saya — DataZen"
 
+msgid "Chaque cellule est analysée : doublons, formats, valeurs manquantes."
+msgstr "Setiap sel dianalisis: duplikat, format, nilai yang hilang."
+
 msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
 msgstr "Setiap akun memiliki peran: penampil, penyunting, atau administrator. Pemeriksaan dilakukan di sisi server, bukan hanya di antarmuka."
 
@@ -862,6 +868,9 @@ msgstr "Salin"
 msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
 msgstr "Salin sekarang: demi keamanan Anda, ini tidak akan ditampilkan lagi."
 
+msgid "Correction"
+msgstr "Koreksi"
+
 msgid "Corrections"
 msgstr "Perbaikan"
 
@@ -1060,6 +1069,9 @@ msgstr "Izin"
 msgid "Droit accordé"
 msgstr "Izin yang diberikan"
 
+msgid "Du fichier brut au fichier impeccable"
+msgstr "Dari file mentah menjadi file sempurna"
+
 msgid "Durée de conservation"
 msgstr "Masa retensi"
 
@@ -1089,6 +1101,12 @@ msgstr "Rincian per minggu"
 
 msgid "Détails techniques"
 msgstr "Detail teknis"
+
+msgid "Détection"
+msgstr "Deteksi"
+
+msgid "Détection des anomalies, corrections automatiques, score de qualité : DataZen fait le travail en quelques secondes."
+msgstr "Deteksi anomali, koreksi otomatis, skor kualitas: DataZen menyelesaikannya dalam hitungan detik."
 
 msgid "E-mail envoyé — DataZen"
 msgstr "Email terkirim — DataZen"
@@ -1134,6 +1152,9 @@ msgstr "Email tersisa:"
 
 msgid "Emails: valid + invalid + unknown = total"
 msgstr "Email: valid + tidak valid + tidak diketahui = total"
+
+msgid "En action"
+msgstr "Beraksi"
 
 msgid "En attente"
 msgstr "Menunggu"
@@ -1570,6 +1591,9 @@ msgstr "Alamat lokal ditolak."
 msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
 msgstr "Duplikat ditandai tetapi tidak pernah dihapus otomatis. Centang kotak ini untuk menghapusnya secara eksplisit."
 
+msgid "Les erreurs sont corrigées automatiquement ; rien n'est supprimé sans votre accord."
+msgstr "Kesalahan dikoreksi secara otomatis; tidak ada yang dihapus tanpa persetujuan Anda."
+
 msgid "Les fichiers archivés restent accessibles et téléchargeables."
 msgstr "File yang diarsipkan tetap dapat diakses dan diunduh."
 
@@ -1618,6 +1642,9 @@ msgstr "Baris log perubahan"
 msgid "Lignes traitées"
 msgstr "Baris yang diproses"
 
+msgid "Lire la vidéo"
+msgstr "Putar video"
+
 msgid "Localisation"
 msgstr "Lokasi"
 
@@ -1659,6 +1686,9 @@ msgstr "Aturan pembersihan saya"
 
 msgid "Mesuré avant et après le nettoyage."
 msgstr "Diukur sebelum dan sesudah pembersihan."
+
+msgid "Mettre la vidéo en pause"
+msgstr "Jeda video"
 
 msgid "Mettre à jour le mot de passe"
 msgstr "Perbarui kata sandi"
@@ -2634,6 +2664,9 @@ msgstr "Akun administrator tidak dapat dihapus dari halaman ini. Gunakan"
 
 msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
 msgstr "Kutipan berkas: baris pertama cukup untuk menilai data."
+
+msgid "Un score sur 100 mesure le gain avant et après nettoyage."
+msgstr "Skor dari 100 mengukur peningkatan sebelum dan sesudah pembersihan."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "Dasbor mengukur kualitas sebelum / sesudah dan menjelaskan setiap poin yang hilang."

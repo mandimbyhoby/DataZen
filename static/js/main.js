@@ -674,3 +674,85 @@ function initTableSearch() {
         });
     });
 })();
+
+/* ---------------------------------------------------------------------------
+   Démonstration animée de la page d'accueil.
+   - les étapes 01 / 02 / 03 s'allument au rythme de la vidéo ;
+   - bouton lecture / pause (critère WCAG 2.2.2 pour une animation en boucle) ;
+   - « réduire les animations » : la vidéo reste à l'arrêt sur son affiche ;
+   - la vidéo se met en pause hors de l'écran pour économiser la batterie.
+   --------------------------------------------------------------------------- */
+(function () {
+    "use strict";
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const video = document.querySelector("[data-dz-demo-video]");
+        if (!video) {
+            return;
+        }
+        const toggle = document.querySelector("[data-dz-demo-toggle]");
+        const steps = Array.from(document.querySelectorAll("[data-dz-demo-step]")).map(function (item) {
+            const range = item.getAttribute("data-dz-demo-step").split("-").map(Number);
+            return { item: item, start: range[0], end: range[1] };
+        });
+        const reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        let userPaused = reduced;
+
+        function syncToggle() {
+            if (!toggle) {
+                return;
+            }
+            const paused = video.paused;
+            toggle.classList.toggle("is-paused", paused);
+            toggle.setAttribute(
+                "aria-label",
+                paused ? toggle.dataset.labelPlay : toggle.dataset.labelPause
+            );
+        }
+
+        function syncSteps() {
+            if (!video.duration) {
+                return;
+            }
+            const t = video.currentTime / video.duration;
+            steps.forEach(function (step) {
+                step.item.classList.toggle("is-active", t >= step.start && t < step.end);
+            });
+        }
+
+        if (reduced) {
+            video.removeAttribute("autoplay");
+            video.pause();
+        }
+
+        video.addEventListener("timeupdate", syncSteps);
+        video.addEventListener("seeked", syncSteps);
+        video.addEventListener("play", syncToggle);
+        video.addEventListener("pause", syncToggle);
+        syncToggle();
+
+        if (toggle) {
+            toggle.addEventListener("click", function () {
+                if (video.paused) {
+                    userPaused = false;
+                    video.play().catch(function () { /* lecture refusée */ });
+                } else {
+                    userPaused = true;
+                    video.pause();
+                }
+            });
+        }
+
+        if ("IntersectionObserver" in window) {
+            new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting && !userPaused) {
+                        video.play().catch(function () { /* lecture refusée */ });
+                    } else if (!entry.isIntersecting && !video.paused) {
+                        video.pause();
+                    }
+                });
+            }, { threshold: 0.25 }).observe(video);
+        }
+    });
+})();

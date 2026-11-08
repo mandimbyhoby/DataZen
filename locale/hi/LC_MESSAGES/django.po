@@ -280,6 +280,9 @@ msgstr "डेटा विश्लेषक"
 msgid "Ancienne valeur"
 msgstr "पुराना मान"
 
+msgid "Animation : un tableau de données est analysé, corrigé, puis son score de qualité augmente."
+msgstr "एनिमेशन: एक डेटा तालिका का विश्लेषण और सुधार होता है, फिर उसका गुणवत्ता स्कोर बढ़ता है।"
+
 msgid "Annuler"
 msgstr "रद्द करें"
 
@@ -655,6 +658,9 @@ msgstr "अपना पासवर्ड बदलें"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "अपना पासवर्ड बदलें — DataZen"
 
+msgid "Chaque cellule est analysée : doublons, formats, valeurs manquantes."
+msgstr "हर सेल का विश्लेषण होता है: डुप्लिकेट, प्रारूप, गायब मान।"
+
 msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
 msgstr "प्रत्येक खाते की एक भूमिका होती है: दर्शक, संपादक या प्रशासक। नियंत्रण सर्वर पर लागू होता है, केवल इंटरफ़ेस में नहीं।"
 
@@ -871,6 +877,9 @@ msgstr "कॉपी करें"
 msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
 msgstr "अभी कॉपी करें: आपकी सुरक्षा के लिए यह दोबारा नहीं दिखाया जाएगा।"
 
+msgid "Correction"
+msgstr "सुधार"
+
 msgid "Corrections"
 msgstr "सुधार"
 
@@ -1069,6 +1078,9 @@ msgstr "अनुमति"
 msgid "Droit accordé"
 msgstr "दी गई अनुमति"
 
+msgid "Du fichier brut au fichier impeccable"
+msgstr "कच्ची फ़ाइल से त्रुटिहीन फ़ाइल तक"
+
 msgid "Durée de conservation"
 msgstr "प्रतिधारण अवधि"
 
@@ -1098,6 +1110,12 @@ msgstr "सप्ताह-वार विवरण"
 
 msgid "Détails techniques"
 msgstr "तकनीकी विवरण"
+
+msgid "Détection"
+msgstr "पहचान"
+
+msgid "Détection des anomalies, corrections automatiques, score de qualité : DataZen fait le travail en quelques secondes."
+msgstr "विसंगति की पहचान, स्वचालित सुधार, गुणवत्ता स्कोर: DataZen कुछ ही सेकंड में काम कर देता है।"
 
 msgid "E-mail envoyé — DataZen"
 msgstr "ईमेल भेजा गया — DataZen"
@@ -1143,6 +1161,9 @@ msgstr "शेष ईमेल:"
 
 msgid "Emails: valid + invalid + unknown = total"
 msgstr "ईमेल: मान्य + अमान्य + अज्ञात = कुल"
+
+msgid "En action"
+msgstr "काम करते हुए"
 
 msgid "En attente"
 msgstr "प्रतीक्षारत"
@@ -1579,6 +1600,9 @@ msgstr "स्थानीय पते अस्वीकार किए ज�
 msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
 msgstr "डुप्लिकेट चिह्नित किए जाते हैं, लेकिन अपने-आप नहीं हटाए जाते। उन्हें स्पष्ट रूप से हटाने के लिए यह बॉक्स चुनें।"
 
+msgid "Les erreurs sont corrigées automatiquement ; rien n'est supprimé sans votre accord."
+msgstr "त्रुटियाँ अपने-आप सुधारी जाती हैं; आपकी सहमति के बिना कुछ भी हटाया नहीं जाता।"
+
 msgid "Les fichiers archivés restent accessibles et téléchargeables."
 msgstr "संग्रहित फ़ाइलें सुलभ और डाउनलोड करने योग्य रहती हैं।"
 
@@ -1627,6 +1651,9 @@ msgstr "परिवर्तन लॉग की पंक्तियाँ"
 msgid "Lignes traitées"
 msgstr "संसाधित पंक्तियाँ"
 
+msgid "Lire la vidéo"
+msgstr "वीडियो चलाएँ"
+
 msgid "Localisation"
 msgstr "स्थान"
 
@@ -1668,6 +1695,9 @@ msgstr "मेरे सफ़ाई नियम"
 
 msgid "Mesuré avant et après le nettoyage."
 msgstr "सफ़ाई से पहले और बाद में मापा गया।"
+
+msgid "Mettre la vidéo en pause"
+msgstr "वीडियो रोकें"
 
 msgid "Mettre à jour le mot de passe"
 msgstr "पासवर्ड अपडेट करें"
@@ -2643,6 +2673,9 @@ msgstr "इस पृष्ठ से प्रशासक खाता हट�
 
 msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
 msgstr "फ़ाइल का अंश: डेटा का आकलन करने के लिए पहली पंक्तियाँ पर्याप्त हैं।"
+
+msgid "Un score sur 100 mesure le gain avant et après nettoyage."
+msgstr "100 में से एक स्कोर सफ़ाई से पहले और बाद का सुधार मापता है।"
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "एक डैशबोर्ड सफ़ाई से पहले / बाद की गुणवत्ता मापता है और खोए प्रत्येक अंक की व्याख्या करता है।"

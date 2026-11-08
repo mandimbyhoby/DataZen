@@ -271,6 +271,9 @@ msgstr "Chuyên viên phân tích dữ liệu"
 msgid "Ancienne valeur"
 msgstr "Giá trị cũ"
 
+msgid "Animation : un tableau de données est analysé, corrigé, puis son score de qualité augmente."
+msgstr "Hoạt ảnh: một bảng dữ liệu được phân tích và sửa, sau đó điểm chất lượng tăng lên."
+
 msgid "Annuler"
 msgstr "Hủy"
 
@@ -646,6 +649,9 @@ msgstr "Đổi mật khẩu"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Đổi mật khẩu — DataZen"
 
+msgid "Chaque cellule est analysée : doublons, formats, valeurs manquantes."
+msgstr "Mỗi ô đều được phân tích: trùng lặp, định dạng, giá trị thiếu."
+
 msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
 msgstr "Mỗi tài khoản có một vai trò: người xem, người chỉnh sửa hoặc quản trị viên. Việc kiểm soát được thực hiện ở máy chủ, không chỉ trên giao diện."
 
@@ -862,6 +868,9 @@ msgstr "Sao chép"
 msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
 msgstr "Hãy sao chép ngay: vì an toàn của bạn, nó sẽ không bao giờ được hiển thị lại."
 
+msgid "Correction"
+msgstr "Sửa lỗi"
+
 msgid "Corrections"
 msgstr "Sửa chữa"
 
@@ -1060,6 +1069,9 @@ msgstr "Quyền"
 msgid "Droit accordé"
 msgstr "Quyền đã cấp"
 
+msgid "Du fichier brut au fichier impeccable"
+msgstr "Từ tệp thô đến tệp hoàn hảo"
+
 msgid "Durée de conservation"
 msgstr "Thời hạn bảo quản"
 
@@ -1089,6 +1101,12 @@ msgstr "Chi tiết theo tuần"
 
 msgid "Détails techniques"
 msgstr "Chi tiết kỹ thuật"
+
+msgid "Détection"
+msgstr "Phát hiện"
+
+msgid "Détection des anomalies, corrections automatiques, score de qualité : DataZen fait le travail en quelques secondes."
+msgstr "Phát hiện bất thường, tự động sửa lỗi, điểm chất lượng: DataZen hoàn thành trong vài giây."
 
 msgid "E-mail envoyé — DataZen"
 msgstr "Đã gửi email — DataZen"
@@ -1134,6 +1152,9 @@ msgstr "Email còn lại:"
 
 msgid "Emails: valid + invalid + unknown = total"
 msgstr "Email: hợp lệ + không hợp lệ + không xác định = tổng"
+
+msgid "En action"
+msgstr "Khi hoạt động"
 
 msgid "En attente"
 msgstr "Đang chờ"
@@ -1570,6 +1591,9 @@ msgstr "Địa chỉ cục bộ bị từ chối."
 msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
 msgstr "Các bản ghi trùng lặp được đánh dấu nhưng không tự động xóa. Chọn ô này để chủ động xóa chúng."
 
+msgid "Les erreurs sont corrigées automatiquement ; rien n'est supprimé sans votre accord."
+msgstr "Lỗi được sửa tự động; không có gì bị xóa khi chưa có sự đồng ý của bạn."
+
 msgid "Les fichiers archivés restent accessibles et téléchargeables."
 msgstr "Các tệp đã lưu trữ vẫn có thể truy cập và tải xuống."
 
@@ -1618,6 +1642,9 @@ msgstr "Dòng nhật ký thay đổi"
 msgid "Lignes traitées"
 msgstr "Dòng đã xử lý"
 
+msgid "Lire la vidéo"
+msgstr "Phát video"
+
 msgid "Localisation"
 msgstr "Vị trí"
 
@@ -1659,6 +1686,9 @@ msgstr "Quy tắc làm sạch của tôi"
 
 msgid "Mesuré avant et après le nettoyage."
 msgstr "Đo lường trước và sau khi làm sạch."
+
+msgid "Mettre la vidéo en pause"
+msgstr "Tạm dừng video"
 
 msgid "Mettre à jour le mot de passe"
 msgstr "Cập nhật mật khẩu"
@@ -2634,6 +2664,9 @@ msgstr "Không thể xóa tài khoản quản trị viên từ trang này. Hãy 
 
 msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
 msgstr "Một trích đoạn của tệp: những dòng đầu đủ để đánh giá dữ liệu."
+
+msgid "Un score sur 100 mesure le gain avant et après nettoyage."
+msgstr "Điểm trên thang 100 đo mức cải thiện trước và sau khi làm sạch."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "Bảng điều khiển đo chất lượng trước / sau và giải thích từng điểm bị mất."

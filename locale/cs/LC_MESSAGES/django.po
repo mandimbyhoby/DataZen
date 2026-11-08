@@ -289,6 +289,9 @@ msgstr "Datový analytik"
 msgid "Ancienne valeur"
 msgstr "Původní hodnota"
 
+msgid "Animation : un tableau de données est analysé, corrigé, puis son score de qualité augmente."
+msgstr "Animace: datová tabulka je analyzována a opravena, poté její skóre kvality roste."
+
 msgid "Annuler"
 msgstr "Zrušit"
 
@@ -664,6 +667,9 @@ msgstr "Změnit mé heslo"
 msgid "Changer mon mot de passe — DataZen"
 msgstr "Změnit mé heslo — DataZen"
 
+msgid "Chaque cellule est analysée : doublons, formats, valeurs manquantes."
+msgstr "Analyzuje se každá buňka: duplicity, formáty, chybějící hodnoty."
+
 msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
 msgstr "Každý účet má roli: čtenář, editor nebo administrátor. Kontrola probíhá na serveru, nejen v rozhraní."
 
@@ -880,6 +886,9 @@ msgstr "Kopírovat"
 msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
 msgstr "Zkopírujte nyní: z bezpečnostních důvodů už nebude zobrazen."
 
+msgid "Correction"
+msgstr "Oprava"
+
 msgid "Corrections"
 msgstr "Opravy"
 
@@ -1078,6 +1087,9 @@ msgstr "Oprávnění"
 msgid "Droit accordé"
 msgstr "Udělené oprávnění"
 
+msgid "Du fichier brut au fichier impeccable"
+msgstr "Od surového souboru k bezchybnému"
+
 msgid "Durée de conservation"
 msgstr "Doba uchování"
 
@@ -1107,6 +1119,12 @@ msgstr "Podrobnosti podle týdne"
 
 msgid "Détails techniques"
 msgstr "Technické podrobnosti"
+
+msgid "Détection"
+msgstr "Detekce"
+
+msgid "Détection des anomalies, corrections automatiques, score de qualité : DataZen fait le travail en quelques secondes."
+msgstr "Detekce anomálií, automatické opravy, skóre kvality: DataZen vše zvládne během několika sekund."
 
 msgid "E-mail envoyé — DataZen"
 msgstr "E-mail odeslán — DataZen"
@@ -1152,6 +1170,9 @@ msgstr "Zbývající e-maily:"
 
 msgid "Emails: valid + invalid + unknown = total"
 msgstr "E-maily: platné + neplatné + neznámé = celkem"
+
+msgid "En action"
+msgstr "V akci"
 
 msgid "En attente"
 msgstr "Čeká"
@@ -1588,6 +1609,9 @@ msgstr "Místní adresy jsou odmítnuty."
 msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
 msgstr "Duplicity se označí, ale nikdy se neodstraňují automaticky. Zaškrtnutím tohoto políčka je výslovně odstraníte."
 
+msgid "Les erreurs sont corrigées automatiquement ; rien n'est supprimé sans votre accord."
+msgstr "Chyby se opravují automaticky; nic se nemaže bez vašeho souhlasu."
+
 msgid "Les fichiers archivés restent accessibles et téléchargeables."
 msgstr "Archivované soubory zůstávají přístupné a lze je stáhnout."
 
@@ -1636,6 +1660,9 @@ msgstr "Řádky protokolu změn"
 msgid "Lignes traitées"
 msgstr "Zpracované řádky"
 
+msgid "Lire la vidéo"
+msgstr "Přehrát video"
+
 msgid "Localisation"
 msgstr "Lokalita"
 
@@ -1677,6 +1704,9 @@ msgstr "Moje pravidla čištění"
 
 msgid "Mesuré avant et après le nettoyage."
 msgstr "Měřeno před čištěním a po něm."
+
+msgid "Mettre la vidéo en pause"
+msgstr "Pozastavit video"
 
 msgid "Mettre à jour le mot de passe"
 msgstr "Aktualizovat heslo"
@@ -2652,6 +2682,9 @@ msgstr "Účet správce nelze z této stránky smazat. Použijte"
 
 msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
 msgstr "Výňatek ze souboru: první řádky stačí k posouzení dat."
+
+msgid "Un score sur 100 mesure le gain avant et après nettoyage."
+msgstr "Skóre ze 100 měří zlepšení před čištěním a po něm."
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr "Řídicí panel měří kvalitu před / po a vysvětluje každý ztracený bod."

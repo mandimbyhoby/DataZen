@@ -280,6 +280,9 @@ msgstr ""
 msgid "Ancienne valeur"
 msgstr ""
 
+msgid "Animation : un tableau de données est analysé, corrigé, puis son score de qualité augmente."
+msgstr ""
+
 msgid "Annuler"
 msgstr ""
 
@@ -655,6 +658,9 @@ msgstr ""
 msgid "Changer mon mot de passe — DataZen"
 msgstr ""
 
+msgid "Chaque cellule est analysée : doublons, formats, valeurs manquantes."
+msgstr ""
+
 msgid "Chaque compte dispose d'un rôle : lecteur, éditeur ou administrateur. Le contrôle est appliqué côté serveur, pas seulement dans l'interface."
 msgstr ""
 
@@ -871,6 +877,9 @@ msgstr ""
 msgid "Copiez-le maintenant : pour votre sécurité, il ne sera plus jamais affiché."
 msgstr ""
 
+msgid "Correction"
+msgstr ""
+
 msgid "Corrections"
 msgstr ""
 
@@ -1069,6 +1078,9 @@ msgstr ""
 msgid "Droit accordé"
 msgstr ""
 
+msgid "Du fichier brut au fichier impeccable"
+msgstr ""
+
 msgid "Durée de conservation"
 msgstr ""
 
@@ -1097,6 +1109,12 @@ msgid "Détail par semaine"
 msgstr ""
 
 msgid "Détails techniques"
+msgstr ""
+
+msgid "Détection"
+msgstr ""
+
+msgid "Détection des anomalies, corrections automatiques, score de qualité : DataZen fait le travail en quelques secondes."
 msgstr ""
 
 msgid "E-mail envoyé — DataZen"
@@ -1143,6 +1161,9 @@ msgstr ""
 
 msgid "Emails: valid + invalid + unknown = total"
 msgstr "Emails : valides + invalides + inconnus = total"
+
+msgid "En action"
+msgstr ""
 
 msgid "En attente"
 msgstr ""
@@ -1579,6 +1600,9 @@ msgstr ""
 msgid "Les doublons sont signalés mais jamais supprimés automatiquement. Cochez cette case pour les supprimer explicitement."
 msgstr ""
 
+msgid "Les erreurs sont corrigées automatiquement ; rien n'est supprimé sans votre accord."
+msgstr ""
+
 msgid "Les fichiers archivés restent accessibles et téléchargeables."
 msgstr ""
 
@@ -1627,6 +1651,9 @@ msgstr ""
 msgid "Lignes traitées"
 msgstr ""
 
+msgid "Lire la vidéo"
+msgstr ""
+
 msgid "Localisation"
 msgstr ""
 
@@ -1667,6 +1694,9 @@ msgid "Mes règles de nettoyage"
 msgstr ""
 
 msgid "Mesuré avant et après le nettoyage."
+msgstr ""
+
+msgid "Mettre la vidéo en pause"
 msgstr ""
 
 msgid "Mettre à jour le mot de passe"
@@ -2642,6 +2672,9 @@ msgid "Un compte administrateur ne peut pas être supprimé depuis cette page. U
 msgstr ""
 
 msgid "Un extrait du fichier : les premières lignes suffisent pour juger les données."
+msgstr ""
+
+msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr ""
 
 msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
