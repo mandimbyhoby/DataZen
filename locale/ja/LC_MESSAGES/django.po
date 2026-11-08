@@ -1162,6 +1162,9 @@ msgstr "Enter"
 msgid "Entrées"
 msgstr "エントリ"
 
+msgid "Envoi en cours…"
+msgstr "アップロード中…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "再設定リンクを送信"
 
@@ -1218,6 +1221,9 @@ msgstr "ファイル"
 
 msgid "Fichier de données"
 msgstr "データファイル"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "アップロード完了。分析を開いています…"
 
 msgid "Fichier nettoyé"
 msgstr "クレンジング済みファイル"
@@ -1314,6 +1320,9 @@ msgstr "頻度"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "時間を節約: DataZen の重要な機能はすべてキー操作で使えます。"
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "ここにファイルをドラッグ＆ドロップ"
 
 msgid "Graphiques"
 msgstr "グラフ"
@@ -1611,6 +1620,9 @@ msgstr "処理した行数"
 
 msgid "Localisation"
 msgstr "所在地"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "アップロードに失敗しました。接続を確認して、もう一度お試しください。"
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2170,6 +2182,9 @@ msgstr "ファイルを検索…"
 msgid "Recommandation"
 msgstr "推奨"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "離すとファイルを追加します"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "氏名、メールアドレス、電話番号を決定論的な仮名に置き換えます（同じ値には同じ仮名）。行間の関係は維持されます。 変更ログには元の値のフィンガープリントのみが保存されます。"
 
@@ -2211,6 +2226,9 @@ msgstr "復元"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "このバージョンを現在のバージョンとして復元しますか？"
+
+msgid "Retirer le fichier"
+msgstr "ファイルを削除"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3030,6 +3048,9 @@ msgstr "数値"
 
 msgid "opération : %(name)s"
 msgstr "操作: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "またはクリックしてファイルを選択"
 
 msgid "ouvrir"
 msgstr "開く"

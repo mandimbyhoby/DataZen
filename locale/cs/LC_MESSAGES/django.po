@@ -1180,6 +1180,9 @@ msgstr "Enter"
 msgid "Entrées"
 msgstr "Záznamy"
 
+msgid "Envoi en cours…"
+msgstr "Odesílání…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "Odeslat odkaz pro obnovení"
 
@@ -1236,6 +1239,9 @@ msgstr "Soubor"
 
 msgid "Fichier de données"
 msgstr "Datový soubor"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "Soubor odeslán, otevírá se analýza…"
 
 msgid "Fichier nettoyé"
 msgstr "Vyčištěný soubor"
@@ -1332,6 +1338,9 @@ msgstr "Frekvence"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Šetřete čas: vše důležité v DataZen je na klávesové zkratce."
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "Přetáhněte soubor sem"
 
 msgid "Graphiques"
 msgstr "Grafy"
@@ -1629,6 +1638,9 @@ msgstr "Zpracované řádky"
 
 msgid "Localisation"
 msgstr "Lokalita"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "Odeslání se nezdařilo. Zkontrolujte připojení a zkuste to znovu."
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2188,6 +2200,9 @@ msgstr "Hledat soubor…"
 msgid "Recommandation"
 msgstr "Doporučení"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "Pusťte pro přidání souboru"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "Nahrazuje jména, e-maily a telefonní čísla deterministickými pseudonymy (stejná hodnota → stejný pseudonym). Vztahy mezi řádky zůstávají zachovány. Protokol změn uchovává pouze otisk původních hodnot."
 
@@ -2229,6 +2244,9 @@ msgstr "Obnovit"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Obnovit tuto verzi jako aktuální?"
+
+msgid "Retirer le fichier"
+msgstr "Odebrat soubor"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3048,6 +3066,9 @@ msgstr "číselný"
 
 msgid "opération : %(name)s"
 msgstr "operace: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "nebo klikněte a vyberte soubor"
 
 msgid "ouvrir"
 msgstr "otevřít"

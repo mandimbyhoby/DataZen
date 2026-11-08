@@ -1171,6 +1171,9 @@ msgstr "Enter"
 msgid "Entrées"
 msgstr "Kayıtlar"
 
+msgid "Envoi en cours…"
+msgstr "Gönderiliyor…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "Sıfırlama bağlantısını gönder"
 
@@ -1227,6 +1230,9 @@ msgstr "Dosya"
 
 msgid "Fichier de données"
 msgstr "Veri dosyası"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "Dosya gönderildi, analiz açılıyor…"
 
 msgid "Fichier nettoyé"
 msgstr "Temizlenmiş dosya"
@@ -1323,6 +1329,9 @@ msgstr "Sıklık"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Zaman kazan: DataZen'de önemli olan her şey bir tuş kombinasyonunda."
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "Dosyanızı buraya sürükleyip bırakın"
 
 msgid "Graphiques"
 msgstr "Grafikler"
@@ -1620,6 +1629,9 @@ msgstr "İşlenen satırlar"
 
 msgid "Localisation"
 msgstr "Konum"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "Gönderim başarısız oldu. Bağlantınızı kontrol edip yeniden deneyin."
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2179,6 +2191,9 @@ msgstr "Dosya ara…"
 msgid "Recommandation"
 msgstr "Öneri"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "Dosyayı eklemek için bırakın"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "Adları, e-postaları ve telefonları belirleyici takma adlarla değiştirir (aynı değer → aynı takma ad). Satırlar arasındaki ilişkiler korunur. Değişiklik günlüğü, özgün değerlerin yalnızca bir parmak izini saklar."
 
@@ -2220,6 +2235,9 @@ msgstr "Geri yükle"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Bu sürüm geçerli sürüm olarak geri yüklensin mi?"
+
+msgid "Retirer le fichier"
+msgstr "Dosyayı kaldır"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3039,6 +3057,9 @@ msgstr "sayısal"
 
 msgid "opération : %(name)s"
 msgstr "işlem: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "veya dosyalarınıza göz atmak için tıklayın"
 
 msgid "ouvrir"
 msgstr "aç"

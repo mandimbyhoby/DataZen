@@ -1171,6 +1171,9 @@ msgstr "Eingabe"
 msgid "Entrées"
 msgstr "Einträge"
 
+msgid "Envoi en cours…"
+msgstr "Wird hochgeladen…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "Zurücksetzungs-Link senden"
 
@@ -1227,6 +1230,9 @@ msgstr "Datei"
 
 msgid "Fichier de données"
 msgstr "Datendatei"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "Datei hochgeladen, Analyse wird geöffnet…"
 
 msgid "Fichier nettoyé"
 msgstr "Bereinigte Datei"
@@ -1323,6 +1329,9 @@ msgstr "Häufigkeit"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Spare Zeit: Alles Wichtige in DataZen liegt auf einer Tastenkombination."
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "Datei hierher ziehen und ablegen"
 
 msgid "Graphiques"
 msgstr "Diagramme"
@@ -1620,6 +1629,9 @@ msgstr "Verarbeitete Zeilen"
 
 msgid "Localisation"
 msgstr "Standort"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "Das Hochladen ist fehlgeschlagen. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut."
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2179,6 +2191,9 @@ msgstr "Eine Datei suchen…"
 msgid "Recommandation"
 msgstr "Empfehlung"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "Loslassen, um die Datei hinzuzufügen"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "Ersetzt Namen, E-Mails und Telefonnummern durch deterministische Pseudonyme (gleicher Wert → gleiches Pseudonym). Beziehungen zwischen Zeilen bleiben erhalten. Das Änderungsprotokoll speichert nur einen Fingerabdruck der Originalwerte."
 
@@ -2220,6 +2235,9 @@ msgstr "Wiederherstellen"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Diese Version als aktuelle Version wiederherstellen?"
+
+msgid "Retirer le fichier"
+msgstr "Datei entfernen"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3039,6 +3057,9 @@ msgstr "numerisch"
 
 msgid "opération : %(name)s"
 msgstr "Vorgang: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "oder klicken, um Ihre Dateien zu durchsuchen"
 
 msgid "ouvrir"
 msgstr "öffnen"

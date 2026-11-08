@@ -80,7 +80,20 @@
                             jusqu'à 20 Mo.{% endblocktranslate %}
                         </p>
                     </div>
-                    <form method="post" enctype="multipart/form-data">
+                    <form method="post" enctype="multipart/form-data"
+                          data-dz-upload
+                          data-dz-accept=".csv,.xlsx,.xls"
+                          data-dz-max-size="20971520"
+                          data-dz-msg-drop="{% translate 'Glissez-déposez votre fichier ici' %}"
+                          data-dz-msg-browse="{% translate 'ou cliquez pour parcourir vos fichiers' %}"
+                          data-dz-msg-release="{% translate 'Relâchez pour ajouter le fichier' %}"
+                          data-dz-msg-uploading="{% translate 'Envoi en cours…' %}"
+                          data-dz-msg-done="{% translate 'Fichier envoyé, ouverture de l’analyse…' %}"
+                          data-dz-msg-remove="{% translate 'Retirer le fichier' %}"
+                          data-dz-msg-failed="{% translate 'L’envoi a échoué. Vérifiez votre connexion, puis réessayez.' %}"
+                          data-dz-msg-format="{% translate 'Choisissez un fichier CSV ou Excel (.csv, .xlsx, .xls).' %}"
+                          data-dz-msg-size="{% translate 'Le fichier ne doit pas dépasser 20 Mo.' %}"
+                          data-dz-msg-empty="{% translate 'Aucun fichier sélectionné' %}">
                         {% csrf_token %}
                         <div class="dz-dropzone mb-3">
                             <div class="dz-dropzone-icon" aria-hidden="true">📤</div>

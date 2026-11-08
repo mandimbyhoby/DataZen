@@ -1171,6 +1171,9 @@ msgstr "Enter"
 msgid "Entrées"
 msgstr "Poster"
 
+msgid "Envoi en cours…"
+msgstr "Sender…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "Send nulstillingslinket"
 
@@ -1227,6 +1230,9 @@ msgstr "Fil"
 
 msgid "Fichier de données"
 msgstr "Datafil"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "Filen er sendt, analysen åbnes…"
 
 msgid "Fichier nettoyé"
 msgstr "Renset fil"
@@ -1323,6 +1329,9 @@ msgstr "Frekvens"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Spar tid: alt, hvad der betyder noget i DataZen, ligger på en tastekombination."
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "Træk og slip din fil her"
 
 msgid "Graphiques"
 msgstr "Diagrammer"
@@ -1620,6 +1629,9 @@ msgstr "Behandlede linjer"
 
 msgid "Localisation"
 msgstr "Placering"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "Afsendelsen mislykkedes. Tjek din forbindelse, og prøv igen."
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2179,6 +2191,9 @@ msgstr "Søg efter en fil…"
 msgid "Recommandation"
 msgstr "Anbefaling"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "Slip for at tilføje filen"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "Erstatter navne, e-mails og telefonnumre med deterministiske pseudonymer (samme værdi → samme pseudonym). Relationerne mellem rækker bevares. Ændringsloggen gemmer kun et fingeraftryk af de oprindelige værdier."
 
@@ -2220,6 +2235,9 @@ msgstr "Gendan"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Gendan denne version som den aktuelle?"
+
+msgid "Retirer le fichier"
+msgstr "Fjern filen"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3039,6 +3057,9 @@ msgstr "numerisk"
 
 msgid "opération : %(name)s"
 msgstr "handling: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "eller klik for at gennemse dine filer"
 
 msgid "ouvrir"
 msgstr "åbn"

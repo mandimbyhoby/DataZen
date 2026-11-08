@@ -1171,6 +1171,9 @@ msgstr "Enter"
 msgid "Entrées"
 msgstr "Entradas"
 
+msgid "Envoi en cours…"
+msgstr "A enviar…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "Enviar a ligação de redefinição"
 
@@ -1227,6 +1230,9 @@ msgstr "Ficheiro"
 
 msgid "Fichier de données"
 msgstr "Ficheiro de dados"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "Ficheiro enviado, a abrir a análise…"
 
 msgid "Fichier nettoyé"
 msgstr "Ficheiro limpo"
@@ -1323,6 +1329,9 @@ msgstr "Frequência"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Ganhe tempo: tudo o que importa no DataZen está a uma combinação de teclas."
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "Arraste e largue o seu ficheiro aqui"
 
 msgid "Graphiques"
 msgstr "Gráficos"
@@ -1620,6 +1629,9 @@ msgstr "Linhas processadas"
 
 msgid "Localisation"
 msgstr "Localização"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "O envio falhou. Verifique a sua ligação e tente novamente."
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2179,6 +2191,9 @@ msgstr "Procurar um ficheiro…"
 msgid "Recommandation"
 msgstr "Recomendação"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "Largue para adicionar o ficheiro"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "Substitui nomes, emails e telefones por pseudónimos determinísticos (mesmo valor → mesmo pseudónimo). As relações entre linhas são preservadas. O registo de alterações conserva apenas uma impressão digital dos valores originais."
 
@@ -2220,6 +2235,9 @@ msgstr "Restaurar"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Restaurar esta versão como versão atual?"
+
+msgid "Retirer le fichier"
+msgstr "Remover o ficheiro"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3039,6 +3057,9 @@ msgstr "numérico"
 
 msgid "opération : %(name)s"
 msgstr "operação: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "ou clique para procurar os seus ficheiros"
 
 msgid "ouvrir"
 msgstr "abrir"

@@ -1162,6 +1162,9 @@ msgstr "Enter"
 msgid "Entrées"
 msgstr "รายการ"
 
+msgid "Envoi en cours…"
+msgstr "กำลังส่ง…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "ส่งลิงก์รีเซ็ต"
 
@@ -1218,6 +1221,9 @@ msgstr "ไฟล์"
 
 msgid "Fichier de données"
 msgstr "ไฟล์ข้อมูล"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "ส่งไฟล์แล้ว กำลังเปิดการวิเคราะห์…"
 
 msgid "Fichier nettoyé"
 msgstr "ไฟล์ที่ทำความสะอาดแล้ว"
@@ -1314,6 +1320,9 @@ msgstr "ความถี่"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "ประหยัดเวลา ทุกสิ่งสำคัญใน DataZen อยู่ที่การกดปุ่มผสมกัน"
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "ลากและวางไฟล์ของคุณที่นี่"
 
 msgid "Graphiques"
 msgstr "กราฟ"
@@ -1611,6 +1620,9 @@ msgstr "บรรทัดที่ประมวลผล"
 
 msgid "Localisation"
 msgstr "ตำแหน่ง"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "การส่งล้มเหลว โปรดตรวจสอบการเชื่อมต่อแล้วลองอีกครั้ง"
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2170,6 +2182,9 @@ msgstr "ค้นหาไฟล์…"
 msgid "Recommandation"
 msgstr "คำแนะนำ"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "ปล่อยเพื่อเพิ่มไฟล์"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "แทนที่ชื่อ อีเมล และหมายเลขโทรศัพท์ด้วยนามแฝงที่คงที่ (ค่าเดียวกัน → นามแฝงเดียวกัน) โดยรักษาความสัมพันธ์ระหว่างแถวไว้ บันทึกการเปลี่ยนแปลงเก็บเฉพาะลายนิ้วมือของค่าเดิมเท่านั้น"
 
@@ -2211,6 +2226,9 @@ msgstr "กู้คืน"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "กู้คืนเวอร์ชันนี้เป็นเวอร์ชันปัจจุบันหรือไม่"
+
+msgid "Retirer le fichier"
+msgstr "นำไฟล์ออก"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3030,6 +3048,9 @@ msgstr "ตัวเลข"
 
 msgid "opération : %(name)s"
 msgstr "การดำเนินการ: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "หรือคลิกเพื่อเลือกไฟล์"
 
 msgid "ouvrir"
 msgstr "เปิด"

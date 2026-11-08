@@ -1180,6 +1180,9 @@ msgstr "Enter"
 msgid "Entrées"
 msgstr "Wpisy"
 
+msgid "Envoi en cours…"
+msgstr "Wysyłanie…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "Wyślij link do resetu"
 
@@ -1236,6 +1239,9 @@ msgstr "Plik"
 
 msgid "Fichier de données"
 msgstr "Plik danych"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "Plik wysłany, otwieranie analizy…"
 
 msgid "Fichier nettoyé"
 msgstr "Oczyszczony plik"
@@ -1332,6 +1338,9 @@ msgstr "Częstotliwość"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Oszczędzaj czas: wszystko, co ważne w DataZen, jest pod kombinacją klawiszy."
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "Przeciągnij i upuść plik tutaj"
 
 msgid "Graphiques"
 msgstr "Wykresy"
@@ -1629,6 +1638,9 @@ msgstr "Przetworzone wiersze"
 
 msgid "Localisation"
 msgstr "Lokalizacja"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "Wysyłanie nie powiodło się. Sprawdź połączenie i spróbuj ponownie."
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2188,6 +2200,9 @@ msgstr "Szukaj pliku…"
 msgid "Recommandation"
 msgstr "Zalecenie"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "Upuść, aby dodać plik"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "Zastępuje imiona, e-maile i numery telefonów deterministycznymi pseudonimami (ta sama wartość → ten sam pseudonim). Relacje między wierszami są zachowywane. Dziennik zmian przechowuje wyłącznie odcisk palca oryginalnych wartości."
 
@@ -2229,6 +2244,9 @@ msgstr "Przywróć"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Przywrócić tę wersję jako bieżącą?"
+
+msgid "Retirer le fichier"
+msgstr "Usuń plik"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3048,6 +3066,9 @@ msgstr "numeryczne"
 
 msgid "opération : %(name)s"
 msgstr "operacja: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "lub kliknij, aby przeglądać pliki"
 
 msgid "ouvrir"
 msgstr "otwórz"

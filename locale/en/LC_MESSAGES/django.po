@@ -1171,6 +1171,9 @@ msgstr "Enter"
 msgid "Entrées"
 msgstr "Entries"
 
+msgid "Envoi en cours…"
+msgstr "Uploading…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "Send the reset link"
 
@@ -1227,6 +1230,9 @@ msgstr "File"
 
 msgid "Fichier de données"
 msgstr "Data file"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "File uploaded, opening the analysis…"
 
 msgid "Fichier nettoyé"
 msgstr "Cleaned file"
@@ -1323,6 +1329,9 @@ msgstr "Frequency"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Save time: everything that matters in DataZen is one key combination away."
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "Drag and drop your file here"
 
 msgid "Graphiques"
 msgstr "Charts"
@@ -1620,6 +1629,9 @@ msgstr "Rows processed"
 
 msgid "Localisation"
 msgstr "Location"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "The upload failed. Check your connection, then try again."
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2179,6 +2191,9 @@ msgstr "Search for a file…"
 msgid "Recommandation"
 msgstr "Recommendation"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "Release to add the file"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "Replaces names, emails, and phone numbers with deterministic pseudonyms (same value → same pseudonym). Relationships between rows are preserved. The change log keeps only a fingerprint of the original values."
 
@@ -2220,6 +2235,9 @@ msgstr "Restore"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Restore this version as the current one?"
+
+msgid "Retirer le fichier"
+msgstr "Remove the file"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3039,6 +3057,9 @@ msgstr "numerical"
 
 msgid "opération : %(name)s"
 msgstr "operation: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "or click to browse your files"
 
 msgid "ouvrir"
 msgstr "open"

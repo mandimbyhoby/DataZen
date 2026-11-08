@@ -94,6 +94,12 @@
     <div class="card shadow-sm dz-block">
         <div class="card-body">
             <div class="d-flex flex-wrap align-items-center gap-3 gap-md-4">
+                <div class="d-flex flex-wrap align-items-center gap-3 gap-md-4"
+                     data-dz-score-compare
+                     data-dz-before="{{ quality_before.total|unlocalize }}"
+                     data-dz-after="{% if quality_after %}{{ quality_after.total|unlocalize }}{% endif %}"
+                     data-dz-label-before="{% translate 'Score qualité avant' %}"
+                     data-dz-label-after="{% translate 'Score qualité après' %}">
                 <div>
                     <div class="text-muted small">{% translate "Score qualité avant" %}</div>
                     <div class="h3 mb-0">{{ quality_before.total }}<span class="text-muted h5">/100</span></div>
@@ -104,6 +110,7 @@
                     <div class="h3 mb-0 {% if quality_after %}text-success{% endif %}">
                         {% if quality_after %}{{ quality_after.total }}<span class="text-muted h5">/100</span>{% else %}—{% endif %}
                     </div>
+                </div>
                 </div>
                 <div class="ms-md-auto small text-muted">
                     {% translate "Complétude · Validité · Unicité · Cohérence · Conformité" %}
@@ -116,7 +123,7 @@
         <div class="col-6 col-md-3">
             <div class="card shadow-sm h-100">
                 <div class="card-body text-center">
-                    <div class="h3 mb-0">{{ stats.rows }}</div>
+                    <div class="h3 mb-0" data-dz-countup>{{ stats.rows }}</div>
                     <div class="text-muted small">{% translate "Lignes" %}</div>
                 </div>
             </div>
@@ -124,7 +131,7 @@
         <div class="col-6 col-md-3">
             <div class="card shadow-sm h-100">
                 <div class="card-body text-center">
-                    <div class="h3 mb-0">{{ stats.columns }}</div>
+                    <div class="h3 mb-0" data-dz-countup>{{ stats.columns }}</div>
                     <div class="text-muted small">{% translate "Colonnes" %}</div>
                 </div>
             </div>
@@ -132,7 +139,7 @@
         <div class="col-6 col-md-3">
             <div class="card shadow-sm h-100">
                 <div class="card-body text-center">
-                    <div class="h3 mb-0 text-warning">{{ stats.duplicates }}</div>
+                    <div class="h3 mb-0 text-warning" data-dz-countup>{{ stats.duplicates }}</div>
                     <div class="text-muted small">{% translate "Doublons" %}</div>
                 </div>
             </div>
@@ -140,7 +147,7 @@
         <div class="col-6 col-md-3">
             <div class="card shadow-sm h-100">
                 <div class="card-body text-center">
-                    <div class="h3 mb-0 text-danger">{{ stats.missing }}</div>
+                    <div class="h3 mb-0 text-danger" data-dz-countup>{{ stats.missing }}</div>
                     <div class="text-muted small">{% translate "Valeurs manquantes" %}</div>
                 </div>
             </div>
@@ -520,7 +527,7 @@
             <div class="col-6 col-md-3">
                 <div class="card shadow-sm h-100">
                     <div class="card-body text-center">
-                        <div class="h3 mb-0">{{ cleaned_stats.rows }}</div>
+                        <div class="h3 mb-0" data-dz-countup>{{ cleaned_stats.rows }}</div>
                         <div class="text-muted small">{% translate "Lignes après nettoyage" %}</div>
                     </div>
                 </div>
@@ -536,7 +543,7 @@
             <div class="col-6 col-md-3">
                 <div class="card shadow-sm h-100">
                     <div class="card-body text-center">
-                        <div class="h3 mb-0 text-warning">{{ cleaned_stats.duplicates }}</div>
+                        <div class="h3 mb-0 text-warning" data-dz-countup>{{ cleaned_stats.duplicates }}</div>
                         <div class="text-muted small">{% translate "Doublons exacts" %}</div>
                     </div>
                 </div>
@@ -544,7 +551,7 @@
             <div class="col-6 col-md-3">
                 <div class="card shadow-sm h-100">
                     <div class="card-body text-center">
-                        <div class="h3 mb-0 text-danger">{{ cleaned_stats.missing }}</div>
+                        <div class="h3 mb-0 text-danger" data-dz-countup>{{ cleaned_stats.missing }}</div>
                         <div class="text-muted small">{% translate "Valeurs manquantes restantes" %}</div>
                     </div>
                 </div>

@@ -1171,6 +1171,9 @@ msgstr "Enter"
 msgid "Entrées"
 msgstr "Items"
 
+msgid "Envoi en cours…"
+msgstr "Bezig met uploaden…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "De resetlink verzenden"
 
@@ -1227,6 +1230,9 @@ msgstr "Bestand"
 
 msgid "Fichier de données"
 msgstr "Gegevensbestand"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "Bestand geüpload, analyse wordt geopend…"
 
 msgid "Fichier nettoyé"
 msgstr "Opgeschoond bestand"
@@ -1323,6 +1329,9 @@ msgstr "Frequentie"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Bespaar tijd: alles wat telt in DataZen zit op een toetsencombinatie."
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "Sleep je bestand hierheen"
 
 msgid "Graphiques"
 msgstr "Grafieken"
@@ -1620,6 +1629,9 @@ msgstr "Verwerkte regels"
 
 msgid "Localisation"
 msgstr "Locatie"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "Het uploaden is mislukt. Controleer je verbinding en probeer het opnieuw."
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2179,6 +2191,9 @@ msgstr "Een bestand zoeken…"
 msgid "Recommandation"
 msgstr "Aanbeveling"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "Loslaten om het bestand toe te voegen"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "Vervangt namen, e-mails en telefoonnummers door deterministische pseudoniemen (dezelfde waarde → hetzelfde pseudoniem). Relaties tussen rijen blijven behouden. Het wijzigingslogboek bewaart alleen een vingerafdruk van de oorspronkelijke waarden."
 
@@ -2220,6 +2235,9 @@ msgstr "Herstellen"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Deze versie als huidige versie herstellen?"
+
+msgid "Retirer le fichier"
+msgstr "Bestand verwijderen"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3039,6 +3057,9 @@ msgstr "numeriek"
 
 msgid "opération : %(name)s"
 msgstr "bewerking: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "of klik om je bestanden te doorzoeken"
 
 msgid "ouvrir"
 msgstr "openen"

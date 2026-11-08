@@ -4660,7 +4660,7 @@ class DesignSystemTests(TestCase):
         base = (
             Path(__file__).resolve().parent.parent / "templates" / "core" / "base.html"
         ).read_text(encoding="utf-8")
-        self.assertIn("css/style.css' %}?v=20261107-pages", base)
+        self.assertIn("css/style.css' %}?v=20261108-react", base)
 
     def test_inner_pages_use_the_section_rhythm(self):
         # Les gabarits applicatifs troquent l'espacement serré de Bootstrap
@@ -6226,3 +6226,30 @@ class LargeFilePerformanceTests(TestCase):
             for r in detect_fuzzy_duplicates(df)
         ]
         self.assertEqual(found, expected)
+
+
+class ReactIslandTests(TestCase):
+    """Les îlots React de l'interface sont branchés et restent optionnels."""
+
+    def setUp(self):
+        self.user = User.objects.create_user(username="islands", password="MotDePasse!2026")
+        self.client.force_login(self.user)
+
+    def test_ui_bundle_is_built_isolated_and_loaded(self):
+        bundle = Path(settings.BASE_DIR) / "static" / "js" / "ui" / "datazen-ui.js"
+        self.assertTrue(bundle.is_file())
+        # Format IIFE : aucune variable minifiée ne fuit dans l'espace global.
+        self.assertTrue(bundle.read_text(encoding="utf-8").startswith("(function(){"))
+        response = self.client.get(reverse("core:index"))
+        self.assertContains(response, "js/ui/datazen-ui.js")
+
+    def test_upload_form_exposes_translated_messages_and_keeps_the_native_field(self):
+        response = self.client.get(reverse("core:index"))
+        self.assertContains(response, "data-dz-upload")
+        self.assertContains(response, 'data-dz-msg-drop="Glissez-déposez votre fichier ici"')
+        # Repli sans JavaScript : la zone et le champ d'origine sont toujours là.
+        self.assertContains(response, 'class="dz-dropzone')
+        self.assertContains(response, 'type="file"')
+        self.client.cookies[settings.LANGUAGE_COOKIE_NAME] = "en"
+        response = self.client.get(reverse("core:index"))
+        self.assertContains(response, "Drag and drop your file here")

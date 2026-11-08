@@ -1171,6 +1171,9 @@ msgstr "एंटर"
 msgid "Entrées"
 msgstr "प्रविष्टियाँ"
 
+msgid "Envoi en cours…"
+msgstr "भेजा जा रहा है…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "रीसेट लिंक भेजें"
 
@@ -1227,6 +1230,9 @@ msgstr "फ़ाइल"
 
 msgid "Fichier de données"
 msgstr "डेटा फ़ाइल"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "फ़ाइल भेज दी गई, विश्लेषण खुल रहा है…"
 
 msgid "Fichier nettoyé"
 msgstr "साफ़ की गई फ़ाइल"
@@ -1323,6 +1329,9 @@ msgstr "आवृत्ति"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "समय बचाएँ: DataZen में हर महत्वपूर्ण चीज़ कुंजी संयोजन पर है।"
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "अपनी फ़ाइल यहाँ खींचकर छोड़ें"
 
 msgid "Graphiques"
 msgstr "चार्ट"
@@ -1620,6 +1629,9 @@ msgstr "संसाधित पंक्तियाँ"
 
 msgid "Localisation"
 msgstr "स्थान"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "भेजना विफल रहा। अपना कनेक्शन जाँचें, फिर दोबारा प्रयास करें।"
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2179,6 +2191,9 @@ msgstr "फ़ाइल खोजें…"
 msgid "Recommandation"
 msgstr "सिफ़ारिश"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "फ़ाइल जोड़ने के लिए छोड़ें"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "नाम, ईमेल और फ़ोन नंबर को नियत छद्मनामों से बदलता है (एक ही मान → एक ही छद्मनाम)। पंक्तियों के बीच संबंध सुरक्षित रहते हैं। परिवर्तन लॉग मूल मानों की केवल एक फ़िंगरप्रिंट रखता है।"
 
@@ -2220,6 +2235,9 @@ msgstr "पुनर्स्थापित करें"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "इस संस्करण को वर्तमान संस्करण के रूप में बहाल करें?"
+
+msgid "Retirer le fichier"
+msgstr "फ़ाइल हटाएँ"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3039,6 +3057,9 @@ msgstr "संख्यात्मक"
 
 msgid "opération : %(name)s"
 msgstr "ऑपरेशन: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "या अपनी फ़ाइलें देखने के लिए क्लिक करें"
 
 msgid "ouvrir"
 msgstr "खोलें"

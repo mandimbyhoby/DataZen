@@ -113,10 +113,12 @@ DataZen/
 │       ├── retention.html    # Politique de rétention
 │       ├── shortcuts.html    # Raccourcis clavier
 │       └── rules.html        # Règles personnalisées
-├── frontend/                 # Application React (graphiques interactifs)
+├── frontend/                 # Application React (graphiques + îlots d'interface)
 │   ├── package.json          # Dépendances npm (React, Chart.js, Vite)
-│   ├── vite.config.js        # Build vers static/js/charts/
+│   ├── vite.config.js        # Build des graphiques vers static/js/charts/
+│   ├── vite.ui.config.js     # Build des îlots d'interface vers static/js/ui/
 │   └── src/
+│       ├── ui/               # Îlots React : envoi, jauges, compteurs, toasts
 │       ├── main.jsx          # Point d'entrée (montage sur [data-dz-charts])
 │       ├── register.js       # Enregistrement des composants Chart.js
 │       ├── App.jsx           # Chargement du JSON + répartition par type
@@ -134,8 +136,9 @@ DataZen/
 │   │   ├── favicon.ico       # Icône d'onglet multi-tailles (16/32/48/64)
 │   │   └── favicon-180.png   # Icône Apple Touch (180 px, fond blanc)
 │   ├── video/                # Vidéos de fond décoratives (générées)
-│   └── js/charts/
-│       └── datazen-charts.js # Bundle React compilé (généré)
+│   └── js/
+│       ├── charts/datazen-charts.js  # Bundle des graphiques (généré)
+│       └── ui/datazen-ui.js          # Bundle des îlots d'interface (généré)
 ├── design/                   # Sources de design (non servies, hors static/)
 │   ├── logo-source.png       # Logo d'origine, intrant de make_logo_asset.py
 │   └── mockup-reference.jpg  # Maquette de référence de la refonte
@@ -228,8 +231,8 @@ DataZen/
    préférences (langue de l'interface, options de nettoyage). Pour la définir
    vous-même, renseignez la variable d'environnement `DJANGO_SECRET_KEY`.
 
-   7. **Compiler les graphiques interactifs** (facultatif — le bundle est déjà
-      versionné dans `static/js/charts/`) :
+   7. **Compiler le frontend React** (facultatif — les bundles sont déjà
+      versionnés dans `static/js/`) :
 
       ```powershell
       cd frontend
@@ -237,9 +240,10 @@ DataZen/
       npm run build
       ```
 
-      Le bundle est écrit dans `static/js/charts/datazen-charts.js`. Après un
-      rebuild, incrémentez la chaîne de version `?v=…` du `<script>` dans
-      `templates/core/base.html` pour invalider le cache navigateur.
+      `npm run build` produit `static/js/charts/datazen-charts.js` et
+      `static/js/ui/datazen-ui.js`. Après un rebuild, incrémentez la chaîne
+      de version `?v=…` des `<script>` dans `templates/core/base.html` pour
+      invalider le cache navigateur.
 
    8. **Régénérer les vidéos de fond** (facultatif — les fichiers de
       `static/video/` sont versionnés) :
@@ -504,6 +508,32 @@ versions interactives offrent infobulles, animations et rendu HiDPI.
 - **Enregistrement Chart.js** : `register.js` doit être importé **avant** tout
   composant de graphique (c'est le premier import de `main.jsx`), sinon
   `react-chartjs-2` échoue avec `"arc" is not a registered element`.
+
+### Îlots d'interface React (`datazen-ui.js`)
+
+Le HTML reste rendu par Django ; ce second bundle greffe des composants React
+sur des emplacements marqués `data-dz-*` (amélioration progressive : sans
+JavaScript, la page d'origine reste complète et fonctionnelle).
+
+| Îlot | Emplacement | Rôle |
+|------|-------------|------|
+| `UploadZone` | `form[data-dz-upload]` (accueil) | Glisser-déposer, carte du fichier (type, taille), validation avant envoi, **progression réelle** de l'envoi (XHR), puis ouverture de l'analyse |
+| `ScoreCompare` | `[data-dz-score-compare]` (fiche fichier) | Jauges animées « score avant → après » et écart en points |
+| `ScoreRing` | `[data-dz-score-ring]` (tableau de bord) | Jauge animée du score moyen |
+| `CountUps` | `.dz-kpi-card__value`, `.dz-stat-value`, `[data-dz-countup]` | Défilement des chiffres clés à leur apparition |
+| `Toaster` | messages Django (`.alert`) | Notifications « toast » ; les erreurs restent jusqu'à fermeture |
+
+- **Textes** : aucun texte n'est codé en dur dans le bundle. Les libellés sont
+  traduits par Django dans des attributs `data-dz-msg-*`
+  (`tools/translations/ui_islands.py`) ; nombres et tailles sont formatés avec
+  `Intl` selon la langue de la page.
+- **Envoi** : le fichier choisi est recopié dans le vrai champ du formulaire ;
+  si le serveur refuse le fichier, l'envoi classique prend le relais et
+  affiche les erreurs habituelles.
+- **Isolation** : les deux bundles sont compilés au format IIFE, pour qu'aucune
+  variable minifiée ne fuie dans l'espace global et n'écrase celles de l'autre.
+- **Accessibilité** : `prefers-reduced-motion` désactive les animations ; les
+  jauges portent un `aria-label`, les toasts une région `aria-live`.
 
 ### Points techniques
 

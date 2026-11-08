@@ -1162,6 +1162,9 @@ msgstr "回车"
 msgid "Entrées"
 msgstr "条目"
 
+msgid "Envoi en cours…"
+msgstr "正在上传…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "发送重置链接"
 
@@ -1218,6 +1221,9 @@ msgstr "文件"
 
 msgid "Fichier de données"
 msgstr "数据文件"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "文件已上传，正在打开分析…"
 
 msgid "Fichier nettoyé"
 msgstr "已清洗文件"
@@ -1314,6 +1320,9 @@ msgstr "频率"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "节省时间：DataZen 里所有重要的功能都有快捷键。"
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "将文件拖放到此处"
 
 msgid "Graphiques"
 msgstr "图表"
@@ -1611,6 +1620,9 @@ msgstr "已处理行数"
 
 msgid "Localisation"
 msgstr "所在地"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "上传失败。请检查网络连接后重试。"
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2170,6 +2182,9 @@ msgstr "搜索文件…"
 msgid "Recommandation"
 msgstr "建议"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "松开以添加文件"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "将姓名、电子邮件和电话号码替换为确定性化名（相同值对应相同化名），并保留行之间的关系。 更改日志仅保留原始值的指纹。"
 
@@ -2211,6 +2226,9 @@ msgstr "恢复"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "将此版本恢复为当前版本？"
+
+msgid "Retirer le fichier"
+msgstr "移除文件"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3030,6 +3048,9 @@ msgstr "数值"
 
 msgid "opération : %(name)s"
 msgstr "操作：%(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "或点击浏览文件"
 
 msgid "ouvrir"
 msgstr "打开"

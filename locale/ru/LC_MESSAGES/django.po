@@ -1180,6 +1180,9 @@ msgstr "Ввод"
 msgid "Entrées"
 msgstr "Записи"
 
+msgid "Envoi en cours…"
+msgstr "Отправка…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "Отправить ссылку для сброса"
 
@@ -1236,6 +1239,9 @@ msgstr "Файл"
 
 msgid "Fichier de données"
 msgstr "Файл данных"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "Файл отправлен, открываем анализ…"
 
 msgid "Fichier nettoyé"
 msgstr "Очищенный файл"
@@ -1332,6 +1338,9 @@ msgstr "Периодичность"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Экономьте время: всё важное в DataZen доступно по сочетанию клавиш."
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "Перетащите файл сюда"
 
 msgid "Graphiques"
 msgstr "Графики"
@@ -1629,6 +1638,9 @@ msgstr "Обработанные строки"
 
 msgid "Localisation"
 msgstr "Местоположение"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "Не удалось отправить файл. Проверьте подключение и повторите попытку."
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2188,6 +2200,9 @@ msgstr "Найти файл…"
 msgid "Recommandation"
 msgstr "Рекомендация"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "Отпустите, чтобы добавить файл"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "Заменяет имена, адреса электронной почты и телефоны детерминированными псевдонимами (одно значение → один псевдоним). Связи между строками сохраняются. Журнал изменений хранит только отпечаток исходных значений."
 
@@ -2229,6 +2244,9 @@ msgstr "Восстановить"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Восстановить эту версию как текущую?"
+
+msgid "Retirer le fichier"
+msgstr "Убрать файл"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3048,6 +3066,9 @@ msgstr "числовой"
 
 msgid "opération : %(name)s"
 msgstr "операция: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "или нажмите, чтобы выбрать файл"
 
 msgid "ouvrir"
 msgstr "открыть"

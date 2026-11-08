@@ -1162,6 +1162,9 @@ msgstr "Enter"
 msgid "Entrées"
 msgstr "Entri"
 
+msgid "Envoi en cours…"
+msgstr "Mengunggah…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "Kirim tautan reset"
 
@@ -1218,6 +1221,9 @@ msgstr "Berkas"
 
 msgid "Fichier de données"
 msgstr "File data"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "File terunggah, membuka analisis…"
 
 msgid "Fichier nettoyé"
 msgstr "File bersih"
@@ -1314,6 +1320,9 @@ msgstr "Frekuensi"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Hemat waktu: semua yang penting di DataZen ada di sebuah kombinasi tombol."
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "Seret dan lepas file Anda di sini"
 
 msgid "Graphiques"
 msgstr "Grafik"
@@ -1611,6 +1620,9 @@ msgstr "Baris yang diproses"
 
 msgid "Localisation"
 msgstr "Lokasi"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "Pengunggahan gagal. Periksa koneksi Anda, lalu coba lagi."
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2170,6 +2182,9 @@ msgstr "Cari file…"
 msgid "Recommandation"
 msgstr "Rekomendasi"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "Lepaskan untuk menambahkan file"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "Mengganti nama, email, dan nomor telepon dengan nama samaran deterministik (nilai sama → nama samaran sama). Hubungan antarbari tetap terjaga. Log perubahan hanya menyimpan sidik jari dari nilai asli."
 
@@ -2211,6 +2226,9 @@ msgstr "Pulihkan"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Pulihkan versi ini sebagai versi saat ini?"
+
+msgid "Retirer le fichier"
+msgstr "Hapus file"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3030,6 +3048,9 @@ msgstr "numerik"
 
 msgid "opération : %(name)s"
 msgstr "operasi: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "atau klik untuk menelusuri file Anda"
 
 msgid "ouvrir"
 msgstr "buka"

@@ -37,6 +37,7 @@ from .collab_schedules import COLLAB_SCHEDULE_TRANSLATIONS
 from .collab_batch import COLLAB_BATCH_TRANSLATIONS
 from .french_source import FRENCH_SOURCE_TRANSLATIONS
 from .large_files import LARGE_FILE_TRANSLATIONS
+from .ui_islands import UI_ISLAND_TRANSLATIONS
 
 _MODULES = [
     "en",
@@ -121,6 +122,7 @@ for _overrides in (
     COLLAB_BATCH_TRANSLATIONS,
     FRENCH_SOURCE_TRANSLATIONS,
     LARGE_FILE_TRANSLATIONS,
+    UI_ISLAND_TRANSLATIONS,
 ):
     for _code, _translations in _overrides.items():
         CATALOGS.setdefault(_code, {}).update(_translations)

@@ -1207,6 +1207,9 @@ msgstr "إدخال"
 msgid "Entrées"
 msgstr "المدخلات"
 
+msgid "Envoi en cours…"
+msgstr "جارٍ الإرسال…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "إرسال رابط إعادة التعيين"
 
@@ -1263,6 +1266,9 @@ msgstr "الملف"
 
 msgid "Fichier de données"
 msgstr "ملف البيانات"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "تم إرسال الملف، جارٍ فتح التحليل…"
 
 msgid "Fichier nettoyé"
 msgstr "الملف المنظّف"
@@ -1359,6 +1365,9 @@ msgstr "التكرار"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "وفّر وقتك: كل ما يهم في DataZen على مسافة تركيبة مفاتيح."
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "اسحب ملفك وأفلته هنا"
 
 msgid "Graphiques"
 msgstr "الرسوم البيانية"
@@ -1656,6 +1665,9 @@ msgstr "الأسطر المعالَجة"
 
 msgid "Localisation"
 msgstr "الموقع"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "فشل الإرسال. تحقّق من اتصالك ثم أعد المحاولة."
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2215,6 +2227,9 @@ msgstr "البحث عن ملف…"
 msgid "Recommandation"
 msgstr "التوصية"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "أفلت لإضافة الملف"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "يستبدل الأسماء والبريد الإلكتروني وأرقام الهواتف بأسماء مستعارة ثابتة (القيمة نفسها ← الاسم المستعار نفسه). مع الحفاظ على العلاقات بين الصفوف. لا يحتفظ سجل التغييرات إلا ببصمة للقيم الأصلية."
 
@@ -2256,6 +2271,9 @@ msgstr "استعادة"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "استعادة هذه النسخة كنسخة حالية؟"
+
+msgid "Retirer le fichier"
+msgstr "إزالة الملف"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3075,6 +3093,9 @@ msgstr "رقمي"
 
 msgid "opération : %(name)s"
 msgstr "العملية: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "أو انقر لتصفح ملفاتك"
 
 msgid "ouvrir"
 msgstr "فتح"

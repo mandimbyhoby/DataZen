@@ -1171,6 +1171,9 @@ msgstr "Enter"
 msgid "Entrées"
 msgstr "Poster"
 
+msgid "Envoi en cours…"
+msgstr "Laddar upp…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "Skicka återställningslänken"
 
@@ -1227,6 +1230,9 @@ msgstr "Fil"
 
 msgid "Fichier de données"
 msgstr "Datafil"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "Filen har laddats upp, analysen öppnas…"
 
 msgid "Fichier nettoyé"
 msgstr "Rensad fil"
@@ -1323,6 +1329,9 @@ msgstr "Frekvens"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Spara tid: allt som betyder något i DataZen ligger på en tangentkombination."
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "Dra och släpp din fil här"
 
 msgid "Graphiques"
 msgstr "Diagram"
@@ -1620,6 +1629,9 @@ msgstr "Bearbetade rader"
 
 msgid "Localisation"
 msgstr "Plats"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "Uppladdningen misslyckades. Kontrollera anslutningen och försök igen."
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2179,6 +2191,9 @@ msgstr "Sök en fil…"
 msgid "Recommandation"
 msgstr "Rekommendation"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "Släpp för att lägga till filen"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "Ersätter namn, e-post och telefonnummer med deterministiska pseudonymer (samma värde → samma pseudonym). Relationerna mellan rader bevaras. Ändringsloggen bevarar endast ett fingeravtryck av de ursprungliga värdena."
 
@@ -2220,6 +2235,9 @@ msgstr "Återställ"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Återställa den här versionen som aktuell version?"
+
+msgid "Retirer le fichier"
+msgstr "Ta bort filen"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3039,6 +3057,9 @@ msgstr "numerisk"
 
 msgid "opération : %(name)s"
 msgstr "åtgärd: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "eller klicka för att bläddra bland dina filer"
 
 msgid "ouvrir"
 msgstr "öppna"

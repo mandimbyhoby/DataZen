@@ -15,6 +15,10 @@ export default defineConfig({
       // donc produire qu'un seul fichier JS (pas de page `index.html`).
       input: "src/main.jsx",
       output: {
+        // IIFE : tout le bundle est enfermé dans une fonction. Sans cela, ses
+        // variables minifiées (`var O`, `var I`…) deviennent globales et
+        // seraient écrasées par l'autre bundle (`datazen-ui.js`).
+        format: "iife",
         entryFileNames: "datazen-charts.js",
         chunkFileNames: "datazen-charts-[name].js",
         assetFileNames: "datazen-charts.[ext]",

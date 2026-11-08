@@ -3,10 +3,11 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Graphiques interactifs DataZen (React + Chart.js), compilés vers static/js/charts/.",
+  "description": "Interface interactive DataZen (React) : graphiques (Chart.js) et îlots d'interface, compilés vers static/js/.",
   "scripts": {
     "dev": "vite build --watch",
-    "build": "vite build"
+    "dev:ui": "vite build --watch -c vite.ui.config.js",
+    "build": "vite build && vite build -c vite.ui.config.js"
   },
   "dependencies": {
     "chart.js": "^4.4.7",

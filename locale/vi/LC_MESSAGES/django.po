@@ -1162,6 +1162,9 @@ msgstr "Enter"
 msgid "Entrées"
 msgstr "Mục nhập"
 
+msgid "Envoi en cours…"
+msgstr "Đang tải lên…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "Gửi liên kết đặt lại"
 
@@ -1218,6 +1221,9 @@ msgstr "Tệp"
 
 msgid "Fichier de données"
 msgstr "Tệp dữ liệu"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "Đã tải tệp lên, đang mở phân tích…"
 
 msgid "Fichier nettoyé"
 msgstr "Tệp đã làm sạch"
@@ -1314,6 +1320,9 @@ msgstr "Tần suất"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Tiết kiệm thời gian: mọi thứ quan trọng trong DataZen đều nằm ở một tổ hợp phím."
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "Kéo và thả tệp của bạn vào đây"
 
 msgid "Graphiques"
 msgstr "Biểu đồ"
@@ -1611,6 +1620,9 @@ msgstr "Dòng đã xử lý"
 
 msgid "Localisation"
 msgstr "Vị trí"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "Tải lên thất bại. Hãy kiểm tra kết nối rồi thử lại."
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2170,6 +2182,9 @@ msgstr "Tìm kiếm tệp…"
 msgid "Recommandation"
 msgstr "Đề xuất"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "Thả ra để thêm tệp"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "Thay tên, email và số điện thoại bằng bí danh xác định (cùng giá trị → cùng bí danh). Các mối liên hệ giữa các hàng được giữ nguyên. Nhật ký thay đổi chỉ lưu giữ dấu vân tay của các giá trị gốc."
 
@@ -2211,6 +2226,9 @@ msgstr "Khôi phục"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Khôi phục phiên bản này làm phiên bản hiện tại?"
+
+msgid "Retirer le fichier"
+msgstr "Gỡ tệp"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3030,6 +3048,9 @@ msgstr "số"
 
 msgid "opération : %(name)s"
 msgstr "thao tác: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "hoặc nhấp để duyệt tệp"
 
 msgid "ouvrir"
 msgstr "mở"

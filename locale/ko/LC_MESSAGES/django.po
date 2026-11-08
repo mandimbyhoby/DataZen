@@ -1162,6 +1162,9 @@ msgstr "Enter"
 msgid "Entrées"
 msgstr "항목"
 
+msgid "Envoi en cours…"
+msgstr "업로드 중…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "재설정 링크 보내기"
 
@@ -1218,6 +1221,9 @@ msgstr "파일"
 
 msgid "Fichier de données"
 msgstr "데이터 파일"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "파일 업로드 완료, 분석을 여는 중…"
 
 msgid "Fichier nettoyé"
 msgstr "정제된 파일"
@@ -1314,6 +1320,9 @@ msgstr "주기"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "시간을 아끼세요. DataZen의 모든 핵심 기능은 단축키로 사용할 수 있습니다."
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "여기에 파일을 끌어다 놓으세요"
 
 msgid "Graphiques"
 msgstr "차트"
@@ -1611,6 +1620,9 @@ msgstr "처리한 행 수"
 
 msgid "Localisation"
 msgstr "위치"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "업로드에 실패했습니다. 연결을 확인한 후 다시 시도하세요."
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2170,6 +2182,9 @@ msgstr "파일 검색…"
 msgid "Recommandation"
 msgstr "권장 사항"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "놓으면 파일이 추가됩니다"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "이름, 이메일, 전화번호를 결정적 별칭으로 바꿉니다(같은 값은 같은 별칭 사용). 행 간 관계는 유지됩니다. 변경 로그에는 원본 값의 지문만 보관됩니다."
 
@@ -2211,6 +2226,9 @@ msgstr "복원"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "이 버전을 현재 버전으로 복원할까요?"
+
+msgid "Retirer le fichier"
+msgstr "파일 제거"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3030,6 +3048,9 @@ msgstr "숫자"
 
 msgid "opération : %(name)s"
 msgstr "작업: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "또는 클릭하여 파일을 찾아보세요"
 
 msgid "ouvrir"
 msgstr "열기"

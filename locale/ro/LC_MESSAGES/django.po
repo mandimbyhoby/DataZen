@@ -1180,6 +1180,9 @@ msgstr "Enter"
 msgid "Entrées"
 msgstr "Înregistrări"
 
+msgid "Envoi en cours…"
+msgstr "Se trimite…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "Trimiteți linkul de resetare"
 
@@ -1236,6 +1239,9 @@ msgstr "Fișier"
 
 msgid "Fichier de données"
 msgstr "Fișier de date"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "Fișier trimis, se deschide analiza…"
 
 msgid "Fichier nettoyé"
 msgstr "Fișier curățat"
@@ -1332,6 +1338,9 @@ msgstr "Frecvență"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Economisiți timp: tot ce contează în DataZen este la o combinație de taste."
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "Trageți și plasați fișierul aici"
 
 msgid "Graphiques"
 msgstr "Grafice"
@@ -1629,6 +1638,9 @@ msgstr "Linii procesate"
 
 msgid "Localisation"
 msgstr "Localizare"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "Trimiterea a eșuat. Verificați conexiunea, apoi încercați din nou."
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2188,6 +2200,9 @@ msgstr "Căutați un fișier…"
 msgid "Recommandation"
 msgstr "Recomandare"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "Eliberați pentru a adăuga fișierul"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "Înlocuiește numele, e-mailurile și numerele de telefon cu pseudonime deterministe (aceeași valoare → același pseudonim). Relațiile dintre rânduri sunt păstrate. Jurnalul modificărilor păstrează doar o amprentă a valorilor originale."
 
@@ -2229,6 +2244,9 @@ msgstr "Restaurați"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Restaurați această versiune ca versiune curentă?"
+
+msgid "Retirer le fichier"
+msgstr "Eliminați fișierul"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3048,6 +3066,9 @@ msgstr "numeric"
 
 msgid "opération : %(name)s"
 msgstr "operațiune: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "sau faceți clic pentru a răsfoi fișierele"
 
 msgid "ouvrir"
 msgstr "deschide"

@@ -41,9 +41,9 @@
                     {% blocktranslate with count=totals.cleaned %}Calculée sur {{ count }} fichier(s) nettoyé(s).{% endblocktranslate %}
                 </p>
             </div>
-            <div class="text-end">
+            <div class="text-end dz-score-head"{% if average_score is not None %} data-dz-score-ring="{{ average_score|unlocalize }}" data-dz-label="{% translate 'Qualité moyenne' %}"{% endif %}>
                 {% if average_score is not None %}
-                    <div class="display-5 fw-bold lh-1">{{ average_score }}<span class="fs-6 text-muted">/100</span></div>
+                    <div class="display-5 fw-bold lh-1" data-dz-score-value>{{ average_score }}<span class="fs-6 text-muted">/100</span></div>
                 {% else %}
                     <div class="display-5 fw-bold lh-1 text-muted">—</div>
                 {% endif %}

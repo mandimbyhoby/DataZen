@@ -1171,6 +1171,9 @@ msgstr "Enter"
 msgid "Entrées"
 msgstr "Merkinnät"
 
+msgid "Envoi en cours…"
+msgstr "Lähetetään…"
+
 msgid "Envoyer le lien de réinitialisation"
 msgstr "Lähetä palautuslinkki"
 
@@ -1227,6 +1230,9 @@ msgstr "Tiedosto"
 
 msgid "Fichier de données"
 msgstr "Datatiedosto"
+
+msgid "Fichier envoyé, ouverture de l’analyse…"
+msgstr "Tiedosto lähetetty, analyysi avataan…"
 
 msgid "Fichier nettoyé"
 msgstr "Puhdistettu tiedosto"
@@ -1323,6 +1329,9 @@ msgstr "Tiheys"
 
 msgid "Gagnez du temps : tout ce qui compte dans DataZen est à une combinaison de touches."
 msgstr "Säästä aikaa: kaikki olennainen DataZenissa on näppäinyhdistelmän takana."
+
+msgid "Glissez-déposez votre fichier ici"
+msgstr "Vedä ja pudota tiedosto tähän"
 
 msgid "Graphiques"
 msgstr "Kaaviot"
@@ -1620,6 +1629,9 @@ msgstr "Käsitellyt rivit"
 
 msgid "Localisation"
 msgstr "Sijainti"
+
+msgid "L’envoi a échoué. Vérifiez votre connexion, puis réessayez."
+msgstr "Lähetys epäonnistui. Tarkista yhteys ja yritä uudelleen."
 
 msgid "MM/JJ/AAAA"
 msgstr "MM/JJ/AAAA"
@@ -2179,6 +2191,9 @@ msgstr "Etsi tiedostoa…"
 msgid "Recommandation"
 msgstr "Suositus"
 
+msgid "Relâchez pour ajouter le fichier"
+msgstr "Vapauta lisätäksesi tiedoston"
+
 msgid "Remplace les noms, emails et téléphones par des pseudonymes déterministes (même valeur → même pseudonyme). Les relations entre lignes sont préservées. Le journal des modifications ne conserve qu'une empreinte des valeurs d'origine."
 msgstr "Korvaa nimet, sähköpostit ja puhelinnumerot deterministisillä peitenimillä (sama arvo → sama peitenimi). Rivien väliset suhteet säilyvät. Muutosloki säilyttää vain sormenjäljen alkuperäisistä arvoista."
 
@@ -2220,6 +2235,9 @@ msgstr "Palauta"
 
 msgid "Restaurer cette version comme version courante ?"
 msgstr "Palautetaanko tämä versio nykyiseksi versioksi?"
+
+msgid "Retirer le fichier"
+msgstr "Poista tiedosto"
 
 msgid "Retour à l'accueil"
 msgstr ""
@@ -3039,6 +3057,9 @@ msgstr "numeerinen"
 
 msgid "opération : %(name)s"
 msgstr "toiminto: %(name)s"
+
+msgid "ou cliquez pour parcourir vos fichiers"
+msgstr "tai napsauta selataksesi tiedostojasi"
 
 msgid "ouvrir"
 msgstr "avaa"
