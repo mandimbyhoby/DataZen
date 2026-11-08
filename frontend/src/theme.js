@@ -9,9 +9,9 @@
 import { ENTRY_DURATION, ENTRY_STAGGER, ENTRY_STAGGER_MAX } from "./motion.js";
 
 export const BRAND = [
-  "#4f46e5",
-  "#7c3aed",
-  "#06b6d4",
+  "#8cc63f",
+  "#475569",
+  "#4d7c0f",
   "#f59e0b",
   "#ef4444",
   "#10b981",
@@ -26,7 +26,7 @@ export const COLOR_BAD = "#ef4444";
 /** Couleur sémantique associée à un score de qualité (sur 100). */
 export function scoreColor(total) {
   if (total >= 90) return COLOR_OK;
-  if (total >= 75) return "#06b6d4";
+  if (total >= 75) return "#8cc63f";
   if (total >= 50) return COLOR_WARN;
   return COLOR_BAD;
 }

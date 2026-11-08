@@ -4461,7 +4461,7 @@ class NavbarDesignTests(TestCase):
 
     def test_dark_theme_lightens_the_active_link(self):
         self.assertIn('[data-bs-theme="dark"] .dz-navbar .nav-link.active', self.css)
-        self.assertIn("color: #a5b4fc", self.css)
+        self.assertIn("color: #c6e66b", self.css)
 
     def test_mobile_panel_reuses_the_navbar_sheen(self):
         mobile = self.css[self.css.index("17.2 Barre de navigation") :]
@@ -4660,7 +4660,7 @@ class DesignSystemTests(TestCase):
         base = (
             Path(__file__).resolve().parent.parent / "templates" / "core" / "base.html"
         ).read_text(encoding="utf-8")
-        self.assertIn("css/style.css' %}?v=20261108-react", base)
+        self.assertIn("css/style.css' %}?v=20261108-lime", base)
 
     def test_inner_pages_use_the_section_rhythm(self):
         # Les gabarits applicatifs troquent l'espacement serré de Bootstrap

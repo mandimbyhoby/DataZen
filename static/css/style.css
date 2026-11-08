@@ -23,15 +23,15 @@
 /* --- 1. Jetons de design -------------------------------------------------- */
 :root {
     /* Marque : indigo → violet, avec un accent cyan. */
-    --dz-brand-500: #4f46e5;
-    --dz-brand-600: #4338ca;
-    --dz-brand-700: #3730a3;
-    --dz-violet: #7c3aed;
-    --dz-accent: #06b6d4;
-    --dz-accent-soft: #22d3ee;
+    --dz-brand-500: #8cc63f;
+    --dz-brand-600: #4d7c0f;
+    --dz-brand-700: #3f6212;
+    --dz-violet: #b5d93a;
+    --dz-accent: #3fa34d;
+    --dz-accent-soft: #c6e66b;
 
-    --dz-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 55%, #06b6d4 100%);
-    --dz-gradient-soft: linear-gradient(135deg, rgba(79, 70, 229, 0.12), rgba(6, 182, 212, 0.12));
+    --dz-gradient: linear-gradient(135deg, #8cc63f 0%, #b5d93a 55%, #3fa34d 100%);
+    --dz-gradient-soft: linear-gradient(135deg, rgba(140, 198, 63, 0.12), rgba(63, 163, 77, 0.12));
 
     /* Surfaces */
     --dz-surface: #ffffff;
@@ -62,7 +62,7 @@
     --dz-shadow-lg:
         0 8px 16px rgba(15, 23, 42, 0.05),
         0 36px 72px -24px rgba(15, 23, 42, 0.24);
-    --dz-shadow-brand: 0 16px 40px -12px rgba(79, 70, 229, 0.42);
+    --dz-shadow-brand: 0 16px 40px -12px rgba(140, 198, 63, 0.42);
 
     /* Liseré interne : donne aux cartes claires une arête nette sans bord dur. */
     --dz-ring: 0 0 0 1px rgba(15, 23, 42, 0.05);
@@ -106,29 +106,29 @@
     --dz-navbar-bg: rgba(255, 255, 255, 0.90);
     --dz-navbar-bg-scrolled: rgba(255, 255, 255, 0.97);
     --dz-navbar-sheen:
-        radial-gradient(120% 200% at 10% -80%, rgba(79, 70, 229, 0.16), transparent 62%),
-        radial-gradient(90% 200% at 92% -90%, rgba(6, 182, 212, 0.14), transparent 60%),
-        linear-gradient(100deg, rgba(79, 70, 229, 0.07) 0%, rgba(124, 58, 237, 0.04) 45%, rgba(6, 182, 212, 0.07) 100%);
+        radial-gradient(120% 200% at 10% -80%, rgba(140, 198, 63, 0.16), transparent 62%),
+        radial-gradient(90% 200% at 92% -90%, rgba(63, 163, 77, 0.14), transparent 60%),
+        linear-gradient(100deg, rgba(140, 198, 63, 0.07) 0%, rgba(181, 217, 58, 0.04) 45%, rgba(63, 163, 77, 0.07) 100%);
     --dz-navbar-hairline: linear-gradient(
         90deg,
-        rgba(79, 70, 229, 0) 0%,
-        rgba(79, 70, 229, 0.45) 22%,
-        rgba(124, 58, 237, 0.40) 52%,
-        rgba(6, 182, 212, 0.45) 78%,
-        rgba(6, 182, 212, 0) 100%
+        rgba(140, 198, 63, 0) 0%,
+        rgba(140, 198, 63, 0.45) 22%,
+        rgba(181, 217, 58, 0.40) 52%,
+        rgba(63, 163, 77, 0.45) 78%,
+        rgba(63, 163, 77, 0) 100%
     );
     --dz-navbar-shadow:
-        0 12px 32px -16px rgba(79, 70, 229, 0.45),
+        0 12px 32px -16px rgba(140, 198, 63, 0.45),
         0 2px 10px -6px rgba(15, 23, 42, 0.18);
-    --dz-navbar-link-hover-bg: rgba(79, 70, 229, 0.08);
-    --dz-navbar-link-active-bg: linear-gradient(135deg, rgba(79, 70, 229, 0.16), rgba(6, 182, 212, 0.13));
+    --dz-navbar-link-hover-bg: rgba(140, 198, 63, 0.08);
+    --dz-navbar-link-active-bg: linear-gradient(135deg, rgba(140, 198, 63, 0.16), rgba(63, 163, 77, 0.13));
 
     /* Surcharge des variables Bootstrap pour rester cohérent partout. */
-    --bs-primary: #4f46e5;
-    --bs-primary-rgb: 79, 70, 229;
-    --bs-link-color: #4f46e5;
-    --bs-link-color-rgb: 79, 70, 229;
-    --bs-link-hover-color: #3730a3;
+    --bs-primary: #8cc63f;
+    --bs-primary-rgb: 140, 198, 63;
+    --bs-link-color: #8cc63f;
+    --bs-link-color-rgb: 140, 198, 63;
+    --bs-link-hover-color: #3f6212;
     --bs-border-radius: 1rem;
     --bs-border-radius-sm: 0.625rem;
     --bs-border-radius-lg: 1.5rem;
@@ -142,8 +142,8 @@ body {
     background-color: var(--dz-surface-2);
     /* Halos colorés très diffus : donnent de la profondeur sans distraire. */
     background-image:
-        radial-gradient(60rem 40rem at 12% -10%, rgba(79, 70, 229, 0.10), transparent 60%),
-        radial-gradient(50rem 35rem at 95% 0%, rgba(6, 182, 212, 0.10), transparent 55%);
+        radial-gradient(60rem 40rem at 12% -10%, rgba(140, 198, 63, 0.10), transparent 60%),
+        radial-gradient(50rem 35rem at 95% 0%, rgba(63, 163, 77, 0.10), transparent 55%);
     background-attachment: fixed;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -171,7 +171,7 @@ a:hover {
 
 code {
     color: var(--dz-brand-600);
-    background: rgba(79, 70, 229, 0.08);
+    background: rgba(140, 198, 63, 0.08);
     padding: 0.1rem 0.35rem;
     border-radius: 0.35rem;
     font-size: 0.875em;
@@ -352,7 +352,7 @@ code {
 
 .dz-navbar .navbar-brand:hover .dz-logo-img {
     transform: translateY(-1px) scale(1.03);
-    filter: drop-shadow(0 10px 22px rgba(79, 70, 229, 0.45));
+    filter: drop-shadow(0 10px 22px rgba(140, 198, 63, 0.45));
 }
 
 .dz-navbar .nav-link {
@@ -416,7 +416,7 @@ code {
 .dz-navbar .nav-link.active {
     color: var(--dz-brand-600);
     background: var(--dz-navbar-link-active-bg);
-    box-shadow: inset 0 0 0 1px rgba(79, 70, 229, 0.16);
+    box-shadow: inset 0 0 0 1px rgba(140, 198, 63, 0.16);
 }
 
 .dz-navbar .nav-link.active:not(.dropdown-toggle)::after {
@@ -429,7 +429,7 @@ code {
 }
 
 .dz-navbar .navbar-toggler:focus {
-    box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(140, 198, 63, 0.25);
 }
 
 /* Bouton de bascule du thème. */
@@ -512,7 +512,7 @@ code {
 .dz-card-hover:hover {
     transform: translateY(-5px);
     box-shadow: var(--dz-shadow-lg);
-    border-color: rgba(79, 70, 229, 0.28);
+    border-color: rgba(140, 198, 63, 0.28);
 }
 
 /* Carte mise en avant : liseré dégradé en haut. */
@@ -569,7 +569,7 @@ code {
     background: var(--dz-gradient);
     filter: brightness(1.08);
     color: #fff;
-    box-shadow: 0 16px 36px -10px rgba(79, 70, 229, 0.55);
+    box-shadow: 0 16px 36px -10px rgba(140, 198, 63, 0.55);
 }
 
 .btn-primary:disabled,
@@ -581,7 +581,7 @@ code {
 
 .btn-outline-primary {
     color: var(--dz-brand-600);
-    border-color: rgba(79, 70, 229, 0.4);
+    border-color: rgba(140, 198, 63, 0.4);
 }
 
 .btn-outline-primary:hover {
@@ -646,7 +646,7 @@ code {
 .form-control:focus,
 .form-select:focus {
     border-color: var(--dz-brand-500);
-    box-shadow: 0 0 0 0.22rem rgba(79, 70, 229, 0.16);
+    box-shadow: 0 0 0 0.22rem rgba(140, 198, 63, 0.16);
     background: var(--dz-surface);
     color: var(--dz-text);
 }
@@ -662,7 +662,7 @@ code {
 
 .form-check-input:focus {
     border-color: var(--dz-brand-500);
-    box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.18);
+    box-shadow: 0 0 0 0.2rem rgba(140, 198, 63, 0.18);
 }
 
 .form-text {
@@ -671,7 +671,7 @@ code {
 
 /* Zone de dépôt de fichier : grande cible visuelle et accueillante. */
 .dz-dropzone {
-    border: 2px dashed rgba(79, 70, 229, 0.35);
+    border: 2px dashed rgba(140, 198, 63, 0.35);
     border-radius: var(--dz-radius-lg);
     background: var(--dz-gradient-soft);
     padding: 2.5rem 1.5rem;
@@ -683,7 +683,7 @@ code {
 .dz-dropzone:hover,
 .dz-dropzone.is-dragover {
     border-color: var(--dz-brand-500);
-    background: rgba(79, 70, 229, 0.10);
+    background: rgba(140, 198, 63, 0.10);
     transform: translateY(-2px);
 }
 
@@ -718,7 +718,7 @@ code {
 }
 
 .dz-file-picker input[type="file"]:focus-visible {
-    outline: 3px solid rgba(79, 70, 229, 0.35);
+    outline: 3px solid rgba(140, 198, 63, 0.35);
     outline-offset: 2px;
 }
 
@@ -761,7 +761,7 @@ code {
 }
 
 .table-hover tbody tr:hover {
-    background: rgba(79, 70, 229, 0.05);
+    background: rgba(140, 198, 63, 0.05);
 }
 
 .table-responsive {
@@ -778,7 +778,7 @@ code {
 
 .badge.bg-success { background: linear-gradient(135deg, #10b981, #059669) !important; }
 .badge.bg-danger  { background: linear-gradient(135deg, #f87171, #dc2626) !important; }
-.badge.bg-info    { background: linear-gradient(135deg, #22d3ee, #0891b2) !important; }
+.badge.bg-info    { background: linear-gradient(135deg, #c6e66b, #0891b2) !important; }
 .badge.bg-warning { background: linear-gradient(135deg, #fbbf24, #d97706) !important; color: #422006; }
 .badge.bg-secondary { background: linear-gradient(135deg, #94a3b8, #64748b) !important; }
 
@@ -821,7 +821,7 @@ code {
     transform: translateX(-50%);
     width: min(80rem, 140vw);
     height: 40rem;
-    background: radial-gradient(closest-side, rgba(79, 70, 229, 0.20), transparent 72%);
+    background: radial-gradient(closest-side, rgba(140, 198, 63, 0.20), transparent 72%);
     pointer-events: none;
     z-index: 0;
 }
@@ -965,7 +965,7 @@ code {
 .dz-feature:hover {
     transform: translateY(-6px);
     box-shadow: var(--dz-shadow-lg);
-    border-color: rgba(79, 70, 229, 0.28);
+    border-color: rgba(140, 198, 63, 0.28);
 }
 
 .dz-feature .dz-feature-icon {
@@ -976,7 +976,7 @@ code {
     height: 3.75rem;
     border-radius: var(--dz-radius);
     background: var(--dz-gradient-soft);
-    border: 1px solid rgba(79, 70, 229, 0.16);
+    border: 1px solid rgba(140, 198, 63, 0.16);
     font-size: 1.65rem;
     line-height: 1;
     margin-bottom: 1.25rem;
@@ -1165,7 +1165,7 @@ code {
 }
 
 .report-content code {
-    background: rgba(79, 70, 229, 0.1);
+    background: rgba(140, 198, 63, 0.1);
     padding: 0.1rem 0.3rem;
     border-radius: 0.25rem;
 }
@@ -1201,7 +1201,7 @@ code {
 
 .password-toggle-btn:hover {
     color: var(--dz-brand-600);
-    background: rgba(79, 70, 229, 0.07);
+    background: rgba(140, 198, 63, 0.07);
 }
 
 .password-toggle-btn:focus-visible {
@@ -1234,11 +1234,11 @@ code {
     --dz-shadow-lg:
         0 8px 16px rgba(0, 0, 0, 0.4),
         0 40px 80px -28px rgba(0, 0, 0, 0.85);
-    --dz-shadow-brand: 0 16px 40px -12px rgba(79, 70, 229, 0.6);
+    --dz-shadow-brand: 0 16px 40px -12px rgba(140, 198, 63, 0.6);
 
     --dz-ring: 0 0 0 1px rgba(255, 255, 255, 0.06);
 
-    --dz-gradient-soft: linear-gradient(135deg, rgba(79, 70, 229, 0.22), rgba(6, 182, 212, 0.18));
+    --dz-gradient-soft: linear-gradient(135deg, rgba(140, 198, 63, 0.22), rgba(63, 163, 77, 0.18));
 
     --dz-hero-video-opacity: 0.8;
     --dz-hero-video-overlay: linear-gradient(
@@ -1267,22 +1267,22 @@ code {
     --dz-navbar-bg: rgba(13, 15, 20, 0.90);
     --dz-navbar-bg-scrolled: rgba(13, 15, 20, 0.97);
     --dz-navbar-sheen:
-        radial-gradient(120% 200% at 10% -80%, rgba(99, 102, 241, 0.30), transparent 62%),
-        radial-gradient(90% 200% at 92% -90%, rgba(34, 211, 238, 0.22), transparent 60%),
-        linear-gradient(100deg, rgba(99, 102, 241, 0.12) 0%, rgba(124, 58, 237, 0.08) 45%, rgba(34, 211, 238, 0.12) 100%);
+        radial-gradient(120% 200% at 10% -80%, rgba(140, 198, 63, 0.30), transparent 62%),
+        radial-gradient(90% 200% at 92% -90%, rgba(198, 230, 107, 0.22), transparent 60%),
+        linear-gradient(100deg, rgba(140, 198, 63, 0.12) 0%, rgba(181, 217, 58, 0.08) 45%, rgba(198, 230, 107, 0.12) 100%);
     --dz-navbar-hairline: linear-gradient(
         90deg,
-        rgba(99, 102, 241, 0) 0%,
-        rgba(99, 102, 241, 0.55) 22%,
-        rgba(124, 58, 237, 0.50) 52%,
-        rgba(34, 211, 238, 0.55) 78%,
-        rgba(34, 211, 238, 0) 100%
+        rgba(140, 198, 63, 0) 0%,
+        rgba(140, 198, 63, 0.55) 22%,
+        rgba(181, 217, 58, 0.50) 52%,
+        rgba(198, 230, 107, 0.55) 78%,
+        rgba(198, 230, 107, 0) 100%
     );
     --dz-navbar-shadow:
         0 14px 36px -16px rgba(0, 0, 0, 0.75),
-        0 0 0 1px rgba(99, 102, 241, 0.10);
-    --dz-navbar-link-hover-bg: rgba(129, 140, 248, 0.14);
-    --dz-navbar-link-active-bg: linear-gradient(135deg, rgba(99, 102, 241, 0.28), rgba(34, 211, 238, 0.20));
+        0 0 0 1px rgba(140, 198, 63, 0.10);
+    --dz-navbar-link-hover-bg: rgba(168, 212, 58, 0.14);
+    --dz-navbar-link-active-bg: linear-gradient(135deg, rgba(140, 198, 63, 0.28), rgba(198, 230, 107, 0.20));
 
     --bs-body-color: #e8eaf0;
     --bs-body-bg: #0d0f14;
@@ -1292,8 +1292,8 @@ code {
 [data-bs-theme="dark"] body {
     background-color: var(--dz-surface-2);
     background-image:
-        radial-gradient(60rem 40rem at 12% -10%, rgba(79, 70, 229, 0.22), transparent 60%),
-        radial-gradient(50rem 35rem at 95% 0%, rgba(6, 182, 212, 0.16), transparent 55%);
+        radial-gradient(60rem 40rem at 12% -10%, rgba(140, 198, 63, 0.22), transparent 60%),
+        radial-gradient(50rem 35rem at 95% 0%, rgba(63, 163, 77, 0.16), transparent 55%);
 }
 
 /* La barre de navigation tire ses couleurs des variables du thème. */
@@ -1305,11 +1305,11 @@ code {
 [data-bs-theme="dark"] .dz-navbar .nav-link:hover,
 [data-bs-theme="dark"] .dz-navbar .nav-link:focus-visible,
 [data-bs-theme="dark"] .dz-navbar .nav-link.active {
-    color: #a5b4fc;
+    color: #c6e66b;
 }
 
 [data-bs-theme="dark"] .dz-navbar .nav-link.active {
-    box-shadow: inset 0 0 0 1px rgba(129, 140, 248, 0.28);
+    box-shadow: inset 0 0 0 1px rgba(168, 212, 58, 0.28);
 }
 
 [data-bs-theme="dark"] .dz-navbar .navbar-toggler-icon {
@@ -1403,7 +1403,7 @@ code {
 
 [data-bs-theme="dark"] code {
     color: var(--dz-accent-soft);
-    background: rgba(6, 182, 212, 0.14);
+    background: rgba(63, 163, 77, 0.14);
 }
 
 [data-bs-theme="dark"] .dropdown-menu {
@@ -1412,8 +1412,8 @@ code {
 }
 
 [data-bs-theme="dark"] .dz-dropzone {
-    background: rgba(79, 70, 229, 0.14);
-    border-color: rgba(129, 140, 248, 0.4);
+    background: rgba(140, 198, 63, 0.14);
+    border-color: rgba(168, 212, 58, 0.4);
 }
 
 /* --- 15. Animations & accessibilité --------------------------------------- */
@@ -1648,7 +1648,7 @@ button.dz-avatar-preview:focus-visible {
 }
 
 button.dz-avatar-preview:focus-visible {
-    box-shadow: var(--dz-shadow-lg), 0 0 0 3px rgba(79, 70, 229, 0.45);
+    box-shadow: var(--dz-shadow-lg), 0 0 0 3px rgba(140, 198, 63, 0.45);
 }
 
 /* Voile au survol pour signaler que l'avatar est cliquable. */
@@ -1702,7 +1702,7 @@ button.dz-avatar-preview:focus-visible::after {
 }
 
 .dz-avatar-camera:focus-visible {
-    box-shadow: var(--dz-shadow-brand), 0 0 0 3px rgba(79, 70, 229, 0.45);
+    box-shadow: var(--dz-shadow-brand), 0 0 0 3px rgba(140, 198, 63, 0.45);
 }
 
 /* Barre de confirmation affichée après le choix d'une nouvelle photo. */
@@ -1941,7 +1941,7 @@ input[type="file"].form-control::file-selector-button:hover {
     border: 1px solid var(--dz-border);
     border-radius: var(--dz-radius);
     background:
-        radial-gradient(circle at 100% 0, rgba(79, 70, 229, 0.08), transparent 34%),
+        radial-gradient(circle at 100% 0, rgba(140, 198, 63, 0.08), transparent 34%),
         var(--dz-surface);
 }
 
@@ -1985,7 +1985,7 @@ input[type="file"].form-control::file-selector-button:hover {
     box-shadow: 0 12px 24px -14px color-mix(in srgb, var(--dz-kpi-accent) 55%, transparent);
 }
 
-.dz-kpi-card--primary { --dz-kpi-accent: #4f46e5; }
+.dz-kpi-card--primary { --dz-kpi-accent: #8cc63f; }
 .dz-kpi-card--success { --dz-kpi-accent: #10b981; }
 .dz-kpi-card--warning { --dz-kpi-accent: #f59e0b; }
 .dz-kpi-card--danger { --dz-kpi-accent: #ef4444; }
@@ -2070,7 +2070,7 @@ input[type="file"].form-control::file-selector-button:hover {
 
 .dz-chart-card:hover .dz-chart-frame {
     border-color: var(--dz-accent);
-    box-shadow: 0 10px 30px -12px rgba(79, 70, 229, 0.35);
+    box-shadow: 0 10px 30px -12px rgba(140, 198, 63, 0.35);
 }
 
 .dz-chart-img {
@@ -2098,7 +2098,7 @@ input[type="file"].form-control::file-selector-button:hover {
 }
 
 [data-bs-theme="dark"] .dz-chart-card:hover .dz-chart-frame {
-    box-shadow: 0 10px 30px -12px rgba(6, 182, 212, 0.35);
+    box-shadow: 0 10px 30px -12px rgba(63, 163, 77, 0.35);
 }
 
 /* --- 16.7.1 Graphiques interactifs (React + Chart.js) -------------------- */
@@ -2940,7 +2940,7 @@ pre {
     stroke-linejoin: round;
     stroke-linecap: round;
     vector-effect: non-scaling-stroke;
-    filter: drop-shadow(0 2px 6px rgba(79, 70, 229, 0.35));
+    filter: drop-shadow(0 2px 6px rgba(140, 198, 63, 0.35));
     stroke-dasharray: 400;
     stroke-dashoffset: 400;
     animation: dz-timeline-draw 1.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
@@ -3246,8 +3246,8 @@ pre {
 [data-bs-theme="dark"] .dz-palette__dialog { background: #1e293b; }
 [data-bs-theme="dark"] .dz-palette__hint { background: rgba(148, 163, 184, 0.08); }
 [data-bs-theme="dark"] .dz-palette__mark {
-    background: rgba(129, 140, 248, 0.24);
-    color: #c7d2fe;
+    background: rgba(168, 212, 58, 0.24);
+    color: #d9f0a3;
 }
 [data-bs-theme="dark"] .dz-timeline__dot { stroke: #1e293b; }
 
@@ -3285,8 +3285,8 @@ pre {
     align-items: center;
     padding: clamp(2rem, 6vw, 5rem) 0;
     background:
-        radial-gradient(circle at 15% 15%, rgba(79, 70, 229, 0.10), transparent 55%),
-        radial-gradient(circle at 85% 80%, rgba(6, 182, 212, 0.10), transparent 55%),
+        radial-gradient(circle at 15% 15%, rgba(140, 198, 63, 0.10), transparent 55%),
+        radial-gradient(circle at 85% 80%, rgba(63, 163, 77, 0.10), transparent 55%),
         var(--dz-surface-2);
 }
 
@@ -3297,7 +3297,7 @@ pre {
     padding: clamp(2rem, 5vw, 3.25rem);
     text-align: center;
     background: var(--dz-surface);
-    border: 1px solid rgba(79, 70, 229, 0.14);
+    border: 1px solid rgba(140, 198, 63, 0.14);
     border-radius: 1.5rem;
     box-shadow: 0 24px 60px -28px rgba(15, 23, 42, 0.35);
 }
@@ -3374,7 +3374,7 @@ pre {
 }
 
 .table-responsive > .table-sm tbody tr:hover > * {
-    background: rgba(79, 70, 229, 0.06);
+    background: rgba(140, 198, 63, 0.06);
 }
 
 .table-responsive {
@@ -3432,7 +3432,7 @@ pre {
 
 .dz-timeline-count {
     color: var(--dz-brand-600);
-    background: rgba(79, 70, 229, 0.1);
+    background: rgba(140, 198, 63, 0.1);
     min-width: 1.6rem;
 }
 
@@ -3471,16 +3471,16 @@ main:has(> .dz-auth-shell) + .dz-footer {
 }
 
 [data-bs-theme="dark"] .dz-timeline-count {
-    color: #c7d2fe;
-    background: rgba(129, 140, 248, 0.18);
+    color: #d9f0a3;
+    background: rgba(168, 212, 58, 0.18);
 }
 
 [data-bs-theme="dark"] .table-responsive > .table-sm tbody tr:hover > * {
-    background: rgba(129, 140, 248, 0.1);
+    background: rgba(168, 212, 58, 0.1);
 }
 
 [data-bs-theme="dark"] .dz-issues-list > li::marker {
-    color: #818cf8;
+    color: #a8d43a;
 }
 
 /* ==========================================================================
@@ -3498,7 +3498,7 @@ main:has(> .dz-auth-shell) + .dz-footer {
     --bs-body-font-family: var(--dz-font-sans);
     --bs-font-monospace: var(--dz-font-mono);
 
-    --dz-brand-400: #818cf8;
+    --dz-brand-400: #a8d43a;
     --dz-surface: #ffffff;
     --dz-surface-2: #f7f7f9;
     --dz-surface-3: #f1f1f5;
@@ -3517,18 +3517,18 @@ main:has(> .dz-auth-shell) + .dz-footer {
     --dz-shadow-lg:
         0 2px 6px rgba(16, 16, 32, 0.05),
         0 28px 56px -24px rgba(16, 16, 32, 0.22);
-    --dz-shadow-brand: 0 8px 20px -8px rgba(79, 70, 229, 0.55);
+    --dz-shadow-brand: 0 8px 20px -8px rgba(140, 198, 63, 0.55);
     --dz-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.7);
 
     --dz-navbar-bg: rgba(255, 255, 255, 0.72);
     --dz-navbar-bg-scrolled: rgba(255, 255, 255, 0.86);
     --dz-navbar-link-hover-bg: rgba(24, 24, 40, 0.05);
-    --dz-navbar-link-active-bg: rgba(79, 70, 229, 0.09);
+    --dz-navbar-link-active-bg: rgba(140, 198, 63, 0.09);
 
     --dz-grid-dot: rgba(24, 24, 40, 0.07);
     --dz-aurora:
-        radial-gradient(42rem 26rem at 18% -6rem, rgba(99, 102, 241, 0.16), transparent 70%),
-        radial-gradient(36rem 22rem at 86% -8rem, rgba(34, 211, 238, 0.13), transparent 70%);
+        radial-gradient(42rem 26rem at 18% -6rem, rgba(140, 198, 63, 0.16), transparent 70%),
+        radial-gradient(36rem 22rem at 86% -8rem, rgba(198, 230, 107, 0.13), transparent 70%);
 
     --bs-body-bg: #f7f7f9;
     --bs-body-color: #0b0b14;
@@ -3536,7 +3536,7 @@ main:has(> .dz-auth-shell) + .dz-footer {
 }
 
 :root[data-bs-theme="dark"] {
-    --dz-brand-400: #a5b4fc;
+    --dz-brand-400: #c6e66b;
     --dz-surface: #111117;
     --dz-surface-2: #09090d;
     --dz-surface-3: #18181f;
@@ -3555,18 +3555,18 @@ main:has(> .dz-auth-shell) + .dz-footer {
     --dz-shadow-lg:
         0 2px 6px rgba(0, 0, 0, 0.5),
         0 32px 64px -24px rgba(0, 0, 0, 0.85);
-    --dz-shadow-brand: 0 8px 24px -8px rgba(99, 102, 241, 0.6);
+    --dz-shadow-brand: 0 8px 24px -8px rgba(140, 198, 63, 0.6);
     --dz-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 
     --dz-navbar-bg: rgba(12, 12, 18, 0.72);
     --dz-navbar-bg-scrolled: rgba(12, 12, 18, 0.88);
     --dz-navbar-link-hover-bg: rgba(255, 255, 255, 0.06);
-    --dz-navbar-link-active-bg: rgba(129, 140, 248, 0.16);
+    --dz-navbar-link-active-bg: rgba(168, 212, 58, 0.16);
 
     --dz-grid-dot: rgba(255, 255, 255, 0.06);
     --dz-aurora:
-        radial-gradient(42rem 26rem at 18% -6rem, rgba(99, 102, 241, 0.24), transparent 70%),
-        radial-gradient(36rem 22rem at 86% -8rem, rgba(34, 211, 238, 0.12), transparent 70%);
+        radial-gradient(42rem 26rem at 18% -6rem, rgba(140, 198, 63, 0.24), transparent 70%),
+        radial-gradient(36rem 22rem at 86% -8rem, rgba(198, 230, 107, 0.12), transparent 70%);
 
     --bs-body-bg: #09090d;
     --bs-body-color: #ededf2;
@@ -3639,7 +3639,7 @@ code {
 }
 
 ::selection {
-    background: rgba(99, 102, 241, 0.22);
+    background: rgba(140, 198, 63, 0.22);
 }
 
 :focus-visible {
@@ -3752,7 +3752,7 @@ code {
 
 /* Menus déroulants : panneau net, éléments arrondis. */
 .dropdown-menu {
-    --bs-dropdown-link-active-bg: rgba(79, 70, 229, 0.1);
+    --bs-dropdown-link-active-bg: rgba(140, 198, 63, 0.1);
     --bs-dropdown-link-active-color: var(--dz-brand-600);
     padding: 0.35rem;
     border: 1px solid var(--dz-border);
@@ -3801,7 +3801,7 @@ code {
 .dz-card-hover:hover {
     transform: translateY(-3px);
     box-shadow: var(--dz-shadow-lg);
-    border-color: rgba(99, 102, 241, 0.3);
+    border-color: rgba(140, 198, 63, 0.3);
 }
 
 .dz-card-accent::before {
@@ -3862,22 +3862,22 @@ code {
 .btn-primary,
 .btn-primary:disabled,
 .btn-primary.disabled {
-    background: linear-gradient(180deg, #6366f1 0%, #4f46e5 100%);
-    border: 1px solid #4338ca;
+    background: linear-gradient(180deg, #9bd14a 0%, #8cc63f 100%);
+    border: 1px solid #4d7c0f;
     box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.22),
         0 1px 2px rgba(16, 16, 32, 0.12),
-        0 6px 16px -8px rgba(79, 70, 229, 0.7);
+        0 6px 16px -8px rgba(140, 198, 63, 0.7);
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-    background: linear-gradient(180deg, #7072f5 0%, #5a52ea 100%);
+    background: linear-gradient(180deg, #a3d653 0%, #7fb83a 100%);
     filter: none;
     box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.25),
         0 2px 4px rgba(16, 16, 32, 0.12),
-        0 10px 22px -8px rgba(79, 70, 229, 0.75);
+        0 10px 22px -8px rgba(140, 198, 63, 0.75);
 }
 
 .btn-outline-secondary,
@@ -3901,8 +3901,8 @@ code {
 }
 
 .btn-outline-primary:hover {
-    background: rgba(79, 70, 229, 0.08);
-    border-color: rgba(79, 70, 229, 0.45);
+    background: rgba(140, 198, 63, 0.08);
+    border-color: rgba(140, 198, 63, 0.45);
     color: var(--dz-brand-600);
     box-shadow: var(--dz-shadow-xs);
 }
@@ -3930,13 +3930,13 @@ code {
 
 .form-control:hover,
 .form-select:hover {
-    border-color: rgba(99, 102, 241, 0.35);
+    border-color: rgba(140, 198, 63, 0.35);
 }
 
 .form-control:focus,
 .form-select:focus {
     border-color: var(--dz-brand-500);
-    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+    box-shadow: 0 0 0 4px rgba(140, 198, 63, 0.15);
 }
 
 .form-control::placeholder {
@@ -3963,17 +3963,17 @@ code {
 }
 
 .dz-dropzone {
-    border: 1.5px dashed rgba(99, 102, 241, 0.35);
+    border: 1.5px dashed rgba(140, 198, 63, 0.35);
     border-radius: 1.1rem;
     background:
-        radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.09), transparent 70%),
+        radial-gradient(circle at 50% 0%, rgba(140, 198, 63, 0.09), transparent 70%),
         var(--dz-surface-2);
 }
 
 .dz-dropzone:hover,
 .dz-dropzone.is-dragover {
     background:
-        radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.16), transparent 70%),
+        radial-gradient(circle at 50% 0%, rgba(140, 198, 63, 0.16), transparent 70%),
         var(--dz-surface-2);
 }
 
@@ -3995,7 +3995,7 @@ code {
 }
 
 .table-hover > tbody > tr:hover > * {
-    --bs-table-bg-state: rgba(99, 102, 241, 0.05);
+    --bs-table-bg-state: rgba(140, 198, 63, 0.05);
 }
 
 /* --- 19.7 Badges & alertes : teintes douces ------------------------------ */
@@ -4009,15 +4009,15 @@ code {
 .badge.text-bg-success   { background: rgba(16, 185, 129, 0.13) !important; color: #047857 !important; }
 .badge.text-bg-danger    { background: rgba(239, 68, 68, 0.12) !important;  color: #b91c1c !important; }
 .badge.text-bg-warning   { background: rgba(245, 158, 11, 0.16) !important; color: #b45309 !important; }
-.badge.text-bg-info      { background: rgba(6, 182, 212, 0.13) !important;  color: #0e7490 !important; }
-.badge.text-bg-primary   { background: rgba(99, 102, 241, 0.13) !important; color: #4338ca !important; }
+.badge.text-bg-info      { background: rgba(63, 163, 77, 0.13) !important;  color: #0e7490 !important; }
+.badge.text-bg-primary   { background: rgba(140, 198, 63, 0.13) !important; color: #4d7c0f !important; }
 .badge.text-bg-secondary { background: rgba(100, 116, 139, 0.14) !important; color: #475569 !important; }
 
 [data-bs-theme="dark"] .badge.text-bg-success   { color: #6ee7b7 !important; background: rgba(16, 185, 129, 0.18) !important; }
 [data-bs-theme="dark"] .badge.text-bg-danger    { color: #fca5a5 !important; background: rgba(239, 68, 68, 0.18) !important; }
 [data-bs-theme="dark"] .badge.text-bg-warning   { color: #fcd34d !important; background: rgba(245, 158, 11, 0.18) !important; }
-[data-bs-theme="dark"] .badge.text-bg-info      { color: #67e8f9 !important; background: rgba(6, 182, 212, 0.18) !important; }
-[data-bs-theme="dark"] .badge.text-bg-primary   { color: #c7d2fe !important; background: rgba(99, 102, 241, 0.22) !important; }
+[data-bs-theme="dark"] .badge.text-bg-info      { color: #67e8f9 !important; background: rgba(63, 163, 77, 0.18) !important; }
+[data-bs-theme="dark"] .badge.text-bg-primary   { color: #d9f0a3 !important; background: rgba(140, 198, 63, 0.22) !important; }
 [data-bs-theme="dark"] .badge.text-bg-secondary { color: #cbd5e1 !important; background: rgba(148, 163, 184, 0.16) !important; }
 
 .alert {
@@ -4031,7 +4031,7 @@ code {
 .alert-success { background: color-mix(in srgb, #10b981 9%, var(--dz-surface));  border-color: color-mix(in srgb, #10b981 30%, transparent); color: var(--dz-text); }
 .alert-danger  { background: color-mix(in srgb, #ef4444 8%, var(--dz-surface));  border-color: color-mix(in srgb, #ef4444 30%, transparent); color: var(--dz-text); }
 .alert-warning { background: color-mix(in srgb, #f59e0b 10%, var(--dz-surface)); border-color: color-mix(in srgb, #f59e0b 32%, transparent); color: var(--dz-text); }
-.alert-info    { background: color-mix(in srgb, #06b6d4 8%, var(--dz-surface));  border-color: color-mix(in srgb, #06b6d4 30%, transparent); color: var(--dz-text); }
+.alert-info    { background: color-mix(in srgb, #3fa34d 8%, var(--dz-surface));  border-color: color-mix(in srgb, #3fa34d 30%, transparent); color: var(--dz-text); }
 
 .progress {
     border-radius: 999px;
@@ -4098,9 +4098,9 @@ code {
     border: 1px solid var(--dz-border);
     border-radius: 1.5rem;
     background:
-        radial-gradient(28rem 16rem at 0% 0%, rgba(99, 102, 241, 0.14), transparent 70%),
-        radial-gradient(24rem 14rem at 100% 100%, rgba(34, 211, 238, 0.12), transparent 70%),
-        radial-gradient(20rem 12rem at 85% 0%, rgba(168, 85, 247, 0.10), transparent 70%),
+        radial-gradient(28rem 16rem at 0% 0%, rgba(140, 198, 63, 0.14), transparent 70%),
+        radial-gradient(24rem 14rem at 100% 100%, rgba(198, 230, 107, 0.12), transparent 70%),
+        radial-gradient(20rem 12rem at 85% 0%, rgba(198, 230, 107, 0.10), transparent 70%),
         var(--dz-surface);
     box-shadow: var(--dz-shadow-sm), var(--dz-highlight);
     margin-bottom: clamp(1.75rem, 1.25rem + 1.6vw, 2.75rem);
@@ -4136,9 +4136,9 @@ code {
 
 [data-bs-theme="dark"] .dz-page > .dz-page-head {
     background:
-        radial-gradient(28rem 16rem at 0% 0%, rgba(99, 102, 241, 0.22), transparent 70%),
-        radial-gradient(24rem 14rem at 100% 100%, rgba(34, 211, 238, 0.12), transparent 70%),
-        radial-gradient(20rem 12rem at 85% 0%, rgba(168, 85, 247, 0.14), transparent 70%),
+        radial-gradient(28rem 16rem at 0% 0%, rgba(140, 198, 63, 0.22), transparent 70%),
+        radial-gradient(24rem 14rem at 100% 100%, rgba(198, 230, 107, 0.12), transparent 70%),
+        radial-gradient(20rem 12rem at 85% 0%, rgba(198, 230, 107, 0.14), transparent 70%),
         var(--dz-surface);
 }
 
@@ -4164,7 +4164,7 @@ code {
     border-radius: 0.65rem;
     background:
         linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0)),
-        linear-gradient(135deg, rgba(99, 102, 241, 0.14), rgba(34, 211, 238, 0.12));
+        linear-gradient(135deg, rgba(140, 198, 63, 0.14), rgba(198, 230, 107, 0.12));
     box-shadow: var(--dz-shadow-xs);
     font-size: 1rem;
     line-height: 1;
@@ -4177,13 +4177,13 @@ code {
     font-size: 1.35rem;
     background:
         linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.4)),
-        linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(34, 211, 238, 0.2));
+        linear-gradient(135deg, rgba(140, 198, 63, 0.25), rgba(198, 230, 107, 0.2));
     box-shadow: var(--dz-shadow-sm), var(--dz-highlight);
 }
 
 [data-bs-theme="dark"] .dz-emoji,
 [data-bs-theme="dark"] .dz-page-head h1 .dz-emoji {
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.22), rgba(34, 211, 238, 0.12));
+    background: linear-gradient(135deg, rgba(140, 198, 63, 0.22), rgba(198, 230, 107, 0.12));
 }
 
 /* Titres de carte : séparés du contenu par un vrai blanc. */
@@ -4200,9 +4200,9 @@ main:has(> .dz-auth) {
     position: relative;
     overflow: hidden;
     background:
-        radial-gradient(34rem 24rem at 15% 20%, rgba(99, 102, 241, 0.18), transparent 70%),
-        radial-gradient(30rem 22rem at 85% 75%, rgba(34, 211, 238, 0.16), transparent 70%),
-        radial-gradient(24rem 18rem at 70% 10%, rgba(168, 85, 247, 0.12), transparent 70%);
+        radial-gradient(34rem 24rem at 15% 20%, rgba(140, 198, 63, 0.18), transparent 70%),
+        radial-gradient(30rem 22rem at 85% 75%, rgba(198, 230, 107, 0.16), transparent 70%),
+        radial-gradient(24rem 18rem at 70% 10%, rgba(198, 230, 107, 0.12), transparent 70%);
 }
 
 main:has(> .dz-auth)::before {
@@ -4271,8 +4271,8 @@ main > .dz-auth .dz-auth-card {
    de marque au survol. */
 .dz-feature:hover,
 .dz-shortcut-tile:hover {
-    border-color: rgba(99, 102, 241, 0.35);
-    box-shadow: var(--dz-shadow-lg), 0 0 0 4px rgba(99, 102, 241, 0.06);
+    border-color: rgba(140, 198, 63, 0.35);
+    box-shadow: var(--dz-shadow-lg), 0 0 0 4px rgba(140, 198, 63, 0.06);
 }
 
 /* --- 20.6 Champs rendus sans classe -------------------------------------- */
@@ -4297,7 +4297,7 @@ form :is(input[type="email"], input[type="text"], input[type="password"],
 form :is(input, select, textarea):not([class]):focus {
     outline: none;
     border-color: var(--dz-brand-500);
-    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+    box-shadow: 0 0 0 4px rgba(140, 198, 63, 0.15);
 }
 
 /* Titres équilibrés : pas de « ? » ou de mot isolé en fin de titre. */
@@ -4325,10 +4325,10 @@ h1, h2, h3, .h1, .h2, .h3, .card-title {
 .dz-upload {
     position: relative;
     margin-bottom: 1rem;
-    border: 1.5px dashed rgba(99, 102, 241, 0.38);
+    border: 1.5px dashed rgba(140, 198, 63, 0.38);
     border-radius: 1.25rem;
     background:
-        radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.10), transparent 70%),
+        radial-gradient(circle at 50% 0%, rgba(140, 198, 63, 0.10), transparent 70%),
         var(--dz-surface-2);
     transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease,
                 box-shadow 0.2s ease;
@@ -4339,9 +4339,9 @@ h1, h2, h3, .h1, .h2, .h3, .card-title {
     border-style: solid;
     transform: scale(1.012);
     background:
-        radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.22), transparent 75%),
+        radial-gradient(circle at 50% 0%, rgba(140, 198, 63, 0.22), transparent 75%),
         var(--dz-surface-2);
-    box-shadow: 0 0 0 6px rgba(99, 102, 241, 0.12);
+    box-shadow: 0 0 0 6px rgba(140, 198, 63, 0.12);
 }
 
 .dz-upload.has-error {
@@ -4382,7 +4382,7 @@ h1, h2, h3, .h1, .h2, .h3, .card-title {
     stroke-width: 2.5;
     stroke-linecap: round;
     stroke-linejoin: round;
-    filter: drop-shadow(0 6px 12px rgba(99, 102, 241, 0.25));
+    filter: drop-shadow(0 6px 12px rgba(140, 198, 63, 0.25));
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -4518,7 +4518,7 @@ h1, h2, h3, .h1, .h2, .h3, .card-title {
 }
 
 .dz-upload__state {
-    border: 2.5px solid rgba(99, 102, 241, 0.25);
+    border: 2.5px solid rgba(140, 198, 63, 0.25);
     border-top-color: var(--dz-brand-500);
     animation: dz-spin 0.8s linear infinite;
 }
@@ -4580,13 +4580,13 @@ h1, h2, h3, .h1, .h2, .h3, .card-title {
     stroke-width: 10;
     stroke-linecap: round;
     transition: stroke-dashoffset 0.1s linear;
-    filter: drop-shadow(0 4px 10px rgba(99, 102, 241, 0.3));
+    filter: drop-shadow(0 4px 10px rgba(140, 198, 63, 0.3));
 }
 
-.dz-ring--brand .dz-ring__stop-a { stop-color: #6366f1; }
-.dz-ring--brand .dz-ring__stop-b { stop-color: #22d3ee; }
+.dz-ring--brand .dz-ring__stop-a { stop-color: #9bd14a; }
+.dz-ring--brand .dz-ring__stop-b { stop-color: #c6e66b; }
 .dz-ring--muted .dz-ring__stop-a { stop-color: #94a3b8; }
-.dz-ring--muted .dz-ring__stop-b { stop-color: #a5b4fc; }
+.dz-ring--muted .dz-ring__stop-b { stop-color: #c6e66b; }
 
 .dz-ring--muted .dz-ring__value {
     filter: none;
@@ -4732,7 +4732,7 @@ h1, h2, h3, .h1, .h2, .h3, .card-title {
 .dz-toast--danger .dz-toast__icon,
 .dz-toast--error .dz-toast__icon { background: #ef4444; }
 .dz-toast--warning .dz-toast__icon { background: #f59e0b; }
-.dz-toast--info .dz-toast__icon { background: #06b6d4; }
+.dz-toast--info .dz-toast__icon { background: #3fa34d; }
 
 .dz-toast__body {
     flex: 1 1 auto;
@@ -4826,4 +4826,205 @@ h1, h2, h3, .h1, .h2, .h3, .card-title {
    masquent ainsi le rendu serveur qu'ils remplacent. */
 [hidden] {
     display: none !important;
+}
+
+/* ==========================================================================
+   22. Thème « lime » (inspiré d'un rapport annuel corporate)
+   --------------------------------------------------------------------------
+   Vert lime en couleur d'accent, titres noirs très gras, surfaces blanches,
+   en-têtes de tableau vert lime, pastilles rondes, arcs verts et trames de
+   points grises en décor.
+   ========================================================================== */
+:root {
+    --dz-lime: #8cc63f;
+    --dz-lime-light: #c6e66b;
+    --dz-lime-dark: #4d7c0f;
+    --dz-gradient: linear-gradient(135deg, #c6e66b 0%, #8cc63f 48%, #4f9d2a 100%);
+    --dz-gradient-soft: linear-gradient(135deg, rgba(198, 230, 107, 0.18), rgba(140, 198, 63, 0.10));
+    --dz-surface-2: #f5f6f4;
+    --dz-aurora:
+        radial-gradient(40rem 24rem at 8% -8rem, rgba(140, 198, 63, 0.16), transparent 70%),
+        radial-gradient(30rem 20rem at 92% -10rem, rgba(198, 230, 107, 0.14), transparent 70%);
+    --dz-grid-dot: rgba(20, 24, 16, 0.09);
+    --bs-primary: #8cc63f;
+    --bs-primary-rgb: 140, 198, 63;
+    --bs-link-color: #4d7c0f;
+    --bs-link-color-rgb: 77, 124, 15;
+    --bs-link-hover-color: #3f6212;
+    --bs-body-bg: #f5f6f4;
+}
+
+:root[data-bs-theme="dark"] {
+    --dz-gradient-soft: linear-gradient(135deg, rgba(198, 230, 107, 0.12), rgba(140, 198, 63, 0.06));
+    --dz-aurora:
+        radial-gradient(40rem 24rem at 8% -8rem, rgba(140, 198, 63, 0.16), transparent 70%),
+        radial-gradient(30rem 20rem at 92% -10rem, rgba(198, 230, 107, 0.08), transparent 70%);
+    --dz-grid-dot: rgba(255, 255, 255, 0.06);
+    --bs-link-color: #a8d43a;
+    --bs-link-color-rgb: 168, 212, 58;
+    --bs-link-hover-color: #c6e66b;
+}
+
+/* --- 22.1 Titres : noir très gras, mot-clé en vert ------------------------ */
+h1, .h1, .dz-section-title, .dz-page > .dz-page-head h1 {
+    font-weight: 800;
+    letter-spacing: -0.045em;
+}
+
+.dz-gradient-text {
+    background: linear-gradient(90deg, #8cc63f 0%, #6ea52b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+[data-bs-theme="dark"] .dz-gradient-text {
+    background: linear-gradient(90deg, #c6e66b 0%, #8cc63f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.dz-eyebrow {
+    color: var(--dz-lime-dark);
+    letter-spacing: 0.22em;
+}
+
+[data-bs-theme="dark"] .dz-eyebrow {
+    color: var(--dz-lime-light);
+}
+
+/* --- 22.2 Boutons : lime plein, texte foncé (contraste AA) --------------- */
+.btn-primary,
+.btn-primary:disabled,
+.btn-primary.disabled {
+    background: linear-gradient(180deg, #a3d653 0%, #8cc63f 100%);
+    border: 1px solid #6ea52b;
+    color: #12200a;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        0 1px 2px rgba(16, 24, 8, 0.14),
+        0 8px 18px -10px rgba(110, 165, 43, 0.9);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background: linear-gradient(180deg, #b0dd62 0%, #96cd47 100%);
+    border-color: #6ea52b;
+    color: #0b1606;
+}
+
+.btn-outline-primary,
+.btn-outline-primary:hover {
+    color: var(--dz-lime-dark);
+}
+
+[data-bs-theme="dark"] .btn-outline-primary,
+[data-bs-theme="dark"] .btn-outline-primary:hover {
+    color: var(--dz-lime-light);
+}
+
+.badge.text-bg-primary {
+    color: #3f6212 !important;
+}
+
+/* --- 22.3 Bandeau d'en-tête : blanc, arc vert, trame de points ----------- */
+.dz-page > .dz-page-head,
+[data-bs-theme="dark"] .dz-page > .dz-page-head {
+    background: var(--dz-surface);
+}
+
+.dz-page > .dz-page-head::before {
+    -webkit-mask-image: radial-gradient(45% 90% at 100% 100%, #000 0%, transparent 100%);
+    mask-image: radial-gradient(45% 90% at 100% 100%, #000 0%, transparent 100%);
+    background-size: 14px 14px;
+}
+
+.dz-page > .dz-page-head::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -7.5rem;
+    right: -4.5rem;
+    width: 15rem;
+    height: 15rem;
+    border: 0.55rem solid var(--dz-lime);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50%;
+    transform: rotate(-12deg);
+    opacity: 0.9;
+    pointer-events: none;
+    /* Second arc, plus fin, décalé : l'écho des courbes de la référence. */
+    box-shadow: -1.6rem 1.4rem 0 -1.25rem transparent;
+    outline: 2px solid rgba(140, 198, 63, 0.35);
+    outline-offset: 1.1rem;
+}
+
+/* Un liseré lime à gauche rappelle les bandes de couleur des diapositives. */
+.dz-page > .dz-page-head {
+    border-left: 0;
+    box-shadow: inset 4px 0 0 var(--dz-lime), var(--dz-shadow-sm);
+}
+
+/* --- 22.4 Pastilles rondes ------------------------------------------------- */
+.dz-emoji,
+.dz-page-head h1 .dz-emoji {
+    border: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #d9f0a3 0%, #a8d43a 100%);
+    box-shadow: 0 0 0 3px var(--dz-surface), 0 6px 14px -6px rgba(110, 165, 43, 0.8);
+}
+
+[data-bs-theme="dark"] .dz-emoji,
+[data-bs-theme="dark"] .dz-page-head h1 .dz-emoji {
+    background: linear-gradient(135deg, #6ea52b 0%, #4d7c0f 100%);
+}
+
+.dz-feature .dz-feature-icon,
+.dz-kpi-card__icon {
+    border-radius: 50%;
+}
+
+/* --- 22.5 Tableaux : en-tête vert lime ------------------------------------- */
+.table thead th,
+.table > thead > tr > th {
+    background: #a6d65a;
+    color: #13230a;
+    border-bottom: 0;
+}
+
+.table-responsive {
+    border-color: rgba(110, 165, 43, 0.35);
+}
+
+[data-bs-theme="dark"] .table thead th,
+[data-bs-theme="dark"] .table > thead > tr > th {
+    background: rgba(140, 198, 63, 0.22);
+    color: #d9f0a3;
+}
+
+/* --- 22.6 Indicateurs : grands chiffres, accent lime ---------------------- */
+.dz-kpi-card::after {
+    width: 2.5rem;
+    height: 3px;
+}
+
+.dz-stat .dz-stat-value,
+.dz-kpi-card__value {
+    font-weight: 800;
+}
+
+.dz-ring--brand .dz-ring__stop-a { stop-color: #4f9d2a; }
+.dz-ring--brand .dz-ring__stop-b { stop-color: #b5e04a; }
+
+.dz-ring__value {
+    filter: drop-shadow(0 4px 10px rgba(110, 165, 43, 0.35));
+}
+
+/* --- 22.7 Vidéos décoratives : teinte ramenée vers le vert ---------------- */
+/* Les vidéos d'ambiance ont été produites en indigo / cyan ; une rotation de
+   teinte les accorde à la palette lime sans réencoder les fichiers. */
+.dz-hero-video,
+.dz-auth-video {
+    filter: hue-rotate(205deg) saturate(1.1) brightness(1.18);
 }

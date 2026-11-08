@@ -39,9 +39,9 @@ from .validation import (  # noqa: E402
 
 # Palette alignée sur la charte graphique DataZen (dégradé de marque).
 BRAND = [
-    "#4f46e5",
-    "#7c3aed",
-    "#06b6d4",
+    "#8cc63f",
+    "#475569",
+    "#4d7c0f",
     "#f59e0b",
     "#ef4444",
     "#10b981",
@@ -363,7 +363,7 @@ def _score_color(total):
     if total >= 90:
         return COLOR_OK
     if total >= 75:
-        return "#06b6d4"
+        return "#8cc63f"
     if total >= 50:
         return COLOR_WARN
     return COLOR_BAD
@@ -889,7 +889,7 @@ _CLASS_COLORS = {
     "primary": BRAND[0],
     "secondary": "#94a3b8",
     "success": COLOR_OK,
-    "info": "#06b6d4",
+    "info": "#3fa34d",
     "warning": COLOR_WARN,
     "danger": COLOR_BAD,
 }

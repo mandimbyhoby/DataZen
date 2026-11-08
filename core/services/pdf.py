@@ -33,7 +33,7 @@ from reportlab.platypus import (
 
 # Charte graphique DataZen — en hexadécimal textuel pour le balisage
 # <font color> des paragraphes ReportLab.
-BRAND = "#4f46e5"
+BRAND = "#4d7c0f"
 BRAND_SOFT = "#eef2ff"
 INK = "#1f2937"
 MUTED = "#6b7280"
