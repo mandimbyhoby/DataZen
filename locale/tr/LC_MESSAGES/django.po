@@ -568,6 +568,12 @@ msgstr "DataZen'i araçlarına bağla: Power BI, n8n, Python betikleri, kendi pa
 msgid "CSV (séparateur ;)"
 msgstr "CSV (ayırıcı ;)"
 
+msgid "CSV, Excel et JSON"
+msgstr "CSV, Excel ve JSON"
+
+msgid "CSV, XLSX et XLS"
+msgstr "CSV, XLSX ve XLS"
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr "Yüzünüzü çerçeveye alın ve « Yakala » düğmesine tıklayın."
 
@@ -667,8 +673,8 @@ msgstr "Her hesabın bir rolü vardır: görüntüleyici, düzenleyici veya yön
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr "Her başarılı temizlik bir sürümü sabitler: indirebilir, karşılaştırabilir ve geri dönebilirsiniz."
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
-msgstr "Verilerinizi <code>.csv</code>, <code>.xlsx</code> veya <code>.xls</code> biçiminde yükleyin; ayırıcı fark etmez."
+msgid "Chaque point perdu expliqué"
+msgstr "Kaybedilen her puan açıklanır"
 
 msgid "Choisir la langue du site"
 msgstr "Site dilini seç"
@@ -720,6 +726,9 @@ msgstr "Dil kodu (fr, en, es…). Boş = uygulama dili."
 
 msgid "Coefficient de Pearson"
 msgstr "Pearson katsayısı"
+
+msgid "Cohérence et conformité"
+msgstr "Tutarlılık ve uygunluk"
 
 msgid "Collaboration"
 msgstr "İş birliği"
@@ -801,6 +810,9 @@ msgstr "Sütun bazında bütünlük"
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
 msgstr "Bütünlük · Geçerlilik · Benzersizlik · Tutarlılık · Uygunluk"
+
+msgid "Complétude, validité et unicité"
+msgstr "Eksiksizlik, geçerlilik ve benzersizlik"
 
 msgid "Composantes du score (après nettoyage)"
 msgstr "Puan bileşenleri (temizleme sonrası)"
@@ -1066,11 +1078,11 @@ msgstr "Kalan olası yinelenenler:"
 msgid "Doublons restants (exacts + potentiels)"
 msgstr "Kalan yinelenenler (tam + olası)"
 
+msgid "Doublons signalés, jamais supprimés d'office"
+msgstr "Yinelenenler işaretlenir, varsayılan olarak asla silinmez"
+
 msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr "Yinelenenler, gereksiz boşluklar, hatalı e-postalar, tutarsız tarihler… DataZen sorunları tespit eder ve her şeyi saniyeler içinde otomatik olarak düzeltir."
-
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
-msgstr "Yinelenenler, eksik değerler, boşluklar, büyük/küçük harf, e-postalar, telefonlar, tarihler ve maaşlar normalleştirildi."
 
 msgid "Droit"
 msgstr "İzin"
@@ -1212,6 +1224,9 @@ msgstr "Biçim hataları"
 
 msgid "Erreurs restantes"
 msgstr "Kalan hatalar"
+
+msgid "Espaces, casse et e-mails"
+msgstr "Boşluklar, büyük/küçük harf ve e-postalar"
 
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
@@ -1495,6 +1510,9 @@ msgstr "Veri kümesi"
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr "DataZen bağlantısıyla salt okunur paylaşılan veri kümesi."
 
+msgid "Journal complet des modifications"
+msgstr "Eksiksiz değişiklik günlüğü"
+
 msgid "Journal d'activité"
 msgstr "Etkinlik kaydı"
 
@@ -1506,6 +1524,9 @@ msgstr "Değişiklik günlüğü"
 
 msgid "Journal des modifications (extrait)"
 msgstr "Değişiklik günlüğü (özet)"
+
+msgid "Jusqu'à 20 Mo par fichier"
+msgstr "Dosya başına 20 MB'a kadar"
 
 msgid "L'historique horodaté de chaque opération."
 msgstr "Her işlemin zaman damgalı geçmişi."
@@ -2023,6 +2044,9 @@ msgstr "Yürürlükteki politika"
 msgid "Pondération"
 msgstr "Ağırlık"
 
+msgid "Populaire"
+msgstr "Popüler"
+
 msgid "Premier quartile"
 msgstr "Birinci çeyrek"
 
@@ -2176,6 +2200,9 @@ msgstr "DataZen tarafından otomatik oluşturulan rapor. Puanlar beş ağırlık
 msgid "Rapport — %(name)s"
 msgstr "Rapor — %(name)s"
 
+msgid "Rapports PDF et HTML"
+msgstr "PDF ve HTML raporları"
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr "Bir temizlik bittiğinde, başarısız olduğunda veya bir dosya yüklendiğinde HTTP bildirimi al."
 
@@ -2304,9 +2331,6 @@ msgstr "Temizleme kuralları — DataZen"
 
 msgid "Règles de validation regex personnalisées"
 msgstr "Özel regex doğrulama kuralları"
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
-msgstr "Temizlenmiş dosyayı, ayrıntılı raporu ve tam değişiklik günlüğünü alın."
 
 msgid "Réessayer"
 msgstr ""
@@ -2548,6 +2572,9 @@ msgstr "Karşılaştırmayı göstermek için iki farklı sürüm seçin."
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr "En fazla %(limit)s dosya seçin: fazlası, sunucuyu yormamak için toplu işten çıkarılır."
 
+msgid "Séparateur détecté automatiquement"
+msgstr "Ayırıcı otomatik algılanır"
+
 msgid "Sévérité"
 msgstr "Önem derecesi"
 
@@ -2638,6 +2665,9 @@ msgstr "Standart dışı telefon"
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Standart dışı telefonlar (%(column)s):"
 
+msgid "Téléphones, dates et montants"
+msgstr "Telefonlar, tarihler ve tutarlar"
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr "Kendi dosyalarını yükler, temizler, planlar ve siler."
 
@@ -2676,9 +2706,6 @@ msgstr "Dosyadan bir alıntı: ilk satırlar veriyi değerlendirmeye yeter."
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr "100 üzerinden bir puan, temizlik öncesi ve sonrası kazancı ölçer."
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
-msgstr "Bir kontrol paneli kaliteyi öncesi/sonrası ölçer ve kaybedilen her puanı açıklar."
 
 msgid "Une URL de destination est requise."
 msgstr "Bir hedef URL gerekli."
@@ -2989,8 +3016,14 @@ msgstr "korundu (uydurulmadı)"
 msgid "console d'administration"
 msgstr "yönetim konsolu"
 
+msgid "corrections automatiques"
+msgstr "otomatik düzeltme"
+
 msgid "date"
 msgstr "tarih"
+
+msgid "dimensions mesurées"
+msgstr "ölçülen boyut"
 
 msgid "donnée absente"
 msgstr "veri yok"
@@ -3039,6 +3072,12 @@ msgstr "geçersiz biçim"
 
 msgid "format non reconnu"
 msgstr "tanınmayan biçim"
+
+msgid "formats acceptés"
+msgstr "desteklenen biçim"
+
+msgid "formats d'export"
+msgstr "dışa aktarma biçimi"
 
 msgid "généré le"
 msgstr "oluşturulma"

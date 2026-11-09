@@ -559,6 +559,12 @@ msgstr "เชื่อมต่อ DataZen กับเครื่องมื
 msgid "CSV (séparateur ;)"
 msgstr "CSV (ตัวคั่น ;)"
 
+msgid "CSV, Excel et JSON"
+msgstr "CSV, Excel และ JSON"
+
+msgid "CSV, XLSX et XLS"
+msgstr "CSV, XLSX และ XLS"
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr "จัดใบหน้าให้อยู่ในกรอบแล้วคลิก « ถ่ายภาพ »"
 
@@ -658,8 +664,8 @@ msgstr "ทุกบัญชีมีบทบาท: ผู้ชม ผู้
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr "การทำความสะอาดที่สำเร็จทุกครั้งจะตรึงเวอร์ชันไว้: คุณดาวน์โหลด เปรียบเทียบ และย้อนกลับได้"
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
-msgstr "โหลดข้อมูลของคุณในรูปแบบ <code>.csv</code>, <code>.xlsx</code> หรือ <code>.xls</code> ไม่ว่าตัวคั่นจะเป็นแบบใด"
+msgid "Chaque point perdu expliqué"
+msgstr "อธิบายทุกคะแนนที่หายไป"
 
 msgid "Choisir la langue du site"
 msgstr "เลือกภาษาของเว็บไซต์"
@@ -711,6 +717,9 @@ msgstr "รหัสภาษา (fr, en, es…) ว่าง = ภาษาข�
 
 msgid "Coefficient de Pearson"
 msgstr "ค่าสัมประสิทธิ์เพียร์สัน"
+
+msgid "Cohérence et conformité"
+msgstr "ความสอดคล้องและการเป็นไปตามข้อกำหนด"
 
 msgid "Collaboration"
 msgstr "การทำงานร่วมกัน"
@@ -792,6 +801,9 @@ msgstr "ความครบถ้วนตามคอลัมน์"
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
 msgstr "ความครบถ้วน · ความถูกต้อง · ความไม่ซ้ำ · ความสอดคล้อง · การปฏิบัติตามข้อกำหนด"
+
+msgid "Complétude, validité et unicité"
+msgstr "ความครบถ้วน ความถูกต้อง และความไม่ซ้ำ"
 
 msgid "Composantes du score (après nettoyage)"
 msgstr "องค์ประกอบของคะแนน (หลังการทำความสะอาด)"
@@ -1057,11 +1069,11 @@ msgstr "รายการซ้ำที่อาจเป็นไปได้
 msgid "Doublons restants (exacts + potentiels)"
 msgstr "รายการซ้ำที่เหลือ (เหมือนกันทุกประการ + ที่อาจเป็นไปได้)"
 
+msgid "Doublons signalés, jamais supprimés d'office"
+msgstr "แจ้งข้อมูลซ้ำ แต่ไม่ลบโดยอัตโนมัติ"
+
 msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr "รายการซ้ำ ช่องว่างเกิน อีเมลรูปแบบผิด วันที่ไม่สอดคล้อง… DataZen ตรวจจับปัญหาและแก้ไขทุกอย่างอัตโนมัติภายในไม่กี่วินาที"
-
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
-msgstr "รายการซ้ำ ค่าที่ขาดหาย ช่องว่าง ตัวพิมพ์ อีเมล โทรศัพท์ วันที่ และเงินเดือนถูกทำให้เป็นมาตรฐาน"
 
 msgid "Droit"
 msgstr "สิทธิ์"
@@ -1203,6 +1215,9 @@ msgstr "ข้อผิดพลาดรูปแบบ"
 
 msgid "Erreurs restantes"
 msgstr "ข้อผิดพลาดที่เหลือ"
+
+msgid "Espaces, casse et e-mails"
+msgstr "ช่องว่าง ตัวพิมพ์ และอีเมล"
 
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
@@ -1486,6 +1501,9 @@ msgstr "ชุดข้อมูล"
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr "ชุดข้อมูลที่แชร์แบบอ่านอย่างเดียวผ่านลิงก์ DataZen"
 
+msgid "Journal complet des modifications"
+msgstr "บันทึกการแก้ไขฉบับเต็ม"
+
 msgid "Journal d'activité"
 msgstr "บันทึกกิจกรรม"
 
@@ -1497,6 +1515,9 @@ msgstr "บันทึกการแก้ไข"
 
 msgid "Journal des modifications (extrait)"
 msgstr "บันทึกการแก้ไข (บางส่วน)"
+
+msgid "Jusqu'à 20 Mo par fichier"
+msgstr "สูงสุด 20 MB ต่อไฟล์"
 
 msgid "L'historique horodaté de chaque opération."
 msgstr "ประวัติที่มีเวลากำกับของทุกการดำเนินการ"
@@ -2014,6 +2035,9 @@ msgstr "นโยบายที่บังคับใช้"
 msgid "Pondération"
 msgstr "น้ำหนัก"
 
+msgid "Populaire"
+msgstr "ยอดนิยม"
+
 msgid "Premier quartile"
 msgstr "ควอไทล์ที่หนึ่ง"
 
@@ -2167,6 +2191,9 @@ msgstr "รายงานที่สร้างอัตโนมัติโ
 msgid "Rapport — %(name)s"
 msgstr "รายงาน — %(name)s"
 
+msgid "Rapports PDF et HTML"
+msgstr "รายงาน PDF และ HTML"
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr "รับการแจ้งเตือน HTTP ทันทีเมื่อการล้างข้อมูลเสร็จสิ้น ล้มเหลว หรือมีไฟล์ถูกอัปโหลด"
 
@@ -2295,9 +2322,6 @@ msgstr "กฎการทำความสะอาด — DataZen"
 
 msgid "Règles de validation regex personnalisées"
 msgstr "กฎตรวจสอบ regex ที่กำหนดเอง"
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
-msgstr "ดาวน์โหลดไฟล์ที่ทำความสะอาดแล้ว รายงานโดยละเอียด และบันทึกการแก้ไขทั้งหมด"
 
 msgid "Réessayer"
 msgstr ""
@@ -2539,6 +2563,9 @@ msgstr "เลือกสองเวอร์ชันที่ต่างก
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr "เลือกได้สูงสุด %(limit)s ไฟล์: เกินกว่านั้นชุดจะถูกตัดออกเพื่อไม่ให้เซิร์ฟเวอร์ทำงานหนักเกินไป"
 
+msgid "Séparateur détecté automatiquement"
+msgstr "ตรวจจับตัวคั่นโดยอัตโนมัติ"
+
 msgid "Sévérité"
 msgstr "ระดับความรุนแรง"
 
@@ -2629,6 +2656,9 @@ msgstr "โทรศัพท์ที่ไม่เป็นมาตรฐา
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "โทรศัพท์ที่ไม่เป็นมาตรฐาน (%(column)s):"
 
+msgid "Téléphones, dates et montants"
+msgstr "โทรศัพท์ วันที่ และจำนวนเงิน"
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr "อัปโหลด ทำความสะอาด ตั้งเวลา และลบไฟล์ของตนเอง"
 
@@ -2667,9 +2697,6 @@ msgstr "ตัวอย่างจากไฟล์: แถวแรก ๆ �
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr "คะแนนเต็ม 100 ใช้วัดการปรับปรุงก่อนและหลังการทำความสะอาด"
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
-msgstr "แดชบอร์ดวัดคุณภาพก่อน / หลัง และอธิบายทุกคะแนนที่สูญเสียไป"
 
 msgid "Une URL de destination est requise."
 msgstr "ต้องระบุ URL ปลายทาง"
@@ -2980,8 +3007,14 @@ msgstr "เก็บไว้ (ไม่ได้สร้างขึ้นเ�
 msgid "console d'administration"
 msgstr "คอนโซลผู้ดูแลระบบ"
 
+msgid "corrections automatiques"
+msgstr "การแก้ไขอัตโนมัติ"
+
 msgid "date"
 msgstr "วันที่"
+
+msgid "dimensions mesurées"
+msgstr "มิติที่วัด"
 
 msgid "donnée absente"
 msgstr "ไม่มีข้อมูล"
@@ -3030,6 +3063,12 @@ msgstr "รูปแบบไม่ถูกต้อง"
 
 msgid "format non reconnu"
 msgstr "ไม่รู้จักรูปแบบ"
+
+msgid "formats acceptés"
+msgstr "รูปแบบที่รองรับ"
+
+msgid "formats d'export"
+msgstr "รูปแบบการส่งออก"
 
 msgid "généré le"
 msgstr "สร้างเมื่อ"

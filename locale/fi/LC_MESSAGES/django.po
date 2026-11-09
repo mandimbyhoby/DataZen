@@ -568,6 +568,12 @@ msgstr "Yhdistä DataZen työkaluihisi: Power BI, n8n, Python-skriptit, omat koo
 msgid "CSV (séparateur ;)"
 msgstr "CSV (erotin ;)"
 
+msgid "CSV, Excel et JSON"
+msgstr "CSV, Excel ja JSON"
+
+msgid "CSV, XLSX et XLS"
+msgstr "CSV, XLSX ja XLS"
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr "Kehystä kasvosi ja napsauta sitten ”Kaappaa”."
 
@@ -667,8 +673,8 @@ msgstr "Jokaisella tilillä on rooli: katselija, muokkaaja tai ylläpitäjä. Ta
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr "Jokainen onnistunut siivous kiinnittää version: voit ladata sen, vertailla sitä ja palauttaa sen."
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
-msgstr "Lataa tietosi muodossa <code>.csv</code>, <code>.xlsx</code> tai <code>.xls</code> erottimesta riippumatta."
+msgid "Chaque point perdu expliqué"
+msgstr "Jokainen menetetty piste selitetään"
 
 msgid "Choisir la langue du site"
 msgstr "Valitse sivuston kieli"
@@ -720,6 +726,9 @@ msgstr "Kielikoodi (fr, en, es…). Tyhjä = sovelluksen kieli."
 
 msgid "Coefficient de Pearson"
 msgstr "Pearsonin kerroin"
+
+msgid "Cohérence et conformité"
+msgstr "Johdonmukaisuus ja vaatimustenmukaisuus"
 
 msgid "Collaboration"
 msgstr "Yhteistyö"
@@ -801,6 +810,9 @@ msgstr "Täydellisyys sarakkeittain"
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
 msgstr "Täydellisyys · Kelpoisuus · Yksilöllisyys · Johdonmukaisuus · Vaatimustenmukaisuus"
+
+msgid "Complétude, validité et unicité"
+msgstr "Kattavuus, oikeellisuus ja yksilöllisyys"
 
 msgid "Composantes du score (après nettoyage)"
 msgstr "Pisteiden osatekijät (puhdistuksen jälkeen)"
@@ -1066,11 +1078,11 @@ msgstr "Jäljellä olevat mahdolliset kaksoiskappaleet:"
 msgid "Doublons restants (exacts + potentiels)"
 msgstr "Jäljellä olevat kaksoiskappaleet (täsmälliset + mahdolliset)"
 
+msgid "Doublons signalés, jamais supprimés d'office"
+msgstr "Kaksoiskappaleet merkitään, niitä ei koskaan poisteta oletuksena"
+
 msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr "Kaksoiskappaleet, ylimääräiset välilyönnit, virheelliset sähköpostit, epäjohdonmukaiset päivämäärät… DataZen havaitsee ongelmat ja korjaa kaiken automaattisesti sekunneissa."
-
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
-msgstr "Kaksoiskappaleet, puuttuvat arvot, välilyönnit, kirjainkoko, sähköpostit, puhelimet, päivämäärät ja palkat normalisoitu."
 
 msgid "Droit"
 msgstr "Käyttöoikeus"
@@ -1212,6 +1224,9 @@ msgstr "Muotovirheet"
 
 msgid "Erreurs restantes"
 msgstr "Jäljellä olevat virheet"
+
+msgid "Espaces, casse et e-mails"
+msgstr "Välilyönnit, kirjainkoko ja sähköpostit"
 
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
@@ -1495,6 +1510,9 @@ msgstr "Aineisto"
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr "Aineisto jaettu vain luku -tilassa DataZen-linkin kautta."
 
+msgid "Journal complet des modifications"
+msgstr "Täydellinen muutosloki"
+
 msgid "Journal d'activité"
 msgstr "Aktiviteettiloki"
 
@@ -1506,6 +1524,9 @@ msgstr "Muutosloki"
 
 msgid "Journal des modifications (extrait)"
 msgstr "Muutosloki (ote)"
+
+msgid "Jusqu'à 20 Mo par fichier"
+msgstr "Enintään 20 Mt tiedostoa kohden"
 
 msgid "L'historique horodaté de chaque opération."
 msgstr "Jokaisen toiminnon aikaleimattu historia."
@@ -2023,6 +2044,9 @@ msgstr "Voimassa oleva käytäntö"
 msgid "Pondération"
 msgstr "Painotus"
 
+msgid "Populaire"
+msgstr "Suosittu"
+
 msgid "Premier quartile"
 msgstr "Ensimmäinen kvartiili"
 
@@ -2176,6 +2200,9 @@ msgstr "DataZenin automaattisesti luoma raportti. Pisteet lasketaan viiden paino
 msgid "Rapport — %(name)s"
 msgstr "Raportti — %(name)s"
 
+msgid "Rapports PDF et HTML"
+msgstr "PDF- ja HTML-raportit"
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr "Saa HTTP-ilmoitus, kun siivous päättyy, epäonnistuu tai tiedosto ladataan."
 
@@ -2304,9 +2331,6 @@ msgstr "Puhdistussäännöt — DataZen"
 
 msgid "Règles de validation regex personnalisées"
 msgstr "Mukautetut säännöllisten lausekkeiden tarkistussäännöt"
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
-msgstr "Hae puhdistettu tiedosto, yksityiskohtainen raportti ja täydellinen muutosloki."
 
 msgid "Réessayer"
 msgstr ""
@@ -2548,6 +2572,9 @@ msgstr "Valitse kaksi eri versiota näyttääksesi vertailun."
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr "Valitse enintään %(limit)s tiedostoa: sitä useammat rajataan pois, jotta palvelin ei ylikuormitu."
 
+msgid "Séparateur détecté automatiquement"
+msgstr "Erotin tunnistetaan automaattisesti"
+
 msgid "Sévérité"
 msgstr "Vakavuus"
 
@@ -2638,6 +2665,9 @@ msgstr "Puhelinnumero ei ole vakiomuodossa"
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Epästandardit puhelinnumerot (%(column)s):"
 
+msgid "Téléphones, dates et montants"
+msgstr "Puhelinnumerot, päivämäärät ja summat"
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr "Lataa, siivoaa, ajastaa ja poistaa omia tiedostojaan."
 
@@ -2676,9 +2706,6 @@ msgstr "Ote tiedostosta: ensimmäiset rivit riittävät tietojen arviointiin."
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr "Pisteet asteikolla 0–100 mittaavat parannusta ennen ja jälkeen puhdistuksen."
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
-msgstr "Kojelauta mittaa laatua ennen / jälkeen ja selittää jokaisen menetetyn pisteen."
 
 msgid "Une URL de destination est requise."
 msgstr "Kohde-URL vaaditaan."
@@ -2989,8 +3016,14 @@ msgstr "säilytetty (ei keksitty)"
 msgid "console d'administration"
 msgstr "ylläpitokonsoli"
 
+msgid "corrections automatiques"
+msgstr "automaattista korjausta"
+
 msgid "date"
 msgstr "päivämäärä"
+
+msgid "dimensions mesurées"
+msgstr "mitattua ulottuvuutta"
 
 msgid "donnée absente"
 msgstr "tieto puuttuu"
@@ -3039,6 +3072,12 @@ msgstr "virheellinen muoto"
 
 msgid "format non reconnu"
 msgstr "tunnistamaton muoto"
+
+msgid "formats acceptés"
+msgstr "tuettua muotoa"
+
+msgid "formats d'export"
+msgstr "vientimuotoa"
 
 msgid "généré le"
 msgstr "luotu"

@@ -568,6 +568,12 @@ msgstr "DataZen को अपने टूल से जोड़ें: Power B
 msgid "CSV (séparateur ;)"
 msgstr "CSV (विभाजक ;)"
 
+msgid "CSV, Excel et JSON"
+msgstr "CSV, Excel और JSON"
+
+msgid "CSV, XLSX et XLS"
+msgstr "CSV, XLSX और XLS"
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr "अपना चेहरा फ़्रेम में रखें और « कैप्चर » पर क्लिक करें।"
 
@@ -667,8 +673,8 @@ msgstr "प्रत्येक खाते की एक भूमिका �
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr "हर सफल सफ़ाई एक संस्करण स्थिर करती है: आप उसे डाउनलोड, तुलना और वापस लौटा सकते हैं।"
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
-msgstr "अपना डेटा <code>.csv</code>, <code>.xlsx</code> या <code>.xls</code> प्रारूप में लोड करें, चाहे कोई भी विभाजक हो।"
+msgid "Chaque point perdu expliqué"
+msgstr "हर कटे अंक की व्याख्या"
 
 msgid "Choisir la langue du site"
 msgstr "साइट की भाषा चुनें"
@@ -720,6 +726,9 @@ msgstr "भाषा कोड (fr, en, es…)। खाली = एप्लि
 
 msgid "Coefficient de Pearson"
 msgstr "पियर्सन गुणांक"
+
+msgid "Cohérence et conformité"
+msgstr "संगति और अनुरूपता"
 
 msgid "Collaboration"
 msgstr "सहयोग"
@@ -801,6 +810,9 @@ msgstr "प्रति कॉलम पूर्णता"
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
 msgstr "पूर्णता · वैधता · विशिष्टता · संगति · अनुपालन"
+
+msgid "Complétude, validité et unicité"
+msgstr "पूर्णता, वैधता और अद्वितीयता"
 
 msgid "Composantes du score (après nettoyage)"
 msgstr "स्कोर के घटक (सफ़ाई के बाद)"
@@ -1066,11 +1078,11 @@ msgstr "शेष संभावित डुप्लिकेट:"
 msgid "Doublons restants (exacts + potentiels)"
 msgstr "शेष डुप्लिकेट (सटीक + संभावित)"
 
+msgid "Doublons signalés, jamais supprimés d'office"
+msgstr "डुप्लिकेट चिह्नित होते हैं, डिफ़ॉल्ट रूप से कभी हटाए नहीं जाते"
+
 msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr "डुप्लिकेट, अतिरिक्त रिक्त स्थान, खराब ईमेल, असंगत दिनांक… DataZen समस्याएँ पहचानता है और कुछ ही सेकंड में सब कुछ स्वतः ठीक कर देता है।"
-
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
-msgstr "डुप्लिकेट, अनुपलब्ध मान, रिक्त स्थान, केस, ईमेल, फ़ोन, दिनांक और वेतन सामान्यीकृत।"
 
 msgid "Droit"
 msgstr "अनुमति"
@@ -1212,6 +1224,9 @@ msgstr "फ़ॉर्मैट त्रुटियाँ"
 
 msgid "Erreurs restantes"
 msgstr "शेष त्रुटियाँ"
+
+msgid "Espaces, casse et e-mails"
+msgstr "रिक्त स्थान, अक्षरों का आकार और ई-मेल"
 
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
@@ -1495,6 +1510,9 @@ msgstr "डेटासेट"
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr "DataZen लिंक के माध्यम से केवल-पढ़ने के लिए साझा किया गया डेटासेट।"
 
+msgid "Journal complet des modifications"
+msgstr "परिवर्तनों का पूरा लॉग"
+
 msgid "Journal d'activité"
 msgstr "गतिविधि लॉग"
 
@@ -1506,6 +1524,9 @@ msgstr "परिवर्तन लॉग"
 
 msgid "Journal des modifications (extrait)"
 msgstr "परिवर्तन लॉग (अंश)"
+
+msgid "Jusqu'à 20 Mo par fichier"
+msgstr "प्रति फ़ाइल 20 MB तक"
 
 msgid "L'historique horodaté de chaque opération."
 msgstr "प्रत्येक कार्य का समय-अंकित इतिहास।"
@@ -2023,6 +2044,9 @@ msgstr "वर्तमान नीति"
 msgid "Pondération"
 msgstr "भार"
 
+msgid "Populaire"
+msgstr "लोकप्रिय"
+
 msgid "Premier quartile"
 msgstr "प्रथम चतुर्थक"
 
@@ -2176,6 +2200,9 @@ msgstr "DataZen द्वारा स्वतः बनाई गई रिप
 msgid "Rapport — %(name)s"
 msgstr "रिपोर्ट — %(name)s"
 
+msgid "Rapports PDF et HTML"
+msgstr "PDF और HTML रिपोर्ट"
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr "सफ़ाई समाप्त होने, विफल होने या फ़ाइल अपलोड होने पर HTTP सूचना पाएँ।"
 
@@ -2304,9 +2331,6 @@ msgstr "सफ़ाई नियम — DataZen"
 
 msgid "Règles de validation regex personnalisées"
 msgstr "कस्टम regex सत्यापन नियम"
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
-msgstr "साफ़ की गई फ़ाइल, विस्तृत रिपोर्ट और पूरा परिवर्तन लॉग प्राप्त करें।"
 
 msgid "Réessayer"
 msgstr ""
@@ -2548,6 +2572,9 @@ msgstr "तुलना दिखाने के लिए दो अलग स
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr "अधिकतम %(limit)s फ़ाइलें चुनें: इससे अधिक होने पर सर्वर पर भार न डालने के लिए बैच काट दिया जाता है।"
 
+msgid "Séparateur détecté automatiquement"
+msgstr "विभाजक अपने-आप पहचाना जाता है"
+
 msgid "Sévérité"
 msgstr "गंभीरता"
 
@@ -2638,6 +2665,9 @@ msgstr "गैर-मानक फ़ोन"
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "गैर-मानक फ़ोन (%(column)s):"
 
+msgid "Téléphones, dates et montants"
+msgstr "फ़ोन, तिथियाँ और राशियाँ"
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr "अपनी फ़ाइलें अपलोड, साफ़, शेड्यूल और हटाता है।"
 
@@ -2676,9 +2706,6 @@ msgstr "फ़ाइल का अंश: डेटा का आकलन क�
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr "100 में से एक स्कोर सफ़ाई से पहले और बाद का सुधार मापता है।"
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
-msgstr "एक डैशबोर्ड सफ़ाई से पहले / बाद की गुणवत्ता मापता है और खोए प्रत्येक अंक की व्याख्या करता है।"
 
 msgid "Une URL de destination est requise."
 msgstr "गंतव्य URL आवश्यक है।"
@@ -2989,8 +3016,14 @@ msgstr "सुरक्षित रखा गया (बनाया नही�
 msgid "console d'administration"
 msgstr "प्रशासन कंसोल"
 
+msgid "corrections automatiques"
+msgstr "स्वचालित सुधार"
+
 msgid "date"
 msgstr "दिनांक"
+
+msgid "dimensions mesurées"
+msgstr "मापे गए आयाम"
 
 msgid "donnée absente"
 msgstr "डेटा अनुपलब्ध"
@@ -3039,6 +3072,12 @@ msgstr "अमान्य प्रारूप"
 
 msgid "format non reconnu"
 msgstr "अपरिचित प्रारूप"
+
+msgid "formats acceptés"
+msgstr "समर्थित प्रारूप"
+
+msgid "formats d'export"
+msgstr "निर्यात प्रारूप"
 
 msgid "généré le"
 msgstr "बनाया गया"

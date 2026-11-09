@@ -577,6 +577,12 @@ msgstr "Propojte DataZen se svými nástroji: Power BI, n8n, skripty v Pythonu, 
 msgid "CSV (séparateur ;)"
 msgstr "CSV (oddělovač ;)"
 
+msgid "CSV, Excel et JSON"
+msgstr "CSV, Excel a JSON"
+
+msgid "CSV, XLSX et XLS"
+msgstr "CSV, XLSX a XLS"
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr "Zarámujte svou tvář a klikněte na „Zachytit“."
 
@@ -676,8 +682,8 @@ msgstr "Každý účet má roli: čtenář, editor nebo administrátor. Kontrola
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr "Každé úspěšné čištění zafixuje verzi: můžete ji stáhnout, porovnat a vrátit se zpět."
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
-msgstr "Načtěte svá data ve formátu <code>.csv</code>, <code>.xlsx</code> nebo <code>.xls</code> bez ohledu na oddělovač."
+msgid "Chaque point perdu expliqué"
+msgstr "Každý ztracený bod vysvětlen"
 
 msgid "Choisir la langue du site"
 msgstr "Zvolte jazyk webu"
@@ -729,6 +735,9 @@ msgstr "Kód jazyka (fr, en, es…). Prázdné = jazyk aplikace."
 
 msgid "Coefficient de Pearson"
 msgstr "Pearsonův koeficient"
+
+msgid "Cohérence et conformité"
+msgstr "Konzistence a shoda"
 
 msgid "Collaboration"
 msgstr "Spolupráce"
@@ -810,6 +819,9 @@ msgstr "Úplnost podle sloupce"
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
 msgstr "Úplnost · Platnost · Jedinečnost · Konzistence · Shoda"
+
+msgid "Complétude, validité et unicité"
+msgstr "Úplnost, platnost a jedinečnost"
 
 msgid "Composantes du score (après nettoyage)"
 msgstr "Složky skóre (po vyčištění)"
@@ -1075,11 +1087,11 @@ msgstr "Zbývající možné duplicity:"
 msgid "Doublons restants (exacts + potentiels)"
 msgstr "Zbývající duplicity (přesné + možné)"
 
+msgid "Doublons signalés, jamais supprimés d'office"
+msgstr "Duplicity označeny, nikdy automaticky nesmazány"
+
 msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr "Duplicity, přebytečné mezery, chybně formátované e-maily, nekonzistentní data… DataZen problémy odhalí a vše automaticky opraví během několika sekund."
-
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
-msgstr "Duplicity, chybějící hodnoty, mezery, velikost písmen, e-maily, telefony, data a mzdy normalizovány."
 
 msgid "Droit"
 msgstr "Oprávnění"
@@ -1221,6 +1233,9 @@ msgstr "Chyby formátu"
 
 msgid "Erreurs restantes"
 msgstr "Zbývající chyby"
+
+msgid "Espaces, casse et e-mails"
+msgstr "Mezery, velikost písmen a e-maily"
 
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
@@ -1504,6 +1519,9 @@ msgstr "Datová sada"
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr "Datová sada sdílená pouze pro čtení přes odkaz DataZen."
 
+msgid "Journal complet des modifications"
+msgstr "Úplný protokol změn"
+
 msgid "Journal d'activité"
 msgstr "Protokol aktivity"
 
@@ -1515,6 +1533,9 @@ msgstr "Protokol změn"
 
 msgid "Journal des modifications (extrait)"
 msgstr "Protokol změn (výňatek)"
+
+msgid "Jusqu'à 20 Mo par fichier"
+msgstr "Až 20 MB na soubor"
 
 msgid "L'historique horodaté de chaque opération."
 msgstr "Časově označená historie každé operace."
@@ -2032,6 +2053,9 @@ msgstr "Platná politika"
 msgid "Pondération"
 msgstr "Váha"
 
+msgid "Populaire"
+msgstr "Oblíbené"
+
 msgid "Premier quartile"
 msgstr "První kvartil"
 
@@ -2185,6 +2209,9 @@ msgstr "Report automaticky vytvořený DataZen. Skóre se počítá podle pěti 
 msgid "Rapport — %(name)s"
 msgstr "Zpráva — %(name)s"
 
+msgid "Rapports PDF et HTML"
+msgstr "Zprávy PDF a HTML"
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr "Získávejte HTTP oznámení, jakmile čištění skončí, selže nebo se nahraje soubor."
 
@@ -2313,9 +2340,6 @@ msgstr "Pravidla čištění — DataZen"
 
 msgid "Règles de validation regex personnalisées"
 msgstr "Vlastní pravidla ověření regex"
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
-msgstr "Získejte vyčištěný soubor, podrobnou zprávu a úplný protokol změn."
 
 msgid "Réessayer"
 msgstr ""
@@ -2557,6 +2581,9 @@ msgstr "Chcete-li zobrazit porovnání, vyberte dvě různé verze."
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr "Vyberte až %(limit)s souborů: nad tento počet se dávka zkrátí, aby se server nepřetížil."
 
+msgid "Séparateur détecté automatiquement"
+msgstr "Oddělovač rozpoznán automaticky"
+
 msgid "Sévérité"
 msgstr "Závažnost"
 
@@ -2647,6 +2674,9 @@ msgstr "Telefonní číslo v nestandardním formátu"
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Nestandardní telefonní čísla (%(column)s):"
 
+msgid "Téléphones, dates et montants"
+msgstr "Telefony, data a částky"
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr "Nahrává, čistí, plánuje a maže vlastní soubory."
 
@@ -2685,9 +2715,6 @@ msgstr "Výňatek ze souboru: první řádky stačí k posouzení dat."
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr "Skóre ze 100 měří zlepšení před čištěním a po něm."
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
-msgstr "Řídicí panel měří kvalitu před / po a vysvětluje každý ztracený bod."
 
 msgid "Une URL de destination est requise."
 msgstr "Je vyžadována cílová URL."
@@ -2998,8 +3025,14 @@ msgstr "zachováno (nevymyšleno)"
 msgid "console d'administration"
 msgstr "konzole pro správu"
 
+msgid "corrections automatiques"
+msgstr "automatických oprav"
+
 msgid "date"
 msgstr "datum"
+
+msgid "dimensions mesurées"
+msgstr "měřených dimenzí"
 
 msgid "donnée absente"
 msgstr "údaj chybí"
@@ -3048,6 +3081,12 @@ msgstr "neplatný formát"
 
 msgid "format non reconnu"
 msgstr "nerozpoznaný formát"
+
+msgid "formats acceptés"
+msgstr "podporované formáty"
+
+msgid "formats d'export"
+msgstr "formáty exportu"
 
 msgid "généré le"
 msgstr "vytvořeno"

@@ -568,6 +568,12 @@ msgstr ""
 msgid "CSV (séparateur ;)"
 msgstr ""
 
+msgid "CSV, Excel et JSON"
+msgstr ""
+
+msgid "CSV, XLSX et XLS"
+msgstr ""
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr ""
 
@@ -667,7 +673,7 @@ msgstr ""
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr ""
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
+msgid "Chaque point perdu expliqué"
 msgstr ""
 
 msgid "Choisir la langue du site"
@@ -719,6 +725,9 @@ msgid "Code de langue (fr, en, es…). Vide = langue de l'application."
 msgstr ""
 
 msgid "Coefficient de Pearson"
+msgstr ""
+
+msgid "Cohérence et conformité"
 msgstr ""
 
 msgid "Collaboration"
@@ -800,6 +809,9 @@ msgid "Complétude par colonne"
 msgstr ""
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
+msgstr ""
+
+msgid "Complétude, validité et unicité"
 msgstr ""
 
 msgid "Composantes du score (après nettoyage)"
@@ -1066,10 +1078,10 @@ msgstr ""
 msgid "Doublons restants (exacts + potentiels)"
 msgstr ""
 
-msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
+msgid "Doublons signalés, jamais supprimés d'office"
 msgstr ""
 
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
+msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr ""
 
 msgid "Droit"
@@ -1211,6 +1223,9 @@ msgid "Erreurs de format"
 msgstr ""
 
 msgid "Erreurs restantes"
+msgstr ""
+
+msgid "Espaces, casse et e-mails"
 msgstr ""
 
 msgid "Excel (.xlsx)"
@@ -1495,6 +1510,9 @@ msgstr ""
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr ""
 
+msgid "Journal complet des modifications"
+msgstr ""
+
 msgid "Journal d'activité"
 msgstr ""
 
@@ -1505,6 +1523,9 @@ msgid "Journal des modifications"
 msgstr ""
 
 msgid "Journal des modifications (extrait)"
+msgstr ""
+
+msgid "Jusqu'à 20 Mo par fichier"
 msgstr ""
 
 msgid "L'historique horodaté de chaque opération."
@@ -2023,6 +2044,9 @@ msgstr ""
 msgid "Pondération"
 msgstr ""
 
+msgid "Populaire"
+msgstr ""
+
 msgid "Premier quartile"
 msgstr ""
 
@@ -2176,6 +2200,9 @@ msgstr ""
 msgid "Rapport — %(name)s"
 msgstr ""
 
+msgid "Rapports PDF et HTML"
+msgstr ""
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr ""
 
@@ -2303,9 +2330,6 @@ msgid "Règles de nettoyage — DataZen"
 msgstr ""
 
 msgid "Règles de validation regex personnalisées"
-msgstr ""
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
 msgstr ""
 
 msgid "Réessayer"
@@ -2548,6 +2572,9 @@ msgstr ""
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr ""
 
+msgid "Séparateur détecté automatiquement"
+msgstr ""
+
 msgid "Sévérité"
 msgstr ""
 
@@ -2638,6 +2665,9 @@ msgstr ""
 msgid "Téléphones non standard (%(column)s) :"
 msgstr ""
 
+msgid "Téléphones, dates et montants"
+msgstr ""
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr ""
 
@@ -2675,9 +2705,6 @@ msgid "Un extrait du fichier : les premières lignes suffisent pour juger les do
 msgstr ""
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
-msgstr ""
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
 msgstr ""
 
 msgid "Une URL de destination est requise."
@@ -2989,7 +3016,13 @@ msgstr ""
 msgid "console d'administration"
 msgstr ""
 
+msgid "corrections automatiques"
+msgstr ""
+
 msgid "date"
+msgstr ""
+
+msgid "dimensions mesurées"
 msgstr ""
 
 msgid "donnée absente"
@@ -3038,6 +3071,12 @@ msgid "format invalide"
 msgstr ""
 
 msgid "format non reconnu"
+msgstr ""
+
+msgid "formats acceptés"
+msgstr ""
+
+msgid "formats d'export"
 msgstr ""
 
 msgid "généré le"

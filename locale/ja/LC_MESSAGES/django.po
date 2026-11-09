@@ -559,6 +559,12 @@ msgstr "DataZen をあなたのツールに接続: Power BI、n8n、Python ス�
 msgid "CSV (séparateur ;)"
 msgstr "CSV（区切り文字 ;）"
 
+msgid "CSV, Excel et JSON"
+msgstr "CSV・Excel・JSON"
+
+msgid "CSV, XLSX et XLS"
+msgstr "CSV・XLSX・XLS"
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr "顔を枠内に合わせて「撮影」をクリックしてください。"
 
@@ -658,8 +664,8 @@ msgstr "すべてのアカウントにはロールがあります: 閲覧者、�
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr "クリーニングが成功するたびにバージョンが固定されます: ダウンロード、比較、ロールバックができます。"
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
-msgstr "<code>.csv</code>、<code>.xlsx</code>、<code>.xls</code> 形式のデータを、区切り文字を問わず読み込めます。"
+msgid "Chaque point perdu expliqué"
+msgstr "減点理由をすべて説明"
 
 msgid "Choisir la langue du site"
 msgstr "サイトの言語を選択"
@@ -711,6 +717,9 @@ msgstr "言語コード（fr、en、es…）。空欄 = アプリの言語。"
 
 msgid "Coefficient de Pearson"
 msgstr "ピアソン係数"
+
+msgid "Cohérence et conformité"
+msgstr "一貫性・適合性"
 
 msgid "Collaboration"
 msgstr "コラボレーション"
@@ -792,6 +801,9 @@ msgstr "列ごとの充足率"
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
 msgstr "完全性 · 有効性 · 一意性 · 一貫性 · 適合性"
+
+msgid "Complétude, validité et unicité"
+msgstr "完全性・妥当性・一意性"
 
 msgid "Composantes du score (après nettoyage)"
 msgstr "スコアの構成要素（クレンジング後）"
@@ -1057,11 +1069,11 @@ msgstr "残っている潜在的な重複:"
 msgid "Doublons restants (exacts + potentiels)"
 msgstr "残っている重複（完全 + 潜在）"
 
+msgid "Doublons signalés, jamais supprimés d'office"
+msgstr "重複は通知のみで自動削除はしません"
+
 msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr "重複、余分な空白、形式が不正なメールアドレス、不整合な日付… DataZen は問題を検出し、数秒ですべて自動修正します。"
-
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
-msgstr "重複、欠損値、空白、大文字小文字、メールアドレス、電話番号、日付、給与を正規化します。"
 
 msgid "Droit"
 msgstr "権限"
@@ -1203,6 +1215,9 @@ msgstr "形式エラー"
 
 msgid "Erreurs restantes"
 msgstr "残存エラー"
+
+msgid "Espaces, casse et e-mails"
+msgstr "空白・大文字小文字・メール"
 
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
@@ -1486,6 +1501,9 @@ msgstr "データセット"
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr "DataZen のリンクで読み取り専用として共有されたデータセット。"
 
+msgid "Journal complet des modifications"
+msgstr "完全な変更履歴"
+
 msgid "Journal d'activité"
 msgstr "アクティビティログ"
 
@@ -1497,6 +1515,9 @@ msgstr "変更履歴"
 
 msgid "Journal des modifications (extrait)"
 msgstr "変更履歴（抜粋）"
+
+msgid "Jusqu'à 20 Mo par fichier"
+msgstr "1 ファイル最大 20 MB"
 
 msgid "L'historique horodaté de chaque opération."
 msgstr "すべての操作の時刻付き履歴。"
@@ -2014,6 +2035,9 @@ msgstr "現在のポリシー"
 msgid "Pondération"
 msgstr "重み"
 
+msgid "Populaire"
+msgstr "人気"
+
 msgid "Premier quartile"
 msgstr "第1四分位数"
 
@@ -2167,6 +2191,9 @@ msgstr "DataZen が自動生成したレポートです。スコアは 5 つの�
 msgid "Rapport — %(name)s"
 msgstr "レポート — %(name)s"
 
+msgid "Rapports PDF et HTML"
+msgstr "PDF・HTML レポート"
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr "クリーニングの完了・失敗、またはファイルのアップロード時に HTTP 通知を受け取れます。"
 
@@ -2295,9 +2322,6 @@ msgstr "クレンジングルール — DataZen"
 
 msgid "Règles de validation regex personnalisées"
 msgstr "カスタム正規表現の検証ルール"
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
-msgstr "クレンジング済みファイル、詳細レポート、完全な変更ログを取得できます。"
 
 msgid "Réessayer"
 msgstr ""
@@ -2539,6 +2563,9 @@ msgstr "比較を表示するには異なる 2 つのバージョンを選択し
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr "最大 %(limit)s 件のファイルを選択できます: それを超えるとサーバー負荷を避けるためバッチが切り詰められます。"
 
+msgid "Séparateur détecté automatiquement"
+msgstr "区切り文字を自動検出"
+
 msgid "Sévérité"
 msgstr "重大度"
 
@@ -2629,6 +2656,9 @@ msgstr "標準形式ではない電話番号"
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "標準外の電話番号（%(column)s）:"
 
+msgid "Téléphones, dates et montants"
+msgstr "電話番号・日付・金額"
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr "自分のファイルをアップロード、クリーニング、スケジュール、削除します。"
 
@@ -2667,9 +2697,6 @@ msgstr "ファイルの抜粋: 最初の数行でデータを判断できます�
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr "100 点満点のスコアで、クリーニング前後の改善を測定します。"
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
-msgstr "ダッシュボードがクレンジング前後の品質を測定し、失われたポイントを一つずつ説明します。"
 
 msgid "Une URL de destination est requise."
 msgstr "宛先 URL が必要です。"
@@ -2980,8 +3007,14 @@ msgstr "保持（捏造なし）"
 msgid "console d'administration"
 msgstr "管理コンソール"
 
+msgid "corrections automatiques"
+msgstr "件の自動修正"
+
 msgid "date"
 msgstr "日付"
+
+msgid "dimensions mesurées"
+msgstr "つの品質指標"
 
 msgid "donnée absente"
 msgstr "データなし"
@@ -3030,6 +3063,12 @@ msgstr "無効な形式"
 
 msgid "format non reconnu"
 msgstr "認識されない形式"
+
+msgid "formats acceptés"
+msgstr "対応形式"
+
+msgid "formats d'export"
+msgstr "種類のエクスポート形式"
 
 msgid "généré le"
 msgstr "生成日"

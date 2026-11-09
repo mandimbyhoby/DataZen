@@ -604,6 +604,12 @@ msgstr "اربط DataZen بأدواتك: Power BI وn8n وسكربتات Python 
 msgid "CSV (séparateur ;)"
 msgstr "CSV (الفاصل ؛)"
 
+msgid "CSV, Excel et JSON"
+msgstr "CSV وExcel وJSON"
+
+msgid "CSV, XLSX et XLS"
+msgstr "CSV وXLSX وXLS"
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr "ضع وجهك داخل الإطار ثم انقر على «التقاط»."
 
@@ -703,8 +709,8 @@ msgstr "لكل حساب دور: قارئ أو محرر أو مسؤول. يتم �
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr "كل تنظيف ناجح يثبّت نسخة: يمكنك تنزيلها ومقارنتها والرجوع عنها."
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
-msgstr "حمّل بياناتك بصيغة <code>.csv</code> أو <code>.xlsx</code> أو <code>.xls</code>، أيًا كان الفاصل."
+msgid "Chaque point perdu expliqué"
+msgstr "شرح كل نقطة مفقودة"
 
 msgid "Choisir la langue du site"
 msgstr "اختيار لغة الموقع"
@@ -756,6 +762,9 @@ msgstr "رمز اللغة (fr، en، es…). فارغ = لغة التطبيق."
 
 msgid "Coefficient de Pearson"
 msgstr "معامل بيرسون"
+
+msgid "Cohérence et conformité"
+msgstr "الاتساق والمطابقة"
 
 msgid "Collaboration"
 msgstr "التعاون"
@@ -837,6 +846,9 @@ msgstr "الاكتمال حسب العمود"
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
 msgstr "الاكتمال · الصحة · التفرد · الاتساق · المطابقة"
+
+msgid "Complétude, validité et unicité"
+msgstr "الاكتمال والصلاحية والتفرّد"
 
 msgid "Composantes du score (après nettoyage)"
 msgstr "مكونات النتيجة (بعد التنظيف)"
@@ -1102,11 +1114,11 @@ msgstr "التكرارات المحتملة المتبقية:"
 msgid "Doublons restants (exacts + potentiels)"
 msgstr "التكرارات المتبقية (التامة + المحتملة)"
 
+msgid "Doublons signalés, jamais supprimés d'office"
+msgstr "تُرصد التكرارات ولا تُحذف تلقائيًا أبدًا"
+
 msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr "التكرارات، المسافات الزائدة، البريد الإلكتروني غير الصحيح، التواريخ غير المتسقة… يكتشف DataZen المشكلات ويصحح كل شيء تلقائيًا في ثوانٍ."
-
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
-msgstr "التكرارات والقيم المفقودة والمسافات وحالة الأحرف والبريد الإلكتروني والهواتف والتواريخ والرواتب — كلها موحّدة."
 
 msgid "Droit"
 msgstr "الصلاحية"
@@ -1248,6 +1260,9 @@ msgstr "أخطاء التنسيق"
 
 msgid "Erreurs restantes"
 msgstr "الأخطاء المتبقية"
+
+msgid "Espaces, casse et e-mails"
+msgstr "المسافات وحالة الأحرف والبريد الإلكتروني"
 
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
@@ -1531,6 +1546,9 @@ msgstr "مجموعة البيانات"
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr "مجموعة بيانات مشتركة للقراءة فقط عبر رابط DataZen."
 
+msgid "Journal complet des modifications"
+msgstr "سجل كامل للتعديلات"
+
 msgid "Journal d'activité"
 msgstr "سجل النشاط"
 
@@ -1542,6 +1560,9 @@ msgstr "سجل التغييرات"
 
 msgid "Journal des modifications (extrait)"
 msgstr "سجل التغييرات (مقتطف)"
+
+msgid "Jusqu'à 20 Mo par fichier"
+msgstr "حتى 20 ميغابايت لكل ملف"
 
 msgid "L'historique horodaté de chaque opération."
 msgstr "السجل الزمني لكل عملية."
@@ -2059,6 +2080,9 @@ msgstr "السياسة السارية"
 msgid "Pondération"
 msgstr "الترجيح"
 
+msgid "Populaire"
+msgstr "الأكثر شيوعًا"
+
 msgid "Premier quartile"
 msgstr "الربيع الأول"
 
@@ -2212,6 +2236,9 @@ msgstr "تقرير يُنشئه DataZen تلقائيًا. تُحسب النقا�
 msgid "Rapport — %(name)s"
 msgstr "التقرير — %(name)s"
 
+msgid "Rapports PDF et HTML"
+msgstr "تقارير PDF وHTML"
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr "تلقَّ إشعارًا عبر HTTP فور انتهاء عملية تنظيف أو فشلها أو رفع ملف."
 
@@ -2340,9 +2367,6 @@ msgstr "قواعد التنظيف — DataZen"
 
 msgid "Règles de validation regex personnalisées"
 msgstr "قواعد تحقق مخصصة بالتعبيرات النمطية"
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
-msgstr "احصل على الملف المنظّف والتقرير المفصل وسجل التغييرات الكامل."
 
 msgid "Réessayer"
 msgstr ""
@@ -2584,6 +2608,9 @@ msgstr "اختر نسختين مختلفتين لعرض المقارنة."
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr "حدّد حتى %(limit)s ملفات: بعد ذلك تُقتطع الدفعة لتجنّب إثقال الخادم."
 
+msgid "Séparateur détecté automatiquement"
+msgstr "اكتشاف الفاصل تلقائيًا"
+
 msgid "Sévérité"
 msgstr "الخطورة"
 
@@ -2674,6 +2701,9 @@ msgstr "رقم هاتف بتنسيق غير قياسي"
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "أرقام هاتف غير قياسية (%(column)s):"
 
+msgid "Téléphones, dates et montants"
+msgstr "الهواتف والتواريخ والمبالغ"
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr "يرفع ملفاته وينظّفها ويجدولها ويحذفها."
 
@@ -2712,9 +2742,6 @@ msgstr "مقتطف من الملف: الصفوف الأولى تكفي للحك�
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr "تقيس درجة من 100 مقدار التحسن قبل التنظيف وبعده."
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
-msgstr "تقيس لوحة المعلومات الجودة قبل / بعد وتشرح كل نقطة مفقودة."
 
 msgid "Une URL de destination est requise."
 msgstr "مطلوب عنوان URL للوجهة."
@@ -3025,8 +3052,14 @@ msgstr "محفوظة (غير مُختلَقة)"
 msgid "console d'administration"
 msgstr "لوحة الإدارة"
 
+msgid "corrections automatiques"
+msgstr "تصحيحات تلقائية"
+
 msgid "date"
 msgstr "التاريخ"
+
+msgid "dimensions mesurées"
+msgstr "أبعاد مُقاسة"
 
 msgid "donnée absente"
 msgstr "بيان مفقود"
@@ -3075,6 +3108,12 @@ msgstr "تنسيق غير صالح"
 
 msgid "format non reconnu"
 msgstr "تنسيق غير معروف"
+
+msgid "formats acceptés"
+msgstr "صيغ مدعومة"
+
+msgid "formats d'export"
+msgstr "صيغ تصدير"
 
 msgid "généré le"
 msgstr "أُنشئ في"

@@ -568,6 +568,12 @@ msgstr "Koppel DataZen aan je tools: Power BI, n8n, Python-scripts, eigen dashbo
 msgid "CSV (séparateur ;)"
 msgstr "CSV (scheidingsteken ;)"
 
+msgid "CSV, Excel et JSON"
+msgstr "CSV, Excel en JSON"
+
+msgid "CSV, XLSX et XLS"
+msgstr "CSV, XLSX en XLS"
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr "Kader uw gezicht en klik dan op ‘Vastleggen’."
 
@@ -667,8 +673,8 @@ msgstr "Elk account heeft een rol: kijker, bewerker of beheerder. De controle ge
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr "Elke geslaagde opschoning bevriest een versie: u kunt haar downloaden, vergelijken en terugdraaien."
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
-msgstr "Laad uw gegevens in de indeling <code>.csv</code>, <code>.xlsx</code> of <code>.xls</code>, ongeacht het scheidingsteken."
+msgid "Chaque point perdu expliqué"
+msgstr "Elk verloren punt uitgelegd"
 
 msgid "Choisir la langue du site"
 msgstr "De taal van de site kiezen"
@@ -720,6 +726,9 @@ msgstr "Taalcode (fr, en, es…). Leeg = taal van de applicatie."
 
 msgid "Coefficient de Pearson"
 msgstr "Pearson-coëfficiënt"
+
+msgid "Cohérence et conformité"
+msgstr "Consistentie en conformiteit"
 
 msgid "Collaboration"
 msgstr "Samenwerking"
@@ -801,6 +810,9 @@ msgstr "Volledigheid per kolom"
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
 msgstr "Volledigheid · Geldigheid · Uniciteit · Consistentie · Conformiteit"
+
+msgid "Complétude, validité et unicité"
+msgstr "Volledigheid, geldigheid en uniciteit"
 
 msgid "Composantes du score (après nettoyage)"
 msgstr "Scorecomponenten (na opschoning)"
@@ -1066,11 +1078,11 @@ msgstr "Resterende mogelijke duplicaten:"
 msgid "Doublons restants (exacts + potentiels)"
 msgstr "Resterende duplicaten (exact + mogelijk)"
 
+msgid "Doublons signalés, jamais supprimés d'office"
+msgstr "Duplicaten gemarkeerd, nooit standaard verwijderd"
+
 msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr "Duplicaten, overbodige spaties, verkeerd gevormde e-mails, inconsistente datums… DataZen detecteert de problemen en corrigeert alles automatisch, binnen enkele seconden."
-
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
-msgstr "Duplicaten, ontbrekende waarden, spaties, hoofdlettergebruik, e-mails, telefoons, datums en salarissen genormaliseerd."
 
 msgid "Droit"
 msgstr "Recht"
@@ -1212,6 +1224,9 @@ msgstr "Formaatfouten"
 
 msgid "Erreurs restantes"
 msgstr "Resterende fouten"
+
+msgid "Espaces, casse et e-mails"
+msgstr "Spaties, hoofdletters en e-mails"
 
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
@@ -1495,6 +1510,9 @@ msgstr "Dataset"
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr "Dataset alleen-lezen gedeeld via een DataZen-link."
 
+msgid "Journal complet des modifications"
+msgstr "Volledig wijzigingslogboek"
+
 msgid "Journal d'activité"
 msgstr "Activiteitenlog"
 
@@ -1506,6 +1524,9 @@ msgstr "Wijzigingslogboek"
 
 msgid "Journal des modifications (extrait)"
 msgstr "Wijzigingslogboek (uittreksel)"
+
+msgid "Jusqu'à 20 Mo par fichier"
+msgstr "Tot 20 MB per bestand"
 
 msgid "L'historique horodaté de chaque opération."
 msgstr "De tijdgestempelde geschiedenis van elke bewerking."
@@ -2023,6 +2044,9 @@ msgstr "Geldend beleid"
 msgid "Pondération"
 msgstr "Weging"
 
+msgid "Populaire"
+msgstr "Populair"
+
 msgid "Premier quartile"
 msgstr "Eerste kwartiel"
 
@@ -2176,6 +2200,9 @@ msgstr "Automatisch gegenereerd rapport van DataZen. De scores worden berekend v
 msgid "Rapport — %(name)s"
 msgstr "Rapport — %(name)s"
 
+msgid "Rapports PDF et HTML"
+msgstr "PDF- en HTML-rapporten"
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr "Ontvang een HTTP-melding zodra een opschoning eindigt, mislukt of een bestand wordt geüpload."
 
@@ -2304,9 +2331,6 @@ msgstr "Opschoonregels — DataZen"
 
 msgid "Règles de validation regex personnalisées"
 msgstr "Aangepaste regex-validatieregels"
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
-msgstr "Haal het opgeschoonde bestand, het gedetailleerde rapport en het volledige wijzigingslogboek op."
 
 msgid "Réessayer"
 msgstr ""
@@ -2548,6 +2572,9 @@ msgstr "Selecteer twee verschillende versies om de vergelijking te tonen."
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr "Selecteer maximaal %(limit)s bestanden: daarboven wordt de batch afgekapt om de server niet te overbelasten."
 
+msgid "Séparateur détecté automatiquement"
+msgstr "Scheidingsteken automatisch herkend"
+
 msgid "Sévérité"
 msgstr "Ernst"
 
@@ -2638,6 +2665,9 @@ msgstr "Telefoonnummer met afwijkend formaat"
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Niet-standaard telefoonnummers (%(column)s):"
 
+msgid "Téléphones, dates et montants"
+msgstr "Telefoonnummers, datums en bedragen"
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr "Uploadt, schoont op, plant en verwijdert eigen bestanden."
 
@@ -2676,9 +2706,6 @@ msgstr "Een uittreksel van het bestand: de eerste rijen volstaan om de gegevens 
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr "Een score op 100 meet de winst voor en na het opschonen."
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
-msgstr "Een dashboard meet de kwaliteit voor / na en verklaart elk verloren punt."
 
 msgid "Une URL de destination est requise."
 msgstr "Een doel-URL is verplicht."
@@ -2989,8 +3016,14 @@ msgstr "behouden (niet verzonnen)"
 msgid "console d'administration"
 msgstr "beheerconsole"
 
+msgid "corrections automatiques"
+msgstr "automatische correcties"
+
 msgid "date"
 msgstr "datum"
+
+msgid "dimensions mesurées"
+msgstr "gemeten dimensies"
 
 msgid "donnée absente"
 msgstr "ontbrekend gegeven"
@@ -3039,6 +3072,12 @@ msgstr "ongeldige notatie"
 
 msgid "format non reconnu"
 msgstr "onbekende notatie"
+
+msgid "formats acceptés"
+msgstr "ondersteunde formaten"
+
+msgid "formats d'export"
+msgstr "exportformaten"
 
 msgid "généré le"
 msgstr "gegenereerd op"

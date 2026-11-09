@@ -568,6 +568,12 @@ msgstr "Forbind DataZen til dine værktøjer: Power BI, n8n, Python-scripts, egn
 msgid "CSV (séparateur ;)"
 msgstr "CSV (separator ;)"
 
+msgid "CSV, Excel et JSON"
+msgstr "CSV, Excel og JSON"
+
+msgid "CSV, XLSX et XLS"
+msgstr "CSV, XLSX og XLS"
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr "Indram dit ansigt, og klik derefter på “Tag billede”."
 
@@ -667,8 +673,8 @@ msgstr "Hver konto har en rolle: læser, redaktør eller administrator. Kontroll
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr "Hver vellykket rensning fastfryser en version: du kan hente, sammenligne og rulle tilbage."
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
-msgstr "Indlæs dine data i formatet <code>.csv</code>, <code>.xlsx</code> eller <code>.xls</code>, uanset separator."
+msgid "Chaque point perdu expliqué"
+msgstr "Hvert tabt point forklares"
 
 msgid "Choisir la langue du site"
 msgstr "Vælg webstedets sprog"
@@ -720,6 +726,9 @@ msgstr "Sprogkode (fr, en, es…). Tom = applikationens sprog."
 
 msgid "Coefficient de Pearson"
 msgstr "Pearson-koefficient"
+
+msgid "Cohérence et conformité"
+msgstr "Konsistens og overensstemmelse"
 
 msgid "Collaboration"
 msgstr "Samarbejde"
@@ -801,6 +810,9 @@ msgstr "Fuldstændighed pr. kolonne"
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
 msgstr "Fuldstændighed · Gyldighed · Unikhed · Konsistens · Overensstemmelse"
+
+msgid "Complétude, validité et unicité"
+msgstr "Fuldstændighed, gyldighed og entydighed"
 
 msgid "Composantes du score (après nettoyage)"
 msgstr "Scorekomponenter (efter rensning)"
@@ -1066,11 +1078,11 @@ msgstr "Resterende mulige dubletter:"
 msgid "Doublons restants (exacts + potentiels)"
 msgstr "Resterende dubletter (eksakte + mulige)"
 
+msgid "Doublons signalés, jamais supprimés d'office"
+msgstr "Dubletter markeres, slettes aldrig som standard"
+
 msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr "Dubletter, overflødige mellemrum, fejlbehæftede e-mails, inkonsistente datoer… DataZen finder problemerne og retter alt automatisk på få sekunder."
-
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
-msgstr "Dubletter, manglende værdier, mellemrum, store/små bogstaver, e-mails, telefonnumre, datoer og lønninger normaliseret."
 
 msgid "Droit"
 msgstr "Tilladelse"
@@ -1212,6 +1224,9 @@ msgstr "Formatfejl"
 
 msgid "Erreurs restantes"
 msgstr "Resterende fejl"
+
+msgid "Espaces, casse et e-mails"
+msgstr "Mellemrum, store/små bogstaver og e-mails"
 
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
@@ -1495,6 +1510,9 @@ msgstr "Datasæt"
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr "Datasæt delt skrivebeskyttet via et DataZen-link."
 
+msgid "Journal complet des modifications"
+msgstr "Komplet ændringslog"
+
 msgid "Journal d'activité"
 msgstr "Aktivitetslog"
 
@@ -1506,6 +1524,9 @@ msgstr "Ændringslog"
 
 msgid "Journal des modifications (extrait)"
 msgstr "Ændringslog (uddrag)"
+
+msgid "Jusqu'à 20 Mo par fichier"
+msgstr "Op til 20 MB pr. fil"
 
 msgid "L'historique horodaté de chaque opération."
 msgstr "Tidsstemplet historik over hver handling."
@@ -2023,6 +2044,9 @@ msgstr "Gældende politik"
 msgid "Pondération"
 msgstr "Vægtning"
 
+msgid "Populaire"
+msgstr "Populær"
+
 msgid "Premier quartile"
 msgstr "Første kvartil"
 
@@ -2176,6 +2200,9 @@ msgstr "Rapport genereret automatisk af DataZen. Scorerne beregnes ud fra fem v�
 msgid "Rapport — %(name)s"
 msgstr "Rapport — %(name)s"
 
+msgid "Rapports PDF et HTML"
+msgstr "PDF- og HTML-rapporter"
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr "Få en HTTP-underretning, når en oprydning slutter, mislykkes, eller en fil uploades."
 
@@ -2304,9 +2331,6 @@ msgstr "Rensningsregler — DataZen"
 
 msgid "Règles de validation regex personnalisées"
 msgstr "Brugerdefinerede regex-valideringsregler"
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
-msgstr "Hent den rensede fil, den detaljerede rapport og den fuldstændige ændringslog."
 
 msgid "Réessayer"
 msgstr ""
@@ -2548,6 +2572,9 @@ msgstr "Vælg to forskellige versioner for at vise sammenligningen."
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr "Vælg op til %(limit)s filer: derover afkortes batchen for ikke at overbelaste serveren."
 
+msgid "Séparateur détecté automatiquement"
+msgstr "Separator registreres automatisk"
+
 msgid "Sévérité"
 msgstr "Alvorlighedsgrad"
 
@@ -2638,6 +2665,9 @@ msgstr "Telefonnummer i ikke-standardformat"
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Ikke-standardiserede telefonnumre (%(column)s):"
 
+msgid "Téléphones, dates et montants"
+msgstr "Telefonnumre, datoer og beløb"
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr "Uploader, renser, planlægger og sletter egne filer."
 
@@ -2676,9 +2706,6 @@ msgstr "Et uddrag af filen: de første rækker er nok til at vurdere dataene."
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr "En score ud af 100 måler gevinsten før og efter rensningen."
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
-msgstr "Et dashboard måler kvaliteten før / efter og forklarer hvert tabt point."
 
 msgid "Une URL de destination est requise."
 msgstr "En destinations-URL er påkrævet."
@@ -2989,8 +3016,14 @@ msgstr "bevaret (ikke opdigtet)"
 msgid "console d'administration"
 msgstr "administrationskonsol"
 
+msgid "corrections automatiques"
+msgstr "automatiske rettelser"
+
 msgid "date"
 msgstr "dato"
+
+msgid "dimensions mesurées"
+msgstr "målte dimensioner"
 
 msgid "donnée absente"
 msgstr "data mangler"
@@ -3039,6 +3072,12 @@ msgstr "ugyldigt format"
 
 msgid "format non reconnu"
 msgstr "ukendt format"
+
+msgid "formats acceptés"
+msgstr "understøttede formater"
+
+msgid "formats d'export"
+msgstr "eksportformater"
 
 msgid "généré le"
 msgstr "genereret"

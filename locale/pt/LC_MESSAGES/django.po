@@ -568,6 +568,12 @@ msgstr "Conecte o DataZen às suas ferramentas: Power BI, n8n, scripts Python, d
 msgid "CSV (séparateur ;)"
 msgstr "CSV (separador ;)"
 
+msgid "CSV, Excel et JSON"
+msgstr "CSV, Excel e JSON"
+
+msgid "CSV, XLSX et XLS"
+msgstr "CSV, XLSX e XLS"
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr "Enquadre o seu rosto e depois clique em «Capturar»."
 
@@ -667,8 +673,8 @@ msgstr "Cada conta tem uma função: leitor, editor ou administrador. O controlo
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr "Cada limpeza bem-sucedida fixa uma versão: pode transferi-la, compará-la e voltar atrás."
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
-msgstr "Carregue os seus dados no formato <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, qualquer que seja o separador."
+msgid "Chaque point perdu expliqué"
+msgstr "Cada ponto perdido explicado"
 
 msgid "Choisir la langue du site"
 msgstr "Escolher o idioma do site"
@@ -720,6 +726,9 @@ msgstr "Código de idioma (fr, en, es…). Vazio = idioma da aplicação."
 
 msgid "Coefficient de Pearson"
 msgstr "Coeficiente de Pearson"
+
+msgid "Cohérence et conformité"
+msgstr "Coerência e conformidade"
 
 msgid "Collaboration"
 msgstr "Colaboração"
@@ -801,6 +810,9 @@ msgstr "Completude por coluna"
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
 msgstr "Completude · Validade · Unicidade · Consistência · Conformidade"
+
+msgid "Complétude, validité et unicité"
+msgstr "Completude, validade e unicidade"
 
 msgid "Composantes du score (après nettoyage)"
 msgstr "Componentes da pontuação (após limpeza)"
@@ -1066,11 +1078,11 @@ msgstr "Duplicados potenciais restantes:"
 msgid "Doublons restants (exacts + potentiels)"
 msgstr "Duplicados restantes (exatos + potenciais)"
 
+msgid "Doublons signalés, jamais supprimés d'office"
+msgstr "Duplicados assinalados, nunca eliminados por defeito"
+
 msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr "Duplicados, espaços supérfluos, e-mails mal formados, datas incoerentes… A DataZen deteta os problemas e corrige tudo automaticamente, em poucos segundos."
-
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
-msgstr "Duplicados, valores em falta, espaços, maiúsculas/minúsculas, e-mails, telefones, datas e salários normalizados."
 
 msgid "Droit"
 msgstr "Permissão"
@@ -1212,6 +1224,9 @@ msgstr "Erros de formato"
 
 msgid "Erreurs restantes"
 msgstr "Erros restantes"
+
+msgid "Espaces, casse et e-mails"
+msgstr "Espaços, maiúsculas e e-mails"
 
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
@@ -1495,6 +1510,9 @@ msgstr "Conjunto de dados"
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr "Conjunto de dados partilhado em modo de leitura através de um link DataZen."
 
+msgid "Journal complet des modifications"
+msgstr "Registo completo de alterações"
+
 msgid "Journal d'activité"
 msgstr "Registro de atividades"
 
@@ -1506,6 +1524,9 @@ msgstr "Registo de alterações"
 
 msgid "Journal des modifications (extrait)"
 msgstr "Registo de alterações (excerto)"
+
+msgid "Jusqu'à 20 Mo par fichier"
+msgstr "Até 20 MB por ficheiro"
 
 msgid "L'historique horodaté de chaque opération."
 msgstr "O histórico com data e hora de cada operação."
@@ -2023,6 +2044,9 @@ msgstr "Política em vigor"
 msgid "Pondération"
 msgstr "Ponderação"
 
+msgid "Populaire"
+msgstr "Popular"
+
 msgid "Premier quartile"
 msgstr "Primeiro quartil"
 
@@ -2176,6 +2200,9 @@ msgstr "Relatório gerado automaticamente pelo DataZen. As pontuações são cal
 msgid "Rapport — %(name)s"
 msgstr "Relatório — %(name)s"
 
+msgid "Rapports PDF et HTML"
+msgstr "Relatórios PDF e HTML"
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr "Receba uma notificação HTTP assim que uma limpeza termina, falha ou um arquivo é enviado."
 
@@ -2304,9 +2331,6 @@ msgstr "Regras de limpeza — DataZen"
 
 msgid "Règles de validation regex personnalisées"
 msgstr "Regras personalizadas de validação regex"
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
-msgstr "Obtenha o ficheiro limpo, o relatório detalhado e o registo completo das alterações."
 
 msgid "Réessayer"
 msgstr ""
@@ -2548,6 +2572,9 @@ msgstr "Selecione duas versões diferentes para mostrar a comparação."
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr "Selecione até %(limit)s ficheiros: acima disso, o lote é truncado para não sobrecarregar o servidor."
 
+msgid "Séparateur détecté automatiquement"
+msgstr "Separador detetado automaticamente"
+
 msgid "Sévérité"
 msgstr "Gravidade"
 
@@ -2638,6 +2665,9 @@ msgstr "Número de telefone fora do padrão"
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Números de telefone não padrão (%(column)s):"
 
+msgid "Téléphones, dates et montants"
+msgstr "Telefones, datas e montantes"
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr "Carrega, limpa, agenda e elimina os seus próprios ficheiros."
 
@@ -2676,9 +2706,6 @@ msgstr "Um extrato do ficheiro: as primeiras linhas bastam para avaliar os dados
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr "Uma pontuação sobre 100 mede o ganho antes e depois da limpeza."
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
-msgstr "Um painel mede a qualidade antes / depois e explica cada ponto perdido."
 
 msgid "Une URL de destination est requise."
 msgstr "É necessária uma URL de destino."
@@ -2989,8 +3016,14 @@ msgstr "conservada (não inventada)"
 msgid "console d'administration"
 msgstr "consola de administração"
 
+msgid "corrections automatiques"
+msgstr "correções automáticas"
+
 msgid "date"
 msgstr "data"
+
+msgid "dimensions mesurées"
+msgstr "dimensões medidas"
 
 msgid "donnée absente"
 msgstr "dado ausente"
@@ -3039,6 +3072,12 @@ msgstr "formato inválido"
 
 msgid "format non reconnu"
 msgstr "formato não reconhecido"
+
+msgid "formats acceptés"
+msgstr "formatos aceites"
+
+msgid "formats d'export"
+msgstr "formatos de exportação"
 
 msgid "généré le"
 msgstr "gerado em"

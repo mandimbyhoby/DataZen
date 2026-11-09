@@ -577,6 +577,12 @@ msgstr "Подключите DataZen к своим инструментам: Pow
 msgid "CSV (séparateur ;)"
 msgstr "CSV (разделитель ;)"
 
+msgid "CSV, Excel et JSON"
+msgstr "CSV, Excel и JSON"
+
+msgid "CSV, XLSX et XLS"
+msgstr "CSV, XLSX и XLS"
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr "Поместите лицо в кадр и нажмите «Снять»."
 
@@ -676,8 +682,8 @@ msgstr "У каждой учётной записи есть роль: чита�
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr "Каждая успешная очистка фиксирует версию: её можно скачать, сравнить и откатить."
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
-msgstr "Загружайте данные в формате <code>.csv</code>, <code>.xlsx</code> или <code>.xls</code>, с любым разделителем."
+msgid "Chaque point perdu expliqué"
+msgstr "Объяснение каждого потерянного балла"
 
 msgid "Choisir la langue du site"
 msgstr "Выбрать язык сайта"
@@ -729,6 +735,9 @@ msgstr "Код языка (fr, en, es…). Пусто = язык приложе�
 
 msgid "Coefficient de Pearson"
 msgstr "Коэффициент Пирсона"
+
+msgid "Cohérence et conformité"
+msgstr "Согласованность и соответствие"
 
 msgid "Collaboration"
 msgstr "Совместная работа"
@@ -810,6 +819,9 @@ msgstr "Заполненность по столбцам"
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
 msgstr "Полнота · Достоверность · Уникальность · Согласованность · Соответствие"
+
+msgid "Complétude, validité et unicité"
+msgstr "Полнота, валидность и уникальность"
 
 msgid "Composantes du score (après nettoyage)"
 msgstr "Составляющие оценки (после очистки)"
@@ -1075,11 +1087,11 @@ msgstr "Оставшиеся потенциальные дубликаты:"
 msgid "Doublons restants (exacts + potentiels)"
 msgstr "Оставшиеся дубликаты (точные + потенциальные)"
 
+msgid "Doublons signalés, jamais supprimés d'office"
+msgstr "Дубликаты помечаются, но не удаляются по умолчанию"
+
 msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr "Дубликаты, лишние пробелы, некорректные адреса электронной почты, противоречивые даты… DataZen находит проблемы и исправляет всё автоматически за считанные секунды."
-
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
-msgstr "Дубликаты, пропущенные значения, пробелы, регистр, адреса электронной почты, телефоны, даты и зарплаты — всё приведено к единому виду."
 
 msgid "Droit"
 msgstr "Право"
@@ -1221,6 +1233,9 @@ msgstr "Ошибки формата"
 
 msgid "Erreurs restantes"
 msgstr "Оставшиеся ошибки"
+
+msgid "Espaces, casse et e-mails"
+msgstr "Пробелы, регистр и e-mail"
 
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
@@ -1504,6 +1519,9 @@ msgstr "Набор данных"
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr "Набор данных, открытый только для чтения по ссылке DataZen."
 
+msgid "Journal complet des modifications"
+msgstr "Полный журнал изменений"
+
 msgid "Journal d'activité"
 msgstr "Журнал активности"
 
@@ -1515,6 +1533,9 @@ msgstr "Журнал изменений"
 
 msgid "Journal des modifications (extrait)"
 msgstr "Журнал изменений (фрагмент)"
+
+msgid "Jusqu'à 20 Mo par fichier"
+msgstr "До 20 МБ на файл"
 
 msgid "L'historique horodaté de chaque opération."
 msgstr "История каждой операции с отметками времени."
@@ -2032,6 +2053,9 @@ msgstr "Действующая политика"
 msgid "Pondération"
 msgstr "Вес"
 
+msgid "Populaire"
+msgstr "Популярное"
+
 msgid "Premier quartile"
 msgstr "Первый квартиль"
 
@@ -2185,6 +2209,9 @@ msgstr "Отчёт создаётся DataZen автоматически. Оце
 msgid "Rapport — %(name)s"
 msgstr "Отчёт — %(name)s"
 
+msgid "Rapports PDF et HTML"
+msgstr "Отчёты PDF и HTML"
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr "Получайте HTTP-уведомление, как только очистка завершается, даёт сбой или загружается файл."
 
@@ -2313,9 +2340,6 @@ msgstr "Правила очистки — DataZen"
 
 msgid "Règles de validation regex personnalisées"
 msgstr "Пользовательские правила проверки регулярными выражениями"
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
-msgstr "Получите очищенный файл, подробный отчёт и полный журнал изменений."
 
 msgid "Réessayer"
 msgstr ""
@@ -2557,6 +2581,9 @@ msgstr "Выберите две разные версии, чтобы показ
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr "Выберите до %(limit)s файлов: сверх этого пакет усекается, чтобы не перегружать сервер."
 
+msgid "Séparateur détecté automatiquement"
+msgstr "Разделитель определяется автоматически"
+
 msgid "Sévérité"
 msgstr "Серьёзность"
 
@@ -2647,6 +2674,9 @@ msgstr "Номер телефона в нестандартном формате
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Нестандартные номера телефонов (%(column)s):"
 
+msgid "Téléphones, dates et montants"
+msgstr "Телефоны, даты и суммы"
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr "Загружает, очищает, планирует и удаляет свои файлы."
 
@@ -2685,9 +2715,6 @@ msgstr "Фрагмент файла: первых строк достаточн�
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr "Оценка по 100-балльной шкале показывает улучшение до и после очистки."
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
-msgstr "Панель управления измеряет качество до / после и объясняет каждый потерянный балл."
 
 msgid "Une URL de destination est requise."
 msgstr "Требуется URL назначения."
@@ -2998,8 +3025,14 @@ msgstr "сохранено (не выдумано)"
 msgid "console d'administration"
 msgstr "панель администратора"
 
+msgid "corrections automatiques"
+msgstr "автоматических исправлений"
+
 msgid "date"
 msgstr "дата"
+
+msgid "dimensions mesurées"
+msgstr "измеряемых показателей"
 
 msgid "donnée absente"
 msgstr "данные отсутствуют"
@@ -3048,6 +3081,12 @@ msgstr "недопустимый формат"
 
 msgid "format non reconnu"
 msgstr "формат не распознан"
+
+msgid "formats acceptés"
+msgstr "поддерживаемых формата"
+
+msgid "formats d'export"
+msgstr "формата экспорта"
 
 msgid "généré le"
 msgstr "создан"

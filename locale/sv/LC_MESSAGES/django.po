@@ -568,6 +568,12 @@ msgstr "Koppla DataZen till dina verktyg: Power BI, n8n, Python-skript, egna das
 msgid "CSV (séparateur ;)"
 msgstr "CSV (avgränsare ;)"
 
+msgid "CSV, Excel et JSON"
+msgstr "CSV, Excel och JSON"
+
+msgid "CSV, XLSX et XLS"
+msgstr "CSV, XLSX och XLS"
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr "Rikta in ditt ansikte och klicka sedan på ”Fånga”."
 
@@ -667,8 +673,8 @@ msgstr "Varje konto har en roll: läsare, redigerare eller administratör. Kontr
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr "Varje lyckad rensning fryser en version: du kan hämta, jämföra och rulla tillbaka den."
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
-msgstr "Ladda dina data i formatet <code>.csv</code>, <code>.xlsx</code> eller <code>.xls</code>, oavsett avgränsare."
+msgid "Chaque point perdu expliqué"
+msgstr "Varje förlorad poäng förklaras"
 
 msgid "Choisir la langue du site"
 msgstr "Välj webbplatsens språk"
@@ -720,6 +726,9 @@ msgstr "Språkkod (fr, en, es…). Tomt = applikationens språk."
 
 msgid "Coefficient de Pearson"
 msgstr "Pearsonkoefficient"
+
+msgid "Cohérence et conformité"
+msgstr "Konsekvens och överensstämmelse"
 
 msgid "Collaboration"
 msgstr "Samarbete"
@@ -801,6 +810,9 @@ msgstr "Fullständighet per kolumn"
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
 msgstr "Fullständighet · Giltighet · Unika värden · Konsekvens · Efterlevnad"
+
+msgid "Complétude, validité et unicité"
+msgstr "Fullständighet, giltighet och unikhet"
 
 msgid "Composantes du score (après nettoyage)"
 msgstr "Poängkomponenter (efter rensning)"
@@ -1066,11 +1078,11 @@ msgstr "Återstående potentiella dubbletter:"
 msgid "Doublons restants (exacts + potentiels)"
 msgstr "Återstående dubbletter (exakta + potentiella)"
 
+msgid "Doublons signalés, jamais supprimés d'office"
+msgstr "Dubbletter flaggas, tas aldrig bort som standard"
+
 msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr "Dubbletter, överflödiga blanksteg, felaktiga e-postadresser, inkonsekventa datum… DataZen hittar problemen och åtgärdar allt automatiskt på några sekunder."
-
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
-msgstr "Dubbletter, saknade värden, blanksteg, versaler/gemener, e-post, telefonnummer, datum och löner normaliserade."
 
 msgid "Droit"
 msgstr "Behörighet"
@@ -1212,6 +1224,9 @@ msgstr "Formatfel"
 
 msgid "Erreurs restantes"
 msgstr "Återstående fel"
+
+msgid "Espaces, casse et e-mails"
+msgstr "Mellanslag, versaler och e-post"
 
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
@@ -1495,6 +1510,9 @@ msgstr "Datamängd"
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr "Datamängd delad skrivskyddat via en DataZen-länk."
 
+msgid "Journal complet des modifications"
+msgstr "Fullständig ändringslogg"
+
 msgid "Journal d'activité"
 msgstr "Aktivitetslogg"
 
@@ -1506,6 +1524,9 @@ msgstr "Ändringslogg"
 
 msgid "Journal des modifications (extrait)"
 msgstr "Ändringslogg (utdrag)"
+
+msgid "Jusqu'à 20 Mo par fichier"
+msgstr "Upp till 20 MB per fil"
 
 msgid "L'historique horodaté de chaque opération."
 msgstr "Tidsstämplad historik över varje åtgärd."
@@ -2023,6 +2044,9 @@ msgstr "Gällande policy"
 msgid "Pondération"
 msgstr "Viktning"
 
+msgid "Populaire"
+msgstr "Populär"
+
 msgid "Premier quartile"
 msgstr "Första kvartilen"
 
@@ -2176,6 +2200,9 @@ msgstr "Rapport som skapas automatiskt av DataZen. Poängen beräknas utifrån f
 msgid "Rapport — %(name)s"
 msgstr "Rapport — %(name)s"
 
+msgid "Rapports PDF et HTML"
+msgstr "PDF- och HTML-rapporter"
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr "Få en HTTP-avisering när en rensning avslutas, misslyckas eller en fil laddas upp."
 
@@ -2304,9 +2331,6 @@ msgstr "Rensningsregler — DataZen"
 
 msgid "Règles de validation regex personnalisées"
 msgstr "Anpassade regex-valideringsregler"
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
-msgstr "Hämta den rensade filen, den detaljerade rapporten och den fullständiga ändringsloggen."
 
 msgid "Réessayer"
 msgstr ""
@@ -2548,6 +2572,9 @@ msgstr "Välj två olika versioner för att visa jämförelsen."
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr "Välj upp till %(limit)s filer: därutöver trunkeras batchen för att inte överbelasta servern."
 
+msgid "Séparateur détecté automatiquement"
+msgstr "Avgränsare identifieras automatiskt"
+
 msgid "Sévérité"
 msgstr "Allvarlighetsgrad"
 
@@ -2638,6 +2665,9 @@ msgstr "Telefonnummer med avvikande format"
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Icke-standardiserade telefonnummer (%(column)s):"
 
+msgid "Téléphones, dates et montants"
+msgstr "Telefonnummer, datum och belopp"
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr "Laddar upp, rensar, schemalägger och tar bort egna filer."
 
@@ -2676,9 +2706,6 @@ msgstr "Ett utdrag ur filen: de första raderna räcker för att bedöma data."
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr "En poäng av 100 mäter förbättringen före och efter rensningen."
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
-msgstr "En instrumentpanel mäter kvaliteten före / efter och förklarar varje förlorad poäng."
 
 msgid "Une URL de destination est requise."
 msgstr "En mål-URL krävs."
@@ -2989,8 +3016,14 @@ msgstr "bevarad (inte påhittad)"
 msgid "console d'administration"
 msgstr "administrationskonsol"
 
+msgid "corrections automatiques"
+msgstr "automatiska korrigeringar"
+
 msgid "date"
 msgstr "datum"
+
+msgid "dimensions mesurées"
+msgstr "uppmätta dimensioner"
 
 msgid "donnée absente"
 msgstr "data saknas"
@@ -3039,6 +3072,12 @@ msgstr "ogiltigt format"
 
 msgid "format non reconnu"
 msgstr "okänt format"
+
+msgid "formats acceptés"
+msgstr "format som stöds"
+
+msgid "formats d'export"
+msgstr "exportformat"
 
 msgid "généré le"
 msgstr "skapad"

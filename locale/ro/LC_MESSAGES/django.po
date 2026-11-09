@@ -577,6 +577,12 @@ msgstr "Conectați DataZen la instrumentele dvs.: Power BI, n8n, scripturi Pytho
 msgid "CSV (séparateur ;)"
 msgstr "CSV (separator ;)"
 
+msgid "CSV, Excel et JSON"
+msgstr "CSV, Excel și JSON"
+
+msgid "CSV, XLSX et XLS"
+msgstr "CSV, XLSX și XLS"
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr "Încadrați-vă fața și faceți clic pe « Capturați »."
 
@@ -676,8 +682,8 @@ msgstr "Fiecare cont are un rol: cititor, editor sau administrator. Verificarea 
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr "Fiecare curățare reușită fixează o versiune: o puteți descărca, compara și reveni."
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
-msgstr "Încărcați datele în format <code>.csv</code>, <code>.xlsx</code> sau <code>.xls</code>, indiferent de separator."
+msgid "Chaque point perdu expliqué"
+msgstr "Fiecare punct pierdut explicat"
 
 msgid "Choisir la langue du site"
 msgstr "Alegeți limba site-ului"
@@ -729,6 +735,9 @@ msgstr "Cod de limbă (fr, en, es…). Gol = limba aplicației."
 
 msgid "Coefficient de Pearson"
 msgstr "Coeficientul Pearson"
+
+msgid "Cohérence et conformité"
+msgstr "Coerență și conformitate"
 
 msgid "Collaboration"
 msgstr "Colaborare"
@@ -810,6 +819,9 @@ msgstr "Completitudine pe coloană"
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
 msgstr "Completitudine · Validitate · Unicitate · Coerență · Conformitate"
+
+msgid "Complétude, validité et unicité"
+msgstr "Completitudine, validitate și unicitate"
 
 msgid "Composantes du score (après nettoyage)"
 msgstr "Componentele scorului (după curățare)"
@@ -1075,11 +1087,11 @@ msgstr "Duplicate potențiale rămase:"
 msgid "Doublons restants (exacts + potentiels)"
 msgstr "Duplicate rămase (exacte + potențiale)"
 
+msgid "Doublons signalés, jamais supprimés d'office"
+msgstr "Duplicatele sunt semnalate, niciodată șterse implicit"
+
 msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr "Duplicate, spații parazite, e-mailuri greșite, date inconsistente… DataZen detectează problemele și corectează totul automat, în câteva secunde."
-
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
-msgstr "Duplicate, valori lipsă, spații, majuscule/minuscule, e-mailuri, telefoane, date și salarii normalizate."
 
 msgid "Droit"
 msgstr "Drept"
@@ -1221,6 +1233,9 @@ msgstr "Erori de format"
 
 msgid "Erreurs restantes"
 msgstr "Erori rămase"
+
+msgid "Espaces, casse et e-mails"
+msgstr "Spații, majuscule și e-mailuri"
 
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
@@ -1504,6 +1519,9 @@ msgstr "Set de date"
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr "Set de date partajat doar pentru citire printr-un link DataZen."
 
+msgid "Journal complet des modifications"
+msgstr "Jurnal complet al modificărilor"
+
 msgid "Journal d'activité"
 msgstr "Jurnal de activitate"
 
@@ -1515,6 +1533,9 @@ msgstr "Jurnalul modificărilor"
 
 msgid "Journal des modifications (extrait)"
 msgstr "Jurnalul modificărilor (extras)"
+
+msgid "Jusqu'à 20 Mo par fichier"
+msgstr "Până la 20 MB per fișier"
 
 msgid "L'historique horodaté de chaque opération."
 msgstr "Istoricul cu marcaje de timp al fiecărei operațiuni."
@@ -2032,6 +2053,9 @@ msgstr "Politica în vigoare"
 msgid "Pondération"
 msgstr "Pondere"
 
+msgid "Populaire"
+msgstr "Popular"
+
 msgid "Premier quartile"
 msgstr "Prima quartilă"
 
@@ -2185,6 +2209,9 @@ msgstr "Raport generat automat de DataZen. Scorurile sunt calculate pe cinci dim
 msgid "Rapport — %(name)s"
 msgstr "Raport — %(name)s"
 
+msgid "Rapports PDF et HTML"
+msgstr "Rapoarte PDF și HTML"
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr "Primiți o notificare HTTP de îndată ce o curățare se termină, eșuează sau un fișier este încărcat."
 
@@ -2313,9 +2340,6 @@ msgstr "Reguli de curățare — DataZen"
 
 msgid "Règles de validation regex personnalisées"
 msgstr "Reguli personalizate de validare regex"
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
-msgstr "Obțineți fișierul curățat, raportul detaliat și jurnalul complet al modificărilor."
 
 msgid "Réessayer"
 msgstr ""
@@ -2557,6 +2581,9 @@ msgstr "Selectați două versiuni diferite pentru a afișa comparația."
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr "Selectați până la %(limit)s fișiere: peste acest număr, lotul este trunchiat pentru a nu supraîncărca serverul."
 
+msgid "Séparateur détecté automatiquement"
+msgstr "Separator detectat automat"
+
 msgid "Sévérité"
 msgstr "Gravitate"
 
@@ -2647,6 +2674,9 @@ msgstr "Telefon nestandard"
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Telefoane nestandard (%(column)s):"
 
+msgid "Téléphones, dates et montants"
+msgstr "Telefoane, date și sume"
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr "Încarcă, curăță, programează și șterge propriile fișiere."
 
@@ -2685,9 +2715,6 @@ msgstr "Un extras din fișier: primele rânduri sunt suficiente pentru a evalua 
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr "Un scor din 100 măsoară câștigul înainte și după curățare."
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
-msgstr "Un tablou de bord măsoară calitatea înainte / după și explică fiecare punct pierdut."
 
 msgid "Une URL de destination est requise."
 msgstr "Este necesară o adresă URL de destinație."
@@ -2998,8 +3025,14 @@ msgstr "păstrată (nu inventată)"
 msgid "console d'administration"
 msgstr "consolă de administrare"
 
+msgid "corrections automatiques"
+msgstr "corecturi automate"
+
 msgid "date"
 msgstr "dată"
+
+msgid "dimensions mesurées"
+msgstr "dimensiuni măsurate"
 
 msgid "donnée absente"
 msgstr "dată absentă"
@@ -3048,6 +3081,12 @@ msgstr "format invalid"
 
 msgid "format non reconnu"
 msgstr "format nerecunoscut"
+
+msgid "formats acceptés"
+msgstr "formate acceptate"
+
+msgid "formats d'export"
+msgstr "formate de export"
 
 msgid "généré le"
 msgstr "generat la"

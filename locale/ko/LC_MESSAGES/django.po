@@ -559,6 +559,12 @@ msgstr "DataZen을 사용 중인 도구에 연결하세요: Power BI, n8n, Pytho
 msgid "CSV (séparateur ;)"
 msgstr "CSV (구분 기호 ;)"
 
+msgid "CSV, Excel et JSON"
+msgstr "CSV, Excel, JSON"
+
+msgid "CSV, XLSX et XLS"
+msgstr "CSV, XLSX 및 XLS"
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr "얼굴을 화면에 맞춘 뒤 «캡처»를 클릭하세요."
 
@@ -658,8 +664,8 @@ msgstr "모든 계정에는 역할이 있습니다: 뷰어, 편집자 또는 관
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr "정리가 성공할 때마다 버전이 고정됩니다: 내려받고, 비교하고, 되돌릴 수 있습니다."
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
-msgstr "<code>.csv</code>, <code>.xlsx</code> 또는 <code>.xls</code> 형식의 데이터를 불러오세요. 구분 기호는 상관없습니다."
+msgid "Chaque point perdu expliqué"
+msgstr "감점 사유를 모두 설명"
 
 msgid "Choisir la langue du site"
 msgstr "사이트 언어 선택"
@@ -711,6 +717,9 @@ msgstr "언어 코드(fr, en, es…). 비우면 앱 언어를 사용합니다."
 
 msgid "Coefficient de Pearson"
 msgstr "피어슨 계수"
+
+msgid "Cohérence et conformité"
+msgstr "일관성과 적합성"
 
 msgid "Collaboration"
 msgstr "협업"
@@ -792,6 +801,9 @@ msgstr "열별 완성도"
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
 msgstr "완전성 · 유효성 · 고유성 · 일관성 · 적합성"
+
+msgid "Complétude, validité et unicité"
+msgstr "완전성, 유효성, 고유성"
 
 msgid "Composantes du score (après nettoyage)"
 msgstr "점수 구성 요소(정제 후)"
@@ -1057,11 +1069,11 @@ msgstr "남은 잠재적 중복:"
 msgid "Doublons restants (exacts + potentiels)"
 msgstr "남은 중복 (완전 + 잠재적)"
 
+msgid "Doublons signalés, jamais supprimés d'office"
+msgstr "중복은 표시만 하고 기본적으로 삭제하지 않음"
+
 msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr "중복, 불필요한 공백, 잘못된 이메일 형식, 일관성 없는 날짜… DataZen이 문제를 감지하고 몇 초 만에 모두 자동으로 수정합니다."
-
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
-msgstr "중복, 결측값, 공백, 대소문자, 이메일, 전화번호, 날짜와 급여를 표준화합니다."
 
 msgid "Droit"
 msgstr "권한"
@@ -1203,6 +1215,9 @@ msgstr "형식 오류"
 
 msgid "Erreurs restantes"
 msgstr "남은 오류"
+
+msgid "Espaces, casse et e-mails"
+msgstr "공백, 대소문자, 이메일"
 
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
@@ -1486,6 +1501,9 @@ msgstr "데이터셋"
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr "DataZen 링크를 통해 읽기 전용으로 공유된 데이터셋입니다."
 
+msgid "Journal complet des modifications"
+msgstr "전체 변경 기록"
+
 msgid "Journal d'activité"
 msgstr "활동 로그"
 
@@ -1497,6 +1515,9 @@ msgstr "변경 로그"
 
 msgid "Journal des modifications (extrait)"
 msgstr "변경 로그(발췌)"
+
+msgid "Jusqu'à 20 Mo par fichier"
+msgstr "파일당 최대 20MB"
 
 msgid "L'historique horodaté de chaque opération."
 msgstr "모든 작업의 시간별 이력."
@@ -2014,6 +2035,9 @@ msgstr "현재 정책"
 msgid "Pondération"
 msgstr "가중치"
 
+msgid "Populaire"
+msgstr "인기"
+
 msgid "Premier quartile"
 msgstr "제1사분위수"
 
@@ -2167,6 +2191,9 @@ msgstr "DataZen이 자동으로 생성한 보고서입니다. 점수는 다섯 �
 msgid "Rapport — %(name)s"
 msgstr "보고서 — %(name)s"
 
+msgid "Rapports PDF et HTML"
+msgstr "PDF 및 HTML 보고서"
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr "정리가 끝나거나 실패할 때, 파일이 업로드될 때 HTTP 알림을 받습니다."
 
@@ -2295,9 +2322,6 @@ msgstr "정제 규칙 — DataZen"
 
 msgid "Règles de validation regex personnalisées"
 msgstr "사용자 지정 정규식 검증 규칙"
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
-msgstr "정제된 파일, 상세 보고서, 전체 변경 로그를 받아보세요."
 
 msgid "Réessayer"
 msgstr ""
@@ -2539,6 +2563,9 @@ msgstr "비교를 표시하려면 서로 다른 두 버전을 선택하세요."
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr "최대 %(limit)s개 파일을 선택하세요: 그 이상은 서버 과부하를 막기 위해 배치가 잘립니다."
 
+msgid "Séparateur détecté automatiquement"
+msgstr "구분자 자동 감지"
+
 msgid "Sévérité"
 msgstr "심각도"
 
@@ -2629,6 +2656,9 @@ msgstr "표준 형식이 아닌 전화번호"
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "비표준 전화번호 (%(column)s):"
 
+msgid "Téléphones, dates et montants"
+msgstr "전화번호, 날짜, 금액"
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr "자신의 파일을 업로드, 정리, 예약, 삭제합니다."
 
@@ -2667,9 +2697,6 @@ msgstr "파일 발췌: 처음 몇 행만으로도 데이터를 판단할 수 있
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr "100점 만점의 점수로 정리 전후의 향상을 측정합니다."
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
-msgstr "대시보드가 정제 전/후 품질을 측정하고 감점된 각 항목을 설명합니다."
 
 msgid "Une URL de destination est requise."
 msgstr "대상 URL이 필요합니다."
@@ -2980,8 +3007,14 @@ msgstr "보존됨(임의 생성 아님)"
 msgid "console d'administration"
 msgstr "관리 콘솔"
 
+msgid "corrections automatiques"
+msgstr "자동 수정"
+
 msgid "date"
 msgstr "날짜"
+
+msgid "dimensions mesurées"
+msgstr "측정 지표"
 
 msgid "donnée absente"
 msgstr "데이터 없음"
@@ -3030,6 +3063,12 @@ msgstr "유효하지 않은 형식"
 
 msgid "format non reconnu"
 msgstr "인식되지 않는 형식"
+
+msgid "formats acceptés"
+msgstr "지원 형식"
+
+msgid "formats d'export"
+msgstr "내보내기 형식"
 
 msgid "généré le"
 msgstr "생성 시각"

@@ -559,6 +559,12 @@ msgstr "Hubungkan DataZen ke alat Anda: Power BI, n8n, skrip Python, dasbor buat
 msgid "CSV (séparateur ;)"
 msgstr "CSV (pemisah ;)"
 
+msgid "CSV, Excel et JSON"
+msgstr "CSV, Excel, dan JSON"
+
+msgid "CSV, XLSX et XLS"
+msgstr "CSV, XLSX, dan XLS"
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr "Posisikan wajah Anda dalam bingkai lalu klik « Ambil »."
 
@@ -658,8 +664,8 @@ msgstr "Setiap akun memiliki peran: penampil, penyunting, atau administrator. Pe
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr "Setiap pembersihan yang berhasil membekukan sebuah versi: Anda dapat mengunduh, membandingkan, dan mengembalikannya."
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
-msgstr "Muat data Anda dalam format <code>.csv</code>, <code>.xlsx</code>, atau <code>.xls</code>, apa pun pemisahnya."
+msgid "Chaque point perdu expliqué"
+msgstr "Setiap poin yang hilang dijelaskan"
 
 msgid "Choisir la langue du site"
 msgstr "Pilih bahasa situs"
@@ -711,6 +717,9 @@ msgstr "Kode bahasa (fr, en, es…). Kosong = bahasa aplikasi."
 
 msgid "Coefficient de Pearson"
 msgstr "Koefisien Pearson"
+
+msgid "Cohérence et conformité"
+msgstr "Konsistensi dan kesesuaian"
 
 msgid "Collaboration"
 msgstr "Kolaborasi"
@@ -792,6 +801,9 @@ msgstr "Kelengkapan per kolom"
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
 msgstr "Kelengkapan · Validitas · Keunikan · Konsistensi · Kesesuaian"
+
+msgid "Complétude, validité et unicité"
+msgstr "Kelengkapan, validitas, dan keunikan"
 
 msgid "Composantes du score (après nettoyage)"
 msgstr "Komponen skor (setelah pembersihan)"
@@ -1057,11 +1069,11 @@ msgstr "Duplikat potensial tersisa:"
 msgid "Doublons restants (exacts + potentiels)"
 msgstr "Duplikat tersisa (persis + potensial)"
 
+msgid "Doublons signalés, jamais supprimés d'office"
+msgstr "Duplikat ditandai, tidak pernah dihapus secara bawaan"
+
 msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr "Duplikat, spasi berlebih, email salah format, tanggal tidak konsisten… DataZen mendeteksi masalah dan memperbaiki semuanya secara otomatis dalam beberapa detik."
-
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
-msgstr "Duplikat, nilai hilang, spasi, huruf besar-kecil, email, telepon, tanggal, dan gaji dinormalisasi."
 
 msgid "Droit"
 msgstr "Izin"
@@ -1203,6 +1215,9 @@ msgstr "Kesalahan format"
 
 msgid "Erreurs restantes"
 msgstr "Kesalahan tersisa"
+
+msgid "Espaces, casse et e-mails"
+msgstr "Spasi, huruf besar/kecil, dan e-mail"
 
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
@@ -1486,6 +1501,9 @@ msgstr "Kumpulan data"
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr "Kumpulan data dibagikan hanya-baca melalui tautan DataZen."
 
+msgid "Journal complet des modifications"
+msgstr "Log perubahan lengkap"
+
 msgid "Journal d'activité"
 msgstr "Log aktivitas"
 
@@ -1497,6 +1515,9 @@ msgstr "Log perubahan"
 
 msgid "Journal des modifications (extrait)"
 msgstr "Log perubahan (cuplikan)"
+
+msgid "Jusqu'à 20 Mo par fichier"
+msgstr "Hingga 20 MB per file"
 
 msgid "L'historique horodaté de chaque opération."
 msgstr "Riwayat bertanda waktu setiap operasi."
@@ -2014,6 +2035,9 @@ msgstr "Kebijakan yang berlaku"
 msgid "Pondération"
 msgstr "Bobot"
 
+msgid "Populaire"
+msgstr "Populer"
+
 msgid "Premier quartile"
 msgstr "Kuartil pertama"
 
@@ -2167,6 +2191,9 @@ msgstr "Laporan dibuat otomatis oleh DataZen. Skor dihitung berdasarkan lima dim
 msgid "Rapport — %(name)s"
 msgstr "Laporan — %(name)s"
 
+msgid "Rapports PDF et HTML"
+msgstr "Laporan PDF dan HTML"
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr "Terima notifikasi HTTP begitu pembersihan selesai, gagal, atau ada berkas diunggah."
 
@@ -2295,9 +2322,6 @@ msgstr "Aturan pembersihan — DataZen"
 
 msgid "Règles de validation regex personnalisées"
 msgstr "Aturan validasi regex khusus"
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
-msgstr "Dapatkan file bersih, laporan terperinci, dan log perubahan lengkap."
 
 msgid "Réessayer"
 msgstr ""
@@ -2539,6 +2563,9 @@ msgstr "Pilih dua versi berbeda untuk menampilkan perbandingan."
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr "Pilih hingga %(limit)s berkas: lebih dari itu, batch dipotong agar server tidak kelebihan beban."
 
+msgid "Séparateur détecté automatiquement"
+msgstr "Pemisah terdeteksi otomatis"
+
 msgid "Sévérité"
 msgstr "Tingkat keparahan"
 
@@ -2629,6 +2656,9 @@ msgstr "Telepon tidak standar"
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Telepon tidak standar (%(column)s):"
 
+msgid "Téléphones, dates et montants"
+msgstr "Telepon, tanggal, dan jumlah"
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr "Mengunggah, membersihkan, menjadwalkan, dan menghapus berkasnya sendiri."
 
@@ -2667,9 +2697,6 @@ msgstr "Kutipan berkas: baris pertama cukup untuk menilai data."
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr "Skor dari 100 mengukur peningkatan sebelum dan sesudah pembersihan."
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
-msgstr "Dasbor mengukur kualitas sebelum / sesudah dan menjelaskan setiap poin yang hilang."
 
 msgid "Une URL de destination est requise."
 msgstr "URL tujuan wajib diisi."
@@ -2980,8 +3007,14 @@ msgstr "dipertahankan (tidak dibuat-buat)"
 msgid "console d'administration"
 msgstr "konsol administrasi"
 
+msgid "corrections automatiques"
+msgstr "koreksi otomatis"
+
 msgid "date"
 msgstr "tanggal"
+
+msgid "dimensions mesurées"
+msgstr "dimensi diukur"
 
 msgid "donnée absente"
 msgstr "data tidak ada"
@@ -3030,6 +3063,12 @@ msgstr "format tidak valid"
 
 msgid "format non reconnu"
 msgstr "format tidak dikenali"
+
+msgid "formats acceptés"
+msgstr "format didukung"
+
+msgid "formats d'export"
+msgstr "format ekspor"
 
 msgid "généré le"
 msgstr "dibuat pada"

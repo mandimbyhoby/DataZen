@@ -559,6 +559,12 @@ msgstr "把 DataZen 接入你的工具：Power BI、n8n、Python 脚本、自制
 msgid "CSV (séparateur ;)"
 msgstr "CSV（分隔符 ；）"
 
+msgid "CSV, Excel et JSON"
+msgstr "CSV、Excel 和 JSON"
+
+msgid "CSV, XLSX et XLS"
+msgstr "CSV、XLSX 和 XLS"
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr "将面部置于取景框内，然后点击“拍摄”。"
 
@@ -658,8 +664,8 @@ msgstr "每个账户都有一个角色：查看者、编辑者或管理员。权
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr "每次成功清洗都会固化一个版本：您可以下载、比较并回滚。"
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
-msgstr "加载 <code>.csv</code>、<code>.xlsx</code> 或 <code>.xls</code> 格式的数据，无论使用何种分隔符。"
+msgid "Chaque point perdu expliqué"
+msgstr "解释每一处扣分"
 
 msgid "Choisir la langue du site"
 msgstr "选择网站语言"
@@ -711,6 +717,9 @@ msgstr "语言代码（fr、en、es…）。留空 = 应用语言。"
 
 msgid "Coefficient de Pearson"
 msgstr "皮尔逊系数"
+
+msgid "Cohérence et conformité"
+msgstr "一致性和规范性"
 
 msgid "Collaboration"
 msgstr "协作"
@@ -792,6 +801,9 @@ msgstr "按列统计完整度"
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
 msgstr "完整性 · 有效性 · 唯一性 · 一致性 · 规范性"
+
+msgid "Complétude, validité et unicité"
+msgstr "完整性、有效性和唯一性"
 
 msgid "Composantes du score (après nettoyage)"
 msgstr "得分构成（清洗后）"
@@ -1057,11 +1069,11 @@ msgstr "剩余潜在重复项："
 msgid "Doublons restants (exacts + potentiels)"
 msgstr "剩余重复项（完全 + 潜在）"
 
+msgid "Doublons signalés, jamais supprimés d'office"
+msgstr "标记重复项，绝不默认删除"
+
 msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr "重复项、多余空格、格式错误的邮箱、不一致的日期……DataZen 能在几秒内自动发现问题并全部修正。"
-
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
-msgstr "重复项、缺失值、空格、大小写、邮箱、电话、日期和薪资均已规范化。"
 
 msgid "Droit"
 msgstr "权限"
@@ -1203,6 +1215,9 @@ msgstr "格式错误"
 
 msgid "Erreurs restantes"
 msgstr "剩余错误"
+
+msgid "Espaces, casse et e-mails"
+msgstr "空格、大小写和电子邮件"
 
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
@@ -1486,6 +1501,9 @@ msgstr "数据集"
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr "通过 DataZen 链接以只读方式共享的数据集。"
 
+msgid "Journal complet des modifications"
+msgstr "完整的修改日志"
+
 msgid "Journal d'activité"
 msgstr "活动日志"
 
@@ -1497,6 +1515,9 @@ msgstr "修改日志"
 
 msgid "Journal des modifications (extrait)"
 msgstr "修改日志（摘录）"
+
+msgid "Jusqu'à 20 Mo par fichier"
+msgstr "每个文件最大 20 MB"
 
 msgid "L'historique horodaté de chaque opération."
 msgstr "每次操作的带时间戳历史。"
@@ -2014,6 +2035,9 @@ msgstr "当前策略"
 msgid "Pondération"
 msgstr "权重"
 
+msgid "Populaire"
+msgstr "热门"
+
 msgid "Premier quartile"
 msgstr "第一四分位数"
 
@@ -2167,6 +2191,9 @@ msgstr "由 DataZen 自动生成的报告。得分按五个加权维度计算：
 msgid "Rapport — %(name)s"
 msgstr "报告 — %(name)s"
 
+msgid "Rapports PDF et HTML"
+msgstr "PDF 和 HTML 报告"
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr "清理结束、失败或文件上传时立即收到 HTTP 通知。"
 
@@ -2295,9 +2322,6 @@ msgstr "清洗规则 — DataZen"
 
 msgid "Règles de validation regex personnalisées"
 msgstr "自定义正则表达式验证规则"
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
-msgstr "获取清洗后的文件、详细报告和完整的变更日志。"
 
 msgid "Réessayer"
 msgstr ""
@@ -2539,6 +2563,9 @@ msgstr "请选择两个不同的版本以显示比较。"
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr "最多选择 %(limit)s 个文件：超出部分会被截断，以免服务器过载。"
 
+msgid "Séparateur détecté automatiquement"
+msgstr "自动检测分隔符"
+
 msgid "Sévérité"
 msgstr "严重程度"
 
@@ -2629,6 +2656,9 @@ msgstr "格式不规范的电话号码"
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "非标准电话号码（%(column)s）："
 
+msgid "Téléphones, dates et montants"
+msgstr "电话、日期和金额"
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr "上传、清洗、计划并删除自己的文件。"
 
@@ -2667,9 +2697,6 @@ msgstr "文件摘录：前几行足以判断数据质量。"
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr "满分 100 的评分衡量清理前后的提升。"
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
-msgstr "仪表板会对比清洗前后的质量，并说明每一处失分的原因。"
 
 msgid "Une URL de destination est requise."
 msgstr "需要目标 URL。"
@@ -2980,8 +3007,14 @@ msgstr "保留（未虚构）"
 msgid "console d'administration"
 msgstr "管理后台"
 
+msgid "corrections automatiques"
+msgstr "项自动纠正"
+
 msgid "date"
 msgstr "日期"
+
+msgid "dimensions mesurées"
+msgstr "个质量维度"
 
 msgid "donnée absente"
 msgstr "数据缺失"
@@ -3030,6 +3063,12 @@ msgstr "格式无效"
 
 msgid "format non reconnu"
 msgstr "格式无法识别"
+
+msgid "formats acceptés"
+msgstr "支持的格式"
+
+msgid "formats d'export"
+msgstr "种导出格式"
 
 msgid "généré le"
 msgstr "生成于"

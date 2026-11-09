@@ -568,6 +568,12 @@ msgstr "Connect DataZen to your tools: Power BI, n8n, Python scripts, in-house d
 msgid "CSV (séparateur ;)"
 msgstr "CSV (separator ;)"
 
+msgid "CSV, Excel et JSON"
+msgstr "CSV, Excel and JSON"
+
+msgid "CSV, XLSX et XLS"
+msgstr "CSV, XLSX and XLS"
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr "Frame your face, then click “Capture”."
 
@@ -667,8 +673,8 @@ msgstr "Every account has a role: viewer, editor or administrator. Enforcement h
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr "Every successful cleaning freezes a version: you can download it, compare it and roll back."
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
-msgstr "Load your data as <code>.csv</code>, <code>.xlsx</code> or <code>.xls</code>, whatever the separator."
+msgid "Chaque point perdu expliqué"
+msgstr "Every lost point explained"
 
 msgid "Choisir la langue du site"
 msgstr "Choose the site language"
@@ -720,6 +726,9 @@ msgstr "Language code (fr, en, es…). Empty = application language."
 
 msgid "Coefficient de Pearson"
 msgstr "Pearson coefficient"
+
+msgid "Cohérence et conformité"
+msgstr "Consistency and conformity"
 
 msgid "Collaboration"
 msgstr "Collaboration"
@@ -801,6 +810,9 @@ msgstr "Completeness by column"
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
 msgstr "Completeness · Validity · Uniqueness · Consistency · Conformity"
+
+msgid "Complétude, validité et unicité"
+msgstr "Completeness, validity and uniqueness"
 
 msgid "Composantes du score (après nettoyage)"
 msgstr "Score components (after cleaning)"
@@ -1066,11 +1078,11 @@ msgstr "Remaining potential duplicates:"
 msgid "Doublons restants (exacts + potentiels)"
 msgstr "Remaining duplicates (exact + potential)"
 
+msgid "Doublons signalés, jamais supprimés d'office"
+msgstr "Duplicates flagged, never deleted by default"
+
 msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr "Duplicates, stray spaces, malformed emails, inconsistent dates… DataZen detects the problems and fixes everything automatically, in seconds."
-
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
-msgstr "Duplicates, missing values, spaces, casing, emails, phones, dates and salaries normalised."
 
 msgid "Droit"
 msgstr "Permission"
@@ -1212,6 +1224,9 @@ msgstr "Format errors"
 
 msgid "Erreurs restantes"
 msgstr "Remaining errors"
+
+msgid "Espaces, casse et e-mails"
+msgstr "Spaces, case and e-mails"
 
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
@@ -1495,6 +1510,9 @@ msgstr "Dataset"
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr "Dataset shared read-only through a DataZen link."
 
+msgid "Journal complet des modifications"
+msgstr "Full change log"
+
 msgid "Journal d'activité"
 msgstr "Activity log"
 
@@ -1506,6 +1524,9 @@ msgstr "Change log"
 
 msgid "Journal des modifications (extrait)"
 msgstr "Change log (excerpt)"
+
+msgid "Jusqu'à 20 Mo par fichier"
+msgstr "Up to 20 MB per file"
 
 msgid "L'historique horodaté de chaque opération."
 msgstr "The timestamped history of every operation."
@@ -2023,6 +2044,9 @@ msgstr "Current policy"
 msgid "Pondération"
 msgstr "Weight"
 
+msgid "Populaire"
+msgstr "Popular"
+
 msgid "Premier quartile"
 msgstr "First quartile"
 
@@ -2176,6 +2200,9 @@ msgstr "Report generated automatically by DataZen. Scores are computed across fi
 msgid "Rapport — %(name)s"
 msgstr "Report — %(name)s"
 
+msgid "Rapports PDF et HTML"
+msgstr "PDF and HTML reports"
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr "Get an HTTP notification as soon as a cleaning finishes, fails, or a file is uploaded."
 
@@ -2304,9 +2331,6 @@ msgstr "Cleaning rules — DataZen"
 
 msgid "Règles de validation regex personnalisées"
 msgstr "Custom regex validation rules"
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
-msgstr "Get the cleaned file, the detailed report and the full change log."
 
 msgid "Réessayer"
 msgstr ""
@@ -2548,6 +2572,9 @@ msgstr "Select two different versions to display the comparison."
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr "Select up to %(limit)s files: beyond that, the batch is truncated to avoid overloading the server."
 
+msgid "Séparateur détecté automatiquement"
+msgstr "Separator detected automatically"
+
 msgid "Sévérité"
 msgstr "Severity"
 
@@ -2638,6 +2665,9 @@ msgstr "Non-standard phone number"
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Non-standard phone numbers (%(column)s):"
 
+msgid "Téléphones, dates et montants"
+msgstr "Phones, dates and amounts"
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr "Uploads, cleans, schedules and deletes their own files."
 
@@ -2676,9 +2706,6 @@ msgstr "An extract of the file: the first rows are enough to judge the data."
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr "A score out of 100 measures the gain before and after cleaning."
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
-msgstr "A dashboard measures quality before / after and explains every lost point."
 
 msgid "Une URL de destination est requise."
 msgstr "A destination URL is required."
@@ -2989,8 +3016,14 @@ msgstr "preserved (not invented)"
 msgid "console d'administration"
 msgstr "admin console"
 
+msgid "corrections automatiques"
+msgstr "automatic corrections"
+
 msgid "date"
 msgstr "date"
+
+msgid "dimensions mesurées"
+msgstr "measured dimensions"
 
 msgid "donnée absente"
 msgstr "missing data"
@@ -3039,6 +3072,12 @@ msgstr "invalid format"
 
 msgid "format non reconnu"
 msgstr "unrecognised format"
+
+msgid "formats acceptés"
+msgstr "accepted formats"
+
+msgid "formats d'export"
+msgstr "export formats"
 
 msgid "généré le"
 msgstr "generated on"

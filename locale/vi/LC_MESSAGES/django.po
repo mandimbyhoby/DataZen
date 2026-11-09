@@ -559,6 +559,12 @@ msgstr "Kết nối DataZen với các công cụ của bạn: Power BI, n8n, sc
 msgid "CSV (séparateur ;)"
 msgstr "CSV (dấu phân cách ;)"
 
+msgid "CSV, Excel et JSON"
+msgstr "CSV, Excel và JSON"
+
+msgid "CSV, XLSX et XLS"
+msgstr "CSV, XLSX và XLS"
+
 msgid "Cadrez votre visage puis cliquez sur « Capturer »."
 msgstr "Căn khuôn mặt của bạn vào khung rồi nhấp « Chụp »."
 
@@ -658,8 +664,8 @@ msgstr "Mỗi tài khoản có một vai trò: người xem, người chỉnh s�
 msgid "Chaque nettoyage réussi fige une version : vous pouvez la télécharger, la comparer et revenir en arrière."
 msgstr "Mỗi lần làm sạch thành công sẽ cố định một phiên bản: bạn có thể tải xuống, so sánh và quay lại."
 
-msgid "Chargez vos données au format <code>.csv</code>, <code>.xlsx</code> ou <code>.xls</code>, quel que soit le séparateur."
-msgstr "Tải dữ liệu của bạn ở định dạng <code>.csv</code>, <code>.xlsx</code> hoặc <code>.xls</code>, bất kể dấu phân cách."
+msgid "Chaque point perdu expliqué"
+msgstr "Giải thích từng điểm bị trừ"
 
 msgid "Choisir la langue du site"
 msgstr "Chọn ngôn ngữ trang web"
@@ -711,6 +717,9 @@ msgstr "Mã ngôn ngữ (fr, en, es…). Để trống = ngôn ngữ của ứng
 
 msgid "Coefficient de Pearson"
 msgstr "Hệ số Pearson"
+
+msgid "Cohérence et conformité"
+msgstr "Tính nhất quán và tuân thủ"
 
 msgid "Collaboration"
 msgstr "Cộng tác"
@@ -792,6 +801,9 @@ msgstr "Độ đầy đủ theo cột"
 
 msgid "Complétude · Validité · Unicité · Cohérence · Conformité"
 msgstr "Độ đầy đủ · Tính hợp lệ · Tính duy nhất · Tính nhất quán · Tính tuân thủ"
+
+msgid "Complétude, validité et unicité"
+msgstr "Tính đầy đủ, hợp lệ và duy nhất"
 
 msgid "Composantes du score (après nettoyage)"
 msgstr "Thành phần điểm số (sau khi làm sạch)"
@@ -1057,11 +1069,11 @@ msgstr "Trùng lặp tiềm ẩn còn lại:"
 msgid "Doublons restants (exacts + potentiels)"
 msgstr "Trùng lặp còn lại (chính xác + tiềm ẩn)"
 
+msgid "Doublons signalés, jamais supprimés d'office"
+msgstr "Bản trùng lặp được đánh dấu, không bao giờ tự động xóa"
+
 msgid "Doublons, espaces parasites, e-mails mal formés, dates incohérentes… DataZen détecte les problèmes et corrige tout automatiquement, en quelques secondes."
 msgstr "Trùng lặp, khoảng trắng thừa, email sai định dạng, ngày không nhất quán… DataZen phát hiện vấn đề và tự động sửa mọi thứ trong vài giây."
-
-msgid "Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones, dates et salaires normalisés."
-msgstr "Trùng lặp, giá trị thiếu, khoảng trắng, chữ hoa/thường, email, số điện thoại, ngày và mức lương được chuẩn hóa."
 
 msgid "Droit"
 msgstr "Quyền"
@@ -1203,6 +1215,9 @@ msgstr "Lỗi định dạng"
 
 msgid "Erreurs restantes"
 msgstr "Lỗi còn lại"
+
+msgid "Espaces, casse et e-mails"
+msgstr "Khoảng trắng, chữ hoa/thường và e-mail"
 
 msgid "Excel (.xlsx)"
 msgstr "Excel (.xlsx)"
@@ -1486,6 +1501,9 @@ msgstr "Bộ dữ liệu"
 msgid "Jeu de données partagé en lecture seule via un lien DataZen."
 msgstr "Bộ dữ liệu được chia sẻ chỉ đọc qua liên kết DataZen."
 
+msgid "Journal complet des modifications"
+msgstr "Nhật ký thay đổi đầy đủ"
+
 msgid "Journal d'activité"
 msgstr "Nhật ký hoạt động"
 
@@ -1497,6 +1515,9 @@ msgstr "Nhật ký thay đổi"
 
 msgid "Journal des modifications (extrait)"
 msgstr "Nhật ký thay đổi (trích đoạn)"
+
+msgid "Jusqu'à 20 Mo par fichier"
+msgstr "Tối đa 20 MB mỗi tệp"
 
 msgid "L'historique horodaté de chaque opération."
 msgstr "Lịch sử có dấu thời gian của mọi thao tác."
@@ -2014,6 +2035,9 @@ msgstr "Chính sách hiện hành"
 msgid "Pondération"
 msgstr "Trọng số"
 
+msgid "Populaire"
+msgstr "Phổ biến"
+
 msgid "Premier quartile"
 msgstr "Tứ phân vị thứ nhất"
 
@@ -2167,6 +2191,9 @@ msgstr "Báo cáo được tạo tự động bởi DataZen. Điểm số đư�
 msgid "Rapport — %(name)s"
 msgstr "Báo cáo — %(name)s"
 
+msgid "Rapports PDF et HTML"
+msgstr "Báo cáo PDF và HTML"
+
 msgid "Recevez une notification HTTP dès qu'un nettoyage se termine, échoue, ou qu'un fichier est téléversé."
 msgstr "Nhận thông báo HTTP ngay khi quá trình làm sạch kết thúc, thất bại hoặc có tệp được tải lên."
 
@@ -2295,9 +2322,6 @@ msgstr "Quy tắc làm sạch — DataZen"
 
 msgid "Règles de validation regex personnalisées"
 msgstr "Quy tắc xác thực regex tùy chỉnh"
-
-msgid "Récupérez le fichier nettoyé, le rapport détaillé et le journal complet des modifications."
-msgstr "Tải về tệp đã làm sạch, báo cáo chi tiết và nhật ký thay đổi đầy đủ."
 
 msgid "Réessayer"
 msgstr ""
@@ -2539,6 +2563,9 @@ msgstr "Chọn hai phiên bản khác nhau để hiển thị so sánh."
 msgid "Sélectionnez jusqu'à %(limit)s fichiers : au-delà, le lot est tronqué pour ne pas saturer le serveur."
 msgstr "Chọn tối đa %(limit)s tệp: vượt quá sẽ bị cắt bớt để không làm quá tải máy chủ."
 
+msgid "Séparateur détecté automatiquement"
+msgstr "Tự động nhận diện dấu phân cách"
+
 msgid "Sévérité"
 msgstr "Mức độ nghiêm trọng"
 
@@ -2629,6 +2656,9 @@ msgstr "Số điện thoại không chuẩn"
 msgid "Téléphones non standard (%(column)s) :"
 msgstr "Số điện thoại không chuẩn (%(column)s):"
 
+msgid "Téléphones, dates et montants"
+msgstr "Số điện thoại, ngày và số tiền"
+
 msgid "Téléverse, nettoie, planifie et supprime ses propres fichiers."
 msgstr "Tải lên, làm sạch, lên lịch và xóa tệp của mình."
 
@@ -2667,9 +2697,6 @@ msgstr "Một trích đoạn của tệp: những dòng đầu đủ để đán
 
 msgid "Un score sur 100 mesure le gain avant et après nettoyage."
 msgstr "Điểm trên thang 100 đo mức cải thiện trước và sau khi làm sạch."
-
-msgid "Un tableau de bord mesure la qualité avant / après et explique chaque point perdu."
-msgstr "Bảng điều khiển đo chất lượng trước / sau và giải thích từng điểm bị mất."
 
 msgid "Une URL de destination est requise."
 msgstr "Cần có URL đích."
@@ -2980,8 +3007,14 @@ msgstr "được giữ nguyên (không bịa)"
 msgid "console d'administration"
 msgstr "bảng điều khiển quản trị"
 
+msgid "corrections automatiques"
+msgstr "sửa lỗi tự động"
+
 msgid "date"
 msgstr "ngày"
+
+msgid "dimensions mesurées"
+msgstr "chiều đo chất lượng"
 
 msgid "donnée absente"
 msgstr "thiếu dữ liệu"
@@ -3030,6 +3063,12 @@ msgstr "định dạng không hợp lệ"
 
 msgid "format non reconnu"
 msgstr "định dạng không được nhận diện"
+
+msgid "formats acceptés"
+msgstr "định dạng được hỗ trợ"
+
+msgid "formats d'export"
+msgstr "định dạng xuất"
 
 msgid "généré le"
 msgstr "tạo ngày"
