@@ -5421,3 +5421,321 @@ h1, .h1, .dz-section-title, .dz-page > .dz-page-head h1 {
         font-size: 1.25rem;
     }
 }
+
+/* --- Boîte à outils de la page d'accueil ------------------------------- */
+.dz-toolkit {
+    position: relative;
+    isolation: isolate;
+    padding-block: clamp(2rem, 4vw, 3.75rem);
+}
+
+.dz-toolkit::before {
+    position: absolute;
+    z-index: -1;
+    top: 66%;
+    left: 50%;
+    width: 100vw;
+    height: clamp(9rem, 17vw, 13rem);
+    background: #5bc43b;
+    content: "";
+    transform: translateX(-50%);
+}
+
+.dz-toolkit .dz-section-head {
+    position: relative;
+    z-index: 1;
+    margin-bottom: clamp(2.5rem, 4vw, 4rem);
+}
+
+.dz-toolkit .dz-section-title {
+    margin-top: 0.8rem;
+}
+
+.dz-toolkit__grid {
+    position: relative;
+    z-index: 1;
+    align-items: center;
+}
+
+.dz-toolkit .dz-feature {
+    min-height: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    transition: transform 240ms ease;
+}
+
+.dz-toolkit .dz-toolkit__title {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 88%;
+    min-height: 3.1rem;
+    margin: 0 auto;
+    padding: 0.55rem 0.75rem;
+    background: #58bf38;
+    color: #fff;
+    font-size: clamp(0.86rem, 0.78rem + 0.22vw, 1rem);
+    font-weight: 650;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+    text-align: center;
+    text-wrap: balance;
+    transition: width 240ms ease, background-color 240ms ease;
+}
+
+.dz-toolkit .dz-toolkit__body {
+    display: flex;
+    flex-direction: column;
+    min-height: 18.5rem;
+    padding: 1.55rem clamp(1rem, 1.1rem + 0.5vw, 1.5rem) 1.4rem;
+    background: #fff;
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.06),
+        0 14px 28px -16px rgba(15, 23, 42, 0.25);
+    text-align: center;
+    transition: box-shadow 240ms ease;
+}
+
+.dz-toolkit .dz-feature--featured {
+    transform: translateY(-1.15rem);
+}
+
+.dz-toolkit .dz-feature--featured .dz-toolkit__title {
+    width: 100%;
+    min-height: 3.4rem;
+    font-size: clamp(0.96rem, 0.84rem + 0.3vw, 1.1rem);
+}
+
+.dz-toolkit .dz-feature--featured .dz-toolkit__body {
+    min-height: 21rem;
+    padding-top: 1.8rem;
+}
+
+.dz-toolkit .dz-feature:hover {
+    transform: translateY(-0.55rem);
+}
+
+.dz-toolkit .dz-feature--featured:hover {
+    transform: translateY(-1.7rem);
+}
+
+.dz-toolkit .dz-feature:hover .dz-toolkit__title {
+    background: #4ea92f;
+}
+
+.dz-toolkit .dz-feature:hover .dz-toolkit__body {
+    box-shadow:
+        0 3px 6px rgba(15, 23, 42, 0.08),
+        0 24px 38px -20px rgba(15, 23, 42, 0.32);
+}
+
+.dz-toolkit__card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.35rem;
+}
+
+.dz-toolkit .dz-feature .dz-feature-icon {
+    display: grid;
+    place-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0;
+    border: 1px solid rgba(88, 191, 56, 0.17);
+    border-radius: 50%;
+    background: #f1f8ec;
+    font-size: 1.5rem;
+    transition: transform 240ms ease;
+}
+
+.dz-toolkit .dz-feature:hover .dz-feature-icon {
+    transform: scale(1.08);
+}
+
+.dz-toolkit__index {
+    color: #8a9290;
+    font-family: var(--dz-font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.dz-toolkit__list {
+    display: grid;
+    gap: 0.8rem;
+    flex: 1 0 auto;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.dz-toolkit__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    color: #545d59;
+    font-size: 0.87rem;
+    line-height: 1.5;
+}
+
+.dz-toolkit__list li::before {
+    flex: 0 0 auto;
+    color: #3d8d27;
+    content: "✓";
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.dz-toolkit__list code {
+    font-size: 0.8rem;
+}
+
+.dz-toolkit__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.65rem 0.85rem;
+    background: #58bf38;
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.dz-toolkit__action:hover,
+.dz-toolkit__action:focus-visible {
+    background: #438f2b;
+    color: #fff;
+}
+
+.dz-toolkit__action:hover span {
+    transform: translateX(3px);
+}
+
+.dz-toolkit__action span {
+    font-size: 1rem;
+    transition: transform 180ms ease;
+}
+
+.dz-toolkit__action:focus-visible {
+    outline-offset: 3px;
+}
+
+.dz-toolkit__list + .dz-toolkit__action {
+    margin-top: auto;
+}
+
+[data-bs-theme="dark"] .dz-toolkit {
+    color: var(--dz-text);
+}
+
+[data-bs-theme="dark"] .dz-toolkit::before {
+    background: #397f29;
+}
+
+[data-bs-theme="dark"] .dz-toolkit .dz-toolkit__title {
+    background: #438e2c;
+}
+
+[data-bs-theme="dark"] .dz-toolkit .dz-feature:hover .dz-toolkit__title {
+    background: #4ca631;
+}
+
+[data-bs-theme="dark"] .dz-toolkit .dz-toolkit__body {
+    background: #1c1f24;
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.25),
+        0 14px 28px -16px rgba(0, 0, 0, 0.65);
+}
+
+[data-bs-theme="dark"] .dz-toolkit__list li {
+    color: #c1c6c2;
+}
+
+[data-bs-theme="dark"] .dz-toolkit__action {
+    background: #438e2c;
+}
+
+[data-bs-theme="dark"] .dz-toolkit__action:hover,
+[data-bs-theme="dark"] .dz-toolkit__action:focus-visible {
+    background: #4ca631;
+}
+
+[data-bs-theme="dark"] .dz-toolkit__index {
+    color: #9da69f;
+}
+
+@media (max-width: 991.98px) {
+    .dz-toolkit .dz-feature--featured {
+        transform: none;
+    }
+
+    .dz-toolkit .dz-feature--featured:hover {
+        transform: translateY(-0.55rem);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .dz-toolkit {
+        padding-block: 1.5rem;
+    }
+
+    .dz-toolkit::before {
+        top: 60%;
+        height: 9rem;
+    }
+
+    .dz-toolkit .dz-feature {
+        max-width: 25rem;
+        margin-inline: auto;
+    }
+
+    .dz-toolkit .dz-feature--featured {
+        transform: none;
+    }
+
+    .dz-toolkit .dz-feature .dz-feature-icon {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.3rem;
+    }
+
+    .dz-toolkit .dz-toolkit__body,
+    .dz-toolkit .dz-feature--featured .dz-toolkit__body {
+        min-height: 17rem;
+        padding: 1.35rem 1.1rem;
+    }
+
+    .dz-toolkit__list {
+        gap: 0.65rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dz-toolkit .dz-feature,
+    .dz-toolkit .dz-toolkit__title,
+    .dz-toolkit .dz-toolkit__body,
+    .dz-toolkit .dz-feature-icon,
+    .dz-toolkit__action,
+    .dz-toolkit__action span {
+        transition: none;
+    }
+
+    .dz-toolkit .dz-feature:hover,
+    .dz-toolkit .dz-feature--featured:hover,
+    .dz-toolkit .dz-feature:hover .dz-feature-icon {
+        transform: none;
+    }
+}

@@ -4654,11 +4654,39 @@ class DesignSystemTests(TestCase):
         self.assertContains(response, "dz-section")
         self.assertContains(response, "dz-panel-xl")
 
+    def test_toolkit_section_renders_all_four_feature_cards(self):
+        response = self.client.get(reverse("core:index"))
+        self.assertContains(response, 'aria-labelledby="dz-toolkit-title"')
+        self.assertEqual(response.content.count(b'<article class="dz-feature'), 4)
+        self.assertEqual(response.content.count(b'class="dz-toolkit__title"'), 4)
+        self.assertEqual(response.content.count(b'class="dz-toolkit__list"'), 4)
+        self.assertEqual(response.content.count(b'class="dz-toolkit__action"'), 4)
+        self.assertContains(response, '<article class="dz-feature dz-feature--featured">')
+        self.assertContains(response, 'class="dz-toolkit__action" href="#televerser"')
+        for title in (
+            "Import CSV & Excel",
+            "Nettoyage intelligent",
+            "Score de qualité",
+            "Export & traçabilité",
+        ):
+            self.assertContains(response, title)
+
+    def test_toolkit_cards_match_the_tabbed_pricing_layout(self):
+        toolkit = self.css[self.css.index("/* --- Boîte à outils de la page d'accueil") :]
+        self.assertIn(".dz-toolkit::before", toolkit)
+        self.assertIn(".dz-toolkit .dz-toolkit__title", toolkit)
+        self.assertIn("background: #58bf38;", toolkit)
+        self.assertIn(".dz-toolkit .dz-feature--featured", toolkit)
+        self.assertIn(".dz-toolkit .dz-toolkit__body", toolkit)
+        self.assertIn(".dz-toolkit__list li::before", toolkit)
+        self.assertIn(".dz-toolkit__action", toolkit)
+        self.assertIn('[data-bs-theme="dark"] .dz-toolkit .dz-toolkit__body', toolkit)
+
     def test_stylesheet_cache_buster_was_bumped(self):
         base = (
             Path(__file__).resolve().parent.parent / "templates" / "core" / "base.html"
         ).read_text(encoding="utf-8")
-        self.assertIn("css/style.css' %}?v=20261108-logo", base)
+        self.assertIn("css/style.css' %}?v=20261109-pricing-checklists", base)
 
     def test_inner_pages_use_the_section_rhythm(self):
         # Les gabarits applicatifs troquent l'espacement serré de Bootstrap

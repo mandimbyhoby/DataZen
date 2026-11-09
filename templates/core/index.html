@@ -178,56 +178,96 @@
         </div>
     </section>
 
-    <div class="dz-section-head">
-        <span class="dz-eyebrow">{% translate "Tout est inclus" %}</span>
-        <h2 class="dz-section-title">{% translate "Une boîte à outils complète" %}</h2>
-        <p class="dz-section-subtitle mx-auto">
-            {% translate "De l'import brut au rapport de qualité, DataZen couvre toute la chaîne." %}
-        </p>
-    </div>
+    <section class="dz-toolkit dz-section" aria-labelledby="dz-toolkit-title">
+        <div class="dz-section-head">
+            <span class="dz-eyebrow">{% translate "Tout est inclus" %}</span>
+            <h2 class="dz-section-title" id="dz-toolkit-title">{% translate "Une boîte à outils complète" %}</h2>
+            <p class="dz-section-subtitle mx-auto">
+                {% translate "De l'import brut au rapport de qualité, DataZen couvre toute la chaîne." %}
+            </p>
+        </div>
 
-    <div class="row dz-grid dz-section">
-        <div class="col-md-6 col-lg-3">
-            <div class="dz-feature">
-                <div class="dz-feature-icon" aria-hidden="true">🗂️</div>
-                <h5>{% translate "Import CSV & Excel" %}</h5>
-                <p>
-                    {% blocktranslate trimmed %}Chargez vos données au format <code>.csv</code>, <code>.xlsx</code>
-                    ou <code>.xls</code>, quel que soit le séparateur.{% endblocktranslate %}
-                </p>
+        <div class="row dz-grid dz-toolkit__grid">
+            <div class="col-md-6 col-lg-3">
+                <article class="dz-feature">
+                    <h3 class="dz-toolkit__title">{% translate "Import CSV & Excel" %}</h3>
+                    <div class="dz-toolkit__body">
+                        <div class="dz-toolkit__card-top">
+                            <div class="dz-feature-icon" aria-hidden="true">🗂️</div>
+                            <span class="dz-toolkit__index" aria-hidden="true">01</span>
+                        </div>
+                        <ul class="dz-toolkit__list">
+                            <li><code>.csv</code></li>
+                            <li><code>.xlsx</code></li>
+                            <li><code>.xls</code></li>
+                        </ul>
+                        <a class="dz-toolkit__action" href="#televerser">
+                            {% translate "Nettoyer un fichier" %}<span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <article class="dz-feature dz-feature--featured">
+                    <h3 class="dz-toolkit__title">{% translate "Nettoyage intelligent" %}</h3>
+                    <div class="dz-toolkit__body">
+                        <div class="dz-toolkit__card-top">
+                            <div class="dz-feature-icon" aria-hidden="true">✨</div>
+                            <span class="dz-toolkit__index" aria-hidden="true">02</span>
+                        </div>
+                        <ul class="dz-toolkit__list">
+                            <li>{% translate "Doublons" %}</li>
+                            <li>{% translate "Valeurs manquantes" %}</li>
+                            <li>{% translate "Normaliser les emails" %}</li>
+                            <li>{% translate "Normaliser les téléphones" %}</li>
+                            <li>{% translate "Normaliser les dates" %}</li>
+                        </ul>
+                        <a class="dz-toolkit__action" href="#televerser">
+                            {% translate "Nettoyer un fichier" %}<span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <article class="dz-feature">
+                    <h3 class="dz-toolkit__title">{% translate "Score de qualité" %}</h3>
+                    <div class="dz-toolkit__body">
+                        <div class="dz-toolkit__card-top">
+                            <div class="dz-feature-icon" aria-hidden="true">📊</div>
+                            <span class="dz-toolkit__index" aria-hidden="true">03</span>
+                        </div>
+                        <ul class="dz-toolkit__list">
+                            <li>{% translate "Jauge du score de qualité global (sur 100)." %}</li>
+                            <li>{% translate "Composantes du score (après nettoyage)" %}</li>
+                            <li>{% translate "Explication du score" %}</li>
+                        </ul>
+                        <a class="dz-toolkit__action" href="#televerser">
+                            {% translate "Nettoyer un fichier" %}<span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <article class="dz-feature">
+                    <h3 class="dz-toolkit__title">{% translate "Export & traçabilité" %}</h3>
+                    <div class="dz-toolkit__body">
+                        <div class="dz-toolkit__card-top">
+                            <div class="dz-feature-icon" aria-hidden="true">📥</div>
+                            <span class="dz-toolkit__index" aria-hidden="true">04</span>
+                        </div>
+                        <ul class="dz-toolkit__list">
+                            <li>{% translate "Aperçu du fichier nettoyé" %}</li>
+                            <li>{% translate "Consultation du rapport" %}</li>
+                            <li>{% translate "Journal des modifications" %}</li>
+                        </ul>
+                        <a class="dz-toolkit__action" href="#televerser">
+                            {% translate "Nettoyer un fichier" %}<span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
             </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="dz-feature">
-                <div class="dz-feature-icon" aria-hidden="true">✨</div>
-                <h5>{% translate "Nettoyage intelligent" %}</h5>
-                <p>
-                    {% blocktranslate trimmed %}Doublons, valeurs manquantes, espaces, casse, e-mails, téléphones,
-                    dates et salaires normalisés.{% endblocktranslate %}
-                </p>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="dz-feature">
-                <div class="dz-feature-icon" aria-hidden="true">📊</div>
-                <h5>{% translate "Score de qualité" %}</h5>
-                <p>
-                    {% blocktranslate trimmed %}Un tableau de bord mesure la qualité avant / après et explique
-                    chaque point perdu.{% endblocktranslate %}
-                </p>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="dz-feature">
-                <div class="dz-feature-icon" aria-hidden="true">📥</div>
-                <h5>{% translate "Export & traçabilité" %}</h5>
-                <p>
-                    {% blocktranslate trimmed %}Récupérez le fichier nettoyé, le rapport détaillé et le journal
-                    complet des modifications.{% endblocktranslate %}
-                </p>
-            </div>
-        </div>
-    </div>
+    </section>
 
     <div class="card dz-panel dz-panel-xl">
         <div class="card-body p-4">
@@ -349,4 +389,3 @@
     </div>
 </div>
 {% endblock %}
-
