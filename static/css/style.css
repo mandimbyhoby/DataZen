@@ -5576,15 +5576,24 @@ h1, .h1, .dz-section-title, .dz-page > .dz-page-head h1 {
 /* Bouton vert plein, lettres espacées. */
 .dz-plan__cta {
     margin-top: auto;
-    display: inline-block;
-    min-width: 82%;
-    max-width: 100%;
-    padding: 0.9rem 1.1rem;
+    /* Le libellé peut passer sur deux lignes équilibrées plutôt que de
+       déborder (« Mes règles de nettoyage » dans une carte étroite). */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 15.5rem);
+    min-height: 3.1rem;
+    padding: 0.7rem 1rem;
     background: #8cc63f;
     color: #ffffff;
+    font-size: 0.95rem;
     font-weight: 700;
-    letter-spacing: 0.06em;
-    white-space: nowrap;
+    letter-spacing: 0.035em;
+    line-height: 1.25;
+    white-space: normal;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    hyphens: auto;
     text-align: center;
     text-decoration: none;
     text-shadow: 0 1px 1px rgba(30, 60, 0, 0.25);
@@ -5632,8 +5641,9 @@ h1, .h1, .dz-section-title, .dz-page > .dz-page-head h1 {
     box-shadow: 0 4px 10px -4px rgba(120, 80, 0, 0.5);
 }
 
-/* Tablette : deux colonnes ; la bande verte reste derrière le bas. */
-@media (max-width: 991.98px) {
+/* Tablette et petits portables : deux colonnes (en dessous de 1200 px, quatre
+   cartes côte à côte deviennent trop étroites pour leurs boutons). */
+@media (max-width: 1199.98px) {
     .dz-plans {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         row-gap: 2.5rem;
@@ -5641,10 +5651,6 @@ h1, .h1, .dz-section-title, .dz-page > .dz-page-head h1 {
 
     .dz-plan--featured {
         margin-block: 0;
-    }
-
-    .dz-plan__cta {
-        white-space: normal;
     }
 
     .dz-plans::before {

@@ -4658,7 +4658,7 @@ class DesignSystemTests(TestCase):
         base = (
             Path(__file__).resolve().parent.parent / "templates" / "core" / "base.html"
         ).read_text(encoding="utf-8")
-        self.assertIn("css/style.css' %}?v=20261109-plans", base)
+        self.assertIn("css/style.css' %}?v=20261109-cta", base)
 
     def test_inner_pages_use_the_section_rhythm(self):
         # Les gabarits applicatifs troquent l'espacement serré de Bootstrap
@@ -6306,6 +6306,15 @@ class FeaturePlanTests(TestCase):
         for name in ("rules_list", "dashboard", "activity"):
             self.assertContains(response, f'class="dz-plan__cta" href="{reverse("core:" + name)}"')
         self.assertContains(response, 'class="dz-plan__cta" href="#televerser"')
+
+    def test_buttons_wrap_instead_of_overflowing(self):
+        css = (Path(settings.BASE_DIR) / "static" / "css" / "style.css").read_text(encoding="utf-8")
+        cta = css[css.index(".dz-plan__cta {") : css.index(".dz-plan__cta:hover")]
+        # Un libellé long (« Mes règles de nettoyage ») passe à la ligne au
+        # lieu de dépasser du bouton.
+        self.assertIn("white-space: normal;", cta)
+        self.assertNotIn("nowrap", cta)
+        self.assertIn("width: min(100%, 15.5rem);", cta)
 
     def test_cards_are_translated(self):
         self.client.cookies[settings.LANGUAGE_COOKIE_NAME] = "en"
